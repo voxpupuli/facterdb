@@ -18,6 +18,10 @@ include FacterDB
 FacterDB::get_os_facts()
 ```
 
+Returns an Array of Hash containing the whole facts database.
+
+TODO: find a way to filter out facts.
+
 Facter versions supported
 -------------------------
 * 1.6
