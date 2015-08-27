@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.1.0](https://rubygems.org/gems/facterdb/versions/0.1.0) (2015-08-27)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.0.1...0.1.0)
+
+**Implemented enhancements:**
+
+- Add missing facts [\#3](https://github.com/camptocamp/facterdb/issues/3)
+- No need for include with self.\# [\#2](https://github.com/camptocamp/facterdb/pull/2) ([raphink](https://github.com/raphink))
+- Use jgrep to filter out OS facts [\#1](https://github.com/camptocamp/facterdb/pull/1) ([raphink](https://github.com/raphink))
+
+**Fixed bugs:**
+
+- Use a relative factsdir for the lib [\#4](https://github.com/camptocamp/facterdb/pull/4) ([raphink](https://github.com/raphink))
+
 ## [0.0.1](https://rubygems.org/gems/facterdb/versions/0.0.1) (2015-05-29)
 
 
