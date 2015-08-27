@@ -9,8 +9,7 @@ facterdb
 
 A Gem that contains a lot of facts for a lot of Operating Systems.
 
-Usage
------
+# Usage
 
 ```ruby
 require 'facterdb'
@@ -20,10 +19,33 @@ FacterDB::get_os_facts()
 
 Returns an Array of Hash containing the whole facts database.
 
-TODO: find a way to filter out facts.
+## Filtering by Facter version and fact values
 
-Facter versions supported
--------------------------
+```ruby
+require 'facterdb'
+include FacterDB
+
+facter_version = '2.4'
+filter = [
+  {
+    :operatingsystem => 'Debian',
+    :operatingsystemmajrelease => '8'
+  },
+  {
+    :operatingsystem => 'RedHat',
+    :operatingsystemmajrelease => '7'
+  },
+  {
+    :operatingsystem => 'Archlinux'
+  }
+]
+
+FacterDB::get_os_facts(facter_version, filter)
+```
+
+
+# Facter versions supported
+
 * 1.6
 * 1.7
 * 2.0
@@ -32,8 +54,8 @@ Facter versions supported
 * 2.3
 * 2.4
 
-Operating Systems supported
------------------------------------------------
+# Operating Systems supported
+
 * ArchLinux
 * CentOS 5
 * CentOS 6
@@ -64,8 +86,7 @@ Operating Systems supported
 * Ubuntu 14.10
 * Ubuntu 15.04
 
-Add new Operating System support
---------------------------------
+# Add new Operating System support
 
 There is `Vagrantfile` to automagically populate `facts` directory by spawning a new VM and launches a provisioning scripts.
 
