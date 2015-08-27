@@ -13,7 +13,6 @@ A Gem that contains a lot of facts for a lot of Operating Systems.
 
 ```ruby
 require 'facterdb'
-include FacterDB
 FacterDB::get_os_facts()
 ```
 
@@ -23,7 +22,6 @@ Returns an Array of Hash containing the whole facts database.
 
 ```ruby
 require 'facterdb'
-include FacterDB
 
 facter_version = '2.4'
 filter = [
