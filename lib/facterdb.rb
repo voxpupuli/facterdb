@@ -1,13 +1,13 @@
 require 'facter'
+require 'jgrep'
 
 module FacterDB
 
-  def get_os_facts
-    facts_dir = File.expand_path(File.join(File.dirname(__FILE__), '../facts'))
-    ret = []
-    Dir.glob("#{facts_dir}/*/*.facts") do |file|
-      ret << JSON.parse(IO.read(file), :symbolize_names => true)
-    end
-    ret
+  def get_os_facts(facter_version='*', filter=[])
+    filter_str = filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(' or ')
+
+    jsons = Dir.glob("facts/#{facter_version}/*.facts").map { |f| File.read(f) }
+    json = "[#{jsons.join(',')}]\n"
+    JGrep.jgrep(json, filter_str)
   end
 end
