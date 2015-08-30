@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = FacterDB::Version::STRING
   s.authors     = ["Mickaël Canévet"]
   s.email       = ["mickael.canevet@camptocamp.com"]
-  s.homepage    = "http://github.com/mcanevet/facterdb"
+  s.homepage    = "http://github.com/camptocamp/facterdb"
   s.summary     = "A Database of OS facts provided by Facter"
   s.description = "Contains facts from many Facter version on many Operating Systems"
   s.licenses    = 'Apache-2.0'
