@@ -9,6 +9,6 @@ module FacterDB
 
     jsons = Dir.glob("#{facts_dir}/#{facter_version}/*.facts").map { |f| File.read(f) }
     json = "[#{jsons.join(',')}]\n"
-    JGrep.jgrep(json, filter_str)
+    JGrep.jgrep(json, filter_str).map { |hash| Hash[hash.map{ |k, v| [k.to_sym, v] }] }
   end
 end
