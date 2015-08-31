@@ -1,5 +1,18 @@
 # Change Log
 
+## [0.2.0](https://rubygems.org/gems/facterdb/versions/0.2.0) (2015-08-31)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.1.0...0.2.0)
+
+**Implemented enhancements:**
+
+- Add CLI [\#9](https://github.com/camptocamp/facterdb/issues/9)
+- Allow Hash or String for filter [\#8](https://github.com/camptocamp/facterdb/issues/8)
+
+**Fixed bugs:**
+
+- Fix project homepage [\#10](https://github.com/camptocamp/facterdb/issues/10)
+- Hash keys should be symbolized [\#11](https://github.com/camptocamp/facterdb/pull/11) ([mcanevet](https://github.com/mcanevet))
+
 ## [0.1.0](https://rubygems.org/gems/facterdb/versions/0.1.0) (2015-08-27)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.0.1...0.1.0)
 
