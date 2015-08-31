@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.2.1](https://rubygems.org/gems/facterdb/versions/0.2.1) (2015-08-31)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.2.0...0.2.1)
+
+**Fixed bugs:**
+
+- Tag 0.2.0 does not point to the right commit... [\#13](https://github.com/camptocamp/facterdb/issues/13)
+
 ## [0.2.0](https://rubygems.org/gems/facterdb/versions/0.2.0) (2015-08-31)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.1.0...0.2.0)
 
