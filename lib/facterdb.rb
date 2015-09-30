@@ -35,13 +35,15 @@ module FacterDB
     get_facts(filter_str)
   end
 
-  def self.get_facts(filter=[])
+  def self.get_facts(filter=nil)
     if filter.is_a?(Array)
-      filter_str = filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(' or ')
+      filter_str = '(' + filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(') or (') + ')'
     elsif filter.is_a?(Hash)
       filter_str = filter.map { |k,v | "#{k}=#{v}" }.join(' and ')
     elsif filter.is_a?(String)
       filter_str = filter
+    elsif filter == nil
+      filter_str = ''
     else
       raise 'filter must be either an Array a Hash or a String'
     end
