@@ -61,6 +61,8 @@ FacterDB::get_os_facts(facter_version, filter)
 * 2.2
 * 2.3
 * 2.4
+* 3.0
+* 3.1
 
 # Operating Systems supported
 
@@ -93,6 +95,7 @@ FacterDB::get_os_facts(facter_version, filter)
 * Ubuntu 14.04
 * Ubuntu 14.10
 * Ubuntu 15.04
+* Ubuntu 15.10
 
 # Add new Operating System support
 
