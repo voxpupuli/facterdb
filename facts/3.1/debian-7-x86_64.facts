@@ -31,7 +31,7 @@
       "uuid": "E517E67A-D212-4EBD-BAB9-72394F835EEF"
     }
   },
-  "facterversion": "3.0.2",
+  "facterversion": "3.1.1",
   "filesystems": "ext4",
   "identity": {
     "gid": 0,
@@ -46,8 +46,8 @@
   "kernelversion": "3.2.0",
   "load_averages": {
     "15m": 0.02,
-    "1m": 0.16,
-    "5m": 0.05
+    "1m": 0.0,
+    "5m": 0.02
   },
   "memory": {
     "swap": {
@@ -60,20 +60,20 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "448.55 MiB",
-      "available_bytes": 470335488,
-      "capacity": "9.74%",
+      "available": "444.89 MiB",
+      "available_bytes": 466497536,
+      "capacity": "10.48%",
       "total": "496.96 MiB",
       "total_bytes": 521101312,
-      "used": "48.41 MiB",
-      "used_bytes": 50765824
+      "used": "52.07 MiB",
+      "used_bytes": 54603776
     }
   },
   "mountpoints": {
     "/": {
-      "available": "8.32 GiB",
-      "available_bytes": 8935211008,
-      "capacity": "10.52%",
+      "available": "8.31 GiB",
+      "available_bytes": 8917893120,
+      "capacity": "10.69%",
       "device": "/dev/disk/by-uuid/9dea98aa-91f6-4db4-9fab-23b07d1fe4e3",
       "filesystem": "ext4",
       "options": [
@@ -86,8 +86,8 @@
       ],
       "size": "9.30 GiB",
       "size_bytes": 9985515520,
-      "used": "1001.65 MiB",
-      "used_bytes": 1050304512
+      "used": "1018.16 MiB",
+      "used_bytes": 1067622400
     }
   },
   "networking": {
@@ -97,6 +97,20 @@
     "hostname": "foo",
     "interfaces": {
       "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:fe79:b224",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
         "dhcp": "10.0.2.2",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:fe79:b224",
@@ -108,6 +122,20 @@
         "network6": "fe80::"
       },
       "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
         "ip": "127.0.0.1",
         "ip6": "::1",
         "mtu": 16436,
@@ -124,7 +152,8 @@
     "netmask": "255.255.255.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.2.0",
-    "network6": "fe80::"
+    "network6": "fe80::",
+    "primary": "eth0"
   },
   "os": {
     "architecture": "amd64",
@@ -157,6 +186,10 @@
       "size_bytes": 10144972800,
       "uuid": "9dea98aa-91f6-4db4-9fab-23b07d1fe4e3"
     },
+    "/dev/sda2": {
+      "size": "1.00 KiB",
+      "size_bytes": 1024
+    },
     "/dev/sda5": {
       "filesystem": "swap",
       "size": "462.00 MiB",
@@ -176,7 +209,7 @@
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-    "version": "2.1.6"
+    "version": "2.1.7"
   },
   "ssh": {
     "dsa": {
@@ -204,8 +237,8 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 312,
-    "uptime": "0:05 hours"
+    "seconds": 594,
+    "uptime": "0:09 hours"
   },
   "timezone": "GMT",
   "virtual": "virtualbox"
