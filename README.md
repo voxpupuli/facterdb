@@ -23,34 +23,36 @@ Will return a JSON containing the facts for Debian 7, Debian 8 and RedHat 7 gene
 
 ```ruby
 require 'facterdb'
-FacterDB::get_os_facts()
+FacterDB::get_facts()
 ```
 
 Returns an Array of Hash containing the whole facts database.
 
 ## Filtering by Facter version and fact values
 
+### With an Array filter
+
 ```ruby
 require 'facterdb'
 
-facter_version = '2.4'
-filter = [
-  {
-    :operatingsystem => 'Debian',
-    :operatingsystemmajrelease => '8'
-  },
-  {
-    :operatingsystem => 'RedHat',
-    :operatingsystemmajrelease => '7'
-  },
-  {
-    :operatingsystem => 'Archlinux'
-  }
-]
-
-FacterDB::get_os_facts(facter_version, filter)
+FacterDB.get_facts([{:osfamily => 'Debian'}])
 ```
 
+### With an Hash filter
+
+```ruby
+require 'facterdb'
+
+FacterDB.get_facts({:osfamily => 'Debian'})
+```
+
+### With a String filter
+
+```ruby
+require 'facterdb'
+
+FacterDB::get_facts('osfamily=Debian')
+```
 
 # Facter versions supported
 
