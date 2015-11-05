@@ -31,7 +31,7 @@
       "uuid": "62636A1C-562A-4F07-955D-67844202B3C0"
     }
   },
-  "facterversion": "3.0.2",
+  "facterversion": "3.1.1",
   "filesystems": "ext2,ext3",
   "identity": {
     "gid": 0,
@@ -42,12 +42,12 @@
   "is_virtual": true,
   "kernel": "Linux",
   "kernelmajversion": "2.6",
-  "kernelrelease": "2.6.32-5-amd64",
+  "kernelrelease": "2.6.32-5-i386",
   "kernelversion": "2.6.32",
   "load_averages": {
-    "15m": 0,
-    "1m": 0,
-    "5m": 0
+    "15m": 0.0,
+    "1m": 0.0,
+    "5m": 0.0
   },
   "memory": {
     "swap": {
@@ -60,20 +60,20 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "455.98 MiB",
-      "available_bytes": 478130176,
-      "capacity": "8.23%",
+      "available": "450.98 MiB",
+      "available_bytes": 472887296,
+      "capacity": "9.24%",
       "total": "496.90 MiB",
       "total_bytes": 521035776,
-      "used": "40.92 MiB",
-      "used_bytes": 42905600
+      "used": "45.92 MiB",
+      "used_bytes": 48148480
     }
   },
   "mountpoints": {
     "/": {
-      "available": "17.65 GiB",
-      "available_bytes": 18949730304,
-      "capacity": "5.16%",
+      "available": "17.63 GiB",
+      "available_bytes": 18932359168,
+      "capacity": "5.25%",
       "device": "/dev/mapper/localhost-root",
       "filesystem": "ext3",
       "options": [
@@ -82,8 +82,8 @@
       ],
       "size": "18.61 GiB",
       "size_bytes": 19981529088,
-      "used": "984.00 MiB",
-      "used_bytes": 1031798784
+      "used": "1000.57 MiB",
+      "used_bytes": 1049169920
     },
     "/boot": {
       "available": "212.24 MiB",
@@ -107,6 +107,20 @@
     "hostname": "foo",
     "interfaces": {
       "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:fed9:4267",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
         "dhcp": "10.0.2.2",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:fed9:4267",
@@ -118,6 +132,20 @@
         "network6": "fe80::"
       },
       "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
         "ip": "127.0.0.1",
         "ip6": "::1",
         "mtu": 16436,
@@ -134,10 +162,11 @@
     "netmask": "255.255.255.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.2.0",
-    "network6": "fe80::"
+    "network6": "fe80::",
+    "primary": "eth0"
   },
   "os": {
-    "architecture": "amd64",
+    "architecture": "i386",
     "distro": {
       "codename": "squeeze",
       "description": "Debian GNU/Linux 6.0.10 (squeeze)",
@@ -149,7 +178,7 @@
       }
     },
     "family": "Debian",
-    "hardware": "x86_64",
+    "hardware": "i386",
     "name": "Debian",
     "release": {
       "full": "6.0.10",
@@ -164,14 +193,14 @@
     "/dev/mapper/localhost-root": {
       "filesystem": "ext3",
       "mount": "/",
-      "size": "0 bytes",
-      "size_bytes": 0,
+      "size": "18.91 GiB",
+      "size_bytes": 20300431360,
       "uuid": "d2763d16-5203-4625-8733-a6f2ecc94f5a"
     },
     "/dev/mapper/localhost-swap_1": {
       "filesystem": "swap",
-      "size": "0 bytes",
-      "size_bytes": 0,
+      "size": "872.00 MiB",
+      "size_bytes": 914358272,
       "uuid": "b5661448-0339-4ba3-8593-21cc6a049d33"
     },
     "/dev/sda1": {
@@ -180,6 +209,10 @@
       "size": "243.00 MiB",
       "size_bytes": 254803968,
       "uuid": "415531d6-6955-433f-921e-8f266ab56649"
+    },
+    "/dev/sda2": {
+      "size": "1.00 KiB",
+      "size_bytes": 1024
     },
     "/dev/sda5": {
       "filesystem": "LVM2_member",
@@ -198,9 +231,9 @@
     "physicalcount": 1
   },
   "ruby": {
-    "platform": "x86_64-linux",
+    "platform": "i386-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-    "version": "2.1.6"
+    "version": "2.1.7"
   },
   "ssh": {
     "dsa": {
@@ -221,8 +254,8 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 323,
-    "uptime": "0:05 hours"
+    "seconds": 613,
+    "uptime": "0:10 hours"
   },
   "timezone": "PST",
   "virtual": "virtualbox"
