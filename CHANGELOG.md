@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.3.0](https://rubygems.org/gems/facterdb/versions/0.3.0) (2015-11-05)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.2.2...0.3.0)
+
+**Implemented enhancements:**
+
+- New function: get\_facts
+- Deprecated function: get\_os\_facts
+
 ## [0.2.2](https://rubygems.org/gems/facterdb/versions/0.2.2) (2015-11-05)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.2.1...0.2.2)
 
