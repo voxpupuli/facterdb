@@ -4,20 +4,6 @@
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
-$install_rvm = <<SCRIPT
-# Install mpapis public key
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 ||
-curl -sSL https://rvm.io/mpapis.asc | gpg --import - &&
-
-# Run the installer
-\\curl -sSL https://get.rvm.io | bash -s stable &&
-
-# Install Ruby
-source /etc/profile.d/rvm.sh &&
-rvm install 1.9.3 &&
-rvm use --create 1.9.3
-SCRIPT
-
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.hostname = "foo.example.com"
@@ -77,29 +63,30 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define "ubuntu-15.04-x86_64" do |host|
     host.vm.box = "ubuntu/vivid64"
-    host.vm.provision "shell", inline: $install_rvm
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "ubuntu-15.10-x86_64" do |host|
+    host.vm.box = "ubuntu/wily64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "centos-5-x86_64" do |host|
     host.vm.box = "puppetlabs/centos-5.11-64-nocm"
-    host.vm.provision "shell", inline: "curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \\curl -sSL https://get.rvm.io | bash -s stable"
-    host.vm.provision "shell", inline: "source /etc/profile.d/rvm.sh && rvm install 1.9.3 && rvm use --create 1.9.3"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "centos-6-x86_64" do |host|
     host.vm.box = "puppetlabs/centos-6.6-64-nocm"
-    host.vm.provision "shell", inline: "yum -y install ruby-devel rubygems"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "centos-7-x86_64" do |host|
     host.vm.box = "puppetlabs/centos-7.0-64-nocm"
-    host.vm.provision "shell", inline: "yum -y install ruby ruby-devel"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -159,7 +146,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "gentoo-x86_64" do |host|
     host.vm.box = "cmiles/gentoo-amd64-minimal"
     host.vm.provision "shell", inline: "emerge-webrsync && emerge app-crypt/gnupg net-misc/curl"
-    host.vm.provision "shell", inline: $install_rvm
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
