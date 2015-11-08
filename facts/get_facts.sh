@@ -3,6 +3,8 @@
 export PATH=/opt/puppetlabs/bin:$PATH
 
 if test -f /usr/bin/apt-get; then
+  apt-get update
+  apt-get install -y lsb-release
   lsbdistcodename=$(lsb_release -sc)
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
@@ -31,6 +33,7 @@ case "${osfamily}" in
   if [[ "wily" =~ ${lsbdistcodename} ]]; then
     lsbdistcodename='trusty'
   fi
+  apt-get install -y wget
   wget "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -O /tmp/puppetlabs-release-pc1.deb
   dpkg --install /tmp/puppetlabs-release-pc1.deb
   apt-get update
@@ -40,6 +43,7 @@ case "${osfamily}" in
     mkdir -p $(dirname ${output_file})
     facter -j | tee ${output_file}
   done
+  apt-get install -y make gcc libgmp-dev
   ;;
 esac
 
