@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.1](https://rubygems.org/gems/facterdb/versions/0.3.1) (2016-01-06)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.0...0.3.1)
+
+**Implemented enhancements:**
+
+- Add facts for OSX 10.10
+
 ## [0.3.0](https://rubygems.org/gems/facterdb/versions/0.3.0) (2015-11-05)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.2.2...0.3.0)
 
