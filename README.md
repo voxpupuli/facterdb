@@ -92,6 +92,7 @@ FacterDB::get_facts('osfamily=Debian')
 * Scientific 7
 * SLES 11
 * Solaris 11
+* OSX 10.10
 * Ubuntu 10.04
 * Ubuntu 12.04
 * Ubuntu 14.04
