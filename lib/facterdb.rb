@@ -2,10 +2,29 @@ require 'facter'
 require 'jgrep'
 
 module FacterDB
+  # Convenience method to handle odd files
+  # returns Hash of filenames to fact Hashes
+  def self.build_database( fs )
+    Hash[
+      Dir.glob(fs).map do |f|
+        if File.basename(f) =~ /^windows-/i
+          # Windows facter -j dumps json in UTF-16LE
+          t = File.open(f, 'rb:UTF-16LE').read
+          t = t[1..t.size-1]
+        else
+          t = File.read(f)
+        end
+        [f,JSON.parse(t)]
+      end
+    ]
+  end
+
 
   def self.database
-    @database ||= "[#{Dir.glob("#{File.expand_path(File.join(File.dirname(__FILE__), '../facts'))}/*/*.facts").map { |f| File.read(f) }.join(',')}]\n"
+    fs = File.expand_path('../facts/*/*.facts',File.dirname(__FILE__))
+    @database ||= build_database( fs ).values.to_json
   end
+
 
   def self.get_os_facts(facter_version='*', filter=[])
     if facter_version == '*'
