@@ -6,3 +6,5 @@ coverage/
 vendor/
 packer_cache/
 *.box
+*.msi
+*.sw[nopqrstuv]
