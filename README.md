@@ -99,6 +99,8 @@ FacterDB::get_facts('osfamily=Debian')
 * Ubuntu 14.10
 * Ubuntu 15.04
 * Ubuntu 15.10
+* Windows 2012 r2
+* Windows 7
 
 # Add new Operating System support
 
