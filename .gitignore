@@ -1,3 +1,8 @@
 .bundle/
 Gemfile.lock
 coverage/
+.vagrant/
+.envrc
+vendor/
+packer_cache/
+*.box
