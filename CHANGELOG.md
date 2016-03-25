@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.2](https://rubygems.org/gems/facterdb/versions/0.3.2) (2016-03-25)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.1...0.3.2)
+
+**Implemented enhancements:**
+
+- Add facts for Windows 2012 r2 and Windows 7
+
 ## [0.3.1](https://rubygems.org/gems/facterdb/versions/0.3.1) (2016-01-06)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.0...0.3.1)
 
