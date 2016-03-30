@@ -21,7 +21,7 @@ case "${osfamily}" in
 'RedHat')
   wget "https://yum.puppetlabs.com/puppetlabs-release-pc1-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
   rpm -ivh /tmp/puppetlabs-release-pc1.rpm
-  for puppet_agent_version in 1.2.2 1.2.7; do
+  for puppet_agent_version in 1.2.2 1.4.1; do
     yum install -y puppet-agent-${puppet_agent_version}
     output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
@@ -30,14 +30,14 @@ case "${osfamily}" in
   ;;
 
 'Debian')
-  if [[ "wily" =~ ${lsbdistcodename} ]]; then
-    lsbdistcodename='trusty'
+  if [[ "xenial" =~ ${lsbdistcodename} ]]; then
+    lsbdistcodename='wily'
   fi
   apt-get install -y wget
   wget "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -O /tmp/puppetlabs-release-pc1.deb
   dpkg --install /tmp/puppetlabs-release-pc1.deb
   apt-get update
-  for puppet_agent_version in 1.2.2 1.2.7; do
+  for puppet_agent_version in 1.2.2 1.4.1; do
     apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
     output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
