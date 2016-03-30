@@ -99,6 +99,7 @@ FacterDB::get_facts('osfamily=Debian')
 * Ubuntu 14.10
 * Ubuntu 15.04
 * Ubuntu 15.10
+* Ubuntu 16.04
 * Windows 2012 r2
 * Windows 7
 

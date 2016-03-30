@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.3](https://rubygems.org/gems/facterdb/versions/0.3.3) (2016-03-30)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.2...0.3.3)
+
+**Implemented enhancements:**
+
+- Add facts for Ubuntu 16.04
+
 ## [0.3.2](https://rubygems.org/gems/facterdb/versions/0.3.2) (2016-03-25)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.1...0.3.2)
 
