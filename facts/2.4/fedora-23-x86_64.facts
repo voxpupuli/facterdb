@@ -1,9 +1,8 @@
 {
   "gem_version": "~> 2.4.0",
   "kernel": "Linux",
-  "lsbdistdescription": "Fedora release 23 (Twenty Three)",
   "timezone": "UTC",
-  "uptime_seconds": 267,
+  "uptime_seconds": 136,
   "hardwareisa": "x86_64",
   "architecture": "x86_64",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC0HPb2CUtfuwflIEUqMSc5LQlJ4/2MkUAZXArTqTKmHDYnZPu6dw5g/vIyfvbtlRY+GzO2UGh4NwduFTxepqq1Z2ATVWCHIufaj0hfbpb2UlWDlpHAaRLh1rl1ZGFF9qB38xgWMnh4dGoDBU0XpI01Faj3rfeQ1Qmu39vqOnuBXYIYxnpDQRFDtyFauHRm35/p+G/W09IMXxOhwSvsnFwGUOpExKm0e7Byncp9RD5KyeS5sy28R83fvb1xBfF1oLvt1eUticKbPw++ofjttGb6Rzhppkni3YgQvGwiRYHsAuRUo/V6fbrZKdMbVaH2uRwTRZ+bqKl8RpxxguPoZzTx",
@@ -28,19 +27,10 @@
     "release": {
       "major": "23",
       "full": "23"
-    },
-    "lsb": {
-      "distcodename": "TwentyThree",
-      "distid": "Fedora",
-      "distdescription": "Fedora release 23 (Twenty Three)",
-      "release": ":core-4.1-amd64:core-4.1-noarch",
-      "distrelease": "23",
-      "majdistrelease": "23"
     }
   },
   "puppetversion": "4.4.1",
-  "uptime": "0:04 hours",
-  "lsbrelease": ":core-4.1-amd64:core-4.1-noarch",
+  "uptime": "0:02 hours",
   "rubyversion": "2.1.8",
   "processors": {
     "models": [
@@ -56,12 +46,11 @@
   "uptime_hours": 0,
   "rubyplatform": "x86_64-linux",
   "system_uptime": {
-    "seconds": 267,
+    "seconds": 136,
     "hours": 0,
     "days": 0,
-    "uptime": "0:04 hours"
+    "uptime": "0:02 hours"
   },
-  "lsbdistrelease": "23",
   "kernelrelease": "4.2.3-300.fc23.x86_64",
   "blockdevice_sda_size": 42949672960,
   "blockdevice_sda_vendor": "ATA",
@@ -70,7 +59,6 @@
   "ipaddress": "10.0.2.15",
   "fqdn": "foo.example.com",
   "netmask": "255.255.255.0",
-  "lsbmajdistrelease": "23",
   "selinux": true,
   "selinux_enforced": false,
   "selinux_policyversion": "29",
@@ -92,19 +80,18 @@
   },
   "virtual": "virtualbox",
   "is_virtual": true,
-  "lsbdistid": "Fedora",
   "network_enp0s3": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "facterversion": "2.4.6",
   "filesystems": "ext2,ext3,ext4",
   "memorysize": "489.50 MB",
-  "memoryfree": "363.04 MB",
+  "memoryfree": "364.96 MB",
   "swapsize": "1.03 GB",
   "swapfree": "1.03 GB",
   "swapsize_mb": "1056.00",
-  "swapfree_mb": "1052.89",
+  "swapfree_mb": "1052.30",
   "memorysize_mb": "489.50",
-  "memoryfree_mb": "363.04",
+  "memoryfree_mb": "364.96",
   "operatingsystemmajrelease": "23",
   "dhcp_servers": {
     "system": "10.0.2.2",
@@ -115,7 +102,6 @@
   "physicalprocessorcount": 1,
   "macaddress": "08:00:27:24:23:96",
   "path": "/home/vagrant/vendor/bundler/ruby/2.1.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
-  "lsbdistcodename": "TwentyThree",
   "gid": "root",
   "operatingsystemrelease": "23",
   "kernelversion": "4.2.3",
