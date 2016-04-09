@@ -45,7 +45,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "CC716578-E478-4F9E-A055-62B7A86D8BB1"
+      "uuid": "B07F4DC0-B056-40CB-BEAA-93A5D63A4281"
     }
   },
   "domain": "example.com",
@@ -76,48 +76,42 @@
   "kernelrelease": "4.0.4-301.fc22.x86_64",
   "kernelversion": "4.0.4",
   "load_averages": {
-    "15m": 0.1,
-    "1m": 0.76,
-    "5m": 0.28
+    "15m": 0.14,
+    "1m": 1.41,
+    "5m": 0.41
   },
-  "lsbdistcodename": "TwentyTwo",
-  "lsbdistdescription": "Fedora release 22 (Twenty Two)",
-  "lsbdistid": "Fedora",
-  "lsbdistrelease": "22",
-  "lsbmajdistrelease": "22",
-  "lsbrelease": ":core-4.1-amd64:core-4.1-noarch",
   "macaddress": "08:00:27:9b:2b:10",
   "macaddress_enp0s3": "08:00:27:9b:2b:10",
   "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "1.03 GiB",
-      "available_bytes": 1102884864,
-      "capacity": "0.40%",
+      "available_bytes": 1103331328,
+      "capacity": "0.36%",
       "total": "1.03 GiB",
       "total_bytes": 1107292160,
-      "used": "4.20 MiB",
-      "used_bytes": 4407296
+      "used": "3.78 MiB",
+      "used_bytes": 3960832
     },
     "system": {
-      "available": "350.68 MiB",
-      "available_bytes": 367718400,
-      "capacity": "28.37%",
+      "available": "350.23 MiB",
+      "available_bytes": 367243264,
+      "capacity": "28.46%",
       "total": "489.56 MiB",
       "total_bytes": 513343488,
-      "used": "138.88 MiB",
-      "used_bytes": 145625088
+      "used": "139.33 MiB",
+      "used_bytes": 146100224
     }
   },
-  "memoryfree": "350.68 MiB",
-  "memoryfree_mb": 350.68359375,
+  "memoryfree": "350.23 MiB",
+  "memoryfree_mb": 350.23046875,
   "memorysize": "489.56 MiB",
   "memorysize_mb": 489.5625,
   "mountpoints": {
     "/": {
       "available": "36.51 GiB",
-      "available_bytes": 39198806016,
-      "capacity": "3.27%",
+      "available_bytes": 39203237888,
+      "capacity": "3.26%",
       "device": "/dev/mapper/vg_vagrant-lv_root",
       "filesystem": "ext4",
       "options": [
@@ -129,7 +123,7 @@
       "size": "37.74 GiB",
       "size_bytes": 40522645504,
       "used": "1.23 GiB",
-      "used_bytes": 1323839488
+      "used_bytes": 1319407616
     },
     "/boot": {
       "available": "402.23 MiB",
@@ -233,16 +227,6 @@
   "operatingsystemrelease": "22",
   "os": {
     "architecture": "x86_64",
-    "distro": {
-      "codename": "TwentyTwo",
-      "description": "Fedora release 22 (Twenty Two)",
-      "id": "Fedora",
-      "release": {
-        "full": "22",
-        "major": "22"
-      },
-      "specification": ":core-4.1-amd64:core-4.1-noarch"
-    },
     "family": "RedHat",
     "hardware": "x86_64",
     "name": "Fedora",
@@ -349,20 +333,20 @@
   "sshfp_rsa": "SSHFP 1 1 456234e601f1681cdd586bfe4d9dd2ec8c39943f\nSSHFP 1 2 1aca9eb20412aad1ad75f78303c8e950c48f5e2a9f382cfd7f918dc4f95b20fd",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDje7n/ACOY8XnQtkVkf7we5h5TwoLRm0QNDtmya2229RjvfshBTCPsAMh3FQVnrJ2TJw/6nz+batsoDx2BO5PR0o+jDFVz2J5WHhELM0JdmyznB3JGCT64IDRylHo60rfCzQHY1fIyKhxceZEJFQT6QflnBkmoivCbSJHNBHK6okYR0wUumixFBGXI1iDibr5K02ggAjdS7a7QRUmlSdQIl5anBHVV58XNQzrVROPpTzHsMJBPgpVs6yqXI0UtsJZKXpplDBbh9zzEQT0fPOrhIfVRsCxkRjJQLF0N4T6ikHJkXI7JItguwMjwBhN3bCk4/Qt4W0ftypK0+9xEDN6F",
   "swapfree": "1.03 GiB",
-  "swapfree_mb": 1051.79296875,
+  "swapfree_mb": 1052.21875,
   "swapsize": "1.03 GiB",
   "swapsize_mb": 1055.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 108,
+    "seconds": 97,
     "uptime": "0:01 hours"
   },
   "timezone": "UTC",
   "uptime": "0:01 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 108,
-  "uuid": "CC716578-E478-4F9E-A055-62B7A86D8BB1",
+  "uptime_seconds": 97,
+  "uuid": "B07F4DC0-B056-40CB-BEAA-93A5D63A4281",
   "virtual": "virtualbox"
 }
