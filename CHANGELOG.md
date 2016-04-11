@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.4](https://rubygems.org/gems/facterdb/versions/0.3.4) (2016-04-11)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.3...0.3.4)
+
+**Implemented enhancements:**
+
+- Add facts for Fedora 22 and Fedora 23
+
 ## [0.3.3](https://rubygems.org/gems/facterdb/versions/0.3.3) (2016-03-30)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.2...0.3.3)
 
