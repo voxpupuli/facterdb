@@ -76,6 +76,8 @@ FacterDB::get_facts('osfamily=Debian')
 * Debian 7
 * Debian 8
 * Fedora 19
+* Fedora 22
+* Fedora 23
 * FreeBSD 9
 * FreeBSD 10
 * Gentoo

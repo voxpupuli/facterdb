@@ -9,6 +9,9 @@ if test -f /usr/bin/apt-get; then
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
   osfamily='Debian'
+elif test -f /usr/bin/dnf; then
+  operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
+  osfamily='Fedora'
 elif test -f /usr/bin/yum; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f4 | cut -c1)
   osfamily='RedHat'
@@ -18,6 +21,15 @@ else
 fi
 
 case "${osfamily}" in
+'Fedora')
+  for puppet_agent_version in "1.4.1-1.fedoraf${operatingsystemmajrelease}"; do
+    # install directly because there is no pc1 release package for f23    
+    dnf install -y --nogpgcheck "https://yum.puppetlabs.com/fedora/f${operatingsystemmajrelease}/PC1/x86_64/puppet-agent-${puppet_agent_version}.x86_64.rpm"
+    output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    mkdir -p $(dirname ${output_file})
+    facter --show-legacy -p -j | tee ${output_file}
+  done
+  ;;
 'RedHat')
   wget "https://yum.puppetlabs.com/puppetlabs-release-pc1-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
   rpm -ivh /tmp/puppetlabs-release-pc1.rpm

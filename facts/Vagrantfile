@@ -104,6 +104,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "fedora-22-x86_64" do |host|
+    host.vm.box = "bento/fedora-22"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-23-x86_64" do |host|
+    host.vm.box = "bento/fedora-23"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "archlinux-x86_64" do |host|
     host.vm.box = "terrywang/archlinux"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
