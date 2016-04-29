@@ -15,9 +15,6 @@ elif test -f /usr/bin/dnf; then
 elif test -f /usr/bin/yum; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f4 | cut -c1)
   osfamily='RedHat'
-else
-  echo 'Could not detect OS family, aborting!'
-  exit 1
 fi
 
 case "${osfamily}" in
@@ -60,8 +57,11 @@ case "${osfamily}" in
 esac
 
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
+operatingsystemrelease=$(facter operatingsystemrelease)
 operatingsystemmajrelease=$(facter operatingsystemmajrelease)
 hardwaremodel=$(facter hardwaremodel)
+
+[ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
 
 PATH=/opt/puppetlabs/puppet/bin:$PATH
 gem install bundler --no-ri --no-rdoc --no-format-executable
@@ -69,7 +69,14 @@ bundle install --path vendor/bundler
 
 for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
-  output_file="/vagrant/$(bundle exec facter --version | cut -c1-3)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
+  case "${operatingsystem}" in
+    openbsd)
+      output_file="/vagrant/$(bundle exec facter --version | cut -c1-3)/${operatingsystem}-${operatingsystemrelease}-${hardwaremodel}.facts"
+      ;;
+    *)
+      output_file="/vagrant/$(bundle exec facter --version | cut -c1-3)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
+      ;;
+  esac
   mkdir -p $(dirname $output_file)
   echo $version | grep -q -E '^1\.' &&
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||

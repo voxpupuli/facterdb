@@ -201,6 +201,52 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "openbsd-5.8-x86_64" do |host|
+    host.vm.box = "bodgit/openbsd-5.8-amd64"
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
+    host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
+      . ~/.profile
+
+      pkg_info -qe 'bash->=0' || pkg_add -I bash
+      ln -sf /usr/local/bin/bash /bin
+
+      pkg_info -qe 'facter->=2.4.4' || pkg_add -I facter-2.4.4p2
+      ln -sf /usr/local/bin/ruby22 /usr/local/bin/ruby
+      ln -sf /usr/local/bin/erb22 /usr/local/bin/erb
+      ln -sf /usr/local/bin/irb22 /usr/local/bin/irb
+      ln -sf /usr/local/bin/rdoc22 /usr/local/bin/rdoc
+      ln -sf /usr/local/bin/ri22 /usr/local/bin/ri
+      ln -sf /usr/local/bin/rake22 /usr/local/bin/rake
+      ln -sf /usr/local/bin/gem22 /usr/local/bin/gem
+      ln -sf /usr/local/bin/testrb22 /usr/local/bin/testrb
+    SCRIPT
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "openbsd-5.9-x86_64" do |host|
+    host.vm.box = "bodgit/openbsd-5.9-amd64"
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
+    host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
+      . ~/.profile
+
+      pkg_info -qe 'bash->=0' || pkg_add -I bash
+      ln -sf /usr/local/bin/bash /bin
+
+      pkg_info -qe 'facter->=2.4.6' || pkg_add -I facter-2.4.6
+      ln -sf /usr/local/bin/ruby22 /usr/local/bin/ruby
+      ln -sf /usr/local/bin/erb22 /usr/local/bin/erb
+      ln -sf /usr/local/bin/irb22 /usr/local/bin/irb
+      ln -sf /usr/local/bin/rdoc22 /usr/local/bin/rdoc
+      ln -sf /usr/local/bin/ri22 /usr/local/bin/ri
+      ln -sf /usr/local/bin/rake22 /usr/local/bin/rake
+      ln -sf /usr/local/bin/gem22 /usr/local/bin/gem
+      ln -sf /usr/local/bin/testrb22 /usr/local/bin/testrb
+    SCRIPT
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "osx-10.10-x86_64" do |host|
     host.vm.box = "AndrewDryga/vagrant-box-osx"
     host.vm.network :private_network, ip: '10.0.0.2'
