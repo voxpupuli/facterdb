@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.3.5](https://rubygems.org/gems/facterdb/versions/0.3.5) (2016-05-02)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.4...0.3.5)
+
+**Implemented enhancements:**
+
+- Add facts for OpenBSD 5.8 and OpenBSD 5.9
+
 ## [0.3.4](https://rubygems.org/gems/facterdb/versions/0.3.4) (2016-04-11)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.3...0.3.4)
 
