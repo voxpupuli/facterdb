@@ -34,7 +34,7 @@ case "${osfamily}" in
     yum install -y puppet-agent-${puppet_agent_version}
     output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
-    facter -j | tee ${output_file}
+    facter --show-legacy -p -j | tee ${output_file}
   done
   ;;
 
@@ -50,7 +50,7 @@ case "${osfamily}" in
     apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
     output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
-    facter -j | tee ${output_file}
+    facter --show-legacy -p -j | tee ${output_file}
   done
   apt-get install -y make gcc libgmp-dev
   ;;
