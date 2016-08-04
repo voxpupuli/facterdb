@@ -65,6 +65,7 @@ FacterDB::get_facts('osfamily=Debian')
 * 2.4
 * 3.0
 * 3.1
+* 3.3
 
 # Operating Systems supported
 
