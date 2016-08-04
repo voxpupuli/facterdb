@@ -1,0 +1,101 @@
+{
+  "dmi": {
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0"
+    }
+  },
+  "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+  "facterversion": "3.0.2",
+  "fqdn": "foo.example.com",
+  "identity": {
+    "user": "FOO\\vagrant"
+  },
+  "is_virtual": true,
+  "kernel": "windows",
+  "kernelmajversion": "6.1",
+  "kernelrelease": "6.1.7600",
+  "kernelversion": "6.1.7600",
+  "memory": {
+    "system": {
+      "available": "278.74 MiB",
+      "available_bytes": 292278272,
+      "capacity": "72.77%",
+      "total": "1023.55 MiB",
+      "total_bytes": 1073274880,
+      "used": "744.82 MiB",
+      "used_bytes": 780996608
+    }
+  },
+  "networking": {
+    "fqdn": "foo",
+    "hostname": "foo",
+    "interfaces": {
+      "Local Area Connection": {
+        "dhcp": "10.0.2.2",
+        "ip": "10.0.2.15",
+        "ip6": "fe80::700d:3fab:1d54:dc0d%11",
+        "mac": "08:00:27:67:C8:1B",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fe80::%11"
+      },
+      "Local Area Connection 3": {
+        "ip": "10.20.1.5",
+        "ip6": "fe80::15ec:2eb0:42ca:d968%13",
+        "mac": "08:00:27:81:BB:CB",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.20.1.0",
+        "network6": "fe80::%13"
+      }
+    },
+    "ip": "10.20.1.5",
+    "ip6": "fe80::15ec:2eb0:42ca:d968%13",
+    "mac": "08:00:27:81:BB:CB",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.20.1.0",
+    "network6": "fe80::%13"
+  },
+  "os": {
+    "architecture": "x64",
+    "family": "windows",
+    "hardware": "i386",
+    "name": "windows",
+    "release": {
+      "full": "7",
+      "major": "7"
+    },
+    "windows": {
+      "system32": "C:\\Windows\\system32"
+    }
+  },
+  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\facter\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\hiera\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\mcollective\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\tools\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Git\\bin; ",
+  "processors": {
+    "count": 1,
+    "isa": "x64",
+    "models": [
+      "Intel(R) Core(TM) i7-4980HQ CPU @ 2.80GHz"
+    ],
+    "physicalcount": 1
+  },
+  "ruby": {
+    "platform": "x64-mingw32",
+    "sitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
+    "version": "2.1.6"
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 119,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "Coordinated Universal Time",
+  "virtual": "virtualbox"
+}

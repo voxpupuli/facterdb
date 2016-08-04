@@ -49,7 +49,7 @@
     }
   },
   "domain": "example.com",
-  "facterversion": "3.0.2",
+  "facterversion": "3.1.6",
   "filesystems": "ext2,ext3,ext4",
   "fqdn": "foo.example.com",
   "gid": "root",
@@ -76,7 +76,7 @@
   "kernelrelease": "3.16.0-4-i386",
   "kernelversion": "3.16.0",
   "load_averages": {
-    "15m": 0.12,
+    "15m": 0.13,
     "1m": 0.27,
     "5m": 0.21
   },
@@ -91,24 +91,24 @@
   "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
-      "available": "377.95 MiB",
-      "available_bytes": 396308480,
-      "capacity": "23.56%",
+      "available": "369.76 MiB",
+      "available_bytes": 387719168,
+      "capacity": "25.22%",
       "total": "494.45 MiB",
       "total_bytes": 518467584,
-      "used": "116.50 MiB",
-      "used_bytes": 122159104
+      "used": "124.69 MiB",
+      "used_bytes": 130748416
     }
   },
-  "memoryfree": "377.95 MiB",
-  "memoryfree_mb": 377.949,
+  "memoryfree": "369.76 MiB",
+  "memoryfree_mb": 369.7578125,
   "memorysize": "494.45 MiB",
-  "memorysize_mb": 494.449,
+  "memorysize_mb": 494.44921875,
   "mountpoints": {
     "/": {
-      "available": "47.65 GiB",
-      "available_bytes": 51163623424,
-      "capacity": "2.93%",
+      "available": "47.61 GiB",
+      "available_bytes": 51124781056,
+      "capacity": "3.00%",
       "device": "/dev/sda1",
       "filesystem": "ext4",
       "options": [
@@ -119,8 +119,8 @@
       ],
       "size": "49.09 GiB",
       "size_bytes": 52708372480,
-      "used": "1.44 GiB",
-      "used_bytes": 1544749056
+      "used": "1.47 GiB",
+      "used_bytes": 1583591424
     }
   },
   "mtu_eth0": 1500,
@@ -144,6 +144,20 @@
     "hostname": "foo",
     "interfaces": {
       "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:feac:cc97",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
         "dhcp": "10.0.2.2",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:feac:cc97",
@@ -155,6 +169,20 @@
         "network6": "fe80::"
       },
       "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
         "ip": "127.0.0.1",
         "ip6": "::1",
         "mtu": 65536,
@@ -171,7 +199,8 @@
     "netmask": "255.255.255.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.2.0",
-    "network6": "fe80::"
+    "network6": "fe80::",
+    "primary": "eth0"
   },
   "operatingsystem": "Debian",
   "operatingsystemmajrelease": "8",
@@ -224,14 +253,15 @@
     "physicalcount": 1
   },
   "productname": "VirtualBox",
+  "puppetversion": "4.4.2",
   "ruby": {
     "platform": "i386-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-    "version": "2.1.6"
+    "version": "2.1.8"
   },
   "rubyplatform": "i386-linux",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-  "rubyversion": "2.1.6",
+  "rubyversion": "2.1.8",
   "selinux": false,
   "serialnumber": "0",
   "ssh": {
@@ -275,14 +305,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 538,
-    "uptime": "0:08 hours"
+    "seconds": 560,
+    "uptime": "0:09 hours"
   },
   "timezone": "CEST",
-  "uptime": "0:08 hours",
+  "uptime": "0:09 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 538,
+  "uptime_seconds": 560,
   "uuid": "44CCF456-FF08-48A2-848D-A5B5EB65445C",
   "virtual": "virtualbox"
 }
