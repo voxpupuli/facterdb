@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.3.6]((https://rubygems.org/gems/facterdb/versions/0.3.6) (2016-08-04)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.5...0.3.6)
+
+**Implemented enhancements:**
+
+- Add facts for facter 3.3
+- Use --show-legacy for facter 3
+
 ## [0.3.5](https://rubygems.org/gems/facterdb/versions/0.3.5) (2016-05-02)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.4...0.3.5)
 
