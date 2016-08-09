@@ -91,12 +91,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
-  config.vm.define "centos-7-x86_64" do |host|
-    host.vm.box = "puppetlabs/centos-7.0-64-nocm"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
+ config.vm.define "centos-7-x86_64" do |host|
+   host.vm.box = "puppetlabs/centos-7.0-64-nocm"
+   host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+   host.vm.provision "shell", path: "get_facts.sh"
+   host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+ end
   config.vm.define "fedora-19-x86_64" do |host|
     host.vm.box = "chef/fedora-19"
     host.vm.provision "shell", inline: "yum -y install ruby ruby-devel"
@@ -291,5 +291,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
     host.vm.provision :shell, :path   => "get_facts.ps1"
     host.vm.provision :shell, :inline => "Stop-Computer -force -asjob"
+    host.vm.provision :host_shell do |host_shell|
+      host_shell.inline = 'ruby clean_facts.rb'
+    end
   end
+
 end
