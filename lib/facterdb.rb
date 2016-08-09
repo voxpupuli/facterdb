@@ -2,18 +2,11 @@ require 'facter'
 require 'jgrep'
 
 module FacterDB
-  # Convenience method to handle odd files
   # returns Hash of filenames to fact Hashes
   def self.build_database( fs )
     Hash[
       Dir.glob(fs).map do |f|
-        if File.basename(f) =~ /^windows-/i
-          # Windows facter -j dumps json in UTF-16LE
-          t = File.open(f, 'rb:UTF-16LE').read
-          t = t[1..t.size-1]
-        else
-          t = File.read(f)
-        end
+        t = File.read(f)
         [f,JSON.parse(t)]
       end
     ]
