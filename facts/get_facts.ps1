@@ -1,5 +1,5 @@
 $original_env_path=$Env:Path.clone()
-Foreach( $installer in 'puppet-agent-1.5.3-x64','puppet-agent-1.5.1-x64','puppet-agent-1.2.2-x64','puppet-3.8.4-x64','puppet-3.7.4-x64','puppet-3.7.0-x64','puppet-3.6.2', 'puppet-3.6.0', 'puppet-3.1.1', 'puppet-3.0.0' )
+Foreach( $installer in 'puppet-agent-1.5.3-x64','puppet-agent-1.5.1-x64','puppet-agent-1.2.7-x64','puppet-agent-1.2.2-x64','puppet-3.8.4-x64','puppet-3.7.4-x64','puppet-3.7.0-x64','puppet-3.6.2', 'puppet-3.6.0', 'puppet-3.1.1', 'puppet-3.0.0' )
 {
   # ---------------------------------------------------------------------------
   $installer_url  = "https://downloads.puppetlabs.com/windows/${installer}.msi"
