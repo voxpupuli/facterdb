@@ -290,10 +290,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       vb.customize ['modifyvm', :id, '--memory', '1024', '--cpus', '1']
     end
     host.vm.provision :shell, :path   => "get_facts.ps1"
-    host.vm.provision :shell, :inline => "Stop-Computer -force -asjob"
     host.vm.provision :host_shell do |host_shell|
       host_shell.inline = 'ruby clean_facts.rb'
     end
+    host.vm.provision :shell, :inline => "Stop-Computer -force -asjob"
   end
 
 end
