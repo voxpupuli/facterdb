@@ -8,25 +8,25 @@
   },
   "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
-  "facterversion": "3.1.1",
+  "facterversion": "3.0.2",
   "fqdn": "foo.example.com",
   "identity": {
     "user": "FOO\\vagrant"
   },
   "is_virtual": true,
   "kernel": "windows",
-  "kernelmajversion": "6.1",
-  "kernelrelease": "6.1.7600",
-  "kernelversion": "6.1.7600",
+  "kernelmajversion": "6.3",
+  "kernelrelease": "6.3.9600",
+  "kernelversion": "6.3.9600",
   "memory": {
     "system": {
-      "available": "414.14 MiB",
-      "available_bytes": 434262016,
-      "capacity": "59.54%",
+      "available": "540.65 MiB",
+      "available_bytes": 566915072,
+      "capacity": "47.18%",
       "total": "1023.55 MiB",
-      "total_bytes": 1073274880,
-      "used": "609.41 MiB",
-      "used_bytes": 639012864
+      "total_bytes": 1073270784,
+      "used": "482.90 MiB",
+      "used_bytes": 506355712
     }
   },
   "networking": {
@@ -40,8 +40,8 @@
     "hardware": "x86_64",
     "name": "windows",
     "release": {
-      "full": "2008 R2",
-      "major": "2008 R2"
+      "full": "2012 R2",
+      "major": "2012 R2"
     },
     "windows": {
       "system32": "C:\\Windows\\system32"
@@ -59,13 +59,13 @@
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
-    "version": "2.1.7"
+    "version": "2.1.6"
   },
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 192,
-    "uptime": "0:03 hours"
+    "seconds": 157,
+    "uptime": "0:02 hours"
   },
   "timezone": "Pacific Daylight Time",
   "virtual": "virtualbox"

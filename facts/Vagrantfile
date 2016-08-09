@@ -91,12 +91,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
- config.vm.define "centos-7-x86_64" do |host|
-   host.vm.box = "puppetlabs/centos-7.0-64-nocm"
-   host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-   host.vm.provision "shell", path: "get_facts.sh"
-   host.vm.provision "shell", inline: "/sbin/shutdown -h now"
- end
+  config.vm.define "centos-7-x86_64" do |host|
+    host.vm.box = "puppetlabs/centos-7.0-64-nocm"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "fedora-19-x86_64" do |host|
     host.vm.box = "chef/fedora-19"
     host.vm.provision "shell", inline: "yum -y install ruby ruby-devel"
@@ -268,19 +268,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: "shutdown -s -f -c \"Fact Collection Complete\""
     #host.vm.post_up_message = 'Note that windows machines do not automatically shutdown.  You must run a \'vagrant destroy\' or \'vagrant halt\' to terminate/stop the build vm.'
   end
-  config.vm.define "windows-2012r2-core-x86_64" do |host|
+#  config.vm.define "windows-2012r2-core-x86_64" do |host|
+#    host.vm.hostname = 'foo'
+#    host.vm.box = "windows-2012r2-core-x86_64"
+#    host.vm.communicator = "winrm"
+#    host.vm.guest = :windows
+#    host.vm.network :private_network, :auto_network => true
+#    host.vm.network "forwarded_port", guest: 22, host: 2200, id: "ssh", auto_correct: true
+#    host.windows.set_work_network = true
+#    host.vm.provision 'shell', path: "windows_get_facts.ps1"
+#    host.vm.provision 'shell', inline: "shutdown -s -f -c \"Fact Collection Complete\""
+#  end
+  config.vm.define 'win-2008R2-std-x86_64' do |host|
     host.vm.hostname = 'foo'
-    host.vm.box = "windows-2012r2-core-x86_64"
-    host.vm.communicator = "winrm"
-    host.vm.guest = :windows
-    host.vm.network :private_network, :auto_network => true
-    host.vm.network "forwarded_port", guest: 22, host: 2200, id: "ssh", auto_correct: true
-    host.windows.set_work_network = true
-    host.vm.provision 'shell', path: "windows_get_facts.ps1"
-    host.vm.provision 'shell', inline: "shutdown -s -f -c \"Fact Collection Complete\""
-  end
-  config.vm.define 'win-2008R2-std' do |host|
-    host.vm.hostname = 'win-2008R2-std'
     host.vm.box = 'opentable/win-2008r2-standard-amd64-nocm'
     host.vm.network :private_network, ip: "10.0.0.2"
     host.vm.network :forwarded_port, guest: 3389, host: 3389, id: 'rdp', auto_correct: true
@@ -293,7 +293,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision :host_shell do |host_shell|
       host_shell.inline = 'ruby clean_facts.rb'
     end
-    host.vm.provision :shell, :inline => "Stop-Computer -force -asjob"
+    host.vm.provision 'shell', inline: "shutdown -s -f -c \"Fact Collection Complete\""
   end
-
+  config.vm.define 'win-2012R2-std-x86_64' do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box      = 'opentable/win-2012r2-standard-amd64-nocm'
+    host.vm.network :private_network, ip: "10.0.0.2"
+    host.vm.network :forwarded_port, guest: 3389, host: 3389, id: 'rdp', auto_correct: true
+    host.vm.network :forwarded_port, guest: 5985, host: 5985, id: 'winrm', auto_correct: true
+    host.vm.guest = :windows
+    host.vm.provider :virtualbox do |vb|
+      vb.customize ['modifyvm', :id, '--memory', '1024', '--cpus', '1']
+    end
+    host.vm.provision :shell, :path   => "get_facts.ps1"
+    host.vm.provision :host_shell do |host_shell|
+      host_shell.inline = 'ruby clean_facts.rb'
+    end
+    host.vm.provision 'shell', inline: "shutdown -s -f -c \"Fact Collection Complete\""
+  end
 end

@@ -1,13 +1,16 @@
-$original_env_path=$Env:Path.clone()
-Foreach( $installer in 'puppet-agent-1.5.3-x64','puppet-agent-1.5.1-x64','puppet-agent-1.2.7-x64','puppet-agent-1.2.2-x64','puppet-3.8.4-x64','puppet-3.7.4-x64','puppet-3.7.0-x64','puppet-3.6.2', 'puppet-3.6.0', 'puppet-3.1.1', 'puppet-3.0.0' )
+$original_env_path = $Env:Path.clone()
+$vagrant_dir       = "C:\vagrant"
+
+# I don't know of a Windows agent that comes with Facter 2.1, so we're missing coverage for that.
+Foreach( $installer in 'puppet-agent-1.5.3-x64',  'puppet-agent-1.2.7-x64', 'puppet-agent-1.2.2-x64', 'puppet-3.8.4-x64', 'puppet-3.7.4-x64', 'puppet-3.7.0-x64', 'puppet-3.6.2', 'puppet-3.6.0', 'puppet-3.1.1')
 {
   # ---------------------------------------------------------------------------
   $installer_url  = "https://downloads.puppetlabs.com/windows/${installer}.msi"
-  $installer_file = "C:\vagrant\${installer}.msi"
+  $installer_file = "${vagrant_dir}\${installer}.msi"
+
 
   # ---------------------------------------------------------------------------
-  # It takes a long time to download
-  #
+  # It can take a long time to download each installer, so reuse if present
   if( -Not (Test-Path $installer_file) ) {
     Write-Output "== Downloading '${installer_url}'"
     (New-Object System.Net.WebClient).DownloadFile( $installer_url, $installer_file )
@@ -16,7 +19,7 @@ Foreach( $installer in 'puppet-agent-1.5.3-x64','puppet-agent-1.5.1-x64','puppet
   }
 
 
-  Write-Output "== Env:Path = '${Env:Path}'"
+  ### Write-Output "== Env:Path = '${Env:Path}'"
   ### Write-Output "== original_env_path = '${original_env_path}'"
 
   # ---------------------------------------------------------------------------
@@ -40,26 +43,42 @@ Foreach( $installer in 'puppet-agent-1.5.3-x64','puppet-agent-1.5.1-x64','puppet
   # ---------------------------------------------------------------------------
   $facter_version = ([string](facter --version).SubString(0,3))
   $os             = (facter operatingsystem)
-  $osmajrel       = (facter operatingsystemmajrelease)
-  if( $facter_version -le '2.0' ){
-    $osmajrel       = (facter operatingsystemrelease)
-  }
   $arch           = (facter hardwaremodel)
-  $fact_dir       = "C:\vagrant\${facter_version}"
-  $facts_filename = "${fact_dir}\${os}-${osmajrel}-${arch}.facts"
-  mkdir -p $fact_dir -f
-  if( $facter_version -le '1.7' )
-  {
-    $facts_filename = "${facts_filename}.yaml.UTF16LE"
-    facter -y | Tee-Object -file $facts_filename
+  $osmajrel       = (facter operatingsystemmajrelease)
+  if( $facter_version -lt '2.3.0' ){
+    $osmajrel     = (facter operatingsystemrelease)
   }
-  else
+  $fact_dir       = "${vagrant_dir}\${facter_version}"
+  $facts_filename = "${fact_dir}\${os}-${osmajrel}-${arch}.facts"
+
+  # Slightly more portable than "mkdir -p $fact_dir -f" :
+  New-Item $fact_dir -Type directory -Force | Out-Null
+
+  $facter_args = "-j", "--external-dir ${vagrant_dir}\external_facts"
+  if( $facter_version -match "^3.[01]" ){
+    # external_facts workaround for FACT-1276
+    Write-Output "==== FACT-1276 workaround"
+    Copy-Item "${vagrant_dir}\external_facts\*" "C:\ProgramData\PuppetLabs\facter\facts.d"
+    $facter_args    = @("-j")
+  }
+  elseif( $facter_version -eq '1.6' )
   {
-    $facts_filename = "${facts_filename}.UTF16LE"
-    facter -j | Tee-Object -file $facts_filename
+    # The ruby with facter 1.6 does not ship with json support
+    Write-Output "==== 1.6 YAML workaround"
+    $facts_filename = "${facts_filename}.yaml"
+    $facter_args    = @("-y")
+  }
+  # facterdb conventions use 'foo.example.com'
+  $env:FACTER_fqdn   = 'foo.example.com'
+  $env:FACTER_domain = 'example.com'
+  Write-Output  "== Start-Process -FilePath facter -ArgumentList ${facter_args} -Wait -PassThru -RedirectStandardOutput ${facts_filename}"
+  $facter_process = Start-Process -FilePath facter -ArgumentList $facter_args -Wait -PassThru -RedirectStandardOutput $facts_filename
+  if ($facter_process.ExitCode -ne 0) {
+    Write-Output "Facter failed."
+    Exit 1
   }
   # ---------------------------------------------------------------------------
-  Write-Output "++ Teed '${installer}' facts into '${facts_filename}'"
+  Write-Output "++++ Wrote '${installer}'/'${facter_version}' facts into '${facts_filename}'"
 
   # ---------------------------------------------------------------------------
   Write-Output "== Uninstalling '${installer_file}'"
@@ -68,3 +87,4 @@ Foreach( $installer in 'puppet-agent-1.5.3-x64','puppet-agent-1.5.1-x64','puppet
 
   $Env:Path="$original_env_path"
 }
+# vim: set syntax=ps1 tw=160 ts=2 sw=2 et:

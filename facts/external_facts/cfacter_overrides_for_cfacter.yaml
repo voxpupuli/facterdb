@@ -1,0 +1,7 @@
+---
+'fqdn': 'foo.example.com'
+'domain': 'example.com'
+'networking':
+  'domain':   'example.com'
+  'fqdn':     'foo.example.com'
+  'hostname': 'foo'

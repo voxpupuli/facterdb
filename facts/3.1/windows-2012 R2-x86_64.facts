@@ -15,18 +15,18 @@
   },
   "is_virtual": true,
   "kernel": "windows",
-  "kernelmajversion": "6.1",
-  "kernelrelease": "6.1.7600",
-  "kernelversion": "6.1.7600",
+  "kernelmajversion": "6.3",
+  "kernelrelease": "6.3.9600",
+  "kernelversion": "6.3.9600",
   "memory": {
     "system": {
-      "available": "414.14 MiB",
-      "available_bytes": 434262016,
-      "capacity": "59.54%",
+      "available": "545.27 MiB",
+      "available_bytes": 571756544,
+      "capacity": "46.73%",
       "total": "1023.55 MiB",
-      "total_bytes": 1073274880,
-      "used": "609.41 MiB",
-      "used_bytes": 639012864
+      "total_bytes": 1073270784,
+      "used": "478.28 MiB",
+      "used_bytes": 501514240
     }
   },
   "networking": {
@@ -40,8 +40,8 @@
     "hardware": "x86_64",
     "name": "windows",
     "release": {
-      "full": "2008 R2",
-      "major": "2008 R2"
+      "full": "2012 R2",
+      "major": "2012 R2"
     },
     "windows": {
       "system32": "C:\\Windows\\system32"
@@ -64,8 +64,8 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 192,
-    "uptime": "0:03 hours"
+    "seconds": 138,
+    "uptime": "0:02 hours"
   },
   "timezone": "Pacific Daylight Time",
   "virtual": "virtualbox"

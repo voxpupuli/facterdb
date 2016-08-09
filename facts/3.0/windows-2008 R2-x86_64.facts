@@ -6,10 +6,12 @@
       "serial_number": "0"
     }
   },
+  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "3.0.2",
+  "fqdn": "foo.example.com",
   "identity": {
-    "user": "WIN-2008R2-STD\\vagrant"
+    "user": "FOO\\vagrant"
   },
   "is_virtual": true,
   "kernel": "windows",
@@ -18,50 +20,19 @@
   "kernelversion": "6.1.7600",
   "memory": {
     "system": {
-      "available": "396.95 MiB",
-      "available_bytes": 416231424,
-      "capacity": "61.22%",
+      "available": "452.08 MiB",
+      "available_bytes": 474038272,
+      "capacity": "55.83%",
       "total": "1023.55 MiB",
       "total_bytes": 1073274880,
-      "used": "626.61 MiB",
-      "used_bytes": 657043456
+      "used": "571.48 MiB",
+      "used_bytes": 599236608
     }
   },
   "networking": {
-    "domain": "camelot.local",
-    "fqdn": "win-2008R2-std.camelot.local",
-    "hostname": "win-2008R2-std",
-    "interfaces": {
-      "Local Area Connection": {
-        "dhcp": "10.0.2.2",
-        "ip": "10.0.2.15",
-        "ip6": "fe80::603e:5a81:67bd:dc36%11",
-        "mac": "08:00:27:79:8A:76",
-        "mtu": 1500,
-        "netmask": "255.255.255.0",
-        "netmask6": "ffff:ffff:ffff:ffff::",
-        "network": "10.0.2.0",
-        "network6": "fe80::%11"
-      },
-      "Local Area Connection 2": {
-        "ip": "10.0.0.2",
-        "ip6": "fe80::1081:210d:e51c:a92a%18",
-        "mac": "08:00:27:96:47:25",
-        "mtu": 1500,
-        "netmask": "255.255.255.0",
-        "netmask6": "ffff:ffff:ffff:ffff::",
-        "network": "10.0.0.0",
-        "network6": "fe80::%18"
-      }
-    },
-    "ip": "10.0.0.2",
-    "ip6": "fe80::1081:210d:e51c:a92a%18",
-    "mac": "08:00:27:96:47:25",
-    "mtu": 1500,
-    "netmask": "255.255.255.0",
-    "netmask6": "ffff:ffff:ffff:ffff::",
-    "network": "10.0.0.0",
-    "network6": "fe80::%18"
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo"
   },
   "os": {
     "architecture": "x64",
