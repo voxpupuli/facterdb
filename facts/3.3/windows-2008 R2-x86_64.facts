@@ -7,7 +7,7 @@
     }
   },
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
-  "facterversion": "3.0.2",
+  "facterversion": "3.3.0",
   "identity": {
     "user": "WIN-2008R2-STD\\vagrant"
   },
@@ -18,13 +18,13 @@
   "kernelversion": "6.1.7600",
   "memory": {
     "system": {
-      "available": "396.95 MiB",
-      "available_bytes": 416231424,
-      "capacity": "61.22%",
+      "available": "422.45 MiB",
+      "available_bytes": 442966016,
+      "capacity": "58.73%",
       "total": "1023.55 MiB",
       "total_bytes": 1073274880,
-      "used": "626.61 MiB",
-      "used_bytes": 657043456
+      "used": "601.11 MiB",
+      "used_bytes": 630308864
     }
   },
   "networking": {
@@ -33,6 +33,20 @@
     "hostname": "win-2008R2-std",
     "interfaces": {
       "Local Area Connection": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::603e:5a81:67bd:dc36%11",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::%11"
+          }
+        ],
         "dhcp": "10.0.2.2",
         "ip": "10.0.2.15",
         "ip6": "fe80::603e:5a81:67bd:dc36%11",
@@ -44,6 +58,20 @@
         "network6": "fe80::%11"
       },
       "Local Area Connection 2": {
+        "bindings": [
+          {
+            "address": "10.0.0.2",
+            "netmask": "255.255.255.0",
+            "network": "10.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::1081:210d:e51c:a92a%18",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::%18"
+          }
+        ],
         "ip": "10.0.0.2",
         "ip6": "fe80::1081:210d:e51c:a92a%18",
         "mac": "08:00:27:96:47:25",
@@ -61,7 +89,8 @@
     "netmask": "255.255.255.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.0.0",
-    "network6": "fe80::%18"
+    "network6": "fe80::%18",
+    "primary": "Local Area Connection 2"
   },
   "os": {
     "architecture": "x64",
@@ -88,13 +117,13 @@
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
-    "version": "2.1.6"
+    "version": "2.1.9"
   },
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 214,
-    "uptime": "0:03 hours"
+    "seconds": 171,
+    "uptime": "0:02 hours"
   },
   "timezone": "Pacific Daylight Time",
   "virtual": "virtualbox"
