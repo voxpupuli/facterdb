@@ -54,62 +54,57 @@ require 'facterdb'
 FacterDB::get_facts('osfamily=Debian')
 ```
 
-# Facter versions supported
+# Coverage
 
-* 1.6
-* 1.7
-* 2.0
-* 2.1
-* 2.2
-* 2.3
-* 2.4
-* 3.0
-* 3.1
-* 3.3
+## Facter version and Operating System coverage
 
-# Operating Systems supported
+|    operating system     | 1.6 | 1.7 | 2.0 | 2.1 | 2.2 | 2.3 | 2.4 | 3.0 | 3.1 | 3.3 |
+| ----------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Archlinux               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| CentOS 5                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| CentOS 6                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| CentOS 7                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| Darwin 14               |     |     |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Debian 6                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |
+| Debian 7                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| Debian 8                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| Fedora 19               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Fedora 22               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |     |
+| Fedora 23               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |     |
+| FreeBSD 10              |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| FreeBSD 9               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Gentoo                  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OpenBSD 5.7             |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OpenBSD 5.8             |     |     |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OpenBSD 5.9             |     |     |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OpenSuSE 12             |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OpenSuSE 13             |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OracleLinux 5           |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OracleLinux 6           |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| OracleLinux 7           |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| RedHat 5                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| RedHat 6                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| RedHat 7                |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| SLES 11                 |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Scientific 5            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Scientific 6            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Scientific 7            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| Solaris 11              |  2  |  2  |     |     |     |     |     |     |     |     |
+| Solaris 2               |     |     |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Ubuntu 10.04            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Ubuntu 12.04            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |
+| Ubuntu 14.04            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |
+| Ubuntu 14.10            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Ubuntu 15.04            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |
+| Ubuntu 15.10            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |
+| Ubuntu 16.04            |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |     |
+| windows 2008 R2         |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |
+| windows 2012 R2         |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |
+| windows 7               |     |     |     |     |     |     |  1  |  2  |  2  |     |
 
-* ArchLinux
-* CentOS 5
-* CentOS 6
-* CentOS 7
-* Debian 6
-* Debian 7
-* Debian 8
-* Fedora 19
-* Fedora 22
-* Fedora 23
-* FreeBSD 9
-* FreeBSD 10
-* Gentoo
-* OpenBSD 5.7
-* OpenBSD 5.8
-* OpenBSD 5.9
-* OpenSuse 12
-* OpenSuse 13
-* Oracle 5
-* Oracle 6
-* Oracle 7
-* RedHat 5
-* RedHat 6
-* RedHat 7
-* Scientific 5
-* Scientific 6
-* Scientific 7
-* SLES 11
-* Solaris 11
-* OSX 10.10
-* Ubuntu 10.04
-* Ubuntu 12.04
-* Ubuntu 14.04
-* Ubuntu 14.10
-* Ubuntu 15.04
-* Ubuntu 15.10
-* Ubuntu 16.04
-* Windows 2012 r2
-* Windows 7
+`2 = number of factsets (e.g., x86_64 and i386 architectures)`
 
-# Add new Operating System support
+## Add new Operating System support
 
 There is `Vagrantfile` to automagically populate `facts` directory by spawning a new VM and launches a provisioning scripts.
 
