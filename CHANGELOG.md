@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.3.7]((https://rubygems.org/gems/facterdb/versions/0.3.7) (2016-10-06)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.6...0.3.7)
+
+**Implemented enhancements:**
+
+- Add AIX facts for facter 3.2
+
 ## [0.3.6]((https://rubygems.org/gems/facterdb/versions/0.3.6) (2016-08-04)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.5...0.3.6)

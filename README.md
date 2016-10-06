@@ -69,6 +69,7 @@ FacterDB::get_facts('osfamily=Debian')
 
 # Operating Systems supported
 
+* AIX
 * ArchLinux
 * CentOS 5
 * CentOS 6
