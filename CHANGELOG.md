@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.3.8]((https://rubygems.org/gems/facterdb/versions/0.3.8) (2016-10-15)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.7...0.3.8)
+
+**Implemented enhancements:**
+
+- Add Fedora 24 support
+
 ## [0.3.7]((https://rubygems.org/gems/facterdb/versions/0.3.7) (2016-10-06)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.6...0.3.7)
