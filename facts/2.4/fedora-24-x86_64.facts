@@ -1,0 +1,113 @@
+{
+  "gem_version": "~> 2.4.0",
+  "kernel": "Linux",
+  "system_uptime": {
+    "seconds": 443,
+    "hours": 0,
+    "days": 0,
+    "uptime": "0:07 hours"
+  },
+  "gid": "root",
+  "hardwaremodel": "x86_64",
+  "kernelrelease": "4.5.5-300.fc24.x86_64",
+  "puppetversion": "4.7.0",
+  "dhcp_servers": {
+    "system": "10.0.2.2",
+    "enp0s3": "10.0.2.2"
+  },
+  "rubyplatform": "x86_64-linux",
+  "blockdevice_sda_size": 42949672960,
+  "blockdevice_sda_vendor": "ATA",
+  "blockdevice_sda_model": "VBOX HARDDISK",
+  "blockdevices": "sda",
+  "path": "/home/vagrant/vendor/bundler/ruby/2.1.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
+  "partitions": {
+    "sda1": {
+      "uuid": "db142339-7ce7-4090-987d-9620b8f4969e",
+      "size": "1024000",
+      "mount": "/boot",
+      "filesystem": "ext4"
+    },
+    "sda2": {
+      "size": "82860032",
+      "filesystem": "LVM2_member"
+    }
+  },
+  "augeasversion": "1.4.0",
+  "macaddress": "08:00:27:a4:38:39",
+  "rubyversion": "2.1.9",
+  "hostname": "foo",
+  "operatingsystem": "Fedora",
+  "timezone": "UTC",
+  "facterversion": "2.4.6",
+  "processors": {
+    "models": [
+      "Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz"
+    ],
+    "count": 1,
+    "physicalcount": 1
+  },
+  "uptime_seconds": 443,
+  "uptime": "0:07 hours",
+  "ps": "ps -ef",
+  "operatingsystemmajrelease": "24",
+  "kernelversion": "4.5.5",
+  "virtual": "virtualbox",
+  "is_virtual": true,
+  "fqdn": "foo.example.com",
+  "selinux": true,
+  "selinux_enforced": false,
+  "selinux_policyversion": "30",
+  "selinux_current_mode": "permissive",
+  "selinux_config_mode": "permissive",
+  "selinux_config_policy": "targeted",
+  "netmask": "255.255.255.0",
+  "interfaces": "enp0s3,lo",
+  "ipaddress_enp0s3": "10.0.2.15",
+  "macaddress_enp0s3": "08:00:27:a4:38:39",
+  "netmask_enp0s3": "255.255.255.0",
+  "mtu_enp0s3": 1500,
+  "ipaddress_lo": "127.0.0.1",
+  "netmask_lo": "255.0.0.0",
+  "mtu_lo": 65536,
+  "id": "root",
+  "os": {
+    "name": "Fedora",
+    "family": "RedHat",
+    "release": {
+      "major": "24",
+      "full": "24"
+    }
+  },
+  "architecture": "x86_64",
+  "operatingsystemrelease": "24",
+  "osfamily": "RedHat",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
+  "network_enp0s3": "10.0.2.0",
+  "network_lo": "127.0.0.0",
+  "uptime_days": 0,
+  "ipaddress": "10.0.2.15",
+  "memorysize": "488.91 MB",
+  "memoryfree": "353.39 MB",
+  "swapsize": "1.00 GB",
+  "swapfree": "1022.44 MB",
+  "swapsize_mb": "1028.00",
+  "swapfree_mb": "1022.44",
+  "memorysize_mb": "488.91",
+  "memoryfree_mb": "353.39",
+  "filesystems": "ext2,ext3,ext4,xfs",
+  "hardwareisa": "x86_64",
+  "uniqueid": "007f0100",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC21gMubszbzp1b1KT1w13GQTV+dwIP3yRG6N5iHWZvBIyMWEc6HkHEpqiGgmxAobloktTd3vAhXRCF9WXWTF4SUdp3biq2PCDMmwPFynZr3HWMj9qnf0J6Dc6amhSF9JbcJjG7AiIbsAmmYMfvYjbz2Weg0sfPW5tXHkbFsds0Gkj00qRY0ZdSyS+vKq5FfDkN8bRf79LlgzV40g1CP4CdP7lmryBs8E5LsoHrLqR2KpNmlWY5NOICJpq1IhqH0g3SXtJivyyxO0CFur55OZ+svV43Abk0B1xIltq6NkPoF3Ngu5iH5KrSx8izllL4xrGkbHioKr4tpvMtVckuf3Sr",
+  "sshfp_rsa": "SSHFP 1 1 4660a95b102c3b07d147e4c5bd6fe735d2cda2de\nSSHFP 1 2 9975a3ce47fc66fb039f23e112b7310ef0f90d8d6165c5c776d25bacb343d6c5",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCshCzlDiRxUUZlKYi6JzYNttLG2THYNjD5VLqX0JITeX6njKM/LJBIZDZYAFXUrRzMW24zh0pVRyWDQDrmN5Cg=",
+  "sshfp_ecdsa": "SSHFP 3 1 148d7a9446a6b77f35892227de6ef3be49fcef55\nSSHFP 3 2 4685efabe7b5f738c5fd64add1db1d762c650af9df35fbda9c35b7bb28c3ffe3",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIMpNHWTN6lqf2Ky2hcp4msLpk6tV5Fk0j78O6HS+P8vL",
+  "sshfp_ed25519": "SSHFP 4 1 6c5a5af5b604eb95763206b1c264cd0a2823a722\nSSHFP 4 2 065ad8d3980db30e0a6f693a539016c4fdb436c53a93cb12e4d5f9c36a0182a0",
+  "uptime_hours": 0,
+  "physicalprocessorcount": 1,
+  "processor0": "Intel(R) Core(TM) i7-4770 CPU @ 3.40GHz",
+  "processorcount": 1,
+  "kernelmajversion": "4.5",
+  "domain": "example.com"
+}

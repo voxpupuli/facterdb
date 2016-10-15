@@ -19,9 +19,10 @@ fi
 
 case "${osfamily}" in
 'Fedora')
-  for puppet_agent_version in "1.4.1-1.fedoraf${operatingsystemmajrelease}"; do
-    # install directly because there is no pc1 release package for f23    
-    dnf install -y --nogpgcheck "https://yum.puppetlabs.com/fedora/f${operatingsystemmajrelease}/PC1/x86_64/puppet-agent-${puppet_agent_version}.x86_64.rpm"
+  wget "https://yum.puppetlabs.com/puppetlabs-release-pc1-fedora-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
+  rpm -ivh /tmp/puppetlabs-release-pc1.rpm
+  for puppet_agent_version in 1.5.3-1 1.6.0-1 1.6.1-1 1.6.2-1 1.7.0-1; do
+    dnf install -y "puppet-agent-${puppet_agent_version}.fedoraf${operatingsystemmajrelease}"
     output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
     facter --show-legacy -p -j | tee ${output_file}
