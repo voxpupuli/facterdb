@@ -138,6 +138,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "sles-12sp1-x86_64" do |host|
+    host.vm.box = "suse/sles12sp1"
+    host.vm.provision "shell", inline: "gem update --system"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "opensuse-12-x86_64" do |host|
     host.vm.box = "alexeym/opensuse-12.3"
     host.vm.provision "shell", inline: "zypper install -y rubygems ruby-devel make gcc"
