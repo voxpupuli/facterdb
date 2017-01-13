@@ -87,6 +87,7 @@ FacterDB::get_facts('osfamily=Debian')
 * OpenBSD 5.7
 * OpenBSD 5.8
 * OpenBSD 5.9
+* OpenBSD 6.0
 * OpenSuse 12
 * OpenSuse 13
 * Oracle 5
