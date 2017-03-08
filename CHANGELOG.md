@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.3.10]((https://rubygems.org/gems/facterdb/versions/0.3.10) (2017-03-08)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.9...0.3.10)
+
+**Implemented enhancements:**
+
+- Add SLES 12 support
+
 ## [0.3.9]((https://rubygems.org/gems/facterdb/versions/0.3.9) (2017-02-07)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.8...0.3.9)
