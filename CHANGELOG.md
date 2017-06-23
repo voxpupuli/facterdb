@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.3.11]((https://rubygems.org/gems/facterdb/versions/0.3.11) (2017-06-23)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.10...0.3.11)
+
+**Implemented enhancements:**
+
+- Add Virtuozzo PCS 6 x86_64 support
+- Add CentOS from facter 3.6
+
 ## [0.3.10]((https://rubygems.org/gems/facterdb/versions/0.3.10) (2017-03-08)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.9...0.3.10)
