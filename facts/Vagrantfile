@@ -73,6 +73,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "mint-18.1-x86_64" do |host|
+    host.vm.box = "artem-sidorenko/mint-18.1-cinnamon"
+    host.vm.provision "shell", inline: "apt-get update && apt-get install -y ruby ruby-dev libc6-dev"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "ubuntu-16.04-x86_64" do |host|
     host.vm.box = "ubuntu/xenial64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"

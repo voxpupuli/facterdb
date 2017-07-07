@@ -43,6 +43,9 @@ case "${osfamily}" in
   if [[ "xenial" =~ ${lsbdistcodename} ]]; then
     lsbdistcodename='wily'
   fi
+  if [[ "serena" =~ ${lsbdistcodename} ]]; then
+    lsbdistcodename='xenial'
+  fi
   apt-get install -y wget
   wget "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -O /tmp/puppetlabs-release-pc1.deb
   dpkg --install /tmp/puppetlabs-release-pc1.deb
