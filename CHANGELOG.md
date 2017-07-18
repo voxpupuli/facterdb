@@ -1,5 +1,13 @@
 # Change Log
 
+## [0.3.12]((https://rubygems.org/gems/facterdb/versions/0.3.11) (2017-07-18)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.11...0.3.12)
+
+**Implemented enhancements:**
+
+- Add facts/2.5 files to support release of facter 2.5 released on July 14th
+
 ## [0.3.11]((https://rubygems.org/gems/facterdb/versions/0.3.11) (2017-06-23)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.10...0.3.11)
