@@ -1,0 +1,138 @@
+{
+  "gem_version": "~> 2.4.0",
+  "kernel": "OpenBSD",
+  "system_uptime": {
+    "seconds": 252,
+    "hours": 0,
+    "days": 0,
+    "uptime": "0:04 hours"
+  },
+  "gid": "wheel",
+  "hardwaremodel": "i386",
+  "kernelrelease": "5.9",
+  "rubyplatform": "i386-openbsd",
+  "path": "/home/vagrant/vendor/bundler/ruby/2.2/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin",
+  "partitions": {
+    "sd0a": {
+      "size": "229070",
+      "mount": "/",
+      "filesystem": "ffs"
+    },
+    "sd0k": {
+      "size": "2227662",
+      "mount": "/home",
+      "filesystem": "ffs"
+    },
+    "sd0d": {
+      "size": "358606",
+      "mount": "/tmp",
+      "filesystem": "ffs"
+    },
+    "sd0f": {
+      "size": "1053790",
+      "mount": "/usr",
+      "filesystem": "ffs"
+    },
+    "sd0g": {
+      "size": "605614",
+      "mount": "/usr/X11R6",
+      "filesystem": "ffs"
+    },
+    "sd0h": {
+      "size": "2361550",
+      "mount": "/usr/local",
+      "filesystem": "ffs"
+    },
+    "sd0j": {
+      "size": "1426446",
+      "mount": "/usr/obj",
+      "filesystem": "ffs"
+    },
+    "sd0i": {
+      "size": "1089630",
+      "mount": "/usr/src",
+      "filesystem": "ffs"
+    },
+    "sd0e": {
+      "size": "467374",
+      "mount": "/var",
+      "filesystem": "ffs"
+    }
+  },
+  "macaddress": "00:0c:29:a9:30:07",
+  "rubyversion": "2.2.4",
+  "hostname": "foo",
+  "operatingsystem": "OpenBSD",
+  "timezone": "UTC",
+  "facterversion": "2.5.0",
+  "processors": {
+    "count": 1,
+    "physicalcount": 1,
+    "speed": "2.19 GHz"
+  },
+  "uptime_seconds": 252,
+  "uptime": "0:04 hours",
+  "ps": "ps auxwww",
+  "operatingsystemmajrelease": "5",
+  "kernelversion": "5.9",
+  "virtual": "vmware",
+  "is_virtual": true,
+  "fqdn": "foo.example.com",
+  "netmask": "255.255.255.0",
+  "interfaces": "lo0,em0,enc0,pflog0",
+  "ipaddress_lo0": "127.0.0.1",
+  "netmask_lo0": "255.0.0.0",
+  "mtu_lo0": 32768,
+  "ipaddress_em0": "192.168.253.135",
+  "macaddress_em0": "00:0c:29:a9:30:07",
+  "netmask_em0": "255.255.255.0",
+  "mtu_em0": 1500,
+  "mtu_enc0": 0,
+  "mtu_pflog0": 33144,
+  "id": "root",
+  "os": {
+    "name": "OpenBSD",
+    "family": "OpenBSD",
+    "release": {
+      "major": "5",
+      "minor": "9",
+      "full": "5.9"
+    }
+  },
+  "architecture": "i386",
+  "operatingsystemrelease": "5.9",
+  "osfamily": "OpenBSD",
+  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.2",
+  "network_lo0": "127.0.0.0",
+  "network_em0": "192.168.253.0",
+  "uptime_days": 0,
+  "ipaddress": "192.168.253.135",
+  "memorysize": "367.94 MB",
+  "memoryfree": "187.13 MB",
+  "swapsize": "376.67 MB",
+  "swapfree": "376.67 MB",
+  "swapsize_mb": "376.67",
+  "swapfree_mb": "376.67",
+  "memorysize_mb": "367.94",
+  "memoryfree_mb": "187.13",
+  "swapencrypted": true,
+  "hardwareisa": "i386",
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAPyM1MxDVTOqeQweac1iRSz9goN/fyLyh36b60XhSkrbpyoJt/vy0dnYYIN01aci6MV4u4M5+reRh+nLBworasF+bINLVXYzipus6FVAy2qBr+cJ3X4s9OG/jpBZ4GeN+/rWYdGzlLxfRIJJFEdDVXPd3ppW6wkziAddLTjViPxVAAAAFQC4TflQmOthgCKbZMgMAHcphS8zTwAAAIA3Vazgelbzhzr3NM++TtSIu/uYRWRcgWUuaOEBj18jApCnP3l9SKMv88p+SrNicY5jgvhgTLZc96zyseo/1Dc5m3B9dxCxdeOPuOi7iGC13rOmY6+xq/HLpSH5bxl/dY+BdvFWdGy4SbksLdbiBSJ0d41fQyTB71RuN18m2V/MbwAAAIBFMjnGfHdw+34H+I+4+JHYMXBO2f6COqYClgqAAoNGzi9uMw96bMFxv3UTBcGsR/eLD5+4Iy+iJFo/fP3FVi/BUbDo4AQj8x8GZklT8F/8rapqJdvxo/Fo2YoCRPQXSm/E8U/ORA8cgAtsThGLV4qS7ZOH984evDQ5pJBMSPxUxA==",
+  "sshfp_dsa": "SSHFP 2 1 e6e57bf2d7bb6e138543e79260c3b9f67af2fa7b\nSSHFP 2 2 6c9ffdd6f800c9a4fcc84c18ecb07343576b723ceae378f9bfe9cbf651aacf30",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDak9NvN36Z4aehNbxuVusN934BjbPLpc7nF/OIh3XrSDNF3XFsK7WbzDa8Yc+9kJKdxcwZ8Ap0l60ioCk05yOz8nQ8j6kmMYcs2YUT70Hpj247Frt1ZN9ktXl0y7Hdc3qzIEZH5Fi+ZMDQFJfztoGWhEceM/qbg7z7Uwv3oot2FDqMTRLlVttJZYYZwQbrptb3amnkY31ZsL8BAkB7nMMK7EmlWFLr6e3P8AQ5XHd4K4LFIAUEtR4lav3FNKKP8qX3ucwFc8ZTpyVEiaS5Wi4xdQPaS5lsUR46xDjg2m7YCyfVHh0PGOlCz2w7o8piXKhcaEYfLhWMNmlr4LePsJVP",
+  "sshfp_rsa": "SSHFP 1 1 6b7b38f4ed75cc2a5ed4b921c4b29c8bc83d6aa3\nSSHFP 1 2 b640ed22ce348f25f3c6c474888605225741fd5e1f71079cceff36bcc543b222",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBG3RdOS4YaQzfy6hsIuTx0KiA5bmpgZlb7JNTrFI45lpCMU+Gaf2YuJw4TOMe3Tzp4ivpuP4Bjpn9D/mTk1cchY=",
+  "sshfp_ecdsa": "SSHFP 3 1 c8fd4a03b11180872bec271971c6d531977db52a\nSSHFP 3 2 9a7e060e9bcb004c8e575b52ce314e4c30a78168c0e8eb47d6db87e35f5e0a41",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAICKjCXmGPhkCQMUU3HjbHcZcoiySpjUHQbEAPA+R2/IJ",
+  "sshfp_ed25519": "SSHFP 4 1 3dd8f327fd0ce90f057aa681975eb1e9e3b8bb9b\nSSHFP 4 2 844d84945c7d52c63017ff34dd7cbfb141b0925bf93abac24fa4c5fc7456494b",
+  "uptime_hours": 0,
+  "physicalprocessorcount": 1,
+  "manufacturer": "VMware, Inc.",
+  "productname": "VMware Virtual Platform",
+  "serialnumber": "VMware-56 4d 97 2d 6e 4f 7d 40-19 f6 0a 00 89 a9 30 07",
+  "processorcount": 1,
+  "processor": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
+  "kernelmajversion": "5.9",
+  "domain": "example.com",
+  "loginclass": "daemon"
+}

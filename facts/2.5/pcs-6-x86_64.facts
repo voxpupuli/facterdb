@@ -1,0 +1,407 @@
+{
+  "aio_agent_version": "1.10.1",
+  "augeas": {
+    "version": "1.4.0"
+  },
+  "disks": {
+    "sda": {
+      "model": "PERC H700",
+      "size": "1.82 TiB",
+      "size_bytes": 1999307276288,
+      "vendor": "DELL"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "07/30/2013",
+      "vendor": "Dell Inc.",
+      "version": "1.12.0"
+    },
+    "board": {
+      "manufacturer": "Dell Inc.",
+      "product": "01V648",
+      "serial_number": "..SERIAL_NUMBER."
+    },
+    "chassis": {
+      "type": "Rack Mount Chassis"
+    },
+    "manufacturer": "Dell Inc.",
+    "product": {
+      "name": "PowerEdge R410",
+      "serial_number": "SERIAL_NUMBER",
+      "uuid": "FC4510A2-93CA-427F-AD2F-8BFC202FDF5B"
+    }
+  },
+  "facterversion": "3.6.4",
+  "filesystems": "ext4,iso9660",
+  "gem_version": "~> 2.4.0",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": false,
+  "kernel": "Linux",
+  "kernelmajversion": "2.6",
+  "kernelrelease": "2.6.32-042stab123.3",
+  "kernelversion": "2.6.32",
+  "load_averages": {
+    "15m": 2.12,
+    "1m": 2.72,
+    "5m": 2.44
+  },
+  "memory": {
+    "swap": {
+      "available": "4.00 GiB",
+      "available_bytes": 4293144576,
+      "capacity": "0.02%",
+      "total": "4.00 GiB",
+      "total_bytes": 4293914624,
+      "used": "752.00 KiB",
+      "used_bytes": 770048
+    },
+    "system": {
+      "available": "42.20 GiB",
+      "available_bytes": 45314125824,
+      "capacity": "32.75%",
+      "total": "62.76 GiB",
+      "total_bytes": 67384459264,
+      "used": "20.55 GiB",
+      "used_bytes": 22070333440
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "95.60 GiB",
+      "available_bytes": 102647234560,
+      "capacity": "2.75%",
+      "device": "/dev/sda2",
+      "filesystem": "ext4",
+      "options": [
+        "rw"
+      ],
+      "size": "98.31 GiB",
+      "size_bytes": 105555197952,
+      "used": "2.71 GiB",
+      "used_bytes": 2907963392
+    },
+    "/boot": {
+      "available": "915.67 MiB",
+      "available_bytes": 960147456,
+      "capacity": "6.17%",
+      "device": "/dev/sda1",
+      "filesystem": "ext4",
+      "options": [
+        "rw"
+      ],
+      "size": "975.90 MiB",
+      "size_bytes": 1023303680,
+      "used": "60.23 MiB",
+      "used_bytes": 63156224
+    },
+    "/dev/shm": {
+      "available": "31.38 GiB",
+      "available_bytes": 33690583040,
+      "capacity": "0.00%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "noexec",
+        "nosuid",
+        "nodev"
+      ],
+      "size": "31.38 GiB",
+      "size_bytes": 33692229632,
+      "used": "1.57 MiB",
+      "used_bytes": 1646592
+    },
+    "/vz": {
+      "available": "908.18 GiB",
+      "available_bytes": 975152054272,
+      "capacity": "47.48%",
+      "device": "/dev/sda3",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "noatime",
+        "lazytime"
+      ],
+      "size": "1.69 TiB",
+      "size_bytes": 1856827764736,
+      "used": "821.12 GiB",
+      "used_bytes": 881675710464
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "pcs-6-x86_64.example.com",
+    "hostname": "pcs-6-x86_64",
+    "interfaces": {
+      "br0": {
+        "bindings": [
+          {
+            "address": "10.37.130.2",
+            "netmask": "255.255.255.0",
+            "network": "10.37.130.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fdb2:2c26:f4e4::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fdb2:2c26:f4e4::"
+          },
+          {
+            "address": "fe80::fcf9:88ff:fe5e:e3ad",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "10.37.130.2",
+        "ip6": "fdb2:2c26:f4e4::1",
+        "mac": "fe:f9:88:5e:e3:ad",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.37.130.0",
+        "network6": "fdb2:2c26:f4e4::"
+      },
+      "br1": {
+        "bindings6": [
+          {
+            "address": "fe80::78a7:caff:fe0c:6e4f",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip6": "fe80::78a7:caff:fe0c:6e4f",
+        "mac": "d4:ae:52:6a:33:2e",
+        "mtu": 1500,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::"
+      },
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.0.10",
+            "netmask": "255.255.255.0",
+            "network": "10.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fec0::",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00",
+            "network": "fec0::"
+          },
+          {
+            "address": "fe80::d6ae:52ff:fe6a:332e",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "10.0.0.10",
+        "ip6": "fec0::",
+        "mac": "d4:ae:52:6a:33:2e",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00",
+        "network": "10.0.0.0",
+        "network6": "fec0::"
+      },
+      "eth1": {
+        "bindings": [
+          {
+            "address": "10.110.200.243",
+            "netmask": "255.255.224.0",
+            "network": "10.110.192.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::d6ae:52ff:fe6a:332f",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "10.110.200.243",
+        "ip6": "fe80::d6ae:52ff:fe6a:332f",
+        "mac": "d4:ae:52:6a:33:2f",
+        "mtu": 1500,
+        "netmask": "255.255.224.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.110.192.0",
+        "network6": "fe80::"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      },
+      "venet0": {
+        "bindings6": [
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "fe80::1"
+          }
+        ],
+        "ip6": "fe80::1",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network6": "fe80::1"
+      }
+    },
+    "ip": "10.0.0.10",
+    "ip6": "fec0::",
+    "mac": "d4:ae:52:6a:33:2e",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ff00",
+    "network": "10.0.0.0",
+    "network6": "fec0::",
+    "primary": "eth0"
+  },
+  "os": {
+    "architecture": "x86_64",
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "RedHat",
+    "release": {
+      "full": "6.8",
+      "major": "6",
+      "minor": "8"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/sda1": {
+      "filesystem": "ext4",
+      "mount": "/boot",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824,
+      "uuid": "dffa87e4-a276-48f9-88cf-212b27f24b12"
+    },
+    "/dev/sda2": {
+      "filesystem": "ext4",
+      "mount": "/",
+      "size": "100.00 GiB",
+      "size_bytes": 107374182400,
+      "uuid": "6b87a9f3-d091-4c80-8c7e-fa0b60d605eb"
+    },
+    "/dev/sda3": {
+      "filesystem": "ext4",
+      "mount": "/vz",
+      "size": "1.72 TiB",
+      "size_bytes": 1886563336192,
+      "uuid": "8403d32c-7277-47fd-b5a9-12b5f2456456"
+    },
+    "/dev/sda4": {
+      "size": "1.00 KiB",
+      "size_bytes": 1024
+    },
+    "/dev/sda5": {
+      "filesystem": "swap",
+      "size": "4.00 GiB",
+      "size_bytes": 4293918720,
+      "uuid": "bb696d78-ed33-42e5-8e98-119cdf0bcd79"
+    }
+  },
+  "path": "/root/facts/vendor/bundler/ruby/2.1.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/rvm/gems/ruby-1.9.3-p551/bin:/usr/local/rvm/gems/ruby-1.9.3-p551@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/rvm/bin:/root/bin",
+  "processors": {
+    "count": 24,
+    "isa": "x86_64",
+    "models": [
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
+      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz"
+    ],
+    "physicalcount": 2
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
+    "version": "2.1.9"
+  },
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 d32866d72f2dd737c42427be721ddb8963c66487",
+        "sha256": "SSHFP 2 2 36ab02d0243f7888cc2c614f80876c6c5d76e839e001aaac9589915c30233a60"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAO+yb3t0m1RiquF+XgkxaIK/aFM5w2tuEC890WT+LN3TVUeUNZJFfP3xJqnHES/idl8qMxBClKuhDQOaI+G99u7RR8N5o4cVWwokWM+dXyc7ItaASzUUaLyeG3Lq7fhNIBEtjYhEg/gPnMBuSHueBi+DQOROKTqYsFaFKDMQxt49AAAAFQCte6m422JVHOEsUt2BEGUw+thuWwAAAIASxS66P7fomQwgl3Yr+Qpp3CG5zR6GsJ7rx+dgryxHq6Mac0V2suWXe2yzUsO2PhRgHafKOECk0H9sGxhJv0iVmLiB2fHDZ4/wkLRs/a/ixR9zCmFW8mkYzMO6LHNgMLdGl7l6yQwJV03I53x/Pq3dKCYT9HU5BR6GvVewLsmkQgAAAIEAxTm5JTTQfnfjLXB3p4hVUXmdqFuDJLXRZtdN9QlS9s3RHzxUXQiYTKqIXBuQ5WKYN4cPbU2qkZYGTklaAjW+t8myQ3dcLkh5SstDyTkv+eEM/ioSFFQpJtISsbGVP16FAyR8+1kRO19xyNCjW5zGJmZfJ+q14atBAqTAdn4Au7c="
+    },
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 d087434e346ee0b7ad66d24f53d9a05bb188e172",
+        "sha256": "SSHFP 3 2 09909d93e017d46fa1a88e5ca2eeecaa7966ca7999c702c3e880545b1d257bd0"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBC46lUyjNZ2+Nss88tIM1HRQcjzvIveWvj3/bDmV1roHZdCDjYnV0RJwjTN/Ac20ZH2VPiPXhmcpK4tY+ZF9DTI="
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 52d255120b0ec106de7bb5af4b20edeeb7d671bf",
+        "sha256": "SSHFP 4 2 9c661987e9142d6ffc67dbe7c04cb02e753dca1115929673a370b06edf06b3d3"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIM2iLk38BYbZ3xzlyaBYXm31dWbtwrLzhXc9B1IZ0V6w"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 398e1da0be1e4d0f9907296401f9c3cb3a3937e6",
+        "sha256": "SSHFP 1 2 17f673acd098048e1a006859122479981116c88945cd8c8a019d2b17269cde1f"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC7uJ5NtUTMBXwND5ZzWnuT2fpkXPrtckEZq8nQT/ptZ0JU88J9FbAylRK/4xFyTQXQmtl0RGmoAB+zpiBpDw6rN8p2GUo2cfY2d/fGsHpwwPoQu3B9G30ihfdh4zzbYypatWktoybuN86CNY8QtiEgKNS0DerivMx4BjhnzaYw1ng/BsP3bQ75RMxfwaaSCLpAkkQIAuaIg2+lAVu7jVBqj7H+uib7C0A8uBdyexI2c31vs3cWJJWLtlhhPJaGCyfCVRZF43fZMCNnh/EbWhLEWlGcMb2zJ4G3UAnlBuiv+DfbjGMqT+Ksm1lk+QqkDMA7mNr+i18IJT7t9qnWjwnr"
+    }
+	},
+  "system_uptime": {
+    "days": 4,
+    "hours": 119,
+    "seconds": 431734,
+    "uptime": "4 days"
+  },
+  "timezone": "CEST",
+  "virtual": "openvzhn"
+}
