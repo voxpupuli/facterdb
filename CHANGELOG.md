@@ -1,5 +1,15 @@
 # Change Log
 
+## [0.3.12]((https://rubygems.org/gems/facterdb/versions/0.3.12) (2017-07-27)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.11...0.3.12)
+
+**Implemented enhancements:**
+
+- Backfill missing 2.x and 3.x facts for supported operating systems [\#46](https://github.com/camptocamp/facterdb/pulls/46)
+- Adds Mint-18.1 facts [\#42](https://github.com/camptocamp/facterdb/pulls/42)
+- Use rvm 2.3 for unit tests
+
 ## [0.3.11]((https://rubygems.org/gems/facterdb/versions/0.3.11) (2017-06-23)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.10...0.3.11)
