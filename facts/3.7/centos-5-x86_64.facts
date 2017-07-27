@@ -1,0 +1,389 @@
+{
+  "aio_agent_version": "5.0.1",
+  "architecture": "x86_64",
+  "augeas": {
+    "version": "1.8.0"
+  },
+  "augeasversion": "1.8.0",
+  "bios_release_date": "07/30/2013",
+  "bios_vendor": "Phoenix Technologies LTD",
+  "bios_version": "6.00",
+  "blockdevice_fd0_size": 4096,
+  "blockdevice_hdc_size": 4294965248,
+  "blockdevice_sda_model": "Virtual disk",
+  "blockdevice_sda_size": 8589934592,
+  "blockdevice_sda_vendor": "VMware",
+  "blockdevice_sdb_model": "Virtual disk",
+  "blockdevice_sdb_size": 8589934592,
+  "blockdevice_sdb_vendor": "VMware",
+  "blockdevices": "fd0,hdc,sdb,sda",
+  "boardassettag": "Not Specified",
+  "boardmanufacturer": "Intel Corporation",
+  "boardproductname": "440BX Desktop Reference Platform",
+  "boardserialnumber": "None",
+  "chassisassettag": "No Asset Tag",
+  "chassistype": "Other",
+  "dhcp_servers": {
+    "eth0": "10.32.22.10",
+    "system": "10.32.22.10"
+  },
+  "disks": {
+    "fd0": {
+      "size": "4.00 KiB",
+      "size_bytes": 4096
+    },
+    "hdc": {
+      "size": "4.00 GiB",
+      "size_bytes": 4294965248
+    },
+    "sda": {
+      "model": "Virtual disk",
+      "size": "8.00 GiB",
+      "size_bytes": 8589934592,
+      "vendor": "VMware"
+    },
+    "sdb": {
+      "model": "Virtual disk",
+      "size": "8.00 GiB",
+      "size_bytes": 8589934592,
+      "vendor": "VMware"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "07/30/2013",
+      "vendor": "Phoenix Technologies LTD",
+      "version": "6.00"
+    },
+    "board": {
+      "asset_tag": "Not Specified",
+      "manufacturer": "Intel Corporation",
+      "product": "440BX Desktop Reference Platform",
+      "serial_number": "None"
+    },
+    "chassis": {
+      "asset_tag": "No Asset Tag",
+      "type": "Other"
+    },
+    "manufacturer": "VMware, Inc.",
+    "product": {
+      "name": "VMware Virtual Platform",
+      "serial_number": "VMware-42 0f 4d cd 4e d9 92 b1-7b 90 64 3e 15 3e eb 03",
+      "uuid": "420F4DCD-4ED9-92B1-7B90-643E153EEB03"
+    }
+  },
+  "domain": "example.com",
+  "facterversion": "3.7.1",
+  "filesystems": "ext2,ext3,iso9660",
+  "fqdn": "foo.example.com",
+  "gid": "root",
+  "hardwareisa": "x86_64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "id": "root",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "interfaces": "eth0,lo,sit0",
+  "ipaddress": "10.32.124.129",
+  "ipaddress6": "fe80::250:56ff:fe8f:4bb4",
+  "ipaddress6_eth0": "fe80::250:56ff:fe8f:4bb4",
+  "ipaddress6_lo": "::1",
+  "ipaddress_eth0": "10.32.124.129",
+  "ipaddress_lo": "127.0.0.1",
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "2.6",
+  "kernelrelease": "2.6.18-402.el5",
+  "kernelversion": "2.6.18",
+  "load_averages": {
+    "15m": 0.01,
+    "1m": 0.14,
+    "5m": 0.03
+  },
+  "lsbdistcodename": "Final",
+  "lsbdistdescription": "CentOS release 5.10 (Final)",
+  "lsbdistid": "CentOS",
+  "lsbdistrelease": "5.10",
+  "lsbmajdistrelease": "5",
+  "lsbminordistrelease": "10",
+  "lsbrelease": ":core-4.0-amd64:core-4.0-noarch:graphics-4.0-amd64:graphics-4.0-noarch:printing-4.0-amd64:printing-4.0-noarch",
+  "macaddress": "00:50:56:8f:4b:b4",
+  "macaddress_eth0": "00:50:56:8f:4b:b4",
+  "manufacturer": "VMware, Inc.",
+  "memory": {
+    "swap": {
+      "available": "3.91 GiB",
+      "available_bytes": 4194295808,
+      "capacity": "0%",
+      "total": "3.91 GiB",
+      "total_bytes": 4194295808,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "3.67 GiB",
+      "available_bytes": 3938836480,
+      "capacity": "4.88%",
+      "total": "3.86 GiB",
+      "total_bytes": 4140769280,
+      "used": "192.58 MiB",
+      "used_bytes": 201932800
+    }
+  },
+  "memoryfree": "3.67 GiB",
+  "memoryfree_mb": 3756.3671875,
+  "memorysize": "3.86 GiB",
+  "memorysize_mb": 3948.9453125,
+  "mountpoints": {
+    "/": {
+      "available": "9.63 GiB",
+      "available_bytes": 10340560896,
+      "capacity": "16.73%",
+      "device": "/dev/mapper/VolGroup00-LogVol00",
+      "filesystem": "ext3",
+      "options": [
+        "rw"
+      ],
+      "size": "11.56 GiB",
+      "size_bytes": 12417417216,
+      "used": "1.93 GiB",
+      "used_bytes": 2076856320
+    },
+    "/boot": {
+      "available": "71.99 MiB",
+      "available_bytes": 75487232,
+      "capacity": "27.07%",
+      "device": "/dev/sda1",
+      "filesystem": "ext3",
+      "options": [
+        "rw"
+      ],
+      "size": "98.72 MiB",
+      "size_bytes": 103512064,
+      "used": "26.73 MiB",
+      "used_bytes": 28024832
+    },
+    "/dev/shm": {
+      "available": "1.93 GiB",
+      "available_bytes": 2070384640,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw"
+      ],
+      "size": "1.93 GiB",
+      "size_bytes": 2070384640,
+      "used": "0 bytes",
+      "used_bytes": 0
+    }
+  },
+  "mtu_eth0": 1500,
+  "mtu_lo": 16436,
+  "mtu_sit0": 1480,
+  "netmask": "255.255.240.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_eth0": "ffff:ffff:ffff:ffff::",
+  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask_eth0": "255.255.240.0",
+  "netmask_lo": "255.0.0.0",
+  "network": "10.32.112.0",
+  "network6": "fe80::",
+  "network6_eth0": "fe80::",
+  "network6_lo": "::1",
+  "network_eth0": "10.32.112.0",
+  "network_lo": "127.0.0.0",
+  "networking": {
+    "dhcp": "10.32.22.10",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.32.124.129",
+            "netmask": "255.255.240.0",
+            "network": "10.32.112.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::250:56ff:fe8f:4bb4",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "dhcp": "10.32.22.10",
+        "ip": "10.32.124.129",
+        "ip6": "fe80::250:56ff:fe8f:4bb4",
+        "mac": "00:50:56:8f:4b:b4",
+        "mtu": 1500,
+        "netmask": "255.255.240.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.32.112.0",
+        "network6": "fe80::"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16436,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      },
+      "sit0": {
+        "mtu": 1480
+      }
+    },
+    "ip": "10.32.124.129",
+    "ip6": "fe80::250:56ff:fe8f:4bb4",
+    "mac": "00:50:56:8f:4b:b4",
+    "mtu": 1500,
+    "netmask": "255.255.240.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.32.112.0",
+    "network6": "fe80::",
+    "primary": "eth0"
+  },
+  "operatingsystem": "CentOS",
+  "operatingsystemmajrelease": "5",
+  "operatingsystemrelease": "5.10",
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "Final",
+      "description": "CentOS release 5.10 (Final)",
+      "id": "CentOS",
+      "release": {
+        "full": "5.10",
+        "major": "5",
+        "minor": "10"
+      },
+      "specification": ":core-4.0-amd64:core-4.0-noarch:graphics-4.0-amd64:graphics-4.0-noarch:printing-4.0-amd64:printing-4.0-noarch"
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "CentOS",
+    "release": {
+      "full": "5.10",
+      "major": "5",
+      "minor": "10"
+    },
+    "selinux": {
+      "config_mode": "enforcing",
+      "config_policy": "targeted",
+      "current_mode": "enforcing",
+      "enabled": true,
+      "enforced": true,
+      "policy_version": "21"
+    }
+  },
+  "osfamily": "RedHat",
+  "partitions": {
+    "/dev/sda1": {
+      "filesystem": "ext3",
+      "label": "/boot",
+      "mount": "/boot",
+      "size": "101.94 MiB",
+      "size_bytes": 106896384,
+      "uuid": "3ceaba3b-0c02-4b1a-8f84-430ae10fc4f2"
+    },
+    "/dev/sda2": {
+      "size": "7.90 GiB",
+      "size_bytes": 8480263680
+    },
+    "/dev/sdb1": {
+      "size": "8.00 GiB",
+      "size_bytes": 8589918208
+    }
+  },
+  "path": "/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin",
+  "physicalprocessorcount": 2,
+  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processorcount": 2,
+  "processors": {
+    "count": 2,
+    "isa": "x86_64",
+    "models": [
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz"
+    ],
+    "physicalcount": 2
+  },
+  "productname": "VMware Virtual Platform",
+  "puppetversion": "5.0.1",
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+    "version": "2.4.1"
+  },
+  "rubyplatform": "x86_64-linux",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+  "rubyversion": "2.4.1",
+  "selinux": true,
+  "selinux_config_mode": "enforcing",
+  "selinux_config_policy": "targeted",
+  "selinux_current_mode": "enforcing",
+  "selinux_enforced": true,
+  "selinux_policyversion": "21",
+  "serialnumber": "VMware-42 0f 4d cd 4e d9 92 b1-7b 90 64 3e 15 3e eb 03",
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 3febfa91d117f149536fc4739ca84f60aeab7fe2",
+        "sha256": "SSHFP 2 2 051cbdcb69c3cdce1eeb996509a346efc420aa0928687d001f44e64fa8148473"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAP/ws3Yhu1oXD+wgxSC3RymhwY0Buvo6oS1Bq24gUyyUKBLqGw47DxbMaUWAD+lbY2bmAsx5YDV6jHJBP2biqNPiSPYcDimR94B10x9JPpVdnNiC/XqsTPzToVgnR+txO1icPaYClR5kTvLHk25+UIX3Ne84v+gabixB+RFd4iEhAAAAFQC/W9nI7D2H9MFI9UZjes3b1S0SxQAAAIEAy8E+9gb/Q74+8qQQjNfgDGKeeOQr0XFA8odR5jpCDWVudzK2VFXMtayvTjrvotSfEgSRjrF00MP/2E30cajWuJXhLnjb705K7MLv0VP+1piUEjlk8W1qBsCQq2zCPOO0UJxxjA6ilbspY3y+6Fe5PvbSre+9aFPSJUWJmTgygXcAAACAd0RwsieW8HL8a/YHAJZHVacVDlL3OvpHeYEK9SbJVxrqO0Glumj2eDNyHs1YsLa2rj0JicQNSx+xDOlPow9EPuDM27AVhUV8iMQuIhW3H8LU8qO3BEOfIN5+MPmm2SAVxdmoKUM0l3SfMUGwJk4RjLtHH6e2kgxIGrGejDstzgk="
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 5f64e757ab9e88d23aca55d8b7e88ba813125fb1",
+        "sha256": "SSHFP 1 2 cb62ae7f4bc96128532ec55120dc651b8ce7180a7c342ab4f8b43e291e6769dc"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAABIwAAAQEAu3juUV4lxin9Z0zs82aJRE6yt/qIbl7LPofVG+bLG42RdLfyKL3HH2AcU5OO3mBBlmpKHgZcqas1tauOdcyZ+3EfiGB7OiAkoEb5Mo6jaYj5kQ6cdnx4XuzfQyA4u3acXKv+ONYgPYxAiZrXyzmetuhyhtY9mhk54s1FXmv3A+KCA/h3tKO1nIMapJ9HI0eK8otNrCL9Drwb25eSYPoGd3B7PvhV3fh67B2VUTukuRpAR3oQuvaBOijOuhFe45RMLIIzWkExzvvQrzNBkEaY5rnYU/GrKdu5u1O4T2E44/w2XetkMzVmVU8oqtH/xPWvAJtx7nCwTFaR5LBNNz5+jw=="
+    }
+  },
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAP/ws3Yhu1oXD+wgxSC3RymhwY0Buvo6oS1Bq24gUyyUKBLqGw47DxbMaUWAD+lbY2bmAsx5YDV6jHJBP2biqNPiSPYcDimR94B10x9JPpVdnNiC/XqsTPzToVgnR+txO1icPaYClR5kTvLHk25+UIX3Ne84v+gabixB+RFd4iEhAAAAFQC/W9nI7D2H9MFI9UZjes3b1S0SxQAAAIEAy8E+9gb/Q74+8qQQjNfgDGKeeOQr0XFA8odR5jpCDWVudzK2VFXMtayvTjrvotSfEgSRjrF00MP/2E30cajWuJXhLnjb705K7MLv0VP+1piUEjlk8W1qBsCQq2zCPOO0UJxxjA6ilbspY3y+6Fe5PvbSre+9aFPSJUWJmTgygXcAAACAd0RwsieW8HL8a/YHAJZHVacVDlL3OvpHeYEK9SbJVxrqO0Glumj2eDNyHs1YsLa2rj0JicQNSx+xDOlPow9EPuDM27AVhUV8iMQuIhW3H8LU8qO3BEOfIN5+MPmm2SAVxdmoKUM0l3SfMUGwJk4RjLtHH6e2kgxIGrGejDstzgk=",
+  "sshfp_dsa": "SSHFP 2 1 3febfa91d117f149536fc4739ca84f60aeab7fe2\nSSHFP 2 2 051cbdcb69c3cdce1eeb996509a346efc420aa0928687d001f44e64fa8148473",
+  "sshfp_rsa": "SSHFP 1 1 5f64e757ab9e88d23aca55d8b7e88ba813125fb1\nSSHFP 1 2 cb62ae7f4bc96128532ec55120dc651b8ce7180a7c342ab4f8b43e291e6769dc",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAABIwAAAQEAu3juUV4lxin9Z0zs82aJRE6yt/qIbl7LPofVG+bLG42RdLfyKL3HH2AcU5OO3mBBlmpKHgZcqas1tauOdcyZ+3EfiGB7OiAkoEb5Mo6jaYj5kQ6cdnx4XuzfQyA4u3acXKv+ONYgPYxAiZrXyzmetuhyhtY9mhk54s1FXmv3A+KCA/h3tKO1nIMapJ9HI0eK8otNrCL9Drwb25eSYPoGd3B7PvhV3fh67B2VUTukuRpAR3oQuvaBOijOuhFe45RMLIIzWkExzvvQrzNBkEaY5rnYU/GrKdu5u1O4T2E44/w2XetkMzVmVU8oqtH/xPWvAJtx7nCwTFaR5LBNNz5+jw==",
+  "swapfree": "3.91 GiB",
+  "swapfree_mb": 3999.9921875,
+  "swapsize": "3.91 GiB",
+  "swapsize_mb": 3999.9921875,
+  "system_uptime": {
+    "days": 10,
+    "hours": 256,
+    "seconds": 923628,
+    "uptime": "10 days"
+  },
+  "timezone": "PDT",
+  "uptime": "10 days",
+  "uptime_days": 10,
+  "uptime_hours": 256,
+  "uptime_seconds": 923628,
+  "uuid": "420F4DCD-4ED9-92B1-7B90-643E153EEB03",
+  "virtual": "vmware"
+}

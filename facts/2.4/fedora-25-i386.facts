@@ -1,0 +1,110 @@
+{
+  "kernel": "Linux",
+  "system_uptime": {
+    "seconds": 33564,
+    "hours": 9,
+    "days": 0,
+    "uptime": "9:19 hours"
+  },
+  "gid": "root",
+  "hardwaremodel": "i686",
+  "kernelrelease": "4.8.6-300.fc25.i686",
+  "dhcp_servers": {
+    "system": "10.32.22.9",
+    "ens160": "10.32.22.9"
+  },
+  "rubyplatform": "i386-linux",
+  "blockdevice_sr0_size": 1073741312,
+  "blockdevice_sr0_vendor": "NECVMWar",
+  "blockdevice_sr0_model": "VMware IDE CDR10",
+  "blockdevice_sda_size": 21474836480,
+  "blockdevice_sda_vendor": "VMware",
+  "blockdevice_sda_model": "Virtual disk",
+  "blockdevices": "sda,sr0",
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin",
+  "partitions": {
+    "sda2": {
+      "size": "39843840",
+      "filesystem": "LVM2_member"
+    },
+    "sda1": {
+      "uuid": "97f69beb-3800-46dc-b805-bd696d771b86",
+      "size": "2097152",
+      "mount": "/boot",
+      "filesystem": "ext4"
+    }
+  },
+  "macaddress": "00:50:56:a2:0e:78",
+  "rubyversion": "2.3.3",
+  "hostname": "foo",
+  "operatingsystem": "Fedora",
+  "timezone": "UTC",
+  "facterversion": "2.4.6",
+  "processors": {
+    "models": [
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz"
+    ],
+    "count": 2,
+    "physicalcount": 2
+  },
+  "uptime_seconds": 33564,
+  "uptime": "9:19 hours",
+  "ps": "ps -ef",
+  "operatingsystemmajrelease": "25",
+  "kernelversion": "4.8.6",
+  "virtual": "physical",
+  "is_virtual": false,
+  "fqdn": "foo.example.com",
+  "selinux": false,
+  "netmask": "255.255.240.0",
+  "interfaces": "ens160,lo",
+  "ipaddress_ens160": "10.32.113.4",
+  "macaddress_ens160": "00:50:56:a2:0e:78",
+  "netmask_ens160": "255.255.240.0",
+  "mtu_ens160": 1500,
+  "ipaddress_lo": "127.0.0.1",
+  "netmask_lo": "255.0.0.0",
+  "mtu_lo": 65536,
+  "id": "root",
+  "os": {
+    "name": "Fedora",
+    "family": "RedHat",
+    "release": {
+      "major": "25",
+      "full": "25"
+    }
+  },
+  "architecture": "i386",
+  "operatingsystemrelease": "25",
+  "osfamily": "RedHat",
+  "rubysitedir": "/usr/local/share/ruby/site_ruby",
+  "network_ens160": "10.32.112.0",
+  "network_lo": "127.0.0.0",
+  "uptime_days": 0,
+  "ipaddress": "10.32.113.4",
+  "memorysize": "1.97 GB",
+  "memoryfree": "1.88 GB",
+  "swapsize": "1.21 GB",
+  "swapfree": "1.21 GB",
+  "swapsize_mb": "1244.00",
+  "swapfree_mb": "1244.00",
+  "memorysize_mb": "2014.47",
+  "memoryfree_mb": "1924.81",
+  "filesystems": "ext2,ext3,ext4,xfs",
+  "hardwareisa": "i686",
+  "uniqueid": "200a0471",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCyrrWKiHwo1E2hSHHG2nxJGyIjV/zZEGjxjjFWAmcx6FpkjMpbcKCa5sAVNA0a9xTOnABbpg7d3bfGhQGg/syLXr5LQJfxEqtbncJq4ZIgeuOSpdwvzLDMUPZQIL7+gQKa+xzleDztsUskQexh8OqjZlYlNhSvagPTHDrB5j9w8bGFytodaKtghH7kNuz7jWStsSy9Brx6DRdCgXeuJmJmusumCKjK9Rpq3Kwz3rMWEzEmhwJXqm+D01kDk+OoJqQWuOgUoNLWkvzbd51LeWgGXiRPn3E88LSD5O89jSM6cX8uUO7mCKzub2iyx9t0+y61WkW9igxN/vxycD5lbgbB",
+  "sshfp_rsa": "SSHFP 1 1 6e0639365af18fb5de32067ce9c3a45e653e79f0\nSSHFP 1 2 9449d9d68b30c1e5055658fda63dbfe2e78d2200e25d2cde78dea99105d14ff9",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBH+GeaPiih54WafmpSQjDzYMX10V9Y1eO5d50JB77zq6nEIsspRBgcVxbEXlEtbrDE9zSf+VAvsovB6UkJSiKnw=",
+  "sshfp_ecdsa": "SSHFP 3 1 11f21ffa09ea4a6f415c055796971b3599ab7db6\nSSHFP 3 2 7b5022ba114f2d0112dd339c68aac81a13db0191004b270a31fec444dab72b48",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIMB+HuBqyZx64tW1cqQ8zYlGZaGpEJO8Tuowg/o4glls",
+  "sshfp_ed25519": "SSHFP 4 1 306505c097b2ce09d440ebb9c2553b01e8ff59fd\nSSHFP 4 2 65b1aac0972f5b2f87a50a3d24c78470b119069334d1d3412284b949036ab165",
+  "uptime_hours": 9,
+  "physicalprocessorcount": 2,
+  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processorcount": 2,
+  "kernelmajversion": "4.8",
+  "domain": "example.com"
+}

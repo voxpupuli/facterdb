@@ -1,0 +1,71 @@
+{
+  "architecture": "x64",
+  "kernel": "windows",
+  "domain": "example.com",
+  "virtual": "vmware",
+  "is_virtual": "true",
+  "hardwaremodel": "x64",
+  "operatingsystem": "windows",
+  "os": {
+    "name": "windows",
+    "family": "windows",
+    "release": {
+      "major": "7",
+      "full": "7"
+    }
+  },
+  "facterversion": "2.2.0",
+  "fqdn": "foo.example.com",
+  "gid": "None",
+  "hardwareisa": "unknown",
+  "hostname": "foo",
+  "id": "Administrator",
+  "interfaces": "Local_Area_Connection",
+  "ipaddress_local_area_connection": "10.32.126.73",
+  "macaddress_local_area_connection": "00:50:56:A2:EF:51",
+  "netmask_local_area_connection": "255.255.240.0",
+  "ipaddress": "10.32.126.73",
+  "kernelmajversion": "6.1",
+  "kernelrelease": "6.1.7601",
+  "kernelversion": "6.1.7601",
+  "macaddress": "00:50:56:A2:EF:51",
+  "manufacturer": "VMware, Inc.",
+  "serialnumber": "VMware-42 22 a6 6f 63 84 0d 53-07 bc 72 79 02 59 33 7a",
+  "productname": "VMware7,1",
+  "memorysize": "4.00 GB",
+  "memoryfree": "3.15 GB",
+  "memorysize_mb": "4095.14",
+  "memoryfree_mb": "3224.83",
+  "netmask": "255.255.240.0",
+  "network_local_area_connection": "10.32.112.0",
+  "operatingsystemmajrelease": "7",
+  "operatingsystemrelease": "7",
+  "osfamily": "windows",
+  "path": "C:\\cygwin64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\Packer\\SysInternals;C:\\Users\\Administrator\\AppData\\Roaming\\Boxstarter",
+  "physicalprocessorcount": "2",
+  "processors": {
+    "models": [
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz"
+    ],
+    "count": 2,
+    "physicalcount": 2
+  },
+  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processorcount": "2",
+  "ps": "tasklist.exe",
+  "rubysitedir": "C:/tools/ruby24/lib/ruby/site_ruby/2.4.0",
+  "rubyversion": "2.4.1",
+  "system_uptime": {
+    "seconds": 59112,
+    "hours": 16,
+    "days": 0,
+    "uptime": "16:25 hours"
+  },
+  "timezone": "Coordinated Universal Time",
+  "uptime": "16:25 hours",
+  "uptime_days": 0,
+  "uptime_hours": 16,
+  "uptime_seconds": 59112
+}
