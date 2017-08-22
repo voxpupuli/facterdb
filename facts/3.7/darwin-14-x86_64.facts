@@ -1,0 +1,392 @@
+{
+  "aio_agent_version": "5.0.1",
+  "architecture": "x86_64",
+  "augeas": {
+    "version": "1.8.0"
+  },
+  "augeasversion": "1.8.0",
+  "dhcp_servers": {
+    "en0": "10.32.22.9",
+    "system": "10.32.22.9"
+  },
+  "dmi": {
+    "product": {
+      "name": "VMware7,1"
+    }
+  },
+  "domain": "example.com",
+  "facterversion": "3.7.1",
+  "filesystems": "autofs,devfs,hfs,vmhgfs",
+  "fqdn": "foo.example.com",
+  "gid": "wheel",
+  "hardwareisa": "i386",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "id": "root",
+  "identity": {
+    "gid": 0,
+    "group": "wheel",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "interfaces": "en0,gif0,lo0,stf0",
+  "ipaddress": "10.32.113.72",
+  "ipaddress6": "fe80::250:56ff:fea2:dbf1",
+  "ipaddress6_en0": "fe80::250:56ff:fea2:dbf1",
+  "ipaddress6_lo0": "::1",
+  "ipaddress_en0": "10.32.113.72",
+  "ipaddress_lo0": "127.0.0.1",
+  "is_virtual": true,
+  "kernel": "Darwin",
+  "kernelmajversion": "14.1",
+  "kernelrelease": "14.1.0",
+  "kernelversion": "14.1.0",
+  "load_averages": {
+    "15m": 1.03857421875,
+    "1m": 1.30810546875,
+    "5m": 1.12109375
+  },
+  "macaddress": "00:50:56:a2:db:f1",
+  "macaddress_en0": "00:50:56:a2:db:f1",
+  "macosx_buildversion": "14C1514",
+  "macosx_productname": "Mac OS X",
+  "macosx_productversion": "10.10.2",
+  "macosx_productversion_major": "10.10",
+  "macosx_productversion_minor": "2",
+  "memory": {
+    "system": {
+      "available": "19.30 MiB",
+      "available_bytes": 20242432,
+      "capacity": "99.06%",
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "1.98 GiB",
+      "used_bytes": 2127241216
+    }
+  },
+  "memoryfree": "19.30 MiB",
+  "memoryfree_mb": 19.3046875,
+  "memorysize": "2.00 GiB",
+  "memorysize_mb": 2048.0,
+  "mountpoints": {
+    "/": {
+      "available": "29.85 GiB",
+      "available_bytes": 32055865344,
+      "capacity": "23.84%",
+      "device": "/dev/disk0s2",
+      "filesystem": "hfs",
+      "options": [
+        "local",
+        "root",
+        "journaled"
+      ],
+      "size": "39.20 GiB",
+      "size_bytes": 42089914368,
+      "used": "9.34 GiB",
+      "used_bytes": 10034049024
+    },
+    "/Volumes/VMware Shared Folders": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": ".host:/VMware Shared Folders",
+      "filesystem": "vmhgfs",
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/Volumes/puppet-agent-5.0.1-1.osx10.10": {
+      "available": "9.20 MiB",
+      "available_bytes": 9646080,
+      "capacity": "71.46%",
+      "device": "/dev/disk2s1",
+      "filesystem": "hfs",
+      "options": [
+        "readonly",
+        "nosuid",
+        "local",
+        "nodev"
+      ],
+      "size": "32.24 MiB",
+      "size_bytes": 33804288,
+      "used": "23.04 MiB",
+      "used_bytes": 24158208
+    },
+    "/Volumes/puppet-agent-5.1.0-1.osx10.10": {
+      "available": "9.20 MiB",
+      "available_bytes": 9646080,
+      "capacity": "71.48%",
+      "device": "/dev/disk1s1",
+      "filesystem": "hfs",
+      "options": [
+        "readonly",
+        "nosuid",
+        "local",
+        "nodev"
+      ],
+      "size": "32.25 MiB",
+      "size_bytes": 33820672,
+      "used": "23.05 MiB",
+      "used_bytes": 24174592
+    },
+    "/dev": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+        "local",
+        "nobrowse"
+      ],
+      "size": "177.00 KiB",
+      "size_bytes": 181248,
+      "used": "177.00 KiB",
+      "used_bytes": 181248
+    },
+    "/home": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "map auto_home",
+      "filesystem": "autofs",
+      "options": [
+        "nobrowse",
+        "automounted"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/net": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "map -hosts",
+      "filesystem": "autofs",
+      "options": [
+        "nosuid",
+        "nobrowse",
+        "automounted"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    }
+  },
+  "mtu_en0": 1500,
+  "mtu_gif0": 1280,
+  "mtu_lo0": 16384,
+  "mtu_stf0": 1280,
+  "netmask": "255.255.240.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_en0": "ffff:ffff:ffff:ffff::",
+  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask_en0": "255.255.240.0",
+  "netmask_lo0": "255.0.0.0",
+  "network": "10.32.112.0",
+  "network6": "fe80::",
+  "network6_en0": "fe80::",
+  "network6_lo0": "::1",
+  "network_en0": "10.32.112.0",
+  "network_lo0": "127.0.0.0",
+  "networking": {
+    "dhcp": "10.32.22.9",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "en0": {
+        "bindings": [
+          {
+            "address": "10.32.113.72",
+            "netmask": "255.255.240.0",
+            "network": "10.32.112.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::250:56ff:fea2:dbf1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "dhcp": "10.32.22.9",
+        "ip": "10.32.113.72",
+        "ip6": "fe80::250:56ff:fea2:dbf1",
+        "mac": "00:50:56:a2:db:f1",
+        "mtu": 1500,
+        "netmask": "255.255.240.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.32.112.0",
+        "network6": "fe80::"
+      },
+      "gif0": {
+        "mtu": 1280
+      },
+      "lo0": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          },
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16384,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      },
+      "stf0": {
+        "mtu": 1280
+      }
+    },
+    "ip": "10.32.113.72",
+    "ip6": "fe80::250:56ff:fea2:dbf1",
+    "mac": "00:50:56:a2:db:f1",
+    "mtu": 1500,
+    "netmask": "255.255.240.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.32.112.0",
+    "network6": "fe80::",
+    "primary": "en0"
+  },
+  "operatingsystem": "Darwin",
+  "operatingsystemmajrelease": "14",
+  "operatingsystemrelease": "14.1.0",
+  "os": {
+    "architecture": "x86_64",
+    "family": "Darwin",
+    "hardware": "x86_64",
+    "macosx": {
+      "build": "14C1514",
+      "product": "Mac OS X",
+      "version": {
+        "full": "10.10.2",
+        "major": "10.10",
+        "minor": "2"
+      }
+    },
+    "name": "Darwin",
+    "release": {
+      "full": "14.1.0",
+      "major": "14",
+      "minor": "1"
+    }
+  },
+  "osfamily": "Darwin",
+  "path": "/usr/bin:/bin:/usr/sbin:/sbin",
+  "physicalprocessorcount": 2,
+  "processor0": "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz",
+  "processor1": "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz",
+  "processorcount": 2,
+  "processors": {
+    "count": 2,
+    "isa": "i386",
+    "models": [
+      "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz",
+      "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz"
+    ],
+    "physicalcount": 2,
+    "speed": "2.19 GHz"
+  },
+  "productname": "VMware7,1",
+  "puppetversion": "5.0.1",
+  "ruby": {
+    "platform": "x86_64-darwin14",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+    "version": "2.4.1"
+  },
+  "rubyplatform": "x86_64-darwin14",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+  "rubyversion": "2.4.1",
+  "sp_boot_mode": "Normal",
+  "sp_boot_rom_version": "VMW71.00V.0.B64.1307300729",
+  "sp_boot_volume": "Untitled 1",
+  "sp_current_processor_speed": "2.19 GHz",
+  "sp_kernel_version": "Darwin 14.1.0",
+  "sp_local_host_name": "sqkoaore35ragvt",
+  "sp_machine_model": "VMware7,1",
+  "sp_machine_name": "Mac",
+  "sp_number_processors": "2",
+  "sp_os_version": "OS X 10.10.2 (14C1514)",
+  "sp_packages": "2",
+  "sp_physical_memory": "2 GB",
+  "sp_platform_uuid": "420F0B7C-5A72-5995-312A-B77E92221587",
+  "sp_secure_vm": "Enabled",
+  "sp_serial_number": "VMWQiI0yhn7Uf+fQidm6mWl1w",
+  "sp_smc_version_system": "1.16f8",
+  "sp_uptime": "1 day20:53",
+  "sp_user_name": "System Administrator (root)",
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 956343d70982546b0130599739705f0d199e8c65",
+        "sha256": "SSHFP 2 2 99df3c46d095004715e68dafc453a4df5e35b02501975450e18ec2d64c9378c6"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAMhJJ/ic49Y8moGWyTFODxKSq8Nj8ko6BkUelTHHNDqb6VHsSGrJt4g9PDkCgEt7GlMYQ68KsKtDjtGqB/jBCjoTyHgHbnYFuH3dI26JFCJ8CGGHhFsqYrhjNSA9MWBaCNUM7TXOuzaKnbr/XPJHhu8Sus9JuIAX9ZYCygjgEna9AAAAFQC7tvlDZL1QHYsy3EejS6/WbCzd2wAAAIEAvmWibc/4QO8ONfcqW7hE5YJ8ZtOQcK3E8boGMOMiAG/kK5ZmTk++itjGQ/vt3LocaABm4L0HPJLl05E95mZzyQwErP7k4JgNIkaeHl38m2KIDZw3GRGvNCz0Fty4LldngkKJPNXMBT/2Wkt1PibjiLsxnuXSf2Ns6p5ZmtRiIhEAAACAMxTlaw5KhAPs6EDjqMw7sN4pI0oHDMJ2/QHgL0NWP3cUZOrBVDnJOr/dmD6iHWRo8duWgsfENCc7qyoqdaXW0yFdows6jlQWKuTaywB99jixh86EzjVYzDR4rsUGHsQDr6f11484P/PM1CRYVKAku9hhEh6Bma2B+AcGmuKiTF0="
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 d697825750757c95f31bd018e6f6bb7a907a2d1f",
+        "sha256": "SSHFP 1 2 289a6967e49df8b9849361e189812e7e8648c8922466c9373b86ff16e38ba428"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDOmVztvOvfhgS/WLIV7JVKLdZhXGoNYBgytqnBsqqcNetw2k80mHk8pvod2GIIvq//oOBTB64dDFf/F4KNoPDRmqXuz3qatUp9pGM6ne+DmMxZOq9lNmVKmtq40+gwZjrt9OWAth7YaZw0enV6rb5E7e+L3Kyxm2B5jV+sY6lY9mXMN8ard3xhdoRVBrnli/jycY0KPknJgsfuquOlUh53oXLrVzQcLlRwYaNekfW06oZHx8Xhr8NWxanbYX2W0jB9PcUaeBGR2G8DUkBBGRVqHpZ/b48d0syeOEpVVioZHheWxhygd4UiDtl3txS4xNi654yUA4F4gd3xXz/vuMyp"
+    }
+  },
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAMhJJ/ic49Y8moGWyTFODxKSq8Nj8ko6BkUelTHHNDqb6VHsSGrJt4g9PDkCgEt7GlMYQ68KsKtDjtGqB/jBCjoTyHgHbnYFuH3dI26JFCJ8CGGHhFsqYrhjNSA9MWBaCNUM7TXOuzaKnbr/XPJHhu8Sus9JuIAX9ZYCygjgEna9AAAAFQC7tvlDZL1QHYsy3EejS6/WbCzd2wAAAIEAvmWibc/4QO8ONfcqW7hE5YJ8ZtOQcK3E8boGMOMiAG/kK5ZmTk++itjGQ/vt3LocaABm4L0HPJLl05E95mZzyQwErP7k4JgNIkaeHl38m2KIDZw3GRGvNCz0Fty4LldngkKJPNXMBT/2Wkt1PibjiLsxnuXSf2Ns6p5ZmtRiIhEAAACAMxTlaw5KhAPs6EDjqMw7sN4pI0oHDMJ2/QHgL0NWP3cUZOrBVDnJOr/dmD6iHWRo8duWgsfENCc7qyoqdaXW0yFdows6jlQWKuTaywB99jixh86EzjVYzDR4rsUGHsQDr6f11484P/PM1CRYVKAku9hhEh6Bma2B+AcGmuKiTF0=",
+  "sshfp_dsa": "SSHFP 2 1 956343d70982546b0130599739705f0d199e8c65\nSSHFP 2 2 99df3c46d095004715e68dafc453a4df5e35b02501975450e18ec2d64c9378c6",
+  "sshfp_rsa": "SSHFP 1 1 d697825750757c95f31bd018e6f6bb7a907a2d1f\nSSHFP 1 2 289a6967e49df8b9849361e189812e7e8648c8922466c9373b86ff16e38ba428",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDOmVztvOvfhgS/WLIV7JVKLdZhXGoNYBgytqnBsqqcNetw2k80mHk8pvod2GIIvq//oOBTB64dDFf/F4KNoPDRmqXuz3qatUp9pGM6ne+DmMxZOq9lNmVKmtq40+gwZjrt9OWAth7YaZw0enV6rb5E7e+L3Kyxm2B5jV+sY6lY9mXMN8ard3xhdoRVBrnli/jycY0KPknJgsfuquOlUh53oXLrVzQcLlRwYaNekfW06oZHx8Xhr8NWxanbYX2W0jB9PcUaeBGR2G8DUkBBGRVqHpZ/b48d0syeOEpVVioZHheWxhygd4UiDtl3txS4xNi654yUA4F4gd3xXz/vuMyp",
+  "system_profiler": {
+    "boot_mode": "Normal",
+    "boot_rom_version": "VMW71.00V.0.B64.1307300729",
+    "boot_volume": "Untitled 1",
+    "computer_name": "sqkoaore35ragvt",
+    "cores": "2",
+    "hardware_uuid": "420F0B7C-5A72-5995-312A-B77E92221587",
+    "kernel_version": "Darwin 14.1.0",
+    "memory": "2 GB",
+    "model_identifier": "VMware7,1",
+    "model_name": "Mac",
+    "processor_speed": "2.19 GHz",
+    "processors": "2",
+    "secure_virtual_memory": "Enabled",
+    "serial_number": "VMWQiI0yhn7Uf+fQidm6mWl1w",
+    "smc_version": "1.16f8",
+    "system_version": "OS X 10.10.2 (14C1514)",
+    "uptime": "1 day20:53",
+    "username": "System Administrator (root)"
+  },
+  "system_uptime": {
+    "days": 1,
+    "hours": 44,
+    "seconds": 161579,
+    "uptime": "1 day"
+  },
+  "timezone": "PDT",
+  "uptime": "1 day",
+  "uptime_days": 1,
+  "uptime_hours": 44,
+  "uptime_seconds": 161579,
+  "virtual": "vmware"
+}
