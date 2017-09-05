@@ -16,8 +16,9 @@
     "name": "Debian",
     "family": "Debian",
     "release": {
-      "major": "stretch/sid",
-      "full": "stretch/sid"
+      "major": "9",
+      "minor": "1",
+      "full": "9.1"
     },
     "lsb": {
       "distcodename": "stretch",
@@ -45,7 +46,7 @@
   "facterversion": "2.5.0",
   "rubysitedir": "/usr/local/lib/site_ruby/2.3.0",
   "uptime_seconds": 48297,
-  "operatingsystemrelease": "stretch/sid",
+  "operatingsystemrelease": "9.1",
   "uptime": "13:24 hours",
   "macaddress": "00:50:56:a2:40:1c",
   "boardmanufacturer": "Intel Corporation",
@@ -103,7 +104,7 @@
   "lsbminordistrelease": "1",
   "lsbdistcodename": "stretch",
   "gid": "root",
-  "operatingsystemmajrelease": "stretch/sid",
+  "operatingsystemmajrelease": "9",
   "lsbdistid": "Debian",
   "netmask": "255.255.240.0",
   "id": "root",
