@@ -1,0 +1,236 @@
+{
+  "gem_version": "~> 2.3.0",
+  "interfaces": "eth0,lo",
+  "kernel": "Linux",
+  "ipaddress_eth0": "10.254.253.132",
+  "macaddress_eth0": "02:85:E9:60:90:D4",
+  "netmask_eth0": "255.255.255.192",
+  "mtu_eth0": 9001,
+  "ipaddress_lo": "127.0.0.1",
+  "netmask_lo": "255.0.0.0",
+  "mtu_lo": 65536,
+  "architecture": "x86_64",
+  "macaddress": "02:85:E9:60:90:D4",
+  "domain": "us-gov-west-1.compute.internal",
+  "operatingsystemmajrelease": "2017",
+  "processors": {
+    "models": [
+      "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
+    ],
+    "count": 1,
+    "physicalcount": 1
+  },
+  "fqdn": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+  "id": "root",
+  "uptime": "2:39 hours",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
+  "uptime_hours": 2,
+  "ec2_metadata": {
+    "ami-id": "ami-b2d056d3",
+    "ami-launch-index": "0",
+    "ami-manifest-path": "(unknown)",
+    "block-device-mapping": {
+      "ami": "/dev/xvda",
+      "root": "/dev/xvda"
+    },
+    "hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+    "iam": {
+      "info": [
+        "{",
+        "  \"Code\" : \"Success\",",
+        "  \"LastUpdated\" : \"2017-09-14T21:04:53Z\",",
+        "  \"InstanceProfileArn\" : \"arn:aws-us-gov:iam::050287752177:instance-profile/caf-dev-default-role\",",
+        "  \"InstanceProfileId\" : \"AIPAK7C66WYDVS3ZKCQRI\"",
+        "}"
+      ],
+      "security-credentials": {
+        "caf-dev-default-role": [
+          "{",
+          "  \"Code\" : \"Success\",",
+          "  \"LastUpdated\" : \"2017-09-14T21:03:59Z\",",
+          "  \"Type\" : \"AWS-HMAC\",",
+          "  \"AccessKeyId\" : \"ASIALIN3CJNFPU34NJZA\",",
+          "  \"SecretAccessKey\" : \"l9b+p1XYw9Gihar4chWZttOJgJdBY7dwdAHEV20p\",",
+          "  \"Token\" : \"FQoDYXdzEDQaDD3R/kUjaY5Sab6iUCLNA6lxDgp+dPzndK0q6RrJWt5OX8RXH6MmP9JQR4bkcBQo/sWqMExA9RKcqfLSAyeaF6nmCM9D1UfIcmg9QCOCaOb/xbXGv1iu2kWjx/kZTcaStQoM5rRqDgcQj8ALbgnF+NyVUYdoT/mHWR94TwGioIalaHcvMHTJSwe6hafW+B3nBR8uPa+NrGbEztktS1TRlXT2a54T6Id+Oz/5ZrIZqIg+lFR88tvj+f41fwKBlA4baPl1Ow1DzWCp2vlmFD0XmoM9HC9M9UYB65XS06qOSlgEiMS6G+80BXy7kyWFHzh1vAhMYdzpMsa9ysW1wD0GyP43kUuK5rMoVMFQYB1z9oHqpuFQa1Am+z0+xJMauDIIT7cDiuIDS22l+cGscqDogG4Gamv9IN4i5kVLpr5p8EjaIdJ4ivQ+bn6ggWpbpac7HoJ+PuYY8cN/rs/qoiHU/kkD3eoik4Ptf86uQj7qJVcAXObkoO5o22cVkCwjtFA6jjWplF8rHfvTRVllMqhqxnCUk9X9hdh7+1jR6UNwBXi7o//p0ML9rYK+LleowUXBrpIRBOXagtGFeBmexHlNqdUj9bfnE8tbdY5lNvI7cUrfikjqpGNyNhOdKohsKObd680F\",",
+          "  \"Expiration\" : \"2017-09-15T03:33:28Z\"",
+          "}"
+        ]
+      }
+    },
+    "instance-action": "none",
+    "instance-id": "i-021bd29b48d609819",
+    "instance-type": "t2.small",
+    "local-hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+    "local-ipv4": "10.254.253.132",
+    "mac": "02:85:e9:60:90:d4",
+    "metrics": {
+      "vhostmd": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+    },
+    "network": {
+      "interfaces": {
+        "macs": {
+          "02:85:e9:60:90:d4": {
+            "device-number": "0",
+            "interface-id": "eni-f53215b3",
+            "local-hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+            "local-ipv4s": "10.254.253.132",
+            "mac": "02:85:e9:60:90:d4",
+            "owner-id": "050287752177",
+            "security-group-ids": "sg-04863961",
+            "security-groups": "caf-ops-management",
+            "subnet-id": "subnet-076f1f62",
+            "subnet-ipv4-cidr-block": "10.254.253.128/26",
+            "vpc-id": "vpc-d660abb3",
+            "vpc-ipv4-cidr-block": "10.254.253.0/24",
+            "vpc-ipv4-cidr-blocks": "10.254.253.0/24"
+          }
+        }
+      }
+    },
+    "placement": {
+      "availability-zone": "us-gov-west-1a"
+    },
+    "profile": "default-hvm",
+    "public-keys": {
+      "0": {
+        "openssh-key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDqlxaiYiVRFtC4eDVw7ilzMR8eo6B/b6JWv8xqjGzAn1wbGsca0v6RkyozigNF+lupZ4Li405NzYWPRWvNLVrqcQPmmlSDaX03RA9RtDuDOB1c0KHH7yMzXM509UYQIK8HEx5rmOs+0be5+/psDIeUw8hxOpyZVUC3QM+B/B7AyQXR8G1G047Zne6dHJ3qcuhkrafm68J35lGoD1ygkn+FsM6E2H17oyTdj5Rr/4VuyE0L3CBnkZaRMXnUUpSXPhnnsavg4HkUIUKJtMfitkQtUD2/TnXgcJrw2qXywaJ2FBq3q87Hl1dSozSmL3gsJ1dCySDVQBoljdwFJ71VdwfJ caf-doj-bob"
+      }
+    },
+    "reservation-id": "r-0959aaa272a6f36e3",
+    "security-groups": "caf-ops-management",
+    "services": {
+      "domain": "amazonaws.com",
+      "partition": "aws-us-gov"
+    }
+  },
+  "ec2_userdata": "#!/bin/bash -ex\nyum -y update\nrpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm\nyum -y install puppet-agent\nmkdir -p /etc/puppet/modules\n/opt/puppetlabs/bin/puppet module install saz-sudo\n/opt/puppetlabs/bin/puppet module install puppetlabs-accounts\naws --region us-gov-west-1 s3 cp s3://caf-ops-deployment/user_data/users_ops.pp /root/\n/opt/puppetlabs/bin/puppet apply /root/users_ops.pp",
+  "virtual": "xenhvm",
+  "is_virtual": true,
+  "hardwaremodel": "x86_64",
+  "operatingsystem": "Amazon",
+  "os": {
+    "name": "Amazon",
+    "family": "RedHat",
+    "release": {
+      "major": "2017",
+      "minor": "03",
+      "full": "2017.03"
+    }
+  },
+  "ec2_ami_id": "ami-b2d056d3",
+  "ec2_ami_launch_index": "0",
+  "ec2_ami_manifest_path": "(unknown)",
+  "ec2_block_device_mapping_ami": "/dev/xvda",
+  "ec2_block_device_mapping_root": "/dev/xvda",
+  "ec2_hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+  "ec2_iam_info_0": "{",
+  "ec2_iam_info_1": "  \"Code\" : \"Success\",",
+  "ec2_iam_info_2": "  \"LastUpdated\" : \"2017-09-14T21:04:53Z\",",
+  "ec2_iam_info_3": "  \"InstanceProfileArn\" : \"arn:aws-us-gov:iam::050287752177:instance-profile/caf-dev-default-role\",",
+  "ec2_iam_info_4": "  \"InstanceProfileId\" : \"AIPAK7C66WYDVS3ZKCQRI\"",
+  "ec2_iam_info_5": "}",
+  "ec2_iam_security_credentials_caf_dev_default_role_0": "{",
+  "ec2_iam_security_credentials_caf_dev_default_role_1": "  \"Code\" : \"Success\",",
+  "ec2_iam_security_credentials_caf_dev_default_role_2": "  \"LastUpdated\" : \"2017-09-14T21:03:59Z\",",
+  "ec2_iam_security_credentials_caf_dev_default_role_3": "  \"Type\" : \"AWS-HMAC\",",
+  "ec2_iam_security_credentials_caf_dev_default_role_4": "  \"AccessKeyId\" : \"ASIALIN3CJNFPU34NJZA\",",
+  "ec2_iam_security_credentials_caf_dev_default_role_5": "  \"SecretAccessKey\" : \"l9b+p1XYw9Gihar4chWZttOJgJdBY7dwdAHEV20p\",",
+  "ec2_iam_security_credentials_caf_dev_default_role_6": "  \"Token\" : \"FQoDYXdzEDQaDD3R/kUjaY5Sab6iUCLNA6lxDgp+dPzndK0q6RrJWt5OX8RXH6MmP9JQR4bkcBQo/sWqMExA9RKcqfLSAyeaF6nmCM9D1UfIcmg9QCOCaOb/xbXGv1iu2kWjx/kZTcaStQoM5rRqDgcQj8ALbgnF+NyVUYdoT/mHWR94TwGioIalaHcvMHTJSwe6hafW+B3nBR8uPa+NrGbEztktS1TRlXT2a54T6Id+Oz/5ZrIZqIg+lFR88tvj+f41fwKBlA4baPl1Ow1DzWCp2vlmFD0XmoM9HC9M9UYB65XS06qOSlgEiMS6G+80BXy7kyWFHzh1vAhMYdzpMsa9ysW1wD0GyP43kUuK5rMoVMFQYB1z9oHqpuFQa1Am+z0+xJMauDIIT7cDiuIDS22l+cGscqDogG4Gamv9IN4i5kVLpr5p8EjaIdJ4ivQ+bn6ggWpbpac7HoJ+PuYY8cN/rs/qoiHU/kkD3eoik4Ptf86uQj7qJVcAXObkoO5o22cVkCwjtFA6jjWplF8rHfvTRVllMqhqxnCUk9X9hdh7+1jR6UNwBXi7o//p0ML9rYK+LleowUXBrpIRBOXagtGFeBmexHlNqdUj9bfnE8tbdY5lNvI7cUrfikjqpGNyNhOdKohsKObd680F\",",
+  "ec2_iam_security_credentials_caf_dev_default_role_7": "  \"Expiration\" : \"2017-09-15T03:33:28Z\"",
+  "ec2_iam_security_credentials_caf_dev_default_role_8": "}",
+  "ec2_instance_action": "none",
+  "ec2_instance_id": "i-021bd29b48d609819",
+  "ec2_instance_type": "t2.small",
+  "ec2_local_hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+  "ec2_local_ipv4": "10.254.253.132",
+  "ec2_mac": "02:85:e9:60:90:d4",
+  "ec2_metrics_vhostmd": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_device_number": "0",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_interface_id": "eni-f53215b3",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_local_hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_local_ipv4s": "10.254.253.132",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_mac": "02:85:e9:60:90:d4",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_owner_id": "050287752177",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_security_group_ids": "sg-04863961",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_security_groups": "caf-ops-management",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_subnet_id": "subnet-076f1f62",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_subnet_ipv4_cidr_block": "10.254.253.128/26",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_vpc_id": "vpc-d660abb3",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_vpc_ipv4_cidr_block": "10.254.253.0/24",
+  "ec2_network_interfaces_macs_02:85:e9:60:90:d4_vpc_ipv4_cidr_blocks": "10.254.253.0/24",
+  "ec2_placement_availability_zone": "us-gov-west-1a",
+  "ec2_profile": "default-hvm",
+  "ec2_public_keys_0_openssh_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDqlxaiYiVRFtC4eDVw7ilzMR8eo6B/b6JWv8xqjGzAn1wbGsca0v6RkyozigNF+lupZ4Li405NzYWPRWvNLVrqcQPmmlSDaX03RA9RtDuDOB1c0KHH7yMzXM509UYQIK8HEx5rmOs+0be5+/psDIeUw8hxOpyZVUC3QM+B/B7AyQXR8G1G047Zne6dHJ3qcuhkrafm68J35lGoD1ygkn+FsM6E2H17oyTdj5Rr/4VuyE0L3CBnkZaRMXnUUpSXPhnnsavg4HkUIUKJtMfitkQtUD2/TnXgcJrw2qXywaJ2FBq3q87Hl1dSozSmL3gsJ1dCySDVQBoljdwFJ71VdwfJ caf-doj-bob",
+  "ec2_reservation_id": "r-0959aaa272a6f36e3",
+  "ec2_security_groups": "caf-ops-management",
+  "ec2_services_domain": "amazonaws.com",
+  "ec2_services_partition": "aws-us-gov",
+  "facterversion": "2.3.0",
+  "processor0": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz",
+  "processorcount": 1,
+  "bios_vendor": "Xen",
+  "bios_version": "4.2.amazon",
+  "bios_release_date": "02/16/2017",
+  "manufacturer": "Xen",
+  "productname": "HVM domU",
+  "serialnumber": "ec209762-def6-9b34-bb6f-eba5e5ee4c56",
+  "uuid": "EC209762-DEF6-9B34-BB6F-EBA5E5EE4C56",
+  "type": "Other",
+  "rubyplatform": "x86_64-linux",
+  "osfamily": "RedHat",
+  "timezone": "UTC",
+  "filesystems": "ext3,ext4",
+  "network_eth0": "10.254.253.128",
+  "network_lo": "127.0.0.0",
+  "hardwareisa": "x86_64",
+  "uptime_seconds": 9567,
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAIzzXVJ969js6E3t0Mn/DRSM7fe5a/XRBBwM9fwkVOywQI3lwp6slu1VzVy0OxdtynCbY5GLnf5m3hftmrdoWjHRzIwpfeEx9Nx1Al/k1/ObRKtMrXOrGfmb5kqJjhchtObSVyNe8P/A1YHoelC8p7DLltjEzmE6hTdjh/hAtDU9AAAAFQD92+2vIWrEDG1MOwoqMLbILhcx7wAAAIB2+c/2bEeJbXYCrmKBbOgTP0hVC1IXot77jYJMkCkj7+pNpBSOENmZ3pDjtmq4G9aN8xmT0W+mDQWT6sn+6FfwPl15CElazyELu3XxjjamQN1GkayaIq7SImPwg2bePxAoL2Nc6pehjzZ12zgsqaoZ+LpJyLqg/37Q59LeBu+30gAAAIEAhKPPVndjaLrwlMJwic6micb06ehZO1dEVE2HJDQntLVdlEWJTfcZWZLiucuTj+D9CHj8icHBHG3ss8mi39TAKbRKHcpxQU5V4/TZCB28EiLd6RYn+GvjL55a3u5snqUQ/b7NbLH8XRkFuiodVNJlcehrfpp8fWBDfgGhCta2U7M=",
+  "sshfp_dsa": "SSHFP 2 1 c43bf10c9a439eeb15ec22474d75f0af56ffcba7\nSSHFP 2 2 b63472dd58bccbd6bb40e55902f70418d432df98657476080a56b80062cffdbe",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDWqjpmmtqmYXEp6D1G9JM3tSP1lrjc2yBGE3DSvMRWtfeLaE8J2vRKhPmspicJF44SflWlA5RUPjhtKxBzhqrm3BtfIrGKfUKve0UYNm+ELKhpNy4m6Mc6yw43KDw/04i1kQaeHxLUP76OYvh//gfEdpcMYnGJF2pR/lol6N9ZN6tJXhw3gTuZdmI61qJodTBmrAJ1sikzdwBYzVmKELje3K/R+LE/RvB5o1C5sTDXLHXjOauCxZrFWwlokwupe802TueGxY3bOe27aCb3MSdXwb+Rx1Qx659NVD5VQyoCXgGVYa6IVULyw1sH8TBB9GwW7HZFGTo0JV9qQHpTl4Y5",
+  "sshfp_rsa": "SSHFP 1 1 4def1ffa75235b7e5c95c0db75373ac3d4f4378c\nSSHFP 1 2 b8fb14b70b8407b5fef32f56cd8fe20daa7da5061ccb3266a4d168345474dcbc",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIAZqAKBTo1r+WXrWbBeFmbXaEaKWC+m20zRnBWLKflebi8fjUP2g9HMUCuh1021Yam+SKjzmm0Butv2KE4unyQ=",
+  "sshfp_ecdsa": "SSHFP 3 1 f366cf43a2f9abc44509ff0edd8c7cb801cd53c4\nSSHFP 3 2 ea130fb2ce0f4c8131336e04ded6c4497a9d24a169db1e92a3f969a5f749e2d8",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIGvxvqngzqP1jXfmQCf/xgjQp/oNUjGsuKX2/Mra4isy",
+  "sshfp_ed25519": "SSHFP 4 1 f6b9e74d6de41081ebe75e867990a76b85c6d107\nSSHFP 4 2 4a10c3e11ef7d31c7bb24fe0f171347c52374f9803e1ca0ed787e67a01db32f6",
+  "rubyversion": "2.1.9",
+  "path": "/home/bob_ops/facterdb/facts/vendor/bundler/ruby/2.1.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/aws/bin",
+  "memorysize": "1.95 GB",
+  "memoryfree": "1.27 GB",
+  "swapsize": "0.00 MB",
+  "swapfree": "0.00 MB",
+  "swapsize_mb": "0.00",
+  "swapfree_mb": "0.00",
+  "memorysize_mb": "2001.53",
+  "memoryfree_mb": "1304.94",
+  "hostname": "ip-10-254-253-132",
+  "ps": "ps -ef",
+  "uptime_days": 0,
+  "operatingsystemrelease": "2017.03",
+  "ipaddress": "10.254.253.132",
+  "augeasversion": "1.4.0",
+  "kernelrelease": "4.9.27-14.33.amzn1.x86_64",
+  "puppetversion": "4.10.4",
+  "partitions": {
+    "xvda1": {
+      "uuid": "d99f5b93-1427-4ad7-881e-aa4a6fc8721b",
+      "size": "16773087",
+      "mount": "/",
+      "filesystem": "ext4"
+    }
+  },
+  "blockdevice_xvda_size": 8589934592,
+  "blockdevices": "xvda",
+  "uniqueid": "fe0a84fd",
+  "gid": "root",
+  "physicalprocessorcount": 1,
+  "netmask": "255.255.255.192",
+  "selinux": false,
+  "system_uptime": {
+    "seconds": 9567,
+    "hours": 2,
+    "days": 0,
+    "uptime": "2:39 hours"
+  },
+  "kernelversion": "4.9.27",
+  "kernelmajversion": "4.9"
+}
