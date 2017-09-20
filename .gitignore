@@ -1,3 +1,4 @@
+*cloudimg-console.log
 .bundle/
 Gemfile.lock
 coverage/
@@ -6,3 +7,4 @@ coverage/
 vendor/
 packer_cache/
 *.box
+*.sw?
