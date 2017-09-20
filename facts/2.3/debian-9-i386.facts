@@ -11,8 +11,9 @@
     "name": "Debian",
     "family": "Debian",
     "release": {
-      "major": "stretch/sid",
-      "full": "stretch/sid"
+      "major": "9",
+      "minor": "1",
+      "full": "9.1"
     },
     "lsb": {
       "distcodename": "stretch",
@@ -25,7 +26,7 @@
   },
   "uptime_days": 0,
   "uniqueid": "200ac67e",
-  "operatingsystemrelease": "stretch/sid",
+  "operatingsystemrelease": "9.1",
   "rubyversion": "2.3.3",
   "timezone": "PDT",
   "hardwareisa": "unknown",
@@ -132,5 +133,5 @@
   "rubysitedir": "/usr/local/lib/site_ruby/2.3.0",
   "uptime_seconds": 48489,
   "lsbdistdescription": "Debian GNU/Linux 9.1 (stretch)",
-  "operatingsystemmajrelease": "stretch/sid"
+  "operatingsystemmajrelease": "9"
 }

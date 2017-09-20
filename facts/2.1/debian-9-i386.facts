@@ -8,7 +8,7 @@
   "kernel": "Linux",
   "uptime_days": 0,
   "uniqueid": "200ac67e",
-  "operatingsystemrelease": "stretch/sid",
+  "operatingsystemrelease": "9.1",
   "rubyversion": "2.3.3",
   "timezone": "PDT",
   "hardwareisa": "unknown",
@@ -99,5 +99,5 @@
   "rubysitedir": "/usr/local/lib/site_ruby/2.3.0",
   "uptime_seconds": 48508,
   "lsbdistdescription": "Debian GNU/Linux 9.1 (stretch)",
-  "operatingsystemmajrelease": "stretch/sid"
+  "operatingsystemmajrelease": "9"
 }
