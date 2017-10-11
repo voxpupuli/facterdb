@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
@@ -15,6 +15,8 @@ elif test -f /usr/bin/dnf; then
 elif test -f /usr/bin/yum; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f4 | cut -c1)
   osfamily='RedHat'
+else
+  osfamily=$(uname)
 fi
 
 case "${osfamily}" in
@@ -58,6 +60,13 @@ case "${osfamily}" in
   done
   apt-get install -y make gcc libgmp-dev
   ;;
+'FreeBSD')
+  pkg update
+  pkg install -y sysutils/puppet5 sysutils/facter
+  output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+  mkdir -p $(dirname ${output_file})
+  [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+  ;;
 esac
 
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
@@ -71,7 +80,7 @@ PATH=/opt/puppetlabs/puppet/bin:$PATH
 gem install bundler --no-ri --no-rdoc --no-format-executable
 bundle install --path vendor/bundler
 
-for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0; do
+for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   case "${operatingsystem}" in
     openbsd)
