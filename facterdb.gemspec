@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rake'
+  s.add_development_dependency 'pry'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'github_changelog_generator', '~> 1.10', '< 1.10.4'
   s.add_runtime_dependency 'json' if RUBY_VERSION =~ /^1\.8/

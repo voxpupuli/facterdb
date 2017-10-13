@@ -54,7 +54,7 @@ require 'facterdb'
 FacterDB::get_facts('osfamily=Debian')
 ```
 
-# Facter versions supported
+## Facter versions supported
 
 * 1.6
 * 1.7
@@ -72,7 +72,7 @@ FacterDB::get_facts('osfamily=Debian')
 * 3.7
 * 3.8
 
-# Operating Systems supported
+## Operating Systems supported
 
 * AIX
 * ArchLinux
@@ -118,7 +118,7 @@ FacterDB::get_facts('osfamily=Debian')
 * Windows 2012 r2
 * Windows 7
 
-# Add new Operating System support
+## Add new Operating System support
 
 There is `Vagrantfile` to automagically populate `facts` directory by spawning a new VM and launches a provisioning scripts.
 
@@ -138,4 +138,56 @@ Create RedHat, Scientific, OracleLinux facts from CentOS's ones
 for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/RedHat/' > $(echo $file | sed 's/centos/redhat/'); done
 for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/Scientific/' > $(echo $file | sed 's/centos/scientific/'); done
 for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/OracleLinux/' > $(echo $file | sed 's/centos/oraclelinux/'); done
+```
+
+## Supplying custom external facts
+The default facts are great for many things but there will be times when you need to have facterdb search custom
+fact sets that only make sense in your environment or might contain sensitive information.
+
+This can be useful when combined with [rspec_puppet_facts](https://github.com/mcanevet/rspec-puppet-facts) or the [puppet-debugger](https://github.com/nwops/puppet-debugger) which both use this gem.  
+
+To supply external facts to facterdb just set the `FACTERDB_SEARCH_PATHS` environment variable with one or more
+paths to your facts.  Do this any time facterdb is used directly or indirectly.
+
+When separating paths please use the default path separator character supported by your OS.  
+* Unix/Linux/OSX = `:` 
+* Windows = `;`
+
+Each fact set you create must meet the following requirements:
+1. A JSON serialized file containing a single Hash of all the facts.
+2. The facts file must end in `.facts`
+3. Must be placed inside some directory.  You can organize this directory however you like.
+
+Facterdb is smart enough the search your supplied directories for files ending with '.facts'.  You can even supply
+multiple directories.
+
+Example:
+
+`FACTERDB_SEARCH_PATHS="/var/opt/lib/custom_facts"`
+
+or
+
+`FACTERDB_SEARCH_PATHS="/var/opt/lib/custom_facts:/tmp/custom_facts:/home/user1/custom_facts"`
+
+We still highly encourage you to create pull requests with new fact sets over of using external facts.
+
+You can create these files via many methods.
+
+* `puppet facts | jq '.values' > /tmp/custom_facts/datacenter_a/2.4/os_x.facts`  # must have jq command
+* Via puppetdb queries
+* hand crafted
+
+
+Additionally you can skip the default FacterDB facts completely by setting the environment variable `FACTERDB_SKIP_DEFAULTDB`.
+This will instruct facterdb to not look at its built-in facts which can be useful should you need to completely replace which facts are used.
+
+
+Setting the variable `FACTERDB_SKIP_DEFAULTDB` to anything will disable the internal facts used by facterdb.  You would most likely use this in combination
+with the `FACTERDB_SEARCH_PATHS` environment variable.
+
+Example:
+
+```
+FACTERDB_SEARCH_PATHS="/var/opt/lib/custom_facts:/tmp/custom_facts:/home/user1/custom_facts"
+FACTERDB_SKIP_DEFAULTDB='yes'
 ```
