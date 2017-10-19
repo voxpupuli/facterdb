@@ -165,6 +165,31 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "opensuse-13.2-x86_64" do |host|
+    host.vm.box = "opensuse/openSUSE-13.2-x86_64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+  end
+  config.vm.define "opensuse-42.1-x86_64" do |host|
+    host.vm.box = "opensuse/openSUSE-42.1-x86_64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+  end
+  config.vm.define "opensuse-42.2-x86_64" do |host|
+    host.vm.box = "opensuse/openSUSE-42.2-x86_64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+  end
+  config.vm.define "opensuse-42.3-x86_64" do |host|
+    host.vm.box = "opensuse/openSUSE-42.3-x86_64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+  end
+  config.vm.define "opensuse-Tumbleweed-x86_64" do |host|
+    host.vm.box = "opensuse/openSUSE-Tumbleweed-x86_64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+  end
   config.vm.define "freebsd-11-x86_64" do |host|
     host.vm.box = "bento/freebsd-11.1"
     host.ssh.shell = '/bin/sh'

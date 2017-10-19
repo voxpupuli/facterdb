@@ -2,7 +2,11 @@
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
-if test -f /usr/bin/apt-get; then
+if test -f /usr/bin/zypper; then
+  zypper --non-interactive --gpg-auto-import-keys refresh
+  zypper --non-interactive install ruby-devel
+  osfamily='Suse'
+elif test -f /usr/bin/apt-get; then
   apt-get update
   apt-get install -y lsb-release
   lsbdistcodename=$(lsb_release -sc)
@@ -66,6 +70,27 @@ case "${osfamily}" in
   output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+  ;;
+'Suse')
+  if [[ `cat /etc/os-release |grep -e '^VERSION="42' -c` == 1  ]]; then
+    # This is Leap which is based on SLES 12
+    rpm -Uvh https://yum.puppet.com/puppetlabs-release-pc1-sles-12.noarch.rpm
+    zypper --gpg-auto-import-keys --non-interactive refresh
+    for puppet_agent_version in 1.6.2 1.7.2 1.8.3 1.9.3 1.10.8; do
+      zypper --non-interactive install puppet-agent-${puppet_agent_version}
+      output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      mkdir -p $(dirname ${output_file})
+      facter --show-legacy -p -j | tee ${output_file}
+    done
+    zypper --non-interactive remove puppetlabs-release-pc1
+    rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-sles-12.noarch.rpm
+    for puppet_agent_version in 5.0.1 5.1.0 5.2.0 5.3.2; do
+      zypper --non-interactive install puppet-agent-${puppet_agent_version}
+      output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      mkdir -p $(dirname ${output_file})
+      facter --show-legacy -p -j | tee ${output_file}
+    done
+  fi
   ;;
 esac
 
