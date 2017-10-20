@@ -1,35 +1,67 @@
 {
   "agent_specified_environment": "production",
   "aio_agent_version": "1.10.4",
+  "architecture": "x64",
+  "dhcp_servers": {
+    "Ethernet0": "10.32.22.10",
+    "system": "10.32.22.10"
+  },
   "dmi": {
     "manufacturer": "VMware, Inc.",
     "product": {
       "name": "VMware7,1",
-      "serial_number": "VMware-42 22 b9 12 ec 3b 6e ab-61 61 29 cf f4 72 99 c3"
+      "serial_number": "VMware-42 22 81 a5 92 87 74 16-44 f1 22 ae f4 e7 d3 e1"
     }
   },
+  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "3.6.5",
+  "fqdn": "foo.example.com",
+  "hardwareisa": "x64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "id": "V46YN43Q8ZY3NYG\\Administrator",
   "identity": {
     "privileged": true,
-    "user": "PQX8SDC5TGXO8LI\\Administrator"
+    "user": "V46YN43Q8ZY3NYG\\Administrator"
   },
+  "interfaces": "Ethernet0",
+  "ipaddress": "10.32.112.130",
+  "ipaddress6": "fe80::e110:a74a:480:4409%4",
+  "ipaddress6_Ethernet0": "fe80::e110:a74a:480:4409%4",
+  "ipaddress_Ethernet0": "10.32.112.130",
   "is_virtual": true,
   "kernel": "windows",
   "kernelmajversion": "10.0",
   "kernelrelease": "10.0.14393",
   "kernelversion": "10.0.14393",
+  "macaddress": "00:50:56:A2:BB:13",
+  "macaddress_Ethernet0": "00:50:56:A2:BB:13",
+  "manufacturer": "VMware, Inc.",
   "memory": {
     "system": {
-      "available": "2.69 GiB",
-      "available_bytes": 2886901760,
-      "capacity": "32.77%",
+      "available": "2.64 GiB",
+      "available_bytes": 2839240704,
+      "capacity": "33.88%",
       "total": "4.00 GiB",
       "total_bytes": 4294057984,
-      "used": "1.31 GiB",
-      "used_bytes": 1407156224
+      "used": "1.35 GiB",
+      "used_bytes": 1454817280
     }
   },
+  "memoryfree": "2.64 GiB",
+  "memoryfree_mb": 2707.7109375,
+  "memorysize": "4.00 GiB",
+  "memorysize_mb": 4095.1328125,
+  "mtu_Ethernet0": 1500,
+  "netmask": "255.255.240.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_Ethernet0": "ffff:ffff:ffff:ffff::",
+  "netmask_Ethernet0": "255.255.240.0",
+  "network": "10.32.112.0",
+  "network6": "fe80::%4",
+  "network6_Ethernet0": "fe80::%4",
+  "network_Ethernet0": "10.32.112.0",
   "networking": {
     "dhcp": "10.32.22.10",
     "domain": "example.com",
@@ -39,39 +71,42 @@
       "Ethernet0": {
         "bindings": [
           {
-            "address": "10.32.113.158",
+            "address": "10.32.112.130",
             "netmask": "255.255.240.0",
             "network": "10.32.112.0"
           }
         ],
         "bindings6": [
           {
-            "address": "fe80::753c:44f6:3bb1:cb0c%2",
+            "address": "fe80::e110:a74a:480:4409%4",
             "netmask": "ffff:ffff:ffff:ffff::",
-            "network": "fe80::%2"
+            "network": "fe80::%4"
           }
         ],
         "dhcp": "10.32.22.10",
-        "ip": "10.32.113.158",
-        "ip6": "fe80::753c:44f6:3bb1:cb0c%2",
-        "mac": "00:50:56:A2:B1:5B",
+        "ip": "10.32.112.130",
+        "ip6": "fe80::e110:a74a:480:4409%4",
+        "mac": "00:50:56:A2:BB:13",
         "mtu": 1500,
         "netmask": "255.255.240.0",
         "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.32.112.0",
-        "network6": "fe80::%2"
+        "network6": "fe80::%4"
       }
     },
-    "ip": "10.32.113.158",
-    "ip6": "fe80::753c:44f6:3bb1:cb0c%2",
-    "mac": "00:50:56:A2:B1:5B",
+    "ip": "10.32.112.130",
+    "ip6": "fe80::e110:a74a:480:4409%4",
+    "mac": "00:50:56:A2:BB:13",
     "mtu": 1500,
     "netmask": "255.255.240.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.32.112.0",
-    "network6": "fe80::%2",
+    "network6": "fe80::%4",
     "primary": "Ethernet0"
   },
+  "operatingsystem": "windows",
+  "operatingsystemmajrelease": "10",
+  "operatingsystemrelease": "10",
   "os": {
     "architecture": "x64",
     "family": "windows",
@@ -85,31 +120,43 @@
       "system32": "C:\\Windows\\system32"
     }
   },
-  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\facter\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\hiera\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\mcollective\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\tools\\bin;C:\\cygwin64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\Packer\\SysInternals;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Administrator\\AppData\\Roaming\\Boxstarter",
+  "osfamily": "windows",
+  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\facter\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\hiera\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\mcollective\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\tools\\bin;C:\\cygwin64\\bin;C:\\ProgramData\\Boxstarter;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\Packer\\SysInternals;C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps",
+  "physicalprocessorcount": 2,
+  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "x64",
     "models": [
-      "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz",
-      "Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz"
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz"
     ],
     "physicalcount": 2
   },
+  "productname": "VMware7,1",
   "puppetversion": "4.10.4",
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
     "version": "2.1.9"
   },
+  "rubyplatform": "x64-mingw32",
+  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
+  "rubyversion": "2.1.9",
+  "serialnumber": "VMware-42 22 81 a5 92 87 74 16-44 f1 22 ae f4 e7 d3 e1",
+  "system32": "C:\\Windows\\system32",
   "system_uptime": {
     "days": 0,
-    "hours": 15,
-    "seconds": 57509,
-    "uptime": "15:58 hours"
+    "hours": 6,
+    "seconds": 22954,
+    "uptime": "6:22 hours"
   },
   "timezone": "Coordinated Universal Time",
-  "virtual": "vmware",
-  "domain": "example.com",
-  "hostname": "foo",
-  "fqdn": "foo.example.com"
+  "uptime": "6:22 hours",
+  "uptime_days": 0,
+  "uptime_hours": 6,
+  "uptime_seconds": 22954,
+  "virtual": "vmware"
 }

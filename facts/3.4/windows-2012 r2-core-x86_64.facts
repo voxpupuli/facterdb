@@ -1,60 +1,92 @@
 {
   "agent_specified_environment": "production",
   "aio_agent_version": "1.7.2",
+  "architecture": "x64",
+  "dhcp_servers": {
+    "Ethernet0": "10.32.22.10",
+    "system": "10.32.22.10"
+  },
   "dmi": {
-    "manufacturer": "Phoenix Technologies LTD",
+    "manufacturer": "VMware, Inc.",
     "product": {
-      "name": "VMware Virtual Platform",
-      "serial_number": "VMware-42 22 91 42 5a d1 7a 50-73 d9 8a 73 2a ba e5 d9"
+      "name": "VMware7,1",
+      "serial_number": "VMware-42 22 39 4c 25 b1 0c 61-6c 43 06 31 15 f9 d3 79"
     }
   },
+  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "3.4.2",
+  "fqdn": "foo.example.com",
+  "hardwareisa": "x64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "id": "G0ZBZXENEIL32X5\\Administrator",
   "identity": {
     "privileged": true,
-    "user": "GHWYJ7383D7T8XY\\cyg_server"
+    "user": "G0ZBZXENEIL32X5\\Administrator"
   },
+  "interfaces": "Ethernet0",
+  "ipaddress": "10.32.117.89",
+  "ipaddress6": "fe80::71c4:5555:d38:94fa%12",
+  "ipaddress6_Ethernet0": "fe80::71c4:5555:d38:94fa%12",
+  "ipaddress_Ethernet0": "10.32.117.89",
   "is_virtual": true,
   "kernel": "windows",
   "kernelmajversion": "6.3",
   "kernelrelease": "6.3.9600",
   "kernelversion": "6.3.9600",
+  "macaddress": "00:50:56:A2:72:05",
+  "macaddress_Ethernet0": "00:50:56:A2:72:05",
+  "manufacturer": "VMware, Inc.",
   "memory": {
     "system": {
-      "available": "3.03 GiB",
-      "available_bytes": 3251859456,
-      "capacity": "24.28%",
-      "total": "4.00 GiB",
-      "total_bytes": 4294496256,
-      "used": "994.34 MiB",
-      "used_bytes": 1042636800
+      "available": "5.30 GiB",
+      "available_bytes": 5693304832,
+      "capacity": "11.62%",
+      "total": "6.00 GiB",
+      "total_bytes": 6441549824,
+      "used": "713.58 MiB",
+      "used_bytes": 748244992
     }
   },
+  "memoryfree": "5.30 GiB",
+  "memoryfree_mb": 5429.55859375,
+  "memorysize": "6.00 GiB",
+  "memorysize_mb": 6143.140625,
+  "mtu_Ethernet0": 1500,
+  "netmask": "255.255.240.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_Ethernet0": "ffff:ffff:ffff:ffff::",
+  "netmask_Ethernet0": "255.255.240.0",
+  "network": "10.32.112.0",
+  "network6": "fe80::%12",
+  "network6_Ethernet0": "fe80::%12",
+  "network_Ethernet0": "10.32.112.0",
   "networking": {
     "dhcp": "10.32.22.10",
     "domain": "example.com",
     "fqdn": "foo.example.com",
     "hostname": "foo",
     "interfaces": {
-      "Ethernet": {
+      "Ethernet0": {
         "bindings": [
           {
-            "address": "10.32.114.127",
+            "address": "10.32.117.89",
             "netmask": "255.255.240.0",
             "network": "10.32.112.0"
           }
         ],
         "bindings6": [
           {
-            "address": "fe80::fd0d:3323:1bb4:680d%12",
+            "address": "fe80::71c4:5555:d38:94fa%12",
             "netmask": "ffff:ffff:ffff:ffff::",
             "network": "fe80::%12"
           }
         ],
         "dhcp": "10.32.22.10",
-        "ip": "10.32.114.127",
-        "ip6": "fe80::fd0d:3323:1bb4:680d%12",
-        "mac": "00:50:56:A2:34:6A",
+        "ip": "10.32.117.89",
+        "ip6": "fe80::71c4:5555:d38:94fa%12",
+        "mac": "00:50:56:A2:72:05",
         "mtu": 1500,
         "netmask": "255.255.240.0",
         "netmask6": "ffff:ffff:ffff:ffff::",
@@ -62,16 +94,19 @@
         "network6": "fe80::%12"
       }
     },
-    "ip": "10.32.114.127",
-    "ip6": "fe80::fd0d:3323:1bb4:680d%12",
-    "mac": "00:50:56:A2:34:6A",
+    "ip": "10.32.117.89",
+    "ip6": "fe80::71c4:5555:d38:94fa%12",
+    "mac": "00:50:56:A2:72:05",
     "mtu": 1500,
     "netmask": "255.255.240.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.32.112.0",
     "network6": "fe80::%12",
-    "primary": "Ethernet"
+    "primary": "Ethernet0"
   },
+  "operatingsystem": "windows",
+  "operatingsystemmajrelease": "2012 R2",
+  "operatingsystemrelease": "2012 R2",
   "os": {
     "architecture": "x64",
     "family": "windows",
@@ -85,7 +120,12 @@
       "system32": "C:\\Windows\\system32"
     }
   },
-  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\facter\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\hiera\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\mcollective\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\tools\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\pstools;C:\\cygwin64\\bin",
+  "osfamily": "windows",
+  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\facter\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\hiera\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\mcollective\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\ruby\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\sys\\tools\\bin;C:\\cygwin64\\bin;C:\\ProgramData\\Boxstarter;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Program Files\\Git\\cmd;C:\\Packer\\SysInternals",
+  "physicalprocessorcount": 2,
+  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
+  "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "x64",
@@ -95,21 +135,28 @@
     ],
     "physicalcount": 2
   },
+  "productname": "VMware7,1",
   "puppetversion": "4.7.1",
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
     "version": "2.1.9"
   },
+  "rubyplatform": "x64-mingw32",
+  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/sys/ruby/lib/ruby/site_ruby/2.1.0",
+  "rubyversion": "2.1.9",
+  "serialnumber": "VMware-42 22 39 4c 25 b1 0c 61-6c 43 06 31 15 f9 d3 79",
+  "system32": "C:\\Windows\\system32",
   "system_uptime": {
-    "days": 0,
-    "hours": 11,
-    "seconds": 41531,
-    "uptime": "11:32 hours"
+    "days": 1,
+    "hours": 24,
+    "seconds": 86906,
+    "uptime": "1 day"
   },
-  "timezone": "Pacific Daylight Time",
-  "virtual": "vmware",
-  "hostname": "foo",
-  "domain": "example.com",
-  "fqdn": "foo.example.com"
+  "timezone": "Coordinated Universal Time",
+  "uptime": "1 day",
+  "uptime_days": 1,
+  "uptime_hours": 24,
+  "uptime_seconds": 86906,
+  "virtual": "vmware"
 }
