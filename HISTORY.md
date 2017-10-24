@@ -1,26 +1,3 @@
-# Change Log
-
-## [0.4.0](https://rubygems.org/gems/facterdb/versions/0.4.0) (2017-10-24)
-
-[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.12...0.4.0)
-
-**Implemented enhancements:**
-
-- Allow loading of external fact hashes [\#62](https://github.com/camptocamp/facterdb/pull/62) ([logicminds](https://github.com/logicminds))
-- Improve FreeBSD Support [\#60](https://github.com/camptocamp/facterdb/pull/60) ([xaque208](https://github.com/xaque208))
-- Add facts for Amazon Linux 2017.03 [\#56](https://github.com/camptocamp/facterdb/pull/56) ([pillarsdotnet](https://github.com/pillarsdotnet))
-- Add missing facts for Fedora 20, 21, and 26 [\#50](https://github.com/camptocamp/facterdb/pull/50) ([blackknight36](https://github.com/blackknight36))
-- Facter 3.8 fact sets [\#48](https://github.com/camptocamp/facterdb/pull/48) ([rodjek](https://github.com/rodjek))
-
-**Fixed bugs:**
-
-- Update Windows Facter 3.x sets with legacy facts [\#64](https://github.com/camptocamp/facterdb/pull/64) ([rodjek](https://github.com/rodjek))
-- fix facter 2.x facts for Debian 9 [\#52](https://github.com/camptocamp/facterdb/pull/52) ([mmoll](https://github.com/mmoll))
-
-## [0.3.12](https://rubygems.org/gems/facterdb/versions/0.3.12) (2017-07-27)
-
-[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.11...0.3.12)
-
 **Implemented enhancements:**
 
 - Backfill missing 2.x and 3.x facts for supported operating systems [\#46](https://github.com/camptocamp/facterdb/pulls/46)
