@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Release prep for 0.4.0 [\#66](https://github.com/camptocamp/facterdb/pull/66) ([DavidS](https://github.com/DavidS))
 - Allow loading of external fact hashes [\#62](https://github.com/camptocamp/facterdb/pull/62) ([logicminds](https://github.com/logicminds))
 - Improve FreeBSD Support [\#60](https://github.com/camptocamp/facterdb/pull/60) ([xaque208](https://github.com/xaque208))
 - Add facts for Amazon Linux 2017.03 [\#56](https://github.com/camptocamp/facterdb/pull/56) ([pillarsdotnet](https://github.com/pillarsdotnet))
