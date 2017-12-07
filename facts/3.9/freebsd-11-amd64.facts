@@ -1,0 +1,460 @@
+{
+  "architecture": "amd64",
+  "augeas": {
+    "version": "1.8.1"
+  },
+  "augeasversion": "1.8.1",
+  "bios_release_date": "12/01/2006",
+  "bios_vendor": "innotek GmbH",
+  "bios_version": "VirtualBox",
+  "dhcp_servers": {
+    "em0": "10.0.2.2",
+    "system": "10.0.2.2"
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "6f9e5af9-3439-4f09-a5d2-6c732d9158c2"
+    }
+  },
+  "domain": "example.com",
+  "facterversion": "3.9.0",
+  "filesystems": "devfs,nfs,zfs",
+  "fqdn": "foo.example.com",
+  "gid": "wheel",
+  "hardwareisa": "amd64",
+  "hardwaremodel": "amd64",
+  "hostname": "foo",
+  "id": "root",
+  "identity": {
+    "gid": 0,
+    "group": "wheel",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "interfaces": "em0,em1,lo0",
+  "ipaddress": "10.0.2.15",
+  "ipaddress6_lo0": "::1",
+  "ipaddress_em0": "10.0.2.15",
+  "ipaddress_em1": "10.0.0.2",
+  "ipaddress_lo0": "127.0.0.1",
+  "is_virtual": true,
+  "kernel": "FreeBSD",
+  "kernelmajversion": "11",
+  "kernelrelease": "11.1-RELEASE-p1",
+  "kernelversion": "11.1",
+  "load_averages": {
+    "15m": 0.19580078125,
+    "1m": 0.6552734375,
+    "5m": 0.4423828125
+  },
+  "macaddress": "08:00:27:77:98:01",
+  "macaddress_em0": "08:00:27:77:98:01",
+  "macaddress_em1": "08:00:27:0a:b5:b6",
+  "manufacturer": "innotek GmbH",
+  "memory": {
+    "swap": {
+      "available": "2.00 GiB",
+      "available_bytes": 2147483648,
+      "capacity": "0%",
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "576.86 MiB",
+      "available_bytes": 604884992,
+      "capacity": "41.65%",
+      "total": "988.62 MiB",
+      "total_bytes": 1036644352,
+      "used": "411.76 MiB",
+      "used_bytes": 431759360
+    }
+  },
+  "memoryfree": "576.86 MiB",
+  "memoryfree_mb": 576.86328125,
+  "memorysize": "988.62 MiB",
+  "memorysize_mb": 988.62109375,
+  "mountpoints": {
+    "/": {
+      "available": "35.83 GiB",
+      "available_bytes": 38469992448,
+      "capacity": "2.01%",
+      "device": "zroot/ROOT/default",
+      "filesystem": "zfs",
+      "options": [
+        "local",
+        "root",
+        "noatime"
+      ],
+      "size": "36.56 GiB",
+      "size_bytes": 39259234304,
+      "used": "752.68 MiB",
+      "used_bytes": 789241856
+    },
+    "/dev": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+        "local"
+      ],
+      "size": "1.00 KiB",
+      "size_bytes": 1024,
+      "used": "1.00 KiB",
+      "used_bytes": 1024
+    },
+    "/tmp": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762942464,
+      "capacity": "0.00%",
+      "device": "zroot/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763044864,
+      "used": "100.00 KiB",
+      "used_bytes": 102400
+    },
+    "/usr/home": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/usr/home",
+      "filesystem": "zfs",
+      "options": [
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763040768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/usr/ports": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/usr/ports",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763040768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/usr/src": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/usr/src",
+      "filesystem": "zfs",
+      "options": [
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763048960,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/vagrant": {
+      "available": "74.71 GiB",
+      "available_bytes": 80216932352,
+      "capacity": "67.89%",
+      "device": "10.0.0.1:/Users/john.bond/git/facterdb/facts",
+      "filesystem": "nfs",
+      "size": "232.64 GiB",
+      "size_bytes": 249795969024,
+      "used": "157.93 GiB",
+      "used_bytes": 169579036672
+    },
+    "/var/audit": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/var/audit",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763040768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/var/crash": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/var/crash",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763040768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/var/log": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/var/log",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763069440,
+      "used": "116.00 KiB",
+      "used_bytes": 118784
+    },
+    "/var/mail": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot/var/mail",
+      "filesystem": "zfs",
+      "options": [
+        "local"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763040768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/var/tmp": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762954752,
+      "capacity": "0.00%",
+      "device": "zroot/var/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763044864,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/zroot": {
+      "available": "36.10 GiB",
+      "available_bytes": 38762950656,
+      "capacity": "0.00%",
+      "device": "zroot",
+      "filesystem": "zfs",
+      "options": [
+        "local",
+        "noatime"
+      ],
+      "size": "36.10 GiB",
+      "size_bytes": 38763040768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    }
+  },
+  "mtu_em0": 1500,
+  "mtu_em1": 1500,
+  "mtu_lo0": 16384,
+  "netmask": "255.255.255.0",
+  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask_em0": "255.255.255.0",
+  "netmask_em1": "255.255.255.0",
+  "netmask_lo0": "255.0.0.0",
+  "network": "10.0.2.0",
+  "network6_lo0": "::1",
+  "network_em0": "10.0.2.0",
+  "network_em1": "10.0.0.0",
+  "network_lo0": "127.0.0.0",
+  "networking": {
+    "dhcp": "10.0.2.2",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "em0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "dhcp": "10.0.2.2",
+        "ip": "10.0.2.15",
+        "mac": "08:00:27:77:98:01",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.2.0"
+      },
+      "em1": {
+        "bindings": [
+          {
+            "address": "10.0.0.2",
+            "netmask": "255.255.255.0",
+            "network": "10.0.0.0"
+          }
+        ],
+        "ip": "10.0.0.2",
+        "mac": "08:00:27:0a:b5:b6",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.0.0"
+      },
+      "lo0": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          },
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16384,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      }
+    },
+    "ip": "10.0.2.15",
+    "mac": "08:00:27:77:98:01",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.0.2.0",
+    "primary": "em0"
+  },
+  "operatingsystem": "FreeBSD",
+  "operatingsystemmajrelease": "11",
+  "operatingsystemrelease": "11.1-RELEASE-p1",
+  "os": {
+    "architecture": "amd64",
+    "family": "FreeBSD",
+    "hardware": "amd64",
+    "name": "FreeBSD",
+    "release": {
+      "full": "11.1-RELEASE-p1",
+      "major": "11",
+      "minor": "1-RELEASE-p1"
+    }
+  },
+  "osfamily": "FreeBSD",
+  "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/home/vagrant/bin",
+  "processor0": "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz",
+  "processorcount": 1,
+  "processors": {
+    "count": 1,
+    "isa": "amd64",
+    "models": [
+      "Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz"
+    ],
+    "speed": "2.19 GHz"
+  },
+  "productname": "VirtualBox",
+  "puppetversion": "5.2.0",
+  "ruby": {
+    "platform": "amd64-freebsd11",
+    "sitedir": "/usr/local/lib/ruby/site_ruby/2.3",
+    "version": "2.3.5"
+  },
+  "rubyplatform": "amd64-freebsd11",
+  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.3",
+  "rubyversion": "2.3.5",
+  "serialnumber": "0",
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 cc7e518c25bf63f9e1963f17575b01ef4be07a5b",
+        "sha256": "SSHFP 3 2 20bb3cf46d28ccf6a35df78bbf584b367ed58122ed96e435f61832aaf98c2684"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLjri4QGwjcgZ0OCsZFMY2qytQ/2vdkiyzz5UpwZ1FlhNn3xq7jQaB+V0xRcLanJVWxJH3K3Ndu8L7aRe/F94H0="
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 6f02a4869da5809765241f7ad757b6c071fcdc9d",
+        "sha256": "SSHFP 4 2 df0cdaa608664da8afd43b6a347f60c69a47426482e6f41d69450c347f3e4853"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIAl/Vzh57cJCGgadqRlnGPagdD77kvef4KeffkcbOsye"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 ed1fce722d5f5c7cc90f8fa44768443e1a783fea",
+        "sha256": "SSHFP 1 2 201138a2abfd028f18c632a4fe076a60ce80e6e1162a4770900244bfb3043a1c"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC4723r4vOk9g0x2N4lu2eO3rkfJUjTLXuEKv8aYL3AB9sgJa2/qpIURmRdlcz8k6JpRH8yedyoYjpL70ghu0jVSK6wFQI4K45MlGF8icOg24mvd+M4/T86kKqU1O61a3PC6gTLA9the5D+Bod+VDqXBWpDZjQe2n1fy2b7f5TX50vdm9g5Aqz1EvXveqoxbcwP9iYk0vrF5eExb0/SGiinqHRlWO/0L/Y8YBMa8dyD2A0PyYA6CMKDqzw6gAfXiDEA7rsmKAIj9vQWC/Rx5DYNrSuP2dZjLjcfgDSQ7MCeNGGij0KUVT2831YO2SdUp8qRMGoCymbvPdEYUusgRNE1"
+    }
+  },
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLjri4QGwjcgZ0OCsZFMY2qytQ/2vdkiyzz5UpwZ1FlhNn3xq7jQaB+V0xRcLanJVWxJH3K3Ndu8L7aRe/F94H0=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIAl/Vzh57cJCGgadqRlnGPagdD77kvef4KeffkcbOsye",
+  "sshfp_ecdsa": "SSHFP 3 1 cc7e518c25bf63f9e1963f17575b01ef4be07a5b\nSSHFP 3 2 20bb3cf46d28ccf6a35df78bbf584b367ed58122ed96e435f61832aaf98c2684",
+  "sshfp_ed25519": "SSHFP 4 1 6f02a4869da5809765241f7ad757b6c071fcdc9d\nSSHFP 4 2 df0cdaa608664da8afd43b6a347f60c69a47426482e6f41d69450c347f3e4853",
+  "sshfp_rsa": "SSHFP 1 1 ed1fce722d5f5c7cc90f8fa44768443e1a783fea\nSSHFP 1 2 201138a2abfd028f18c632a4fe076a60ce80e6e1162a4770900244bfb3043a1c",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC4723r4vOk9g0x2N4lu2eO3rkfJUjTLXuEKv8aYL3AB9sgJa2/qpIURmRdlcz8k6JpRH8yedyoYjpL70ghu0jVSK6wFQI4K45MlGF8icOg24mvd+M4/T86kKqU1O61a3PC6gTLA9the5D+Bod+VDqXBWpDZjQe2n1fy2b7f5TX50vdm9g5Aqz1EvXveqoxbcwP9iYk0vrF5eExb0/SGiinqHRlWO/0L/Y8YBMa8dyD2A0PyYA6CMKDqzw6gAfXiDEA7rsmKAIj9vQWC/Rx5DYNrSuP2dZjLjcfgDSQ7MCeNGGij0KUVT2831YO2SdUp8qRMGoCymbvPdEYUusgRNE1",
+  "swapfree": "2.00 GiB",
+  "swapfree_mb": 2048.0,
+  "swapsize": "2.00 GiB",
+  "swapsize_mb": 2048.0,
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 194,
+    "uptime": "0:03 hours"
+  },
+  "timezone": "UTC",
+  "uptime": "0:03 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 194,
+  "uuid": "6f9e5af9-3439-4f09-a5d2-6c732d9158c2",
+  "virtual": "virtualbox",
+  "zfs_featurenumbers": "1,2,3,4,5",
+  "zfs_version": "5",
+  "zpool_featureflags": "async_destroy,empty_bpobj,lz4_compress,multi_vdev_crash_dump,spacemap_histogram,enabled_txg,hole_birth,extensible_dataset,embedded_data,bookmarks,filesystem_limits,large_blocks,sha512,skein",
+  "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+  "zpool_version": "5000"
+}
