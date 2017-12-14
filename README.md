@@ -191,3 +191,13 @@ Example:
 FACTERDB_SEARCH_PATHS="/var/opt/lib/custom_facts:/tmp/custom_facts:/home/user1/custom_facts"
 FACTERDB_SKIP_DEFAULTDB='yes'
 ```
+
+# Contributing
+
+Please submit issues at https://github.com/camptocamp/facterdb/issues or PRs in the same repository.
+
+## Release process
+
+* Update the version in `lib/facterdb/version.rb`
+* Run `rake changelog`
+* Commit and PR the results.
