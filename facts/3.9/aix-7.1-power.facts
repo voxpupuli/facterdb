@@ -1,0 +1,350 @@
+{
+  "aio_agent_version": "5.3.4",
+  "augeas": {
+    "version": "1.8.1"
+  },
+  "disks": {
+    "hdisk0": {
+      "size": "60.00 GiB",
+      "size_bytes": 64424509440
+    }
+  },
+  "facterversion": "3.9.4",
+  "filesystems": "ahafs,autofs,cachefs,cdrfs,cifs,jfs,jfs2,namefs,nfs,nfs3,nfs4,pmemfs,procfs,sfs,stnfs,udfs",
+  "identity": {
+    "gid": 0,
+    "group": "system",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "kernel": "AIX",
+  "kernelmajversion": "7100",
+  "kernelrelease": "7100-04-04-1717",
+  "kernelversion": "7100",
+  "memory": {
+    "swap": {
+      "available": "1.99 GiB",
+      "available_bytes": 2132410368,
+      "capacity": "0.70%",
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "14.38 MiB",
+      "used_bytes": 15073280
+    },
+    "system": {
+      "available": "271.10 MiB",
+      "available_bytes": 284270592,
+      "capacity": "93.38%",
+      "total": "4.00 GiB",
+      "total_bytes": 4294967296,
+      "used": "3.74 GiB",
+      "used_bytes": 4010696704
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "32.92 GiB",
+      "available_bytes": 35347619840,
+      "capacity": "5.94%",
+      "device": "/dev/hd4",
+      "filesystem": "jfs2",
+      "options": [
+        "rw",
+        "log=/dev/hd8"
+      ],
+      "size": "35.00 GiB",
+      "size_bytes": 37580963840,
+      "used": "2.08 GiB",
+      "used_bytes": 2233344000
+    },
+    "/admin": {
+      "available": "511.57 MiB",
+      "available_bytes": 536420352,
+      "capacity": "0.08%",
+      "device": "/dev/hd11admin",
+      "filesystem": "jfs2",
+      "options": [
+        "rw",
+        "log=/dev/hd8"
+      ],
+      "size": "512.00 MiB",
+      "size_bytes": 536870912,
+      "used": "440.00 KiB",
+      "used_bytes": 450560
+    },
+    "/share": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "/etc/auto.share",
+      "filesystem": "autofs",
+      "options": [
+        "ignore"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/tmp": {
+      "available": "7.61 GiB",
+      "available_bytes": 8172941312,
+      "capacity": "4.85%",
+      "device": "/dev/hd3",
+      "filesystem": "jfs2",
+      "options": [
+        "rw",
+        "log=/dev/hd8"
+      ],
+      "size": "8.00 GiB",
+      "size_bytes": 8589934592,
+      "used": "397.68 MiB",
+      "used_bytes": 416993280
+    },
+    "/usr": {
+      "available": "2.90 GiB",
+      "available_bytes": 3117920256,
+      "capacity": "51.60%",
+      "device": "/dev/hd2",
+      "filesystem": "jfs2",
+      "options": [
+        "rw",
+        "log=/dev/hd8"
+      ],
+      "size": "6.00 GiB",
+      "size_bytes": 6442450944,
+      "used": "3.10 GiB",
+      "used_bytes": 3324530688
+    },
+    "/var": {
+      "available": "5.96 GiB",
+      "available_bytes": 6404235264,
+      "capacity": "0.59%",
+      "device": "/dev/hd9var",
+      "filesystem": "jfs2",
+      "options": [
+        "rw",
+        "log=/dev/hd8"
+      ],
+      "size": "6.00 GiB",
+      "size_bytes": 6442450944,
+      "used": "36.45 MiB",
+      "used_bytes": 38215680
+    },
+    "/var/adm/ras/livedump": {
+      "available": "255.64 MiB",
+      "available_bytes": 268058624,
+      "capacity": "0.14%",
+      "device": "/dev/livedump",
+      "filesystem": "jfs2",
+      "options": [
+        "rw",
+        "log=/dev/hd8"
+      ],
+      "size": "256.00 MiB",
+      "size_bytes": 268435456,
+      "used": "368.00 KiB",
+      "used_bytes": 376832
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "hostname.example.com",
+    "hostname": "hostname",
+    "interfaces": {
+      "en0": {
+        "bindings6": [
+          {
+            "address": "fd8c:215d:178e:12:fe1:6fff:fe0d:4302",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd8c:215d:178e:12::"
+          },
+          {
+            "address": "fe80::f879:8cff:fe90:1120",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip6": "fd8c:215d:178e:12:fe1:6fff:fe0d:4302",
+        "mac": "fa:79:8c:90:11:20",
+        "mtu": 1500,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fd8c:215d:178e:12::"
+      },
+      "en1": {
+        "bindings": [
+          {
+            "address": "10.10.136.15",
+            "netmask": "255.255.255.0",
+            "network": "10.10.136.0"
+          }
+        ],
+        "ip": "10.10.136.15",
+        "mac": "fa:79:8c:90:11:21",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.10.136.0"
+      },
+      "lo0": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16896,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      },
+      "sit0": {
+        "mac": "0a:0a:88:0f:00:00",
+        "mtu": 1480
+      }
+    },
+    "ip": "10.10.136.15",
+    "mac": "fa:79:8c:90:11:21",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.10.136.0",
+    "primary": "en1"
+  },
+  "os": {
+    "architecture": "PowerPC_POWER8",
+    "family": "AIX",
+    "hardware": "IBM,8284-22A",
+    "name": "AIX",
+    "release": {
+      "full": "7100-04-04-1717",
+      "major": "7100"
+    }
+  },
+  "partitions": {
+    "/dev/hd11admin": {
+      "filesystem": "jfs2",
+      "label": "/admin",
+      "mount": "/admin",
+      "size": "512.00 MiB",
+      "size_bytes": 536870912
+    },
+    "/dev/hd2": {
+      "filesystem": "jfs2",
+      "label": "/usr",
+      "mount": "/usr",
+      "size": "6.00 GiB",
+      "size_bytes": 6442450944
+    },
+    "/dev/hd3": {
+      "filesystem": "jfs2",
+      "label": "/tmp",
+      "mount": "/tmp",
+      "size": "8.00 GiB",
+      "size_bytes": 8589934592
+    },
+    "/dev/hd4": {
+      "filesystem": "jfs2",
+      "label": "/",
+      "mount": "/",
+      "size": "35.00 GiB",
+      "size_bytes": 37580963840
+    },
+    "/dev/hd5": {
+      "filesystem": "boot",
+      "label": "primary_bootlv",
+      "size": "64.00 MiB",
+      "size_bytes": 67108864
+    },
+    "/dev/hd6": {
+      "filesystem": "paging",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648
+    },
+    "/dev/hd8": {
+      "filesystem": "jfs2log",
+      "size": "64.00 MiB",
+      "size_bytes": 67108864
+    },
+    "/dev/hd9var": {
+      "filesystem": "jfs2",
+      "label": "/var",
+      "mount": "/var",
+      "size": "6.00 GiB",
+      "size_bytes": 6442450944
+    },
+    "/dev/lg_dumplv": {
+      "filesystem": "sysdump",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824
+    },
+    "/dev/livedump": {
+      "filesystem": "jfs2",
+      "label": "/var/adm/ras/livedump",
+      "mount": "/var/adm/ras/livedump",
+      "size": "256.00 MiB",
+      "size_bytes": 268435456
+    }
+  },
+  "path": "/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/opt/IBM/ibm-java-ppc64-70/jre/bin:/opt/IBM/ibm-java-ppc64-70/bin:/usr/local/bin:/opt/puppetlabs/bin",
+  "processors": {
+    "count": 8,
+    "isa": "powerpc",
+    "models": [
+      "PowerPC_POWER8",
+      "PowerPC_POWER8",
+      "PowerPC_POWER8",
+      "PowerPC_POWER8",
+      "PowerPC_POWER8",
+      "PowerPC_POWER8",
+      "PowerPC_POWER8",
+      "PowerPC_POWER8"
+    ],
+    "speed": "3.43 GHz"
+  },
+  "ruby": {
+    "platform": "powerpc-aix7.1.0.0",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+    "version": "2.4.3"
+  },
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 1bc9744bb019cc61c51806abd803c725f6574114",
+        "sha256": "SSHFP 2 2 3a51b61181ca4a70b76c2ff12672ae122ef17b9f29e2c1703515574a46308a15"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAM4KcYkkWgew69+XBlGnHbRmLmaueoM7DcgLKhDZuvFhTbK2xp5XB0cMomj6VAZjFjhmQucFH0yCi3veOdHR8LbOif4NHUKnL1SppHmfJJpQ87dlSJHNTirhEYZkb2lZbz0inkBxhrmuOL4LNfPre7QBvNu5xy5oyX/nDk/ZV8EpAAAAFQDsK0OLQXc2y8VaFxvQgIwNSXiELQAAAIB9oksOK9NyDJyDSSfdYDgNxrdc4ktuFKUqsbuZ1DWki5QUcMkXp/GkZoPZpJq0j+xyNci21HabcpWUeLkUtBTVvZ51hy5WJ79KdhLZA12xGSrZIDMSJAIzdtBTFbdY9weizOj/25Jka1JNHKAgqEqOR3vcps5wb/Q8ggo68zAdTwAAAIEAvt1XUNHtlqVb/yqesm75fAIIqBMW4I84ifrlJGB1Lsi2fh3BLNMC9L7LtTLUTnlH89lbGrQcksJ+G6FzkyaDaQYydBJFl3fvzECfQDTPyKCClUFOwjcmgXdwk8VxRue+FW2CVJsUOQrX2dIeWWWkan0q2HTnTZksQMC7byt1Uhc="
+    },
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 7620b25dda681059bcc53ffcf4fcc52a05d48d2f",
+        "sha256": "SSHFP 3 2 18131411ca4966e190c9ed78767abf0ab535ada8e584daabced337dd23963b96"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBG9lRf9GWAkU1bMwElHtbkolIdfp2MIRLotUw5j3FWIHYpfnFiQoF4RQbwVLznYjbAK3151aADu9Gue5xhrcpvw="
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 a258b0a48bdca66dd5a8e82db664035b949aeec4",
+        "sha256": "SSHFP 1 2 0912e0f2eb5d9cf3ca8f886a27a4f03dd8783af79fb6e31ce8d01552c77d1a28"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDzIG+OpW/3tONe3+qyxCz84Axzg+WEVJ8LZshWqEKv8Quyc+Qe7xexiik7TfLper61+S5dt3Ah8zUA7ztBt60F44bU9Ijl+qc9zhWgrkOFjbX6XbsIlKC57j30Oas0C5wE4p59rBKGNXm8DDQuwcLGdZrL8MRFPoLwr0jLNVU9dhWHP9+hTY90mKhZCBZFustMBt1AB+HzmzQnTViiqTghAZwe26xTPPsGNo5ukcvpW25hBctUl98snPtyv3r6WobV/DNfMCfQQ3y9dHuIAZV8UQ5AHHvbVwDnJ4iZv326U1qbuuthhdLywUGG2AOsH2TAXM+em3TcOjqn4MtbuB9x"
+    }
+  },
+  "system_uptime": {
+    "days": 14,
+    "hours": 336,
+    "seconds": 1211220,
+    "uptime": "14 days"
+  },
+  "timezone": "UTC"
+}
