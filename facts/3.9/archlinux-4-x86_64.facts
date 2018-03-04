@@ -1,0 +1,327 @@
+{
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "size": "20.00 GiB",
+      "size_bytes": 21474836480,
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "5E735075-6745-4A26-9737-98C0125A7CE6"
+    }
+  },
+  "facterversion": "3.9.5",
+  "filesystems": "btrfs",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "4.15",
+  "kernelrelease": "4.15.6-1-ARCH",
+  "kernelversion": "4.15.6",
+  "load_averages": {
+    "15m": 0.0,
+    "1m": 0.0,
+    "5m": 0.0
+  },
+  "memory": {
+    "swap": {
+      "available": "1.93 GiB",
+      "available_bytes": 2075127808,
+      "capacity": "0%",
+      "total": "1.93 GiB",
+      "total_bytes": 2075127808,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "923.61 MiB",
+      "available_bytes": 968474624,
+      "capacity": "6.61%",
+      "total": "989.00 MiB",
+      "total_bytes": 1037041664,
+      "used": "65.39 MiB",
+      "used_bytes": 68567040
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "16.81 GiB",
+      "available_bytes": 18053324800,
+      "capacity": "6.94%",
+      "device": "/dev/sda2",
+      "filesystem": "btrfs",
+      "options": [
+        "rw",
+        "relatime",
+        "space_cache",
+        "subvolid=5",
+        "subvol=/"
+      ],
+      "size": "18.07 GiB",
+      "size_bytes": 19398656000,
+      "used": "1.25 GiB",
+      "used_bytes": 1345331200
+    },
+    "/dev/shm": {
+      "available": "494.50 MiB",
+      "available_bytes": 518520832,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev"
+      ],
+      "size": "494.50 MiB",
+      "size_bytes": 518520832,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run": {
+      "available": "494.14 MiB",
+      "available_bytes": 518139904,
+      "capacity": "0.07%",
+      "device": "run",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "mode=755"
+      ],
+      "size": "494.50 MiB",
+      "size_bytes": 518520832,
+      "used": "372.00 KiB",
+      "used_bytes": 380928
+    },
+    "/run/user/1000": {
+      "available": "98.90 MiB",
+      "available_bytes": 103702528,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=101272k",
+        "mode=700",
+        "uid=1000",
+        "gid=1000"
+      ],
+      "size": "98.90 MiB",
+      "size_bytes": 103702528,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/sys/fs/cgroup": {
+      "available": "494.50 MiB",
+      "available_bytes": 518520832,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "ro",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "mode=755"
+      ],
+      "size": "494.50 MiB",
+      "size_bytes": 518520832,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/tmp": {
+      "available": "494.50 MiB",
+      "available_bytes": 518520832,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev"
+      ],
+      "size": "494.50 MiB",
+      "size_bytes": 518520832,
+      "used": "0 bytes",
+      "used_bytes": 0
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:feb0:7f01",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "10.0.2.15",
+        "ip6": "fe80::a00:27ff:feb0:7f01",
+        "mac": "08:00:27:b0:7f:01",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fe80::"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fe80::a00:27ff:feb0:7f01",
+    "mac": "08:00:27:b0:7f:01",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fe80::",
+    "primary": "eth0"
+  },
+  "os": {
+    "architecture": "x86_64",
+    "family": "Archlinux",
+    "hardware": "x86_64",
+    "name": "Archlinux",
+    "release": {
+      "full": "4.15.6-1-ARCH",
+      "major": "4",
+      "minor": "15"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/sda1": {
+      "filesystem": "swap",
+      "partuuid": "aa522480-01",
+      "size": "1.93 GiB",
+      "size_bytes": 2075131904,
+      "uuid": "cd51174e-596f-4546-9da6-5ca42e091e9c"
+    },
+    "/dev/sda2": {
+      "filesystem": "btrfs",
+      "label": "rootfs",
+      "mount": "/",
+      "partuuid": "aa522480-02",
+      "size": "18.07 GiB",
+      "size_bytes": 19398656000,
+      "uuid": "2a17b9f3-baab-4863-9a62-1fbda239540b"
+    }
+  },
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl",
+  "processors": {
+    "count": 2,
+    "isa": "unknown",
+    "models": [
+      "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz",
+      "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz"
+    ],
+    "physicalcount": 1
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/usr/lib/ruby/site_ruby/2.5.0",
+    "version": "2.5.0"
+  },
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 011adbe28fec0c1d040bbba0ebc402672f8f35cc",
+        "sha256": "SSHFP 2 2 7180c131b6933346119a2bb64b62ad79309d14b281863cf33d46472940d2bf73"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAOoIb51xP6m2P9LMF8aniIfPCxV5g+uDQ6G8AGIUdd9/f4AxkX1qVAW+abqALgK7WU5k4aV6xGLsuLtvF0r6iM3TWHe66Q6WAjU4jZPUFWQydKHXfp2Z28TUYpmVkBTGeCsrlg1wpaBH0pC4ZVgVJk9pYFDh+DweJBiORyjq76D7AAAAFQCVHWHYlvPRvxbhN7Xzr2ZYLzLkuwAAAIEA2O1JAhqD5ANa9ThM9xicJj4ScYaKKk4QF2KP+jffo/K+FOcphAfB21ORgeE8271HTzosP64SLVot8K/fBtkdopknKLEPLAw5l4oaYIaYqhpzr4iQ8OXL9LkAp+1TxLOO6kprcrgGaLNRR6/Fejj76Fvf5wqRo9qCcnkZ6ZOid0EAAACAJh8lpOAgZsWQQAw2LDqlLcojc0BbqjPX+i5D2UN69dk01KGNpCNDE+9HNLt2M+VfFyMWiVNKAj4D+E0QFB2Ql+TEFhLtW6IobfClHsOOF6UbuQrwKzTuo6ndcSa6ofdlEBjorAqUxWtfNSmU7MboWYteXhUXsDgjooME8zD2ZUI="
+    },
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 5a1a437277b6d03c25651e71c5d07f5a8fdcffcb",
+        "sha256": "SSHFP 3 2 6cbf066f80b03298945731531372cb044578186b5ff24c307b4f338676699991"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCBvGLAS1iyk9i+dajFcFEzzZtRRyQlF+LirsQU8QGEtq0opy62VTmakc/cRHhhGJMr9dRBbLJ2xv3Z4w/Tfi5k="
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 62a6a49153e15d2eba583604ee80a86185b6a5bb",
+        "sha256": "SSHFP 4 2 82ac7cb51493c122863a1f273a422ea1742ddfd4ffd88a4531d45bd2d546c363"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIDP6MHyWDm0QVqEJExFBt/8edtzSlzE9BS2OlQTyhqQR"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 32f42ae009bcbf9b6182305a153f9f4f912e829a",
+        "sha256": "SSHFP 1 2 0a50ce99556a9c55d26a1d3ab402284b741c7448618e8f88e5fe691b1237e42a"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDPe/oTRHxI9mkjzQEGb3zBr3Gaco9t09Oag9XzIvsi5/ZWCBbZoBZVgKsQZbknLstjfUnP/Nm9cdFA04q++ytUVVNQfVcjjpsNh9v/niOLUKTB5NqzuE3nAVBQaVS3G9CczkYhA+ge+fSWmY5EAEzVkVhjtpwO5VrK0mxr4Q8XFnfcvxxcXacVazCVM7yh2mzrkHRL2/mu2GJZeBsT7HnWl8lyU1yPqF0CpzZXG3JIVMVy4ZjmCx3suE46y1Je6n6Dr76OrLOy2KClx2+T6xzECcOOlpVLayxiP4kcZa1CzCtvsUDynO21Gp6h6S0QO/CSc09jERvULvpsl5jHs6Lt"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 96,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "virtualbox"
+}
