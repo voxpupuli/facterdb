@@ -19,6 +19,9 @@ elif test -f /usr/bin/dnf; then
 elif test -f /usr/bin/yum; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f4 | cut -c1)
   osfamily='RedHat'
+elif test -f '/usr/bin/pacman'; then
+  operatingsystemmajrelease=3
+  osfamily='Archlinux'
 else
   osfamily=$(uname)
 fi
@@ -92,6 +95,8 @@ case "${osfamily}" in
     done
   fi
   ;;
+'Archlinux')
+  pacman -Syu --noconfirm ruby puppet ruby-bundler
 esac
 
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
