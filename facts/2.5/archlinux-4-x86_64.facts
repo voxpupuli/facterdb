@@ -1,0 +1,98 @@
+{
+  "gem_version": "~> 2.5.0",
+  "kernel": "Linux",
+  "system_uptime": {
+    "seconds": 95,
+    "hours": 0,
+    "days": 0,
+    "uptime": "0:01 hours"
+  },
+  "gid": "root",
+  "hardwaremodel": "x86_64",
+  "kernelrelease": "4.14.15-1-ARCH",
+  "puppetversion": "5.3.5",
+  "rubyplatform": "x86_64-linux",
+  "blockdevice_sda_size": 21474836480,
+  "blockdevice_sda_vendor": "ATA",
+  "blockdevice_sda_model": "VBOX HARDDISK",
+  "blockdevices": "sda",
+  "path": "/home/vagrant/vendor/bundler/ruby/2.5.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl",
+  "partitions": {
+    "sda2": {
+      "uuid": "2a17b9f3-baab-4863-9a62-1fbda239540b",
+      "size": "37888000",
+      "mount": "/",
+      "label": "rootfs",
+      "filesystem": "btrfs"
+    },
+    "sda1": {
+      "uuid": "cd51174e-596f-4546-9da6-5ca42e091e9c",
+      "size": "4052992",
+      "filesystem": "swap"
+    }
+  },
+  "rubyversion": "2.5.0",
+  "hostname": "foo",
+  "operatingsystem": "Archlinux",
+  "timezone": "UTC",
+  "facterversion": "2.5.1",
+  "processors": {
+    "models": [
+      "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz",
+      "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz"
+    ],
+    "count": 2,
+    "physicalcount": 1
+  },
+  "uptime_seconds": 95,
+  "uptime": "0:01 hours",
+  "ps": "ps -ef",
+  "operatingsystemmajrelease": "4",
+  "kernelversion": "4.14.15",
+  "virtual": "virtualbox",
+  "is_virtual": true,
+  "fqdn": "foo.example.com",
+  "selinux": false,
+  "interfaces": "",
+  "id": "root",
+  "os": {
+    "name": "Archlinux",
+    "family": "Archlinux",
+    "release": {
+      "major": "4",
+      "minor": "14",
+      "full": "4.14.15-1-ARCH"
+    }
+  },
+  "architecture": "x86_64",
+  "operatingsystemrelease": "4.14.15-1-ARCH",
+  "osfamily": "Archlinux",
+  "rubysitedir": "/usr/lib/ruby/site_ruby/2.5.0",
+  "uptime_days": 0,
+  "memorysize": "989.40 MB",
+  "memoryfree": "858.39 MB",
+  "swapsize": "1.93 GB",
+  "swapfree": "1.93 GB",
+  "swapsize_mb": "1979.00",
+  "swapfree_mb": "1979.00",
+  "memorysize_mb": "989.40",
+  "memoryfree_mb": "858.39",
+  "filesystems": "btrfs",
+  "hardwareisa": "unknown",
+  "uniqueid": "007f0100",
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAOoIb51xP6m2P9LMF8aniIfPCxV345thgre54y6f4AxkX1qVAW+abqALgK7WU5k4aV6xGLsuLtvF0r6iM3TWHe66Q6WAjU4jZPUFWQydKHXfp2Z28TUYpmVkBTGeCsrlg1wpaBH0pC4ZVgVJk9pYFDh+DweJBiORyjq76D7AAAAFQCVHWHYlvPRvxbhN7Xzr2ZYLzLkuwAAAIEA2O1JAhqD5ANa9ThM9xicJj4ScYaKKk4QF2KP+jffo/K+FOcphAfB21ORgeE8271HTzosP64SLVot8K/fBtkdopknKLEPLAw5l4oaYIaYqhpzr4iQ8OXL9LkAp+1TxLOO6kprcrgGaLNRR6/Fejj76Fvf5wqRo9qCcnkZ6ZOid0EAAACAJh8lpOAgZsWQQAw2LDqlLcojc0BbqjPX+i5D2UN69dk01KGNpCNDE+9HNLt2M+VfFyMWiVNKAj4D+E0QFB2Ql+TEFhLtW6IobfClHsOOF6UbuQrwKzTuo6ndcSa6ofdlEBjorAqUxWtfNSmU7MboWYteXhUXsDgjooME8zD2ZUI=",
+  "sshfp_dsa": "SSHFP 2 1 011adbe28fec0c1d040bbba0ebc672f8f35cc\nSSHFP 2 2 7180c131b693a2bb64b62ad79309d14b281863cf33d46472940d2bf73",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDPe/oTR3Gaco9t09Oag9XzIvsi5/ZWCBbZoBZVgKsQZbknLstjfUnP/Nm9cdFA04q++ytUVVNQfVcjjpsNh9v/niOLUKTB5NqzuE3nAVBQaVS3G9CczkYhA+ge+fSWmY5EAEzVkVhjtpwO5VrK0mxr4Q8XFnfcvxxcXacVazCVM7yh2mzrkHRL2/mu2GJZeBsT7HnWl8lyU1yPqF0CpzZXG3JIVMVy4ZjmCx3suE46y1Je6n6Dr76OrLOy2KClx2+T6xzECcOOlpVLayxiP4kcZa1CzCtvsUDynO21Gp6h6S0QO/CSc09jERvULvpsl5jHs6Lt",
+  "sshfp_rsa": "SSHFP 1 1 32f42ae009bcbf9b6182305a153912e829a\nSSHFP 1 2 0ace99556a9c55d26a1d3ab402284b741c7448618e8f88e5fe691b1237e42a",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCBvG9i+dajFcFEzzZtRRyQlF+LirsQU8QGEtq0opy62VTmakc/cRHhhGJMr9dRBbLJ2xv3Z4w/Tfi5k=",
+  "sshfp_ecdsa": "SSHFP 3 1 5a1a437277b6d03c25651e71c5d07f5a8fdcffcb\nSSHFP 3 2 6cbf066f80b03298945731531372cb044578186b5ff24c307b4f338676699991",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIDP6MHyWDm0QVqEJExFBt/8edtzSlzE9BS2OlQTyhqQR",
+  "sshfp_ed25519": "SSHFP 4 1 62a6a49153e15d2eba583604ee80a86185b6a5bb\nSSHFP 4 2 82ac7cb51493c122863a1f273a422ea1742ddfd4ffd88a4531d45bd2d546c363",
+  "uptime_hours": 0,
+  "physicalprocessorcount": 1,
+  "processor0": "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz",
+  "processor1": "Intel(R) Core(TM) i5-2500K CPU @ 3.30GHz",
+  "processorcount": 2,
+  "kernelmajversion": "4.14",
+  "domain": "example.com"
+}
