@@ -1,4 +1,155 @@
-baseURL = "http://example.org/"
+baseURL = "http://camptocamp.github.io/facterdb/"
+title = "FacterDB"
 languageCode = "en-us"
-title = "My New Hugo Site"
 theme = "elate"
+
+[params]
+
+  #custom_css = ["css/custom1.css", "css/custom2.css"]
+
+  # Meta
+  author = "Camptocamp"
+  description = ""
+  email = ""
+  # Navigation
+  [params.navigation]
+    brand = "FacterDB"
+    intro = "<i class='icon-home'></i>Install"
+    #work = "<i class='icon-camera'></i>Screenshots"
+    #testimonials = "<i class='icon-bubbles'></i>Testimonials"
+    services = "<i class='icon-star'></i>Features"
+    about = "<i class='icon-bulb'></i>Other projects"
+    contact = "<i class='icon-envelope'></i> Contact"
+
+    # You can add custom links before or after the default links
+    # Assign a weight to define the order
+
+  # Hero section
+  [params.hero]
+    title = "FacterDB"
+    subtitle = '''
+A Database of OS facts provided by Facter
+
+[![GitHub stars](https://img.shields.io/github/stars/camptocamp/facterdb.svg?style=social&logo=github&label=Stars)](https://github.com/camptocamp/facterdb)
+[![Gem Downloads](https://img.shields.io/gem/dt/facterdb.svg)](https://rubygems.org/gems/facterdb)
+[![By Camptocamp](https://img.shields.io/badge/by-camptocamp-fb7047.svg)](http://www.camptocamp.com)
+'''
+
+  # Intro section
+  # Available icons: http://simplelineicons.com/
+  [params.intro]
+
+  [[params.intro.item]]
+    title = "Install"
+    description = '''
+```shell
+$ gem install facterdb
+```
+'''
+    #url = "#"
+    #button = "Get In Touch"
+    icon = "icon-bulb"
+
+  [[params.intro.item]]
+    title = "Example usage"
+    description = '''
+```shell
+$ facterdb \
+  'facterversion=/^2.4\./ and (operatingsystem=Debian and operatingsystemrelease>=7 or operatingsystem=RedHat and operatingsystemrelease=/^7/)'
+```
+'''
+    #url = "#"
+    #button = "Copy"
+    icon = "icon-arrow-right"
+  #  img = "img_8.jpg"
+
+  [[params.intro.item]]
+    title = "Use in Rakefile"
+    description = '''
+```ruby
+require 'facterdb'
+FacterDB::get_facts()
+```
+'''
+    #url = "#"
+    #button = "Why us?"
+    icon = "icon-diamond"
+
+  #[params.intro.video]
+  #  enable = true
+  #  title = "Watch the video"
+  #  icon = "icon-play2"
+  #  url = "https://vimeo.com/channels/staffpicks/93951774"
+
+
+  # Services section
+  [params.services]
+    enable = true
+    title = "Features"
+    description = "FacterDB provides a collection of stock facts for various Operating Systems."
+
+    [[params.services.item]]
+      title = "Command Line Interface"
+      description = "FacterDB can be queried on the CLI."
+      icon = "icon-arrow-right"
+
+    [[params.services.item]]
+      title = "Rakefile integration"
+      description = "Integrate FacterDB into your Rakefile extends rspec-puppet with [rspec-puppet-facts](https://github.com/mcanevet/rspec-puppet-facts)."
+      icon = "icon-diamond"
+
+  # About section
+  [params.about]
+    enable = true
+    title = "Other projects"
+    description = "We love to contribute Open Source projects at Camptocamp.<br /> Here is a list of some of our most useful tools"
+
+    [[params.about.item]]
+      name = "Terraboard"
+      position = "A Web dashboard to inspect and query Terraform states"
+      description = ""
+      img = "terraboard.png"
+      alt = "Terraboard"
+      social = [
+        ["icon-globe", "https://camptocamp.github.io/terraboard"],
+        ["icon-github", "https://github.com/camptocamp/terraboard"]
+      ]
+
+    [[params.about.item]]
+      name = "Conplicity"
+      position = "Automatic backups for Docker containers"
+      description = ""
+      img = "conplicity.png"
+      alt = "Conplicity"
+      social = [
+        ["icon-globe", "https://camptocamp.github.io/conplicity"],
+        ["icon-github", "https://github.com/camptocamp/conplicity"]
+      ]
+
+    [[params.about.item]]
+      name = "Puppet Modules"
+      position = "Camptocamp's Puppet Modules"
+      description = ""
+      img = "puppet.png"
+      alt = "Puppet Modules"
+      social = [
+        ["icon-globe", "https://camptocamp.github.io/puppet-modules"],
+        ["icon-home", "https://forge.puppet.com/camptocamp"]
+      ]
+
+  # Contact section
+  [params.contact]
+    enable = true
+    form = false
+    title = "Contact us!"
+    description = "Are you missing features? Would you like consulting, training or other services? Contact us at [info@camptocamp.com](mailto:info@camptocamp.com?subject=Terraboard)!"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = '[![Camptocamp](images/camptocamp.png)](https://www.camptocamp.com)'
+    links = [
+        ["icon-globe", "https://www.camptocamp.com"],
+        ["icon-twitter", "https://twitter.com/camptocamp"],
+        ["icon-github", "https://github.com/camptocamp"]
+      ]
