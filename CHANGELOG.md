@@ -1,10 +1,24 @@
 # Change Log
 
-## [0.5.0](https://rubygems.org/gems/facterdb/versions/0.5.0) (2017-12-14)
-[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.4.1...0.5.0)
+## [0.5.1](https://rubygems.org/gems/facterdb/versions/0.5.1) (2018-03-06)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.0...0.5.1)
 
 **Merged pull requests:**
 
+- AIX 7.1 legacy facts [\#74](https://github.com/camptocamp/facterdb/pull/74) ([TJM](https://github.com/TJM))
+- Fix Archlinux support / update archlinux facts [\#73](https://github.com/camptocamp/facterdb/pull/73) ([bastelfreak](https://github.com/bastelfreak))
+- Add AIX 7.1 powerpc [\#72](https://github.com/camptocamp/facterdb/pull/72) ([TJM](https://github.com/TJM))
+
+## [0.5.0](https://rubygems.org/gems/facterdb/versions/0.5.0) (2017-12-14)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.4.1...0.5.0)
+
+**Closed issues:**
+
+- create new release [\#65](https://github.com/camptocamp/facterdb/issues/65)
+
+**Merged pull requests:**
+
+- Release prep for 0.5.0 [\#70](https://github.com/camptocamp/facterdb/pull/70) ([DavidS](https://github.com/DavidS))
 - add freebsd\_11 facts [\#69](https://github.com/camptocamp/facterdb/pull/69) ([b4ldr](https://github.com/b4ldr))
 - add freebsd 10 facts for facter 2.5 and 3.9 [\#68](https://github.com/camptocamp/facterdb/pull/68) ([b4ldr](https://github.com/b4ldr))
 
