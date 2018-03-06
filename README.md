@@ -9,6 +9,8 @@ facterdb
 
 A Gem that contains a lot of facts for a lot of Operating Systems.
 
+![FacterDB](images/facterdb.png)
+
 # Usage
 
 ## CLI
