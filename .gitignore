@@ -6,3 +6,4 @@ coverage/
 vendor/
 packer_cache/
 *.box
+hugo/public
