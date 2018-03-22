@@ -1,0 +1,679 @@
+{
+  "aio_agent_build": "5.3.5",
+  "aio_agent_version": "5.3.5",
+  "architecture": "i86pc",
+  "augeas": {
+      "version": "1.8.1"
+  },
+  "augeasprovider_grub_version": 1,
+  "augeasversion": "1.8.1",
+  "bios_release_date": "05/15/2010",
+  "bios_vendor": "HP",
+  "bios_version": "P64",
+  "blockdevice_sd0_size": 0,
+  "blockdevice_sd0_vendor": "KVM",
+  "blockdevice_sd1_size": 146778684928,
+  "blockdevice_sd1_vendor": "HP",
+  "blockdevices": "sd1,sd0",
+  "chassisassettag": "ABC12345",
+  "chassistype": "0x17 (rack mount chassis)",
+  "clientcert": "hostname.example.com",
+  "clientnoop": false,
+  "clientversion": "5.3.5",
+  "defaultroute": "10.16.100.254",
+  "disks": {
+      "sd0": {
+          "product": "vmDisk-CD       Revision",
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "vendor": "KVM"
+      },
+      "sd1": {
+          "product": "LOGICAL VOLUME  Revision",
+          "size": "136.70 GiB",
+          "size_bytes": 146778684928,
+          "vendor": "HP"
+      }
+  },
+  "dmi": {
+      "bios": {
+          "release_date": "05/15/2010",
+          "vendor": "HP",
+          "version": "P64"
+      },
+      "chassis": {
+          "asset_tag": "ABC12345",
+          "type": "0x17 (rack mount chassis)"
+      },
+      "manufacturer": "HP",
+      "product": {
+          "name": "ProLiant DL360 G6",
+          "serial_number": "URE768W6C4",
+          "uuid": "34383333-3834-3553-4530-33333e335432"
+      }
+  },
+  "domain": "example.com",
+  "env_temp_variable": "/tmp",
+  "facterversion": "3.9.5",
+  "filesystems": "autofs,cachefs,ctfs,dcfs,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,sockfs,specfs,tmpfs,udfs,ufs,xmemfs",
+  "fqdn": "hostname",
+  "gemhome": "/opt/puppetlabs/puppet/lib/ruby/gems/2.4.0",
+  "gid": "root",
+  "hardwareisa": "i386",
+  "hardwaremodel": "i86pc",
+  "hostname": "hostname",
+  "id": "root",
+  "identity": {
+      "gid": 0,
+      "group": "root",
+      "privileged": true,
+      "uid": 0,
+      "user": "root"
+  },
+  "interfaces": "bnx0,e1000g0,e1000g0:1,e1000g1,lo0",
+  "ipaddress": "10.8.34.65",
+  "ipaddress_bnx0": "10.8.34.65",
+  "ipaddress_e1000g0": "10.16.100.224",
+  "ipaddress_e1000g0:1": "0.0.0.0",
+  "ipaddress_e1000g1": "0.0.0.0",
+  "ipaddress_lo0": "127.0.0.1",
+  "java_major_version": "6",
+  "java_patch_level": "45",
+  "java_version": "1.6.0_45",
+  "kernel": "SunOS",
+  "kernelmajversion": "Generic_142901-14",
+  "kernelrelease": "5.10",
+  "kernelversion": "Generic_142901-14",
+  "load_averages": {
+      "15m": 0.02734375,
+      "1m": 0.03125,
+      "5m": 0.03515625
+  },
+  "macaddress": "78:e7:d1:ab:cd:fc",
+  "macaddress_bnx0": "78:e7:d1:ab:cd:fc",
+  "macaddress_e1000g0": "00:15:17:10:20:fc",
+  "manufacturer": "HP",
+  "mco_client_config": "/etc/puppetlabs/mcollective/client.cfg",
+  "mco_client_settings": {
+      "libdir": "/opt/puppetlabs/mcollective/plugins:/usr/share/mcollective/plugins:/usr/libexec/mcollective"
+  },
+  "mco_confdir": "/etc/mcollective/etc",
+  "mco_server_config": "/etc/puppetlabs/mcollective/server.cfg",
+  "mco_server_settings": {
+      "libdir": "/opt/puppet/libexec/mcollective:/opt/puppetlabs/mcollective/plugins",
+      "plugin.yaml": "/etc/puppetlabs/mcollective/facts.yaml"
+  },
+  "memory": {
+      "swap": {
+          "available": "4.00 GiB",
+          "available_bytes": 4294963200,
+          "capacity": "0%",
+          "total": "4.00 GiB",
+          "total_bytes": 4294963200,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "system": {
+          "available": "12.40 GiB",
+          "available_bytes": 13313245184,
+          "capacity": "48.30%",
+          "total": "23.98 GiB",
+          "total_bytes": 25750720512,
+          "used": "11.58 GiB",
+          "used_bytes": 12437475328
+      }
+  },
+  "memoryfree": "12.40 GiB",
+  "memoryfree_mb": 12696.5,
+  "memorysize": "23.98 GiB",
+  "memorysize_mb": 24557.80078125,
+  "memorysizeinbytes": 25759318016,
+  "mountpoints": {
+      "/": {
+          "available": "3.58 GiB",
+          "available_bytes": 3845807616,
+          "capacity": "59.77%",
+          "device": "rpool/ROOT/u8",
+          "filesystem": "zfs",
+          "options": [
+              "dev=2d50002"
+          ],
+          "size": "8.90 GiB",
+          "size_bytes": 9559529472,
+          "used": "5.32 GiB",
+          "used_bytes": 5713721856
+      },
+      "/dev/fd": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "fd",
+          "filesystem": "fd",
+          "options": [
+              "rw",
+              "dev=4880001"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/devices": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "/devices",
+          "filesystem": "devfs",
+          "options": [
+              "dev=4580000"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/etc/dfs/sharetab": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "sharefs",
+          "filesystem": "sharefs",
+          "options": [
+              "dev=4700001"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/etc/mnttab": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "mnttab",
+          "filesystem": "mntfs",
+          "options": [
+              "dev=4640001"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/etc/svc/volatile": {
+          "available": "13.43 GiB",
+          "available_bytes": 14420922368,
+          "capacity": "0.00%",
+          "device": "swap",
+          "filesystem": "tmpfs",
+          "options": [
+              "xattr",
+              "dev=4680001"
+          ],
+          "size": "13.43 GiB",
+          "size_bytes": 14421254144,
+          "used": "324.00 KiB",
+          "used_bytes": 331776
+      },
+      "/home": {
+          "available": "10.00 GiB",
+          "available_bytes": 10736962560,
+          "capacity": "0.00%",
+          "device": "big/home",
+          "filesystem": "zfs",
+          "options": [
+              "rw",
+              "devices",
+              "setuid",
+              "nonbmand",
+              "exec",
+              "rstchown",
+              "xattr",
+              "atime",
+              "dev=2d50003"
+          ],
+          "size": "10.00 GiB",
+          "size_bytes": 10737418240,
+          "used": "445.00 KiB",
+          "used_bytes": 455680
+      },
+      "/lib/libc.so.1": {
+          "available": "3.58 GiB",
+          "available_bytes": 3845807616,
+          "capacity": "59.77%",
+          "device": "/usr/lib/libc/libc_hwcap1.so.1",
+          "filesystem": "lofs",
+          "options": [
+              "dev=2d50002"
+          ],
+          "size": "8.90 GiB",
+          "size_bytes": 9559529472,
+          "used": "5.32 GiB",
+          "used_bytes": 5713721856
+      },
+      "/proc": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "proc",
+          "filesystem": "proc",
+          "options": [
+              "dev=45c0000"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/rpool": {
+          "available": "3.58 GiB",
+          "available_bytes": 3845807616,
+          "capacity": "0.00%",
+          "device": "rpool",
+          "filesystem": "zfs",
+          "options": [
+              "rw",
+              "devices",
+              "setuid",
+              "nonbmand",
+              "exec",
+              "rstchown",
+              "xattr",
+              "atime",
+              "dev=2d50004"
+          ],
+          "size": "3.58 GiB",
+          "size_bytes": 3845860352,
+          "used": "51.50 KiB",
+          "used_bytes": 52736
+      },
+      "/system/contract": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "ctfs",
+          "filesystem": "ctfs",
+          "options": [
+              "dev=4600001"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/system/object": {
+          "available": "0 bytes",
+          "available_bytes": 0,
+          "capacity": "100%",
+          "device": "objfs",
+          "filesystem": "objfs",
+          "options": [
+              "dev=46c0001"
+          ],
+          "size": "0 bytes",
+          "size_bytes": 0,
+          "used": "0 bytes",
+          "used_bytes": 0
+      },
+      "/big": {
+          "available": "73.10 GiB",
+          "available_bytes": 78488877056,
+          "capacity": "0.00%",
+          "device": "big",
+          "filesystem": "zfs",
+          "options": [
+              "rw",
+              "devices",
+              "setuid",
+              "nonbmand",
+              "exec",
+              "rstchown",
+              "xattr",
+              "atime",
+              "dev=2d50005"
+          ],
+          "size": "73.10 GiB",
+          "size_bytes": 78488908800,
+          "used": "31.00 KiB",
+          "used_bytes": 31744
+      },
+      "/tmp": {
+          "available": "13.43 GiB",
+          "available_bytes": 14420922368,
+          "capacity": "0.03%",
+          "device": "swap",
+          "filesystem": "tmpfs",
+          "options": [
+              "xattr",
+              "dev=4680002"
+          ],
+          "size": "13.44 GiB",
+          "size_bytes": 14425808896,
+          "used": "4.66 MiB",
+          "used_bytes": 4886528
+      },
+      "/var/opt": {
+          "available": "73.10 GiB",
+          "available_bytes": 78488877056,
+          "capacity": "10.78%",
+          "device": "big/var_opt",
+          "filesystem": "zfs",
+          "options": [
+              "rw",
+              "devices",
+              "setuid",
+              "nonbmand",
+              "exec",
+              "rstchown",
+              "xattr",
+              "atime",
+              "dev=2d50006"
+          ],
+          "size": "81.93 GiB",
+          "size_bytes": 87968337920,
+          "used": "8.83 GiB",
+          "used_bytes": 9479460864
+      },
+      "/var/run": {
+          "available": "13.43 GiB",
+          "available_bytes": 14420922368,
+          "capacity": "0.00%",
+          "device": "swap",
+          "filesystem": "tmpfs",
+          "options": [
+              "xattr",
+              "dev=4680003"
+          ],
+          "size": "13.43 GiB",
+          "size_bytes": 14420983808,
+          "used": "60.00 KiB",
+          "used_bytes": 61440
+      }
+  },
+  "mtu_bnx0": 1496,
+  "mtu_e1000g0": 1500,
+  "mtu_e1000g0:1": 1500,
+  "mtu_e1000g1": 0,
+  "mtu_lo0": 8232,
+  "netmask": "255.255.254.0",
+  "netmask_bnx0": "255.255.254.0",
+  "netmask_e1000g0": "255.255.255.0",
+  "netmask_e1000g0:1": "255.0.0.0",
+  "netmask_e1000g1": "0.0.0.0",
+  "netmask_lo0": "255.0.0.0",
+  "network": "10.8.34.0",
+  "network_bnx0": "10.8.34.0",
+  "network_e1000g0": "10.16.100.0",
+  "network_e1000g0:1": "0.0.0.0",
+  "network_e1000g1": "0.0.0.0",
+  "network_lo0": "127.0.0.0",
+  "networking": {
+      "domain": "example.com",
+      "fqdn": "hostname",
+      "hostname": "hostname",
+      "interfaces": {
+          "bnx0": {
+              "bindings": [
+                  {
+                      "address": "10.8.34.65",
+                      "netmask": "255.255.254.0",
+                      "network": "10.8.34.0"
+                  }
+              ],
+              "ip": "10.8.34.65",
+              "mac": "78:e7:d1:ab:cd:fc",
+              "mtu": 1496,
+              "netmask": "255.255.254.0",
+              "network": "10.8.34.0"
+          },
+          "e1000g0": {
+              "bindings": [
+                  {
+                      "address": "10.16.100.224",
+                      "netmask": "255.255.255.0",
+                      "network": "10.16.100.0"
+                  }
+              ],
+              "ip": "10.16.100.224",
+              "mac": "00:15:17:10:20:fc",
+              "mtu": 1500,
+              "netmask": "255.255.255.0",
+              "network": "10.16.100.0"
+          },
+          "e1000g0:1": {
+              "bindings": [
+                  {
+                      "address": "0.0.0.0",
+                      "netmask": "255.0.0.0",
+                      "network": "0.0.0.0"
+                  }
+              ],
+              "ip": "0.0.0.0",
+              "mtu": 1500,
+              "netmask": "255.0.0.0",
+              "network": "0.0.0.0"
+          },
+          "e1000g1": {
+              "bindings": [
+                  {
+                      "address": "0.0.0.0",
+                      "netmask": "0.0.0.0",
+                      "network": "0.0.0.0"
+                  }
+              ],
+              "ip": "0.0.0.0",
+              "mtu": 0,
+              "netmask": "0.0.0.0",
+              "network": "0.0.0.0"
+          },
+          "lo0": {
+              "bindings": [
+                  {
+                      "address": "127.0.0.1",
+                      "netmask": "255.0.0.0",
+                      "network": "127.0.0.0"
+                  }
+              ],
+              "ip": "127.0.0.1",
+              "mtu": 8232,
+              "netmask": "255.0.0.0",
+              "network": "127.0.0.0"
+          }
+      },
+      "ip": "10.8.34.65",
+      "mac": "78:e7:d1:ab:cd:fc",
+      "mtu": 1496,
+      "netmask": "255.255.254.0",
+      "network": "10.8.34.0",
+      "primary": "bnx0"
+  },
+  "operatingsystem": "Solaris",
+  "operatingsystemmajrelease": "10",
+  "operatingsystemrelease": "10_u8",
+  "opt_mqm_dir": false,
+  "os": {
+      "architecture": "i86pc",
+      "family": "Solaris",
+      "hardware": "i86pc",
+      "name": "Solaris",
+      "release": {
+          "full": "10_u8",
+          "major": "10",
+          "minor": "8"
+      }
+  },
+  "osfamily": "Solaris",
+  "package_provider": "sun",
+  "path": "/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/sfw/bin:/usr/local/sbin:/opt/puppet/bin:/sbin",
+  "pe_concat_basedir": "/opt/puppetlabs/puppet/cache/pe_concat",
+  "physicalprocessorcount": 2,
+  "platform_symlink_writable": true,
+  "platform_tag": "solaris-10-i386",
+  "processor0": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor1": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor10": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor11": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor12": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor13": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor14": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor15": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor2": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor3": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor4": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor5": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor6": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor7": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor8": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processor9": "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+  "processorcount": 16,
+  "processors": {
+      "count": 16,
+      "isa": "i386",
+      "models": [
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz",
+          "Intel(r) Xeon(r) CPU           X5570  @ 2.93GHz"
+      ],
+      "physicalcount": 2,
+      "speed": "2.93 GHz"
+  },
+  "productname": "ProLiant DL360 G6",
+  "puppet_agent_pid": 21109,
+  "puppet_bin_dir": "/usr/local/bin",
+  "puppet_client_datadir": "/opt/puppetlabs/puppet/cache/client_data",
+  "puppet_confdir": "/etc/puppetlabs/puppet",
+  "puppet_config": "/etc/puppetlabs/puppet/puppet.conf",
+  "puppet_environmentpath": "/etc/puppetlabs/code/environments",
+  "puppet_files_dir_present": false,
+  "puppet_inventory_metadata": {
+      "packages": {
+          "collection_enabled": true,
+          "last_collection_time": "1.0074s"
+      }
+  },
+  "puppet_master_server": "puppet",
+  "puppet_server": "puppet",
+  "puppet_ssldir": "/etc/puppetlabs/puppet/ssl",
+  "puppet_sslpaths": {
+      "certdir": {
+          "path": "/etc/puppetlabs/puppet/ssl/certs",
+          "path_exists": true
+      },
+      "hostcrl": {
+          "path": "/etc/puppetlabs/puppet/ssl/crl.pem",
+          "path_exists": true
+      },
+      "privatedir": {
+          "path": "/etc/puppetlabs/puppet/ssl/private",
+          "path_exists": true
+      },
+      "privatekeydir": {
+          "path": "/etc/puppetlabs/puppet/ssl/private_keys",
+          "path_exists": true
+      },
+      "publickeydir": {
+          "path": "/etc/puppetlabs/puppet/ssl/public_keys",
+          "path_exists": true
+      },
+      "requestdir": {
+          "path": "/etc/puppetlabs/puppet/ssl/certificate_requests",
+          "path_exists": true
+      }
+  },
+  "puppet_stringify_facts": false,
+  "puppet_vardir": "/opt/puppetlabs/puppet/cache",
+  "puppetversion": "5.3.5",
+  "pxe_server": "10.8.34.6",
+  "root_home": "/root",
+  "ruby": {
+      "platform": "i386-solaris2.10",
+      "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+      "version": "2.4.3"
+  },
+  "rubyplatform": "i386-solaris2.10",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+  "rubyversion": "2.4.3",
+  "samba_file_present": true,
+  "serial_port_ttya": "disabled",
+  "serial_port_ttyb": "disabled",
+  "serialnumber": "URE768W6C4",
+  "service_provider": "smf",
+  "solaris_zones": {
+      "current": "global",
+      "zones": {
+          "global": {
+              "brand": "native",
+              "id": "0",
+              "ip_type": "shared",
+              "path": "/",
+              "status": "running"
+          }
+      }
+  },
+  "ssh": {
+      "dsa": {
+          "fingerprints": {
+              "sha1": "SSHFP 2 1 96604d959911b390d404832fc13802f66c87d8cc",
+              "sha256": "SSHFP 2 2 38c8addd7147ff65042026bda6b20a55ed967d4a0c86a57aec93a3d9b7594f9a"
+          },
+          "key": "AAAAB3NzaC1kc3MAAACBAN4CK2Pa9kVVML1xVd5f0DyzKAzTE+2AnnrrA+LVkgTBHDfVSsKrtJYFpDJ9kwjPPUe9p+LDEgimSOdGpx1noxetyi77Dg+lthuhKV0Yyyon10i+QUqxS3pQw6Izq2ZpgKIlxI/Q4XP+T36q0/icCwEjB38ohyjlQcwDIubean6BAAAAFQCbaR+HrGRWwi4Lr2W3w1yOTU403wAAAIAF+8KGZpXhdCKM0Z+P4it5Tl1aK8dNM3NaLplxwuegfkH8eNiKnEiUGxi375sdKC30wW4pOWBqGoaUv46HV4Nya820DLEpCmYpMi+WprkbM9Sk6kYYh+iHD41RqOD0dzeBs3C7jlhRqCOuLUE5VbC5R2wUNKaYTzNAD0RYeJV2qAAAAIEAyxnC23/rngY3IyihLEPiViI7QAo7tyiGASRYcJgT8AQE0mBeGm3QX2Ku5uPe24cJlOihpGPWena5XBqJFIRx6cy8rXVyJyrAGYXFxur7qpoEu3sTT0kOYQIyIQdV8qsi9gig+JBtGj2k24Sb+p1RM2YQWOIXNYcCuKpjd9+BKA4="
+      },
+      "rsa": {
+          "fingerprints": {
+              "sha1": "SSHFP 1 1 ea34dc74e8a1f79782cb5b3069e06105af41d876",
+              "sha256": "SSHFP 1 2 5e4ebbb344cde35d493340b17fce4006023279532b14c252aa3b3d22416fceee"
+          },
+          "key": "AAAAB3NzaC1yc2EAAAABIwAAAIEAtc0D2uVWgfO5xVEkopMnc9+MTJkyxjfRpGPcyfgwKEdnucr7RpJRR1jxJkuaOxEump0iywTtPuDLKV4j2wWdzWnzljnuVV8oXdZ4pajBtBOJwka+7EBL8VVQRM4rcHo6h+JqmuAKSsICennfa9yojH3SX8B4CgfL664Tm3sdS/M="
+      }
+  },
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAN4CK2Pa9kVVML1xVd5f0DyzKAzTE+2AnnrrA+LVkgTBHDfVSsKrtJYFpDJ9kwjPPUe9p+LDEgimSOdGpx1noxetyi77Dg+lthuhKV0Yyyon10i+QUqxS3pQw6Izq2ZpgKIlxI/Q4XP+T36q0/icCwEjB38ohyjlQcwDIubean6BAAAAFQCbaR+HrGRWwi4Lr2W3w1yOTU403wAAAIAF+8KGZpXhdCKM0Z+P4it5Tl1aK8dNM3NaLplxwuegfkH8eNiKnEiUGxi375sdKC30wW4pOWBqGoaUv46HV4Nya820DLEpCmYpMi+WprkbM9Sk6kYYh+iHD41RqOD0dzeBs3C7jlhRqCOuLUE5VbC5R2wUNKaYTzNAD0RYeJV2qAAAAIEAyxnC23/rngY3IyihLEPiViI7QAo7tyiGASRYcJgT8AQE0mBeGm3QX2Ku5uPe24cJlOihpGPWena5XBqJFIRx6cy8rXVyJyrAGYXFxur7qpoEu3sTT0kOYQIyIQdV8qsi9gig+JBtGj2k24Sb+p1RM2YQWOIXNYcCuKpjd9+BKA4=",
+  "sshfp_dsa": "SSHFP 2 1 96604d959911b390d404832fc13802f66c87d8cc\nSSHFP 2 2 38c8addd7147ff65042026bda6b20a55ed967d4a0c86a57aec93a3d9b7594f9a",
+  "sshfp_rsa": "SSHFP 1 1 ea34dc74e8a1f79782cb5b3069e06105af41d876\nSSHFP 1 2 5e4ebbb344cde35d493340b17fce4006023279532b14c252aa3b3d22416fceee",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAABIwAAAIEAtc0D2uVWgfO5xVEkopMnc9+MTJkyxjfRpGPcyfgwKEdnucr7RpJRR1jxJkuaOxEump0iywTtPuDLKV4j2wWdzWnzljnuVV8oXdZ4pajBtBOJwka+7EBL8VVQRM4rcHo6h+JqmuAKSsICennfa9yojH3SX8B4CgfL664Tm3sdS/M=",
+  "staging_http_get": "curl",
+  "swapfree": "4.00 GiB",
+  "swapfree_mb": 4095.99609375,
+  "swapsize": "4.00 GiB",
+  "swapsize_mb": 4095.99609375,
+  "system_uptime": {
+      "days": 635,
+      "hours": 15258,
+      "seconds": 54931920,
+      "uptime": "635 days"
+  },
+  "timezone": "EDT",
+  "tkservice": true,
+  "uptime": "635 days",
+  "uptime_days": 635,
+  "uptime_hours": 15258,
+  "uptime_seconds": 54931920,
+  "uuid": "34383333-3834-3553-4530-33333e335432",
+  "virtual": "physical",
+  "xppxe_server": "10.8.34.9",
+  "zfs_featurenumbers": "1,2,3,4,5",
+  "zfs_version": "5",
+  "zfscachesize": "1FFCAAAAA",
+  "zone_global_brand": "native",
+  "zone_global_id": "0",
+  "zone_global_iptype": "shared",
+  "zone_global_name": "global",
+  "zone_global_path": "/",
+  "zone_global_status": "running",
+  "zonename": "global",
+  "zones": 1,
+  "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32",
+  "zpool_version": "32"
+}
