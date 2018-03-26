@@ -5,7 +5,6 @@ describe 'FacterDB' do
   describe 'database' do
 
     before(:each) do
-      stub_const("File::PATH_SEPARATOR", ":")
       ENV['FACTERDB_SKIP_DEFAULTDB'] = nil
       FacterDB.instance_variable_set(:@database, nil)
     end
