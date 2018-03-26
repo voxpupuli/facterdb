@@ -11,6 +11,34 @@ RSpec::Matchers.define :have_a_unique_hash do
   end
 end
 
+RSpec::Matchers.define :be_valid_json do
+  match do |actual|
+    content = File.open(actual, 'rb') { |file| file.read }
+    valid = false
+    begin
+      obj = JSON.parse(content)
+      valid = true
+    rescue JSON::ParserError => e
+      raise "Invalid JSON file #{actual}.\n#{e}"
+    end
+  end
+
+  failure_message do |actual|
+    "expected that fact file #{actual} was a valid JSON file."
+  end
+end
+
+RSpec::Matchers.define :have_facter_version do |expected_facter_version, filepath|
+  match do |actual|
+    # Simple but naive regex check
+    actual =~ /^#{expected_facter_version}($|\.)/
+  end
+
+  failure_message do |actual|
+    "expected that fact file #{filepath} with facter version #{actual} had a facter version that matched #{expected_facter_version}"
+  end
+end
+
 describe 'Default Facts' do
   before(:each) do
     ENV['FACTERDB_SKIP_DEFAULTDB'] = nil
@@ -29,6 +57,24 @@ describe 'Default Facts' do
 
       file_hashes.keys.each do |file_hash|
         expect(file_hashes[file_hash]).to have_a_unique_hash
+      end
+    end
+
+    it 'should contain fact sets which match are valid JSON' do
+      FacterDB.default_fact_files.each do |filepath|
+        expect(filepath).to be_valid_json
+      end
+    end
+
+    xit 'should contain fact sets which match the facter version' do
+      FacterDB.default_fact_files.each do |filepath|
+        facter_dir_path = File.basename(File.dirname(filepath))
+
+        content = File.open(filepath, 'rb') { |file| file.read }
+        obj = JSON.parse(content)
+        file_facter_version = obj['facterversion']
+
+        expect(file_facter_version).to have_facter_version(facter_dir_path, filepath)
       end
     end
   end
