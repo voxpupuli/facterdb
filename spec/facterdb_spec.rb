@@ -3,6 +3,10 @@ require 'spec_helper'
 describe 'FacterDB' do
 
   describe 'database' do
+    let(:facts_24_path)  { File.join(project_dir, 'facts', '2.4') }
+    let(:facts_24_count) { Dir.glob(File.join(facts_24_path,'*.facts')).count }
+    let(:facts_23_path)  { File.join(project_dir, 'facts', '2.3') }
+    let(:facts_23_count) { Dir.glob(File.join(facts_23_path,'*.facts')).count }
 
     before(:each) do
       ENV['FACTERDB_SKIP_DEFAULTDB'] = nil
@@ -19,19 +23,18 @@ describe 'FacterDB' do
     end
 
     it '#external_fact_files with env variable' do
-      ENV['FACTERDB_SEARCH_PATHS'] = File.join(project_dir, 'facts', '2.4')
-      expect(FacterDB.external_fact_files.count).to be >= 50
+      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
+      expect(FacterDB.external_fact_files.count).to eq(facts_24_count)
     end
 
     it '#external_fact_files with env variable and multiple paths' do
-      ENV['FACTERDB_SEARCH_PATHS'] = [File.join(project_dir, 'facts', '2.4'), File.join(project_dir, 'facts', '2.3')].join(File::PATH_SEPARATOR)
-      expect(FacterDB.external_fact_files.count).to be >= 150
+      ENV['FACTERDB_SEARCH_PATHS'] = [facts_24_path, facts_23_path].join(File::PATH_SEPARATOR)
+      expect(FacterDB.external_fact_files.count).to eq(facts_24_count + facts_23_count)
     end
 
     it '#external_fact_files with argument' do
       ENV['FACTERDB_SEARCH_PATHS'] = nil
-      path = File.join(project_dir, 'facts', '2.4')
-      expect(FacterDB.external_fact_files(path).count).to be >= 102
+      expect(FacterDB.external_fact_files(facts_24_path).count).to eq(facts_24_count)
     end
 
     it '#external_fact_files without argument or env variable' do
@@ -40,11 +43,12 @@ describe 'FacterDB' do
     end
 
     it '#default_fact_files' do
+      # This test is a little naive but works
       expect(FacterDB.default_fact_files.count).to be >= 1000
     end
 
     it '#facterdb_fact_files' do
-      ENV['FACTERDB_SEARCH_PATHS'] = File.join(project_dir, 'facts', '2.4')
+      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
       external_count = FacterDB.external_fact_files.count
       internal_count = FacterDB.default_fact_files.count
       # because we call unique on the array we remove the duplicates which skews this test
@@ -58,7 +62,7 @@ describe 'FacterDB' do
     end
 
     it '#database with external paths' do
-      ENV['FACTERDB_SEARCH_PATHS'] = File.join(project_dir, 'facts', '2.4')
+      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
       # to be an incomprehensible string
       expect(FacterDB.database).to be_a String
     end
@@ -78,19 +82,19 @@ describe 'FacterDB' do
       end
 
       it '#external_fact_files with env variable and multiple paths' do
-        ENV['FACTERDB_SEARCH_PATHS'] = [File.join(project_dir, 'facts', '2.4').gsub('/', '\\'), File.join(project_dir, 'facts', '2.3').gsub('/', '\\')].join(File::PATH_SEPARATOR)
-        expect(FacterDB.external_fact_files.count).to be >= 150
+        ENV['FACTERDB_SEARCH_PATHS'] = [facts_24_path.gsub('/', '\\'), facts_23_path.gsub('/', '\\')].join(File::PATH_SEPARATOR)
+        expect(FacterDB.external_fact_files.count).to eq(facts_24_count + facts_23_count)
       end
 
       it '#external_fact_files with env variable' do
-        ENV['FACTERDB_SEARCH_PATHS'] = File.join(project_dir, 'facts', '2.4').gsub('/', '\\')
-        expect(FacterDB.external_fact_files.count).to be >= 50
+        ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path.gsub('/', '\\')
+        expect(FacterDB.external_fact_files.count).to eq(facts_24_count)
       end
 
       it '#external_fact_files with argument' do
         ENV['FACTERDB_SEARCH_PATHS'] = nil
-        path = File.join(project_dir, 'facts', '2.4').gsub('/', '\\')
-        expect(FacterDB.external_fact_files(path).count).to be >= 102
+        path = facts_24_path.gsub('/', '\\')
+        expect(FacterDB.external_fact_files(path).count).to eq(facts_24_count)
       end
     end
   end
