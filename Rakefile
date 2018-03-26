@@ -53,7 +53,20 @@ def factset_to_os_label(fs)
   elsif os_name =~ /^(Solaris)/
     label = "#{os_name} #{os__rel.split('.')[1]}"
   elsif os_name =~ /^windows$/
-    label = "#{os_name} #{os__rel.sub('6.3.9600','2012 R2').sub('6.1.7600','2008 R2')}"
+    db_filename = fs[:_facterdb_filename] || 'there_is_no_filename'
+    if db_filename =~ /windows-10-/
+      label = "Windows #{os__rel}"
+    elsif db_filename =~ /windows-7-/
+      label = "Windows 7"
+    elsif db_filename =~ /windows-8[\d.]*-/
+      label = "Windows #{os__rel.sub('6.2.9200','8').sub('6.3.9600','8.1')}"
+    elsif db_filename =~ /windows-.+-core-/
+      label = "Windows Server #{os__rel.sub('6.3.9600','2012 R2')} Core"
+    elsif db_filename =~ /windows-2008/ || db_filename =~ /windows-2012/ || db_filename =~ /windows-2016/
+      label = "Windows Server #{os__rel.sub('6.1.7600','2008 R2').sub('6.3.9600','2012 R2')}"
+    else
+      label = "#{os_name} #{os__rel}"
+    end
   end
 
   label
@@ -62,7 +75,13 @@ end
 desc 'generate a markdown table of Facter/OS coverage (for the README)'
 task :table do
   require_relative 'lib/facterdb'
+  # Turn on the source injection
+  old_env = ENV['FACTERDB_INJECT_SOURCE']
+  ENV['FACTERDB_INJECT_SOURCE'] = 'true'
   factsets = FacterDB.get_facts()
+  # Restore the source injection
+  ENV['FACTERDB_INJECT_SOURCE'] = old_env
+
   facter_versions = factsets.map{ |x| x[:facterversion][0..2] }.uniq.sort
   os_facter_matrix = {}
 

@@ -5,7 +5,7 @@ module FacterDB
 
   # @return [String] -  returns a giant incomprehensible string of concatenated json data
   def self.database
-    @database ||= "[#{facterdb_fact_files.map { |f| File.read(f) }.join(',')}]\n"
+    @database ||= "[#{facterdb_fact_files.map { |f| read_json_file(f) }.join(',')}]\n"
   end
 
   # @return [Boolean] - returns true if we should use the default facterdb database, false otherwise
@@ -14,6 +14,25 @@ module FacterDB
   def self.use_defaultdb?
     ENV['FACTERDB_SKIP_DEFAULTDB'].nil?
   end
+
+  # @return [Boolean] - returns true if we should inject the source file name and file path into the json factsets.
+  # The default is false.
+  def self.inject_source?
+    !ENV['FACTERDB_INJECT_SOURCE'].nil?
+  end
+
+  def self.read_json_file(f)
+    content = File.read(f)
+    return content unless inject_source?
+    # Find the opening brace
+    first_brace = content.index('{')
+    return content if first_brace.nil?
+    # Inject source file information
+    json_injection =  "\"_facterdb_filename\": #{File.basename(f).to_json}, "
+    json_injection += "\"_facterdb_path\": #{File.expand_path(f).to_json}, "
+    content.insert(first_brace + 1, json_injection)
+  end
+  private_class_method :read_json_file
 
   # @return [Array[String]] -  list of all files found in the default facterdb facts path
   def self.default_fact_files
