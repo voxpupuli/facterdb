@@ -66,7 +66,7 @@ describe 'Default Facts' do
       end
     end
 
-    xit 'should contain fact sets which match the facter version' do
+    it 'should contain fact sets which match the facter version' do
       FacterDB.default_fact_files.each do |filepath|
         facter_dir_path = File.basename(File.dirname(filepath))
 
