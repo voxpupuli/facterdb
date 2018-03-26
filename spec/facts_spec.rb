@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'digest'
 
-RSpec::Matchers.define :have_a_unique_hash do |expected|
+RSpec::Matchers.define :have_a_unique_hash do
   match do |actual|
     actual.count == 1
   end
@@ -18,7 +18,7 @@ describe 'Default Facts' do
   end
 
   describe 'fact files' do
-    xit 'should not contain duplicate fact sets' do
+    it 'should not contain duplicate fact sets' do
       # Gather all of the default files and hash the content
       file_hashes = {}
       FacterDB.default_fact_files.each do |filepath|
