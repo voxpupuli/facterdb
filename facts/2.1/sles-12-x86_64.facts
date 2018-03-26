@@ -1,22 +1,9 @@
 {
-  "gem_version": "~> 2.2.0",
+  "gem_version": "~> 2.1.0",
   "kernelversion": "3.12.62",
   "physicalprocessorcount": "1",
   "domain": "example.com",
-  "processors": {
-    "models": [
-      "Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz"
-    ],
-    "count": 1,
-    "physicalcount": 1
-  },
   "hardwaremodel": "x86_64",
-  "system_uptime": {
-    "seconds": 285,
-    "hours": 0,
-    "days": 0,
-    "uptime": "0:04 hours"
-  },
   "kernel": "Linux",
   "boardmanufacturer": "Oracle Corporation",
   "boardproductname": "VirtualBox",
@@ -33,20 +20,11 @@
   "is_virtual": "true",
   "architecture": "x86_64",
   "operatingsystem": "SLES",
-  "os": {
-    "name": "SLES",
-    "family": "Suse",
-    "release": {
-      "major": "12",
-      "minor": "1",
-      "full": "12.1"
-    }
-  },
   "kernelmajversion": "3.12",
   "id": "root",
   "uptime_days": 0,
-  "uptime_seconds": 285,
-  "facterversion": "2.2.0",
+  "uptime_seconds": 280,
+  "facterversion": "2.1.0",
   "hostname": "foo",
   "interfaces": "eth0,lo",
   "ipaddress_eth0": "10.0.2.15",
@@ -67,20 +45,18 @@
   "sshfp_ed25519": "SSHFP 4 1 9d3394edc2a23156880b1def37eb0cde2c80c4da\nSSHFP 4 2 0444f10c9f85a74a3718a30c16bd6da63b56ed32d2f74cb7bc156a4b82071a13",
   "operatingsystemrelease": "12.1",
   "hardwareisa": "x86_64",
-  "operatingsystemmajrelease": "12",
   "uptime_hours": 0,
-  "gid": "root",
   "kernelrelease": "3.12.62-60.64.8-default",
   "network_eth0": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "memorysize": "489.25 MB",
-  "memoryfree": "402.84 MB",
+  "memoryfree": "404.24 MB",
   "swapsize": "0.00 MB",
   "swapfree": "0.00 MB",
   "swapsize_mb": "0.00",
   "swapfree_mb": "0.00",
   "memorysize_mb": "489.25",
-  "memoryfree_mb": "402.84",
+  "memoryfree_mb": "404.24",
   "timezone": "UTC",
   "uptime": "0:04 hours",
   "filesystems": "ext2,ext3,ext4,squashfs",
@@ -104,7 +80,7 @@
       "uuid": "dcf2494f-2b02-466b-aa2c-9e7c01bdbdd7",
       "size": "104855552",
       "mount": "/",
-      "filesystem": "ext3"
+      "filesystem": "ext3\" PARTUUID=\"3aa231e6-01"
     }
   },
   "netmask": "255.255.255.0"
