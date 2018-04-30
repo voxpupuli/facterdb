@@ -1,5 +1,14 @@
 # Change Log
 
+## [0.5.2](https://rubygems.org/gems/facterdb/versions/0.5.2) (2018-04-30)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.1...0.5.2)
+
+**Merged pull requests:**
+
+- add Ubuntu 18.04 facts [\#82](https://github.com/camptocamp/facterdb/pull/82) ([bastelfreak](https://github.com/bastelfreak))
+- \(maint\) Add `rake table` task + update README.md + better Windows detection [\#76](https://github.com/camptocamp/facterdb/pull/76) ([glennsarti](https://github.com/glennsarti))
+- Added Solaris 10 facts on Facter 3.9 [\#75](https://github.com/camptocamp/facterdb/pull/75) ([sirinek](https://github.com/sirinek))
+
 ## [0.5.1](https://rubygems.org/gems/facterdb/versions/0.5.1) (2018-03-06)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.0...0.5.1)
 
