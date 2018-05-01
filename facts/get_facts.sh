@@ -32,7 +32,7 @@ case "${osfamily}" in
   rpm -ivh /tmp/puppetlabs-release-pc1.rpm
   for puppet_agent_version in 1.5.3-1 1.6.0-1 1.6.1-1 1.6.2-1 1.7.0-1; do
     dnf install -y "puppet-agent-${puppet_agent_version}.fedoraf${operatingsystemmajrelease}"
-    output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
     facter --show-legacy -p -j | tee ${output_file}
   done
@@ -42,7 +42,7 @@ case "${osfamily}" in
   rpm -ivh /tmp/puppetlabs-release-pc1.rpm
   for puppet_agent_version in 1.2.2 1.4.2 1.5.3 1.10.4; do
     yum install -y puppet-agent-${puppet_agent_version}
-    output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
     facter --show-legacy -p -j | tee ${output_file}
   done
@@ -61,7 +61,7 @@ case "${osfamily}" in
   apt-get update
   for puppet_agent_version in 1.2.2 1.4.2 1.5.3; do
     apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
-    output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
     facter --show-legacy -p -j | tee ${output_file}
   done
@@ -70,7 +70,7 @@ case "${osfamily}" in
 'FreeBSD')
   pkg update
   pkg install -y sysutils/puppet5 sysutils/facter
-  output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
   ;;
@@ -81,7 +81,7 @@ case "${osfamily}" in
     zypper --gpg-auto-import-keys --non-interactive refresh
     for puppet_agent_version in 1.6.2 1.7.2 1.8.3 1.9.3 1.10.8; do
       zypper --non-interactive install puppet-agent-${puppet_agent_version}
-      output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
       mkdir -p $(dirname ${output_file})
       facter --show-legacy -p -j | tee ${output_file}
     done
@@ -89,7 +89,7 @@ case "${osfamily}" in
     rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-sles-12.noarch.rpm
     for puppet_agent_version in 5.0.1 5.1.0 5.2.0 5.3.2; do
       zypper --non-interactive install puppet-agent-${puppet_agent_version}
-      output_file="/vagrant/$(facter --version | cut -c1-3)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
       mkdir -p $(dirname ${output_file})
       facter --show-legacy -p -j | tee ${output_file}
     done
@@ -114,10 +114,10 @@ for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   case "${operatingsystem}" in
     openbsd)
-      output_file="/vagrant/$(bundle exec facter --version | cut -c1-3)/${operatingsystem}-${operatingsystemrelease}-${hardwaremodel}.facts"
+      output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemrelease}-${hardwaremodel}.facts"
       ;;
     *)
-      output_file="/vagrant/$(bundle exec facter --version | cut -c1-3)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
+      output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
       ;;
   esac
   mkdir -p $(dirname $output_file)
