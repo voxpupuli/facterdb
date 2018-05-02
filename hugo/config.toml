@@ -116,14 +116,14 @@ FacterDB::get_facts()
       ]
 
     [[params.about.item]]
-      name = "Conplicity"
-      position = "Automatic backups for Docker containers"
+      name = "Bivac"
+      position = "Backup Interface for Volumes Attached to Containers"
       description = ""
-      img = "conplicity.png"
-      alt = "Conplicity"
+      img = "bivac.png"
+      alt = "Bivac"
       social = [
-        ["icon-globe", "https://camptocamp.github.io/conplicity"],
-        ["icon-github", "https://github.com/camptocamp/conplicity"]
+        ["icon-globe", "https://camptocamp.github.io/bivac"],
+        ["icon-github", "https://github.com/camptocamp/bivac"]
       ]
 
     [[params.about.item]]
