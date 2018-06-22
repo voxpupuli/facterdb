@@ -17,7 +17,7 @@ elif test -f /usr/bin/dnf; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
   osfamily='Fedora'
 elif test -f /usr/bin/yum; then
-  operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f4 | cut -c1)
+  operatingsystemmajrelease=$(cat /etc/redhat-release | sed 's/[^0-9.]//g' | cut -d'.' -f1)
   osfamily='RedHat'
 elif test -f '/usr/bin/pacman'; then
   operatingsystemmajrelease=3
