@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.hostname = "foo.example.com"
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
 
   config.vm.define "debian-6-x86_64" do |host|
     host.vm.box = "puppetlabs/debian-6.0.10-64-nocm"
@@ -23,10 +24,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "debian-8-x86_64" do |host|
-    host.vm.box = "camptocamp/debian-8-amd64"
-    host.vm.provision "shell", inline: "apt-get update && apt-get install -y curl"
-    host.vm.provision "shell", inline: "curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \\curl -sSL https://get.rvm.io | bash -s stable"
-    host.vm.provision "shell", inline: "source /etc/profile.d/rvm.sh && rvm install 1.9.3 && rvm use --create 1.9.3"
+    host.vm.box = "debian/jessie64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "debian-9-x86_64" do |host|
+    host.vm.box = "debian/stretch64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
