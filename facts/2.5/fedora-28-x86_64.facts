@@ -1,0 +1,152 @@
+{
+  "disks": {
+    "sda": {
+      "model": "TOSHIBA DT01ACA0",
+      "size": "465.76 GiB",
+      "size_bytes": 500107862016,
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "05/06/2014",
+      "vendor": "Dell Inc.",
+      "version": "1.1.4"
+    },
+    "board": {
+      "manufacturer": "Dell Inc.",
+      "product": "081N4V",
+      "serial_number": "..CN747514AN1114."
+    },
+    "chassis": {
+      "type": "Rack Mount Chassis"
+    },
+    "manufacturer": "Dell Inc.",
+    "product": {
+      "name": "PowerEdge R220",
+      "serial_number": "4FHH842",
+      "uuid": "4C4C4544-0046-4810-8048-B4C04F383432"
+    }
+  },
+  "facterversion": "2.5.0",
+  "filesystems": "ext2,ext3,ext4,xfs",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": false,
+  "kernel": "Linux",
+  "kernelmajversion": "4.16",
+  "kernelrelease": "4.16.3-301.fc28.x86_64",
+  "kernelversion": "4.16.3",
+  "load_averages": {
+    "15m": 0.0,
+    "1m": 0.03,
+    "5m": 0.01
+  },
+  "memory": {
+    "swap": {
+      "available": "7.96 GiB",
+      "available_bytes": 8545366016,
+      "capacity": "0.52%",
+      "total": "8.00 GiB",
+      "total_bytes": 8589930496,
+      "used": "42.50 MiB",
+      "used_bytes": 44564480
+    },
+    "system": {
+      "available": "14.71 GiB",
+      "available_bytes": 15796256768,
+      "capacity": "5.09%",
+      "total": "15.50 GiB",
+      "total_bytes": 16643530752,
+      "used": "808.02 MiB",
+      "used_bytes": 847273984
+    }
+  },
+  "operatingsystem": "Fedora",
+  "operatingsystemrelease": "28",
+  "operatingsystemmajrelease": "28",
+  "os": {
+    "architecture": "x86_64",
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "Fedora",
+    "release": {
+      "full": "28",
+      "major": "28"
+    },
+    "selinux": {
+      "config_mode": "enforcing",
+      "config_policy": "targeted",
+      "current_mode": "enforcing",
+      "enabled": true,
+      "enforced": true,
+      "policy_version": "31"
+    }
+  },
+  "partitions": {
+  "sda1": {
+    "uuid": "05bda966-b760-48f7-9931-af00cdc948db",
+    "size": "134215680",
+    "mount": "/",
+    "label": "root",
+    "filesystem": "ext4"
+  },
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin",
+  "processors": {
+    "count": 8,
+    "isa": "x86_64",
+    "models": [
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz",
+      "Intel(R) Xeon(R) CPU E3-1271 v3 @ 3.60GHz"
+    ],
+    "physicalcount": 1,
+    "speed": "4.00 GHz"
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/usr/local/share/ruby/site_ruby",
+    "version": "2.5.1"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 793e0e1f9ec7915878ea231e23b8002d68d948c7",
+        "sha256": "SSHFP 3 2 de4d5ab57e61093ed17b346d9e7bd95419c20e1b229e44d7caf3052a9df1df34"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHKwrQwYg7rZF/SlwlU2fVaEpxZ0/WNAv85zaGC2ntvimNnnZKardo0iPUirmgf7X/RuiH0lfJIK2n4DRFJk/0I="
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 6e34c1261572a191f1260fae8140fa162ec1ad69",
+        "sha256": "SSHFP 4 2 970e1daff0360e8602e1f19f3e2d2d975c4e41f28dde15bdaa7c4957db839658"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAILzuOqnufASbAQe1mTywR8aFtP3RdqIETtxNrzc1hJWE"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 4267f8a866cc6cb0e61bf584b51e64fc89f5c887",
+        "sha256": "SSHFP 1 2 a21b73586a319be898325416806e1a714c9a918514605d1c0c4ce690df2ac5e8"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDXn74W0jxNmxq9tYIxU3jrlLad3y+spSfSlw3UeRlTvgbV8mGC8PNilodw1KwpcKtl3Sy56nnIjY6ReQMNHUYTFUgztid7Q9vETiAbYuoAZl2y5r5bdZEkp2HsA2s2qy0X/Bwn2JWAVx3daOUvxnWHcv1U6D0dNHnqwVBtYCO4bv32YrHdthcB/aEPwlxw7ewa5r4vmODCCuG+Nt/y63Rapi6+CaemqTZoALZNoGGKCoTibNblS4nYenX/kYovfdInNZTj7zIWK6lWW8YbnIZ0uFFZ97jk4Uc8w8NR0URQaeczx4L6jSw21qp+5GmnnlWAnCBZfDPwWQtkA6SyAqrR"
+    }
+  },
+  "system_uptime": {
+    "days": 90,
+    "hours": 2181,
+    "seconds": 7852387,
+    "uptime": "90 days"
+  },
+  "timezone": "EDT",
+  "virtual": "physical"
+}
