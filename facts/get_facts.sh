@@ -22,6 +22,8 @@ elif test -f /usr/bin/yum; then
 elif test -f '/usr/bin/pacman'; then
   operatingsystemmajrelease=3
   osfamily='Archlinux'
+elif test -f '/etc/gentoo-release'; then
+  osfamily='Gentoo'
 else
   osfamily=$(uname)
 fi
@@ -109,6 +111,9 @@ case "${osfamily}" in
   ;;
 'Archlinux')
   pacman -Syu --noconfirm ruby puppet ruby-bundler
+  ;;
+'Gentoo')
+  emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet
 esac
 
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')

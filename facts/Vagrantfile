@@ -240,7 +240,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "gentoo-x86_64" do |host|
-    host.vm.box = "cmiles/gentoo-amd64-minimal"
+    host.vm.box = "generic/gentoo"
+    host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "emerge-webrsync && emerge app-crypt/gnupg net-misc/curl"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
