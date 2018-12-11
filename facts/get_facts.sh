@@ -17,7 +17,7 @@ elif test -f /usr/bin/dnf; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
   osfamily='Fedora'
 elif test -f /usr/bin/yum; then
-  operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f4 | cut -c1)
+  operatingsystemmajrelease=$(cat /etc/redhat-release | sed 's/[^0-9.]//g' | cut -d'.' -f1)
   osfamily='RedHat'
 elif test -f '/usr/bin/pacman'; then
   operatingsystemmajrelease=3
@@ -65,6 +65,14 @@ case "${osfamily}" in
     mkdir -p $(dirname ${output_file})
     facter --show-legacy -p -j | tee ${output_file}
   done
+  wget "http://yum.puppetlabs.com/puppet5/puppet5-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet5-release.rpm
+  rpm -ivh /tmp/puppet5-release.rpm
+  for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.3; do
+    yum install -y puppet-agent-${puppet_agent_version}
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    mkdir -p $(dirname ${output_file})
+    facter --show-legacy -p -j | tee ${output_file}
+  done
   ;;
 
 'Debian')
@@ -79,6 +87,15 @@ case "${osfamily}" in
   dpkg --install /tmp/puppetlabs-release-pc1.deb
   apt-get update
   for puppet_agent_version in 1.2.2 1.4.2 1.5.3; do
+    apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    mkdir -p $(dirname ${output_file})
+    facter --show-legacy -p -j | tee ${output_file}
+  done
+  wget "https://apt.puppetlabs.com/puppet5-release-${lsbdistcodename}.deb" -O /tmp/puppet5-release.deb
+  dpkg --install /tmp/puppet5-release.deb
+  apt-get update
+  for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.3; do
     apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
@@ -147,3 +164,4 @@ for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | tee $output_file
 done
+
