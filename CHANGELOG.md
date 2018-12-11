@@ -1,5 +1,25 @@
 # Change Log
 
+## [0.5.2](https://rubygems.org/gems/facterdb/versions/0.5.2) (2018-12-11)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.2...0.5.2)
+
+**Closed issues:**
+
+- Git+SSH Url broken Travis CI [\#92](https://github.com/camptocamp/facterdb/issues/92)
+- facts/2.5/fedora-28-x86\_64.facts broken [\#91](https://github.com/camptocamp/facterdb/issues/91)
+- Add facter 2.5 Gentoo facts [\#90](https://github.com/camptocamp/facterdb/issues/90)
+- Code doesnt handle facter point versions with 2 digits  [\#83](https://github.com/camptocamp/facterdb/issues/83)
+- Wrong facts for Windows 2016\(?\) [\#58](https://github.com/camptocamp/facterdb/issues/58)
+
+**Merged pull requests:**
+
+- Rework of Lots of Puppet 5 facter additions [\#95](https://github.com/camptocamp/facterdb/pull/95) ([Dan33l](https://github.com/Dan33l))
+- Add Gentoo facts for Facter 2.5 and fix Travis CI [\#93](https://github.com/camptocamp/facterdb/pull/93) ([baurmatt](https://github.com/baurmatt))
+- Update Fedora facts [\#89](https://github.com/camptocamp/facterdb/pull/89) ([blackknight36](https://github.com/blackknight36))
+- Add facter 3.11 facts for Debian 9 and Ubuntu 18.04 [\#88](https://github.com/camptocamp/facterdb/pull/88) ([tobias-urdin](https://github.com/tobias-urdin))
+- Updated fedora facts for f26 and f27 [\#85](https://github.com/camptocamp/facterdb/pull/85) ([timhughes](https://github.com/timhughes))
+- fixes \#83 changes the way factor version in paths is calculated [\#84](https://github.com/camptocamp/facterdb/pull/84) ([timhughes](https://github.com/timhughes))
+
 ## [0.5.2](https://rubygems.org/gems/facterdb/versions/0.5.2) (2018-04-30)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.1...0.5.2)
 
