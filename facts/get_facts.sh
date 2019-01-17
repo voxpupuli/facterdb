@@ -6,6 +6,14 @@ if test -f /usr/bin/zypper; then
   zypper --non-interactive --gpg-auto-import-keys refresh
   zypper --non-interactive install ruby-devel
   osfamily='Suse'
+  # This is Leap which is based on SLES 12
+  if [[ `cat /etc/os-release |grep -e '^VERSION="42' -c` == 1  ]]; then
+    operatingsystemmajrelease=12
+  elif test -r /etc/os-release; then
+    operatingsystemmajrelease=$(. /etc/os-release ; echo ${VERSION} | cut -d. -f1)
+  else
+    operatingsystemmajrelease=$(cat /etc/SuSE-release | grep ^VERSION | cut -d' ' -f3)
+  fi
 elif test -f /usr/bin/apt-get; then
   apt-get update
   apt-get install -y lsb-release
@@ -57,7 +65,15 @@ case "${osfamily}" in
 
   ;;
 'RedHat')
-  wget "https://yum.puppetlabs.com/puppetlabs-release-pc1-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
+  if [[ ${operatingsystemmajrelease} -eq 5 ]]; then
+    # CentOS 5 can no longer wget the release file with HTTPS due to mis-matched SSL support:
+    http_method='http'
+    # The default CentOS repositories no longer work and prevent yum from working:
+    rm -f /etc/yum.repos.d/CentOS*
+  else
+    http_method='https'
+  fi
+  wget "${http_method}://yum.puppetlabs.com/puppetlabs-release-pc1-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
   rpm -ivh /tmp/puppetlabs-release-pc1.rpm
   for puppet_agent_version in 1.2.2 1.4.2 1.5.3 1.10.4; do
     yum install -y puppet-agent-${puppet_agent_version}
@@ -111,9 +127,14 @@ case "${osfamily}" in
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
   ;;
 'Suse')
-  if [[ `cat /etc/os-release |grep -e '^VERSION="42' -c` == 1  ]]; then
-    # This is Leap which is based on SLES 12
-    rpm -Uvh https://yum.puppet.com/puppetlabs-release-pc1-sles-12.noarch.rpm
+  if [[ ${operatingsystemmajrelease} -lt 12 ]]; then
+    # SLES 11 can no longer wget the release file with HTTPS due to mis-matched SSL support:
+    http_method='http'
+  else
+    http_method='https'
+  fi
+  if [[ ${operatingsystemmajrelease} -le 12 ]]; then
+    rpm -Uvh ${http_method}://yum.puppet.com/puppetlabs-release-pc1-sles-${operatingsystemmajrelease}.noarch.rpm
     zypper --gpg-auto-import-keys --non-interactive refresh
     for puppet_agent_version in 1.6.2 1.7.2 1.8.3 1.9.3 1.10.8; do
       zypper --non-interactive install puppet-agent-${puppet_agent_version}
@@ -122,14 +143,19 @@ case "${osfamily}" in
       facter --show-legacy -p -j | tee ${output_file}
     done
     zypper --non-interactive remove puppetlabs-release-pc1
-    rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-sles-12.noarch.rpm
-    for puppet_agent_version in 5.0.1 5.1.0 5.2.0 5.3.2; do
-      zypper --non-interactive install puppet-agent-${puppet_agent_version}
-      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-      mkdir -p $(dirname ${output_file})
-      facter --show-legacy -p -j | tee ${output_file}
-    done
   fi
+  if [[ ${operatingsystemmajrelease} -le 12 ]]; then
+    pup5vers="5.0.1 5.1.0 5.2.0 5.3.2 5.4.0 5.5.8"
+  else
+    pup5vers="5.5.8 5.5.10"
+  fi
+  rpm -Uvh ${http_method}://yum.puppet.com/puppet5/puppet5-release-sles-${operatingsystemmajrelease}.noarch.rpm
+  for puppet_agent_version in ${pup5vers}; do
+    zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    mkdir -p $(dirname ${output_file})
+    facter --show-legacy -p -j | tee ${output_file}
+  done
   ;;
 'Archlinux')
   pacman -Syu --noconfirm ruby puppet ruby-bundler
