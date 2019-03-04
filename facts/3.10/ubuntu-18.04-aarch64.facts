@@ -1,0 +1,537 @@
+{
+  "disks": {
+    "mmcblk1": {
+      "size": "29.81 GiB",
+      "size_bytes": 32010928128
+    }
+  },
+  "facterversion": "3.10.0",
+  "filesystems": "btrfs,ext2,ext3,ext4,f2fs,iso9660,jfs,msdos,udf,vfat,xfs",
+  "fips_enabled": false,
+  "identity": {
+    "gid": 1000,
+    "group": "pi",
+    "privileged": false,
+    "uid": 1000,
+    "user": "pi"
+  },
+  "is_virtual": false,
+  "kernel": "Linux",
+  "kernelmajversion": "4.19",
+  "kernelrelease": "4.19.20-meson64",
+  "kernelversion": "4.19.20",
+  "load_averages": {
+    "15m": 0.92,
+    "1m": 0.35,
+    "5m": 0.79
+  },
+  "memory": {
+    "system": {
+      "available": "1.64 GiB",
+      "available_bytes": 1765187584,
+      "capacity": "14.82%",
+      "total": "1.93 GiB",
+      "total_bytes": 2072338432,
+      "used": "292.92 MiB",
+      "used_bytes": 307150848
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "25.77 GiB",
+      "available_bytes": 27669196800,
+      "capacity": "11.25%",
+      "device": "/dev/mmcblk1p1",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "noatime",
+        "nodiratime",
+        "errors=remount-ro",
+        "commit=600"
+      ],
+      "size": "29.04 GiB",
+      "size_bytes": 31177322496,
+      "used": "3.27 GiB",
+      "used_bytes": 3508125696
+    },
+    "/dev/shm": {
+      "available": "988.17 MiB",
+      "available_bytes": 1036169216,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev"
+      ],
+      "size": "988.17 MiB",
+      "size_bytes": 1036169216,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run": {
+      "available": "177.36 MiB",
+      "available_bytes": 185974784,
+      "capacity": "10.26%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "size=202380k",
+        "mode=755"
+      ],
+      "size": "197.64 MiB",
+      "size_bytes": 207237120,
+      "used": "20.28 MiB",
+      "used_bytes": 21262336
+    },
+    "/run/lock": {
+      "available": "5.00 MiB",
+      "available_bytes": 5238784,
+      "capacity": "0.08%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=5120k"
+      ],
+      "size": "5.00 MiB",
+      "size_bytes": 5242880,
+      "used": "4.00 KiB",
+      "used_bytes": 4096
+    },
+    "/run/user/0": {
+      "available": "197.63 MiB",
+      "available_bytes": 207233024,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=202376k",
+        "mode=700"
+      ],
+      "size": "197.63 MiB",
+      "size_bytes": 207233024,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/user/1000": {
+      "available": "197.63 MiB",
+      "available_bytes": 207233024,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=202376k",
+        "mode=700",
+        "uid=1000",
+        "gid=1000"
+      ],
+      "size": "197.63 MiB",
+      "size_bytes": 207233024,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/sys/fs/cgroup": {
+      "available": "988.17 MiB",
+      "available_bytes": 1036169216,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "ro",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "mode=755"
+      ],
+      "size": "988.17 MiB",
+      "size_bytes": 1036169216,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/tmp": {
+      "available": "975.83 MiB",
+      "available_bytes": 1023229952,
+      "capacity": "1.25%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "relatime"
+      ],
+      "size": "988.17 MiB",
+      "size_bytes": 1036169216,
+      "used": "12.34 MiB",
+      "used_bytes": 12939264
+    },
+    "/var/lib/kubelet/pods/3b1b7b00-3d43-11e9-a95b-001e06368250/volumes/kubernetes.io~secret/weave-net-token-fp7kr": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/lib/kubelet/pods/3b1ce21d-3d43-11e9-a95b-001e06368250/volumes/kubernetes.io~secret/kube-proxy-token-kdqhn": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/lib/kubelet/pods/8994726c-3e07-11e9-a95b-001e06368250/volumes/kubernetes.io~secret/external-dns-token-29pwl": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/lib/kubelet/pods/8994726c-3e07-11e9-a95b-001e06368250/volumes/kubernetes.io~secret/gce-service-account-key": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/lib/kubelet/pods/d5cdd600-3df5-11e9-a95b-001e06368250/volumes/kubernetes.io~secret/coredns-token-xfp64": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/log": {
+      "available": "29.99 MiB",
+      "available_bytes": 31449088,
+      "capacity": "38.06%",
+      "device": "/dev/zram0",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime",
+        "block_validity",
+        "discard",
+        "delalloc",
+        "nojournal_checksum",
+        "barrier",
+        "user_xattr",
+        "acl"
+      ],
+      "size": "48.42 MiB",
+      "size_bytes": 50774016,
+      "used": "18.43 MiB",
+      "used_bytes": 19324928
+    },
+    "/var/log.hdd": {
+      "available": "25.77 GiB",
+      "available_bytes": 27669196800,
+      "capacity": "11.25%",
+      "device": "/dev/mmcblk1p1",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "noatime",
+        "nodiratime",
+        "errors=remount-ro",
+        "commit=600"
+      ],
+      "size": "29.04 GiB",
+      "size_bytes": 31177322496,
+      "used": "3.27 GiB",
+      "used_bytes": 3508125696
+    }
+  },
+  "networking": {
+    "dhcp": "192.168.1.1",
+    "fqdn": "master1",
+    "hostname": "master1",
+    "interfaces": {
+      "datapath": {
+        "bindings6": [
+          {
+            "address": "fe80::c4d:7eff:fe1d:ba93",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip6": "fe80::c4d:7eff:fe1d:ba93",
+        "mac": "0e:4d:7e:1d:ba:93",
+        "mtu": 1376,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::"
+      },
+      "docker0": {
+        "bindings": [
+          {
+            "address": "172.17.0.1",
+            "netmask": "255.255.0.0",
+            "network": "172.17.0.0"
+          }
+        ],
+        "ip": "172.17.0.1",
+        "mac": "02:42:b2:a3:3e:6e",
+        "mtu": 1500,
+        "netmask": "255.255.0.0",
+        "network": "172.17.0.0"
+      },
+      "eth0": {
+        "bindings": [
+          {
+            "address": "192.168.1.5",
+            "netmask": "255.255.255.0",
+            "network": "192.168.1.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a322:a4a2:35ac:4d67",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "dhcp": "192.168.1.1",
+        "ip": "192.168.1.5",
+        "ip6": "fe80::a322:a4a2:35ac:4d67",
+        "mac": "00:1e:06:36:82:50",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "192.168.1.0",
+        "network6": "fe80::"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1"
+      },
+      "vethwe-bridge": {
+        "bindings6": [
+          {
+            "address": "fe80::9c05:83ff:fe01:8819",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip6": "fe80::9c05:83ff:fe01:8819",
+        "mac": "9e:05:83:01:88:19",
+        "mtu": 1376,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::"
+      },
+      "vethwe-datapath": {
+        "bindings6": [
+          {
+            "address": "fe80::5878:67ff:fe28:ebf",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip6": "fe80::5878:67ff:fe28:ebf",
+        "mac": "5a:78:67:28:0e:bf",
+        "mtu": 1376,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::"
+      },
+      "vxlan-6784": {
+        "bindings6": [
+          {
+            "address": "fe80::1c04:e7ff:fe91:ea97",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip6": "fe80::1c04:e7ff:fe91:ea97",
+        "mac": "1e:04:e7:91:ea:97",
+        "mtu": 65535,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::"
+      },
+      "weave": {
+        "bindings": [
+          {
+            "address": "172.24.0.1",
+            "netmask": "255.252.0.0",
+            "network": "172.24.0.0"
+          },
+          {
+            "address": "172.24.0.2",
+            "netmask": "255.252.0.0",
+            "network": "172.24.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::987c:ffff:fe7c:175a",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
+        "ip": "172.24.0.1",
+        "ip6": "fe80::987c:ffff:fe7c:175a",
+        "mac": "9a:7c:ff:7c:17:5a",
+        "mtu": 1376,
+        "netmask": "255.252.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "172.24.0.0",
+        "network6": "fe80::"
+      }
+    },
+    "ip": "192.168.1.5",
+    "ip6": "fe80::a322:a4a2:35ac:4d67",
+    "mac": "00:1e:06:36:82:50",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "192.168.1.0",
+    "network6": "fe80::",
+    "primary": "eth0"
+  },
+  "os": {
+    "architecture": "aarch64",
+    "distro": {
+      "codename": "bionic",
+      "description": "Ubuntu 18.04.2 LTS",
+      "id": "Ubuntu",
+      "release": {
+        "full": "18.04",
+        "major": "18.04"
+      }
+    },
+    "family": "Debian",
+    "hardware": "aarch64",
+    "name": "Ubuntu",
+    "release": {
+      "full": "18.04",
+      "major": "18.04"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/mmcblk1p1": {
+      "mount": "/",
+      "size": "29.50 GiB",
+      "size_bytes": 31674040320
+    }
+  },
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
+  "processors": {
+    "count": 4,
+    "isa": "aarch64",
+    "physicalcount": 1,
+    "speed": "1.54 GHz"
+  },
+  "ruby": {
+    "platform": "aarch64-linux-gnu",
+    "sitedir": "/usr/local/lib/site_ruby/2.5.0",
+    "version": "2.5.1"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 6eb842eea4719e00d2227b466a09e5e2289d9e73",
+        "sha256": "SSHFP 3 2 dc8b86430645fd7cfe394d666a866cde400cfcb3c0ef38ddf931d6998be86528"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD315RI/2z56nPdxYxXmGHuZmxEPcScc5Mna4+5j1T4L5LJ27886y6l+g04keuaJZJnMN3UTU04zw8vwqgt2x4k="
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 e63ebaab1c4ab311c76c8c8f2581f9e3c5559af8",
+        "sha256": "SSHFP 4 2 58233d2f9d1d5225daa92b2b901da643692c278d4d5141c6a5e16192332bfbe6"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIIHg8s7oRcqOtDJYX+kr6I+FToqeTxx5XwblNwZhBTRz"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 24b84ae09b7f8db80ed93ca2fb83d3702f43746a",
+        "sha256": "SSHFP 1 2 74bf878c7bbfcf1b60dc2811a0d6564476f975e6370e87fb03f43a26034761e7"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDNfqIh9u1n6hnzc/m9UBY+x3WPYJ6oEQE6CwgVPuL0F0ZPnl8U+NsUGwezYnszdGyyw08NNrxDBW881+rrXtFFpbd8Owl0/AcEVAr1iCPbP5v/jZ7VYkXJJiEqiupSPfmkhbuCWviYqK4VFhiKyhnRrkojnzfCZrSDh0BpZj+jGZTV4bPvxF9iCq2e4ySNt4Icmw0//pMDrvCYqPqeuJT5svG7ULTkIqWBh2p2/Nihe+AQZ2GfwbnrQlfDED83i6a8igdux3C7ERhP05N4IXdKcWXR23a6rfo/f+tAMQqGxpo5m6PwLjyOpbYXpkkU/gNrS7u4IoVq8IN8u1MsgI5P"
+    }
+  },
+  "system_uptime": {
+    "days": 1,
+    "hours": 32,
+    "seconds": 117020,
+    "uptime": "1 day"
+  },
+  "timezone": "UTC",
+  "virtual": "physical"
+}
