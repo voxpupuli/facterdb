@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.7.0](https://rubygems.org/gems/facterdb/versions/0.7.0) (2019-07-02)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.6.0...0.7.0)
+
+**Merged pull requests:**
+
+- Add facts for aarch64. [\#100](https://github.com/camptocamp/facterdb/pull/100) ([ralimi](https://github.com/ralimi))
+
 ## [0.6.0](https://rubygems.org/gems/facterdb/versions/0.6.0) (2018-12-13)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.2...0.6.0)
 
