@@ -105,7 +105,7 @@ case "${osfamily}" in
   ;;
 'FreeBSD')
   pkg update
-  pkg install -y sysutils/puppet5 sysutils/facter
+  pkg install -y sysutils/puppet5 sysutils/facter sysutils/rubygem-bundler
   output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
