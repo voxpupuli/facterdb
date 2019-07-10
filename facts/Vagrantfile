@@ -222,7 +222,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
   end
   config.vm.define "freebsd-11-x86_64" do |host|
-    host.vm.box = "bento/freebsd-11.1"
+    host.vm.box = "bento/freebsd-11.2"
     host.ssh.shell = '/bin/sh'
     host.vm.network :private_network, ip: '10.0.0.2'
     host.vm.synced_folder ".", "/vagrant", :nfs => true
