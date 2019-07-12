@@ -122,6 +122,11 @@ case "${osfamily}" in
 'FreeBSD')
   pkg update
   pkg install -y sysutils/puppet5 sysutils/facter sysutils/rubygem-bundler
+  # something about the pkg update process causes the shared folder mount to
+  # get into an unusable state, so we remount it here before generating any
+  # fact sets.
+  umount /vagrant
+  mount -t vboxvfs Vagrant /vagrant
   output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
