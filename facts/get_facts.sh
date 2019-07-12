@@ -131,6 +131,14 @@ case "${osfamily}" in
   mkdir -p $(dirname ${output_file})
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
   ;;
+'OpenBSD')
+  hardwaremodel=$(facter hardwaremodel)
+  [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
+  # Vagrant box should already have puppet & facter installed
+  output_file="/vagrant/$(facter --version | cut -d. -f1-2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemrelease)-${hardwaremodel}.facts"
+  mkdir -p $(dirname ${output_file})
+  [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+  ;;
 'Suse')
   if [[ ${operatingsystemmajrelease} -lt 12 ]]; then
     # SLES 11 can no longer wget the release file with HTTPS due to mis-matched SSL support:
