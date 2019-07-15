@@ -171,7 +171,10 @@ case "${osfamily}" in
   done
   ;;
 'Archlinux')
-  pacman -Syu --noconfirm ruby puppet ruby-bundler base-devel dnsutils
+  pacman -Syu --noconfirm ruby puppet ruby-bundler base-devel dnsutils facter
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
+  mkdir -p $(dirname ${output_file})
+  facter --show-legacy -p -j | tee ${output_file}
   ;;
 'Gentoo')
   emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet
