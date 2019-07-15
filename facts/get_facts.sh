@@ -98,25 +98,46 @@ case "${osfamily}" in
   if [[ "serena" =~ ${lsbdistcodename} ]]; then
     lsbdistcodename='xenial'
   fi
+  if [[ "tessa" =~ ${lsbdistcodename} ]]; then
+    lsbdistcodename='bionic'
+  fi
   apt-get install -y wget
   wget "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -O /tmp/puppetlabs-release-pc1.deb
-  dpkg --install /tmp/puppetlabs-release-pc1.deb
-  apt-get update
-  for puppet_agent_version in 1.2.2 1.4.2 1.5.3; do
-    apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
+  if test -f /tmp/puppetlabs-release.deb; then
+    dpkg --install /tmp/puppetlabs-release-pc1.deb
+    apt-get update
+    for puppet_agent_version in 1.2.2 1.4.2 1.5.3; do
+      apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
+      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      mkdir -p $(dirname ${output_file})
+      facter --show-legacy -p -j | tee ${output_file}
+    done
+    apt-get -y remove --purge puppetlabs-release-pc1
+  fi
   wget "https://apt.puppetlabs.com/puppet5-release-${lsbdistcodename}.deb" -O /tmp/puppet5-release.deb
-  dpkg --install /tmp/puppet5-release.deb
-  apt-get update
-  for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.3; do
-    apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
+  if test -f /tmp/puppet5-release.deb; then
+    dpkg --install /tmp/puppet5-release.deb
+    apt-get update
+    for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.3; do
+      apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
+      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      mkdir -p $(dirname ${output_file})
+      facter --show-legacy -p -j | tee ${output_file}
+    done
+    apt-get -y remove --purge puppet5-release
+  fi
+  wget "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -O /tmp/puppet6-release.deb
+  if test -f /tmp/puppet6-release.deb; then
+    dpkg --install /tmp/puppet6-release.deb
+    apt-get update
+    for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
+      apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*
+      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+      mkdir -p $(dirname ${output_file})
+      facter --show-legacy -p -j | tee ${output_file}
+    done
+    apt-get -y remove --purge puppet6-release
+  fi
   apt-get install -y make gcc libgmp-dev
   ;;
 'FreeBSD')
