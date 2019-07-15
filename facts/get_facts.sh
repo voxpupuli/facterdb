@@ -171,7 +171,10 @@ case "${osfamily}" in
   done
   ;;
 'Archlinux')
-  pacman -Syu --noconfirm ruby puppet ruby-bundler
+  pacman -Syu --noconfirm ruby puppet ruby-bundler base-devel dnsutils facter
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
+  mkdir -p $(dirname ${output_file})
+  facter --show-legacy -p -j | tee ${output_file}
   ;;
 'Gentoo')
   emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet
@@ -193,6 +196,9 @@ for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
   case "${operatingsystem}" in
     openbsd)
       output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemrelease}-${hardwaremodel}.facts"
+      ;;
+    archlinux)
+      output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${hardwaremodel}.facts"
       ;;
     *)
       output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
