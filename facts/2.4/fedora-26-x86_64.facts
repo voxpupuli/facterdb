@@ -1,19 +1,28 @@
 {
-  "gem_version": "~> 2.1.0",
+  "gem_version": "~> 2.4.0",
+  "processors": {
+    "models": [
+      "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz"
+    ],
+    "count": 1,
+    "physicalcount": 1
+  },
   "hardwaremodel": "x86_64",
   "hardwareisa": "x86_64",
   "kernel": "Linux",
   "virtual": "kvm",
-  "is_virtual": "true",
-  "physicalprocessorcount": "1",
+  "is_virtual": true,
+  "physicalprocessorcount": 1,
   "partitions": {
     "sda1": {
       "uuid": "2ebf6ddf-743f-40d1-ad80-492934dda253",
       "size": "134215680",
       "mount": "/",
-      "filesystem": "ext4\" PARTUUID=\"e51733bb-01"
+      "label": "root",
+      "filesystem": "ext4"
     }
   },
+  "gid": "root",
   "fqdn": "foo.example.com",
   "filesystems": "ext2,ext3,ext4",
   "uniqueid": "007f0100",
@@ -30,28 +39,37 @@
   "puppetversion": "5.5.0",
   "operatingsystemrelease": "26",
   "memorysize": "991.12 MB",
-  "memoryfree": "821.18 MB",
+  "memoryfree": "840.61 MB",
   "swapsize": "2.00 GB",
   "swapfree": "2.00 GB",
   "swapsize_mb": "2048.00",
   "swapfree_mb": "2048.00",
   "memorysize_mb": "991.12",
-  "memoryfree_mb": "821.18",
+  "memoryfree_mb": "840.61",
   "blockdevice_sda_size": 68719476736,
   "blockdevice_sda_vendor": "ATA",
   "blockdevice_sda_model": "VBOX HARDDISK",
   "blockdevices": "sda",
   "hostname": "foo",
-  "selinux": "true",
-  "selinux_enforced": "false",
+  "selinux": true,
+  "selinux_enforced": false,
   "selinux_policyversion": "30",
   "selinux_current_mode": "permissive",
   "selinux_config_mode": "permissive",
-  "selinux_config_policy": "unknown",
+  "selinux_config_policy": "targeted",
   "architecture": "x86_64",
   "operatingsystem": "Fedora",
+  "os": {
+    "name": "Fedora",
+    "family": "RedHat",
+    "release": {
+      "major": "26",
+      "full": "26"
+    }
+  },
   "processor0": "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz",
-  "processorcount": "1",
+  "processorcount": 1,
+  "rubyplatform": "x86_64-linux",
   "ps": "ps -ef",
   "kernelmajversion": "4.11",
   "augeasversion": "1.10.1",
@@ -60,10 +78,16 @@
   "timezone": "UTC",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
   "kernelrelease": "4.11.8-300.fc26.x86_64",
-  "uptime_seconds": 317,
+  "uptime_seconds": 327,
   "id": "root",
-  "facterversion": "2.1.0",
+  "facterversion": "2.4.6",
   "uptime_hours": 0,
+  "system_uptime": {
+    "seconds": 327,
+    "hours": 0,
+    "days": 0,
+    "uptime": "0:05 hours"
+  },
   "operatingsystemmajrelease": "26",
   "uptime": "0:05 hours",
   "dhcp_servers": {
@@ -74,10 +98,10 @@
   "ipaddress_enp0s3": "10.0.2.15",
   "macaddress_enp0s3": "08:00:27:87:b2:4d",
   "netmask_enp0s3": "255.255.255.0",
-  "mtu_enp0s3": "1500",
+  "mtu_enp0s3": 1500,
   "ipaddress_lo": "127.0.0.1",
   "netmask_lo": "255.0.0.0",
-  "mtu_lo": "65536",
+  "mtu_lo": 65536,
   "path": "/home/vagrant/vendor/bundler/ruby/2.4.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
   "ipaddress": "10.0.2.15",
   "network_enp0s3": "10.0.2.0",

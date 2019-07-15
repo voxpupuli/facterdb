@@ -1,5 +1,5 @@
 {
-  "gem_version": "~> 2.4.0",
+  "gem_version": "~> 2.3.0",
   "processors": {
     "models": [
       "Intel(R) Core(TM) i7-5500U CPU @ 2.40GHz"
@@ -18,7 +18,6 @@
       "uuid": "2ebf6ddf-743f-40d1-ad80-492934dda253",
       "size": "134215680",
       "mount": "/",
-      "label": "root",
       "filesystem": "ext4"
     }
   },
@@ -39,13 +38,13 @@
   "puppetversion": "5.5.0",
   "operatingsystemrelease": "26",
   "memorysize": "991.12 MB",
-  "memoryfree": "840.61 MB",
+  "memoryfree": "819.64 MB",
   "swapsize": "2.00 GB",
   "swapfree": "2.00 GB",
   "swapsize_mb": "2048.00",
   "swapfree_mb": "2048.00",
   "memorysize_mb": "991.12",
-  "memoryfree_mb": "840.61",
+  "memoryfree_mb": "819.64",
   "blockdevice_sda_size": 68719476736,
   "blockdevice_sda_vendor": "ATA",
   "blockdevice_sda_model": "VBOX HARDDISK",
@@ -56,7 +55,7 @@
   "selinux_policyversion": "30",
   "selinux_current_mode": "permissive",
   "selinux_config_mode": "permissive",
-  "selinux_config_policy": "targeted",
+  "selinux_config_policy": "unknown",
   "architecture": "x86_64",
   "operatingsystem": "Fedora",
   "os": {
@@ -78,12 +77,12 @@
   "timezone": "UTC",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
   "kernelrelease": "4.11.8-300.fc26.x86_64",
-  "uptime_seconds": 327,
+  "uptime_seconds": 322,
   "id": "root",
-  "facterversion": "2.4.6",
+  "facterversion": "2.3.0",
   "uptime_hours": 0,
   "system_uptime": {
-    "seconds": 327,
+    "seconds": 322,
     "hours": 0,
     "days": 0,
     "uptime": "0:05 hours"
