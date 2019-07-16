@@ -53,6 +53,8 @@ def factset_to_os_label(fs)
     label = "#{os_name} #{os__rel}"
   elsif os_name =~ /^(Solaris)/
     label = "#{os_name} #{os__rel.split('.')[1]}"
+  elsif os_name.start_with?('Debian') && fs[:lsbdistid] == 'LinuxMint'
+    label = "#{fs[:lsbdistid]} #{fs[:lsbmajdistrelease]}"
   elsif os_name =~ /^windows$/
     db_filename = fs[:_facterdb_filename] || 'there_is_no_filename'
     if db_filename =~ /windows-10-/
