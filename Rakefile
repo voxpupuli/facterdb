@@ -85,12 +85,14 @@ task :table do
   # Restore the source injection
   ENV['FACTERDB_INJECT_SOURCE'] = old_env
 
-  facter_versions = factsets.map{ |x| x[:facterversion][0..2] }.uniq.sort
+  facter_versions = factsets.map { |x|
+    Gem::Version.new(x[:facterversion].split('.')[0..1].join('.'))
+  }.uniq.sort.map(&:to_s)
   os_facter_matrix = {}
 
   # Process the facts and create a hash of all the OS and facter combinations
   factsets.each do |facts|
-    fv = facts[:facterversion][0..2]
+    fv = facts[:facterversion].split('.')[0..1].join('.')
     label = factset_to_os_label(facts)
     os_facter_matrix[label] ||= {}
     os_facter_matrix[label][fv] ||= 0
