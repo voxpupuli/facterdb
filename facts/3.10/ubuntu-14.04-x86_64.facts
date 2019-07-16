@@ -46,7 +46,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "66A8127A-D463-44BC-87EB-A02F3FD56AE5"
+      "uuid": "91F1FA87-F291-4477-81E8-7D274FC57571"
     }
   },
   "domain": "example.com",
@@ -60,8 +60,8 @@
   "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
-      "revision": "122591",
-      "version": "5.2.12"
+      "revision": "130347",
+      "version": "6.0.8"
     }
   },
   "id": "root",
@@ -85,8 +85,8 @@
   "kernelrelease": "3.16.0-30-generic",
   "kernelversion": "3.16.0",
   "load_averages": {
-    "15m": 0.14,
-    "1m": 1.01,
+    "15m": 0.15,
+    "1m": 0.77,
     "5m": 0.38
   },
   "lsbdistcodename": "trusty",
@@ -99,33 +99,33 @@
   "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
-      "available": "510.89 MiB",
-      "available_bytes": 535711744,
-      "capacity": "0.22%",
+      "available": "511.64 MiB",
+      "available_bytes": 536494080,
+      "capacity": "0.07%",
       "total": "512.00 MiB",
       "total_bytes": 536866816,
-      "used": "1.10 MiB",
-      "used_bytes": 1155072
+      "used": "364.00 KiB",
+      "used_bytes": 372736
     },
     "system": {
-      "available": "383.84 MiB",
-      "available_bytes": 402481152,
-      "capacity": "21.62%",
+      "available": "381.44 MiB",
+      "available_bytes": 399970304,
+      "capacity": "22.11%",
       "total": "489.73 MiB",
       "total_bytes": 513515520,
-      "used": "105.89 MiB",
-      "used_bytes": 111034368
+      "used": "108.29 MiB",
+      "used_bytes": 113545216
     }
   },
-  "memoryfree": "383.84 MiB",
-  "memoryfree_mb": 383.8359375,
+  "memoryfree": "381.44 MiB",
+  "memoryfree_mb": 381.44140625,
   "memorysize": "489.73 MiB",
   "memorysize_mb": 489.7265625,
   "mountpoints": {
     "/": {
-      "available": "17.39 GiB",
-      "available_bytes": 18675343360,
-      "capacity": "7.64%",
+      "available": "17.42 GiB",
+      "available_bytes": 18708553728,
+      "capacity": "7.47%",
       "device": "/dev/mapper/localhost--vg-root",
       "filesystem": "ext4",
       "options": [
@@ -134,8 +134,8 @@
       ],
       "size": "18.83 GiB",
       "size_bytes": 20219142144,
-      "used": "1.44 GiB",
-      "used_bytes": 1543798784
+      "used": "1.41 GiB",
+      "used_bytes": 1510588416
     },
     "/boot": {
       "available": "198.65 MiB",
@@ -153,8 +153,8 @@
     },
     "/run": {
       "available": "48.58 MiB",
-      "available_bytes": 50941952,
-      "capacity": "0.80%",
+      "available_bytes": 50937856,
+      "capacity": "0.81%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
       "options": [
@@ -166,8 +166,8 @@
       ],
       "size": "48.97 MiB",
       "size_bytes": 51351552,
-      "used": "400.00 KiB",
-      "used_bytes": 409600
+      "used": "404.00 KiB",
+      "used_bytes": 413696
     },
     "/run/lock": {
       "available": "5.00 MiB",
@@ -376,13 +376,13 @@
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
   "physicalprocessorcount": 1,
-  "processor0": "AMD Phenom(tm) II X4 965 Processor",
+  "processor0": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
   "processorcount": 1,
   "processors": {
     "count": 1,
     "isa": "x86_64",
     "models": [
-      "AMD Phenom(tm) II X4 965 Processor"
+      "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz"
     ],
     "physicalcount": 1
   },
@@ -436,21 +436,21 @@
   "sshfp_ed25519": "SSHFP 4 1 52d255120b0ec106de7bb5af4b20edeeb7d671bf\nSSHFP 4 2 9c661987e9142d6ffc67dbe7c04cb02e753dca1115929673a370b06edf06b3d3",
   "sshfp_rsa": "SSHFP 1 1 398e1da0be1e4d0f9907296401f9c3cb3a3937e6\nSSHFP 1 2 17f673acd098048e1a006859122479981116c88945cd8c8a019d2b17269cde1f",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC7uJ5NtUTMBXwND5ZzWnuT2fpkXPrtckEZq8nQT/ptZ0JU88J9FbAylRK/4xFyTQXQmtl0RGmoAB+zpiBpDw6rN8p2GUo2cfY2d/fGsHpwwPoQu3B9G30ihfdh4zzbYypatWktoybuN86CNY8QtiEgKNS0DerivMx4BjhnzaYw1ng/BsP3bQ75RMxfwaaSCLpAkkQIAuaIg2+lAVu7jVBqj7H+uib7C0A8uBdyexI2c31vs3cWJJWLtlhhPJaGCyfCVRZF43fZMCNnh/EbWhLEWlGcMb2zJ4G3UAnlBuiv+DfbjGMqT+Ksm1lk+QqkDMA7mNr+i18IJT7t9qnWjwnr",
-  "swapfree": "510.89 MiB",
-  "swapfree_mb": 510.89453125,
+  "swapfree": "511.64 MiB",
+  "swapfree_mb": 511.640625,
   "swapsize": "512.00 MiB",
   "swapsize_mb": 511.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 159,
+    "seconds": 176,
     "uptime": "0:02 hours"
   },
   "timezone": "PDT",
   "uptime": "0:02 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 159,
-  "uuid": "66A8127A-D463-44BC-87EB-A02F3FD56AE5",
+  "uptime_seconds": 176,
+  "uuid": "91F1FA87-F291-4477-81E8-7D274FC57571",
   "virtual": "virtualbox"
 }
