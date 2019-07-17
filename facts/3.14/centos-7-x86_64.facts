@@ -1,10 +1,10 @@
 {
-  "aio_agent_version": "5.3.7",
+  "aio_agent_version": "6.6.0",
   "architecture": "x86_64",
   "augeas": {
-    "version": "1.8.1"
+    "version": "1.12.0"
   },
-  "augeasversion": "1.8.1",
+  "augeasversion": "1.12.0",
   "bios_release_date": "12/01/2006",
   "bios_vendor": "innotek GmbH",
   "bios_version": "VirtualBox",
@@ -50,8 +50,9 @@
     }
   },
   "domain": "example.com",
-  "facterversion": "3.9.6",
+  "facterversion": "3.14.1",
   "filesystems": "xfs",
+  "fips_enabled": false,
   "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "x86_64",
@@ -84,42 +85,42 @@
   "kernelrelease": "3.10.0-327.el7.x86_64",
   "kernelversion": "3.10.0",
   "load_averages": {
-    "15m": 0.24,
-    "1m": 1.66,
-    "5m": 0.65
+    "15m": 0.37,
+    "1m": 1.63,
+    "5m": 0.91
   },
   "macaddress": "08:00:27:b7:f3:af",
   "macaddress_enp0s3": "08:00:27:b7:f3:af",
   "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
-      "available": "1023.99 MiB",
-      "available_bytes": 1073729536,
+      "available": "1023.98 MiB",
+      "available_bytes": 1073717248,
       "capacity": "0.00%",
       "total": "1.00 GiB",
       "total_bytes": 1073737728,
-      "used": "8.00 KiB",
-      "used_bytes": 8192
+      "used": "20.00 KiB",
+      "used_bytes": 20480
     },
     "system": {
-      "available": "327.05 MiB",
-      "available_bytes": 342937600,
-      "capacity": "33.12%",
+      "available": "310.53 MiB",
+      "available_bytes": 325611520,
+      "capacity": "36.50%",
       "total": "489.04 MiB",
       "total_bytes": 512798720,
-      "used": "161.99 MiB",
-      "used_bytes": 169861120
+      "used": "178.52 MiB",
+      "used_bytes": 187187200
     }
   },
-  "memoryfree": "327.05 MiB",
-  "memoryfree_mb": 327.05078125,
+  "memoryfree": "310.53 MiB",
+  "memoryfree_mb": 310.52734375,
   "memorysize": "489.04 MiB",
   "memorysize_mb": 489.04296875,
   "mountpoints": {
     "/": {
-      "available": "17.12 GiB",
-      "available_bytes": 18384662528,
-      "capacity": "7.22%",
+      "available": "17.13 GiB",
+      "available_bytes": 18396217344,
+      "capacity": "7.16%",
       "device": "/dev/mapper/centos-root",
       "filesystem": "xfs",
       "options": [
@@ -131,8 +132,8 @@
       ],
       "size": "18.46 GiB",
       "size_bytes": 19815989248,
-      "used": "1.33 GiB",
-      "used_bytes": 1431326720
+      "used": "1.32 GiB",
+      "used_bytes": 1419771904
     },
     "/boot": {
       "available": "372.52 MiB",
@@ -363,15 +364,15 @@
     "physicalcount": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "5.3.7",
+  "puppetversion": "6.6.0",
   "ruby": {
     "platform": "x86_64-linux",
-    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-    "version": "2.4.4"
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+    "version": "2.5.3"
   },
   "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-  "rubyversion": "2.4.4",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+  "rubyversion": "2.5.3",
   "selinux": false,
   "serialnumber": "0",
   "ssh": {
@@ -380,21 +381,24 @@
         "sha1": "SSHFP 3 1 4b80cff845085540397b35a95d2b96afdcb16731",
         "sha256": "SSHFP 3 2 f9bb974b48a084ea13675f181b1acee9f02f7017670173c7b36b527a34988a38"
       },
-      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHwC5YtWj+dmqADHLkZHmYzkCqvTDwc2e1/UzYD3pNjTNEjnXz4NbYX/fi6IzpsoTncIKDz/KIyNyavAZzwB3Iw="
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHwC5YtWj+dmqADHLkZHmYzkCqvTDwc2e1/UzYD3pNjTNEjnXz4NbYX/fi6IzpsoTncIKDz/KIyNyavAZzwB3Iw=",
+      "type": "ecdsa-sha2-nistp256"
     },
     "ed25519": {
       "fingerprints": {
         "sha1": "SSHFP 4 1 03dc83a5291156202d219701ca246ae52dfcb196",
         "sha256": "SSHFP 4 2 65401a580116be078bfbdf59d9b720083cd68db7f0dbe22b095aa8d4300ca750"
       },
-      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIHd8LpD7gj/4leXZaK0CuX+A6Eyp9thXdAsgyOTlprau"
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIHd8LpD7gj/4leXZaK0CuX+A6Eyp9thXdAsgyOTlprau",
+      "type": "ssh-ed25519"
     },
     "rsa": {
       "fingerprints": {
         "sha1": "SSHFP 1 1 c6583019aa0b3c40f9000b0276043f17173ef2d8",
         "sha256": "SSHFP 1 2 da7a06517bd53ab42abef342df3b5e776775dcee19049781131c1ad654295a51"
       },
-      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDjp1PuZnOUZOUieQ2qMv0MlTaIjkAnYkpsgKumicsa8wjqGvvLngHB7DuFSJvXKeR5UFOYOGgw6wlKzj7oinNAmFFgkegnUsqlPCXfyVUljZw4/DfmH49KDZJpp8hKN87Ne0Z4tUhaD9ndjm+fWUUKy8Ykn6N5ClOjOiTrI+85YMb4I3/g0NciUdnnJ6ItWlttyUJmeNykYMsQie8OJWqw3bvc7um586lh0/i1DAlhu+DcNbJ9poaUeGLaXJSRGeymlLtAqpUTHl0fAiG7bs/8aRZzzjKlc1QCoHVzBte8meHQ2m9CJDdeTHOX2XBjG28NUErlpFi0vdI3X37xerqf"
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDjp1PuZnOUZOUieQ2qMv0MlTaIjkAnYkpsgKumicsa8wjqGvvLngHB7DuFSJvXKeR5UFOYOGgw6wlKzj7oinNAmFFgkegnUsqlPCXfyVUljZw4/DfmH49KDZJpp8hKN87Ne0Z4tUhaD9ndjm+fWUUKy8Ykn6N5ClOjOiTrI+85YMb4I3/g0NciUdnnJ6ItWlttyUJmeNykYMsQie8OJWqw3bvc7um586lh0/i1DAlhu+DcNbJ9poaUeGLaXJSRGeymlLtAqpUTHl0fAiG7bs/8aRZzzjKlc1QCoHVzBte8meHQ2m9CJDdeTHOX2XBjG28NUErlpFi0vdI3X37xerqf",
+      "type": "ssh-rsa"
     }
   },
   "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHwC5YtWj+dmqADHLkZHmYzkCqvTDwc2e1/UzYD3pNjTNEjnXz4NbYX/fi6IzpsoTncIKDz/KIyNyavAZzwB3Iw=",
@@ -403,21 +407,21 @@
   "sshfp_ed25519": "SSHFP 4 1 03dc83a5291156202d219701ca246ae52dfcb196\nSSHFP 4 2 65401a580116be078bfbdf59d9b720083cd68db7f0dbe22b095aa8d4300ca750",
   "sshfp_rsa": "SSHFP 1 1 c6583019aa0b3c40f9000b0276043f17173ef2d8\nSSHFP 1 2 da7a06517bd53ab42abef342df3b5e776775dcee19049781131c1ad654295a51",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDjp1PuZnOUZOUieQ2qMv0MlTaIjkAnYkpsgKumicsa8wjqGvvLngHB7DuFSJvXKeR5UFOYOGgw6wlKzj7oinNAmFFgkegnUsqlPCXfyVUljZw4/DfmH49KDZJpp8hKN87Ne0Z4tUhaD9ndjm+fWUUKy8Ykn6N5ClOjOiTrI+85YMb4I3/g0NciUdnnJ6ItWlttyUJmeNykYMsQie8OJWqw3bvc7um586lh0/i1DAlhu+DcNbJ9poaUeGLaXJSRGeymlLtAqpUTHl0fAiG7bs/8aRZzzjKlc1QCoHVzBte8meHQ2m9CJDdeTHOX2XBjG28NUErlpFi0vdI3X37xerqf",
-  "swapfree": "1023.99 MiB",
-  "swapfree_mb": 1023.98828125,
+  "swapfree": "1023.98 MiB",
+  "swapfree_mb": 1023.9765625,
   "swapsize": "1.00 GiB",
   "swapsize_mb": 1023.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 160,
-    "uptime": "0:02 hours"
+    "seconds": 253,
+    "uptime": "0:04 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:02 hours",
+  "uptime": "0:04 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 160,
+  "uptime_seconds": 253,
   "uuid": "254FC326-4DF8-46A2-A4F9-461DDFE46EF3",
   "virtual": "virtualbox"
 }
