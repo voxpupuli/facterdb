@@ -101,14 +101,22 @@ task :table do
   # Extract the OS list
   os_versions = os_facter_matrix.keys.uniq.sort
 
+  readme_path = File.expand_path(File.join(__dir__, 'README.md'))
+  readme = File.read(readme_path).split("\n")
+  new_readme = readme[0..readme.index { |r| r.start_with?('| ') } - 1]
+
   # Write out a nice table
   os_version_width = (os_versions.map{|x| x.size } + [17]).max
-  puts "| #{'operating system'.center(os_version_width)} |#{facter_versions.map{|x| " #{x} |" }.join}"
-  puts "| #{'-' * (os_version_width)} |#{facter_versions.map{|x| " --- |" }.join}"
+  new_readme <<  "| #{'operating system'.center(os_version_width)} |#{facter_versions.map{|x| " #{x} |" }.join}"
+  new_readme << "| #{'-' * (os_version_width)} |#{facter_versions.map{|x| " --- |" }.join}"
   os_versions.each do |label|
     fvs = facter_versions.map{ |facter_version| os_facter_matrix[label][facter_version] || 0 }
     row = "| #{label.ljust(os_version_width)} |"
     fvs.each { |fv| row += (fv > 0?  " #{fv.to_s.center(3)} |" : "     |" ) }
-    puts row
+    new_readme << row
+  end
+
+  File.open(readme_path, 'w') do |fd|
+    fd.puts (new_readme + readme[readme.rindex { |r| r.start_with?('| ') } + 1..-1]).join("\n")
   end
 end

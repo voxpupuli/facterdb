@@ -164,7 +164,7 @@ for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/Scientific/'
 for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/OracleLinux/' > $(echo $file | sed 's/centos/oraclelinux/'); done
 ```
 
-Then update array `Facter version and Operating System coverage` with output of rake task `table`.
+Then update the table in this README by running `bundle exec rake table`
 
 ## Supplying custom external facts
 
