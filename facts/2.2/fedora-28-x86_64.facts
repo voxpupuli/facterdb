@@ -1,6 +1,6 @@
 {
-  "gem_version": "~> 2.5.0",
-  "physicalprocessorcount": 1,
+  "gem_version": "~> 2.2.0",
+  "physicalprocessorcount": "1",
   "uptime_hours": 0,
   "kernelrelease": "4.16.3-301.fc28.x86_64",
   "os": {
@@ -16,10 +16,10 @@
   "ipaddress_enp0s3": "10.0.2.15",
   "macaddress_enp0s3": "08:00:27:c4:7d:b7",
   "netmask_enp0s3": "255.255.255.0",
-  "mtu_enp0s3": 1500,
+  "mtu_enp0s3": "1500",
   "ipaddress_lo": "127.0.0.1",
   "netmask_lo": "255.0.0.0",
-  "mtu_lo": 65536,
+  "mtu_lo": "65536",
   "network_enp0s3": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "dhcp_servers": {
@@ -27,16 +27,16 @@
     "enp0s3": "10.0.2.2"
   },
   "memorysize": "984.74 MB",
-  "memoryfree": "821.92 MB",
+  "memoryfree": "824.22 MB",
   "swapsize": "2.00 GB",
   "swapfree": "2.00 GB",
   "swapsize_mb": "2048.00",
   "swapfree_mb": "2047.23",
   "memorysize_mb": "984.74",
-  "memoryfree_mb": "821.92",
+  "memoryfree_mb": "824.22",
   "filesystems": "ext2,ext3,ext4",
-  "uptime": "0:07 hours",
-  "facterversion": "2.5.4",
+  "uptime": "0:06 hours",
+  "facterversion": "2.2.0",
   "processors": {
     "models": [
       "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz"
@@ -47,7 +47,7 @@
   "domain": "example.com",
   "operatingsystem": "Fedora",
   "virtual": "kvm",
-  "is_virtual": true,
+  "is_virtual": "true",
   "hardwareisa": "x86_64",
   "operatingsystemrelease": "28",
   "kernelmajversion": "4.16",
@@ -56,13 +56,12 @@
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
   "macaddress": "08:00:27:c4:7d:b7",
   "kernelversion": "4.16.3",
-  "uptime_seconds": 422,
+  "uptime_seconds": 396,
   "partitions": {
     "sda1": {
       "uuid": "fdfed377-32c2-4a1f-b4c8-2b04557e3f99",
       "size": "134215680",
       "mount": "/",
-      "label": "root",
       "filesystem": "ext4"
     }
   },
@@ -77,10 +76,10 @@
   "sshfp_ed25519": "SSHFP 4 1 f40a4c34d96a357200942a6b484cbad45d485421\nSSHFP 4 2 4316b2d83f0bd465f29fbc14a2e3a3794175deb3c2c0c2a95356e4bb37729539",
   "path": "/home/vagrant/vendor/bundler/ruby/2.5.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/bin",
   "system_uptime": {
-    "seconds": 422,
+    "seconds": 396,
     "hours": 0,
     "days": 0,
-    "uptime": "0:07 hours"
+    "uptime": "0:06 hours"
   },
   "gid": "root",
   "ps": "ps -ef",
@@ -90,17 +89,15 @@
   "architecture": "x86_64",
   "hardwaremodel": "x86_64",
   "processor0": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
-  "processorcount": 1,
-  "puppetversion": "6.6.0",
-  "rubyplatform": "x86_64-linux",
+  "processorcount": "1",
   "id": "root",
   "hostname": "foo",
-  "selinux": true,
-  "selinux_enforced": false,
+  "selinux": "true",
+  "selinux_enforced": "false",
   "selinux_policyversion": "31",
   "selinux_current_mode": "permissive",
   "selinux_config_mode": "permissive",
-  "selinux_config_policy": "targeted",
+  "selinux_config_policy": "unknown",
   "rubyversion": "2.5.3",
   "ipaddress": "10.0.2.15",
   "blockdevice_sda_size": 68719476736,
