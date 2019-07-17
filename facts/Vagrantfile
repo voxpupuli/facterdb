@@ -298,6 +298,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "openbsd-6.4-x86_64" do |host|
+    host.vm.box = "generic/openbsd6"
+    host.vm.box_version = "~> 1.9.18"
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
+    host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
+      . ~/.profile
+
+      pkg_info -qe 'bash->=0' || pkg_add bash
+      ln -sf /usr/local/bin/bash /bin
+      pkg_add facter puppet-5.5.6
+      ln -sf /usr/local/bin/gem24 /usr/bin/gem
+      ln -sf /usr/local/bin/ruby24 /usr/bin/ruby
+    SCRIPT
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "osx-10.10-x86_64" do |host|
     host.vm.box = "AndrewDryga/vagrant-box-osx"
     host.vm.network :private_network, ip: '10.0.0.2'
