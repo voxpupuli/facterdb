@@ -21,7 +21,7 @@ elif test -f /usr/bin/apt-get; then
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
   osfamily='Debian'
-elif test -f /usr/bin/dnf; then
+elif test -f /usr/bin/dnf -a ! -f /sbin/rhn_register; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
   osfamily='Fedora'
 elif test -f /usr/bin/yum; then
