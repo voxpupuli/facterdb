@@ -1,10 +1,10 @@
 {
-  "aio_agent_version": "5.5.16",
+  "aio_agent_version": "6.4.2",
   "architecture": "x86_64",
   "augeas": {
-    "version": "1.12.0"
+    "version": "1.11.0"
   },
-  "augeasversion": "1.12.0",
+  "augeasversion": "1.11.0",
   "bios_release_date": "12/01/2006",
   "bios_vendor": "innotek GmbH",
   "bios_version": "VirtualBox",
@@ -50,7 +50,7 @@
     }
   },
   "domain": "example.com",
-  "facterversion": "3.11.9",
+  "facterversion": "3.13.2",
   "filesystems": "ext4,iso9660",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
@@ -85,9 +85,9 @@
   "kernelrelease": "2.6.32-504.el6.x86_64",
   "kernelversion": "2.6.32",
   "load_averages": {
-    "15m": 0.22,
-    "1m": 0.96,
-    "5m": 0.54
+    "15m": 0.25,
+    "1m": 0.85,
+    "5m": 0.57
   },
   "macaddress": "08:00:27:98:ca:98",
   "macaddress_eth0": "08:00:27:98:ca:98",
@@ -103,24 +103,24 @@
       "used_bytes": 245760
     },
     "system": {
-      "available": "384.20 MiB",
-      "available_bytes": 402857984,
-      "capacity": "21.66%",
+      "available": "373.17 MiB",
+      "available_bytes": 391299072,
+      "capacity": "23.90%",
       "total": "490.39 MiB",
       "total_bytes": 514211840,
-      "used": "106.20 MiB",
-      "used_bytes": 111353856
+      "used": "117.22 MiB",
+      "used_bytes": 122912768
     }
   },
-  "memoryfree": "384.20 MiB",
-  "memoryfree_mb": 384.1953125,
+  "memoryfree": "373.17 MiB",
+  "memoryfree_mb": 373.171875,
   "memorysize": "490.39 MiB",
   "memorysize_mb": 490.390625,
   "mountpoints": {
     "/": {
-      "available": "16.98 GiB",
-      "available_bytes": 18233761792,
-      "capacity": "6.30%",
+      "available": "16.97 GiB",
+      "available_bytes": 18221273088,
+      "capacity": "6.36%",
       "device": "/dev/mapper/VolGroup-lv_root",
       "filesystem": "ext4",
       "options": [
@@ -128,8 +128,8 @@
       ],
       "size": "18.12 GiB",
       "size_bytes": 19459338240,
-      "used": "1.14 GiB",
-      "used_bytes": 1225576448
+      "used": "1.15 GiB",
+      "used_bytes": 1238065152
     },
     "/boot": {
       "available": "448.51 MiB",
@@ -145,22 +145,6 @@
       "used": "27.71 MiB",
       "used_bytes": 29053952
     },
-    "/dev/pts": {
-      "available": "0 bytes",
-      "available_bytes": 0,
-      "capacity": "100%",
-      "device": "devpts",
-      "filesystem": "devpts",
-      "options": [
-        "rw",
-        "gid=5",
-        "mode=620"
-      ],
-      "size": "0 bytes",
-      "size_bytes": 0,
-      "used": "0 bytes",
-      "used_bytes": 0
-    },
     "/dev/shm": {
       "available": "245.20 MiB",
       "available_bytes": 257105920,
@@ -174,22 +158,6 @@
       "size_bytes": 257105920,
       "used": "0 bytes",
       "used_bytes": 0
-    },
-    "/vagrant": {
-      "available": "109.88 GiB",
-      "available_bytes": 117979664384,
-      "capacity": "76.08%",
-      "device": "vagrant",
-      "filesystem": "vboxsf",
-      "options": [
-        "uid=500",
-        "gid=500",
-        "rw"
-      ],
-      "size": "459.36 GiB",
-      "size_bytes": 493236043776,
-      "used": "349.48 GiB",
-      "used_bytes": 375256379392
     }
   },
   "mtu_eth0": 1500,
@@ -330,15 +298,15 @@
     "physicalcount": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "5.5.16",
+  "puppetversion": "6.4.2",
   "ruby": {
     "platform": "x86_64-linux",
-    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-    "version": "2.4.5"
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+    "version": "2.5.3"
   },
   "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-  "rubyversion": "2.4.5",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+  "rubyversion": "2.5.3",
   "selinux": false,
   "serialnumber": "0",
   "ssh": {
@@ -370,14 +338,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 297,
-    "uptime": "0:04 hours"
+    "seconds": 352,
+    "uptime": "0:05 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:04 hours",
+  "uptime": "0:05 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 297,
+  "uptime_seconds": 352,
   "uuid": "EAC506C9-3FB5-42CE-81FF-87E0A693D0D9",
   "virtual": "virtualbox"
 }
