@@ -55,7 +55,7 @@ case "${osfamily}" in
   # Puppet 5
   yum install -y "https://yum.puppetlabs.com/puppet5/puppet5-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
   if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.6-1; do
+    for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.16-1; do
       # Package naming changed with Fedora 28
       [[ ${operatingsystemmajrelease} -ge 28 ]] && osprefix='fc' || osprefix='fedoraf'
       echo  dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
