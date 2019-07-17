@@ -46,7 +46,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "20F07C24-9200-48E0-BBF7-02880719DD40"
+      "uuid": "254FC326-4DF8-46A2-A4F9-461DDFE46EF3"
     }
   },
   "domain": "example.com",
@@ -78,42 +78,42 @@
   "kernelrelease": "3.10.0-327.el7.x86_64",
   "kernelversion": "3.10.0",
   "load_averages": {
-    "15m": 0.05,
-    "1m": 0.59,
-    "5m": 0.14
+    "15m": 0.16,
+    "1m": 1.84,
+    "5m": 0.48
   },
   "macaddress": "08:00:27:b7:f3:af",
   "macaddress_enp0s3": "08:00:27:b7:f3:af",
   "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
-      "available": "1.00 GiB",
-      "available_bytes": 1073737728,
-      "capacity": "0%",
+      "available": "1023.98 MiB",
+      "available_bytes": 1073717248,
+      "capacity": "0.00%",
       "total": "1.00 GiB",
       "total_bytes": 1073737728,
-      "used": "0 bytes",
-      "used_bytes": 0
+      "used": "20.00 KiB",
+      "used_bytes": 20480
     },
     "system": {
-      "available": "302.78 MiB",
-      "available_bytes": 317485056,
-      "capacity": "38.09%",
+      "available": "308.75 MiB",
+      "available_bytes": 323747840,
+      "capacity": "36.87%",
       "total": "489.04 MiB",
       "total_bytes": 512798720,
-      "used": "186.27 MiB",
-      "used_bytes": 195313664
+      "used": "180.29 MiB",
+      "used_bytes": 189050880
     }
   },
-  "memoryfree": "302.78 MiB",
-  "memoryfree_mb": 302.77734375,
+  "memoryfree": "308.75 MiB",
+  "memoryfree_mb": 308.75,
   "memorysize": "489.04 MiB",
   "memorysize_mb": 489.04296875,
   "mountpoints": {
     "/": {
-      "available": "17.11 GiB",
-      "available_bytes": 18374467584,
-      "capacity": "7.27%",
+      "available": "17.09 GiB",
+      "available_bytes": 18351251456,
+      "capacity": "7.39%",
       "device": "/dev/mapper/centos-root",
       "filesystem": "xfs",
       "options": [
@@ -125,8 +125,8 @@
       ],
       "size": "18.46 GiB",
       "size_bytes": 19815989248,
-      "used": "1.34 GiB",
-      "used_bytes": 1441521664
+      "used": "1.36 GiB",
+      "used_bytes": 1464737792
     },
     "/boot": {
       "available": "372.52 MiB",
@@ -164,7 +164,7 @@
     },
     "/run": {
       "available": "240.26 MiB",
-      "available_bytes": 251932672,
+      "available_bytes": 251928576,
       "capacity": "1.74%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
@@ -177,7 +177,7 @@
       "size": "244.52 MiB",
       "size_bytes": 256397312,
       "used": "4.26 MiB",
-      "used_bytes": 4464640
+      "used_bytes": 4468736
     },
     "/run/user/1000": {
       "available": "48.91 MiB",
@@ -346,13 +346,13 @@
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
   "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz",
+  "processor0": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
   "processorcount": 1,
   "processors": {
     "count": 1,
     "isa": "x86_64",
     "models": [
-      "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+      "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz"
     ],
     "physicalcount": 1
   },
@@ -397,21 +397,21 @@
   "sshfp_ed25519": "SSHFP 4 1 03dc83a5291156202d219701ca246ae52dfcb196\nSSHFP 4 2 65401a580116be078bfbdf59d9b720083cd68db7f0dbe22b095aa8d4300ca750",
   "sshfp_rsa": "SSHFP 1 1 c6583019aa0b3c40f9000b0276043f17173ef2d8\nSSHFP 1 2 da7a06517bd53ab42abef342df3b5e776775dcee19049781131c1ad654295a51",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDjp1PuZnOUZOUieQ2qMv0MlTaIjkAnYkpsgKumicsa8wjqGvvLngHB7DuFSJvXKeR5UFOYOGgw6wlKzj7oinNAmFFgkegnUsqlPCXfyVUljZw4/DfmH49KDZJpp8hKN87Ne0Z4tUhaD9ndjm+fWUUKy8Ykn6N5ClOjOiTrI+85YMb4I3/g0NciUdnnJ6ItWlttyUJmeNykYMsQie8OJWqw3bvc7um586lh0/i1DAlhu+DcNbJ9poaUeGLaXJSRGeymlLtAqpUTHl0fAiG7bs/8aRZzzjKlc1QCoHVzBte8meHQ2m9CJDdeTHOX2XBjG28NUErlpFi0vdI3X37xerqf",
-  "swapfree": "1.00 GiB",
-  "swapfree_mb": 1023.99609375,
+  "swapfree": "1023.98 MiB",
+  "swapfree_mb": 1023.9765625,
   "swapsize": "1.00 GiB",
   "swapsize_mb": 1023.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 36,
-    "uptime": "0:00 hours"
+    "seconds": 103,
+    "uptime": "0:01 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
+  "uptime": "0:01 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 36,
-  "uuid": "20F07C24-9200-48E0-BBF7-02880719DD40",
+  "uptime_seconds": 103,
+  "uuid": "254FC326-4DF8-46A2-A4F9-461DDFE46EF3",
   "virtual": "virtualbox"
 }
