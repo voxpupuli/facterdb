@@ -44,25 +44,43 @@ case "${osfamily}" in
   if [[ "${?}" == 0 ]]; then
     for puppet_agent_version in 1.5.3-1 1.6.0-1 1.6.1-1 1.6.2-1 1.7.0-1 1.10.12-1; do
       dnf install -y "puppet-agent-${puppet_agent_version}.fedoraf${operatingsystemmajrelease}"
-      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-      mkdir -p $(dirname ${output_file})
-      facter --show-legacy -p -j | tee ${output_file}
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
     done
     yum remove -y puppetlabs-release-pc1
   fi
   # Puppet 5
   yum install -y "https://yum.puppetlabs.com/puppet5/puppet5-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
-  for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.6-1; do
-    # Package naming changed with Fedora 28
-    [[ ${operatingsystemmajrelease} -ge 28 ]] && osprefix='fc' || osprefix='fedoraf'
-    echo  dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
-    dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    echo "Outputfile: $output_file"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
-
+  if [[ "${?}" == 0 ]]; then
+    for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.6-1; do
+      # Package naming changed with Fedora 28
+      [[ ${operatingsystemmajrelease} -ge 28 ]] && osprefix='fc' || osprefix='fedoraf'
+      echo  dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
+      dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        echo "Outputfile: $output_file"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet5-release
+  fi
+  yum install -y "https://yum.puppetlabs.com/puppet6-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
+  if [[ "${?}" == 0 ]]; then
+    for puppet_agent_version in 6.2.0-1 6.4.2-1 6.6.0-1; do
+      dnf install -y "puppet-agent-${puppet_agent_version}.fc${operatingsystemmajrelease}"
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet6-release
+  fi
   ;;
 'RedHat')
   if [[ ${operatingsystemmajrelease} -eq 5 ]]; then
