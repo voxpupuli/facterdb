@@ -162,9 +162,7 @@ for file in facts/*/*-x86_64.facts; do cat $file | sed -e 's/x86_64/i386/' -e 's
 Create RedHat, Scientific, OracleLinux facts from CentOS's ones
 
 ```
-for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/RedHat/' > $(echo $file | sed 's/centos/redhat/'); done
-for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/Scientific/' > $(echo $file | sed 's/centos/scientific/'); done
-for file in facts/*/centos-*.facts; do cat $file | sed -e 's/CentOS/OracleLinux/' > $(echo $file | sed 's/centos/oraclelinux/'); done
+$ bundle exec rake rhel_alts
 ```
 
 Then update array `Facter version and Operating System coverage` with output of rake task `table`.
