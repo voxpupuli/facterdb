@@ -7,6 +7,9 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.hostname = "foo.example.com"
+  config.vm.provider "virtualbox" do |v|
+    v.gui = false
+  end
 
   config.vm.define "debian-6-x86_64" do |host|
     host.vm.box = "puppetlabs/debian-6.0.10-64-nocm"
@@ -23,10 +26,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "debian-8-x86_64" do |host|
-    host.vm.box = "camptocamp/debian-8-amd64"
-    host.vm.provision "shell", inline: "apt-get update && apt-get install -y curl"
-    host.vm.provision "shell", inline: "curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \\curl -sSL https://get.rvm.io | bash -s stable"
-    host.vm.provision "shell", inline: "source /etc/profile.d/rvm.sh && rvm install 1.9.3 && rvm use --create 1.9.3"
+    host.vm.box = "debian/jessie64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "debian-9-x86_64" do |host|
+    host.vm.box = "debian/stretch64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -73,15 +79,28 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
-  config.vm.define "mint-18.1-x86_64" do |host|
+  config.vm.define "linuxmint-18-x86_64" do |host|
     host.vm.box = "artem-sidorenko/mint-18.1-cinnamon"
     host.vm.provision "shell", inline: "apt-get update && apt-get install -y ruby ruby-dev libc6-dev"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "linuxmint-19-x86_64" do |host|
+    host.vm.box = "ltsp/linuxmint-19.1-cinnamon-64bit"
+    host.vm.provision "shell", inline: "export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y ruby ruby-dev libc6-dev"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "ubuntu-16.04-x86_64" do |host|
     host.vm.box = "ubuntu/xenial64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "ubuntu-18.04-x86_64" do |host|
+    host.vm.box = "ubuntu/bionic64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -100,6 +119,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define "centos-7-x86_64" do |host|
     host.vm.box = "puppetlabs/centos-7.2-64-nocm"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "redhat-8-x86_64" do |host|
+    host.vm.box = "generic/rhel8"
+    host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -132,6 +158,44 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "fedora-26-x86_64" do |host|
+    host.vm.box = "bento/fedora-26"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-27-x86_64" do |host|
+    host.vm.box = "bento/fedora-27"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-28-x86_64" do |host|
+    host.vm.box = "bento/fedora-28"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel make"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-29-x86_64" do |host|
+    host.vm.box = "bento/fedora-29"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel make"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-30-x86_64" do |host|
+    host.vm.box = "bento/fedora-30"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel make"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "archlinux-x86_64" do |host|
     host.vm.box = "archlinux/archlinux"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
@@ -140,14 +204,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define "sles-11sp1-x86_64" do |host|
     host.vm.box = "suse/sles11sp3"
-    host.vm.provision "shell", inline: "gem update --system"
+    host.vm.network "private_network", ip: "192.168.123.2"
+    host.vm.synced_folder ".", "/vagrant", type: "nfs"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "sles-12sp1-x86_64" do |host|
-    host.vm.box = "suse/sles12sp1"
-    host.vm.provision "shell", inline: "gem update --system"
+    host.vm.box = "idar/sles12sp3"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -190,37 +254,32 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
   end
+  config.vm.define "opensuse-15.0-x86_64" do |host|
+    host.vm.box = "opensuse/openSUSE-15.0-x86_64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+  end
+  config.vm.define "freebsd-12-x86_64" do |host|
+    host.vm.box = "bento/freebsd-12.0"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
+    host.vm.provision "shell", inline: "ln -sf /usr/local/bin/bash /bin/bash"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -p now"
+  end
   config.vm.define "freebsd-11-x86_64" do |host|
-    host.vm.box = "bento/freebsd-11.1"
-    host.ssh.shell = '/bin/sh'
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder ".", "/vagrant", :nfs => true
-    host.vm.provision "shell", inline: "pkg install -y devel/ruby-gems"
+    host.vm.box = "bento/freebsd-11.2"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
+    host.vm.provision "shell", inline: "ln -sf /usr/local/bin/bash /bin/bash"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
-  config.vm.define "freebsd-10-x86_64" do |host|
-    host.vm.box = "bento/freebsd-10.3"
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder ".", "/vagrant", :nfs => true
-    host.vm.provision "shell", inline: "pkg install -y devel/ruby-gems"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
-  config.vm.define "freebsd-9-x86_64" do |host|
-    host.vm.box = "chef/freebsd-9.2"
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder ".", "/vagrant", :nfs => true
-    host.ssh.shell = '/bin/sh'
-    host.vm.provision "shell", inline: "pkg_add -F -r ruby19-gems"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+    host.vm.provision "shell", inline: "/sbin/shutdown -p now"
   end
   config.vm.define "gentoo-x86_64" do |host|
-    host.vm.box = "cmiles/gentoo-amd64-minimal"
+    host.vm.box = "generic/gentoo"
+    host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "emerge-webrsync && emerge app-crypt/gnupg net-misc/curl"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
@@ -234,8 +293,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -i S -g0 -y 'Bye' &"
   end
-  config.vm.define "openbsd-5.9-x86_64" do |host|
-    host.vm.box = "bodgit/openbsd-5.9-amd64"
+  config.vm.define "openbsd-6.2-x86_64" do |host|
+    host.vm.box = "bodgit/openbsd-6.2-amd64"
     host.vm.network :private_network, ip: '10.0.0.2'
     host.vm.synced_folder ".", "/vagrant", :nfs => true
     host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
@@ -243,23 +302,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       pkg_info -qe 'bash->=0' || pkg_add -I bash
       ln -sf /usr/local/bin/bash /bin
-
-      pkg_info -qe 'facter->=2.4.6' || pkg_add -I facter-2.4.6
-      ln -sf /usr/local/bin/ruby22 /usr/local/bin/ruby
-      ln -sf /usr/local/bin/erb22 /usr/local/bin/erb
-      ln -sf /usr/local/bin/irb22 /usr/local/bin/irb
-      ln -sf /usr/local/bin/rdoc22 /usr/local/bin/rdoc
-      ln -sf /usr/local/bin/ri22 /usr/local/bin/ri
-      ln -sf /usr/local/bin/rake22 /usr/local/bin/rake
-      ln -sf /usr/local/bin/gem22 /usr/local/bin/gem
-      ln -sf /usr/local/bin/testrb22 /usr/local/bin/testrb
     SCRIPT
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
-  config.vm.define "openbsd-6.0-x86_64" do |host|
-    host.vm.box = "bodgit/openbsd-6.0-amd64"
+  config.vm.define "openbsd-6.3-x86_64" do |host|
+    host.vm.box = "bodgit/openbsd-6.3-amd64"
     host.vm.network :private_network, ip: '10.0.0.2'
     host.vm.synced_folder ".", "/vagrant", :nfs => true
     host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
@@ -267,15 +316,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       pkg_info -qe 'bash->=0' || pkg_add -I bash
       ln -sf /usr/local/bin/bash /bin
+    SCRIPT
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "openbsd-6.4-x86_64" do |host|
+    host.vm.box = "generic/openbsd6"
+    host.vm.box_version = "~> 1.9.18"
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
+    host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
+      . ~/.profile
 
-      pkg_info -qe 'facter->=2.4.6' || pkg_add -I facter-2.4.6p0
-      ln -sf /usr/local/bin/ruby22 /usr/local/bin/ruby
-      ln -sf /usr/local/bin/erb22 /usr/local/bin/erb
-      ln -sf /usr/local/bin/irb22 /usr/local/bin/irb
-      ln -sf /usr/local/bin/rdoc22 /usr/local/bin/rdoc
-      ln -sf /usr/local/bin/ri22 /usr/local/bin/ri
-      ln -sf /usr/local/bin/rake22 /usr/local/bin/rake
-      ln -sf /usr/local/bin/gem22 /usr/local/bin/gem
+      pkg_info -qe 'bash->=0' || pkg_add bash
+      ln -sf /usr/local/bin/bash /bin
+      pkg_add facter puppet-5.5.6
+      ln -sf /usr/local/bin/gem24 /usr/bin/gem
+      ln -sf /usr/local/bin/ruby24 /usr/bin/ruby
     SCRIPT
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"

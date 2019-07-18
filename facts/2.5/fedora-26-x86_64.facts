@@ -7,7 +7,7 @@
   "memoryfree_mb": "15656.41",
   "uuid": "97749C7D-3632-425C-8D87-8FD2B61812BD",
   "rubyversion": "2.4.1",
-  "facterversion": "2.4.3",
+  "facterversion": "2.5.0",
   "blockdevice_sr0_model": "QEMU DVD-ROM",
   "blockdevice_sr0_size": 1073741312,
   "swapsize": "2.00 GB",
