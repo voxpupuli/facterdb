@@ -10,7 +10,7 @@ if test -f /usr/bin/zypper; then
   if [[ `cat /etc/os-release |grep -e '^VERSION="42' -c` == 1  ]]; then
     operatingsystemmajrelease=12
   elif test -r /etc/os-release; then
-    operatingsystemmajrelease=$(. /etc/os-release ; echo ${VERSION} | cut -d. -f1)
+    operatingsystemmajrelease=$(. /etc/os-release ; echo ${VERSION} | cut -d. -f1 | cut -d - -f1)
   else
     operatingsystemmajrelease=$(cat /etc/SuSE-release | grep ^VERSION | cut -d' ' -f3)
   fi
@@ -205,29 +205,37 @@ case "${osfamily}" in
   else
     http_method='https'
   fi
-  if [[ ${operatingsystemmajrelease} -le 12 ]]; then
-    rpm -Uvh ${http_method}://yum.puppet.com/puppetlabs-release-pc1-sles-${operatingsystemmajrelease}.noarch.rpm
+  if rpm -Uvh ${http_method}://yum.puppet.com/puppetlabs-release-pc1-sles-${operatingsystemmajrelease}.noarch.rpm; then
     zypper --gpg-auto-import-keys --non-interactive refresh
     for puppet_agent_version in 1.6.2 1.7.2 1.8.3 1.9.3 1.10.8; do
-      zypper --non-interactive install puppet-agent-${puppet_agent_version}
-      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-      mkdir -p $(dirname ${output_file})
-      facter --show-legacy -p -j | tee ${output_file}
+      if zypper --non-interactive install puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
     done
     zypper --non-interactive remove puppetlabs-release-pc1
   fi
-  if [[ ${operatingsystemmajrelease} -le 12 ]]; then
-    pup5vers="5.0.1 5.1.0 5.2.0 5.3.2 5.4.0 5.5.8"
-  else
-    pup5vers="5.5.8 5.5.10"
+  if rpm -Uvh ${http_method}://yum.puppet.com/puppet5/puppet5-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
+    for puppet_agent_version in 5.0.1 5.1.0 5.2.0 5.3.2 5.4.0 5.5.16; do
+      if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    zypper --non-interactive remove puppet5-release
   fi
-  rpm -Uvh ${http_method}://yum.puppet.com/puppet5/puppet5-release-sles-${operatingsystemmajrelease}.noarch.rpm
-  for puppet_agent_version in ${pup5vers}; do
-    zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
+  if rpm -Uvh ${http_method}://yum.puppet.com/puppet6-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
+    for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
+      if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    zypper --non-interactive remove puppet6-release
+  fi
   ;;
 'Archlinux')
   pacman -Syu --noconfirm ruby puppet ruby-bundler base-devel dnsutils facter
