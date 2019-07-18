@@ -123,6 +123,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "redhat-8-x86_64" do |host|
+    host.vm.box = "generic/rhel8"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "fedora-19-x86_64" do |host|
     host.vm.box = "chef/fedora-19"
     host.vm.provision "shell", inline: "yum -y install ruby ruby-devel"
@@ -167,6 +174,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define "fedora-28-x86_64" do |host|
     host.vm.box = "bento/fedora-28"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel make"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-29-x86_64" do |host|
+    host.vm.box = "bento/fedora-29"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel make"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "fedora-30-x86_64" do |host|
+    host.vm.box = "bento/fedora-30"
     host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "dnf -y install gcc glibc-devel make"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"

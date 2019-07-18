@@ -21,7 +21,7 @@ elif test -f /usr/bin/apt-get; then
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
   osfamily='Debian'
-elif test -f /usr/bin/dnf; then
+elif test -f /usr/bin/dnf -a ! -f /sbin/rhn_register; then
   operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
   osfamily='Fedora'
 elif test -f /usr/bin/yum; then
@@ -44,25 +44,43 @@ case "${osfamily}" in
   if [[ "${?}" == 0 ]]; then
     for puppet_agent_version in 1.5.3-1 1.6.0-1 1.6.1-1 1.6.2-1 1.7.0-1 1.10.12-1; do
       dnf install -y "puppet-agent-${puppet_agent_version}.fedoraf${operatingsystemmajrelease}"
-      output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-      mkdir -p $(dirname ${output_file})
-      facter --show-legacy -p -j | tee ${output_file}
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
     done
     yum remove -y puppetlabs-release-pc1
   fi
   # Puppet 5
   yum install -y "https://yum.puppetlabs.com/puppet5/puppet5-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
-  for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.6-1; do
-    # Package naming changed with Fedora 28
-    [[ ${operatingsystemmajrelease} -ge 28 ]] && osprefix='fc' || osprefix='fedoraf'
-    echo  dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
-    dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    echo "Outputfile: $output_file"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
-
+  if [[ "${?}" == 0 ]]; then
+    for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.16-1; do
+      # Package naming changed with Fedora 28
+      [[ ${operatingsystemmajrelease} -ge 28 ]] && osprefix='fc' || osprefix='fedoraf'
+      echo  dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
+      dnf install -y "puppet-agent-${puppet_agent_version}.${osprefix}${operatingsystemmajrelease}"
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        echo "Outputfile: $output_file"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet5-release
+  fi
+  yum install -y "https://yum.puppetlabs.com/puppet6-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
+  if [[ "${?}" == 0 ]]; then
+    for puppet_agent_version in 6.2.0-1 6.4.2-1 6.6.0-1; do
+      dnf install -y "puppet-agent-${puppet_agent_version}.fc${operatingsystemmajrelease}"
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet6-release
+  fi
   ;;
 'RedHat')
   if [[ ${operatingsystemmajrelease} -eq 5 ]]; then
@@ -74,21 +92,41 @@ case "${osfamily}" in
     http_method='https'
   fi
   wget "${http_method}://yum.puppetlabs.com/puppetlabs-release-pc1-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
-  rpm -ivh /tmp/puppetlabs-release-pc1.rpm
-  for puppet_agent_version in 1.2.2 1.4.2 1.5.3 1.10.4; do
-    yum install -y puppet-agent-${puppet_agent_version}
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
+  if test -f /tmp/puppetlabs-release-pc1.rpm; then
+    rpm -ivh /tmp/puppetlabs-release-pc1.rpm
+    for puppet_agent_version in 1.2.2 1.4.2 1.5.3 1.10.4; do
+      if yum install -y puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppetlabs-release-pc1
+  fi
   wget "http://yum.puppetlabs.com/puppet5/puppet5-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet5-release.rpm
-  rpm -ivh /tmp/puppet5-release.rpm
-  for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.3; do
-    yum install -y puppet-agent-${puppet_agent_version}
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  done
+  if test -f /tmp/puppet5-release.rpm; then
+    rpm -ivh /tmp/puppet5-release.rpm
+    for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.16; do
+      if yum install -y puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet5-release
+  fi
+  wget "http://yum.puppetlabs.com/puppet6-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet6-release.rpm
+  if test -f /tmp/puppet6-release.rpm; then
+    rpm -ivh /tmp/puppet6-release.rpm
+    for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
+      if yum install -y puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet6-release
+  fi
   ;;
 
 'Debian')

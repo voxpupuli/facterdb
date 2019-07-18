@@ -46,7 +46,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "BE18EF85-0099-4C50-9429-C2BA7130B366"
+      "uuid": "EAC506C9-3FB5-42CE-81FF-87E0A693D0D9"
     }
   },
   "domain": "example.com",
@@ -60,8 +60,8 @@
   "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
-      "revision": "122591",
-      "version": "5.2.12"
+      "revision": "130347",
+      "version": "6.0.8"
     }
   },
   "id": "root",
@@ -85,42 +85,42 @@
   "kernelrelease": "2.6.32-504.el6.x86_64",
   "kernelversion": "2.6.32",
   "load_averages": {
-    "15m": 0.97,
-    "1m": 1.25,
-    "5m": 1.27
+    "15m": 0.2,
+    "1m": 0.92,
+    "5m": 0.5
   },
   "macaddress": "08:00:27:98:ca:98",
   "macaddress_eth0": "08:00:27:98:ca:98",
   "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
-      "available": "991.97 MiB",
-      "available_bytes": 1040158720,
-      "capacity": "0.00%",
+      "available": "991.76 MiB",
+      "available_bytes": 1039937536,
+      "capacity": "0.02%",
       "total": "992.00 MiB",
       "total_bytes": 1040183296,
-      "used": "24.00 KiB",
-      "used_bytes": 24576
+      "used": "240.00 KiB",
+      "used_bytes": 245760
     },
     "system": {
-      "available": "385.75 MiB",
-      "available_bytes": 404488192,
-      "capacity": "21.34%",
+      "available": "385.52 MiB",
+      "available_bytes": 404242432,
+      "capacity": "21.39%",
       "total": "490.39 MiB",
       "total_bytes": 514211840,
-      "used": "104.64 MiB",
-      "used_bytes": 109723648
+      "used": "104.88 MiB",
+      "used_bytes": 109969408
     }
   },
-  "memoryfree": "385.75 MiB",
-  "memoryfree_mb": 385.75,
+  "memoryfree": "385.52 MiB",
+  "memoryfree_mb": 385.515625,
   "memorysize": "490.39 MiB",
   "memorysize_mb": 490.390625,
   "mountpoints": {
     "/": {
-      "available": "16.98 GiB",
-      "available_bytes": 18227191808,
-      "capacity": "6.33%",
+      "available": "16.99 GiB",
+      "available_bytes": 18240126976,
+      "capacity": "6.27%",
       "device": "/dev/mapper/VolGroup-lv_root",
       "filesystem": "ext4",
       "options": [
@@ -128,8 +128,8 @@
       ],
       "size": "18.12 GiB",
       "size_bytes": 19459338240,
-      "used": "1.15 GiB",
-      "used_bytes": 1232146432
+      "used": "1.14 GiB",
+      "used_bytes": 1219211264
     },
     "/boot": {
       "available": "448.51 MiB",
@@ -287,13 +287,13 @@
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
   "physicalprocessorcount": 1,
-  "processor0": "AMD Phenom(tm) II X4 965 Processor",
+  "processor0": "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz",
   "processorcount": 1,
   "processors": {
     "count": 1,
     "isa": "x86_64",
     "models": [
-      "AMD Phenom(tm) II X4 965 Processor"
+      "Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz"
     ],
     "physicalcount": 1
   },
@@ -329,21 +329,21 @@
   "sshfp_dsa": "SSHFP 2 1 0e9e8e299b19eb61dd5f9eea7b142f9ac7df2cd3\nSSHFP 2 2 03106abaacaa1af5103053b6e933bb603c933bb9ebc0f3d962ac9cc2ba35e37d",
   "sshfp_rsa": "SSHFP 1 1 92e88fd08705813da6d5f9b7d5f79355282b9397\nSSHFP 1 2 58e36c85866db8936510aadd0785ef700c172dd1ecc2d30c4d52996fc53a8bac",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAABIwAAAQEA1aDd89yysGoH+u57JguOVc1HOAURwMzsyiE58Un4qdB6RWdfHbzx+hhaYMk6HpUU2pYcHpFL+RPNsXLWx6wH2e/HvRfOi1pHxElpX9P8Q1jwKDIgEzAVRhnTIejDw0MiKv8EVIXexcs8ZGrfcVh1eRSGlGUyJs+vY7MVbMlmL6cuz4mf70Gf55YRPCyXuubyicz9bthyClykHzR8PPjCYL/hXyNed69TqlC2/xDqOs5apK/ND5nytA4irCZGh3POABxapIAjcSYU3MR7VMpV5CbUoPaeW8Zvldbbdf41Hg0mScAAvutJNgdy6p5Wy/WLAa6otJ2RiVAYNP+l5sDz2Q==",
-  "swapfree": "991.97 MiB",
-  "swapfree_mb": 991.97265625,
+  "swapfree": "991.76 MiB",
+  "swapfree_mb": 991.76171875,
   "swapsize": "992.00 MiB",
   "swapsize_mb": 991.99609375,
   "system_uptime": {
     "days": 0,
-    "hours": 1,
-    "seconds": 4906,
-    "uptime": "1:21 hours"
+    "hours": 0,
+    "seconds": 273,
+    "uptime": "0:04 hours"
   },
   "timezone": "UTC",
-  "uptime": "1:21 hours",
+  "uptime": "0:04 hours",
   "uptime_days": 0,
-  "uptime_hours": 1,
-  "uptime_seconds": 4906,
-  "uuid": "BE18EF85-0099-4C50-9429-C2BA7130B366",
+  "uptime_hours": 0,
+  "uptime_seconds": 273,
+  "uuid": "EAC506C9-3FB5-42CE-81FF-87E0A693D0D9",
   "virtual": "virtualbox"
 }
