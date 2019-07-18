@@ -10,7 +10,7 @@ if test -f /usr/bin/zypper; then
   if [[ `cat /etc/os-release |grep -e '^VERSION="42' -c` == 1  ]]; then
     operatingsystemmajrelease=12
   elif test -r /etc/os-release; then
-    operatingsystemmajrelease=$(. /etc/os-release ; echo ${VERSION} | cut -d. -f1)
+    operatingsystemmajrelease=$(. /etc/os-release ; echo ${VERSION} | cut -d. -f1 | cut -d - -f1)
   else
     operatingsystemmajrelease=$(cat /etc/SuSE-release | grep ^VERSION | cut -d' ' -f3)
   fi
