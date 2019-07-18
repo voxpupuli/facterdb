@@ -45,7 +45,7 @@
     },
     "domain": "example.com",
     "env_temp_variable": "/tmp",
-    "facterversion": "3.11",
+    "facterversion": "3.11.8",
     "filesystems": "autofs,cachefs,ctfs,dcfs,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,sockfs,specfs,tmpfs,udfs,ufs,xmemfs",
     "fqdn": "myhostname.example.com",
     "gemhome": "/opt/puppetlabs/puppet/lib/ruby/gems/2.4.0",

@@ -98,7 +98,7 @@
   "kernelversion": "Generic_142901-14",
   "osfamily": "Solaris",
   "rubyversion": "1.9.3",
-  "facterversion": "2.5",
+  "facterversion": "2.5.1",
   "pe_version": "3.8.5",
   "is_pe": true,
   "pe_major_version": "3",
