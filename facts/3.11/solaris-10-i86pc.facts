@@ -1,0 +1,608 @@
+{
+  "name": "myhostname.example.com",
+  "values": {
+    "aio_agent_build": "5.5.14",
+    "aio_agent_version": "5.5.14",
+    "architecture": "i86pc",
+    "augeas": {
+      "version": "1.11.0"
+    },
+    "augeasprovider_grub_version": 1,
+    "augeasversion": "1.11.0",
+    "bios_release_date": "04/14/2014",
+    "bios_vendor": "Phoenix Technologies LTD",
+    "bios_version": "6.00",
+    "blockdevice_sd0_size": 42949672448,
+    "blockdevice_sd0_vendor": "VMware",
+    "blockdevices": "sd0",
+    "chassisassettag": "No Asset Tag",
+    "chassistype": "0x1 (other)",
+    "dcos_installed": false,
+    "disks": {
+      "sd0": {
+        "product": "Virtual disk    Revision",
+        "size": "40.00 GiB",
+        "size_bytes": 42949672448,
+        "vendor": "VMware"
+      }
+    },
+    "dmi": {
+      "bios": {
+        "release_date": "04/14/2014",
+        "vendor": "Phoenix Technologies LTD",
+        "version": "6.00"
+      },
+      "chassis": {
+        "asset_tag": "No Asset Tag",
+        "type": "0x1 (other)"
+      },
+      "manufacturer": "VMware, Inc.",
+      "product": {
+        "name": "VMware Virtual Platform",
+        "serial_number": "VMware-42 13 b6 ea e1 0f 69 33-02 a3 ac 33 90 f7 3d e7",
+        "uuid": "4213b6ea-e10f-6933-02a3-ac3390f73de7"
+      }
+    },
+    "domain": "example.com",
+    "env_temp_variable": "/tmp",
+    "facterversion": "3.11.8",
+    "filesystems": "autofs,cachefs,ctfs,dcfs,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,sockfs,specfs,tmpfs,udfs,ufs,xmemfs",
+    "fqdn": "myhostname.example.com",
+    "gemhome": "/opt/puppetlabs/puppet/lib/ruby/gems/2.4.0",
+    "gid": "root",
+    "hardwareisa": "i386",
+    "hardwaremodel": "i86pc",
+    "hostname": "myhostname",
+    "hypervisors": {
+      "vmware": {
+      },
+      "zone": {
+        "brand": "native",
+        "id": 0,
+        "ip_type": "shared",
+        "name": "global",
+        "uuid": ""
+      }
+    },
+    "id": "root",
+    "identity": {
+      "gid": 0,
+      "group": "root",
+      "privileged": true,
+      "uid": 0,
+      "user": "root"
+    },
+    "interfaces": "lo0,vmxnet3s0",
+    "ipaddress": "10.129.81.236",
+    "ipaddress_lo0": "127.0.0.1",
+    "ipaddress_vmxnet3s0": "10.129.81.236",
+    "is_pe": false,
+    "is_virtual": true,
+    "java_major_version": "6",
+    "java_patch_level": "45",
+    "java_version": "1.6.0_45",
+    "kernel": "SunOS",
+    "kernelmajversion": "151202-03",
+    "kernelrelease": "5.10",
+    "kernelversion": "151202-03",
+    "load_averages": {
+      "15m": 0.03125,
+      "1m": 0.0859375,
+      "5m": 0.0390625
+    },
+    "macaddress": "00:50:56:17:64:b0",
+    "macaddress_vmxnet3s0": "00:50:56:17:64:b0",
+    "manufacturer": "VMware, Inc.",
+    "mco_client_config": "/etc/puppetlabs/mcollective/client.cfg",
+    "mco_client_settings": {
+      "libdir": "/opt/puppetlabs/mcollective/plugins:/usr/share/mcollective/plugins:/usr/libexec/mcollective"
+    },
+    "mco_confdir": "/etc/mcollective/etc",
+    "mco_server_config": "/etc/puppetlabs/mcollective/server.cfg",
+    "mco_server_settings": {
+      "libdir": "/opt/puppetlabs/mcollective/plugins:/usr/share/mcollective/plugins:/usr/libexec/mcollective",
+      "plugin.yaml": "/etc/puppetlabs/mcollective/facts.yaml"
+    },
+    "memory": {
+      "swap": {
+        "available": "4.00 GiB",
+        "available_bytes": 4294963200,
+        "capacity": "0%",
+        "total": "4.00 GiB",
+        "total_bytes": 4294963200,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "system": {
+        "available": "2.76 GiB",
+        "available_bytes": 2960699392,
+        "capacity": "53.98%",
+        "total": "5.99 GiB",
+        "total_bytes": 6433595392,
+        "used": "3.23 GiB",
+        "used_bytes": 3472896000
+      }
+    },
+    "memoryfree": "2.76 GiB",
+    "memoryfree_mb": 2823.54296875,
+    "memorysize": "5.99 GiB",
+    "memorysize_mb": 6135.5546875,
+    "memorysizeinbytes": 6442450944,
+    "mountpoints": {
+      "/": {
+        "available": "3.45 GiB",
+        "available_bytes": 3708584448,
+        "capacity": "61.21%",
+        "device": "rpool/ROOT/u11",
+        "filesystem": "zfs",
+        "options": [
+          "dev=2d50002"
+        ],
+        "size": "8.90 GiB",
+        "size_bytes": 9559531008,
+        "used": "5.45 GiB",
+        "used_bytes": 5850946560
+      },
+      "/dev/fd": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "fd",
+        "filesystem": "fd",
+        "options": [
+          "rw",
+          "dev=4880001"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/devices": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "/devices",
+        "filesystem": "devfs",
+        "options": [
+          "dev=4580000"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/etc/dfs/sharetab": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "sharefs",
+        "filesystem": "sharefs",
+        "options": [
+          "dev=4700001"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/etc/mnttab": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "mnttab",
+        "filesystem": "mntfs",
+        "options": [
+          "dev=4640001"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/etc/svc/volatile": {
+        "available": "6.03 GiB",
+        "available_bytes": 6475173888,
+        "capacity": "0.01%",
+        "device": "swap",
+        "filesystem": "tmpfs",
+        "options": [
+          "xattr",
+          "dev=4680001"
+        ],
+        "size": "6.03 GiB",
+        "size_bytes": 6475513856,
+        "used": "332.00 KiB",
+        "used_bytes": 339968
+      },
+      "/home": {
+        "available": "9.97 GiB",
+        "available_bytes": 10707177984,
+        "capacity": "0.28%",
+        "device": "tanker/home",
+        "filesystem": "zfs",
+        "options": [
+          "rw",
+          "devices",
+          "setuid",
+          "nonbmand",
+          "exec",
+          "rstchown",
+          "xattr",
+          "atime",
+          "dev=2d50003"
+        ],
+        "size": "10.00 GiB",
+        "size_bytes": 10737418240,
+        "used": "28.84 MiB",
+        "used_bytes": 30240256
+      },
+      "/lib/libc.so.1": {
+        "available": "3.45 GiB",
+        "available_bytes": 3708584448,
+        "capacity": "61.21%",
+        "device": "/usr/lib/libc/libc_hwcap1.so.1",
+        "filesystem": "lofs",
+        "options": [
+          "dev=2d50002"
+        ],
+        "size": "8.90 GiB",
+        "size_bytes": 9559531008,
+        "used": "5.45 GiB",
+        "used_bytes": 5850946560
+      },
+      "/proc": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "proc",
+        "filesystem": "proc",
+        "options": [
+          "dev=45c0000"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/rpool": {
+        "available": "3.45 GiB",
+        "available_bytes": 3708584448,
+        "capacity": "0.00%",
+        "device": "rpool",
+        "filesystem": "zfs",
+        "options": [
+          "rw",
+          "devices",
+          "setuid",
+          "nonbmand",
+          "exec",
+          "rstchown",
+          "xattr",
+          "atime",
+          "dev=2d50004"
+        ],
+        "size": "3.45 GiB",
+        "size_bytes": 3708634112,
+        "used": "48.50 KiB",
+        "used_bytes": 49664
+      },
+      "/system/contract": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "ctfs",
+        "filesystem": "ctfs",
+        "options": [
+          "dev=4600001"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/system/object": {
+        "available": "0 bytes",
+        "available_bytes": 0,
+        "capacity": "100%",
+        "device": "objfs",
+        "filesystem": "objfs",
+        "options": [
+          "dev=46c0001"
+        ],
+        "size": "0 bytes",
+        "size_bytes": 0,
+        "used": "0 bytes",
+        "used_bytes": 0
+      },
+      "/tanker": {
+        "available": "24.58 GiB",
+        "available_bytes": 26390925312,
+        "capacity": "0.00%",
+        "device": "tanker",
+        "filesystem": "zfs",
+        "options": [
+          "rw",
+          "devices",
+          "setuid",
+          "nonbmand",
+          "exec",
+          "rstchown",
+          "xattr",
+          "atime",
+          "dev=2d50005"
+        ],
+        "size": "24.58 GiB",
+        "size_bytes": 26390957056,
+        "used": "31.00 KiB",
+        "used_bytes": 31744
+      },
+      "/tmp": {
+        "available": "6.03 GiB",
+        "available_bytes": 6475173888,
+        "capacity": "1.80%",
+        "device": "swap",
+        "filesystem": "tmpfs",
+        "options": [
+          "xattr",
+          "dev=4680002"
+        ],
+        "size": "6.14 GiB",
+        "size_bytes": 6594183168,
+        "used": "113.50 MiB",
+        "used_bytes": 119009280
+      },
+      "/var/opt": {
+        "available": "24.58 GiB",
+        "available_bytes": 26390925312,
+        "capacity": "2.92%",
+        "device": "tanker/var_opt",
+        "filesystem": "zfs",
+        "options": [
+          "rw",
+          "devices",
+          "setuid",
+          "nonbmand",
+          "exec",
+          "rstchown",
+          "xattr",
+          "atime",
+          "dev=2d50006"
+        ],
+        "size": "25.32 GiB",
+        "size_bytes": 27185841664,
+        "used": "758.09 MiB",
+        "used_bytes": 794916352
+      },
+      "/var/run": {
+        "available": "6.03 GiB",
+        "available_bytes": 6475173888,
+        "capacity": "0.00%",
+        "device": "swap",
+        "filesystem": "tmpfs",
+        "options": [
+          "xattr",
+          "dev=4680003"
+        ],
+        "size": "6.03 GiB",
+        "size_bytes": 6475218944,
+        "used": "44.00 KiB",
+        "used_bytes": 45056
+      }
+    },
+    "mtu_lo0": 8232,
+    "mtu_vmxnet3s0": 1500,
+    "netmask": "255.255.255.0",
+    "netmask_lo0": "255.0.0.0",
+    "netmask_vmxnet3s0": "255.255.255.0",
+    "network": "10.129.81.0",
+    "network_lo0": "127.0.0.0",
+    "network_vmxnet3s0": "10.129.81.0",
+    "networking": {
+      "domain": "example.com",
+      "fqdn": "myhostname.example.com",
+      "hostname": "myhostname",
+      "interfaces": {
+        "lo0": {
+          "bindings": [
+            {
+              "address": "127.0.0.1",
+              "netmask": "255.0.0.0",
+              "network": "127.0.0.0"
+            }
+          ],
+          "ip": "127.0.0.1",
+          "mtu": 8232,
+          "netmask": "255.0.0.0",
+          "network": "127.0.0.0"
+        },
+        "vmxnet3s0": {
+          "bindings": [
+            {
+              "address": "10.129.81.236",
+              "netmask": "255.255.255.0",
+              "network": "10.129.81.0"
+            }
+          ],
+          "ip": "10.129.81.236",
+          "mac": "00:50:56:17:64:b0",
+          "mtu": 1500,
+          "netmask": "255.255.255.0",
+          "network": "10.129.81.0"
+        }
+      },
+      "ip": "10.129.81.236",
+      "mac": "00:50:56:17:64:b0",
+      "mtu": 1500,
+      "netmask": "255.255.255.0",
+      "network": "10.129.81.0",
+      "primary": "vmxnet3s0"
+    },
+    "operatingsystem": "Solaris",
+    "operatingsystemmajrelease": "10",
+    "operatingsystemrelease": "10_u8",
+    "os": {
+      "architecture": "i86pc",
+      "family": "Solaris",
+      "hardware": "i86pc",
+      "name": "Solaris",
+      "release": {
+        "full": "10_u8",
+        "major": "10",
+        "minor": "8"
+      }
+    },
+    "osfamily": "Solaris",
+    "package_provider": "sun",
+    "path": "/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/sfw/bin:/usr/local/sbin:/opt/puppet/bin:/sbin",
+    "pe_concat_basedir": "/opt/puppetlabs/puppet/cache/pe_concat",
+    "physicalprocessorcount": 1,
+    "platform_symlink_writable": true,
+    "platform_tag": "solaris-10-i386",
+    "processor0": "Intel(r) Xeon(r) CPU E7- 8837  @ 2.67GHz",
+    "processorcount": 1,
+    "processors": {
+      "count": 1,
+      "isa": "i386",
+      "models": [
+        "Intel(r) Xeon(r) CPU E7- 8837  @ 2.67GHz"
+      ],
+      "physicalcount": 1,
+      "speed": "2.66 GHz"
+    },
+    "productname": "VMware Virtual Platform",
+    "puppet_agent_pid": 15662,
+    "puppet_client_datadir": "/opt/puppetlabs/puppet/cache/client_data",
+    "puppet_confdir": "/etc/puppetlabs/puppet",
+    "puppet_config": "/etc/puppetlabs/puppet/puppet.conf",
+    "puppet_environmentpath": "/etc/puppetlabs/code/environments",
+    "puppet_files_dir_present": false,
+    "puppet_inventory_metadata": {
+      "packages": {
+        "collection_enabled": false,
+        "last_collection_time": "0.0s"
+      }
+    },
+    "puppet_master_server": "puppet",
+    "puppet_server": "puppet",
+    "puppet_ssldir": "/etc/puppetlabs/puppet/ssl",
+    "puppet_sslpaths": {
+      "privatedir": {
+        "path": "/etc/puppetlabs/puppet/ssl/private",
+        "path_exists": true
+      },
+      "privatekeydir": {
+        "path": "/etc/puppetlabs/puppet/ssl/private_keys",
+        "path_exists": true
+      },
+      "publickeydir": {
+        "path": "/etc/puppetlabs/puppet/ssl/public_keys",
+        "path_exists": true
+      },
+      "certdir": {
+        "path": "/etc/puppetlabs/puppet/ssl/certs",
+        "path_exists": true
+      },
+      "requestdir": {
+        "path": "/etc/puppetlabs/puppet/ssl/certificate_requests",
+        "path_exists": true
+      },
+      "hostcrl": {
+        "path": "/etc/puppetlabs/puppet/ssl/crl.pem",
+        "path_exists": true
+      }
+    },
+    "puppet_stringify_facts": false,
+    "puppet_vardir": "/opt/puppetlabs/puppet/cache",
+    "puppetversion": "5.5.14",
+    "root_home": "/root",
+    "ruby": {
+      "platform": "i386-solaris2.10",
+      "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+      "version": "2.4.5"
+    },
+    "rubyplatform": "i386-solaris2.10",
+    "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+    "rubyversion": "2.4.5",
+    "samba_file_present": true,
+    "serial_port_ttya": "disabled",
+    "serial_port_ttyb": "disabled",
+    "serialnumber": "VMware-42 13 b6 ea e1 0f 69 33-02 a3 ac 33 90 f7 3d e7",
+    "service_provider": "smf",
+    "setools_version": "2.3.16",
+    "solaris_zones": {
+      "current": "global",
+      "zones": {
+        "global": {
+          "brand": "native",
+          "id": "0",
+          "ip_type": "shared",
+          "path": "/",
+          "status": "running"
+        }
+      }
+    },
+    "ssh": {
+      "dsa": {
+        "fingerprints": {
+          "sha1": "SSHFP 2 1 672cd5d5f684b1aa7f2eb9cbf1499a74f9160893",
+          "sha256": "SSHFP 2 2 0943fb7f09e258ee372f0427be6f983810e87360de71c2784f32aa6b73575c00"
+        },
+        "key": "AAAAB3NzaC1kc3MAAACBAMlNva2+AitS3fWhgAQ7nHta3N5rSphFJyN++bdzF31Z7k+D6H3xqvmqK97Gj6c2hcyB6sEH9v0NgO0xcP/DAcO9C15GbmV6ZmITnTqIKDsFdR8uBwy6BahylymsVXEYuRMDPIyK4PssNR2GFrxhKHegKQ49NKlddRWeVacf6bzXAAAAFQDlyxxBfb2qpoLd5o6KlDxbJ9bH5QAAAIEApJMhMrB+dBMtP/cOYZ+90epzYXtF3lebVdCVopbZJcIwJHhLuKtrCZhOejIXneEMTWj2EnhcawyJgonFQnTv/wqynPAmeTORp/rfkfUkbHf9y/ZQnjbL1faalUZ9Ykq0sen38PcKdW3FQfAYhRwlqJpYJ+hbRELqQN9af8xgUrQAAACAc9lTB/CMxTmQxFp3hLuzS5eciYVFH9cZHhG/eE6fDXJ2rnz9H0Ltts3eufXMY/bQXWtu0z4SR+ISQbyY9lw+WRB8bwFOLI9yvFU9/WZxefadayo5JeBd1AlE/CYjK+iF6dwbNSuOKM0XInzUvyBFk1OKBjbnGfXCb4xp8rUsNfo=",
+        "type": "ssh-dss"
+      },
+      "rsa": {
+        "fingerprints": {
+          "sha1": "SSHFP 1 1 27357c8daaab49b818dcdc74cc57b1633c187f87",
+          "sha256": "SSHFP 1 2 6445652854135c05e407153fac7d24448f9b2bb1564ca1ecc3f170c19662ef47"
+        },
+        "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCyB4qnArG2r5i2nIwFeFXrz9nl9D01qsL+uHdpr8XtgGckZ5mPHlfDmc9l5CYdbwFzCW4fp5r7a003mMFFYf8FYSZ7fpF30I3I84D2YKMdPj3uBJpAPhyaDOh7fzZHCbKcoFFROADwFSGoWuTzOuS4Nf2KpHD0UDQRreN2OSR9040OT7wntPWnXpBS8ImAZdTcsJK0gjaq4EUTqvH3El8tdR+xiUiOHzMgrTVS4zPf5TdA3N5eJ6lFiyD8ZndL0buVxwmSeMd9sHCcCtRPupe9CXBL/4cEn0jk0TURIlRPAwn6wxQ14rXqCe/MmbnF0NI6e0ZkpcWIXE+JljNnkZNh",
+        "type": "ssh-rsa"
+      }
+    },
+    "sshdsakey": "AAAAB3NzaC1kc3MAAACBAMlNva2+AitS3fWhgAQ7nHta3N5rSphFJyN++bdzF31Z7k+D6H3xqvmqK97Gj6c2hcyB6sEH9v0NgO0xcP/DAcO9C15GbmV6ZmITnTqIKDsFdR8uBwy6BahylymsVXEYuRMDPIyK4PssNR2GFrxhKHegKQ49NKlddRWeVacf6bzXAAAAFQDlyxxBfb2qpoLd5o6KlDxbJ9bH5QAAAIEApJMhMrB+dBMtP/cOYZ+90epzYXtF3lebVdCVopbZJcIwJHhLuKtrCZhOejIXneEMTWj2EnhcawyJgonFQnTv/wqynPAmeTORp/rfkfUkbHf9y/ZQnjbL1faalUZ9Ykq0sen38PcKdW3FQfAYhRwlqJpYJ+hbRELqQN9af8xgUrQAAACAc9lTB/CMxTmQxFp3hLuzS5eciYVFH9cZHhG/eE6fDXJ2rnz9H0Ltts3eufXMY/bQXWtu0z4SR+ISQbyY9lw+WRB8bwFOLI9yvFU9/WZxefadayo5JeBd1AlE/CYjK+iF6dwbNSuOKM0XInzUvyBFk1OKBjbnGfXCb4xp8rUsNfo=",
+    "sshfp_dsa": "SSHFP 2 1 672cd5d5f684b1aa7f2eb9cbf1499a74f9160893\nSSHFP 2 2 0943fb7f09e258ee372f0427be6f983810e87360de71c2784f32aa6b73575c00",
+    "sshfp_rsa": "SSHFP 1 1 27357c8daaab49b818dcdc74cc57b1633c187f87\nSSHFP 1 2 6445652854135c05e407153fac7d24448f9b2bb1564ca1ecc3f170c19662ef47",
+    "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCyB4qnArG2r5i2nIwFeFXrz9nl9D01qsL+uHdpr8XtgGckZ5mPHlfDmc9l5CYdbwFzCW4fp5r7a003mMFFYf8FYSZ7fpF30I3I84D2YKMdPj3uBJpAPhyaDOh7fzZHCbKcoFFROADwFSGoWuTzOuS4Nf2KpHD0UDQRreN2OSR9040OT7wntPWnXpBS8ImAZdTcsJK0gjaq4EUTqvH3El8tdR+xiUiOHzMgrTVS4zPf5TdA3N5eJ6lFiyD8ZndL0buVxwmSeMd9sHCcCtRPupe9CXBL/4cEn0jk0TURIlRPAwn6wxQ14rXqCe/MmbnF0NI6e0ZkpcWIXE+JljNnkZNh",
+    "staging_http_get": "curl",
+    "swapfree": "4.00 GiB",
+    "swapfree_mb": 4095.99609375,
+    "swapsize": "4.00 GiB",
+    "swapsize_mb": 4095.99609375,
+    "system_uptime": {
+      "days": 292,
+      "hours": 7027,
+      "seconds": 25299495,
+      "uptime": "292 days"
+    },
+    "timezone": "EDT",
+    "uptime": "292 days",
+    "uptime_days": 292,
+    "uptime_hours": 7027,
+    "uptime_seconds": 25299495,
+    "uuid": "4213b6ea-e10f-6933-02a3-ac3390f73de7",
+    "vcsrepo_svn_ver": "",
+    "virtual": "vmware",
+    "vmware_tools": {
+      "version": "10.0.9.55972",
+      "build": "3917699"
+    },
+    "zfs_featurenumbers": "1,2,3,4,5",
+    "zfs_version": "5",
+    "zone_global_brand": "native",
+    "zone_global_id": "0",
+    "zone_global_iptype": "shared",
+    "zone_global_name": "global",
+    "zone_global_path": "/",
+    "zone_global_status": "running",
+    "zonename": "global",
+    "zones": 1,
+    "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32",
+    "zpool_version": "32",
+    "clientcert": "myhostname.example.com",
+    "clientversion": "5.5.14",
+    "clientnoop": false
+  },
+  "timestamp": "2019-07-18T10:45:34.697257992-04:00",
+  "expiration": "2019-07-18T11:15:34.697768112-04:00"
+}
