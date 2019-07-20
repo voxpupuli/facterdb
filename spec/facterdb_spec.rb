@@ -1,6 +1,19 @@
 require 'spec_helper'
 
 describe 'FacterDB' do
+  shared_examples 'returns a result' do
+    it 'returns an Array' do
+      expect(result).to be_an_instance_of(Array)
+    end
+
+    it 'returns at least 1 result' do
+      expect(result).not_to be_empty
+    end
+
+    it 'returns an Array of Hashes' do
+      expect(result).to all(be_an_instance_of(Hash))
+    end
+  end
 
   describe 'database' do
     let(:facts_24_path)  { File.join(project_dir, 'facts', '2.4') }
@@ -100,6 +113,8 @@ describe 'FacterDB' do
   end
 
   describe '.get_os_facts' do
+    subject(:result) { FacterDB.get_os_facts(facter_version, filter) }
+
     before(:each) do
       object = defined?(Warning) ? Warning : Kernel
       allow(object).to receive(:warn).and_call_original
@@ -107,47 +122,77 @@ describe 'FacterDB' do
     end
 
     context 'without parameters' do
-      subject { FacterDB.get_os_facts() }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
+      subject(:result) { FacterDB.get_os_facts() }
+
+      include_examples 'returns a result'
+    end
+
+    context 'when matching all Facter versions' do
+      let(:facter_version) { '*' }
+
+      context 'with an Array filter' do
+        let(:filter) { [{ :osfamily => 'Debian' }] }
+
+        include_examples 'returns a result'
+      end
+
+      context 'with a Hash filter' do
+        let(:filter) { { :osfamily => 'Debian' } }
+
+        include_examples 'returns a result'
+      end
+
+      context 'with a String filter' do
+        let(:filter) { 'osfamily=Debian' }
+
+        include_examples 'returns a result'
+      end
+
+      context 'with a filter of an unsupported type' do
+        let(:filter) { true }
+
+        it 'raises an error' do
+          expect { result }.to raise_error(%r{filter must be either})
+        end
       end
     end
 
-    context 'without parameters' do
-      subject { FacterDB.get_os_facts() }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
-      end
-    end
+    context 'when matching a specific facter version' do
+      let(:facter_version) { '2.4.0' }
 
-    context 'with an Array filter' do
-      subject { FacterDB.get_os_facts('*', [{:osfamily => 'Debian'}]) }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
+      shared_examples 'returns only the specified version' do
+        it 'only includes fact sets for the specified version' do
+          expect(result).to all(include(:facterversion => match(%r{\A2\.4})))
+        end
       end
-    end
 
-    context 'with a Hash filter' do
-      subject { FacterDB.get_os_facts('*', {:osfamily => 'Debian'}) }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
+      context 'with an Array filter' do
+        let(:filter) { [{ :osfamily => 'Debian' }] }
+
+        include_examples 'returns a result'
+        include_examples 'returns only the specified version'
       end
-    end
 
-    context 'with a String filter' do
-      subject { FacterDB.get_os_facts('*', 'osfamily=Debian') }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
+      context 'with a Hash filter' do
+        let(:filter) { { :osfamily => 'Debian' } }
+
+        include_examples 'returns a result'
+        include_examples 'returns only the specified version'
+      end
+
+      context 'with a String filter' do
+        let(:filter) { 'osfamily=Debian' }
+
+        include_examples 'returns a result'
+        include_examples 'returns only the specified version'
+      end
+
+      context 'with a filter of an unsupported type' do
+        let(:filter) { true }
+
+        it 'raises an error' do
+          expect { result }.to raise_error(%r{filter must be either})
+        end
       end
     end
   end
@@ -156,20 +201,6 @@ describe 'FacterDB' do
     subject(:result) { FacterDB.get_facts(filter) }
 
     let(:filter) { nil }
-
-    shared_examples "returns a result" do
-      it 'returns an Array' do
-        expect(result).to be_an_instance_of(Array)
-      end
-
-      it 'returns at least 1 result' do
-        expect(result).not_to be_empty
-      end
-
-      it 'returns an Array of Hashes' do
-        expect(result).to all(be_an_instance_of(Hash))
-      end
-    end
 
     context 'without parameters' do
       include_examples "returns a result"
