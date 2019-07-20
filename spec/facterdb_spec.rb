@@ -146,40 +146,52 @@ describe 'FacterDB' do
     end
   end
 
-  describe '#get_facts' do
-    context 'without parameters' do
-      subject { FacterDB.get_facts() }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
+  describe '.get_facts' do
+    subject(:result) { FacterDB.get_facts(filter) }
+
+    let(:filter) { nil }
+
+    shared_examples "returns a result" do
+      it 'returns an Array' do
+        expect(result).to be_an_instance_of(Array)
       end
+
+      it 'returns at least 1 result' do
+        expect(result).not_to be_empty
+      end
+
+      it 'returns an Array of Hashes' do
+        expect(result).to all(be_an_instance_of(Hash))
+      end
+    end
+
+    context 'without parameters' do
+      include_examples "returns a result"
     end
 
     context 'with an Array filter' do
-      subject { FacterDB.get_facts([{:osfamily => 'Debian'}]) }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
-      end
+      let(:filter) { [:osfamily => 'Debian'] }
+
+      include_examples "returns a result"
     end
 
     context 'with a Hash filter' do
-      subject { FacterDB.get_facts({:osfamily => 'Debian'}) }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
-      end
+      let(:filter) { { :osfamily => 'Debian' } }
+
+      include_examples "returns a result"
     end
 
     context 'with a String filter' do
-      subject { FacterDB.get_facts('osfamily=Debian') }
-      it "Should return an array of hashes with at least 1 element" do
-        expect(subject.class).to eq Array
-        expect(subject.size).not_to eq(0)
-        expect(subject.select { |facts| facts.class != Hash }.size).to eq(0)
+      let(:filter) { 'osfamily=Debian' }
+
+      include_examples "returns a result"
+    end
+
+    context 'with a filter of an unsupported type' do
+      let(:filter) { true }
+
+      it 'raises an error' do
+        expect { result }.to raise_error(%r{filter must be either})
       end
     end
   end
