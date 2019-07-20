@@ -99,7 +99,13 @@ describe 'FacterDB' do
     end
   end
 
-  describe '#get_os_facts' do
+  describe '.get_os_facts' do
+    before(:each) do
+      object = defined?(Warning) ? Warning : Kernel
+      allow(object).to receive(:warn).and_call_original
+      allow(object).to receive(:warn).with(a_string_matching(%r{`get_os_facts` is deprecated}))
+    end
+
     context 'without parameters' do
       subject { FacterDB.get_os_facts() }
       it "Should return an array of hashes with at least 1 element" do
