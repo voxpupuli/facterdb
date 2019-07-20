@@ -113,65 +113,86 @@ describe FacterDB do
     end
   end
 
-  describe 'database' do
+  describe '.default_fact_files' do
+    subject(:default_fact_files) { described_class.default_fact_files }
+
     before(:each) do
-      ENV['FACTERDB_SKIP_DEFAULTDB'] = nil
+      ENV.delete('FACTERDB_SKIP_DEFAULTDB')
+    end
+
+    context 'when FACTERDB_SKIP_DEFAULTDB environment variable is not set' do
+      it 'returns the list of fact sets included in FacterDB' do
+        # This test is a little naive but works
+        expect(default_fact_files.count).to be >= 1000
+      end
+    end
+
+    context 'when FACTERDB_SKIP_DEFAULTDB environment variable is set' do
+      before(:each) do
+        ENV['FACTERDB_SKIP_DEFAULTDB'] = '1'
+      end
+
+      it { is_expected.to be_empty }
+    end
+  end
+
+  describe '.facterdb_fact_files' do
+    subject(:facterdb_fact_files) { described_class.facterdb_fact_files }
+
+    before(:each) do
+      ENV.delete('FACTERDB_SKIP_DEFAULTDB')
+    end
+
+    after(:each) do
+      ENV.delete('FACTERDB_SEARCH_PATHS')
+    end
+
+    it 'returns the deduplicated combination of .default_fact_files and .external_fact_files' do
+      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
+
+      expect(facterdb_fact_files.count).to eq(described_class.default_fact_files.count)
+    end
+
+    context 'with no loaded fact sets' do
+      before(:each) do
+        ENV['FACTERDB_SKIP_DEFAULTDB'] = '1'
+        ENV.delete('FACTERDB_SEARCH_PATHS')
+      end
+
+      it { is_expected.to be_empty }
+    end
+  end
+
+  describe '.database' do
+    subject(:database) { described_class.database }
+
+    before(:each) do
+      ENV.delete('FACTERDB_SKIP_DEFAULTDB')
+      ENV.delete('FACTERDB_SEARCH_PATHS')
       FacterDB.instance_variable_set(:@database, nil)
     end
 
-    it '#default_fact_files' do
-      # This test is a little naive but works
-      expect(FacterDB.default_fact_files.count).to be >= 1000
+    it 'returns a String' do
+      expect(database).to be_an_instance_of(String)
     end
 
-    it '#facterdb_fact_files' do
-      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
-      external_count = FacterDB.external_fact_files.count
-      internal_count = FacterDB.default_fact_files.count
-      # because we call unique on the array we remove the duplicates which skews this test
-      expect(FacterDB.facterdb_fact_files.count).to eq(internal_count)
+    it 'is parsable JSON' do
+      expect { JSON.parse(database) }.not_to raise_error
     end
 
-    it '#database' do
-      ENV['FACTERDB_SEARCH_PATHS'] = nil
-      # to be an incomprehensible string
-       expect(FacterDB.database).to be_a String
-    end
+    context 'when FACTERDB_INJECT_SOURCE environment variable is set' do
+      subject(:json_database) { JSON.parse(database) }
 
-    it '#database with external paths' do
-      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
-      # to be an incomprehensible string
-      expect(FacterDB.database).to be_a String
-    end
-
-    it 'without internal paths' do
-      ENV['FACTERDB_SKIP_DEFAULTDB'] = 'true'
-      ENV['FACTERDB_SEARCH_PATHS'] = nil
-      expect(FacterDB.facterdb_fact_files).to eq([])
-    end
-
-    describe :windows do
       before(:each) do
-        stub_const("File::PATH_SEPARATOR", ";")
-        stub_const("File::ALT_SEPARATOR", '\\')
-        stub_const("File::SEPARATOR", '/')
-        allow(File).to receive(:directory?).and_return(true)
+        ENV['FACTERDB_INJECT_SOURCE'] = '1'
       end
 
-      it '#external_fact_files with env variable and multiple paths' do
-        ENV['FACTERDB_SEARCH_PATHS'] = [facts_24_path.gsub('/', '\\'), facts_23_path.gsub('/', '\\')].join(File::PATH_SEPARATOR)
-        expect(FacterDB.external_fact_files.count).to eq(facts_24_count + facts_23_count)
+      it 'contains a "_facterdb_filename" key in each fact set' do
+        expect(json_database).to all(include('_facterdb_filename' => anything))
       end
 
-      it '#external_fact_files with env variable' do
-        ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path.gsub('/', '\\')
-        expect(FacterDB.external_fact_files.count).to eq(facts_24_count)
-      end
-
-      it '#external_fact_files with argument' do
-        ENV['FACTERDB_SEARCH_PATHS'] = nil
-        path = facts_24_path.gsub('/', '\\')
-        expect(FacterDB.external_fact_files(path).count).to eq(facts_24_count)
+      it 'contains a "_facterdb_path" key in each fact set' do
+        expect(json_database).to all(include('_facterdb_path' => anything))
       end
     end
   end
