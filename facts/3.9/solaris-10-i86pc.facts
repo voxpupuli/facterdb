@@ -490,7 +490,6 @@
   "operatingsystem": "Solaris",
   "operatingsystemmajrelease": "10",
   "operatingsystemrelease": "10_u8",
-  "opt_mqm_dir": false,
   "os": {
       "architecture": "i86pc",
       "family": "Solaris",
@@ -596,7 +595,6 @@
   "puppet_stringify_facts": false,
   "puppet_vardir": "/opt/puppetlabs/puppet/cache",
   "puppetversion": "5.3.5",
-  "pxe_server": "10.8.34.6",
   "root_home": "/root",
   "ruby": {
       "platform": "i386-solaris2.10",
@@ -655,17 +653,14 @@
       "uptime": "635 days"
   },
   "timezone": "EDT",
-  "tkservice": true,
   "uptime": "635 days",
   "uptime_days": 635,
   "uptime_hours": 15258,
   "uptime_seconds": 54931920,
   "uuid": "34383333-3834-3553-4530-33333e335432",
   "virtual": "physical",
-  "xppxe_server": "10.8.34.9",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",
-  "zfscachesize": "1FFCAAAAA",
   "zone_global_brand": "native",
   "zone_global_id": "0",
   "zone_global_iptype": "shared",
