@@ -1,5 +1,7 @@
-require 'coveralls'
-Coveralls.wear!
+if ENV['COVERAGE'] == 'yes'
+  require 'coveralls'
+  Coveralls.wear!
+end
 
 require 'rspec'
 require 'facterdb'
