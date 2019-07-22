@@ -58,7 +58,7 @@ def factset_to_os_label(fs)
   elsif os_name =~ /^windows$/
     db_filename = fs[:_facterdb_filename] || 'there_is_no_filename'
     if db_filename =~ /windows-10-/
-      label = "Windows #{os__rel}"
+      label = "Windows 10"
     elsif db_filename =~ /windows-7-/
       label = "Windows 7"
     elsif db_filename =~ /windows-8[\d.]*-/
@@ -66,7 +66,9 @@ def factset_to_os_label(fs)
     elsif db_filename =~ /windows-.+-core-/
       label = "Windows Server #{os__rel.sub('6.3.9600','2012 R2')} Core"
     elsif db_filename =~ /windows-2008/ || db_filename =~ /windows-2012/ || db_filename =~ /windows-2016/
-      label = "Windows Server #{os__rel.sub('6.1.7600','2008 R2').sub('6.3.9600','2012 R2')}"
+      label = "Windows Server #{os__rel.sub('6.1.7600','2008 R2').sub('6.3.9600','2012 R2').sub('10.0.14393', '2016')}"
+    elsif db_filename =~ /windows-2019/
+      label = 'Windows Server 2019'
     else
       label = "#{os_name} #{os__rel}"
     end

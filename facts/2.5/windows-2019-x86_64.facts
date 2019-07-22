@@ -1,0 +1,73 @@
+{
+  "architecture": "x64",
+  "kernel": "windows",
+  "domain": "example.com",
+  "virtual": "vmware",
+  "is_virtual": true,
+  "hardwaremodel": "x64",
+  "operatingsystem": "windows",
+  "os": {
+    "name": "windows",
+    "family": "windows",
+    "release": {
+      "major": "2016",
+      "full": "2016"
+    }
+  },
+  "facterversion": "2.5.5",
+  "fqdn": "foo.example.com",
+  "hardwareisa": "unknown",
+  "hostname": "foo",
+  "id": "Administrator",
+  "interfaces": "Ethernet0",
+  "ipaddress_ethernet0": "10.16.112.236",
+  "macaddress_ethernet0": "00:50:56:9A:5A:BD",
+  "netmask_ethernet0": "255.255.240.0",
+  "mtu_ethernet0": 0,
+  "ipaddress": "10.16.112.236",
+  "kernelmajversion": "10.0",
+  "kernelrelease": "10.0.17763",
+  "kernelversion": "10.0.17763",
+  "macaddress": "00:50:56:9A:5A:BD",
+  "manufacturer": "VMware, Inc.",
+  "serialnumber": "VMware-42 1a e5 d8 69 e8 35 ca-e6 84 c4 9b ce 34 4f 23",
+  "productname": "VMware7,1",
+  "memorysize": "4.00 GB",
+  "memoryfree": "2.99 GB",
+  "memorysize_mb": "4094.98",
+  "memoryfree_mb": "3063.49",
+  "netmask": "255.255.240.0",
+  "network_ethernet0": "10.16.112.0",
+  "operatingsystemmajrelease": "2016",
+  "operatingsystemrelease": "2016",
+  "osfamily": "windows",
+  "path": "C:\\cygwin64\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Windows\\System32\\OpenSSH;C:\\Packer\\SysInternals;C:\\Program Files\\Git\\cmd;C:\\Program Files\\PowerShell\\6;C:\\Users\\cyg_server\\AppData\\Local\\Microsoft\\WindowsApps",
+  "physicalprocessorcount": 2,
+  "processors": {
+    "models": [
+      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz"
+    ],
+    "count": 2,
+    "physicalcount": 2
+  },
+  "processor0": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+  "processor1": "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
+  "processorcount": 2,
+  "ps": "tasklist.exe",
+  "rubyplatform": "x64-mingw32",
+  "rubysitedir": "C:/tools/ruby26/lib/ruby/site_ruby/2.6.0",
+  "rubyversion": "2.6.3",
+  "system32": "C:\\Windows\\system32",
+  "system_uptime": {
+    "seconds": 52806,
+    "hours": 14,
+    "days": 0,
+    "uptime": "14:40 hours"
+  },
+  "timezone": "Coordinated Universal Time",
+  "uptime": "14:40 hours",
+  "uptime_days": 0,
+  "uptime_hours": 14,
+  "uptime_seconds": 52806
+}
