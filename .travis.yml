@@ -13,7 +13,7 @@ env:
 - FACTER_GEM_VERSION="~> 2.2.0"
 - FACTER_GEM_VERSION="~> 2.3.0"
 - FACTER_GEM_VERSION="~> 2.4.0"
-- FACTER_GEM_VERSION="~> 2.0"
+- FACTER_GEM_VERSION="~> 2.0" COVERAGE=yes
 matrix:
   fast_finish: true
 notifications:
