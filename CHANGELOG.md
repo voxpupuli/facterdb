@@ -1,5 +1,44 @@
 # Change Log
 
+## [0.8.0](https://rubygems.org/gems/facterdb/versions/0.8.0) (2019-07-22)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.7.0...0.8.0)
+
+**Closed issues:**
+
+- solaris 10 facts are not found [\#115](https://github.com/camptocamp/facterdb/issues/115)
+- Debian 10 facts [\#102](https://github.com/camptocamp/facterdb/issues/102)
+- 3.11 facts for Debian Stretch and Ubuntu 18.04 are missing distro information [\#98](https://github.com/camptocamp/facterdb/issues/98)
+- Remove/move invalid factset files [\#78](https://github.com/camptocamp/facterdb/issues/78)
+- Remove duplicate default factset files [\#77](https://github.com/camptocamp/facterdb/issues/77)
+- Updated OpenBSD Facts [\#71](https://github.com/camptocamp/facterdb/issues/71)
+- FreeBSD Support [\#51](https://github.com/camptocamp/facterdb/issues/51)
+- Add LinuxMint Facts [\#41](https://github.com/camptocamp/facterdb/issues/41)
+- Facts for archlinux release 4 are missing. [\#37](https://github.com/camptocamp/facterdb/issues/37)
+- Consider adding the os::distro fact [\#36](https://github.com/camptocamp/facterdb/issues/36)
+
+**Merged pull requests:**
+
+- Add fact sets for Debian 10 [\#119](https://github.com/camptocamp/facterdb/pull/119) ([rodjek](https://github.com/rodjek))
+- Improve test coverage [\#118](https://github.com/camptocamp/facterdb/pull/118) ([rodjek](https://github.com/rodjek))
+- Update Windows factsets [\#117](https://github.com/camptocamp/facterdb/pull/117) ([rodjek](https://github.com/rodjek))
+- Added and updated Solaris 10 factsets [\#116](https://github.com/camptocamp/facterdb/pull/116) ([sirinek](https://github.com/sirinek))
+- Update OSX 10.11 - 10.14 factsets [\#113](https://github.com/camptocamp/facterdb/pull/113) ([rodjek](https://github.com/rodjek))
+- Update SLES 11 & 12 factsets [\#112](https://github.com/camptocamp/facterdb/pull/112) ([rodjek](https://github.com/rodjek))
+- Change table rake task to update README.md [\#111](https://github.com/camptocamp/facterdb/pull/111) ([rodjek](https://github.com/rodjek))
+- Update RHEL based factsets [\#110](https://github.com/camptocamp/facterdb/pull/110) ([rodjek](https://github.com/rodjek))
+- \(\#71\) Add OpenBSD 6.4 factsets [\#109](https://github.com/camptocamp/facterdb/pull/109) ([rodjek](https://github.com/rodjek))
+- \(\#98\) Update Debian & Ubuntu factsets [\#108](https://github.com/camptocamp/facterdb/pull/108) ([rodjek](https://github.com/rodjek))
+- Properly split and sort facter versions [\#107](https://github.com/camptocamp/facterdb/pull/107) ([rodjek](https://github.com/rodjek))
+- \(\#41\) Add factsets for linuxmint 18 & 19 [\#106](https://github.com/camptocamp/facterdb/pull/106) ([rodjek](https://github.com/rodjek))
+- \(\#37\) Update Archlinux factsets [\#105](https://github.com/camptocamp/facterdb/pull/105) ([rodjek](https://github.com/rodjek))
+- Add more FreeBSD facts [\#104](https://github.com/camptocamp/facterdb/pull/104) ([smortex](https://github.com/smortex))
+- add missing rubygem-bundler package for FreeBSD [\#103](https://github.com/camptocamp/facterdb/pull/103) ([olevole](https://github.com/olevole))
+- Missing facts [\#99](https://github.com/camptocamp/facterdb/pull/99) ([seanmil](https://github.com/seanmil))
+- Add CentOS e.a. facts from facter 3.11 [\#87](https://github.com/camptocamp/facterdb/pull/87) ([tdevelioglu](https://github.com/tdevelioglu))
+- Explicitly use bash not sh [\#81](https://github.com/camptocamp/facterdb/pull/81) ([bodgit](https://github.com/bodgit))
+- OpenBSD 6.2 & 6.3 facts [\#80](https://github.com/camptocamp/facterdb/pull/80) ([bodgit](https://github.com/bodgit))
+- \(\#77\)\(\#78\)  Add default factset tests and fix failures [\#79](https://github.com/camptocamp/facterdb/pull/79) ([glennsarti](https://github.com/glennsarti))
+
 ## [0.7.0](https://rubygems.org/gems/facterdb/versions/0.7.0) (2019-07-02)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.6.0...0.7.0)
 
