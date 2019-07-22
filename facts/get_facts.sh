@@ -177,6 +177,15 @@ case "${osfamily}" in
     apt-get -y remove --purge puppet6-release
   fi
   apt-get install -y make gcc libgmp-dev
+
+  # There are no puppet-agent packages for Buster yet, so generate a Facter 3.x
+  # fact set from the official Debian package.
+  if [[ "buster" = "${lsbdistcodename}" ]]; then
+    apt-get install -y ruby rubygems ruby-dev puppet facter
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    mkdir -p $(dirname ${output_file})
+    facter --show-legacy -p -j | tee ${output_file}
+  fi
   ;;
 'FreeBSD')
   pkg update
