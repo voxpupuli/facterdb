@@ -1,5 +1,12 @@
 # Change Log
 
+## [0.8.1](https://rubygems.org/gems/facterdb/versions/0.8.1) (2019-07-25)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.0...0.8.1)
+
+**Merged pull requests:**
+
+- Add fact sets for SLES15 [\#121](https://github.com/camptocamp/facterdb/pull/121) ([rodjek](https://github.com/rodjek))
+
 ## [0.8.0](https://rubygems.org/gems/facterdb/versions/0.8.0) (2019-07-22)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.7.0...0.8.0)
 
