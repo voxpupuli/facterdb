@@ -118,13 +118,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "centos-6-x86_64" do |host|
-    host.vm.box = "puppetlabs/centos-6.6-64-nocm"
+    host.vm.box = "centos/6"
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
+    host.vm.provision "shell", inline: "yum -y install ruby-devel gcc"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "centos-7-x86_64" do |host|
-    host.vm.box = "puppetlabs/centos-7.2-64-nocm"
+    host.vm.box = "centos/7"
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
+    host.vm.provision "shell", inline: "yum -y install ruby-devel gcc wget"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
