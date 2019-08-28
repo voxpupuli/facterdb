@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.8.2](https://rubygems.org/gems/facterdb/versions/0.8.2) (2019-08-28)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.1...0.8.2)
+
+**Fixed bugs:**
+
+- Update removed selinux facts [\#124](https://github.com/camptocamp/facterdb/issues/124)
+
+**Merged pull requests:**
+
+- Update RHEL based fact sets with default SELinux values [\#125](https://github.com/camptocamp/facterdb/pull/125) ([rodjek](https://github.com/rodjek))
+
 ## [0.8.1](https://rubygems.org/gems/facterdb/versions/0.8.1) (2019-07-25)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.0...0.8.1)
 
