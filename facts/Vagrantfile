@@ -231,6 +231,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "sles-15-x86_64" do |host|
     host.vm.box = "trueability/sles-15-sp1"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", inline: [
+      "SUSEConnect -p sle-module-desktop-applications/15.1/x86_64",
+      "SUSEConnect -p sle-module-legacy/15.1/x86_64",
+      "zypper install --no-confirm net-tools-deprecated",
+    ].join(' && ')
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end

@@ -51,7 +51,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "e9b4b1ec-274e-4e06-b145-7af722d1852c"
+      "uuid": "e0571bb0-8d73-48c2-a431-b20ddd58a336"
     }
   },
   "domain": "example.com",
@@ -92,7 +92,7 @@
   "load_averages": {
     "15m": 0.19,
     "1m": 0.58,
-    "5m": 0.44
+    "5m": 0.39
   },
   "macaddress": "08:00:27:5f:dd:5b",
   "macaddress_eth0": "08:00:27:5f:dd:5b",
@@ -108,24 +108,24 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "792.67 MiB",
-      "available_bytes": 831172608,
-      "capacity": "18.88%",
+      "available": "790.45 MiB",
+      "available_bytes": 828850176,
+      "capacity": "19.11%",
       "total": "977.15 MiB",
       "total_bytes": 1024614400,
-      "used": "184.48 MiB",
-      "used_bytes": 193441792
+      "used": "186.70 MiB",
+      "used_bytes": 195764224
     }
   },
-  "memoryfree": "792.67 MiB",
-  "memoryfree_mb": 792.66796875,
+  "memoryfree": "790.45 MiB",
+  "memoryfree_mb": 790.453125,
   "memorysize": "977.15 MiB",
   "memorysize_mb": 977.1484375,
   "mountpoints": {
     "/": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -137,13 +137,13 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/.snapshots": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -155,13 +155,13 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/boot/grub2/i386-pc": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -173,13 +173,13 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/boot/grub2/x86_64-efi": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -191,8 +191,8 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/dev/shm": {
       "available": "488.57 MiB",
@@ -229,9 +229,9 @@
       "used_bytes": 39985152
     },
     "/opt": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -243,13 +243,13 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/root": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -261,8 +261,8 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/run": {
       "available": "481.80 MiB",
@@ -303,9 +303,9 @@
       "used_bytes": 0
     },
     "/srv": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -317,8 +317,8 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/sys/fs/cgroup": {
       "available": "488.57 MiB",
@@ -339,9 +339,9 @@
       "used_bytes": 0
     },
     "/tmp": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -353,13 +353,13 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/usr/local": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -371,13 +371,13 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     },
     "/var": {
-      "available": "11.08 GiB",
-      "available_bytes": 11899244544,
-      "capacity": "15.31%",
+      "available": "11.12 GiB",
+      "available_bytes": 11941183488,
+      "capacity": "15.01%",
       "device": "/dev/sda2",
       "filesystem": "btrfs",
       "options": [
@@ -389,8 +389,8 @@
       ],
       "size": "13.09 GiB",
       "size_bytes": 14050918400,
-      "used": "2.00 GiB",
-      "used_bytes": 2151673856
+      "used": "1.96 GiB",
+      "used_bytes": 2109734912
     }
   },
   "mtu_eth0": 1500,
@@ -591,14 +591,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 247,
-    "uptime": "0:04 hours"
+    "seconds": 365,
+    "uptime": "0:06 hours"
   },
   "timezone": "CDT",
-  "uptime": "0:04 hours",
+  "uptime": "0:06 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 247,
-  "uuid": "e9b4b1ec-274e-4e06-b145-7af722d1852c",
+  "uptime_seconds": 365,
+  "uuid": "e0571bb0-8d73-48c2-a431-b20ddd58a336",
   "virtual": "virtualbox"
 }
