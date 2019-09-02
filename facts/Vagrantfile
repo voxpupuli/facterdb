@@ -130,7 +130,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = "centos/7"
     host.vm.network :private_network, ip: '10.0.0.2'
     host.vm.synced_folder ".", "/vagrant", :nfs => true
-    host.vm.provision "shell", inline: "yum -y install ruby-devel gcc wget"
+    host.vm.provision "shell", inline: "yum -y install ruby-devel gcc wget net-tools"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
