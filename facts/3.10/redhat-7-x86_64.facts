@@ -46,7 +46,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "789AB4E3-A4E5-4E82-A957-96C99EF59F9F"
+      "uuid": "CF9646C5-BEAC-40C7-A65E-351F540A3732"
     }
   },
   "domain": "example.com",
@@ -76,7 +76,7 @@
   "ipaddress": "10.0.2.15",
   "ipaddress6": "fe80::5054:ff:fe8a:fee6",
   "ipaddress6_eth0": "fe80::5054:ff:fe8a:fee6",
-  "ipaddress6_eth1": "fe80::a00:27ff:fe71:c4d5",
+  "ipaddress6_eth1": "fe80::a00:27ff:fed1:d28c",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
   "ipaddress_eth1": "10.0.0.2",
@@ -87,42 +87,42 @@
   "kernelrelease": "3.10.0-957.12.2.el7.x86_64",
   "kernelversion": "3.10.0",
   "load_averages": {
-    "15m": 0.15,
-    "1m": 0.94,
-    "5m": 0.39
+    "15m": 0.5,
+    "1m": 1.68,
+    "5m": 1.08
   },
   "macaddress": "52:54:00:8a:fe:e6",
   "macaddress_eth0": "52:54:00:8a:fe:e6",
-  "macaddress_eth1": "08:00:27:71:c4:d5",
+  "macaddress_eth1": "08:00:27:d1:d2:8c",
   "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
-      "available_bytes": 2146430976,
-      "capacity": "0.05%",
+      "available_bytes": 2145636352,
+      "capacity": "0.09%",
       "total": "2.00 GiB",
       "total_bytes": 2147479552,
-      "used": "1.00 MiB",
-      "used_bytes": 1048576
+      "used": "1.76 MiB",
+      "used_bytes": 1843200
     },
     "system": {
-      "available": "322.73 MiB",
-      "available_bytes": 338407424,
-      "capacity": "33.76%",
+      "available": "323.37 MiB",
+      "available_bytes": 339075072,
+      "capacity": "33.63%",
       "total": "487.20 MiB",
       "total_bytes": 510861312,
-      "used": "164.46 MiB",
-      "used_bytes": 172453888
+      "used": "163.83 MiB",
+      "used_bytes": 171786240
     }
   },
-  "memoryfree": "322.73 MiB",
-  "memoryfree_mb": 322.73046875,
+  "memoryfree": "323.37 MiB",
+  "memoryfree_mb": 323.3671875,
   "memorysize": "487.20 MiB",
   "memorysize_mb": 487.1953125,
   "mountpoints": {
     "/": {
       "available": "36.76 GiB",
-      "available_bytes": 39467806720,
+      "available_bytes": 39465734144,
       "capacity": "8.06%",
       "device": "/dev/sda1",
       "filesystem": "xfs",
@@ -137,7 +137,7 @@
       "size": "39.98 GiB",
       "size_bytes": 42927656960,
       "used": "3.22 GiB",
-      "used_bytes": 3459850240
+      "used_bytes": 3461922816
     },
     "/dev/shm": {
       "available": "243.60 MiB",
@@ -276,14 +276,14 @@
         ],
         "bindings6": [
           {
-            "address": "fe80::a00:27ff:fe71:c4d5",
+            "address": "fe80::a00:27ff:fed1:d28c",
             "netmask": "ffff:ffff:ffff:ffff::",
             "network": "fe80::"
           }
         ],
         "ip": "10.0.0.2",
-        "ip6": "fe80::a00:27ff:fe71:c4d5",
-        "mac": "08:00:27:71:c4:d5",
+        "ip6": "fe80::a00:27ff:fed1:d28c",
+        "mac": "08:00:27:d1:d2:8c",
         "mtu": 1500,
         "netmask": "255.255.255.0",
         "netmask6": "ffff:ffff:ffff:ffff::",
@@ -388,47 +388,47 @@
   "ssh": {
     "ecdsa": {
       "fingerprints": {
-        "sha1": "SSHFP 3 1 548297713e47e3d2cabe33650f70ca22987c952c",
-        "sha256": "SSHFP 3 2 fa046a45efee61177389b94e7ef242df41037f606d98f27629d8d0de55eee76b"
+        "sha1": "SSHFP 3 1 cafa8eb011b80d4601e91778307e5a4735a22b7f",
+        "sha256": "SSHFP 3 2 bee562160f8a77a8a1eaead755ec133ae750b71b7b18de07e20fe3831c27c524"
       },
-      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBB1hvIFMF30V53uLV9quhPf7kykrFxZe8JZGKaETxJ9JqjFge/5Dv9lf6cPQK3rN/jK3mnyPI9l3OMCrY/5l7X0="
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNPVkisslZxnX8/7gU3KIGSadYpyP5OlhwTvGEHM2SbzV1BC6iiWcNRKg58AKcmBrwnXFIvxp/L/ZRulLHLtEJY="
     },
     "ed25519": {
       "fingerprints": {
-        "sha1": "SSHFP 4 1 a76095780fb4fee3f0a6de051cfe5cd6c4b68edd",
-        "sha256": "SSHFP 4 2 9134136f3d93c6ffe1f9edb849cecf908e0f0b314b73553e33c0f4d29d391cf3"
+        "sha1": "SSHFP 4 1 fb47fad545ba5f5ab5b1fe11085ac1206016a8c4",
+        "sha256": "SSHFP 4 2 f9ea6e8ef032bee74a15a60907722514ea354d432f834e3a966bf5e77edbecec"
       },
-      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKSBO6V3eR4JoYTUu/D4z+bQGENM5FX401aV/wkK49WQ"
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAICCb6gLHU2oA6MoRZuWYY8N/7M5Lh0DvseaQRzceO+E8"
     },
     "rsa": {
       "fingerprints": {
-        "sha1": "SSHFP 1 1 c13517c894a7b8d377a90e4f822ac983ef7b0297",
-        "sha256": "SSHFP 1 2 271612abd15fb02789d7c0800b13f1f626e7d25c3503f4f561c3c5b722a33343"
+        "sha1": "SSHFP 1 1 082371cce9317e199c3639d6f839adb58778b855",
+        "sha256": "SSHFP 1 2 13e54b2a2cad84ca0e240e43635ec157ac734cd1664a163919345e22201e1e9f"
       },
-      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDVCcGBnzvBNNM+lBukbT9r2ED+I0kfCKal8o14qBeLN/grydADCjGLelddSSc51QAAt7d302DDzbqKwCeVN2dB0TQx4BnOVf1VAKg5MsjfK53C3L2kDPiomkh4SeS5uCevw96nKYHC/MoxQQ3cwVIL1NH78rB/Lr8+MCNlxLRddOW8LL9RYX3yRU8i2puik/GnOnhHoxMW6dVy65t0mnJr6HtuAWseVUQlELgZwn67OwtsacnTOw9saVGj6YsvhZJfYw2g5YeGhYVOgA6XxLk/FXwiCB01GijZCz5SFUtaLsIlsy5MzcNGqEFCktSBS32Iqb1U3TbQgg0P0VTtup6r"
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDMC57k7Xjw6C+qFVDHFGQ8Dd56AYJTcVU/giIRLAFNSiEWYuBrqySBVZalXhZRpYM5MjFcJTYq+mVO/tJvQ2/3fqTnSgoY1Zr38AsE6A0wMnqx9Iyj/xEArTcGq8L5kgpNiU+eQaFH28NGL2AxAMeV5siWb4izbwIzdrlOZy/OuUt0CwmjpR7AHsaH2GfFFxCLNlDb3aUFGToLaay6VHZCJAwDwsPgxq0qUNOONGnbUANFoWoIc3Xmh1V8piTeIna6fOZf2lWf5WfXlvrVla0RPFLsf4Kd5XBvoD2itcP51hMNtROQQgRmdNWCWxO8TVeiEepDtMtpTaRNRnY3WoYz"
     }
   },
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBB1hvIFMF30V53uLV9quhPf7kykrFxZe8JZGKaETxJ9JqjFge/5Dv9lf6cPQK3rN/jK3mnyPI9l3OMCrY/5l7X0=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIKSBO6V3eR4JoYTUu/D4z+bQGENM5FX401aV/wkK49WQ",
-  "sshfp_ecdsa": "SSHFP 3 1 548297713e47e3d2cabe33650f70ca22987c952c\nSSHFP 3 2 fa046a45efee61177389b94e7ef242df41037f606d98f27629d8d0de55eee76b",
-  "sshfp_ed25519": "SSHFP 4 1 a76095780fb4fee3f0a6de051cfe5cd6c4b68edd\nSSHFP 4 2 9134136f3d93c6ffe1f9edb849cecf908e0f0b314b73553e33c0f4d29d391cf3",
-  "sshfp_rsa": "SSHFP 1 1 c13517c894a7b8d377a90e4f822ac983ef7b0297\nSSHFP 1 2 271612abd15fb02789d7c0800b13f1f626e7d25c3503f4f561c3c5b722a33343",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDVCcGBnzvBNNM+lBukbT9r2ED+I0kfCKal8o14qBeLN/grydADCjGLelddSSc51QAAt7d302DDzbqKwCeVN2dB0TQx4BnOVf1VAKg5MsjfK53C3L2kDPiomkh4SeS5uCevw96nKYHC/MoxQQ3cwVIL1NH78rB/Lr8+MCNlxLRddOW8LL9RYX3yRU8i2puik/GnOnhHoxMW6dVy65t0mnJr6HtuAWseVUQlELgZwn67OwtsacnTOw9saVGj6YsvhZJfYw2g5YeGhYVOgA6XxLk/FXwiCB01GijZCz5SFUtaLsIlsy5MzcNGqEFCktSBS32Iqb1U3TbQgg0P0VTtup6r",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNPVkisslZxnX8/7gU3KIGSadYpyP5OlhwTvGEHM2SbzV1BC6iiWcNRKg58AKcmBrwnXFIvxp/L/ZRulLHLtEJY=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAICCb6gLHU2oA6MoRZuWYY8N/7M5Lh0DvseaQRzceO+E8",
+  "sshfp_ecdsa": "SSHFP 3 1 cafa8eb011b80d4601e91778307e5a4735a22b7f\nSSHFP 3 2 bee562160f8a77a8a1eaead755ec133ae750b71b7b18de07e20fe3831c27c524",
+  "sshfp_ed25519": "SSHFP 4 1 fb47fad545ba5f5ab5b1fe11085ac1206016a8c4\nSSHFP 4 2 f9ea6e8ef032bee74a15a60907722514ea354d432f834e3a966bf5e77edbecec",
+  "sshfp_rsa": "SSHFP 1 1 082371cce9317e199c3639d6f839adb58778b855\nSSHFP 1 2 13e54b2a2cad84ca0e240e43635ec157ac734cd1664a163919345e22201e1e9f",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDMC57k7Xjw6C+qFVDHFGQ8Dd56AYJTcVU/giIRLAFNSiEWYuBrqySBVZalXhZRpYM5MjFcJTYq+mVO/tJvQ2/3fqTnSgoY1Zr38AsE6A0wMnqx9Iyj/xEArTcGq8L5kgpNiU+eQaFH28NGL2AxAMeV5siWb4izbwIzdrlOZy/OuUt0CwmjpR7AHsaH2GfFFxCLNlDb3aUFGToLaay6VHZCJAwDwsPgxq0qUNOONGnbUANFoWoIc3Xmh1V8piTeIna6fOZf2lWf5WfXlvrVla0RPFLsf4Kd5XBvoD2itcP51hMNtROQQgRmdNWCWxO8TVeiEepDtMtpTaRNRnY3WoYz",
   "swapfree": "2.00 GiB",
-  "swapfree_mb": 2046.99609375,
+  "swapfree_mb": 2046.23828125,
   "swapsize": "2.00 GiB",
   "swapsize_mb": 2047.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 195,
-    "uptime": "0:03 hours"
+    "seconds": 355,
+    "uptime": "0:05 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:03 hours",
+  "uptime": "0:05 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 195,
-  "uuid": "789AB4E3-A4E5-4E82-A957-96C99EF59F9F",
+  "uptime_seconds": 355,
+  "uuid": "CF9646C5-BEAC-40C7-A65E-351F540A3732",
   "virtual": "virtualbox"
 }

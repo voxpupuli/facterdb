@@ -59,22 +59,50 @@ describe 'Default Facts' do
         expect(file_hashes[file_hash]).to have_a_unique_hash
       end
     end
+  end
 
-    it 'should contain fact sets which match are valid JSON' do
-      FacterDB.default_fact_files.each do |filepath|
+  KNOWN_IPADDRESS_PENDING = {
+    'facts/1.6/fedora-19-i386.facts' => 'unable to regenerate facts',
+    'facts/1.6/fedora-19-x86_64.facts' => 'unable to regenerate facts',
+    'facts/2.1/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/3.10/ubuntu-18.04-aarch64.facts' => 'unable to regenerate facts',
+    'facts/3.9/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/1.6/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/2.4/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/3.2/aix-61-powerpc.facts' => 'unable to regenerate facts',
+    'facts/3.2/aix-71-powerpc.facts' => 'unable to regenerate facts',
+    'facts/3.2/aix-53-powerpc.facts' => 'unable to regenerate facts',
+    'facts/2.3/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/2.5/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/1.7/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/2.0/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/2.2/archlinux-x86_64.facts' => 'no ifconfig package',
+    'facts/3.6/pcs-6-x86_64.facts' => 'unable to regenerate facts',
+    'facts/3.0/ubuntu-15.10-x86_64.facts' => 'no puppet-agent package',
+    'facts/3.0/ubuntu-15.10-i386.facts' => 'no puppet-agent package',
+  }
+
+  project_dir = Pathname.new(__dir__).parent
+  FacterDB.default_fact_files.each do |filepath|
+    relative_path = Pathname.new(filepath).relative_path_from(project_dir).to_s
+    describe relative_path do
+      subject(:content) do
+        JSON.parse(File.open(filepath, 'rb') { |file| file.read })
+      end
+
+      it 'contains a valid JSON document' do
         expect(filepath).to be_valid_json
       end
-    end
 
-    it 'should contain fact sets which match the facter version' do
-      FacterDB.default_fact_files.each do |filepath|
+      it 'contains a fact set which matches the facter version' do
         facter_dir_path = File.basename(File.dirname(filepath))
 
-        content = File.open(filepath, 'rb') { |file| file.read }
-        obj = JSON.parse(content)
-        file_facter_version = obj['facterversion']
+        expect(content['facterversion']).to have_facter_version(facter_dir_path, filepath)
+      end
 
-        expect(file_facter_version).to have_facter_version(facter_dir_path, filepath)
+      it 'contains an ipaddress fact' do
+        pending KNOWN_IPADDRESS_PENDING[relative_path] if KNOWN_IPADDRESS_PENDING.key?(relative_path)
+        expect(content['ipaddress']).to not_be_nil.and not_be_empty
       end
     end
   end
