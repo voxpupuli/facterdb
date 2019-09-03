@@ -2,6 +2,13 @@
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
+apt_install() {
+    DEBIAN_FRONTEND=noninteractive \
+        apt-get --option Dpkg::Options::="--force-confdef" \
+                --option Dpkg::Options::="--force-confnew" \
+                install --yes --force-yes "$@"
+}
+
 if test -f /usr/bin/zypper; then
   zypper --non-interactive --gpg-auto-import-keys refresh
   zypper --non-interactive install ruby-devel
@@ -16,7 +23,7 @@ if test -f /usr/bin/zypper; then
   fi
 elif test -f /usr/bin/apt-get; then
   apt-get update
-  apt-get install -y lsb-release
+  apt_install lsb-release
   lsbdistcodename=$(lsb_release -sc)
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
@@ -136,13 +143,13 @@ case "${osfamily}" in
   if [[ "tessa" =~ ${lsbdistcodename} ]]; then
     lsbdistcodename='bionic'
   fi
-  apt-get install -y wget
-  wget "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -O /tmp/puppetlabs-release-pc1.deb
-  if test -f /tmp/puppetlabs-release.deb; then
+  apt_install curl
+  curl "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -o /tmp/puppetlabs-release-pc1.deb
+  if test "$?" -eq 0 -a -f /tmp/puppetlabs-release-pc1.deb; then
     dpkg --install /tmp/puppetlabs-release-pc1.deb
     apt-get update
-    for puppet_agent_version in 1.2.2 1.4.2 1.5.3; do
-      if apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*; then
+    for puppet_agent_version in 1.2.2 1.4 1.5 1.7 1.8 1.10; do
+      if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
         facter --show-legacy -p -j | tee ${output_file}
@@ -150,12 +157,12 @@ case "${osfamily}" in
     done
     apt-get -y remove --purge puppetlabs-release-pc1
   fi
-  wget "https://apt.puppetlabs.com/puppet5-release-${lsbdistcodename}.deb" -O /tmp/puppet5-release.deb
-  if test -f /tmp/puppet5-release.deb; then
+  curl "https://apt.puppetlabs.com/puppet5-release-${lsbdistcodename}.deb" -o /tmp/puppet5-release.deb
+  if test "$?" -eq 0 -a -f /tmp/puppet5-release.deb; then
     dpkg --install /tmp/puppet5-release.deb
     apt-get update
-    for puppet_agent_version in 5.0.1 5.1.0 5.3.7 5.4.0 5.5.3; do
-      if apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*; then
+    for puppet_agent_version in 5.0 5.1 5.3 5.4 5.5; do
+      if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
         facter --show-legacy -p -j | tee ${output_file}
@@ -163,12 +170,12 @@ case "${osfamily}" in
     done
     apt-get -y remove --purge puppet5-release
   fi
-  wget "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -O /tmp/puppet6-release.deb
-  if test -f /tmp/puppet6-release.deb; then
+  curl "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -o /tmp/puppet6-release.deb
+  if test "$?" -eq 0 -a -f /tmp/puppet6-release.deb; then
     dpkg --install /tmp/puppet6-release.deb
     apt-get update
-    for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
-      if apt-get -y --force-yes install puppet-agent=${puppet_agent_version}*; then
+    for puppet_agent_version in 6.2 6.4 6.6; do
+      if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
         facter --show-legacy -p -j | tee ${output_file}
@@ -176,12 +183,12 @@ case "${osfamily}" in
     done
     apt-get -y remove --purge puppet6-release
   fi
-  apt-get install -y make gcc libgmp-dev
+  apt_install make gcc libgmp-dev
 
   # There are no puppet-agent packages for Buster yet, so generate a Facter 3.x
   # fact set from the official Debian package.
   if [[ "buster" = "${lsbdistcodename}" ]]; then
-    apt-get install -y ruby rubygems ruby-dev puppet facter
+    apt_install ruby rubygems ruby-dev puppet facter
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
     facter --show-legacy -p -j | tee ${output_file}
@@ -264,7 +271,12 @@ hardwaremodel=$(facter hardwaremodel)
 [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
 
 PATH=/opt/puppetlabs/puppet/bin:$PATH
-gem install bundler --no-ri --no-rdoc --no-format-executable
+
+if ruby -e 'puts RUBY_VERSION' | grep -e '^2\.3'; then
+    gem install bundler --no-ri --no-rdoc --no-format-executable
+else
+    gem install bundler --version '~> 1.0' --no-ri --no-rdoc --no-format-executable
+fi
 bundle install --path vendor/bundler
 
 for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do

@@ -13,7 +13,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define "debian-6-x86_64" do |host|
     host.vm.box = "puppetlabs/debian-6.0.10-64-nocm"
-    host.vm.provision "shell", inline: "apt-get update && apt-get install -y ruby rubygems"
+    host.vm.provision "shell", inline: [
+      "echo 'deb [allow-insecure=yes,trusted=yes] http://archive.debian.org/debian squeeze main' > /etc/apt/sources.list",
+      "echo 'deb [allow-insecure=yes,trusted=yes] http://archive.debian.org/debian-security squeeze/updates main contrib' >> /etc/apt/sources.list",
+      "apt-get update",
+      "apt-get install -y --force-yes ruby rubygems",
+    ].join(' && ')
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -80,7 +85,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "ubuntu-15.10-x86_64" do |host|
-    host.vm.box = "ubuntu/wily64"
+    host.vm.box = "sgallen/wily64"
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder ".", "/vagrant", :nfs => true
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
@@ -143,7 +150,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "fedora-19-x86_64" do |host|
-    host.vm.box = "chef/fedora-19"
+    host.vm.box = "rafacas/fedora19-plain"
     host.vm.provision "shell", inline: "yum -y install ruby ruby-devel"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
