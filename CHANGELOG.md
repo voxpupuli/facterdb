@@ -1,5 +1,16 @@
 # Change Log
 
+## [0.8.3](https://rubygems.org/gems/facterdb/versions/0.8.3) (2019-09-10)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.2...0.8.3)
+
+**Fixed bugs:**
+
+- IP address facts have disappeared [\#127](https://github.com/camptocamp/facterdb/issues/127)
+
+**Merged pull requests:**
+
+- Ensure all fact sets contain the legacy networking facts [\#128](https://github.com/camptocamp/facterdb/pull/128) ([rodjek](https://github.com/rodjek))
+
 ## [0.8.2](https://rubygems.org/gems/facterdb/versions/0.8.2) (2019-08-28)
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.1...0.8.2)
 
