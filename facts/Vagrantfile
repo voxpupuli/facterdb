@@ -218,8 +218,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "archlinux-x86_64" do |host|
     host.vm.box = "archlinux/archlinux"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+    #host.vm.provision "shell", path: "get_facts.sh"
+    #host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
   config.vm.define "sles-11sp1-x86_64" do |host|
     host.vm.box = "suse/sles11sp3"
