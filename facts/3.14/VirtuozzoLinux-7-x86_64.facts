@@ -1,7 +1,24 @@
 {
   "aio_agent_version": "6.10.1",
+  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
+  },
+  "augeasversion": "1.12.0",
+  "bios_release_date": "08/15/2019",
+  "bios_vendor": "Dell Inc.",
+  "bios_version": "2.3.10",
+  "blockdevice_sda_model": "PERC H730P Adp",
+  "blockdevice_sda_size": 14334319132672,
+  "blockdevice_sda_vendor": "DELL",
+  "blockdevices": "sda",
+  "boardmanufacturer": "Dell Inc.",
+  "boardproductname": "EUHRV",
+  "boardserialnumber": "EHRJIOUE",
+  "chassistype": "Rack Mount Chassis",
+  "dhcp_servers": {
+    "eth0": "169.255.254.1",
+    "system": "169.255.254.1"
   },
   "disks": {
     "sda": {
@@ -20,7 +37,7 @@
     "board": {
       "manufacturer": "Dell Inc.",
       "product": "EUHRV",
-      "serial_number": "JKSJHRKEJHR"
+      "serial_number": "EHRJIOUE"
     },
     "chassis": {
       "type": "Rack Mount Chassis"
@@ -32,9 +49,15 @@
       "uuid": "9ee62364-bcb9-48b8-b808-5f37c426a9d3"
     }
   },
+  "domain": "example.com",
   "facterversion": "3.14.5",
   "filesystems": "btrfs,ext2,ext3,ext4,msdos,vfat,xfs",
   "fips_enabled": false,
+  "fqdn": "awesome.example.com",
+  "gid": "root",
+  "hardwareisa": "x86_64",
+  "hardwaremodel": "x86_64",
+  "hostname": "awesome",
   "hypervisors": {
     "openvz": {
       "cloudlinux": false,
@@ -42,6 +65,7 @@
       "id": 0
     }
   },
+  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -49,6 +73,13 @@
     "uid": 0,
     "user": "root"
   },
+  "interfaces": "eth0,lo",
+  "ipaddress": "192.168.178.2",
+  "ipaddress6": "fe80::4ed9:8fff:fe8e:3a5d",
+  "ipaddress6_eth0": "fe80::4ed9:8fff:fe8e:3a5d",
+  "ipaddress6_lo": "::1",
+  "ipaddress_eth0": "192.168.178.2",
+  "ipaddress_lo": "127.0.0.1",
   "is_virtual": false,
   "kernel": "Linux",
   "kernelmajversion": "3.10",
@@ -56,25 +87,32 @@
   "kernelversion": "3.10.0",
   "load_averages": {
     "15m": 0.05,
-    "1m": 0.05,
-    "5m": 0.06
+    "1m": 0.01,
+    "5m": 0.03
   },
+  "macaddress": "4c:d9:8f:8e:3a:5d",
+  "macaddress_eth0": "4c:d9:8f:8e:3a:5d",
+  "manufacturer": "Dell Inc.",
   "memory": {
     "system": {
-      "available": "372.83 GiB",
-      "available_bytes": 400322248704,
-      "capacity": "0.88%",
+      "available": "372.29 GiB",
+      "available_bytes": 399745171456,
+      "capacity": "1.02%",
       "total": "376.14 GiB",
       "total_bytes": 403882549248,
-      "used": "3.32 GiB",
-      "used_bytes": 3560300544
+      "used": "3.85 GiB",
+      "used_bytes": 4137377792
     }
   },
+  "memoryfree": "372.29 GiB",
+  "memoryfree_mb": 381226.703125,
+  "memorysize": "376.14 GiB",
+  "memorysize_mb": 385172.4140625,
   "mountpoints": {
     "/": {
-      "available": "35.78 GiB",
-      "available_bytes": 38416805888,
-      "capacity": "8.55%",
+      "available": "35.59 GiB",
+      "available_bytes": 38212149248,
+      "capacity": "9.03%",
       "device": "/dev/sda2",
       "filesystem": "ext4",
       "options": [
@@ -84,8 +122,8 @@
       ],
       "size": "39.12 GiB",
       "size_bytes": 42007232512,
-      "used": "3.34 GiB",
-      "used_bytes": 3590426624
+      "used": "3.53 GiB",
+      "used_bytes": 3795083264
     },
     "/boot": {
       "available": "173.13 MiB",
@@ -188,9 +226,9 @@
       "used_bytes": 16384
     },
     "/run": {
-      "available": "188.03 GiB",
-      "available_bytes": 201896607744,
-      "capacity": "0.02%",
+      "available": "188.02 GiB",
+      "available_bytes": 201888186368,
+      "capacity": "0.03%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
       "options": [
@@ -201,8 +239,8 @@
       ],
       "size": "188.07 GiB",
       "size_bytes": 201941274624,
-      "used": "42.60 MiB",
-      "used_bytes": 44666880
+      "used": "50.63 MiB",
+      "used_bytes": 53088256
     },
     "/run/buse": {
       "available": "0 bytes",
@@ -263,7 +301,7 @@
     },
     "/tmp": {
       "available": "188.07 GiB",
-      "available_bytes": 201940733952,
+      "available_bytes": 201940336640,
       "capacity": "0.00%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
@@ -272,8 +310,8 @@
       ],
       "size": "188.07 GiB",
       "size_bytes": 201941274624,
-      "used": "528.00 KiB",
-      "used_bytes": 540672
+      "used": "916.00 KiB",
+      "used_bytes": 937984
     },
     "/var/lib/nfs/rpc_pipefs": {
       "available": "0 bytes",
@@ -289,28 +327,23 @@
       "size_bytes": 0,
       "used": "0 bytes",
       "used_bytes": 0
-    },
-    "/vz/pfcache": {
-      "available": "9.68 GiB",
-      "available_bytes": 10394791936,
-      "capacity": "0.36%",
-      "device": "/dev/ploop16955p1",
-      "filesystem": "ext4",
-      "options": [
-        "rw",
-        "relatime",
-        "stripe=320",
-        "data=ordered",
-        "balloon_ino=12"
-      ],
-      "size": "9.72 GiB",
-      "size_bytes": 10432565248,
-      "used": "36.02 MiB",
-      "used_bytes": 37773312
     }
   },
+  "mtu_eth0": 1500,
+  "mtu_lo": 65536,
+  "netmask": "255.255.255.0",
+  "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask6_eth0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask_eth0": "255.255.255.0",
+  "netmask_lo": "255.0.0.0",
+  "network": "192.168.178.0",
+  "network6": "fe80::4ed9:8fff:fe8e:3a5d",
+  "network6_eth0": "fe80::4ed9:8fff:fe8e:3a5d",
+  "network6_lo": "::1",
+  "network_lo": "127.0.0.0",
   "networking": {
-    "dhcp": "10.241.20.10",
+    "dhcp": "169.255.254.1",
     "domain": "example.com",
     "fqdn": "awesome.example.com",
     "hostname": "awesome",
@@ -326,11 +359,16 @@
         "bindings6": [
           {
             "address": "fe80::4ed9:8fff:fe8e:3a5d",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "fe80::4ed9:8fff:fe8e:3a5d"
+          },
+          {
+            "address": "fe80::4ed9:8fff:fe8e:3a5d",
             "netmask": "ffff:ffff:ffff:ffff::",
             "network": "fe80::"
           }
         ],
-        "dhcp": "10.241.20.10",
+        "dhcp": "169.255.254.1",
         "ip": "192.168.178.2",
         "ip6": "fe80::4ed9:8fff:fe8e:3a5d",
         "mac": "4c:d9:8f:8e:3a:5d",
@@ -338,46 +376,7 @@
         "netmask": "255.255.255.0",
         "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "192.168.178.0",
-        "network6": "ffff:ffff:ffff:ffff::"
-      },
-      "host-routed": {
-        "mac": "b6:db:45:eb:39:1e",
-        "mtu": 1500
-      },
-      "lo": {
-        "bindings": [
-          {
-            "address": "127.0.0.1",
-            "netmask": "255.0.0.0",
-            "network": "127.0.0.0"
-          }
-        ],
-        "bindings6": [
-          {
-            "address": "::1",
-            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-            "network": "::1"
-          }
-        ],
-        "ip": "127.0.0.1",
-        "ip6": "::1",
-        "mtu": 65536,
-        "netmask": "255.0.0.0",
-        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-        "network": "127.0.0.0",
-        "network6": "::1"
-      },
-      "venet0": {
-        "bindings6": [
-          {
-            "address": "fe80::1",
-            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-            "network": "fe80::1"
-          }
-        ],
-        "ip6": "fe80::1",
-        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-        "network6": "fe80::1"
+        "network6": "fe80::4ed9:8fff:fe8e:3a5d"
       }
     },
     "ip": "192.168.178.2",
@@ -387,9 +386,12 @@
     "netmask": "255.255.255.0",
     "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
     "network": "192.168.178.0",
-    "network6": "ffff:ffff:ffff:ffff::",
+    "network6": "fe80::4ed9:8fff:fe8e:3a5d",
     "primary": "eth0"
   },
+  "operatingsystem": "VirtuozzoLinux",
+  "operatingsystemmajrelease": "7",
+  "operatingsystemrelease": "7.6",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -404,6 +406,7 @@
       "enabled": false
     }
   },
+  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "ext4",
@@ -411,7 +414,7 @@
       "partuuid": "3ad15c7f-1fa7-4deb-8c41-ccb313ef2046",
       "size": "512.00 MiB",
       "size_bytes": 536870912,
-      "uuid": "7da7d362-2e42-4d14-b87d-484c64577feb"
+      "uuid": "397c61e1-e9fc-4276-b303-76b48e77cd1d"
     },
     "/dev/sda2": {
       "filesystem": "ext4",
@@ -419,7 +422,7 @@
       "partuuid": "50061d33-9672-47a5-ae65-32e8ace5fca1",
       "size": "40.00 GiB",
       "size_bytes": 42949672960,
-      "uuid": "e8b851ad-a5f7-4565-be27-7aed958d36b8"
+      "uuid": "88fd1328-bed0-4a57-b8f1-c0add20d30b9"
     },
     "/dev/sda4": {
       "partuuid": "0b16d042-abb5-4877-9109-8e178c891b78",
@@ -428,8 +431,50 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/root/bin",
+  "physicalprocessorcount": 2,
   "primary_ip": "192.168.178.2",
   "primary_mac": "4c:d9:8f:8e:3a:5d",
+  "processor0": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor1": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor10": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor11": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor12": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor13": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor14": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor15": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor16": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor17": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor18": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor19": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor2": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor20": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor21": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor22": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor23": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor24": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor25": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor26": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor27": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor28": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor29": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor3": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor30": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor31": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor32": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor33": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor34": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor35": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor36": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor37": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor38": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor39": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor4": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor5": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor6": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor7": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor8": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processor9": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
+  "processorcount": 40,
   "processors": {
     "count": 40,
     "isa": "x86_64",
@@ -477,43 +522,60 @@
     ],
     "physicalcount": 2
   },
+  "productname": "PowerEdge R440",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.7"
   },
-"ssh": {
+  "rubyplatform": "x86_64-linux",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+  "rubyversion": "2.5.7",
+  "selinux": false,
+  "serialnumber": "EHRJIOUE",
+  "ssh": {
     "ecdsa": {
       "fingerprints": {
-        "sha1": "SSHFP 3 1 98d36d25c3eb35a7e4f33c6a315531480c659aa6",
-        "sha256": "SSHFP 3 2 4b2e679cc68a485b9548a23f1f23fd729d9070354d483dfdc0ef912be3e5d976"
+        "sha1": "SSHFP 3 1 3963828ebdd74d96fc943307ea3533942bb484b5",
+        "sha256": "SSHFP 3 2 074830a6c0209eb88b6525bac3c24860f0c2781637c5da8d8f5417a67aba2d29"
       },
-      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAaFtcldMwsHfX80UjirJo9svvtECbCdzP4v3lWvRr7eSesRX8S+MEzyDRA/FkUR8oE881Rvis665jg9iNfnpGk=",
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFAUsNqKo5e/eNLWmk+LfIA20Jl0lOK/Mtrrgil6ZSWPoaOV0OPldLRfSWiRcQ2AbEXJIMmmx9MQMC8NnE7hGqA=",
       "type": "ecdsa-sha2-nistp256"
     },
     "ed25519": {
       "fingerprints": {
-        "sha1": "SSHFP 4 1 f4d461abc7a639d0b4e57fe8f287bad9d5721f9f",
-        "sha256": "SSHFP 4 2 fcbdc4a7be841c769672d425c6d32e9ceeb14c35d301543eb0c48597be074445"
+        "sha1": "SSHFP 4 1 393e359d0a0c5b09ea9b64cc1e05938fc0936ca9",
+        "sha256": "SSHFP 4 2 646703bc4c0db3de3c28a45ef6c0d5c86bd943f40235a19fe8e823e6004c1e85"
       },
-      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIDsnEgMJttiaRIY0pyelkxOqmT/vNOQKmzAeXK/WWGtM",
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIC1Oz0nCjBEBiki2xPMm5ZxiRpNRBzhh8qFW+BRTHD5h",
       "type": "ssh-ed25519"
     },
     "rsa": {
       "fingerprints": {
-        "sha1": "SSHFP 1 1 c08070a9f5157b10ef31d810e9e01df3ef412946",
-        "sha256": "SSHFP 1 2 cfebafe02f968c5b2f46d1b120d2820141f8305746b508637b2596bbb38a6f83"
+        "sha1": "SSHFP 1 1 78e7d5e3edef54e836cd5c7cec4d56f717756bbb",
+        "sha256": "SSHFP 1 2 5043bdffb1387664e7b94d31686428de2ef820237402a036cd7e3daec0896427"
       },
-      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDI12/kfYMzm6g1E1yfVhCTLuRM7QVZEKGvXzlYGtilJXdC6s8VyFsU70vKusLawb/rRfA52hKSUK3mkmQsnkdjt6H/MEaY3qD1uuiGc5XGBACxrZ1LD35Boxmst+LPBT931Q/ml7JmJXNSsSqELKSg5GNvvBX8GLPXwTKOrkNabkVXj8NUtrBXVYjoEo3KyVN0qgQiAFv4UZiFU1AOYKYfpWzMUR2ZQ0dDIuFiceiIae9aWB0S/1o2j9/osFArL1LpL22c3zktT7fGr9pHP5cXgp59TKfQEQ9PqRPYGHXmhkqWKCJ2wvH8n89v2oT3ShP7N47IXdI+wngcDrDylQzB",
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC1K2i0KCF24gX+Qq7ftw8wHMbmcyE51bs5L/D4lFehdtUp+j+TYojQh4yjCtp+7z/Vmj9levG7KnqEQs3y+Yz82T+4NbHOqBdFHODuxS+uwHH4Cckux14zLs06wiJzQIp489zrW7nNJffvqeXAfFxMXtyENxMoogf1qEJP2tRsS+13u8PjZkRQQw5+SaupU5yS0YpQ37AO4zY9dx2g/EesmQAAigudFYlHEdPbGdHtoL1S5122rvDVlmLi51N4fERMDEQU0tnQ6bTWNyl/3UYplsZqhLyqwXRs8BF5ceX5drd12NMfvYbsUw3m0cWjb59LeHvVvAgcQ9I4UX6QKx0t",
       "type": "ssh-rsa"
     }
   },
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFAUsNqKo5e/eNLWmk+LfIA20Jl0lOK/Mtrrgil6ZSWPoaOV0OPldLRfSWiRcQ2AbEXJIMmmx9MQMC8NnE7hGqA=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIC1Oz0nCjBEBiki2xPMm5ZxiRpNRBzhh8qFW+BRTHD5h",
+  "sshfp_ecdsa": "SSHFP 3 1 3963828ebdd74d96fc943307ea3533942bb484b5\nSSHFP 3 2 074830a6c0209eb88b6525bac3c24860f0c2781637c5da8d8f5417a67aba2d29",
+  "sshfp_ed25519": "SSHFP 4 1 393e359d0a0c5b09ea9b64cc1e05938fc0936ca9\nSSHFP 4 2 646703bc4c0db3de3c28a45ef6c0d5c86bd943f40235a19fe8e823e6004c1e85",
+  "sshfp_rsa": "SSHFP 1 1 78e7d5e3edef54e836cd5c7cec4d56f717756bbb\nSSHFP 1 2 5043bdffb1387664e7b94d31686428de2ef820237402a036cd7e3daec0896427",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC1K2i0KCF24gX+Qq7ftw8wHMbmcyE51bs5L/D4lFehdtUp+j+TYojQh4yjCtp+7z/Vmj9levG7KnqEQs3y+Yz82T+4NbHOqBdFHODuxS+uwHH4Cckux14zLs06wiJzQIp489zrW7nNJffvqeXAfFxMXtyENxMoogf1qEJP2tRsS+13u8PjZkRQQw5+SaupU5yS0YpQ37AO4zY9dx2g/EesmQAAigudFYlHEdPbGdHtoL1S5122rvDVlmLi51N4fERMDEQU0tnQ6bTWNyl/3UYplsZqhLyqwXRs8BF5ceX5drd12NMfvYbsUw3m0cWjb59LeHvVvAgcQ9I4UX6QKx0t",
   "system_uptime": {
     "days": 1,
-    "hours": 24,
-    "seconds": 88879,
+    "hours": 33,
+    "seconds": 118806,
     "uptime": "1 day"
   },
   "timezone": "UTC",
+  "uptime": "1 day",
+  "uptime_days": 1,
+  "uptime_hours": 33,
+  "uptime_seconds": 118806,
+  "uuid": "4C4C4544-0058-4310-8038-B1C04F525A32",
   "virtual": "openvzhn"
 }
