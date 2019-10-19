@@ -66,7 +66,6 @@ describe 'Default Facts' do
     'facts/1.6/fedora-19-x86_64.facts' => 'unable to regenerate facts',
     'facts/2.1/archlinux-x86_64.facts' => 'no ifconfig package',
     'facts/3.10/ubuntu-18.04-aarch64.facts' => 'unable to regenerate facts',
-    'facts/3.9/archlinux-x86_64.facts' => 'no ifconfig package',
     'facts/1.6/archlinux-x86_64.facts' => 'no ifconfig package',
     'facts/2.4/archlinux-x86_64.facts' => 'no ifconfig package',
     'facts/3.2/aix-61-powerpc.facts' => 'unable to regenerate facts',
