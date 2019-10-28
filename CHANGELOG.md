@@ -1,6 +1,22 @@
-# Change Log
+# Changelog
+
+## [1.0.0](https://rubygems.org/gems/facterdb/versions/1.0.0) (2019-10-28)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.2...1.0.0)
+
+**Fixed bugs:**
+
+- IP address facts have disappeared [\#127](https://github.com/camptocamp/facterdb/issues/127)
+
+**Merged pull requests:**
+
+- regenerate Archlinux / VZ 7 facts [\#133](https://github.com/camptocamp/facterdb/pull/133) ([bastelfreak](https://github.com/bastelfreak))
+- add VirtuozzoLinux 7 facts [\#131](https://github.com/camptocamp/facterdb/pull/131) ([bastelfreak](https://github.com/bastelfreak))
+- Add more Archlinux facts [\#130](https://github.com/camptocamp/facterdb/pull/130) ([bastelfreak](https://github.com/bastelfreak))
+- Ensure all fact sets contain the legacy networking facts [\#128](https://github.com/camptocamp/facterdb/pull/128) ([rodjek](https://github.com/rodjek))
 
 ## [0.8.2](https://rubygems.org/gems/facterdb/versions/0.8.2) (2019-08-28)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.1...0.8.2)
 
 **Fixed bugs:**
@@ -12,6 +28,7 @@
 - Update RHEL based fact sets with default SELinux values [\#125](https://github.com/camptocamp/facterdb/pull/125) ([rodjek](https://github.com/rodjek))
 
 ## [0.8.1](https://rubygems.org/gems/facterdb/versions/0.8.1) (2019-07-25)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.0...0.8.1)
 
 **Merged pull requests:**
@@ -19,6 +36,7 @@
 - Add fact sets for SLES15 [\#121](https://github.com/camptocamp/facterdb/pull/121) ([rodjek](https://github.com/rodjek))
 
 ## [0.8.0](https://rubygems.org/gems/facterdb/versions/0.8.0) (2019-07-22)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.7.0...0.8.0)
 
 **Closed issues:**
@@ -58,6 +76,7 @@
 - \(\#77\)\(\#78\)  Add default factset tests and fix failures [\#79](https://github.com/camptocamp/facterdb/pull/79) ([glennsarti](https://github.com/glennsarti))
 
 ## [0.7.0](https://rubygems.org/gems/facterdb/versions/0.7.0) (2019-07-02)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.6.0...0.7.0)
 
 **Merged pull requests:**
@@ -65,6 +84,7 @@
 - Add facts for aarch64. [\#100](https://github.com/camptocamp/facterdb/pull/100) ([ralimi](https://github.com/ralimi))
 
 ## [0.6.0](https://rubygems.org/gems/facterdb/versions/0.6.0) (2018-12-13)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.2...0.6.0)
 
 **Implemented enhancements:**
@@ -88,6 +108,7 @@
 - Add facter 2.5 Gentoo facts [\#90](https://github.com/camptocamp/facterdb/issues/90)
 
 ## [0.5.2](https://rubygems.org/gems/facterdb/versions/0.5.2) (2018-04-30)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.1...0.5.2)
 
 **Merged pull requests:**
@@ -97,6 +118,7 @@
 - Added Solaris 10 facts on Facter 3.9 [\#75](https://github.com/camptocamp/facterdb/pull/75) ([sirinek](https://github.com/sirinek))
 
 ## [0.5.1](https://rubygems.org/gems/facterdb/versions/0.5.1) (2018-03-06)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.0...0.5.1)
 
 **Merged pull requests:**
@@ -106,6 +128,7 @@
 - Add AIX 7.1 powerpc [\#72](https://github.com/camptocamp/facterdb/pull/72) ([TJM](https://github.com/TJM))
 
 ## [0.5.0](https://rubygems.org/gems/facterdb/versions/0.5.0) (2017-12-14)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.4.1...0.5.0)
 
 **Closed issues:**
@@ -117,16 +140,22 @@
 - Release prep for 0.5.0 [\#70](https://github.com/camptocamp/facterdb/pull/70) ([DavidS](https://github.com/DavidS))
 - add freebsd\_11 facts [\#69](https://github.com/camptocamp/facterdb/pull/69) ([b4ldr](https://github.com/b4ldr))
 - add freebsd 10 facts for facter 2.5 and 3.9 [\#68](https://github.com/camptocamp/facterdb/pull/68) ([b4ldr](https://github.com/b4ldr))
+- openSUSE Support [\#63](https://github.com/camptocamp/facterdb/pull/63) ([genebean](https://github.com/genebean))
 
 ## [0.4.1](https://rubygems.org/gems/facterdb/versions/0.4.1) (2017-10-25)
-[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.4.0...0.4.1)
 
-## [0.4.0](https://rubygems.org/gems/facterdb/versions/0.4.0) (2017-10-24)
-[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.12...0.4.0)
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.4.0...0.4.1)
 
 **Implemented enhancements:**
 
 - Release prep for 0.4.0 [\#66](https://github.com/camptocamp/facterdb/pull/66) ([DavidS](https://github.com/DavidS))
+
+## [0.4.0](https://rubygems.org/gems/facterdb/versions/0.4.0) (2017-10-24)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.12...0.4.0)
+
+**Implemented enhancements:**
+
 - Allow loading of external fact hashes [\#62](https://github.com/camptocamp/facterdb/pull/62) ([logicminds](https://github.com/logicminds))
 - Improve FreeBSD Support [\#60](https://github.com/camptocamp/facterdb/pull/60) ([xaque208](https://github.com/xaque208))
 - Add facts for Amazon Linux 2017.03 [\#56](https://github.com/camptocamp/facterdb/pull/56) ([pillarsdotnet](https://github.com/pillarsdotnet))
@@ -144,11 +173,8 @@
 - Fact package\_provider is missing [\#49](https://github.com/camptocamp/facterdb/issues/49)
 - allow loading of external fact hashes [\#27](https://github.com/camptocamp/facterdb/issues/27)
 
-**Merged pull requests:**
-
-- openSUSE Support [\#63](https://github.com/camptocamp/facterdb/pull/63) ([genebean](https://github.com/genebean))
-
 ## [0.3.12](https://rubygems.org/gems/facterdb/versions/0.3.12) (2017-07-27)
+
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.3.11...0.3.12)
 
 **Closed issues:**
@@ -309,4 +335,4 @@
 \* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
 
 
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
