@@ -28,12 +28,19 @@ elif test -f /usr/bin/apt-get; then
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
   osfamily='Debian'
-elif test -f /usr/bin/dnf -a ! -f /sbin/rhn_register; then
-  operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
-  osfamily='Fedora'
-elif test -f /usr/bin/yum; then
-  operatingsystemmajrelease=$(cat /etc/redhat-release | sed 's/[^0-9.]//g' | cut -d'.' -f1)
-  osfamily='RedHat'
+elif test -f /etc/redhat-release ; then
+  operatingsystemmajrelease=$(rpm -qf /etc/redhat-release --queryformat '%{version}' | cut -f1 -d'.')
+  case $(rpm -qf /etc/redhat-release --queryformat '%{name}') in
+  centos*|redhat*)
+    osfamily='RedHat'
+    ;;
+  fedora*)
+    osfamily='Fedora'
+    ;;
+  *)
+    echo 'Failed to determine osfamily from /etc/redhat-release'
+    exit 1
+ esac
 elif test -f '/usr/bin/pacman'; then
   operatingsystemmajrelease=3
   osfamily='Archlinux'
