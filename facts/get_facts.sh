@@ -261,6 +261,9 @@ case "${osfamily}" in
   ;;
 'Gentoo')
   emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
+  mkdir -p $(dirname ${output_file})
+  facter --show-legacy -p -j | tee ${output_file}
 esac
 
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
