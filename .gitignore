@@ -4,6 +4,7 @@ coverage/
 .vagrant/
 .envrc
 vendor/
+.vendor/
 packer_cache/
 *.box
 hugo/public
