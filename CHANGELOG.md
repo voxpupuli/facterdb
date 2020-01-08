@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.0](https://rubygems.org/gems/facterdb/versions/1.2.0) (2020-01-08)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/1.1.0...1.2.0)
+
+**Merged pull requests:**
+
+- \[Arch Linux\] Set correct hostname, domain, fqdn [\#146](https://github.com/camptocamp/facterdb/pull/146) ([dhoppe](https://github.com/dhoppe))
+- drop json as runtime dependency [\#145](https://github.com/camptocamp/facterdb/pull/145) ([bastelfreak](https://github.com/bastelfreak))
+- add .vendor to .gitignore [\#144](https://github.com/camptocamp/facterdb/pull/144) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.1.0](https://rubygems.org/gems/facterdb/versions/1.1.0) (2020-01-07)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/1.0.0...1.1.0)
