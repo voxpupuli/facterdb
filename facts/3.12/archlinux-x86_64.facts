@@ -324,8 +324,8 @@
   "network_lo": "127.0.0.0",
   "networking": {
     "dhcp": "10.0.2.2",
-    "fqdn": "archlinux",
-    "hostname": "archlinux",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "eth0": {
         "bindings": [
@@ -506,5 +506,6 @@
   "uptime_hours": 0,
   "uptime_seconds": 268,
   "uuid": "eb6e0002-bde8-4896-b25f-780ea4ce4e2d",
+  "domain": "example.com",
   "virtual": "virtualbox"
 }

@@ -1,6 +1,33 @@
 # Changelog
 
-## [1.0.0](https://rubygems.org/gems/facterdb/versions/1.0.0) (2019-10-28)
+## [1.2.0](https://rubygems.org/gems/facterdb/versions/1.2.0) (2020-01-08)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/1.1.0...1.2.0)
+
+**Merged pull requests:**
+
+- \[Arch Linux\] Set correct hostname, domain, fqdn [\#146](https://github.com/camptocamp/facterdb/pull/146) ([dhoppe](https://github.com/dhoppe))
+- drop json as runtime dependency [\#145](https://github.com/camptocamp/facterdb/pull/145) ([bastelfreak](https://github.com/bastelfreak))
+- add .vendor to .gitignore [\#144](https://github.com/camptocamp/facterdb/pull/144) ([bastelfreak](https://github.com/bastelfreak))
+
+## [1.1.0](https://rubygems.org/gems/facterdb/versions/1.1.0) (2020-01-07)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/1.0.0...1.1.0)
+
+**Closed issues:**
+
+- Please provider Gentoo facts for 3.14 [\#139](https://github.com/camptocamp/facterdb/issues/139)
+- Archlinux legacy facts missing in 3.x fact sets. [\#132](https://github.com/camptocamp/facterdb/issues/132)
+
+**Merged pull requests:**
+
+- Add Gentoo 3.11 factset [\#143](https://github.com/camptocamp/facterdb/pull/143) ([bastelfreak](https://github.com/bastelfreak))
+- archlinux: set correct FQDN/hostname [\#142](https://github.com/camptocamp/facterdb/pull/142) ([bastelfreak](https://github.com/bastelfreak))
+- Add Fedora 30 facts for Facter 3.11 [\#141](https://github.com/camptocamp/facterdb/pull/141) ([baurmatt](https://github.com/baurmatt))
+- Add Gentoo facts for Facter 3.14 [\#140](https://github.com/camptocamp/facterdb/pull/140) ([baurmatt](https://github.com/baurmatt))
+- Add CentOS 8 facts [\#137](https://github.com/camptocamp/facterdb/pull/137) ([traylenator](https://github.com/traylenator))
+
+## [1.0.0](https://rubygems.org/gems/facterdb/versions/1.0.0) (2019-10-29)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.8.2...1.0.0)
 

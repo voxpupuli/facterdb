@@ -28,14 +28,21 @@ elif test -f /usr/bin/apt-get; then
   operatingsystem=$(lsb_release -si)
   operatingsystemmajrelease=$(lsb_release -sr)
   osfamily='Debian'
-elif test -f /usr/bin/dnf -a ! -f /sbin/rhn_register; then
-  dnf -y redhat-lsb-core
-  operatingsystemmajrelease=$(cat /etc/redhat-release | cut -d' ' -f3 )
-  osfamily='Fedora'
-elif test -f /usr/bin/yum; then
-  yum -y install redhat-lsb-core
-  operatingsystemmajrelease=$(cat /etc/redhat-release | sed 's/[^0-9.]//g' | cut -d'.' -f1)
-  osfamily='RedHat'
+elif test -f /etc/redhat-release ; then
+  operatingsystemmajrelease=$(rpm -qf /etc/redhat-release --queryformat '%{version}' | cut -f1 -d'.')
+  case $(rpm -qf /etc/redhat-release --queryformat '%{name}') in
+  centos*|redhat*)
+    yum -y install redhat-lsb-core
+    osfamily='RedHat'
+    ;;
+  fedora*)
+    dnf -y redhat-lsb-core
+    osfamily='Fedora'
+    ;;
+  *)
+    echo 'Failed to determine osfamily from /etc/redhat-release'
+    exit 1
+ esac
 elif test -f '/usr/bin/pacman'; then
   operatingsystemmajrelease=3
   osfamily='Archlinux'
@@ -263,6 +270,9 @@ case "${osfamily}" in
   ;;
 'Gentoo')
   emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
+  mkdir -p $(dirname ${output_file})
+  facter --show-legacy -p -j | tee ${output_file}
 esac
 
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
