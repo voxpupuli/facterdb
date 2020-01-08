@@ -36,7 +36,7 @@ elif test -f /etc/redhat-release ; then
     osfamily='RedHat'
     ;;
   fedora*)
-    dnf -y redhat-lsb-core
+    dnf -y install redhat-lsb-core
     osfamily='Fedora'
     ;;
   *)
