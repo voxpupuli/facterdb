@@ -410,4 +410,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: "windows_get_facts.ps1"
     host.vm.provision 'shell', inline: "shutdown -s -f -c \"Fact Collection Complete\""
   end
+  config.vm.define "amazonlinux-2-x86_64" do |host|
+    host.vm.box = "bento/amazonlinux-2"
+    host.vm.provision "shell", inline: "yum -y install gcc glibc-devel"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "amazonlinux-1-x86_64" do |host|
+    host.vm.box = "spscommerce/amazonlinux"
+    host.vm.provision "shell", inline: "yum -y install gcc glibc-devel"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
 end
