@@ -1,9 +1,10 @@
 {
+  "aio_agent_version": "5.3.7",
   "architecture": "x86_64",
   "augeas": {
-    "version": "1.4.0"
+    "version": "1.8.1"
   },
-  "augeasversion": "1.4.0",
+  "augeasversion": "1.8.1",
   "bios_release_date": "12/01/2006",
   "bios_vendor": "innotek GmbH",
   "bios_version": "VirtualBox",
@@ -49,17 +50,24 @@
     }
   },
   "domain": "example.com",
-  "facterversion": "3.0.2",
+  "facterversion": "3.9.6",
   "filesystems": "ext3,ext4",
   "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
   "hostname": "foo",
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "133895",
+      "version": "6.0.14"
+    }
+  },
   "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
+    "privileged": true,
     "uid": 0,
     "user": "root"
   },
@@ -76,33 +84,33 @@
   "kernelrelease": "4.4.44-39.55.amzn1.x86_64",
   "kernelversion": "4.4.44",
   "load_averages": {
-    "15m": 0.12,
-    "1m": 1.07,
-    "5m": 0.34
+    "15m": 0.18,
+    "1m": 0.62,
+    "5m": 0.42
   },
   "macaddress": "08:00:27:24:46:86",
   "macaddress_eth0": "08:00:27:24:46:86",
   "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
-      "available": "826.48 MiB",
-      "available_bytes": 866627584,
-      "capacity": "17.10%",
+      "available": "879.06 MiB",
+      "available_bytes": 921759744,
+      "capacity": "11.82%",
       "total": "996.94 MiB",
       "total_bytes": 1045364736,
-      "used": "170.46 MiB",
-      "used_bytes": 178737152
+      "used": "117.88 MiB",
+      "used_bytes": 123604992
     }
   },
-  "memoryfree": "826.48 MiB",
-  "memoryfree_mb": 826.48,
+  "memoryfree": "879.06 MiB",
+  "memoryfree_mb": 879.05859375,
   "memorysize": "996.94 MiB",
-  "memorysize_mb": 996.938,
+  "memorysize_mb": 996.9375,
   "mountpoints": {
     "/": {
       "available": "6.17 GiB",
-      "available_bytes": 6621372416,
-      "capacity": "20.40%",
+      "available_bytes": 6626181120,
+      "capacity": "20.35%",
       "device": "/dev/sda1",
       "filesystem": "ext4",
       "options": [
@@ -113,7 +121,22 @@
       "size": "7.75 GiB",
       "size_bytes": 8318783488,
       "used": "1.58 GiB",
-      "used_bytes": 1697411072
+      "used_bytes": 1692602368
+    },
+    "/dev/shm": {
+      "available": "498.47 MiB",
+      "available_bytes": 522682368,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "498.47 MiB",
+      "size_bytes": 522682368,
+      "used": "0 bytes",
+      "used_bytes": 0
     }
   },
   "mtu_eth0": 1500,
@@ -137,6 +160,20 @@
     "hostname": "foo",
     "interfaces": {
       "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:fe24:4686",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::"
+          }
+        ],
         "dhcp": "10.0.2.2",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:fe24:4686",
@@ -148,6 +185,20 @@
         "network6": "fe80::"
       },
       "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1"
+          }
+        ],
         "ip": "127.0.0.1",
         "ip6": "::1",
         "mtu": 65536,
@@ -164,20 +215,21 @@
     "netmask": "255.255.255.0",
     "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.2.0",
-    "network6": "fe80::"
+    "network6": "fe80::",
+    "primary": "eth0"
   },
   "operatingsystem": "Amazon",
-  "operatingsystemmajrelease": "4",
-  "operatingsystemrelease": "4.4.44-39.55.amzn1.x86_64",
+  "operatingsystemmajrelease": "2016",
+  "operatingsystemrelease": "2016.09",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
     "hardware": "x86_64",
     "name": "Amazon",
     "release": {
-      "full": "4.4.44-39.55.amzn1.x86_64",
-      "major": "4",
-      "minor": "4"
+      "full": "2016.09",
+      "major": "2016",
+      "minor": "09"
     },
     "selinux": {
       "enabled": false
@@ -215,14 +267,15 @@
     "physicalcount": 1
   },
   "productname": "VirtualBox",
+  "puppetversion": "5.3.7",
   "ruby": {
     "platform": "x86_64-linux",
-    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-    "version": "2.1.6"
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+    "version": "2.4.4"
   },
   "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-  "rubyversion": "2.1.6",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
+  "rubyversion": "2.4.4",
   "selinux": false,
   "serialnumber": "0",
   "ssh": {
@@ -257,14 +310,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 43,
-    "uptime": "0:00 hours"
+    "seconds": 198,
+    "uptime": "0:03 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
+  "uptime": "0:03 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 43,
+  "uptime_seconds": 198,
   "uuid": "170E71AA-95F8-4004-B5C2-79D0352D7D23",
   "virtual": "virtualbox"
 }

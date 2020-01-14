@@ -29,7 +29,7 @@ end
 def factset_to_os_label(fs)
   os_rel  = '???'
   os_name = '????'
-  if fs.key?(:os)  && (fs[:os]['release']['major'] =~ /\d/)
+  if fs.key?(:os) && fs[:os].key?('release') && (fs[:os]['release']['major'] =~ /\d/)
     os_name = fs[:os]['name']
     os_rel  = fs[:os]['release']['major']
     os__rel = fs[:os]['release']['full']
