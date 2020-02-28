@@ -12,14 +12,15 @@
       "size_bytes": 15931539456
     }
   },
+  "domain": "example.com",
   "facterversion": "3.11.0",
   "filesystems": "ext2,ext3,ext4,f2fs,msdos,vfat",
   "fips_enabled": false,
-  "fqdn": "raspberrypi",
+  "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "unknown",
   "hardwaremodel": "armv7l",
-  "hostname": "raspberrypi",
+  "hostname": "foo",
   "id": "root",
   "identity": {
     "gid": 0,
@@ -213,8 +214,9 @@
   "network_lo": "127.0.0.0",
   "networking": {
     "dhcp": "'192.168.1.1'",
-    "fqdn": "raspberrypi",
-    "hostname": "raspberrypi",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "eth0": {
         "bindings": [

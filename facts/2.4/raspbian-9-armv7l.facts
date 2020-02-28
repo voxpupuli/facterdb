@@ -38,7 +38,7 @@
   "lsbdistdescription": "Raspbian GNU/Linux 9.4 (stretch)",
   "gid": "root",
   "kernelrelease": "4.14.79-v7+",
-  "hostname": "cs-ff-pi-900",
+  "hostname": "foo",
   "operatingsystemrelease": "9.4",
   "kernelmajversion": "4.14",
   "kernelversion": "4.14.79",
@@ -56,7 +56,7 @@
   "selinux": false,
   "lsbdistcodename": "stretch",
   "uniqueid": "007f0101",
-  "domain": "ncl.ac.uk",
+  "domain": "example.com",
   "lsbmajdistrelease": "9",
   "osfamily": "Debian",
   "operatingsystemmajrelease": "9",
@@ -112,5 +112,5 @@
   "uptime_hours": 13,
   "blockdevice_mmcblk0_size": 31104958464,
   "blockdevices": "mmcblk0",
-  "fqdn": "cs-ff-pi-900.ncl.ac.uk"
+  "fqdn": "foo.example.com"
 }
