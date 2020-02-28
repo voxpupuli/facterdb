@@ -31,10 +31,21 @@ def factset_to_os_label(fs)
   os_name = '????'
   if fs.key?(:os) && fs[:os].key?('release') && (fs[:os]['release']['major'] =~ /\d/)
     os_name = fs[:os]['name']
+    fail    = Hash.new
+    os      = fs[:os]
+    distro = os.fetch('lsb', os.fetch('distro', fail))
+    if distro.key?('id')
+      os_id = distro['id']
+    elsif distro.key?('distid')
+      os_id = distro['distid']
+    else
+      os_id = '@@@@@@@@@@'
+    end
     os_rel  = fs[:os]['release']['major']
     os__rel = fs[:os]['release']['full']
   elsif fs.key? :operatingsystem
     os_name  = fs[:operatingsystem]
+    os_id    = fs.fetch(:lsbdistid, '@@@@@@@@@@')
     os_rel   = fs.fetch(:operatingsystemmajrelease, fs.fetch(:lsbmajdistrelease, nil))
     os__rel  = fs.fetch(:lsbdistrelease, fs.fetch(:operatingsystemrelease, '@@@'))
   else
@@ -42,7 +53,6 @@ def factset_to_os_label(fs)
     pp fs
     fail( 'ERROR: unrecognized facterset format' )
   end
-
   # Sanitize OS names to match the formats used in the facterdb README
   label = "#{os_name} #{os_rel}"
   if os_name =~ /^(Archlinux|Gentoo)$/
@@ -56,8 +66,10 @@ def factset_to_os_label(fs)
     label = "#{os_name} #{os__rel.split('.')[1]}"
   elsif fs[:_facterdb_filename] =~ /sles-15-/
     label = "SLES 15"
-  elsif os_name.start_with?('Debian') && fs[:lsbdistid] == 'LinuxMint'
-    label = "#{fs[:lsbdistid]} #{fs[:lsbmajdistrelease]}"
+  elsif os_name.start_with?('Debian') && os_id == 'LinuxMint'
+    label = "#{os_id} #{fs[:lsbmajdistrelease]}"
+  elsif os_name.start_with?('Debian') && os_id == 'Raspbian'
+    label = "#{os_id} #{os_rel}"
   elsif os_name =~ /^windows$/
     db_filename = fs[:_facterdb_filename] || 'there_is_no_filename'
     if db_filename =~ /windows-10-/
