@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'github_changelog_generator', '~> 1.10', '< 1.10.4'
-  s.add_runtime_dependency 'facter'
+  s.add_runtime_dependency 'facter', '< 4.0.0'
   s.add_runtime_dependency 'jgrep'
 end
