@@ -2,7 +2,6 @@ facterdb
 ========
 
 [![Build Status](https://img.shields.io/travis/camptocamp/facterdb/master.svg)](https://travis-ci.org/camptocamp/facterdb)
-[![Code Climate](https://img.shields.io/codeclimate/github/camptocamp/facterdb.svg)](https://codeclimate.com/github/camptocamp/facterdb)
 [![Gem Version](https://img.shields.io/gem/v/facterdb.svg)](https://rubygems.org/gems/facterdb)
 [![Gem Downloads](https://img.shields.io/gem/dt/facterdb.svg)](https://rubygems.org/gems/facterdb)
 [![Coverage Status](https://img.shields.io/coveralls/camptocamp/facterdb.svg)](https://coveralls.io/r/camptocamp/facterdb?branch=master)
