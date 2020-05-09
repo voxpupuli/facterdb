@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://rubygems.org/gems/facterdb/versions/1.4.0) (2020-05-09)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/1.3.0...1.4.0)
+
+**Merged pull requests:**
+
+- Add Ubuntu 20.04 factset [\#154](https://github.com/camptocamp/facterdb/pull/154) ([mmoll](https://github.com/mmoll))
+
 ## [1.3.0](https://rubygems.org/gems/facterdb/versions/1.3.0) (2020-04-15)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/1.2.0...1.3.0)
