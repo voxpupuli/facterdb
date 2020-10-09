@@ -2,6 +2,9 @@ require 'facter'
 require 'jgrep'
 
 module FacterDB
+  module Errors
+    class InvalidFilter < RuntimeError; end
+  end
 
   # @return [String] -  returns a giant incomprehensible string of concatenated json data
   def self.database
@@ -92,18 +95,36 @@ module FacterDB
     get_facts(filter_str)
   end
 
-  def self.get_facts(filter=nil)
-    if filter.is_a?(Array)
-      filter_str = '(' + filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(') or (') + ')'
-    elsif filter.is_a?(Hash)
-      filter_str = filter.map { |k,v | "#{k}=#{v}" }.join(' and ')
-    elsif filter.is_a?(String)
-      filter_str = filter
-    elsif filter == nil
-      filter_str = ''
+  # @return [String] - the string filter
+  # @param filter [Object] - The filter to convert to jgrep string
+  def generate_filter_str(filter=nil)
+    case filter
+    when ::Array
+      '(' + filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(') or (') + ')'
+    when ::Hash
+      filter.map { |k,v | "#{k}=#{v}" }.join(' and ')
+    when ::String
+      filter
+    when ::NilClass
+      ''
     else
-      raise 'filter must be either an Array a Hash or a String'
+      raise Errors::InvalidFilter, "filter must be either an Array a Hash, String, or nil, received #{filter.class}"
     end
+  end
+
+  # @return [Boolean] - true if the filter is valid against the jgrep filter validator
+  # @param filter [Object] - The filter to convert to jgrep string
+  def self.valid_filters?(filters)
+    filter_str = generate_filter_str(filters)
+    JGrep.validate_filters(filter_str).nil?
+  rescue RuntimeError
+    false
+  end
+
+  # @return [Array] - array of hashes of facts
+  # @param filter [Object] - The filter to convert to jgrep string
+  def self.get_facts(filter=nil)
+    filter_str = generate_filter_str(filter)
     JGrep.jgrep(database, filter_str).map { |hash| Hash[hash.map{ |k, v| [k.to_sym, v] }] }
   end
 end

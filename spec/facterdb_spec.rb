@@ -282,6 +282,16 @@ describe FacterDB do
     end
   end
 
+  describe '.valid_filters?' do
+    it 'invalid and false' do
+      expect( FacterDB.valid_filters?('and')).to be_falsey
+    end
+
+    it 'valid and true' do
+      expect( FacterDB.valid_filters?('foo')).to be_truthy
+    end
+  end
+
   describe '.get_facts' do
     subject(:result) { FacterDB.get_facts(filter) }
 
