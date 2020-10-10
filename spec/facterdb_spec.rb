@@ -292,6 +292,32 @@ describe FacterDB do
     end
   end
 
+  describe '.generate_filter_str' do
+    it 'invalid type' do
+      expect{FacterDB.generate_filter_str(3)}.to raise_error(FacterDB::Errors::InvalidFilter)
+    end
+
+    it 'with string' do
+      expect(FacterDB.generate_filter_str('foo')).to eq("foo")
+    end
+
+    it 'with hash' do
+        expect(FacterDB.generate_filter_str({:osfamily => 'Debian'})).to eq("osfamily=Debian")
+    end
+
+    it 'with Array' do
+      expect(FacterDB.generate_filter_str([:osfamily => 'Debian'])).to eq("(osfamily=Debian)")
+    end
+
+    it 'empty' do
+      expect(FacterDB.generate_filter_str('')).to eq('')
+    end
+
+    it 'nil filter' do
+      expect(FacterDB.generate_filter_str(nil)).to eq('')
+    end
+  end
+
   describe '.get_facts' do
     subject(:result) { FacterDB.get_facts(filter) }
 
