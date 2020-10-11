@@ -97,7 +97,7 @@ module FacterDB
 
   # @return [String] - the string filter
   # @param filter [Object] - The filter to convert to jgrep string
-  def generate_filter_str(filter=nil)
+  def self.generate_filter_str(filter=nil)
     case filter
     when ::Array
       '(' + filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(') or (') + ')'
