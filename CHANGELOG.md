@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.5.0](https://rubygems.org/gems/facterdb/versions/1.5.0) (2020-11-19)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/1.4.0...1.5.0)
+
+**Implemented enhancements:**
+
+- add filter validation [\#19](https://github.com/camptocamp/facterdb/issues/19)
+
+**Merged pull requests:**
+
+- Fixes a bug with generate\_filter\_str [\#160](https://github.com/camptocamp/facterdb/pull/160) ([logicminds](https://github.com/logicminds))
+- Fixes \#19 - add filter validation [\#159](https://github.com/camptocamp/facterdb/pull/159) ([logicminds](https://github.com/logicminds))
+- Remove pin on facter \< 4 [\#156](https://github.com/camptocamp/facterdb/pull/156) ([sanfrancrisko](https://github.com/sanfrancrisko))
+- Add ruby 2.5 and 2.7 testing [\#155](https://github.com/camptocamp/facterdb/pull/155) ([DavidS](https://github.com/DavidS))
+
 ## [1.4.0](https://rubygems.org/gems/facterdb/versions/1.4.0) (2020-05-09)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/1.3.0...1.4.0)
@@ -20,6 +35,7 @@
 
 - Add Debian 10 facter 3.13/3.14 sets [\#152](https://github.com/camptocamp/facterdb/pull/152) ([bastelfreak](https://github.com/bastelfreak))
 - Pin to facter \< 4 to avoid automatic upgrade [\#151](https://github.com/camptocamp/facterdb/pull/151) ([raphink](https://github.com/raphink))
+- Adding facts from Solaris 11 x86 & SPARC [\#149](https://github.com/camptocamp/facterdb/pull/149) ([genebean](https://github.com/genebean))
 - AmazonLinux facts added [\#147](https://github.com/camptocamp/facterdb/pull/147) ([bFekete](https://github.com/bFekete))
 - Add facts for Raspbian 9 and 10; alter Rakefile to support Raspbian [\#136](https://github.com/camptocamp/facterdb/pull/136) ([threepistons](https://github.com/threepistons))
 
