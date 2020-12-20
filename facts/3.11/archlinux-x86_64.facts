@@ -48,7 +48,7 @@
       "uuid": "eb6e0002-bde8-4896-b25f-780ea4ce4e2d"
     }
   },
-  "facterversion": "3.11.9",
+  "facterversion": "3.11.14",
   "filesystems": "btrfs",
   "fips_enabled": false,
   "fqdn": "archlinux",
@@ -391,6 +391,16 @@
   "operatingsystemrelease": "5.3.1-arch1-1-ARCH",
   "os": {
     "architecture": "x86_64",
+    "distro": {
+      "codename": "n/a",
+      "description": "Arch Linux",
+      "id": "Arch",
+      "release": {
+        "full": "rolling",
+        "major": "rolling"
+      },
+      "specification": "1.4"
+    },
     "family": "Archlinux",
     "hardware": "x86_64",
     "name": "Archlinux",
