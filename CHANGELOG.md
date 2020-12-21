@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.6.0](https://rubygems.org/gems/facterdb/versions/1.6.0) (2020-12-21)
+
+[Full Changelog](https://github.com/camptocamp/facterdb/compare/1.5.0...1.6.0)
+
+**Closed issues:**
+
+- New gem release required prior to Puppet 7 to resolve dependency issues [\#161](https://github.com/camptocamp/facterdb/issues/161)
+- FacterDB appears to not give a os.family for solaris 11 on facter 4 [\#158](https://github.com/camptocamp/facterdb/issues/158)
+- facterdb conflict [\#157](https://github.com/camptocamp/facterdb/issues/157)
+
+**Merged pull requests:**
+
+- Archlinux: Update fact sets [\#162](https://github.com/camptocamp/facterdb/pull/162) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.5.0](https://rubygems.org/gems/facterdb/versions/1.5.0) (2020-11-19)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/1.4.0...1.5.0)
@@ -60,7 +74,6 @@
 
 **Merged pull requests:**
 
-- Adding facts from Solaris 11 x86 & SPARC [\#149](https://github.com/camptocamp/facterdb/pull/149) ([genebean](https://github.com/genebean))
 - Add Gentoo 3.11 factset [\#143](https://github.com/camptocamp/facterdb/pull/143) ([bastelfreak](https://github.com/bastelfreak))
 - archlinux: set correct FQDN/hostname [\#142](https://github.com/camptocamp/facterdb/pull/142) ([bastelfreak](https://github.com/bastelfreak))
 - Add Fedora 30 facts for Facter 3.11 [\#141](https://github.com/camptocamp/facterdb/pull/141) ([baurmatt](https://github.com/baurmatt))
@@ -174,21 +187,14 @@
 - facts/2.5/fedora-28-x86\_64.facts broken [\#91](https://github.com/camptocamp/facterdb/issues/91)
 - Add facter 2.5 Gentoo facts [\#90](https://github.com/camptocamp/facterdb/issues/90)
 
-**Merged pull requests:**
-
-- \(maint\) Add `rake table` task + update README.md + better Windows detection [\#76](https://github.com/camptocamp/facterdb/pull/76) ([glennsarti](https://github.com/glennsarti))
-
 ## [0.5.2](https://rubygems.org/gems/facterdb/versions/0.5.2) (2018-04-30)
 
 [Full Changelog](https://github.com/camptocamp/facterdb/compare/0.5.1...0.5.2)
 
-**Implemented enhancements:**
-
-- Release prep for 0.4.0 [\#66](https://github.com/camptocamp/facterdb/pull/66) ([DavidS](https://github.com/DavidS))
-
 **Merged pull requests:**
 
 - add Ubuntu 18.04 facts [\#82](https://github.com/camptocamp/facterdb/pull/82) ([bastelfreak](https://github.com/bastelfreak))
+- \(maint\) Add `rake table` task + update README.md + better Windows detection [\#76](https://github.com/camptocamp/facterdb/pull/76) ([glennsarti](https://github.com/glennsarti))
 - Added Solaris 10 facts on Facter 3.9 [\#75](https://github.com/camptocamp/facterdb/pull/75) ([sirinek](https://github.com/sirinek))
 
 ## [0.5.1](https://rubygems.org/gems/facterdb/versions/0.5.1) (2018-03-06)
@@ -211,7 +217,6 @@
 
 **Merged pull requests:**
 
-- Release prep for 0.5.0 [\#70](https://github.com/camptocamp/facterdb/pull/70) ([DavidS](https://github.com/DavidS))
 - add freebsd\_11 facts [\#69](https://github.com/camptocamp/facterdb/pull/69) ([b4ldr](https://github.com/b4ldr))
 - add freebsd 10 facts for facter 2.5 and 3.9 [\#68](https://github.com/camptocamp/facterdb/pull/68) ([b4ldr](https://github.com/b4ldr))
 - openSUSE Support [\#63](https://github.com/camptocamp/facterdb/pull/63) ([genebean](https://github.com/genebean))
