@@ -1,5 +1,6 @@
 require 'spec_helper'
 require 'digest'
+require 'pathname'
 
 RSpec::Matchers.define :have_a_unique_hash do
   match do |actual|
