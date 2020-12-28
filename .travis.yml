@@ -6,22 +6,10 @@ script:
 matrix:
   fast_finish: true
   include:
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 1.6.0"
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 1.7.0"
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 2.0.0"
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 2.1.0"
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 2.2.0"
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 2.3.0"
-  - rvm: 2.3
-    env: FACTER_GEM_VERSION="~> 2.4.0"
   - rvm: 2.5
     env: FACTER_GEM_VERSION="~> 2.0" COVERAGE=yes
+  - rvm: 2.6
+    env: FACTER_GEM_VERSION="~> 2.0"
   - rvm: 2.7
     env: FACTER_GEM_VERSION="~> 2.0"
 notifications:
