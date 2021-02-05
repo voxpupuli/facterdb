@@ -17,9 +17,6 @@
   "blockdevices": "sd1,sd0",
   "chassisassettag": "ABC12345",
   "chassistype": "0x17 (rack mount chassis)",
-  "clientcert": "hostname.example.com",
-  "clientnoop": false,
-  "clientversion": "5.3.5",
   "defaultroute": "10.16.100.254",
   "disks": {
       "sd0": {
