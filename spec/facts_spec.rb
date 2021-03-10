@@ -100,9 +100,15 @@ describe 'Default Facts' do
         expect(content['facterversion']).to have_facter_version(facter_dir_path, filepath)
       end
 
-      it 'contains an ipaddress fact' do
+      it 'contains an ipaddress or networking.ip fact' do
         pending KNOWN_IPADDRESS_PENDING[relative_path] if KNOWN_IPADDRESS_PENDING.key?(relative_path)
-        expect(content['ipaddress']).to not_be_nil.and not_be_empty
+        case content['facterversion']
+        when /^[1-3]/
+          expect(content['ipaddress']).to not_be_nil.and not_be_empty
+        else
+          expect(content['networking']['ip']).to not_be_nil.and not_be_empty
+        end
+        
       end
     end
   end
