@@ -5,6 +5,7 @@ facterdb
 [![Gem Version](https://img.shields.io/gem/v/facterdb.svg)](https://rubygems.org/gems/facterdb)
 [![Gem Downloads](https://img.shields.io/gem/dt/facterdb.svg)](https://rubygems.org/gems/facterdb)
 [![Coverage Status](https://img.shields.io/coveralls/camptocamp/facterdb.svg)](https://coveralls.io/r/camptocamp/facterdb?branch=master)
+[![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
 
 A Gem that contains a lot of facts for a lot of Operating Systems.
 
@@ -278,3 +279,12 @@ Please submit issues at https://github.com/camptocamp/facterdb/issues or PRs in 
 * Update the version in `lib/facterdb/version.rb`
 * Run `rake changelog`
 * Commit and PR the results.
+
+
+## Transfer Notice
+
+This plugin was originally authored by [Camptocamp](http://www.camptocamp.com).
+The maintainer preferred that Puppet Community take ownership of the module for future improvement and maintenance.
+Existing pull requests and issues were transferred over, please fork and continue to contribute here instead of Camptocamp.
+
+Previously: https://github.com/camptocamp/facterdb
