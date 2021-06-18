@@ -3,13 +3,13 @@ $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require "facterdb/version"
 
 Gem::Specification.new do |s|
-  s.name        = "facterdb"
+  s.name        = 'facterdb'
   s.version     = FacterDB::Version::STRING
-  s.authors     = ["Mickaël Canévet"]
-  s.email       = ["mickael.canevet@camptocamp.com"]
-  s.homepage    = "http://github.com/camptocamp/facterdb"
-  s.summary     = "A Database of OS facts provided by Facter"
-  s.description = "Contains facts from many Facter version on many Operating Systems"
+  s.authors     = ['Vox Pupuli']
+  s.email       = ['voxpupuli@groups.io']
+  s.homepage    = 'http://github.com/voxpupuli/facterdb'
+  s.summary     = 'A Database of OS facts provided by Facter'
+  s.description = 'Contains facts from many Facter version on many Operating Systems'
   s.licenses    = 'Apache-2.0'
 
   s.files       = `git ls-files`.split("\n")
@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rspec'
-  s.add_development_dependency 'github_changelog_generator', '~> 1.10', '< 1.10.4'
   s.add_runtime_dependency 'facter', '< 5.0.0'
   s.add_runtime_dependency 'jgrep'
 end
