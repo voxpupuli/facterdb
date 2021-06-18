@@ -63,7 +63,13 @@ def factset_to_os_label(fs)
   elsif os_name =~ /^(OpenBSD|Ubuntu|Fedora)$/
     label = "#{os_name} #{os__rel}"
   elsif os_name =~ /^(Solaris)/
-    label = "#{os_name} #{os__rel.split('.')[1]}"
+    if fs.key?(:os) && fs[:os].key?('release') && (fs[:os]['release']['major'] =~ /\d/)
+      label = "#{os_name} #{os_rel}"
+    elsif fs.key?(:operatingsystemmajrelease)
+      label = "#{os_name} #{os_rel}"
+    else
+      label = "#{os_name} #{os__rel.split('.')[1]}"
+    end
   elsif fs[:_facterdb_filename] =~ /sles-15-/
     label = "SLES 15"
   elsif os_name.start_with?('Debian') && os_id == 'LinuxMint'
