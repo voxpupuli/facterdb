@@ -1,10 +1,11 @@
 facterdb
 ========
 
-[![Build Status](https://img.shields.io/travis/camptocamp/facterdb/master.svg)](https://travis-ci.org/camptocamp/facterdb)
-[![Gem Version](https://img.shields.io/gem/v/facterdb.svg)](https://rubygems.org/gems/facterdb)
-[![Gem Downloads](https://img.shields.io/gem/dt/facterdb.svg)](https://rubygems.org/gems/facterdb)
-[![Coverage Status](https://img.shields.io/coveralls/camptocamp/facterdb.svg)](https://coveralls.io/r/camptocamp/facterdb?branch=master)
+[![License](https://img.shields.io/github/license/voxpupuli/facterdb.svg)](https://github.com/voxpupuli/facterdb/blob/master/LICENSE)
+[![Test](https://github.com/voxpupuli/facterdb/actions/workflows/test.yml/badge.svg)](https://github.com/voxpupuli/facterdb/actions/workflows/test.yml)
+[![Release](https://github.com/voxpupuli/facterdb/actions/workflows/release.yml/badge.svg)](https://github.com/voxpupuli/facterdb/actions/workflows/release.yml)
+[![RubyGem Version](https://img.shields.io/gem/v/facterdb.svg)](https://rubygems.org/gems/facterdb)
+[![RubyGem Downloads](https://img.shields.io/gem/dt/facterdb.svg)](https://rubygems.org/gems/facterdb)
 [![Donated by Camptocamp](https://img.shields.io/badge/donated%20by-camptocamp-fb7047.svg)](#transfer-notice)
 
 A Gem that contains a lot of facts for a lot of Operating Systems.
