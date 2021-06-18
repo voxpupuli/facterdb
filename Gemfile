@@ -1,4 +1,4 @@
-source ENV['GEM_SOURCE'] || "https://rubygems.org"
+source ENV['GEM_SOURCE'] || 'https://rubygems.org'
 
 gemspec
 
@@ -9,5 +9,5 @@ else
 end
 
 group :development do
-  gem 'github_changelog_generator', '~> 1.14'
+  gem 'github_changelog_generator', '>= 1.16.4'
 end
