@@ -12,7 +12,7 @@ begin
     config.future_release = FacterDB::Version::STRING
     config.include_labels = %w[enhancement bug]
     config.exclude_labels = %w[duplicate question invalid wontfix maintenance]
-    config.user = 'camptocamp'
+    config.user = 'voxpupuli'
     config.project = 'facterdb'
     config.release_url = "https://rubygems.org/gems/facterdb/versions/%s"
     config.since_tag = '0.3.11'
