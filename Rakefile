@@ -58,7 +58,7 @@ def factset_to_os_label(fs)
   if os_name =~ /^(Archlinux|Gentoo)$/
     label = os_name
   elsif os_name =~ /^(SLES|FreeBSD|OpenSuSE)$/ ||
-        (os_name =~ /^(RedHat|Scientific|OracleLinux|CentOS)/  && os_rel.nil?)
+        (os_name =~ /^(RedHat|Scientific|OracleLinux|CentOS|AlmaLinux)/  && os_rel.nil?)
     label = "#{os_name} #{os__rel.split('.').first}"
   elsif os_name =~ /^(OpenBSD|Ubuntu|Fedora)$/
     label = "#{os_name} #{os__rel}"
