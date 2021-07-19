@@ -11,6 +11,13 @@ module FacterDB
     @database ||= "[#{facterdb_fact_files.map { |f| read_json_file(f) }.join(',')}]\n"
   end
 
+  # @note Call this method at the end of test suite, for example via after(:suite), to reclaim back the memory required to hold json data and filter cache
+  def self.cleanup
+    @database = nil
+    Thread.current[:facterdb_last_filter_seen] = nil
+    Thread.current[:facterdb_last_facts_seen] = nil
+  end
+
   # @return [Boolean] - returns true if we should use the default facterdb database, false otherwise
   # @note If the user passes anything to the FACTERDB_SKIP_DEFAULTDB environment variable we assume
   # they want to skip the default db
@@ -123,8 +130,16 @@ module FacterDB
 
   # @return [Array] - array of hashes of facts
   # @param filter [Object] - The filter to convert to jgrep string
-  def self.get_facts(filter=nil)
+  def self.get_facts(filter=nil, cache=true)
+    if cache && filter && filter == Thread.current[:facterdb_last_filter_seen]
+      return Thread.current[:facterdb_last_facts_seen]
+    end
     filter_str = generate_filter_str(filter)
-    JGrep.jgrep(database, filter_str).map { |hash| Hash[hash.map{ |k, v| [k.to_sym, v] }] }
+    result = JGrep.jgrep(database, filter_str).map { |hash| Hash[hash.map{ |k, v| [k.to_sym, v] }] }
+    if cache
+      Thread.current[:facterdb_last_filter_seen] = filter
+      Thread.current[:facterdb_last_facts_seen] = result
+    end
+    result
   end
 end
