@@ -31,14 +31,17 @@ elif test -f /usr/bin/apt-get; then
 elif test -f /etc/redhat-release ; then
   operatingsystemmajrelease=$(rpm -qf /etc/redhat-release --queryformat '%{version}' | cut -f1 -d'.')
   case $(rpm -qf /etc/redhat-release --queryformat '%{name}') in
+  almalinux*)
+    osfamily='AlmaLinux'
+    ;;
   centos*|redhat*)
     osfamily='RedHat'
     ;;
   fedora*)
     osfamily='Fedora'
     ;;
-  almalinux*)
-    osfamily='AlmaLinux'
+  rocky-*)
+    osfamily='RockyLinux'
     ;;
   *)
     echo 'Failed to determine osfamily from /etc/redhat-release'
@@ -153,7 +156,7 @@ case "${osfamily}" in
     yum remove -y puppet6-release
   fi
   ;;
-'AlmaLinux')
+'RockyLinux'|'AlmaLinux')
   dnf localinstall -y "http://yum.puppetlabs.com/puppet6-release-el-${operatingsystemmajrelease}.noarch.rpm"
   if dnf install -y puppet-agent; then
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
@@ -311,7 +314,7 @@ bundle install --path vendor/bundler
 for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   case "${operatingsystem}" in
-    almalinux)
+    almalinux|rocky)
       break
       ;;
     openbsd)
