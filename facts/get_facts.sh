@@ -31,17 +31,11 @@ elif test -f /usr/bin/apt-get; then
 elif test -f /etc/redhat-release ; then
   operatingsystemmajrelease=$(rpm -qf /etc/redhat-release --queryformat '%{version}' | cut -f1 -d'.')
   case $(rpm -qf /etc/redhat-release --queryformat '%{name}') in
-  almalinux*)
-    osfamily='AlmaLinux'
-    ;;
-  centos*|redhat*)
+  centos*|redhat*|almalinux*|rocky-*)
     osfamily='RedHat'
     ;;
   fedora*)
     osfamily='Fedora'
-    ;;
-  rocky-*)
-    osfamily='RockyLinux'
     ;;
   *)
     echo 'Failed to determine osfamily from /etc/redhat-release'
@@ -132,15 +126,6 @@ case "${osfamily}" in
     yum remove -y puppet7-release
   fi
   ;;
-'RockyLinux'|'AlmaLinux')
-  dnf localinstall -y "http://yum.puppetlabs.com/puppet6-release-el-${operatingsystemmajrelease}.noarch.rpm"
-  if dnf install -y puppet-agent; then
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  fi
-  ;;
-
 'Debian')
   if [[ "serena" =~ ${lsbdistcodename} ]]; then
     lsbdistcodename='xenial'
