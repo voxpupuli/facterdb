@@ -30,17 +30,7 @@ elif test -f /usr/bin/apt-get; then
   osfamily='Debian'
 elif test -f /etc/redhat-release ; then
   operatingsystemmajrelease=$(rpm -qf /etc/redhat-release --queryformat '%{version}' | cut -f1 -d'.')
-  case $(rpm -qf /etc/redhat-release --queryformat '%{name}') in
-  centos*|redhat*|almalinux*|rocky-*)
-    osfamily='RedHat'
-    ;;
-  fedora*)
-    osfamily='Fedora'
-    ;;
-  *)
-    echo 'Failed to determine osfamily from /etc/redhat-release'
-    exit 1
- esac
+  osfamily='RedHat'
 elif test -f '/usr/bin/pacman'; then
   operatingsystemmajrelease=3
   osfamily='Archlinux'
@@ -54,43 +44,16 @@ else
 fi
 
 case "${osfamily}" in
-'Fedora')
-  # Puppet 6
-  yum install -y "https://yum.puppetlabs.com/puppet6-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
-  if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 6.25.0-1; do
-      dnf install -y "puppet-agent-${puppet_agent_version}.fc${operatingsystemmajrelease}"
-      if [[ "${?}" == 0 ]]; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    yum remove -y puppet6-release
-  fi
-  # Puppet 7
-  if [[ $operatingsystemmajrelease == '33' ]] && command -v facter &> /dev/null; then
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-    mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
-  fi
-  yum install -y "https://yum.puppetlabs.com/puppet7-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
-  if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 7.12.0-1; do
-      dnf install -y "puppet-agent-${puppet_agent_version}.fc${operatingsystemmajrelease}"
-      if [[ "${?}" == 0 ]]; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    yum remove -y puppet7-release
-  fi
-  ;;
 'RedHat')
-  yum -y install "https://yum.puppetlabs.com/puppet6-release-el-${operatingsystemmajrelease}.noarch.rpm"
+  . /etc/os-release
+  if [[ $ID == fedora ]]; then
+    distcode=fedora
+  else
+    distcode=el
+  fi
+  yum -y install "https://yum.puppetlabs.com/puppet6-release-${distcode}-${operatingsystemmajrelease}.noarch.rpm"
   if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
+    for puppet_agent_version in 6.25.0; do
       if yum install -y puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
