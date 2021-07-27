@@ -66,21 +66,6 @@ fi
 
 case "${osfamily}" in
 'Fedora')
-
-  yum install -y "https://yum.puppetlabs.com/puppetlabs-release-pc1-fedora-${operatingsystemmajrelease}.noarch.rpm"
-  # Puppet 4 doesn't support Fedora 28 anymore
-  if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 1.5.3-1 1.6.0-1 1.6.1-1 1.6.2-1 1.7.0-1 1.10.12-1; do
-      dnf install -y "puppet-agent-${puppet_agent_version}.fedoraf${operatingsystemmajrelease}"
-      if [[ "${?}" == 0 ]]; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    yum remove -y puppetlabs-release-pc1
-  fi
-  # Puppet 5
   yum install -y "https://yum.puppetlabs.com/puppet5/puppet5-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
   if [[ "${?}" == 0 ]]; then
     for puppet_agent_version in 5.3.1-1 5.3.2-1 5.3.3-1 5.3.4-1 5.3.5-1 5.4.0-1 5.5.16-1; do
@@ -138,18 +123,6 @@ case "${osfamily}" in
   else
     http_method='https'
   fi
-  wget "${http_method}://yum.puppetlabs.com/puppetlabs-release-pc1-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppetlabs-release-pc1.rpm
-  if test -f /tmp/puppetlabs-release-pc1.rpm; then
-    rpm -ivh /tmp/puppetlabs-release-pc1.rpm
-    for puppet_agent_version in 1.2.2 1.4.2 1.5.3 1.10.4; do
-      if yum install -y puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    yum remove -y puppetlabs-release-pc1
-  fi
   wget "http://yum.puppetlabs.com/puppet5/puppet5-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet5-release.rpm
   if test -f /tmp/puppet5-release.rpm; then
     rpm -ivh /tmp/puppet5-release.rpm
@@ -204,19 +177,6 @@ case "${osfamily}" in
     lsbdistcodename='bionic'
   fi
   apt_install curl
-  curl "https://apt.puppetlabs.com/puppetlabs-release-pc1-${lsbdistcodename}.deb" -o /tmp/puppetlabs-release-pc1.deb
-  if test "$?" -eq 0 -a -f /tmp/puppetlabs-release-pc1.deb; then
-    dpkg --install /tmp/puppetlabs-release-pc1.deb
-    apt-get update
-    for puppet_agent_version in 1.2.2 1.4 1.5 1.7 1.8 1.10; do
-      if apt_install puppet-agent=${puppet_agent_version}*; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    apt-get -y remove --purge puppetlabs-release-pc1
-  fi
   curl "https://apt.puppetlabs.com/puppet5-release-${lsbdistcodename}.deb" -o /tmp/puppet5-release.deb
   if test "$?" -eq 0 -a -f /tmp/puppet5-release.deb; then
     dpkg --install /tmp/puppet5-release.deb
@@ -298,17 +258,6 @@ case "${osfamily}" in
     http_method='http'
   else
     http_method='https'
-  fi
-  if rpm -Uvh ${http_method}://yum.puppet.com/puppetlabs-release-pc1-sles-${operatingsystemmajrelease}.noarch.rpm; then
-    zypper --gpg-auto-import-keys --non-interactive refresh
-    for puppet_agent_version in 1.6.2 1.7.2 1.8.3 1.9.3 1.10.8; do
-      if zypper --non-interactive install puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    zypper --non-interactive remove puppetlabs-release-pc1
   fi
   if rpm -Uvh ${http_method}://yum.puppet.com/puppet5/puppet5-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
     for puppet_agent_version in 5.0.1 5.1.0 5.2.0 5.3.2 5.4.0 5.5.16; do
