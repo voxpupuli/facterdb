@@ -48,12 +48,7 @@ elif test -f '/etc/gentoo-release'; then
   osfamily='Gentoo'
 elif test -f '/etc/os-release' && grep -q 'Amazon' '/etc/os-release'; then
   osfamily='RedHat'
-  operatingsystemmajrelease=$(rpm -qf /etc/os-release --queryformat '%{version}' | cut -f1 -d'.')
-  if [[ $operatingsystemmajrelease -eq 2 ]]; then
-    operatingsystemmajrelease='7'
-  else
-    operatingsystemmajrelease='6'
-  fi
+  operatingsystemmajrelease='7'
 else
   osfamily=$(uname)
 fi
