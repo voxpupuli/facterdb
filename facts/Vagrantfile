@@ -126,34 +126,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
-  config.vm.define "opensuse-12-x86_64" do |host|
-    host.vm.box = "alexeym/opensuse-12.3"
-    host.vm.provision "shell", inline: "zypper install -y rubygems ruby-devel make gcc"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
-  config.vm.define "opensuse-13-x86_64" do |host|
-    host.vm.box = "chef/opensuse-13.1"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
-  config.vm.define "opensuse-13.2-x86_64" do |host|
-    host.vm.box = "opensuse/openSUSE-13.2-x86_64"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-  end
-  config.vm.define "opensuse-42.1-x86_64" do |host|
-    host.vm.box = "opensuse/openSUSE-42.1-x86_64"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-  end
-  config.vm.define "opensuse-42.2-x86_64" do |host|
-    host.vm.box = "opensuse/openSUSE-42.2-x86_64"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-  end
   config.vm.define "opensuse-42.3-x86_64" do |host|
     host.vm.box = "opensuse/openSUSE-42.3-x86_64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
