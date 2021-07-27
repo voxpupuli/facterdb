@@ -209,32 +209,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -i S -g0 -y 'Bye' &"
   end
-  config.vm.define "openbsd-6.2-x86_64" do |host|
-    host.vm.box = "bodgit/openbsd-6.2-amd64"
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder ".", "/vagrant", :nfs => true
-    host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
-      . ~/.profile
-
-      pkg_info -qe 'bash->=0' || pkg_add -I bash
-    SCRIPT
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
-  config.vm.define "openbsd-6.3-x86_64" do |host|
-    host.vm.box = "bodgit/openbsd-6.3-amd64"
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder ".", "/vagrant", :nfs => true
-    host.vm.provision "shell", inline: <<-SCRIPT.gsub(/^ +/, '')
-      . ~/.profile
-
-      pkg_info -qe 'bash->=0' || pkg_add -I bash
-    SCRIPT
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
   config.vm.define "openbsd-6.4-x86_64" do |host|
     host.vm.box = "generic/openbsd6"
     host.vm.box_version = "~> 1.9.18"
