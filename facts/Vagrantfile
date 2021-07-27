@@ -23,13 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
-  config.vm.define "linuxmint-18-x86_64" do |host|
-    host.vm.box = "artem-sidorenko/mint-18.1-cinnamon"
-    host.vm.provision "shell", inline: "apt-get update && apt-get install -y ruby ruby-dev libc6-dev"
-    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
-    host.vm.provision "shell", path: "get_facts.sh"
-    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
-  end
   config.vm.define "linuxmint-19-x86_64" do |host|
     host.vm.box = "ltsp/linuxmint-19.1-cinnamon-64bit"
     host.vm.provision "shell", inline: "export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y ruby ruby-dev libc6-dev"

@@ -76,12 +76,6 @@ case "${osfamily}" in
   fi
   ;;
 'Debian')
-  if [[ "serena" =~ ${lsbdistcodename} ]]; then
-    lsbdistcodename='xenial'
-  fi
-  if [[ "tessa" =~ ${lsbdistcodename} ]]; then
-    lsbdistcodename='bionic'
-  fi
   apt_install curl
   curl "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -o /tmp/puppet6-release.deb
   if test "$?" -eq 0 -a -f /tmp/puppet6-release.deb; then
