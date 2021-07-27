@@ -93,17 +93,8 @@ case "${osfamily}" in
   fi
   ;;
 'RedHat')
-  if [[ ${operatingsystemmajrelease} -eq 5 ]]; then
-    # CentOS 5 can no longer wget the release file with HTTPS due to mis-matched SSL support:
-    http_method='http'
-    # The default CentOS repositories no longer work and prevent yum from working:
-    rm -f /etc/yum.repos.d/CentOS*
-  else
-    http_method='https'
-  fi
-  wget "http://yum.puppetlabs.com/puppet6-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet6-release.rpm
-  if test -f /tmp/puppet6-release.rpm; then
-    rpm -ivh /tmp/puppet6-release.rpm
+  yum -y install "https://yum.puppetlabs.com/puppet6-release-el-${operatingsystemmajrelease}.noarch.rpm"
+  if [[ "${?}" == 0 ]]; then
     for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
       if yum install -y puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
