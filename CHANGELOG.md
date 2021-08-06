@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.8.0](https://rubygems.org/gems/facterdb/versions/1.8.0) (2021-08-06)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.7.0...1.8.0)
+
+**Implemented enhancements:**
+
+- Add facts for for Darwin 20 \(macOS 11\) x86\_64 [\#179](https://github.com/voxpupuli/facterdb/pull/179) ([yachub](https://github.com/yachub))
+- Add CentOS Stream 9 facts [\#177](https://github.com/voxpupuli/facterdb/pull/177) ([mwhahaha](https://github.com/mwhahaha))
+
+**Fixed bugs:**
+
+- Fix broken GHA release job [\#178](https://github.com/voxpupuli/facterdb/pull/178) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.7.0](https://rubygems.org/gems/facterdb/versions/1.7.0) (2021-07-19)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.6.0...1.7.0)
