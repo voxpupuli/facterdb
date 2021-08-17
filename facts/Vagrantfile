@@ -309,7 +309,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = "bento/freebsd-12.0"
     host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
-    host.vm.provision "shell", inline: "ln -sf /usr/local/bin/bash /bin/bash"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -p now"
@@ -318,7 +317,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = "bento/freebsd-11.2"
     host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
-    host.vm.provision "shell", inline: "ln -sf /usr/local/bin/bash /bin/bash"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -p now"
@@ -347,7 +345,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       . ~/.profile
 
       pkg_info -qe 'bash->=0' || pkg_add -I bash
-      ln -sf /usr/local/bin/bash /bin
     SCRIPT
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
@@ -361,7 +358,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       . ~/.profile
 
       pkg_info -qe 'bash->=0' || pkg_add -I bash
-      ln -sf /usr/local/bin/bash /bin
     SCRIPT
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
@@ -376,7 +372,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       . ~/.profile
 
       pkg_info -qe 'bash->=0' || pkg_add bash
-      ln -sf /usr/local/bin/bash /bin
       pkg_add facter puppet-5.5.6
       ln -sf /usr/local/bin/gem24 /usr/bin/gem
       ln -sf /usr/local/bin/ruby24 /usr/bin/ruby
