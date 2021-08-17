@@ -306,7 +306,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
   end
   config.vm.define "freebsd-11-x86_64" do |host|
-    host.vm.box = "bento/freebsd-11.2"
+    host.vm.box = "bento/freebsd-11"
     host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
@@ -314,7 +314,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -p now"
   end
   config.vm.define "freebsd-12-x86_64" do |host|
-    host.vm.box = "bento/freebsd-12.0"
+    host.vm.box = "bento/freebsd-12"
     host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
@@ -322,7 +322,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -p now"
   end
   config.vm.define "freebsd-13-x86_64" do |host|
-    host.vm.box = "bento/freebsd-13.0"
+    host.vm.box = "bento/freebsd-13"
     host.vm.synced_folder ".", "/vagrant"
     host.vm.provision "shell", inline: "pkg install -y bash devel/ruby-gems"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
