@@ -302,7 +302,7 @@ hardwaremodel=$(facter hardwaremodel)
 PATH=/opt/puppetlabs/puppet/bin:$PATH
 
 if [ "$(ruby -e 'puts Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.3")')" = "true" ]; then
-    gem install bundler --no-ri --no-rdoc --no-format-executable
+    gem install bundler --no-document --no-format-executable
 else
     gem install bundler --version '~> 1.0' --no-ri --no-rdoc --no-format-executable
 fi
