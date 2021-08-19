@@ -327,6 +327,9 @@ for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0 4.0.0 4.1.0 4.2.0
       output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
       ;;
   esac
+  if [ -f $output_file ]; then
+    continue
+  fi
   mkdir -p $(dirname $output_file)
   echo $version | grep -q -E '^1\.' &&
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
