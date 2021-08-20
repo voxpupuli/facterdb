@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
@@ -225,15 +225,20 @@ case "${osfamily}" in
   ;;
 'FreeBSD')
   pkg update
-  pkg install -y sysutils/puppet5 sysutils/facter sysutils/rubygem-bundler
-  # something about the pkg update process causes the shared folder mount to
-  # get into an unusable state, so we remount it here before generating any
-  # fact sets.
-  umount /vagrant
-  mount -t vboxvfs Vagrant /vagrant
-  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-  mkdir -p $(dirname ${output_file})
-  [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+  for facter_package in facter rubygem-facter ; do
+    pkg install -fy ${facter_package}
+
+    # something about the pkg update process causes the shared folder mount to
+    # get into an unusable state, so we remount it here before generating any
+    # fact sets.
+    umount /vagrant
+    mount -t vboxvfs Vagrant /vagrant
+    hardwaremodel=$(facter hardwaremodel)
+    [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-${hardwaremodel}.facts"
+    mkdir -p $(dirname ${output_file})
+    [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+  done
   ;;
 'OpenBSD')
   hardwaremodel=$(facter hardwaremodel)
@@ -304,15 +309,22 @@ hardwaremodel=$(facter hardwaremodel)
 
 PATH=/opt/puppetlabs/puppet/bin:$PATH
 
-if ruby -e 'puts RUBY_VERSION' | grep -e '^2\.3'; then
-    gem install bundler --no-ri --no-rdoc --no-format-executable
+if [ "$(ruby -e 'puts Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.3")')" = "true" ]; then
+    gem install bundler --no-document --no-format-executable
 else
     gem install bundler --version '~> 1.0' --no-ri --no-rdoc --no-format-executable
 fi
 bundle install --path vendor/bundler
 
-for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
+for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0 4.0.0 4.1.0 4.2.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
+
+  # This is another workaround for shared folder on FreeBSD.  "Accessing"
+  # /vagrant helps to not encounter a bug where we try to access files in
+  # /vagrant/subdir/file
+  ls -d /vagrant > /dev/null
+  ls -l /vagrant > /dev/null
+
   case "${operatingsystem}" in
     almalinux|rocky)
       break
@@ -327,6 +339,9 @@ for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0; do
       output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemmajrelease}-${hardwaremodel}.facts"
       ;;
   esac
+  if [ -f $output_file ]; then
+    continue
+  fi
   mkdir -p $(dirname $output_file)
   echo $version | grep -q -E '^1\.' &&
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
