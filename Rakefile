@@ -122,7 +122,12 @@ task :table do
     os_facter_matrix[label][fv] += 1
   end
   # Extract the OS list
-  os_versions = os_facter_matrix.keys.uniq.sort
+  os_versions = os_facter_matrix.keys.uniq.sort_by do |label|
+    string_pieces = label.split(/\d+/)
+    number_pieces = label.split(/\D+/).map(&:to_i)
+    number_pieces.shift
+    string_pieces.zip(number_pieces).flatten.compact
+  end
 
   readme_path = File.expand_path(File.join(__dir__, 'README.md'))
   readme = File.read(readme_path).split("\n")
