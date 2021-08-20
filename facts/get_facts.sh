@@ -230,7 +230,9 @@ case "${osfamily}" in
     # fact sets.
     umount /vagrant
     mount -t vboxvfs Vagrant /vagrant
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    hardwaremodel=$(facter hardwaremodel)
+    [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-${hardwaremodel}.facts"
     mkdir -p $(dirname ${output_file})
     [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
   done
