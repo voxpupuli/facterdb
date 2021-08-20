@@ -315,6 +315,13 @@ bundle install --path vendor/bundler
 
 for version in 1.6.0 1.7.0 2.0.0 2.1.0 2.2.0 2.3.0 2.4.0 2.5.0 4.0.0 4.1.0 4.2.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
+
+  # This is another workaround for shared folder on FreeBSD.  "Accessing"
+  # /vagrant helps to not encounter a bug where we try to access files in
+  # /vagrant/subdir/file
+  ls -d /vagrant > /dev/null
+  ls -l /vagrant > /dev/null
+
   case "${operatingsystem}" in
     almalinux)
       break
