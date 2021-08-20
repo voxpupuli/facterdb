@@ -1,0 +1,208 @@
+{
+  "disks": {
+    "ada0": {
+      "model": "VBOX HARDDISK",
+      "serial_number": "VB2b040423-bbd04c9e",
+      "size": "64.00 GiB",
+      "size_bytes": 68719476736
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "7081fdcf-bb0d-804d-95a5-12d6509385cd"
+    }
+  },
+  "facterversion": "4.0.52",
+  "gem_version": "~> 4.0.0",
+  "identity": {
+    "gid": 0,
+    "group": "wheel",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "FreeBSD",
+  "kernelmajversion": "11",
+  "kernelrelease": "11.4-RELEASE-p9",
+  "kernelversion": "11.4",
+  "load_averages": {
+    "15m": 0.1171875,
+    "1m": 0.5732421875,
+    "5m": 0.279296875
+  },
+  "memory": {
+    "swap": {
+      "available": "2.00 GiB",
+      "available_bytes": 2147483648,
+      "capacity": "0%",
+      "encrypted": false,
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "488.88 MiB",
+      "available_bytes": 512630784,
+      "capacity": "50.39%",
+      "total": "985.54 MiB",
+      "total_bytes": 1033416704,
+      "used": "496.66 MiB",
+      "used_bytes": 520785920
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "em0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "ip": "10.0.2.15",
+        "mac": "08:00:27:a3:ff:85",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.2.0"
+      },
+      "lo0": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host"
+          },
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16384,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "mac": "08:00:27:a3:ff:85",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.0.2.0",
+    "primary": "em0"
+  },
+  "os": {
+    "architecture": "amd64",
+    "family": "FreeBSD",
+    "hardware": "amd64",
+    "name": "FreeBSD",
+    "release": {
+      "branch": "RELEASE-p9",
+      "full": "11.4-RELEASE-p9",
+      "major": "11",
+      "minor": "4",
+      "patchlevel": "9"
+    }
+  },
+  "partitions": {
+    "ada0p1": {
+      "partlabel": "gptboot0",
+      "partuuid": "8c1478ba-bcdd-11eb-8c48-080027a3ff85",
+      "size": "512.00 KiB",
+      "size_bytes": 524288
+    },
+    "ada0p2": {
+      "partlabel": "swap0",
+      "partuuid": "8c1b0781-bcdd-11eb-8c48-080027a3ff85",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648
+    },
+    "ada0p3": {
+      "partlabel": "zfs0",
+      "partuuid": "8c217dd1-bcdd-11eb-8c48-080027a3ff85",
+      "size": "62.00 GiB",
+      "size_bytes": 66569895936
+    }
+  },
+  "path": "/usr/home/vagrant/vendor/bundler/ruby/2.7/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
+  "processors": {
+    "count": 2,
+    "isa": "amd64",
+    "models": [
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+    ],
+    "speed": "1.99 GHz"
+  },
+  "ruby": {
+    "platform": "amd64-freebsd11",
+    "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
+    "version": "2.7.3"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 c44552551f9fbb81f4d7e38d406589d4fae7c246",
+        "sha256": "SSHFP 3 2 c415405515d326e31d1d5928a669490a8b817ebc79f213ef5cf035b5b26b22ef"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIDQjzwdLIoGT2ilZYfDbtpjPeGEUNOHYaWX6WxF2JlgCRxvUx0J6Sqz571NyBtKu7gVS2qh5bJyuJjU6rxBVdM=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 ab7c9e209f87f4e8321b13c6481482dda6fa34d9",
+        "sha256": "SSHFP 4 2 d934ba8e9c55d0794218dc3c8728f1c09bdd407eac8e8df3990e086678f0d131"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIPP8c28h3N4AQV7rgdz2250kyt7irxDG9MpKFBaQak18",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 90f05081e454c2f9bc5b81a46c2c1214605481b4",
+        "sha256": "SSHFP 1 2 6ebeb0740f993885cbf7bb1d0beefde048614ae657f10a60aa8abbb4e11b5a70"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCsFz4abAckdE8cmgMTW7/yptOhJaIi7D/LqAZOhUdbv+xS4ZDICwyhG3z68SPDjEZqqWjj2Vbqujhzas/Ld/MlvMhlbiM8yonPDJ/on+tKHzjLQEb4SM52skdiFiCnDzQhKCgtTVgOZFtGZz7tM6PCvPAmJsedEVP14ueXam/G7m33hyGd8L3eZirGJTnVZDWItKvokqHmSRmC0qAJqd3llqdCPHqsWMrmwJAPgrC3gRXMAhkbM6XshayHa4pZC24PP/lfb4kqBDfLyUzl5hoWXGPpFUXZXZevZNgp7Jk99NqgTAixUpmYrNgo4Fw1Nuy8FdD4UoY7PWgTHTZVetTp",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 239,
+    "uptime": "0:03 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "generic",
+  "zfs_featurenumbers": "1,2,3,4,5",
+  "zfs_version": "5",
+  "zpool_featureflags": "async_destroy,empty_bpobj,lz4_compress,multi_vdev_crash_dump,spacemap_histogram,enabled_txg,hole_birth,extensible_dataset,embedded_data,bookmarks,filesystem_limits,large_blocks,sha512,skein,device_removal,obsolete_counts,zpool_checkpoint,spacemap_v2",
+  "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+  "zpool_version": "5000"
+}
