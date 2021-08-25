@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.9.0](https://rubygems.org/gems/facterdb/versions/1.9.0) (2021-08-25)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.8.0...1.9.0)
+
+**Implemented enhancements:**
+
+- Add Debian 11 facts [\#185](https://github.com/voxpupuli/facterdb/pull/185) ([smortex](https://github.com/smortex))
+- Add more FreeBSD facts [\#184](https://github.com/voxpupuli/facterdb/pull/184) ([smortex](https://github.com/smortex))
+- Add Oracle Linux 8 facts [\#183](https://github.com/voxpupuli/facterdb/pull/183) ([as0bu](https://github.com/as0bu))
+- Adding puppet7 facter4.2 facts for centos7/8 and debian9/10 [\#181](https://github.com/voxpupuli/facterdb/pull/181) ([jacobmw](https://github.com/jacobmw))
+- Adds Rocky Linux vagrant image, facts and get\_facts.sh support [\#176](https://github.com/voxpupuli/facterdb/pull/176) ([fuero](https://github.com/fuero))
+
 ## [1.8.0](https://rubygems.org/gems/facterdb/versions/1.8.0) (2021-08-06)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.7.0...1.8.0)
