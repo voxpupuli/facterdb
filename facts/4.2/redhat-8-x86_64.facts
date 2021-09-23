@@ -1,0 +1,232 @@
+{
+  "aio_agent_version": "6.6.0",
+  "augeas": {
+    "version": "1.12.0"
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "size": "128.00 GiB",
+      "size_bytes": 137438953472,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "433790d2-0265-444c-b167-401a249305db"
+    }
+  },
+  "facterversion": "4.2.4",
+  "filesystems": "xfs",
+  "fips_enabled": false,
+  "gem_version": "~> 4.2.0",
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "145957",
+      "version": "6.1.26"
+    }
+  },
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "4.18",
+  "kernelrelease": "4.18.0-305.el8.x86_64",
+  "kernelversion": "4.18.0",
+  "load_averages": {
+    "15m": 0.1,
+    "1m": 0.9,
+    "5m": 0.29
+  },
+  "memory": {
+    "swap": {
+      "available": "2.06 GiB",
+      "available_bytes": 2210394112,
+      "capacity": "0.00%",
+      "total": "2.06 GiB",
+      "total_bytes": 2210394112,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "1.40 GiB",
+      "available_bytes": 1499078656,
+      "capacity": "21.32%",
+      "total": "1.77 GiB",
+      "total_bytes": 1905377280,
+      "used": "387.48 MiB",
+      "used_bytes": 406298624
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "ip": "10.0.2.15",
+        "mac": "08:00:27:dc:e4:34",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.2.0"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "network": "127.0.0.0"
+      }
+    },
+    "ip": "10.0.2.15",
+    "mac": "08:00:27:dc:e4:34",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.0.2.0",
+    "primary": "eth0"
+  },
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "Ootpa",
+      "description": "Red Hat Enterprise Linux release 8.4 (Ootpa)",
+      "id": "RedHatEnterprise",
+      "release": {
+        "full": "8.4",
+        "major": "8",
+        "minor": "4"
+      }
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "RedHat",
+    "release": {
+      "full": "8.4",
+      "major": "8",
+      "minor": "4"
+    },
+    "selinux": {
+      "config_mode": "enforcing",
+      "config_policy": "targeted",
+      "current_mode": "enforcing",
+      "enabled": true,
+      "enforced": true,
+      "policy_version": "33"
+    }
+  },
+  "partitions": {
+    "/dev/mapper/rhel_rhel8-root": {
+      "filesystem": "xfs",
+      "size": "70.00 GiB",
+      "size_bytes": 75161927680,
+      "uuid": "a3dfbd25-503a-413a-a281-45cfaad69feb"
+    },
+    "/dev/mapper/rhel_rhel8-swap": {
+      "filesystem": "swap",
+      "size": "2.06 GiB",
+      "size_bytes": 2210398208,
+      "uuid": "7e5dc044-a7d1-4384-8a2e-e5d829e31945"
+    },
+    "/dev/sda1": {
+      "filesystem": "xfs",
+      "partuuid": "b3c3fd6c-01",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824,
+      "uuid": "ae6c1777-c1c9-42a1-8fcf-513077aac39b"
+    },
+    "/dev/sda2": {
+      "filesystem": "LVM2_member",
+      "partuuid": "b3c3fd6c-02",
+      "size": "127.00 GiB",
+      "size_bytes": 136364163072,
+      "uuid": "g7SkxV-RYrT-JL47-mMcA-qBOB-Zjjk-mdaQSN"
+    }
+  },
+  "path": "/home/vagrant/vendor/bundler/ruby/2.5.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "x86_64",
+    "models": [
+      "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
+      "AMD Ryzen 7 PRO 4750U with Radeon Graphics"
+    ],
+    "physicalcount": 1,
+    "speed": "1.70 GHz",
+    "threads": 1
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+    "version": "2.5.3"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 88807134f59bd4eca9ceb9bf5993cf5e73bbbb85",
+        "sha256": "SSHFP 3 2 1e807ef8e43ef44eae75216f94cfcc463a599eeab45967eab9df5b307791d2ef"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEnlfaEqNz/195iG+3z1Mt242+x8fuittcUVxrETS7pLFBTLEI8Axa5TYoz4Cv6pfMhCpbz5DAZZ+KF7ZfcrHyg=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 a1f1f898ef62424640ea9e591ecd503d83005b9e",
+        "sha256": "SSHFP 4 2 2fb4594191c964a20cc0333bb1314f90e8b2b641a083b2648c6e287d40e4b2db"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIDALqdLZopAnQ1d6A8gTz940d8BzLB0W2swcoItTuwOx",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 a3660bd6935c011f87a55607d38bacdc84bf13c2",
+        "sha256": "SSHFP 1 2 aa33702a1c7837900d69fb9b27b7eccf968fa8f80c1f9cafe863070033ca15e3"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCxOhMhUNJW1dFxjQKUdLb0jV7teKoGay01RfzF1zA6McdbEETGNuk0eJRpGbQrzMwf6jpffyM2dm0qPjaYzy3sN9LV0+WOTktwm9JjVAb9cHkoTpVbXPP0rG/h2y7Hu1PQcc92ik+nMhu1HPJQvR58x+QTRR8+c7ywWkgnDsjNZGF+yJoV1IFEqGz3e0ussjICJboywB+/U+XWloIFrV/ylz33UDP8jJgM6hMcZMzIFfZW95wiE9cLkbJ4SqprRT1o+WP0DXH7VOmOlKp7cwATYNoXx1DraN2P5IbwbOxlW1FrW83DR3yS5rdutlWby2LNlJdD373qAjh8uzWSKzYMMlAHiM2zEYHQyyREhcv6Wu0YoZZbA4PbKVIIpXwaDAO70sz3M/7vC4TF2flkJA7rTzov+Q2UswP4VEYCs5ENBMgK4BzUStkLyq9/+W0/ebcg09gLxt/O+lCJXlfN4/ovh24nOlfIsgjNcdaAnD5pEQU8uDHfweNAMasf9XEzyXc=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 107,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "virtualbox"
+}
