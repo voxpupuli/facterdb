@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://rubygems.org/gems/facterdb/versions/1.10.0) (2021-09-23)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.9.0...1.10.0)
+
+**Implemented enhancements:**
+
+- Ubuntu 18.04/20.04, RedHat 8: Update factsets [\#188](https://github.com/voxpupuli/facterdb/pull/188) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.9.0](https://rubygems.org/gems/facterdb/versions/1.9.0) (2021-08-25)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.8.0...1.9.0)
