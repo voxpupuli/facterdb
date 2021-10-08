@@ -344,7 +344,7 @@ for version in 4.0.0 4.1.0 4.2.0; do
   fi
   mkdir -p $(dirname $output_file)
   echo $version | grep -q -E '^1\.' &&
-    FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
-    FACTER_GEM_VERSION="~> ${version}" bundle exec facter -j | tee $output_file
+    FACTER_GEM_VERSION="~> ${version}" bundle exec facter --show-legacy --json | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
+    FACTER_GEM_VERSION="~> ${version}" bundle exec facter --show-legacy --json | tee $output_file
 done
 
