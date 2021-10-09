@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.10.1](https://rubygems.org/gems/facterdb/versions/1.10.1) (2021-10-09)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.10.0...1.10.1)
+
+**Fixed bugs:**
+
+- facter 4.0: Regenerate factsets with legacy facts [\#195](https://github.com/voxpupuli/facterdb/pull/195) ([bastelfreak](https://github.com/bastelfreak))
+- facter 4.1: Regenerate factsets with legacy facts [\#194](https://github.com/voxpupuli/facterdb/pull/194) ([bastelfreak](https://github.com/bastelfreak))
+- facter 4.2: Regenerate factsets with legacy facts [\#193](https://github.com/voxpupuli/facterdb/pull/193) ([bastelfreak](https://github.com/bastelfreak))
+- get\_facts.sh: Collect legacy facts as well [\#191](https://github.com/voxpupuli/facterdb/pull/191) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- CI: Test if the gem builds [\#196](https://github.com/voxpupuli/facterdb/pull/196) ([bastelfreak](https://github.com/bastelfreak))
+- Remove EoL OSes from Vagrantfile [\#192](https://github.com/voxpupuli/facterdb/pull/192) ([bastelfreak](https://github.com/bastelfreak))
+- get\_facts.sh: Ignore facter 1.X/2.x [\#190](https://github.com/voxpupuli/facterdb/pull/190) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.10.0](https://rubygems.org/gems/facterdb/versions/1.10.0) (2021-09-23)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.9.0...1.10.0)
