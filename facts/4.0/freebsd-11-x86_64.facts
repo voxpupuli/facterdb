@@ -1,8 +1,12 @@
 {
+  "architecture": "amd64",
+  "bios_release_date": "12/01/2006",
+  "bios_vendor": "innotek GmbH",
+  "bios_version": "VirtualBox",
   "disks": {
     "ada0": {
       "model": "VBOX HARDDISK",
-      "serial_number": "VB2b040423-bbd04c9e",
+      "serial_number": "VB574cfc4b-de90b976",
       "size": "64.00 GiB",
       "size_bytes": 68719476736
     }
@@ -17,11 +21,18 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "7081fdcf-bb0d-804d-95a5-12d6509385cd"
+      "uuid": "a020b3f2-6623-594e-b4f2-60c36792ba14"
     }
   },
+  "domain": "example.com",
   "facterversion": "4.0.52",
+  "fqdn": "foo.example.com",
   "gem_version": "~> 4.0.0",
+  "gid": "wheel",
+  "hardwareisa": "amd64",
+  "hardwaremodel": "amd64",
+  "hostname": "foo",
+  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -29,16 +40,19 @@
     "uid": 0,
     "user": "root"
   },
+  "ipaddress": "10.0.2.15",
   "is_virtual": true,
   "kernel": "FreeBSD",
   "kernelmajversion": "11",
   "kernelrelease": "11.4-RELEASE-p9",
   "kernelversion": "11.4",
   "load_averages": {
-    "15m": 0.1171875,
-    "1m": 0.5732421875,
+    "15m": 0.10400390625,
+    "1m": 0.916015625,
     "5m": 0.279296875
   },
+  "macaddress": "08:00:27:a3:ff:85",
+  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -51,15 +65,27 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "488.88 MiB",
-      "available_bytes": 512630784,
-      "capacity": "50.39%",
+      "available": "470.34 MiB",
+      "available_bytes": 493191168,
+      "capacity": "52.28%",
       "total": "985.54 MiB",
       "total_bytes": 1033416704,
-      "used": "496.66 MiB",
-      "used_bytes": 520785920
+      "used": "515.20 MiB",
+      "used_bytes": 540225536
     }
   },
+  "memoryfree": "470.34 MiB",
+  "memoryfree_mb": 470.34,
+  "memorysize": "985.54 MiB",
+  "memorysize_mb": 985.54,
+  "netmask": "255.255.255.0",
+  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask_em0": "255.255.255.0",
+  "netmask_lo0": "255.0.0.0",
+  "network": "10.0.2.0",
+  "network6_lo0": "::1",
+  "network_em0": "10.0.2.0",
+  "network_lo0": "127.0.0.0",
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
@@ -118,6 +144,9 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
+  "operatingsystem": "FreeBSD",
+  "operatingsystemmajrelease": "11",
+  "operatingsystemrelease": "11.4-RELEASE-p9",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -131,6 +160,7 @@
       "patchlevel": "9"
     }
   },
+  "osfamily": "FreeBSD",
   "partitions": {
     "ada0p1": {
       "partlabel": "gptboot0",
@@ -152,20 +182,28 @@
     }
   },
   "path": "/usr/home/vagrant/vendor/bundler/ruby/2.7/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
+  "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
+  "processor1": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
+  "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "amd64",
     "models": [
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+      "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
+      "AMD Ryzen 7 PRO 4750U with Radeon Graphics"
     ],
-    "speed": "1.99 GHz"
+    "speed": "1.70 GHz"
   },
+  "productname": "VirtualBox",
   "ruby": {
     "platform": "amd64-freebsd11",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
     "version": "2.7.3"
   },
+  "rubyplatform": "amd64-freebsd11",
+  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.7",
+  "rubyversion": "2.7.3",
+  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -192,13 +230,29 @@
       "type": "ssh-rsa"
     }
   },
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIDQjzwdLIoGT2ilZYfDbtpjPeGEUNOHYaWX6WxF2JlgCRxvUx0J6Sqz571NyBtKu7gVS2qh5bJyuJjU6rxBVdM=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIPP8c28h3N4AQV7rgdz2250kyt7irxDG9MpKFBaQak18",
+  "sshfp_ecdsa": "SSHFP 3 1 c44552551f9fbb81f4d7e38d406589d4fae7c246\nSSHFP 3 2 c415405515d326e31d1d5928a669490a8b817ebc79f213ef5cf035b5b26b22ef",
+  "sshfp_ed25519": "SSHFP 4 1 ab7c9e209f87f4e8321b13c6481482dda6fa34d9\nSSHFP 4 2 d934ba8e9c55d0794218dc3c8728f1c09bdd407eac8e8df3990e086678f0d131",
+  "sshfp_rsa": "SSHFP 1 1 90f05081e454c2f9bc5b81a46c2c1214605481b4\nSSHFP 1 2 6ebeb0740f993885cbf7bb1d0beefde048614ae657f10a60aa8abbb4e11b5a70",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCsFz4abAckdE8cmgMTW7/yptOhJaIi7D/LqAZOhUdbv+xS4ZDICwyhG3z68SPDjEZqqWjj2Vbqujhzas/Ld/MlvMhlbiM8yonPDJ/on+tKHzjLQEb4SM52skdiFiCnDzQhKCgtTVgOZFtGZz7tM6PCvPAmJsedEVP14ueXam/G7m33hyGd8L3eZirGJTnVZDWItKvokqHmSRmC0qAJqd3llqdCPHqsWMrmwJAPgrC3gRXMAhkbM6XshayHa4pZC24PP/lfb4kqBDfLyUzl5hoWXGPpFUXZXZevZNgp7Jk99NqgTAixUpmYrNgo4Fw1Nuy8FdD4UoY7PWgTHTZVetTp",
+  "swapencrypted": false,
+  "swapfree": "2.00 GiB",
+  "swapfree_mb": 2048.0,
+  "swapsize": "2.00 GiB",
+  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 239,
-    "uptime": "0:03 hours"
+    "seconds": 63,
+    "uptime": "0:01 hours"
   },
   "timezone": "UTC",
+  "uptime": "0:01 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 63,
+  "uuid": "a020b3f2-6623-594e-b4f2-60c36792ba14",
   "virtual": "generic",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",
