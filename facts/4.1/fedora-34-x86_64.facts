@@ -1,0 +1,310 @@
+{
+  "aio_agent_version": "6.25.0",
+  "architecture": "x86_64",
+  "augeas": {
+    "version": "1.12.0"
+  },
+  "augeasversion": "1.12.0",
+  "bios_release_date": "12/01/2006",
+  "bios_vendor": "innotek GmbH",
+  "bios_version": "VirtualBox",
+  "blockdevice_sda_model": "VBOX HARDDISK",
+  "blockdevice_sda_size": 137438953472,
+  "blockdevice_sda_vendor": "ATA",
+  "blockdevices": "sda",
+  "boardmanufacturer": "Oracle Corporation",
+  "boardproductname": "VirtualBox",
+  "boardserialnumber": "0",
+  "chassistype": "Other",
+  "dhcp_servers": {
+    "system": null
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "size": "128.00 GiB",
+      "size_bytes": 137438953472,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "60fada07-8be3-446e-8e44-bf1775069390"
+    }
+  },
+  "domain": "example.com",
+  "facterversion": "4.1.1",
+  "filesystems": "btrfs,ext2,ext3,ext4,xfs",
+  "fips_enabled": false,
+  "fqdn": "foo.example.com",
+  "gem_version": "~> 4.1.0",
+  "gid": "root",
+  "hardwareisa": "x86_64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "147628",
+      "version": "6.1.28"
+    }
+  },
+  "id": "root",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "interfaces": "eth0,lo",
+  "ipaddress": "10.0.2.15",
+  "ipaddress_eth0": "10.0.2.15",
+  "ipaddress_lo": "127.0.0.1",
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "5.13",
+  "kernelrelease": "5.13.14-200.fc34.x86_64",
+  "kernelversion": "5.13.14",
+  "load_averages": {
+    "15m": 0.04,
+    "1m": 0.49,
+    "5m": 0.13
+  },
+  "lsbdistrelease": "34",
+  "lsbmajdistrelease": "34",
+  "macaddress": "08:00:27:b7:6d:60",
+  "macaddress_eth0": "08:00:27:b7:6d:60",
+  "manufacturer": "innotek GmbH",
+  "memory": {
+    "swap": {
+      "available": "3.92 GiB",
+      "available_bytes": 4208975872,
+      "capacity": "0.00%",
+      "total": "3.92 GiB",
+      "total_bytes": 4208975872,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "1.49 GiB",
+      "available_bytes": 1605140480,
+      "capacity": "22.15%",
+      "total": "1.92 GiB",
+      "total_bytes": 2061705216,
+      "used": "435.41 MiB",
+      "used_bytes": 456564736
+    }
+  },
+  "memoryfree": "1.49 GiB",
+  "memoryfree_mb": 1530.78125,
+  "memorysize": "1.92 GiB",
+  "memorysize_mb": 1966.1953125,
+  "mtu_eth0": 1500,
+  "mtu_lo": 65536,
+  "netmask": "255.255.255.0",
+  "netmask_eth0": "255.255.255.0",
+  "netmask_lo": "255.0.0.0",
+  "network": "10.0.2.0",
+  "network_eth0": "10.0.2.0",
+  "network_lo": "127.0.0.0",
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "ip": "10.0.2.15",
+        "mac": "08:00:27:b7:6d:60",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.2.0"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "network": "127.0.0.0"
+      }
+    },
+    "ip": "10.0.2.15",
+    "mac": "08:00:27:b7:6d:60",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.0.2.0",
+    "primary": "eth0"
+  },
+  "operatingsystem": "Fedora",
+  "operatingsystemmajrelease": "34",
+  "operatingsystemrelease": "34",
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "Thirty Four",
+      "description": "Fedora release 34 (Thirty Four)",
+      "id": "Fedora",
+      "release": {
+        "full": "34",
+        "major": "34"
+      }
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "Fedora",
+    "release": {
+      "full": "34",
+      "major": "34"
+    },
+    "selinux": {
+      "config_mode": "enforcing",
+      "config_policy": "targeted",
+      "current_mode": "enforcing",
+      "enabled": true,
+      "enforced": true,
+      "policy_version": "33"
+    }
+  },
+  "osfamily": "RedHat",
+  "partitions": {
+    "/dev/mapper/fedora-root": {
+      "filesystem": "xfs",
+      "label": "root",
+      "size": "125.00 GiB",
+      "size_bytes": 134213533696,
+      "uuid": "e0c20c8d-d534-4849-9e94-e4c0c9bdddc9"
+    },
+    "/dev/mapper/fedora-swap": {
+      "filesystem": "swap",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648,
+      "uuid": "9912b5c1-7197-40ea-a2f5-625f696a8376"
+    },
+    "/dev/sda1": {
+      "filesystem": "xfs",
+      "label": "boot",
+      "partuuid": "e20863d6-01",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824,
+      "uuid": "e5dc988f-95d4-4899-826f-5ec5286b7329"
+    },
+    "/dev/sda2": {
+      "filesystem": "LVM2_member",
+      "partuuid": "e20863d6-02",
+      "size": "127.00 GiB",
+      "size_bytes": 136364163072,
+      "uuid": "KmzS5o-sjMG-5oA7-0bQZ-RHca-8GzU-cfGK0G"
+    }
+  },
+  "path": "/home/vagrant/vendor/bundler/ruby/2.5.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin",
+  "physicalprocessorcount": 1,
+  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processorcount": 2,
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "x86_64",
+    "models": [
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz"
+    ],
+    "physicalcount": 1,
+    "speed": "3.79 GHz",
+    "threads": 1
+  },
+  "productname": "VirtualBox",
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+    "version": "2.5.9"
+  },
+  "rubyplatform": "x86_64-linux",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+  "rubyversion": "2.5.9",
+  "selinux": true,
+  "selinux_config_mode": "enforcing",
+  "selinux_config_policy": "targeted",
+  "selinux_current_mode": "enforcing",
+  "selinux_enforced": true,
+  "selinux_policyversion": "33",
+  "serialnumber": "0",
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 1832500be0cfb082181cdfecfba3fea9485d4fd1",
+        "sha256": "SSHFP 3 2 4c6db057255b2b0e9351eae1878e110fefbb3643b4f5b4f9b53b7e5447595571"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFNADgAiA/atlu41xQmaPAdIhfMlnBFpaIkF9Z3HIRuER/NnfhRlne75qesroYfbrBLhQywplGWqv849v83Xp0s=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 aafdfa3638e33ceba720efa3832d71996241e051",
+        "sha256": "SSHFP 4 2 1f12f7f2f80580538fcccffab5b2aee674263d4107ac11fe3f2ca2827e4062e1"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIOJMAgWcueXLbtL9c9yQ64rGWzyU0EUzKHC2p+JFvbsj",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 f11b9ef5926744f927046ed23dda0ea5707cc94f",
+        "sha256": "SSHFP 1 2 5a64c7ec99316dab1b6bc450b29ab0af2aac1d8143d5dac3ac5289af821bcce3"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCnSCtxQ1/3YIJWEgq8KwsxQ4lPltKC+VGeXGo4njoZSpTjWYCXh29VPtuvbNCeWFn+lbOaAQG0Kiil4uYeg9RqKvV2cF/30jSK9MfMRGmmy3FjUO3aKAv87S86wTavtl8Lw/0EXRzZ/m+piyaN+MXpTgaJeJVu5wiqnwONf0cVhGAFV932PIY+zsq5rDiDvPJI4M0/+u8Fj+wDB+i+a+7m96mggy1jUQljyUWXBLliHftytd73hG8xYis410Ws9UYUpmxfNMHvtMxhpz23U+ZqmuLizzxXO7maBmI5q6LiHGYfHa9ZSL1zHZmwe7bwCxw0DB5uPpO7gLZeaByqI0QJ0CajBEe+gce4BxZo45VmcVCsVaRF+BaMP6wZYdoXUS1Z2pkIM2GZC7U7VL2AbCE4di80xPg5+sHweAOJluxMauVwbCJsmldwPX7A5gw1/UYxQtbH/FTZN0xQVquRSLbtB/dsVbMkITEshpToU4evGGc3tsjtKxEChiJiGfSDouE=",
+      "type": "ssh-rsa"
+    }
+  },
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFNADgAiA/atlu41xQmaPAdIhfMlnBFpaIkF9Z3HIRuER/NnfhRlne75qesroYfbrBLhQywplGWqv849v83Xp0s=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIOJMAgWcueXLbtL9c9yQ64rGWzyU0EUzKHC2p+JFvbsj",
+  "sshfp_ecdsa": "SSHFP 3 1 1832500be0cfb082181cdfecfba3fea9485d4fd1\nSSHFP 3 2 4c6db057255b2b0e9351eae1878e110fefbb3643b4f5b4f9b53b7e5447595571",
+  "sshfp_ed25519": "SSHFP 4 1 aafdfa3638e33ceba720efa3832d71996241e051\nSSHFP 4 2 1f12f7f2f80580538fcccffab5b2aee674263d4107ac11fe3f2ca2827e4062e1",
+  "sshfp_rsa": "SSHFP 1 1 f11b9ef5926744f927046ed23dda0ea5707cc94f\nSSHFP 1 2 5a64c7ec99316dab1b6bc450b29ab0af2aac1d8143d5dac3ac5289af821bcce3",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCnSCtxQ1/3YIJWEgq8KwsxQ4lPltKC+VGeXGo4njoZSpTjWYCXh29VPtuvbNCeWFn+lbOaAQG0Kiil4uYeg9RqKvV2cF/30jSK9MfMRGmmy3FjUO3aKAv87S86wTavtl8Lw/0EXRzZ/m+piyaN+MXpTgaJeJVu5wiqnwONf0cVhGAFV932PIY+zsq5rDiDvPJI4M0/+u8Fj+wDB+i+a+7m96mggy1jUQljyUWXBLliHftytd73hG8xYis410Ws9UYUpmxfNMHvtMxhpz23U+ZqmuLizzxXO7maBmI5q6LiHGYfHa9ZSL1zHZmwe7bwCxw0DB5uPpO7gLZeaByqI0QJ0CajBEe+gce4BxZo45VmcVCsVaRF+BaMP6wZYdoXUS1Z2pkIM2GZC7U7VL2AbCE4di80xPg5+sHweAOJluxMauVwbCJsmldwPX7A5gw1/UYxQtbH/FTZN0xQVquRSLbtB/dsVbMkITEshpToU4evGGc3tsjtKxEChiJiGfSDouE=",
+  "swapfree": "3.92 GiB",
+  "swapfree_mb": 4013.9921875,
+  "swapsize": "3.92 GiB",
+  "swapsize_mb": 4013.9921875,
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 62,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "uptime": "0:01 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 62,
+  "uuid": "60fada07-8be3-446e-8e44-bf1775069390",
+  "virtual": "virtualbox"
+}
