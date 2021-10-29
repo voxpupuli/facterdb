@@ -1,0 +1,310 @@
+{
+  "aio_agent_version": "6.25.0",
+  "architecture": "x86_64",
+  "augeas": {
+    "version": "1.12.0"
+  },
+  "augeasversion": "1.12.0",
+  "bios_release_date": "12/01/2006",
+  "bios_vendor": "innotek GmbH",
+  "bios_version": "VirtualBox",
+  "blockdevice_sda_model": "VBOX HARDDISK",
+  "blockdevice_sda_size": 137438953472,
+  "blockdevice_sda_vendor": "ATA",
+  "blockdevices": "sda",
+  "boardmanufacturer": "Oracle Corporation",
+  "boardproductname": "VirtualBox",
+  "boardserialnumber": "0",
+  "chassistype": "Other",
+  "dhcp_servers": {
+    "system": null
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "size": "128.00 GiB",
+      "size_bytes": 137438953472,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "59658d12-4f5d-4f84-a53f-43717647befb"
+    }
+  },
+  "domain": "example.com",
+  "facterversion": "4.2.5",
+  "filesystems": "btrfs,ext2,ext3,ext4,xfs",
+  "fips_enabled": false,
+  "fqdn": "foo.example.com",
+  "gem_version": "~> 4.2.0",
+  "gid": "root",
+  "hardwareisa": "x86_64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "147628",
+      "version": "6.1.28"
+    }
+  },
+  "id": "root",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "interfaces": "eth0,lo",
+  "ipaddress": "10.0.2.15",
+  "ipaddress_eth0": "10.0.2.15",
+  "ipaddress_lo": "127.0.0.1",
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "5.11",
+  "kernelrelease": "5.11.22-100.fc32.x86_64",
+  "kernelversion": "5.11.22",
+  "load_averages": {
+    "15m": 0.05,
+    "1m": 0.56,
+    "5m": 0.14
+  },
+  "lsbdistrelease": "32",
+  "lsbmajdistrelease": "32",
+  "macaddress": "08:00:27:af:26:ae",
+  "macaddress_eth0": "08:00:27:af:26:ae",
+  "manufacturer": "innotek GmbH",
+  "memory": {
+    "swap": {
+      "available": "2.00 GiB",
+      "available_bytes": 2147479552,
+      "capacity": "0.00%",
+      "total": "2.00 GiB",
+      "total_bytes": 2147479552,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "1.52 GiB",
+      "available_bytes": 1636360192,
+      "capacity": "21.05%",
+      "total": "1.93 GiB",
+      "total_bytes": 2072776704,
+      "used": "416.20 MiB",
+      "used_bytes": 436416512
+    }
+  },
+  "memoryfree": "1.52 GiB",
+  "memoryfree_mb": 1560.5546875,
+  "memorysize": "1.93 GiB",
+  "memorysize_mb": 1976.75390625,
+  "mtu_eth0": 1500,
+  "mtu_lo": 65536,
+  "netmask": "255.255.255.0",
+  "netmask_eth0": "255.255.255.0",
+  "netmask_lo": "255.0.0.0",
+  "network": "10.0.2.0",
+  "network_eth0": "10.0.2.0",
+  "network_lo": "127.0.0.0",
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "ip": "10.0.2.15",
+        "mac": "08:00:27:af:26:ae",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "network": "10.0.2.0"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "network": "127.0.0.0"
+      }
+    },
+    "ip": "10.0.2.15",
+    "mac": "08:00:27:af:26:ae",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "10.0.2.0",
+    "primary": "eth0"
+  },
+  "operatingsystem": "Fedora",
+  "operatingsystemmajrelease": "32",
+  "operatingsystemrelease": "32",
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "Thirty Two",
+      "description": "Fedora release 32 (Thirty Two)",
+      "id": "Fedora",
+      "release": {
+        "full": "32",
+        "major": "32"
+      }
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "Fedora",
+    "release": {
+      "full": "32",
+      "major": "32"
+    },
+    "selinux": {
+      "config_mode": "enforcing",
+      "config_policy": "targeted",
+      "current_mode": "enforcing",
+      "enabled": true,
+      "enforced": true,
+      "policy_version": "33"
+    }
+  },
+  "osfamily": "RedHat",
+  "partitions": {
+    "/dev/mapper/fedora-root": {
+      "filesystem": "xfs",
+      "label": "root",
+      "size": "125.00 GiB",
+      "size_bytes": 134213533696,
+      "uuid": "d309c05d-7ba4-4b15-ae7d-458ff4d1198f"
+    },
+    "/dev/mapper/fedora-swap": {
+      "filesystem": "swap",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648,
+      "uuid": "cc16f4c7-f530-464a-b320-9c1950101ca6"
+    },
+    "/dev/sda1": {
+      "filesystem": "xfs",
+      "label": "boot",
+      "partuuid": "4cb469d2-01",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824,
+      "uuid": "c01f8744-836c-4ad7-8169-7959a5e8c82e"
+    },
+    "/dev/sda2": {
+      "filesystem": "LVM2_member",
+      "partuuid": "4cb469d2-02",
+      "size": "127.00 GiB",
+      "size_bytes": 136364163072,
+      "uuid": "8sbzWP-JF2h-LGcW-MlGI-L0Ts-DjWI-0KgKr8"
+    }
+  },
+  "path": "/home/vagrant/vendor/bundler/ruby/2.5.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin",
+  "physicalprocessorcount": 1,
+  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processorcount": 2,
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "x86_64",
+    "models": [
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz"
+    ],
+    "physicalcount": 1,
+    "speed": "3.79 GHz",
+    "threads": 1
+  },
+  "productname": "VirtualBox",
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+    "version": "2.5.9"
+  },
+  "rubyplatform": "x86_64-linux",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
+  "rubyversion": "2.5.9",
+  "selinux": true,
+  "selinux_config_mode": "enforcing",
+  "selinux_config_policy": "targeted",
+  "selinux_current_mode": "enforcing",
+  "selinux_enforced": true,
+  "selinux_policyversion": "33",
+  "serialnumber": "0",
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 d09a927a7886fd7da1d36ec6b2eb4f9773fde1b4",
+        "sha256": "SSHFP 3 2 54638bf00fc5a916bf42b98c0faf109c97ddfdfc3b7d7f24509029dd30e2c275"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCRtLB63IQmL042Nxju79W0Z/IJHT6BFPvZzW1jrUvdEl77zMOjgifq3PvswBAvSlWdUNSJH+B1o72Vbe8FaTPY=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 fac86a7f4a185ac7f5e25caadf79aaa86b571401",
+        "sha256": "SSHFP 4 2 42adf47f694d718417ce6d56806db2cb389cb8c30d86cc179f7303f7fa7e7b36"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIF9/jDfewQ7PU6AMstShuLemlPb2q+4KZhzU8XXmt2Bg",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 2857b0a9f61e87db052ec6560bde2c77bc60b1fb",
+        "sha256": "SSHFP 1 2 94195fd6590c684b9be0bc42c6f1da9339a03b1f7cb2b6afe2ce09f780e6b86b"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDLmp7lHMzvpE64e87MqNzzvxxWHn369+c7152jA+8SKebPLPKMswRofY3h/6MOUzNBgrTCxtPP3US7VjS1HkoP8KBj2pWsouC3SNJZELRoSvRgiGRO7B2I/vzrt9jDYXnIrkqJTS7YI03WDWSlJkfmxC6/uV8olS1EoMHt+pjPJIGJ8+8KifLoAqcAYsxSBzYnzW6mTe3IQFcE8qYFqCJANbT29bDWUormIoVeHQUmuSXu1cFdDc8SWBxptG3rACIeT/qgsgt8s6A6ho/dI1gVaLeFTgO1Jr7YLr3Sc5/zam8m0UXYwB3Rz5CrBkB5TjQu5N5SEbkqaj5UavCN3W1S3mw8xE9mpoyKWPpW7xW2lgSwCgfb4jvdSUHHW19ak9tR8MGokKIykMuU5sbFD7zbsgdB5AgLVDM5BR3NXZn6WTL+vOZ62v9TUt924aLTIwKSKDLper9vV2Kmyza7TtOP0TWpfiSj+h5fVAhldK116548J/o21jGdgBVT6cQApSk=",
+      "type": "ssh-rsa"
+    }
+  },
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCRtLB63IQmL042Nxju79W0Z/IJHT6BFPvZzW1jrUvdEl77zMOjgifq3PvswBAvSlWdUNSJH+B1o72Vbe8FaTPY=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIF9/jDfewQ7PU6AMstShuLemlPb2q+4KZhzU8XXmt2Bg",
+  "sshfp_ecdsa": "SSHFP 3 1 d09a927a7886fd7da1d36ec6b2eb4f9773fde1b4\nSSHFP 3 2 54638bf00fc5a916bf42b98c0faf109c97ddfdfc3b7d7f24509029dd30e2c275",
+  "sshfp_ed25519": "SSHFP 4 1 fac86a7f4a185ac7f5e25caadf79aaa86b571401\nSSHFP 4 2 42adf47f694d718417ce6d56806db2cb389cb8c30d86cc179f7303f7fa7e7b36",
+  "sshfp_rsa": "SSHFP 1 1 2857b0a9f61e87db052ec6560bde2c77bc60b1fb\nSSHFP 1 2 94195fd6590c684b9be0bc42c6f1da9339a03b1f7cb2b6afe2ce09f780e6b86b",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDLmp7lHMzvpE64e87MqNzzvxxWHn369+c7152jA+8SKebPLPKMswRofY3h/6MOUzNBgrTCxtPP3US7VjS1HkoP8KBj2pWsouC3SNJZELRoSvRgiGRO7B2I/vzrt9jDYXnIrkqJTS7YI03WDWSlJkfmxC6/uV8olS1EoMHt+pjPJIGJ8+8KifLoAqcAYsxSBzYnzW6mTe3IQFcE8qYFqCJANbT29bDWUormIoVeHQUmuSXu1cFdDc8SWBxptG3rACIeT/qgsgt8s6A6ho/dI1gVaLeFTgO1Jr7YLr3Sc5/zam8m0UXYwB3Rz5CrBkB5TjQu5N5SEbkqaj5UavCN3W1S3mw8xE9mpoyKWPpW7xW2lgSwCgfb4jvdSUHHW19ak9tR8MGokKIykMuU5sbFD7zbsgdB5AgLVDM5BR3NXZn6WTL+vOZ62v9TUt924aLTIwKSKDLper9vV2Kmyza7TtOP0TWpfiSj+h5fVAhldK116548J/o21jGdgBVT6cQApSk=",
+  "swapfree": "2.00 GiB",
+  "swapfree_mb": 2047.99609375,
+  "swapsize": "2.00 GiB",
+  "swapsize_mb": 2047.99609375,
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 62,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "uptime": "0:01 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 62,
+  "uuid": "59658d12-4f5d-4f84-a53f-43717647befb",
+  "virtual": "virtualbox"
+}
