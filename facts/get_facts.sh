@@ -100,7 +100,7 @@ case "${osfamily}" in
   # Puppet 6
   yum install -y "https://yum.puppetlabs.com/puppet6-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
   if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 6.2.0-1 6.4.2-1 6.6.0-1 6.25.0-1; do
+    for puppet_agent_version in 6.25.0-1; do
       dnf install -y "puppet-agent-${puppet_agent_version}.fc${operatingsystemmajrelease}"
       if [[ "${?}" == 0 ]]; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
