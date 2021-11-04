@@ -110,6 +110,24 @@ case "${osfamily}" in
     done
     yum remove -y puppet6-release
   fi
+  # Puppet 7
+  if [[ $operatingsystemmajrelease == '33' ]] && command -v facter &> /dev/null; then
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    mkdir -p $(dirname ${output_file})
+    facter --show-legacy -p -j | tee ${output_file}
+  fi
+  yum install -y "https://yum.puppetlabs.com/puppet7-release-fedora-${operatingsystemmajrelease}.noarch.rpm"
+  if [[ "${?}" == 0 ]]; then
+    for puppet_agent_version in 7.12.0-1; do
+      dnf install -y "puppet-agent-${puppet_agent_version}.fc${operatingsystemmajrelease}"
+      if [[ "${?}" == 0 ]]; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet6-release
+  fi
   ;;
 'RedHat')
   if [[ ${operatingsystemmajrelease} -eq 5 ]]; then
@@ -155,6 +173,18 @@ case "${osfamily}" in
       fi
     done
     yum remove -y puppet6-release
+  fi
+  wget "http://yum.puppetlabs.com/puppet7-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet7-release.rpm
+  if test -f /tmp/puppet7-release.rpm; then
+    rpm -ivh /tmp/puppet7-release.rpm
+    for puppet_agent_version in 7.5.0 7.6.1 7.12.0; do
+      if yum install -y puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet7-release
   fi
   ;;
 'RockyLinux'|'AlmaLinux')
@@ -212,6 +242,19 @@ case "${osfamily}" in
       fi
     done
     apt-get -y remove --purge puppet6-release
+  fi
+  curl "https://apt.puppetlabs.com/puppet7-release-${lsbdistcodename}.deb" -o /tmp/puppet7-release.deb
+  if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb; then
+    dpkg --install /tmp/puppet7-release.deb
+    apt-get update
+    for puppet_agent_version in 7.5.0 7.6.1 7.12.0; do
+      if apt_install puppet-agent=${puppet_agent_version}*; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    apt-get -y remove --purge puppet7-release
   fi
   apt_install make gcc libgmp-dev
 
