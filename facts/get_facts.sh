@@ -370,7 +370,7 @@ for version in 4.0.0 4.1.0 4.2.0; do
   ls -l /vagrant > /dev/null
 
   case "${operatingsystem}" in
-    almalinux|rocky)
+    almalinux)
       break
       ;;
     openbsd)
