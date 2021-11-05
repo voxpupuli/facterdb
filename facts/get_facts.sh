@@ -260,7 +260,7 @@ case "${osfamily}" in
 
   # There are no puppet-agent packages for Buster yet, so generate a Facter 3.x
   # fact set from the official Debian package.
-  if [[ "buster" = "${lsbdistcodename}" ]]; then
+  if [[ "buster" = "${lsbdistcodename}" || "hirsute" =~ ${lsbdistcodename} || "impish" =~ ${lsbdistcodename} ]]; then
     apt_install ruby rubygems ruby-dev puppet facter
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
