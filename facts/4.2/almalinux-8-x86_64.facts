@@ -50,11 +50,11 @@
     }
   },
   "domain": "example.com",
-  "facterversion": "4.0.52",
+  "facterversion": "4.2.5",
   "filesystems": "xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
-  "gem_version": "~> 4.0.0",
+  "gem_version": "~> 4.2.0",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
@@ -86,9 +86,9 @@
   "kernelrelease": "4.18.0-305.19.1.el8_4.x86_64",
   "kernelversion": "4.18.0",
   "load_averages": {
-    "15m": 0.02,
-    "1m": 0.3,
-    "5m": 0.06
+    "15m": 0.11,
+    "1m": 0.83,
+    "5m": 0.3
   },
   "lsbdistrelease": "8.4",
   "lsbmajdistrelease": "8",
@@ -99,32 +99,32 @@
   "memory": {
     "swap": {
       "available": "1.95 GiB",
-      "available_bytes": 2097147904,
-      "capacity": "0.00%",
+      "available_bytes": 2096349184,
+      "capacity": "0.04%",
       "total": "1.95 GiB",
       "total_bytes": 2097147904,
-      "used": "0 bytes",
-      "used_bytes": 0
+      "used": "780.00 KiB",
+      "used_bytes": 798720
     },
     "system": {
-      "available": "667.27 MiB",
-      "available_bytes": 699686912,
-      "capacity": "31.20%",
+      "available": "617.01 MiB",
+      "available_bytes": 646979584,
+      "capacity": "36.38%",
       "total": "969.85 MiB",
       "total_bytes": 1016963072,
-      "used": "302.58 MiB",
-      "used_bytes": 317276160
+      "used": "352.84 MiB",
+      "used_bytes": 369983488
     }
   },
-  "memoryfree": "667.27 MiB",
-  "memoryfree_mb": 667.27,
+  "memoryfree": "617.01 MiB",
+  "memoryfree_mb": 617.0078125,
   "memorysize": "969.85 MiB",
-  "memorysize_mb": 969.85,
+  "memorysize_mb": 969.8515625,
   "mountpoints": {
     "/": {
-      "available": "15.62 GiB",
-      "available_bytes": 16776232960,
-      "capacity": "11.06%",
+      "available": "15.56 GiB",
+      "available_bytes": 16712073216,
+      "capacity": "11.40%",
       "device": "/dev/sda2",
       "filesystem": "xfs",
       "options": [
@@ -139,8 +139,8 @@
       ],
       "size": "17.57 GiB",
       "size_bytes": 18862833664,
-      "used": "1.94 GiB",
-      "used_bytes": 2086600704
+      "used": "2.00 GiB",
+      "used_bytes": 2150760448
     },
     "/dev": {
       "available": "467.25 MiB",
@@ -234,8 +234,8 @@
     },
     "/run": {
       "available": "472.44 MiB",
-      "available_bytes": 495390720,
-      "capacity": "2.57%",
+      "available_bytes": 495386624,
+      "capacity": "2.58%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
       "options": [
@@ -247,8 +247,8 @@
       ],
       "size": "484.93 MiB",
       "size_bytes": 508481536,
-      "used": "12.48 MiB",
-      "used_bytes": 13090816
+      "used": "12.49 MiB",
+      "used_bytes": 13094912
     },
     "/run/user/1000": {
       "available": "96.98 MiB",
@@ -292,8 +292,8 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "849.91 GiB",
-      "available_bytes": 912579059712,
+      "available": "849.92 GiB",
+      "available_bytes": 912595259392,
       "capacity": "7.20%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -307,8 +307,8 @@
       ],
       "size": "915.89 GiB",
       "size_bytes": 983424843776,
-      "used": "65.98 GiB",
-      "used_bytes": 70845784064
+      "used": "65.97 GiB",
+      "used_bytes": 70829584384
     },
     "/var/lib/nfs/rpc_pipefs": {
       "available": "0 bytes",
@@ -358,7 +358,10 @@
             "address": "fe80::a00:27ff:febf:d499",
             "netmask": "ffff:ffff:ffff:ffff::",
             "network": "fe80::",
-            "scope6": "link"
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
           }
         ],
         "ip": "10.0.2.15",
@@ -384,7 +387,10 @@
             "address": "::1",
             "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
             "network": "::1",
-            "scope6": "host"
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
           }
         ],
         "ip": "127.0.0.1",
@@ -463,13 +469,15 @@
   "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
   "processorcount": 1,
   "processors": {
+    "cores": 1,
     "count": 1,
     "isa": "x86_64",
     "models": [
       "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz"
     ],
     "physicalcount": 1,
-    "speed": "3.79 GHz"
+    "speed": "3.79 GHz",
+    "threads": 1
   },
   "productname": "VirtualBox",
   "ruby": {
@@ -523,20 +531,20 @@
   "sshfp_rsa": "SSHFP 1 1 e6ae57027741d8a85964a5172c9ec0a8c069271f\nSSHFP 1 2 30a48581cd638faacc948e2ae7c764b1f78f610402e691b316407a2e5b432e38",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCh+rhVbl+hWvDqzjXGUKHIVpqjP2tXEBFmmPYcT0ySilb5fP8TGnox2/5dvVf7/F0wKcqeherhHMjhZGbira9CGIWhMIwKTSPskVSxLRM3hXoXHGckXu0dD7M0Jk6z3lII1SOLZQshXgkPZwwkwli13RcQOO5Uv8Z+cm/1C1gn/mqLyQQM1Z3gXMd82dtrq2Ujv7FW5ehVjcIujn4mcKp4L9OR5bB0tx9QKoCT8DX5HZZQXQjbXiWLw9VrWAx8greOSgkr9jGoz4QJlCok0sSJ9ashA9Xe6+/X1CYocHvkNFA4M9ot0tZfCntfDFkFxVjrPHOpWETYgwltuIPu9F/14W32Mh8Z9CBVpsFMlviojlNiddUGv2Jdh4IYfs6AN5V0SLcUH3CkEKiNGWNzpPbc4YAUpgfqDZrgZi1sbm2dhRvSNP9TN3d/eEcJU+0JzKJD5x6O3MXs/eWhqmIUkHa/BuLF4mRj3Ncd/HqJ/4+YNFGO3ONSuRrLqj1gBKuDqOE=",
   "swapfree": "1.95 GiB",
-  "swapfree_mb": 2000.0,
+  "swapfree_mb": 1999.234375,
   "swapsize": "1.95 GiB",
-  "swapsize_mb": 2000.0,
+  "swapsize_mb": 1999.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 26,
-    "uptime": "0:00 hours"
+    "seconds": 69,
+    "uptime": "0:01 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
+  "uptime": "0:01 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 26,
+  "uptime_seconds": 69,
   "uuid": "5745b281-2bd4-ce4b-a939-1135318c2c1e",
   "virtual": "virtualbox"
 }

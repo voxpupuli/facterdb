@@ -370,9 +370,6 @@ for version in 4.0.0 4.1.0 4.2.0; do
   ls -l /vagrant > /dev/null
 
   case "${operatingsystem}" in
-    almalinux)
-      break
-      ;;
     openbsd)
       output_file="/vagrant/$(bundle exec facter --version | cut -d. -f1,2)/${operatingsystem}-${operatingsystemrelease}-${hardwaremodel}.facts"
       ;;
