@@ -43,6 +43,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  config.vm.define "ubuntu-20.04-x86_64" do |host|
+    host.vm.box = "ubuntu/focal64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "ubuntu-21.04-x86_64" do |host|
+    host.vm.box = "ubuntu/hirsute64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
+  config.vm.define "ubuntu-21.10-x86_64" do |host|
+    host.vm.box = "ubuntu/impish64"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "centos-7-x86_64" do |host|
     host.vm.box = "centos/7"
     host.vm.network :private_network, ip: '10.0.0.2'
