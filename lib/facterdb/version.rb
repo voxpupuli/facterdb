@@ -1,5 +1,5 @@
 module FacterDB
   module Version
-    STRING = '1.10.1'
+    STRING = '1.11.0'
   end
 end
