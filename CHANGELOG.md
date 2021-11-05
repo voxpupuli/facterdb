@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.11.0](https://rubygems.org/gems/facterdb/versions/1.11.0) (2021-11-05)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.10.1...1.11.0)
+
+**Implemented enhancements:**
+
+- Add Almalinux facts [\#207](https://github.com/voxpupuli/facterdb/pull/207) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add facter 4.x facts for RockyLinux 8 [\#205](https://github.com/voxpupuli/facterdb/pull/205) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Generate OL/RHEL/SL facts [\#203](https://github.com/voxpupuli/facterdb/pull/203) ([bastelfreak](https://github.com/bastelfreak))
+- Add Facts for Ubuntu 21.04 x86-64, facter 3.14 [\#201](https://github.com/voxpupuli/facterdb/pull/201) ([towo](https://github.com/towo))
+- Add Fedora 33 and 34 factsets [\#199](https://github.com/voxpupuli/facterdb/pull/199) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add Fedora 32 facts [\#198](https://github.com/voxpupuli/facterdb/pull/198) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
+**Fixed bugs:**
+
+- Add sys-filesystem so that mountpoints fact resolves [\#206](https://github.com/voxpupuli/facterdb/pull/206) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- \(\#200\) Updated get\_facts.sh and several os facts missing mountpoints [\#202](https://github.com/voxpupuli/facterdb/pull/202) ([michael-riddle](https://github.com/michael-riddle))
+
 ## [1.10.1](https://rubygems.org/gems/facterdb/versions/1.10.1) (2021-10-09)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.10.0...1.10.1)
