@@ -6,7 +6,7 @@
   "disks": {
     "ada0": {
       "model": "VBOX HARDDISK",
-      "serial_number": "VB3d9a9a7b-4480bd65",
+      "serial_number": "VBbeecd164-745a383a",
       "size": "64.00 GiB",
       "size_bytes": 68719476736
     }
@@ -21,16 +21,16 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "d46a39e9-2c1c-0549-89a5-391974f2e7e7"
+      "uuid": "dc77188a-5cf2-e84a-9c9b-0cb604ae8808"
     }
   },
-  "domain": "example.com",
-  "facterversion": "4.2.1",
-  "fqdn": "foo.example.com",
+  "domain": "divms.uiowa.edu",
+  "facterversion": "4.2.5",
+  "gem_version": "~> 4.2.0",
   "gid": "wheel",
   "hardwareisa": "amd64",
   "hardwaremodel": "amd64",
-  "hostname": "foo",
+  "hostname": "",
   "id": "root",
   "identity": {
     "gid": 0,
@@ -46,9 +46,9 @@
   "kernelrelease": "13.0-RELEASE",
   "kernelversion": "13.0",
   "load_averages": {
-    "15m": 0.10693359375,
-    "1m": 0.5849609375,
-    "5m": 0.27685546875
+    "15m": 0.20263671875,
+    "1m": 0.37158203125,
+    "5m": 0.31982421875
   },
   "macaddress": "08:00:27:37:c2:4d",
   "manufacturer": "innotek GmbH",
@@ -64,19 +64,234 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "623.88 MiB",
-      "available_bytes": 654180352,
-      "capacity": "36.63%",
+      "available": "639.66 MiB",
+      "available_bytes": 670736384,
+      "capacity": "35.03%",
       "total": "984.48 MiB",
       "total_bytes": 1032306688,
-      "used": "360.61 MiB",
-      "used_bytes": 378126336
+      "used": "344.82 MiB",
+      "used_bytes": 361570304
     }
   },
-  "memoryfree": "623.88 MiB",
-  "memoryfree_mb": 623.875,
+  "memoryfree": "639.66 MiB",
+  "memoryfree_mb": 639.6640625,
   "memorysize": "984.48 MiB",
   "memorysize_mb": 984.484375,
+  "mountpoints": {
+    "/": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "1.81%",
+      "device": "zroot/ROOT/default",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "rootfs",
+        "noatime"
+      ],
+      "size": "59.56 GiB",
+      "size_bytes": 63954358272,
+      "used": "1.08 GiB",
+      "used_bytes": 1155796992
+    },
+    "/dev": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+
+      ],
+      "size": "1.00 KiB",
+      "size_bytes": 1024,
+      "used": "1.00 KiB",
+      "used_bytes": 1024
+    },
+    "/tmp": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798688256,
+      "used": "124.00 KiB",
+      "used_bytes": 126976
+    },
+    "/usr/home": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.02%",
+      "device": "zroot/usr/home",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.50 GiB",
+      "size_bytes": 62810308608,
+      "used": "11.20 MiB",
+      "used_bytes": 11747328
+    },
+    "/usr/ports": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/usr/ports",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/usr/src": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/usr/src",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/vagrant": {
+      "available": "837.79 GiB",
+      "available_bytes": 899570495488,
+      "capacity": "8.53%",
+      "device": "Vagrant",
+      "filesystem": "vboxvfs",
+      "options": [
+        "local"
+      ],
+      "size": "915.89 GiB",
+      "size_bytes": 983424843776,
+      "used": "78.10 GiB",
+      "used_bytes": 83854348288
+    },
+    "/var/audit": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/var/audit",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/var/crash": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/var/crash",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/var/log": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/var/log",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798716928,
+      "used": "152.00 KiB",
+      "used_bytes": 155648
+    },
+    "/var/mail": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/var/mail",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/var/tmp": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot/var/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/zroot": {
+      "available": "58.49 GiB",
+      "available_bytes": 62798561280,
+      "capacity": "0.00%",
+      "device": "zroot",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.49 GiB",
+      "size_bytes": 62798659584,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    }
+  },
   "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
@@ -86,9 +301,8 @@
   "network_em0": "10.0.2.0",
   "network_lo0": "127.0.0.0",
   "networking": {
-    "domain": "example.com",
-    "fqdn": "foo.example.com",
-    "hostname": "foo",
+    "domain": "divms.uiowa.edu",
+    "hostname": "",
     "interfaces": {
       "em0": {
         "bindings": [
@@ -179,28 +393,28 @@
       "size_bytes": 66569895936
     }
   },
-  "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-  "processor1": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "path": "/usr/home/vagrant/vendor/bundler/ruby/2.7/bin:/opt/puppetlabs/puppet/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/root/bin",
+  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
   "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "amd64",
     "models": [
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz"
     ],
-    "speed": "1.99 GHz"
+    "speed": "3.79 GHz"
   },
   "productname": "VirtualBox",
   "ruby": {
     "platform": "amd64-freebsd13",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-    "version": "2.7.3"
+    "version": "2.7.4"
   },
   "rubyplatform": "amd64-freebsd13",
   "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-  "rubyversion": "2.7.3",
+  "rubyversion": "2.7.4",
   "serialnumber": "0",
   "ssh": {
     "ecdsa": {
@@ -242,15 +456,15 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 180,
-    "uptime": "0:03 hours"
+    "seconds": 1114,
+    "uptime": "0:18 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:03 hours",
+  "uptime": "0:18 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 180,
-  "uuid": "d46a39e9-2c1c-0549-89a5-391974f2e7e7",
+  "uptime_seconds": 1114,
+  "uuid": "dc77188a-5cf2-e84a-9c9b-0cb604ae8808",
   "virtual": "vbox",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

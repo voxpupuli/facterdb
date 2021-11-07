@@ -6,7 +6,7 @@
   "disks": {
     "ada0": {
       "model": "VBOX HARDDISK",
-      "serial_number": "VB574cfc4b-de90b976",
+      "serial_number": "VB33b478bf-fb575c68",
       "size": "64.00 GiB",
       "size_bytes": 68719476736
     }
@@ -21,7 +21,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "a020b3f2-6623-594e-b4f2-60c36792ba14"
+      "uuid": "86720522-a1c2-9241-8bf9-db6de84a9d1a"
     }
   },
   "domain": "example.com",
@@ -47,9 +47,9 @@
   "kernelrelease": "11.4-RELEASE-p9",
   "kernelversion": "11.4",
   "load_averages": {
-    "15m": 0.10400390625,
-    "1m": 0.916015625,
-    "5m": 0.279296875
+    "15m": 0.06005859375,
+    "1m": 0.638671875,
+    "5m": 0.16796875
   },
   "macaddress": "08:00:27:a3:ff:85",
   "manufacturer": "innotek GmbH",
@@ -65,19 +65,234 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "470.34 MiB",
-      "available_bytes": 493191168,
-      "capacity": "52.28%",
+      "available": "471.61 MiB",
+      "available_bytes": 494522368,
+      "capacity": "52.15%",
       "total": "985.54 MiB",
       "total_bytes": 1033416704,
-      "used": "515.20 MiB",
-      "used_bytes": 540225536
+      "used": "513.93 MiB",
+      "used_bytes": 538894336
     }
   },
-  "memoryfree": "470.34 MiB",
-  "memoryfree_mb": 470.34,
+  "memoryfree": "471.61 MiB",
+  "memoryfree_mb": 471.61,
   "memorysize": "985.54 MiB",
   "memorysize_mb": 985.54,
+  "mountpoints": {
+    "/": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "1.32%",
+      "device": "zroot/ROOT/default",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "rootfs",
+        "noatime"
+      ],
+      "size": "59.55 GiB",
+      "size_bytes": 63945162752,
+      "used": "802.25 MiB",
+      "used_bytes": 841220096
+    },
+    "/dev": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+        "local"
+      ],
+      "size": "1.00 KiB",
+      "size_bytes": 1024,
+      "used": "1.00 KiB",
+      "used_bytes": 1024
+    },
+    "/tmp": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.01%",
+      "device": "zroot/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.78 GiB",
+      "size_bytes": 63111053312,
+      "used": "6.78 MiB",
+      "used_bytes": 7110656
+    },
+    "/usr/home": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.02%",
+      "device": "zroot/usr/home",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.78 GiB",
+      "size_bytes": 63115657216,
+      "used": "11.17 MiB",
+      "used_bytes": 11714560
+    },
+    "/usr/ports": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/usr/ports",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/usr/src": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/usr/src",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/vagrant": {
+      "available": "835.68 GiB",
+      "available_bytes": 897309179904,
+      "capacity": "8.76%",
+      "device": "Vagrant",
+      "filesystem": "vboxvfs",
+      "options": [
+        "local"
+      ],
+      "size": "915.89 GiB",
+      "size_bytes": 983424843776,
+      "used": "80.20 GiB",
+      "used_bytes": 86115663872
+    },
+    "/var/audit": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/var/audit",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/var/crash": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/var/crash",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/var/log": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/var/log",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104065536,
+      "used": "120.00 KiB",
+      "used_bytes": 122880
+    },
+    "/var/mail": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/var/mail",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/var/tmp": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot/var/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    },
+    "/zroot": {
+      "available": "58.77 GiB",
+      "available_bytes": 63103942656,
+      "capacity": "0.00%",
+      "device": "zroot",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.77 GiB",
+      "size_bytes": 63104032768,
+      "used": "88.00 KiB",
+      "used_bytes": 90112
+    }
+  },
   "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
@@ -182,17 +397,17 @@
     }
   },
   "path": "/usr/home/vagrant/vendor/bundler/ruby/2.7/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-  "processor1": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
+  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
   "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "amd64",
     "models": [
-      "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-      "AMD Ryzen 7 PRO 4750U with Radeon Graphics"
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz"
     ],
-    "speed": "1.70 GHz"
+    "speed": "3.79 GHz"
   },
   "productname": "VirtualBox",
   "ruby": {
@@ -244,15 +459,15 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 63,
-    "uptime": "0:01 hours"
+    "seconds": 46,
+    "uptime": "0:00 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:01 hours",
+  "uptime": "0:00 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 63,
-  "uuid": "a020b3f2-6623-594e-b4f2-60c36792ba14",
+  "uptime_seconds": 46,
+  "uuid": "86720522-a1c2-9241-8bf9-db6de84a9d1a",
   "virtual": "generic",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

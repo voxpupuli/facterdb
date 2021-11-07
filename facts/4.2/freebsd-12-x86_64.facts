@@ -6,7 +6,7 @@
   "disks": {
     "ada0": {
       "model": "VBOX HARDDISK",
-      "serial_number": "VB3f5cf2a5-7451f958",
+      "serial_number": "VB8a1b6f83-9dfd9bed",
       "size": "64.00 GiB",
       "size_bytes": 68719476736
     }
@@ -21,11 +21,11 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "90c5b4fb-9f84-0540-9aa2-4cece5166b3a"
+      "uuid": "e5fd407e-387d-0c42-bbe7-8dffde8abccb"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.2.1",
+  "facterversion": "4.2.4",
   "fqdn": "foo.example.com",
   "gid": "wheel",
   "hardwareisa": "amd64",
@@ -46,9 +46,9 @@
   "kernelrelease": "12.2-RELEASE-p6",
   "kernelversion": "12.2",
   "load_averages": {
-    "15m": 0.09619140625,
-    "1m": 0.4111328125,
-    "5m": 0.23046875
+    "15m": 0.0380859375,
+    "1m": 0.427734375,
+    "5m": 0.1083984375
   },
   "macaddress": "08:00:27:cc:5d:60",
   "manufacturer": "innotek GmbH",
@@ -64,17 +64,17 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "640.11 MiB",
-      "available_bytes": 671207424,
-      "capacity": "34.85%",
+      "available": "634.64 MiB",
+      "available_bytes": 665473024,
+      "capacity": "35.41%",
       "total": "982.54 MiB",
       "total_bytes": 1030270976,
-      "used": "342.43 MiB",
-      "used_bytes": 359063552
+      "used": "347.90 MiB",
+      "used_bytes": 364797952
     }
   },
-  "memoryfree": "640.11 MiB",
-  "memoryfree_mb": 640.11328125,
+  "memoryfree": "634.64 MiB",
+  "memoryfree_mb": 634.64453125,
   "memorysize": "982.54 MiB",
   "memorysize_mb": 982.54296875,
   "netmask": "255.255.255.0",
@@ -181,27 +181,27 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-  "processor1": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
+  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
   "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "amd64",
     "models": [
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
+      "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz"
     ],
-    "speed": "1.99 GHz"
+    "speed": "3.79 GHz"
   },
   "productname": "VirtualBox",
   "ruby": {
     "platform": "amd64-freebsd12",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-    "version": "2.7.3"
+    "version": "2.7.4"
   },
   "rubyplatform": "amd64-freebsd12",
   "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-  "rubyversion": "2.7.3",
+  "rubyversion": "2.7.4",
   "serialnumber": "0",
   "ssh": {
     "ecdsa": {
@@ -243,15 +243,15 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 184,
-    "uptime": "0:03 hours"
+    "seconds": 36,
+    "uptime": "0:00 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:03 hours",
+  "uptime": "0:00 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 184,
-  "uuid": "90c5b4fb-9f84-0540-9aa2-4cece5166b3a",
+  "uptime_seconds": 36,
+  "uuid": "e5fd407e-387d-0c42-bbe7-8dffde8abccb",
   "virtual": "generic",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",
