@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.12.0](https://rubygems.org/gems/facterdb/versions/1.12.0) (2021-11-10)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.11.0...1.12.0)
+
+**Implemented enhancements:**
+
+- Add support for ubuntu 21.10 and 21.04  [\#209](https://github.com/voxpupuli/facterdb/pull/209) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
+**Fixed bugs:**
+
+- Cleanup stdlib/systemd facts and add tests to ensure that they are absent [\#213](https://github.com/voxpupuli/facterdb/pull/213) ([bastelfreak](https://github.com/bastelfreak))
+- Re-generating fact sets which were missing the mountpoints fact [\#210](https://github.com/voxpupuli/facterdb/pull/210) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
+**Merged pull requests:**
+
+- Gemfile: mention why we include sys-filesystem [\#212](https://github.com/voxpupuli/facterdb/pull/212) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.11.0](https://rubygems.org/gems/facterdb/versions/1.11.0) (2021-11-05)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.10.1...1.11.0)
