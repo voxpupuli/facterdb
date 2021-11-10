@@ -588,7 +588,6 @@
       }
     }
   },
-  "package_provider": "apt",
   "current_environment": "production",
   "puppet_agent_pid": 2614,
   "windows_java_temp": "\\tmp",
@@ -1014,20 +1013,6 @@
   "apt_dist_updates": 130,
   "apt_security_updates": 45,
   "apt_security_dist_updates": 47,
-  "puppet_vardir": "/opt/puppetlabs/puppet/cache",
-  "puppet_environmentpath": "/etc/puppetlabs/code/environments",
-  "puppet_server": "pe-infranext-prod.infc-aws.puppet.net",
-  "systemd": true,
-  "systemd_version": "241",
-  "systemd_internal_services": {
-    "systemd-boot-check-no-failures.service": "disabled",
-    "systemd-fsck-root.service": "enabled-runtime",
-    "systemd-networkd-wait-online.service": "disabled",
-    "systemd-networkd.service": "disabled",
-    "systemd-resolved.service": "disabled",
-    "systemd-time-wait-sync.service": "disabled",
-    "systemd-timesyncd.service": "enabled"
-  },
   "network_nexthop_ip": "10.16.112.1",
   "network_primary_interface": "ens192",
   "network_primary_ip": "10.16.124.235",
@@ -1056,13 +1041,11 @@
     "id": ""
   },
   "ip6tables_version": "1.8.2",
-  "root_home": "/root",
   "primary_ip": "10.16.124.235",
   "primary_iface": "eth0",
   "group": "marital",
   "function_number": "",
   "platform_symlink_writable": true,
-  "service_provider": "systemd",
   "pe_patch": {
     "package_updates": [],
     "package_update_count": 0,

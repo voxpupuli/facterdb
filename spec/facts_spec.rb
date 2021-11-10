@@ -108,7 +108,20 @@ describe 'Default Facts' do
         else
           expect(content['networking']['ip']).to not_be_nil.and not_be_empty
         end
-        
+      end
+      it 'contains no facts from puppetlabs/stdlib' do
+        expect(content['root_home']).to be_nil
+        expect(content['service_provider']).to be_nil
+        expect(content['puppet_vardir']).to be_nil
+        expect(content['puppet_environmentpath']).to be_nil
+        expect(content['puppet_server']).to be_nil
+        expect(content['pe_version']).to be_nil
+        expect(content['package_provider']).to be_nil
+      end
+      it 'contains no facts from puppet/systemd' do
+        expect(content['systemd']).to be_nil
+        expect(content['systemd_version']).to be_nil
+        expect(content['systemd_internal_services']).to be_nil
       end
     end
   end

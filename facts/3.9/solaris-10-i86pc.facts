@@ -499,7 +499,6 @@
       }
   },
   "osfamily": "Solaris",
-  "package_provider": "sun",
   "path": "/usr/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/sfw/bin:/usr/local/sbin:/opt/puppet/bin:/sbin",
   "pe_concat_basedir": "/opt/puppetlabs/puppet/cache/pe_concat",
   "physicalprocessorcount": 2,
@@ -552,7 +551,6 @@
   "puppet_client_datadir": "/opt/puppetlabs/puppet/cache/client_data",
   "puppet_confdir": "/etc/puppetlabs/puppet",
   "puppet_config": "/etc/puppetlabs/puppet/puppet.conf",
-  "puppet_environmentpath": "/etc/puppetlabs/code/environments",
   "puppet_files_dir_present": false,
   "puppet_inventory_metadata": {
       "packages": {
@@ -561,7 +559,6 @@
       }
   },
   "puppet_master_server": "puppet",
-  "puppet_server": "puppet",
   "puppet_ssldir": "/etc/puppetlabs/puppet/ssl",
   "puppet_sslpaths": {
       "certdir": {
@@ -590,9 +587,7 @@
       }
   },
   "puppet_stringify_facts": false,
-  "puppet_vardir": "/opt/puppetlabs/puppet/cache",
   "puppetversion": "5.3.5",
-  "root_home": "/root",
   "ruby": {
       "platform": "i386-solaris2.10",
       "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
@@ -605,7 +600,6 @@
   "serial_port_ttya": "disabled",
   "serial_port_ttyb": "disabled",
   "serialnumber": "URE768W6C4",
-  "service_provider": "smf",
   "solaris_zones": {
       "current": "global",
       "zones": {
