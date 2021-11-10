@@ -118,6 +118,11 @@ describe 'Default Facts' do
         expect(content['pe_version']).to be_nil
         expect(content['package_provider']).to be_nil
       end
+      it 'contains no facts from puppet/systemd' do
+        expect(content['systemd']).to be_nil
+        expect(content['systemd_version']).to be_nil
+        expect(content['systemd_internal_services']).to be_nil
+      end
     end
   end
 end
