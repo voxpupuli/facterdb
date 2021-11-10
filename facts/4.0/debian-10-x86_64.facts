@@ -1013,17 +1013,6 @@
   "apt_dist_updates": 130,
   "apt_security_updates": 45,
   "apt_security_dist_updates": 47,
-  "systemd": true,
-  "systemd_version": "241",
-  "systemd_internal_services": {
-    "systemd-boot-check-no-failures.service": "disabled",
-    "systemd-fsck-root.service": "enabled-runtime",
-    "systemd-networkd-wait-online.service": "disabled",
-    "systemd-networkd.service": "disabled",
-    "systemd-resolved.service": "disabled",
-    "systemd-time-wait-sync.service": "disabled",
-    "systemd-timesyncd.service": "enabled"
-  },
   "network_nexthop_ip": "10.16.112.1",
   "network_primary_interface": "ens192",
   "network_primary_ip": "10.16.124.235",

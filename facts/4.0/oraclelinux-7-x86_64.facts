@@ -584,16 +584,6 @@
   "is_valid_hostname": false,
   "puppet_files_dir_present": false,
   "context": "",
-  "systemd": true,
-  "systemd_version": "219",
-  "systemd_internal_services": {
-    "systemd-bootchart.service": "disabled",
-    "systemd-nspawn@.service": "disabled",
-    "systemd-readahead-collect.service": "enabled",
-    "systemd-readahead-done.service": "indirect",
-    "systemd-readahead-drop.service": "enabled",
-    "systemd-readahead-replay.service": "enabled"
-  },
   "current_environment": "production",
   "primary_iface": "eth0",
   "staging_http_get": "curl",
