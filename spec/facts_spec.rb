@@ -82,6 +82,19 @@ describe 'Default Facts' do
     'facts/3.0/ubuntu-15.10-i386.facts' => 'no puppet-agent package',
   }
 
+  KNOWN_HOSTNAME_PENDING = {
+    'facts/3.10/ubuntu-18.04-aarch64.facts' => 'unable to regenerate facts',
+    'facts/3.2/aix-61-powerpc.facts' => 'unable to regenerate facts',
+    'facts/3.2/aix-71-powerpc.facts' => 'unable to regenerate facts',
+    'facts/3.2/aix-53-powerpc.facts' => 'unable to regenerate facts',
+    'facts/3.6/pcs-6-x86_64.facts' => 'unable to regenerate facts',
+    'facts/3.0/ubuntu-15.10-x86_64.facts' => 'no puppet-agent package',
+    'facts/3.0/ubuntu-15.10-i386.facts' => 'no puppet-agent package',
+    'facts/4.2/centos-9-x86_64.facts' => 'no legacy facts',
+    'facts/4.2/oraclelinux-9-x86_64.facts' => 'no legacy facts',
+    'facts/4.2/redhat-9-x86_64.facts' => 'no legacy facts',
+  }
+
   project_dir = Pathname.new(__dir__).parent
   FacterDB.default_fact_files.each do |filepath|
     relative_path = Pathname.new(filepath).relative_path_from(project_dir).to_s
@@ -122,6 +135,10 @@ describe 'Default Facts' do
         expect(content['systemd']).to be_nil
         expect(content['systemd_version']).to be_nil
         expect(content['systemd_internal_services']).to be_nil
+      end
+      it 'contains a hostname fact' do
+        pending KNOWN_HOSTNAME_PENDING[relative_path] if KNOWN_HOSTNAME_PENDING.key?(relative_path)
+        expect(content['hostname']).to not_be_nil.and not_be_empty
       end
     end
   end

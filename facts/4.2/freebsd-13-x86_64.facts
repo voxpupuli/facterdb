@@ -24,13 +24,14 @@
       "uuid": "dc77188a-5cf2-e84a-9c9b-0cb604ae8808"
     }
   },
-  "domain": "divms.uiowa.edu",
+  "domain": "example.com",
   "facterversion": "4.2.5",
+  "fqdn": "foo.example.com",
   "gem_version": "~> 4.2.0",
   "gid": "wheel",
   "hardwareisa": "amd64",
   "hardwaremodel": "amd64",
-  "hostname": "",
+  "hostname": "foo",
   "id": "root",
   "identity": {
     "gid": 0,
@@ -301,8 +302,9 @@
   "network_em0": "10.0.2.0",
   "network_lo0": "127.0.0.0",
   "networking": {
-    "domain": "divms.uiowa.edu",
-    "hostname": "",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "em0": {
         "bindings": [
