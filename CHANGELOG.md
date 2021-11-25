@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.1](https://rubygems.org/gems/facterdb/versions/1.12.1) (2021-11-25)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.12.0...1.12.1)
+
+**Fixed bugs:**
+
+- Fix hostname facts for freebsd13 and add spec test [\#216](https://github.com/voxpupuli/facterdb/pull/216) ([msalway](https://github.com/msalway))
+
 ## [1.12.0](https://rubygems.org/gems/facterdb/versions/1.12.0) (2021-11-10)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.11.0...1.12.0)
