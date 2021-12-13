@@ -126,7 +126,7 @@ case "${osfamily}" in
         facter --show-legacy -p -j | tee ${output_file}
       fi
     done
-    yum remove -y puppet6-release
+    yum remove -y puppet7-release
   fi
   ;;
 'RedHat')
