@@ -121,6 +121,20 @@ describe 'Default Facts' do
           expect(content['networking']['ip']).to not_be_nil.and not_be_empty
         end
       end
+      it 'contains legacy facts' do
+        pending KNOWN_IPADDRESS_PENDING[relative_path] if KNOWN_IPADDRESS_PENDING.key?(relative_path)
+        pending KNOWN_HOSTNAME_PENDING[relative_path] if KNOWN_HOSTNAME_PENDING.key?(relative_path)
+        expect(content['fqdn']).to not_be_nil.and not_be_empty
+        expect(content['domain']).to not_be_nil.and not_be_empty
+        expect(content['architecture']).to not_be_nil.and not_be_empty
+        expect(content['augeasversion']).to not_be_nil.and not_be_empty
+        expect(content['blockdevices']).to not_be_nil.and not_be_empty
+        expect(content['bios_release_date']).to not_be_nil.and not_be_empty
+        expect(content['interfaces']).to not_be_nil.and not_be_empty
+        expect(content['manufacturer']).to not_be_nil.and not_be_empty
+        expect(content['swapfree']).to not_be_nil.and not_be_empty
+        expect(content['uuid']).to not_be_nil.and not_be_empty
+      end
       it 'contains no facts from puppetlabs/stdlib' do
         expect(content['root_home']).to be_nil
         expect(content['service_provider']).to be_nil
