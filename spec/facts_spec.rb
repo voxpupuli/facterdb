@@ -90,7 +90,6 @@ describe 'Default Facts' do
     'facts/3.6/pcs-6-x86_64.facts' => 'unable to regenerate facts',
     'facts/3.0/ubuntu-15.10-x86_64.facts' => 'no puppet-agent package',
     'facts/3.0/ubuntu-15.10-i386.facts' => 'no puppet-agent package',
-    'facts/4.2/centos-9-x86_64.facts' => 'no legacy facts',
     'facts/4.2/oraclelinux-9-x86_64.facts' => 'no legacy facts',
     'facts/4.2/redhat-9-x86_64.facts' => 'no legacy facts',
   }
