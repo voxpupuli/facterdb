@@ -1,4 +1,5 @@
 {
+  "domain": "example.com",
   "dir": "C:\\Program Files\\Puppet Labs\\Puppet\\facter",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "fqdn": "foo.example.com",

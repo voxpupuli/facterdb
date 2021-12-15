@@ -5,7 +5,7 @@
   "kernel": "Linux",
   "blockdevice_xvda_size": 8589934592,
   "blockdevices": "xvda",
-  "domain": "us-gov-west-1.compute.internal",
+  "domain": "example.com",
   "macaddress": "02:85:E9:60:90:D4",
   "osfamily": "RedHat",
   "operatingsystem": "Amazon",
