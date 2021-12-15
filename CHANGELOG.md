@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.12.2](https://rubygems.org/gems/facterdb/versions/1.12.2) (2021-12-15)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.12.1...1.12.2)
+
+**Implemented enhancements:**
+
+- Adding facts for Fedora 35 [\#218](https://github.com/voxpupuli/facterdb/pull/218) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
+**Fixed bugs:**
+
+- validate all factsets to legacy facts & fix renaming network related facts [\#225](https://github.com/voxpupuli/facterdb/pull/225) ([bastelfreak](https://github.com/bastelfreak))
+- Validate legacy domain/fqdn/hostname fact on all factsets & Add missing fqdn/domain/hostname fact to all factsets [\#224](https://github.com/voxpupuli/facterdb/pull/224) ([bastelfreak](https://github.com/bastelfreak))
+- Add test for legacy domain fact & Add/correct legacy domain fact [\#223](https://github.com/voxpupuli/facterdb/pull/223) ([bastelfreak](https://github.com/bastelfreak))
+- Add test for legacy FQDN/hostname & correct FQDN/hostname facts [\#222](https://github.com/voxpupuli/facterdb/pull/222) ([bastelfreak](https://github.com/bastelfreak))
+- Oraclelinux/RHEL 9: Add legacy facts [\#220](https://github.com/voxpupuli/facterdb/pull/220) ([bastelfreak](https://github.com/bastelfreak))
+- Add some CentOS 9 legacy facts [\#219](https://github.com/voxpupuli/facterdb/pull/219) ([traylenator](https://github.com/traylenator))
+
 ## [1.12.1](https://rubygems.org/gems/facterdb/versions/1.12.1) (2021-11-25)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.12.0...1.12.1)
