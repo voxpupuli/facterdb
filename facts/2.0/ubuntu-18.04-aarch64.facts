@@ -1,4 +1,5 @@
 {
+  "fqdn": "foo.example.com",
   "gem_version": "~> 2.0.0",
   "selinux": "false",
   "kernelrelease": "4.19.20-meson64",
@@ -68,7 +69,7 @@
   "puppetversion": "5.4.0",
   "processorcount": "4",
   "filesystems": "btrfs,ext2,ext3,ext4,f2fs,iso9660,jfs,msdos,udf,vfat,xfs",
-  "hostname": "master1",
+  "hostname": "foo",
   "netmask": "255.255.0.0",
   "uptime": "1 day",
   "uptime_days": 1,

@@ -32,11 +32,11 @@
   "facterversion": "3.14.20",
   "filesystems": "ext2,ext3,ext4,squashfs,vfat",
   "fips_enabled": false,
-  "fqdn": "2104.ubuntu.towo.people.b1-systems.de",
+  "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
-  "hostname": "2104",
+  "hostname": "foo",
   "hypervisors": {
     "xen": {
       "context": "hvm",
@@ -313,7 +313,7 @@
   "networking": {
     "dhcp": "8.8.8.8",
     "domain": "ubuntu.towo.people.b1-systems.de",
-    "fqdn": "2104.ubuntu.towo.people.b1-systems.de",
+    "fqdn": "foo.example.com",
     "hostname": "2104",
     "interfaces": {
       "internal": {

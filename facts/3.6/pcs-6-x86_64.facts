@@ -137,7 +137,7 @@
   },
   "networking": {
     "domain": "example.com",
-    "fqdn": "pcs-6-x86_64.example.com",
+    "fqdn": "foo.example.com",
     "hostname": "pcs-6-x86_64",
     "interfaces": {
       "br0": {

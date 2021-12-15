@@ -45,12 +45,12 @@
   "env_temp_variable": "/tmp",
   "facterversion": "3.11.8",
   "filesystems": "autofs,cachefs,ctfs,dcfs,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,sockfs,specfs,tmpfs,udfs,ufs,xmemfs",
-  "fqdn": "myhostname.example.com",
+  "fqdn": "foo.example.com",
   "gemhome": "/opt/puppetlabs/puppet/lib/ruby/gems/2.4.0",
   "gid": "root",
   "hardwareisa": "i386",
   "hardwaremodel": "i86pc",
-  "hostname": "myhostname",
+  "hostname": "foo",
   "hypervisors": {
     "vmware": {
     },
@@ -398,7 +398,7 @@
   "network_vmxnet3s0": "10.129.81.0",
   "networking": {
     "domain": "example.com",
-    "fqdn": "myhostname.example.com",
+    "fqdn": "foo.example.com",
     "hostname": "myhostname",
     "interfaces": {
       "lo0": {

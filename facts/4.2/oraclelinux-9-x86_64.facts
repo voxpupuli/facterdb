@@ -1,4 +1,7 @@
 {
+  "domain": "example.com",
+  "fqdn": "foo.example.com",
+  "hostname": "foo",
   "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
@@ -43,7 +46,7 @@
   "fips_enabled": false,
   "gem_version": "~> 4.2.0",
   "hardwaremodel": "x86_64",
-  "hostname": "multi-1",
+  "hostname": "foo",
   "identity": {
     "gid": 1000,
     "group": "stack",
@@ -83,9 +86,9 @@
     }
   },
   "networking": {
-    "domain": "multi-1.local",
-    "fqdn": "multi-1.multi-1.local",
-    "hostname": "multi-1",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "ens3": {
         "bindings": [

@@ -45,15 +45,15 @@
       "uuid": "11212105-1cf1-4a18-beb9-25d00961e8cd"
     }
   },
-  "domain": "localdomain",
+  "domain": "example.com",
   "facterversion": "3.14.18",
   "filesystems": "ext2,ext3,ext4,vfat",
   "fips_enabled": false,
-  "fqdn": "localhost.localdomain",
+  "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
-  "hostname": "localhost",
+  "hostname": "foo",
   "hypervisors": {
     "kvm": {}
   },
@@ -373,9 +373,9 @@
   "network_enp1s0": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "networking": {
-    "domain": "localdomain",
-    "fqdn": "localhost.localdomain",
-    "hostname": "localhost",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "enp0s3": {
         "bindings": [

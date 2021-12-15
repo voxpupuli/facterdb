@@ -69,7 +69,7 @@
   "zones": 1,
   "zonename": "global",
   "id": "root",
-  "fqdn": "myhostname.example.com",
+  "fqdn": "foo.example.com",
   "interfaces": "lo0,vmxnet3s0",
   "ipaddress_lo0": "127.0.0.1",
   "netmask_lo0": "255.0.0.0",
@@ -93,7 +93,7 @@
   "uptime_days": 7,
   "timezone": "EDT",
   "physicalprocessorcount": 1,
-  "hostname": "myhostname",
+  "hostname": "foo",
   "macaddress": "00:50:56:94:a0:b3",
   "kernelversion": "Generic_142901-14",
   "osfamily": "Solaris",
@@ -168,8 +168,8 @@
   "memorysizeinbytes": 4294967296,
   "networking": {
     "domain": "example.com",
-    "fqdn": "myhostname.example.com",
-    "hostname": "myhostname",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "netmask": "255.255.255.0",
     "interfaces": {
       "lo0": {

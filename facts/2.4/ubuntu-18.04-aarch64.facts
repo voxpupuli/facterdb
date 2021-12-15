@@ -111,8 +111,8 @@
   },
   "processorcount": 4,
   "filesystems": "btrfs,ext2,ext3,ext4,f2fs,iso9660,jfs,msdos,udf,vfat,xfs",
-  "fqdn": "master1",
-  "hostname": "master1",
+  "fqdn": "foo.example.com",
+  "hostname": "foo",
   "dhcp_servers": {
     "system": "192.168.1.1",
     "eth0": "192.168.1.1"
