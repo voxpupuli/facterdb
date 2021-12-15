@@ -406,8 +406,8 @@
   "network_lo0": "127.0.0.0",
   "networking": {
       "domain": "example.com",
-      "fqdn": "hostname",
-      "hostname": "hostname",
+      "fqdn": "foo.example.com",
+      "hostname": "foo",
       "interfaces": {
           "bnx0": {
               "bindings": [

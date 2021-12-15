@@ -1,4 +1,5 @@
 {
+  "ipaddress": "192.168.0.1",
   "gem_version": "~> 1.6.0",
   "architecture": "x86_64",
   "kernel": "Linux",

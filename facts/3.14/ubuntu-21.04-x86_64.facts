@@ -314,7 +314,7 @@
     "dhcp": "8.8.8.8",
     "domain": "example.com",
     "fqdn": "foo.example.com",
-    "hostname": "2104",
+    "hostname": "foo",
     "interfaces": {
       "internal": {
         "bindings": [

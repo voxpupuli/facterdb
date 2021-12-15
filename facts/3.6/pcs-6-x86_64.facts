@@ -1,4 +1,5 @@
 {
+  "ipaddress": "192.168.0.1",
   "fqdn": "foo.example.com",
   "domain": "example.com",
   "hostname": "foo",
@@ -141,7 +142,7 @@
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
-    "hostname": "pcs-6-x86_64",
+    "hostname": "foo",
     "interfaces": {
       "br0": {
         "bindings": [

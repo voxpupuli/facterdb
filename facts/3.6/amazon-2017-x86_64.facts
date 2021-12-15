@@ -196,9 +196,9 @@
   "network_lo": "127.0.0.0",
   "networking": {
     "dhcp": "10.254.253.129",
-    "domain": "us-gov-west-1.compute.internal",
+    "domain": "example.com",
     "fqdn": "foo.example.com",
-    "hostname": "ip-10-254-253-132",
+    "hostname": "foo",
     "interfaces": {
       "eth0": {
         "bindings": [
