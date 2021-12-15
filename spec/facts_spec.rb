@@ -134,7 +134,6 @@ describe 'Default Facts' do
         expect(content['systemd_internal_services']).to be_nil
       end
       it 'contains a legacy hostname, domain and fqdn fact' do
-        pending KNOWN_HOSTNAME_PENDING[relative_path] if KNOWN_HOSTNAME_PENDING.key?(relative_path)
         expect(content['hostname']).to eq('foo')
         expect(content['fqdn']).to eq('foo.example.com')
         expect(content['domain']).to eq('example.com')

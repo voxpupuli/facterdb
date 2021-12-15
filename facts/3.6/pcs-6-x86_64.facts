@@ -1,4 +1,7 @@
 {
+  "fqdn": "foo.example.com",
+  "domain": "example.com",
+  "hostname": "foo",
   "aio_agent_version": "1.10.1",
   "augeas": {
     "version": "1.4.0"
