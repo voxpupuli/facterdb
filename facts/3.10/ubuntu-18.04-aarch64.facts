@@ -1,4 +1,5 @@
 {
+  "ipaddress": "192.168.0.1",
   "fqdn": "foo.example.com",
   "domain": "example.com",
   "hostname": "foo",
@@ -306,6 +307,7 @@
     "dhcp": "192.168.1.1",
     "fqdn": "foo.example.com",
     "hostname": "foo",
+    "domain": "example.com",
     "interfaces": {
       "datapath": {
         "bindings6": [

@@ -326,6 +326,7 @@
     "dhcp": "10.0.2.2",
     "fqdn": "foo.example.com",
     "hostname": "foo",
+    "domain": "example.com",
     "interfaces": {
       "eth0": {
         "bindings": [

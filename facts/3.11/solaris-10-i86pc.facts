@@ -399,7 +399,7 @@
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
-    "hostname": "myhostname",
+    "hostname": "foo",
     "interfaces": {
       "lo0": {
         "bindings": [

@@ -190,7 +190,7 @@
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
-    "hostname": "hostname",
+    "hostname": "foo",
     "interfaces": {
       "en0": {
         "bindings6": [
