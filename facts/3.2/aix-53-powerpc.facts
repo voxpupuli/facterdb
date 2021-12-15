@@ -1,4 +1,7 @@
 {
+  "fqdn": "foo.example.com",
+  "domain": "example.com",
+  "hostname": "foo",
   "augeas": {
     "version": "1.4.0"
   },

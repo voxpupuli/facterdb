@@ -1,4 +1,7 @@
 {
+  "fqdn": "foo.example.com",
+  "domain": "example.com",
+  "hostname": "foo",
   "disks": {
     "mmcblk1": {
       "size": "29.81 GiB",
@@ -301,8 +304,8 @@
   },
   "networking": {
     "dhcp": "192.168.1.1",
-    "fqdn": "master1",
-    "hostname": "master1",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "datapath": {
         "bindings6": [
