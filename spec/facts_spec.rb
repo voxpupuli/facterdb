@@ -62,36 +62,6 @@ describe 'Default Facts' do
     end
   end
 
-  KNOWN_IPADDRESS_PENDING = {
-    'facts/1.6/fedora-19-i386.facts' => 'unable to regenerate facts',
-    'facts/1.6/fedora-19-x86_64.facts' => 'unable to regenerate facts',
-    'facts/2.1/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/3.10/ubuntu-18.04-aarch64.facts' => 'unable to regenerate facts',
-    'facts/1.6/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/2.4/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/3.2/aix-61-powerpc.facts' => 'unable to regenerate facts',
-    'facts/3.2/aix-71-powerpc.facts' => 'unable to regenerate facts',
-    'facts/3.2/aix-53-powerpc.facts' => 'unable to regenerate facts',
-    'facts/2.3/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/2.5/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/1.7/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/2.0/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/2.2/archlinux-x86_64.facts' => 'no ifconfig package',
-    'facts/3.6/pcs-6-x86_64.facts' => 'unable to regenerate facts',
-    'facts/3.0/ubuntu-15.10-x86_64.facts' => 'no puppet-agent package',
-    'facts/3.0/ubuntu-15.10-i386.facts' => 'no puppet-agent package',
-  }
-
-  KNOWN_HOSTNAME_PENDING = {
-    'facts/3.10/ubuntu-18.04-aarch64.facts' => 'unable to regenerate facts',
-    'facts/3.2/aix-61-powerpc.facts' => 'unable to regenerate facts',
-    'facts/3.2/aix-71-powerpc.facts' => 'unable to regenerate facts',
-    'facts/3.2/aix-53-powerpc.facts' => 'unable to regenerate facts',
-    'facts/3.6/pcs-6-x86_64.facts' => 'unable to regenerate facts',
-    'facts/3.0/ubuntu-15.10-x86_64.facts' => 'no puppet-agent package',
-    'facts/3.0/ubuntu-15.10-i386.facts' => 'no puppet-agent package',
-  }
-
   project_dir = Pathname.new(__dir__).parent
   FacterDB.default_fact_files.each do |filepath|
     relative_path = Pathname.new(filepath).relative_path_from(project_dir).to_s
@@ -110,14 +80,16 @@ describe 'Default Facts' do
         expect(content['facterversion']).to have_facter_version(facter_dir_path, filepath)
       end
 
-      it 'contains an ipaddress or networking.ip fact' do
-        pending KNOWN_IPADDRESS_PENDING[relative_path] if KNOWN_IPADDRESS_PENDING.key?(relative_path)
-        case content['facterversion']
-        when /^[1-3]/
-          expect(content['ipaddress']).to not_be_nil.and not_be_empty
-        else
+      it 'contains newer networking facts hash' do
+        if Gem::Version.new(content['facterversion']) >= Gem::Version.new('3.0.0')
           expect(content['networking']['ip']).to not_be_nil.and not_be_empty
+          expect(content['networking']['hostname']).to eq('foo')
+          expect(content['networking']['domain']).to eq('example.com')
+          expect(content['networking']['fqdn']).to eq('foo.example.com')
         end
+      end
+      it 'contains the legacy ipaddress fact' do
+        expect(content['ipaddress']).to not_be_nil.and not_be_empty
       end
       it 'contains no facts from puppetlabs/stdlib' do
         expect(content['root_home']).to be_nil
