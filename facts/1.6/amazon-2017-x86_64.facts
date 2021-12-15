@@ -3,7 +3,7 @@
   "architecture": "x86_64",
   "kernel": "Linux",
   "augeasversion": "1.4.0",
-  "domain": "us-gov-west-1.compute.internal",
+  "domain": "example.com",
   "macaddress": "02:85:E9:60:90:D4",
   "operatingsystem": "Amazon",
   "facterversion": "1.6.18",

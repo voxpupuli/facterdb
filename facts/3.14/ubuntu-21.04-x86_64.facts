@@ -28,7 +28,7 @@
       "size_bytes": 53687091200
     }
   },
-  "domain": "ubuntu.towo.people.b1-systems.de",
+  "domain": "example.com",
   "facterversion": "3.14.20",
   "filesystems": "ext2,ext3,ext4,squashfs,vfat",
   "fips_enabled": false,
@@ -312,7 +312,7 @@
   "network_public": "8.8.8.8",
   "networking": {
     "dhcp": "8.8.8.8",
-    "domain": "ubuntu.towo.people.b1-systems.de",
+    "domain": "example.com",
     "fqdn": "foo.example.com",
     "hostname": "2104",
     "interfaces": {

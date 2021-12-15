@@ -11,7 +11,7 @@
   "mtu_lo": "65536",
   "architecture": "x86_64",
   "macaddress": "02:85:E9:60:90:D4",
-  "domain": "us-gov-west-1.compute.internal",
+  "domain": "example.com",
   "operatingsystemmajrelease": "4",
   "fqdn": "foo.example.com",
   "id": "root",
