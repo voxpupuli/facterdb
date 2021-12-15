@@ -37,7 +37,7 @@
       "uuid": "EC209762-DEF6-9B34-BB6F-EBA5E5EE4C56"
     }
   },
-  "domain": "us-gov-west-1.compute.internal",
+  "domain": "example.com",
   "ec2_metadata": {
     "ami-id": "ami-b2d056d3",
     "ami-launch-index": "0",
@@ -46,14 +46,14 @@
       "ami": "/dev/xvda",
       "root": "/dev/xvda"
     },
-    "hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+    "hostname": "foo.example.com",
     "iam": {
       "info": "{\n  \"Code\" : \"Success\",\n  \"LastUpdated\" : \"2017-09-14T21:04:53Z\",\n  \"InstanceProfileArn\" : \"arn:aws-us-gov:iam::050287752177:instance-profile/caf-dev-default-role\",\n  \"InstanceProfileId\" : \"AIPAK7C66WYDVS3ZKCQRI\"\n}"
     },
     "instance-action": "none",
     "instance-id": "i-021bd29b48d609819",
     "instance-type": "t2.small",
-    "local-hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+    "local-hostname": "foo.example.com",
     "local-ipv4": "10.254.253.132",
     "mac": "02:85:e9:60:90:d4",
     "metrics": {
@@ -65,7 +65,7 @@
           "02:85:e9:60:90:d4": {
             "device-number": "0",
             "interface-id": "eni-f53215b3",
-            "local-hostname": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+            "local-hostname": "foo.example.com",
             "local-ipv4s": "10.254.253.132",
             "mac": "02:85:e9:60:90:d4",
             "owner-id": "050287752177",
@@ -99,11 +99,11 @@
   "ec2_userdata": "#!/bin/bash -ex\nyum -y update\nrpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm\nyum -y install puppet-agent\nmkdir -p /etc/puppet/modules\n/opt/puppetlabs/bin/puppet module install saz-sudo\n/opt/puppetlabs/bin/puppet module install puppetlabs-accounts\naws --region us-gov-west-1 s3 cp s3://caf-ops-deployment/user_data/users_ops.pp /root/\n/opt/puppetlabs/bin/puppet apply /root/users_ops.pp",
   "facterversion": "3.6.5",
   "filesystems": "ext3,ext4",
-  "fqdn": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+  "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
-  "hostname": "ip-10-254-253-132",
+  "hostname": "foo",
   "id": "root",
   "identity": {
     "gid": 0,
@@ -197,7 +197,7 @@
   "networking": {
     "dhcp": "10.254.253.129",
     "domain": "us-gov-west-1.compute.internal",
-    "fqdn": "ip-10-254-253-132.us-gov-west-1.compute.internal",
+    "fqdn": "foo.example.com",
     "hostname": "ip-10-254-253-132",
     "interfaces": {
       "eth0": {

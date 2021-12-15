@@ -16,11 +16,11 @@
   "domain": "example.com",
   "facterversion": "3.9.4",
   "filesystems": "ahafs,autofs,cachefs,cdrfs,cifs,jfs,jfs2,namefs,nfs,nfs3,nfs4,pmemfs,procfs,sfs,stnfs,udfs",
-  "fqdn": "hostname.example.com",
+  "fqdn": "foo.example.com",
   "gid": "system",
   "hardwareisa": "powerpc",
   "hardwaremodel": "IBM,8284-22A",
-  "hostname": "hostname",
+  "hostname": "foo",
   "id": "root",
   "identity": {
     "gid": 0,
@@ -189,7 +189,7 @@
   "network_lo0": "127.0.0.0",
   "networking": {
     "domain": "example.com",
-    "fqdn": "hostname.example.com",
+    "fqdn": "foo.example.com",
     "hostname": "hostname",
     "interfaces": {
       "en0": {

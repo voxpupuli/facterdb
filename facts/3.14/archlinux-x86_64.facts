@@ -51,7 +51,7 @@
   "facterversion": "3.14.14",
   "filesystems": "btrfs",
   "fips_enabled": false,
-  "fqdn": "archlinux",
+  "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "unknown",
   "hardwaremodel": "x86_64",

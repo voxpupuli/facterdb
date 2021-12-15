@@ -53,11 +53,11 @@
   "facterversion": "3.14.5",
   "filesystems": "btrfs,ext2,ext3,ext4,msdos,vfat,xfs",
   "fips_enabled": false,
-  "fqdn": "awesome.example.com",
+  "fqdn": "foo.example.com",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
-  "hostname": "awesome",
+  "hostname": "foo",
   "hypervisors": {
     "openvz": {
       "cloudlinux": false,
@@ -345,7 +345,7 @@
   "networking": {
     "dhcp": "169.255.254.1",
     "domain": "example.com",
-    "fqdn": "awesome.example.com",
+    "fqdn": "foo.example.com",
     "hostname": "awesome",
     "interfaces": {
       "eth0": {
