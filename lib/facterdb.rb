@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'facter'
 require 'jgrep'
 
@@ -34,9 +36,11 @@ module FacterDB
   def self.read_json_file(f)
     content = File.read(f)
     return content unless inject_source?
+
     # Find the opening brace
     first_brace = content.index('{')
     return content if first_brace.nil?
+
     # Inject source file information
     json_injection =  "\"_facterdb_filename\": #{File.basename(f).to_json}, "
     json_injection += "\"_facterdb_path\": #{File.expand_path(f).to_json}, "
@@ -47,9 +51,10 @@ module FacterDB
   # @return [Array[String]] -  list of all files found in the default facterdb facts path
   def self.default_fact_files
     return [] unless use_defaultdb?
+
     proj_root = File.join(File.dirname(File.dirname(__FILE__)))
     facts_dir = File.expand_path(File.join(proj_root, 'facts'))
-    Dir.glob(File.join(facts_dir, "**", '*.facts'))
+    Dir.glob(File.join(facts_dir, '**', '*.facts'))
   end
 
   # @return [Array[String]] -  list of all files found in the user supplied facterdb facts path
@@ -57,6 +62,7 @@ module FacterDB
   def self.external_fact_files(fact_paths = ENV['FACTERDB_SEARCH_PATHS'])
     fact_paths ||= ''
     return [] if fact_paths.empty?
+
     paths = fact_paths.split(File::PATH_SEPARATOR).map do |fact_path|
       unless File.directory?(fact_path)
         warn("[FACTERDB] Ignoring external facts path #{fact_path} as it is not a directory")
@@ -74,23 +80,25 @@ module FacterDB
     (external_fact_files + default_fact_files).uniq
   end
 
-  def self.get_os_facts(facter_version='*', filter=[])
+  def self.get_os_facts(facter_version = '*', filter = [])
     if facter_version == '*'
-      if filter.is_a?(Array)
-        filter_str = filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(' or ')
-      elsif filter.is_a?(Hash)
-        filter_str = filter.map { |k,v | "#{k}=#{v}" }.join(' and ')
-      elsif filter.is_a?(String)
+      case filter
+      when Array
+        filter_str = filter.map { |f| f.map { |k, v| "#{k}=#{v}" }.join(' and ') }.join(' or ')
+      when Hash
+        filter_str = filter.map { |k, v| "#{k}=#{v}" }.join(' and ')
+      when String
         filter_str = filter
       else
         raise 'filter must be either an Array a Hash or a String'
       end
     else
-      if filter.is_a?(Array)
-        filter_str = "facterversion=/^#{facter_version}/ and (#{filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(' or ')})"
-      elsif filter.is_a?(Hash)
-        filter_str = "facterversion=/^#{facter_version}/ and (#{filter.map { |k,v | "#{k}=#{v}" }.join(' and ')})"
-      elsif filter.is_a?(String)
+      case filter
+      when Array
+        filter_str = "facterversion=/^#{facter_version}/ and (#{filter.map { |f| f.map { |k, v| "#{k}=#{v}" }.join(' and ') }.join(' or ')})"
+      when Hash
+        filter_str = "facterversion=/^#{facter_version}/ and (#{filter.map { |k, v| "#{k}=#{v}" }.join(' and ')})"
+      when String
         filter_str = "facterversion=/^#{facter_version}/ and (#{filter})"
       else
         raise 'filter must be either an Array a Hash or a String'
@@ -104,12 +112,14 @@ module FacterDB
 
   # @return [String] - the string filter
   # @param filter [Object] - The filter to convert to jgrep string
-  def self.generate_filter_str(filter=nil)
+  def self.generate_filter_str(filter = nil)
     case filter
     when ::Array
-      '(' + filter.map { |f| f.map { |k,v | "#{k}=#{v}" }.join(' and ') }.join(') or (') + ')'
+      # rubocop:disable Style/StringConcatenation
+      '(' + filter.map { |f| f.map { |k, v| "#{k}=#{v}" }.join(' and ') }.join(') or (') + ')'
+      # rubocop:enable Style/StringConcatenation
     when ::Hash
-      filter.map { |k,v | "#{k}=#{v}" }.join(' and ')
+      filter.map { |k, v| "#{k}=#{v}" }.join(' and ')
     when ::String
       filter
     when ::NilClass
@@ -130,12 +140,11 @@ module FacterDB
 
   # @return [Array] - array of hashes of facts
   # @param filter [Object] - The filter to convert to jgrep string
-  def self.get_facts(filter=nil, cache=true)
-    if cache && filter && filter == Thread.current[:facterdb_last_filter_seen]
-      return Thread.current[:facterdb_last_facts_seen]
-    end
+  def self.get_facts(filter = nil, cache = true)
+    return Thread.current[:facterdb_last_facts_seen] if cache && filter && filter == Thread.current[:facterdb_last_filter_seen]
+
     filter_str = generate_filter_str(filter)
-    result = JGrep.jgrep(database, filter_str).map { |hash| Hash[hash.map{ |k, v| [k.to_sym, v] }] }
+    result = JGrep.jgrep(database, filter_str).map { |hash| hash.transform_keys(&:to_sym) }
     if cache
       Thread.current[:facterdb_last_filter_seen] = filter
       Thread.current[:facterdb_last_facts_seen] = result

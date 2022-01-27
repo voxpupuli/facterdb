@@ -152,4 +152,7 @@ task :table do
   end
 end
 
-task default: 'spec'
+task default: %w[
+  rubocop
+  spec
+]
