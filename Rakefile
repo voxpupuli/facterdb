@@ -148,3 +148,5 @@ task :table do
     fd.puts (new_readme + readme[readme.rindex { |r| r.start_with?('| ') } + 1..-1]).join("\n")
   end
 end
+
+task default: 'spec'
