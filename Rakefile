@@ -1,4 +1,7 @@
 require 'facterdb/version'
+require 'rubocop/rake_task'
+
+RuboCop::RakeTask.new
 
 begin
   require 'rspec/core/rake_task'
