@@ -1,5 +1,7 @@
 {
   "ipaddress": "192.168.0.1",
+  "operatingsystem": "CentOS",
+  "osfamily": "RedHat",
   "os": {
     "family": "RedHat",
     "name": "CentOS",

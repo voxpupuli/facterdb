@@ -74,6 +74,7 @@
   "netmask_lo": "255.0.0.0",
   "mtu_lo": 65536,
   "id": "root",
+  "operatingsystem": "SLES",
   "os": {
     "family": "Linux",
     "release": {

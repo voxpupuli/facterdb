@@ -286,6 +286,8 @@
     "network6": "fec0::",
     "primary": "eth0"
   },
+  "operatingsystem": "RedHat",
+  "osfamily": "RedHat",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",

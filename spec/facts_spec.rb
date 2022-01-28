@@ -110,6 +110,12 @@ describe 'Default Facts' do
         expect(content['fqdn']).to eq('foo.example.com')
         expect(content['domain']).to eq('example.com')
       end
+      it 'contains the legacy osfamily fact' do
+        expect(content['osfamily']).to_not be_nil
+      end
+      it 'contains the legacy operatingsystem fact' do
+        expect(content['operatingsystem']).to_not be_nil
+      end
     end
   end
 end
