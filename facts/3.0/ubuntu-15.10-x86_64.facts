@@ -128,6 +128,8 @@
     "network": "10.0.2.0",
     "network6": "fe80::"
   },
+  "operatingsystem": "Ubuntu",
+  "osfamily": "Debian",
   "os": {
     "architecture": "amd64",
     "distro": {

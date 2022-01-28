@@ -467,6 +467,8 @@
     "network6": "fe80::",
     "primary": "eth0"
   },
+  "operatingsystem": "Ubuntu",
+  "osfamily": "Debian",
   "os": {
     "architecture": "aarch64",
     "distro": {

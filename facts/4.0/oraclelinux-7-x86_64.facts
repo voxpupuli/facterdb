@@ -1,5 +1,7 @@
 {
   "ipaddress": "192.168.0.1",
+  "operatingsystem": "OracleLinux",
+  "osfamily": "RedHat",
   "os": {
     "family": "RedHat",
     "name": "OracleLinux",

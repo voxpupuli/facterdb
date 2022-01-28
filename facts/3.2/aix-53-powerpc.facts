@@ -87,6 +87,8 @@
     "network": "10.32.77.0",
     "primary": "en0"
   },
+  "operatingsystem": "AIX",
+  "osfamily": "AIX",
   "os": {
     "architecture": "PowerPC_POWER7",
     "family": "AIX",

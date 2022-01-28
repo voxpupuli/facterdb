@@ -22,6 +22,8 @@
   },
   "facterversion": "4.0.52",
   "timezone": "PST",
+  "operatingsystem": "Solaris",
+  "osfamily": "Solaris",
   "os": {
     "name": "Solaris",
     "hardware": "sun4v",
