@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.13.0](https://rubygems.org/gems/facterdb/versions/1.13.0) (2022-02-11)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.12.2...1.13.0)
+
+**Implemented enhancements:**
+
+- Add CentOS 9 facter 3.14 facts [\#231](https://github.com/voxpupuli/facterdb/pull/231) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- document minimal Ruby 2.5 version in gemspec [\#233](https://github.com/voxpupuli/facterdb/pull/233) ([bastelfreak](https://github.com/bastelfreak))
+- Add Ruby 3.1 to CI matrix [\#232](https://github.com/voxpupuli/facterdb/pull/232) ([bastelfreak](https://github.com/bastelfreak))
+- Ensure all facts have osfamily/operatingsystem facts [\#230](https://github.com/voxpupuli/facterdb/pull/230) ([bastelfreak](https://github.com/bastelfreak))
+- add spec tests for legacy osfamily and operatingsystem facts [\#228](https://github.com/voxpupuli/facterdb/pull/228) ([jhoblitt](https://github.com/jhoblitt))
+- add a default rake target [\#227](https://github.com/voxpupuli/facterdb/pull/227) ([jhoblitt](https://github.com/jhoblitt))
+- Remove EOL things from fact collection and align Red Hat OSes [\#187](https://github.com/voxpupuli/facterdb/pull/187) ([ekohl](https://github.com/ekohl))
+
 ## [1.12.2](https://rubygems.org/gems/facterdb/versions/1.12.2) (2021-12-15)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.12.1...1.12.2)
