@@ -1,0 +1,551 @@
+{
+  "aio_agent_version": "7.12.1",
+  "augeas": {
+    "version": "1.12.0"
+  },
+  "architecture": "amd64",
+  "augeasversion": "1.12.0",
+  "bios_release_date": "01/25/2021",
+  "bios_vendor": "American Megatrends International, LLC.",
+  "bios_version": "A.C0",
+  "blockdevice_nvme0n1_model": "Samsung SSD 980 PRO 2TB",
+  "blockdevice_nvme0n1_size": 2000398934016,
+  "blockdevices": "nvme0n1",
+  "boardassettag": "To be filled by O.E.M.",
+  "boardmanufacturer": "Micro-Star International Co., Ltd.",
+  "boardproductname": "MPG X570 GAMING PLUS (MS-7C37)",
+  "boardserialnumber": "01234567",
+  "chassisassettag": "To be filled by O.E.M.",
+  "chassistype": "Desktop",
+  "disks": {
+    "nvme0n1": {
+      "model": "Samsung SSD 980 PRO 2TB",
+      "size": "1.82 TiB",
+      "size_bytes": 2000398934016,
+      "type": "ssd"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "01/25/2021",
+      "vendor": "American Megatrends International, LLC.",
+      "version": "A.C0"
+    },
+    "board": {
+      "asset_tag": "To be filled by O.E.M.",
+      "manufacturer": "Micro-Star International Co., Ltd.",
+      "product": "MPG X570 GAMING PLUS (MS-7C37)",
+      "serial_number": "00033825u52"
+    },
+    "chassis": {
+      "asset_tag": "To be filled by O.E.M.",
+      "type": "Desktop"
+    },
+    "manufacturer": "Micro-Star International Co., Ltd.",
+    "product": {
+      "name": "MS-7C37",
+      "serial_number": "To be filled by O.E.M.",
+      "uuid": "70587895-2a8a-7d1a-a956-d8bbc13e1281"
+    }
+  },
+  "domain": "example.com",
+  "fqdn": "foo.example.com",
+  "facterversion": "4.2.5",
+  "filesystems": "ext2,ext3,ext4,squashfs,vfat",
+  "fips_enabled": false,
+  "gid": "root",
+  "hardwareisa": "x86_64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "id": "root",
+  "ipaddress": "192.168.0.52",
+  "is_virtual": false,
+  "kernel": "Linux",
+  "kernelmajversion": "5.15",
+  "kernelrelease": "5.15.5-76051505-generic",
+  "kernelversion": "5.15.5",
+  "lsbdistcodename": "impish",
+  "lsbdistdescription": "Pop!_OS 21.10",
+  "lsbdistid": "Pop",
+  "lsbdistrelease": "21.10",
+  "lsbmajdistrelease": "21.10",
+  "macaddress": "52:54:00:0a:d2:26",
+  "netmask": "255.255.255.0",
+
+  "load_averages": {
+    "15m": 0.72,
+    "1m": 0.51,
+    "5m": 0.77
+  },
+  "memory": {
+    "swap": {
+      "available": "3.95 GiB",
+      "available_bytes": 4242530304,
+      "capacity": "1.21%",
+      "total": "4.00 GiB",
+      "total_bytes": 4294434816,
+      "used": "49.50 MiB",
+      "used_bytes": 51904512
+    },
+    "system": {
+      "available": "4.03 GiB",
+      "available_bytes": 4331921408,
+      "capacity": "74.15%",
+      "total": "15.61 GiB",
+      "total_bytes": 16758550528,
+      "used": "11.57 GiB",
+      "used_bytes": 12426629120
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "1.62 TiB",
+      "available_bytes": 1781146841088,
+      "capacity": "4.20%",
+      "device": "/dev/nvme0n1p3",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "noatime",
+        "errors=remount-ro"
+      ],
+      "size": "1.78 TiB",
+      "size_bytes": 1958874054656,
+      "used": "72.78 GiB",
+      "used_bytes": 78146306048
+    },
+    "/boot/efi": {
+      "available": "344.68 MiB",
+      "available_bytes": 361422848,
+      "capacity": "30.65%",
+      "device": "/dev/nvme0n1p1",
+      "filesystem": "vfat",
+      "options": [
+        "rw",
+        "relatime",
+        "fmask=0077",
+        "dmask=0077",
+        "codepage=437",
+        "iocharset=iso8859-1",
+        "shortname=mixed",
+        "errors=remount-ro"
+      ],
+      "size": "496.99 MiB",
+      "size_bytes": 521134080,
+      "used": "152.31 MiB",
+      "used_bytes": 159711232
+    },
+    "/dev": {
+      "available": "7.74 GiB",
+      "available_bytes": 8306450432,
+      "capacity": "0%",
+      "device": "udev",
+      "filesystem": "devtmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "relatime",
+        "size=8111768k",
+        "nr_inodes=2027942",
+        "mode=755",
+        "inode64"
+      ],
+      "size": "7.74 GiB",
+      "size_bytes": 8306450432,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/hugepages": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "hugetlbfs",
+      "filesystem": "hugetlbfs",
+      "options": [
+        "rw",
+        "relatime",
+        "pagesize=2M"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/mqueue": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "mqueue",
+      "filesystem": "mqueue",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/pts": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=000"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/shm": {
+      "available": "7.80 GiB",
+      "available_bytes": 8379187200,
+      "capacity": "0.00%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "inode64"
+      ],
+      "size": "7.80 GiB",
+      "size_bytes": 8379273216,
+      "used": "84.00 KiB",
+      "used_bytes": 86016
+    },
+    "/recovery": {
+      "available": "1.55 GiB",
+      "available_bytes": 1669238784,
+      "capacity": "61.06%",
+      "device": "/dev/nvme0n1p2",
+      "filesystem": "vfat",
+      "options": [
+        "rw",
+        "relatime",
+        "fmask=0077",
+        "dmask=0077",
+        "codepage=437",
+        "iocharset=iso8859-1",
+        "shortname=mixed",
+        "errors=remount-ro"
+      ],
+      "size": "3.99 GiB",
+      "size_bytes": 4286562304,
+      "used": "2.44 GiB",
+      "used_bytes": 2617323520
+    },
+    "/run": {
+      "available": "1.56 GiB",
+      "available_bytes": 1673371648,
+      "capacity": "0.15%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=1636580k",
+        "mode=755",
+        "inode64"
+      ],
+      "size": "1.56 GiB",
+      "size_bytes": 1675857920,
+      "used": "2.37 MiB",
+      "used_bytes": 2486272
+    },
+    "/run/docker/netns/2277faa61f56": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "nsfs",
+      "filesystem": "nsfs",
+      "options": [
+        "rw"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/docker/netns/4a0a5b4337a4": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "nsfs",
+      "filesystem": "nsfs",
+      "options": [
+        "rw"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/lock": {
+      "available": "5.00 MiB",
+      "available_bytes": 5242880,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=5120k",
+        "inode64"
+      ],
+      "size": "5.00 MiB",
+      "size_bytes": 5242880,
+      "used": "0 bytes",
+      "used_bytes": 0
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "enp39s0": {
+        "bindings": [
+          {
+            "address": "192.168.0.22",
+            "netmask": "255.255.255.0",
+            "network": "192.168.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::86ca:2238:9bda:f3f0",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "192.168.0.22",
+        "ip6": "fe80::86ca:2238:9bda:f3f0",
+        "mac": "52:54:00:0a:d2:26",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "192.168.0.0",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      }
+    },
+    "ip": "192.168.0.22",
+    "ip6": "fe80::86ca:6238:9bda:f590",
+    "mac": "52:54:00:0a:d2:26",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "192.168.0.0",
+    "network6": "fe80::",
+    "primary": "enp39s0",
+    "scope6": "link"
+  },
+  "os": {
+    "architecture": "amd64",
+    "distro": {
+      "codename": "impish",
+      "description": "Pop!_OS 21.10",
+      "id": "Pop",
+      "release": {
+        "full": "21.10",
+        "major": "21.10"
+      }
+    },
+    "family": "Debian",
+    "hardware": "x86_64",
+    "name": "Pop!_OS",
+    "release": {
+      "full": "21.10",
+      "major": "21.10"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "operatingsystem": "Pop!_OS",
+  "operatingsystemmajrelease": "21.10",
+  "operatingsystemrelease": "21.10",
+  "osfamily": "Debian",
+
+  "partitions": {
+    "/dev/mapper/cryptswap": {
+      "filesystem": "swap",
+      "label": "cryptswap",
+      "size": "4.00 GiB",
+      "size_bytes": 4294442496,
+      "uuid": "f8c36c61-2b06-4755-a65a-3b69ffbeb51a"
+    },
+    "/dev/nvme0n1p1": {
+      "filesystem": "vfat",
+      "mount": "/boot/efi",
+      "partuuid": "13b53dff-49b1-4bc0-9306-df472b483ccc",
+      "size": "498.00 MiB",
+      "size_bytes": 522190336,
+      "uuid": "2B14-2789"
+    },
+    "/dev/nvme0n1p2": {
+      "filesystem": "vfat",
+      "mount": "/recovery",
+      "partlabel": "recovery",
+      "partuuid": "e622e26b-4415-4d79-947d-3158fd9d0bc7",
+      "size": "4.00 GiB",
+      "size_bytes": 4294966784,
+      "uuid": "2B14-278B"
+    },
+    "/dev/nvme0n1p3": {
+      "filesystem": "ext4",
+      "mount": "/",
+      "partuuid": "b7553924-2e7c-4625-9011-03e04e39e0d0",
+      "size": "1.81 TiB",
+      "size_bytes": 1991282613760,
+      "uuid": "e984a433-cc85-470a-bb32-08cf122bb388"
+    },
+    "/dev/nvme0n1p4": {
+      "filesystem": "swap",
+      "partuuid": "6c2928d1-6859-4eec-83b6-12b8d5f95692",
+      "size": "4.00 GiB",
+      "size_bytes": 4294966784,
+      "uuid": "6441294b-c063-42bc-a9cb-70549fb58f8a"
+    }
+  },
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/opt/puppetlabs/bin",
+  "processors": {
+    "cores": 16,
+    "count": 32,
+    "isa": "x86_64",
+    "models": [
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor",
+      "AMD Ryzen 9 5950X 16-Core Processor"
+    ],
+    "physicalcount": 1,
+    "speed": "2.20 GHz",
+    "threads": 2
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
+    "version": "2.7.3"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 67b13ee0189a15088930f1e6801b308ac2054548",
+        "sha256": "SSHFP 3 2 645fe9a370f0eab3c3bf98ca903be6e488dc6d16d0449d1750fe9c9d6a493673"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEvnInMWzTWOtoddvB51x0Rjz4LerpdRnA68EO61q6giVazj1tEE7gNTGgAaYe6aSLkBjwnKPSEjCAUuYK4N9xI=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 19b7ffffeef84ad23e802a3f80a2913951d3a317",
+        "sha256": "SSHFP 4 2 f88bb013d9a26f9f61ba776a660be47fc98656f0fa9dab82c59bb86f6d75961f"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIHy8sZay43FnUnbzrGot6A229lvMyDhc5Lu9GSOzFBEq",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 cb73a8c727348a4c2a54063778e6e8a37f376ef9",
+        "sha256": "SSHFP 1 2 20456fc478655e93ace11e88e50aa894d641deae33396cf6283403614fba7ebe"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQC8mBchu9RyzPc6f4csxb97Jn9ejwDzzqAkRO/csXqvGYPxP8TcQsww/m1BiOOOCdIK6/F36tBup1w2i2aF/vL+EkJl7cMR82xOlOhhI9Fq6L1uzkR/QvOB98204N9AD7EhlzTb7ZWZYApG8RdbVDvgnuNBFfoERpNy4isD1/Yf0YAUSWAaxlzEIHRTa/yEvW82jz73EsFP9zso1IibSRpThXAQ/Xr5ZrlwRjXUKtTDWr5eiXpBqcH3p5m3dw2GQzUcWwaNE9aF7tpSQSzlbh6pm4q+RpFslIY/oh3p/fxi198/g7zoBw3BLL5E7YTa+GtEiJGANibuEu9U09t2VKabw3FJ3WSQTrH4LS4IK3EUoK7FH52ivlLooRI1CQ8XYBI086eCpJngZZnfeK7PlN7vKY7TZUDfSjDMJRJbQ1VKCwq2uYLtpSOAi8JWnIVap8zjQa6ufFJgcgR0dtgDEkUoC5M/jRraw7rynW+rdn5qsS2/zH7pIQrVJ+b1zezbLkc=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 18,
+    "seconds": 66148,
+    "uptime": "18:22 hours"
+  },
+  "timezone": "PST",
+  "virtual": "physical"
+}
