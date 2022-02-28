@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.14.0](https://rubygems.org/gems/facterdb/versions/1.14.0) (2022-02-28)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.13.0...1.14.0)
+
+**Implemented enhancements:**
+
+- Ubuntu 16: Update facter 3/4 factsets [\#238](https://github.com/voxpupuli/facterdb/pull/238) ([bastelfreak](https://github.com/bastelfreak))
+- Add popos 21.10 x86\_64 facts [\#236](https://github.com/voxpupuli/facterdb/pull/236) ([logicminds](https://github.com/logicminds))
+
 ## [1.13.0](https://rubygems.org/gems/facterdb/versions/1.13.0) (2022-02-11)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.12.2...1.13.0)
