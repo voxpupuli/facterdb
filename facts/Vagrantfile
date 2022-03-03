@@ -157,8 +157,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
   end
-  config.vm.define "opensuse-15.0-x86_64" do |host|
-    host.vm.box = "opensuse/openSUSE-15.0-x86_64"
+  config.vm.define "opensuse-15.4-x86_64" do |host|
+    host.vm.box = "opensuse/Leap-15.4.x86_64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
     host.vm.provision "shell", path: "get_facts.sh"
   end
