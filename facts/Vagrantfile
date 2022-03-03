@@ -72,6 +72,27 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
     host.vbguest.auto_update = true
   end
+  config.vm.define "centos-stream8-x86_64" do |host|
+    host.vm.box = "centos/stream8"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install wget make gcc net-tools"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+    host.vbguest.auto_update = true
+  end
+  # will work after https://www.centos.org/centos-stream/#tab-3 got updated
+  # in the meantime images are at https://cloud.centos.org/centos/9-stream/x86_64/images/
+  # can be imported with vagrant box add --name centos/stream9 $url
+  config.vm.define "centos-stream9-x86_64" do |host|
+    host.vm.box = "centos/stream9"
+    host.vm.synced_folder ".", "/vagrant"
+    host.vm.provision "shell", inline: "dnf -y install wget make gcc net-tools"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+    host.vbguest.auto_update = true
+  end
   config.vm.define "almalinux-8-x86_64" do |host|
     host.vm.box = "almalinux/8"
     host.vm.synced_folder ".", "/vagrant"
