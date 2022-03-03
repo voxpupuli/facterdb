@@ -140,6 +140,8 @@ case "${osfamily}" in
   [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
   ;;
 'Suse')
+  # install deps that we need later for gem based setup
+  zypper --gpg-auto-import-keys --non-interactive install make gcc
   if [[ ${operatingsystemmajrelease} -lt 12 ]]; then
     # SLES 11 can no longer wget the release file with HTTPS due to mis-matched SSL support:
     http_method='http'
