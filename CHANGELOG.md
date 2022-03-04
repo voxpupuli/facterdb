@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.15.0](https://rubygems.org/gems/facterdb/versions/1.15.0) (2022-03-04)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.14.0...1.15.0)
+
+**Implemented enhancements:**
+
+- Add opensuse 15 factsets [\#241](https://github.com/voxpupuli/facterdb/pull/241) ([bastelfreak](https://github.com/bastelfreak))
+- Add new SLES15 facts [\#240](https://github.com/voxpupuli/facterdb/pull/240) ([tuxmea](https://github.com/tuxmea))
+- Add CentOS Stream8/9 boxes [\#234](https://github.com/voxpupuli/facterdb/pull/234) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.14.0](https://rubygems.org/gems/facterdb/versions/1.14.0) (2022-02-28)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.13.0...1.14.0)
