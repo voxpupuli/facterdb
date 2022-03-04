@@ -121,7 +121,7 @@ FacterDB::get_facts('osfamily=Debian')
 | OpenBSD 6.4                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |     |     |     |     |  1  |     |     |     |     |     |
 | OpenSuSE 12                 |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | OpenSuSE 13                 |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| OpenSuSE 15                 |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |     |     |     |     |     |     |
+| OpenSuSE 15                 |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |  1  |     |     |     |
 | OpenSuSE 42                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |
 | OracleLinux 5               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  1  |  1  |  1  |     |     |     |     |     |     |
 | OracleLinux 6               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  1  |  1  |  2  |  1  |  1  |  1  |     |     |     |
@@ -168,6 +168,7 @@ FacterDB::get_facts('osfamily=Debian')
 | Windows Server 2012 R2 Core |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |
 | Windows Server 2016         |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |
 | Windows Server 2019         |     |     |     |     |     |     |     |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |
+| openSUSE 15                 |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |
 
 Where the number (1, 2 etc.) are the number of factsets for that OS and facter combination (e.g., x86_64 and i386 architectures).
 
