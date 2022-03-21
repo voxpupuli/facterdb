@@ -124,7 +124,7 @@ FacterDB::get_facts('osfamily=Debian')
 | OpenSuSE 15                 |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |  1  |     |     |     |
 | OpenSuSE 42                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |
 | OracleLinux 5               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  1  |  1  |  1  |     |     |     |     |     |     |
-| OracleLinux 6               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  1  |  1  |  2  |  1  |  1  |  1  |     |     |     |
+| OracleLinux 6               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  1  |  1  |  2  |  1  |  1  |  1  |     |     |  1  |
 | OracleLinux 7               |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  1  |  2  |  2  |     |  2  |  1  |  1  |  2  |  1  |  1  |  1  |  1  |  2  |  1  |  1  |  1  |  1  |     |  1  |
 | OracleLinux 8               |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |  1  |     |     |  1  |
 | OracleLinux 9               |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |
@@ -193,6 +193,9 @@ $ bundle exec rake rhel_alts
 ```
 
 Then update the table in this README by running `bundle exec rake table`
+
+*NOTE*: When using Facter version 4, by default some "legacy facts" are hidden from the output.
+To generate a fact set with the legacy facts use the command `puppet facts show --show-legacy`
 
 ## Supplying custom external facts
 
