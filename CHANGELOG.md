@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.16.0](https://rubygems.org/gems/facterdb/versions/1.16.0) (2022-04-20)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.15.0...1.16.0)
+
+**Implemented enhancements:**
+
+- Arch Linux: Add facter 4.2 factset [\#244](https://github.com/voxpupuli/facterdb/pull/244) ([bastelfreak](https://github.com/bastelfreak))
+- Add OL6 facts for Facter 4 [\#243](https://github.com/voxpupuli/facterdb/pull/243) ([as0bu](https://github.com/as0bu))
+
 ## [1.15.0](https://rubygems.org/gems/facterdb/versions/1.15.0) (2022-03-04)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.14.0...1.15.0)
