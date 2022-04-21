@@ -116,6 +116,12 @@ describe 'Default Facts' do
       it 'contains the legacy operatingsystem fact' do
         expect(content['operatingsystem']).to_not be_nil
       end
+      it 'contains the legacy operatingsystemrelease fact' do
+        expect(content['operatingsystemrelease']).to_not be_nil
+      end
+      it 'contains the legacy operatingsystemmajrelease fact' do
+        expect(content['operatingsystemmajrelease']).to_not be_nil
+      end
     end
   end
 end
