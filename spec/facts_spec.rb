@@ -117,6 +117,20 @@ describe 'Default Facts' do
         expect(content['systemd_version']).to be_nil
         expect(content['systemd_internal_services']).to be_nil
       end
+
+      it 'contains a legacy hostname, domain and fqdn fact' do
+        expect(content['hostname']).to eq('foo')
+        expect(content['fqdn']).to eq('foo.example.com')
+        expect(content['domain']).to eq('example.com')
+      end
+
+      it 'contains the legacy osfamily fact' do
+        expect(content['osfamily']).not_to be_nil
+      end
+
+      it 'contains the legacy operatingsystem fact' do
+        expect(content['operatingsystem']).not_to be_nil
+      end
     end
   end
 end
