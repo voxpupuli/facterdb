@@ -204,6 +204,17 @@
   "operatingsystem": "Archlinux",
   "os": {
     "architecture": "x86_64",
+    "distro": {
+      "codename": "n/a",
+      "description": "Arch Linux",
+      "id": "Arch",
+      "release": {
+        "full": "rolling",
+        "major": "rolling",
+        "minor": null
+      },
+      "specification": "n/a"
+    },
     "family": "Archlinux",
     "hardware": "x86_64",
     "name": "Archlinux",
