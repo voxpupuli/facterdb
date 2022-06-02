@@ -53,7 +53,7 @@ case "${osfamily}" in
   fi
   yum -y install "https://yum.puppetlabs.com/puppet6-release-${distcode}-${operatingsystemmajrelease}.noarch.rpm"
   if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 6.25.0; do
+    for puppet_agent_version in 6.25.0 6.27.1; do
       if yum install -y puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
@@ -65,7 +65,7 @@ case "${osfamily}" in
   wget "http://yum.puppetlabs.com/puppet7-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet7-release.rpm
   if test -f /tmp/puppet7-release.rpm; then
     rpm -ivh /tmp/puppet7-release.rpm
-    for puppet_agent_version in 7.5.0 7.6.1 7.12.0; do
+    for puppet_agent_version in 7.5.0 7.6.1 7.17.0; do
       if yum install -y puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
