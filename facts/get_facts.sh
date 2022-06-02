@@ -190,6 +190,11 @@ bundle install --path vendor/bundler
 
 for version in 4.0.0 4.1.0 4.2.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
+  # sometimes all versions of facter are not possible, if the bundle update fails, skip the rest of the loop
+  if [ $? -ne 0 ]; then
+    echo "bundle update failed for facter version: $version"
+    continue
+  fi
 
   # This is another workaround for shared folder on FreeBSD.  "Accessing"
   # /vagrant helps to not encounter a bug where we try to access files in
