@@ -78,7 +78,8 @@ case "${osfamily}" in
 'Debian')
   apt_install curl
   curl "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -o /tmp/puppet6-release.deb
-  if test "$?" -eq 0 -a -f /tmp/puppet6-release.deb; then
+  # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
+  if test "$?" -eq 0 -a -f /tmp/puppet6-release.deb && [[ "$(file -b /tmp/puppet6-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet6-release.deb
     apt-get update
     for puppet_agent_version in 6.2 6.4 6.6; do
@@ -91,7 +92,8 @@ case "${osfamily}" in
     apt-get -y remove --purge puppet6-release
   fi
   curl "https://apt.puppetlabs.com/puppet7-release-${lsbdistcodename}.deb" -o /tmp/puppet7-release.deb
-  if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb; then
+  # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
+  if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb && [[ "$(file -b /tmp/puppet6-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet7-release.deb
     apt-get update
     for puppet_agent_version in 7.5.0 7.6.1 7.12.0; do
@@ -105,9 +107,9 @@ case "${osfamily}" in
   fi
   apt_install make gcc libgmp-dev
 
-  # There are no puppet-agent packages for Buster yet, so generate a Facter 3.x
+  # There are no puppet-agent packages for $releasename yet, so generate a Facter 3.x
   # fact set from the official Debian package.
-  if [[ "buster" = "${lsbdistcodename}" || "hirsute" =~ ${lsbdistcodename} || "impish" =~ ${lsbdistcodename} ]]; then
+  if [[ "hirsute" =~ ${lsbdistcodename} || "impish" =~ ${lsbdistcodename} || "jammy" =~ ${lsbdistcodename} ]]; then
     apt_install ruby rubygems ruby-dev puppet facter
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
