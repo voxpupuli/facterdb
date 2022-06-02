@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.17.0](https://rubygems.org/gems/facterdb/versions/1.17.0) (2022-06-02)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.16.1...1.17.0)
+
+**Implemented enhancements:**
+
+- Add fedora 36 facts [\#249](https://github.com/voxpupuli/facterdb/pull/249) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
 ## [1.16.1](https://rubygems.org/gems/facterdb/versions/1.16.1) (2022-04-22)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.16.0...1.16.1)
