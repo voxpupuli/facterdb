@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.18.0](https://rubygems.org/gems/facterdb/versions/1.18.0) (2022-06-02)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.17.0...1.18.0)
+
+**Implemented enhancements:**
+
+- add ubuntu/jammy 22.04 facts [\#253](https://github.com/voxpupuli/facterdb/pull/253) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add Almalinux 9 [\#251](https://github.com/voxpupuli/facterdb/pull/251) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
 ## [1.17.0](https://rubygems.org/gems/facterdb/versions/1.17.0) (2022-06-02)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.16.1...1.17.0)
