@@ -1,0 +1,484 @@
+{
+  "hostname": "foo",
+  "operatingsystem": "Amazon",
+  "osfamily": "RedHat",
+  "fqdn": "foo.example.com",
+  "domain": "example.com",
+  "ipaddress": "172.17.0.7",
+  "os": {
+    "distro": {
+      "description": "Amazon Linux release 2022 (Amazon Linux)",
+      "codename": "Amazon Linux",
+      "id": "Amazon",
+      "release": {
+        "full": "2022",
+        "major": "2022"
+      }
+    },
+    "release": {
+      "full": "2022",
+      "major": "2022"
+    },
+    "name": "Amazon",
+    "family": "RedHat",
+    "selinux": {
+      "enabled": false
+    },
+    "architecture": "x86_64",
+    "hardware": "x86_64"
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "04/01/2014",
+      "version": "rel-1.15.0-0-g2dd4b9b3f840-prebuilt.qemu.org",
+      "vendor": "SeaBIOS"
+    },
+    "product": {
+      "name": "Standard PC (Q35 + ICH9, 2009)"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "QEMU"
+  },
+  "hypervisors": {
+    "docker": {
+      "id": "b5fc79e6ce78aa1759f9cf2a273d377267da920ef1548bff9e9116b573137744"
+    }
+  },
+  "fips_enabled": false,
+  "aio_agent_version": "7.17.0",
+  "disks": {
+    "sr0": {
+      "model": "QEMU DVD-ROM",
+      "size_bytes": 214958080,
+      "size": "205.00 MiB",
+      "vendor": "QEMU",
+      "type": "hdd"
+    },
+    "vda": {
+      "size_bytes": 107374182400,
+      "size": "100.00 GiB",
+      "vendor": "0x1af4",
+      "type": "hdd"
+    },
+    "sr1": {
+      "model": "QEMU DVD-ROM",
+      "size_bytes": 7180288,
+      "size": "6.85 MiB",
+      "vendor": "QEMU",
+      "type": "hdd"
+    }
+  },
+  "load_averages": {
+    "1m": 1.12,
+    "5m": 1.07,
+    "15m": 0.7
+  },
+  "augeas": {
+    "version": "1.12.0"
+  },
+  "identity": {
+    "user": "root",
+    "privileged": true,
+    "group": "root",
+    "gid": 0,
+    "uid": 0
+  },
+  "mountpoints": {
+    "/": {
+      "device": "overlay",
+      "filesystem": "overlay",
+      "options": [
+        "rw",
+        "relatime",
+        "lowerdir=/var/lib/docker/overlay2/l/GNAUKDX25BPA7ND2QH5C7BSV3U:/var/lib/docker/overlay2/l/TCN4F6VSPRWI6VPPOC4QP2DRQQ",
+        "upperdir=/var/lib/docker/overlay2/05691b9aefcaac1322499d0afbae1beefc2445abf532fc1783664b491c9ca0c3/diff",
+        "workdir=/var/lib/docker/overlay2/05691b9aefcaac1322499d0afbae1beefc2445abf532fc1783664b491c9ca0c3/work"
+      ],
+      "size_bytes": 105088212992,
+      "available_bytes": 78924451840,
+      "used_bytes": 20778328064,
+      "capacity": "20.84%",
+      "size": "97.87 GiB",
+      "available": "73.50 GiB",
+      "used": "19.35 GiB"
+    },
+    "/dev": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "size=65536k",
+        "mode=755",
+        "inode64"
+      ],
+      "size_bytes": 67108864,
+      "available_bytes": 67108864,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "64.00 MiB",
+      "available": "64.00 MiB",
+      "used": "0 bytes"
+    },
+    "/dev/pts": {
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=666"
+      ],
+      "size_bytes": 0,
+      "available_bytes": 0,
+      "used_bytes": 0,
+      "capacity": "100%",
+      "size": "0 bytes",
+      "available": "0 bytes",
+      "used": "0 bytes"
+    },
+    "/sys/fs/cgroup": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "mode=755",
+        "inode64"
+      ],
+      "size_bytes": 2067218432,
+      "available_bytes": 2067218432,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "1.93 GiB",
+      "available": "1.93 GiB",
+      "used": "0 bytes"
+    },
+    "/dev/mqueue": {
+      "device": "mqueue",
+      "filesystem": "mqueue",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime"
+      ],
+      "size_bytes": 0,
+      "available_bytes": 0,
+      "used_bytes": 0,
+      "capacity": "100%",
+      "size": "0 bytes",
+      "available": "0 bytes",
+      "used": "0 bytes"
+    },
+    "/dev/shm": {
+      "device": "shm",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=65536k",
+        "inode64"
+      ],
+      "size_bytes": 67108864,
+      "available_bytes": 67108864,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "64.00 MiB",
+      "available": "64.00 MiB",
+      "used": "0 bytes"
+    },
+    "/etc/resolv.conf": {
+      "device": "/dev/disk/by-label/data-volume",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size_bytes": 105088212992,
+      "available_bytes": 78924451840,
+      "used_bytes": 20778328064,
+      "capacity": "20.84%",
+      "size": "97.87 GiB",
+      "available": "73.50 GiB",
+      "used": "19.35 GiB"
+    },
+    "/etc/hostname": {
+      "device": "/dev/disk/by-label/data-volume",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size_bytes": 105088212992,
+      "available_bytes": 78924451840,
+      "used_bytes": 20778328064,
+      "capacity": "20.84%",
+      "size": "97.87 GiB",
+      "available": "73.50 GiB",
+      "used": "19.35 GiB"
+    },
+    "/etc/hosts": {
+      "device": "/dev/disk/by-label/data-volume",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size_bytes": 105088212992,
+      "available_bytes": 78924451840,
+      "used_bytes": 20778328064,
+      "capacity": "20.84%",
+      "size": "97.87 GiB",
+      "available": "73.50 GiB",
+      "used": "19.35 GiB"
+    },
+    "/dev/console": {
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=666"
+      ],
+      "size_bytes": 0,
+      "available_bytes": 0,
+      "used_bytes": 0,
+      "capacity": "100%",
+      "size": "0 bytes",
+      "available": "0 bytes",
+      "used": "0 bytes"
+    },
+    "/proc/acpi": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "ro",
+        "relatime",
+        "inode64"
+      ],
+      "size_bytes": 2067218432,
+      "available_bytes": 2067218432,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "1.93 GiB",
+      "available": "1.93 GiB",
+      "used": "0 bytes"
+    },
+    "/proc/keys": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "size=65536k",
+        "mode=755",
+        "inode64"
+      ],
+      "size_bytes": 67108864,
+      "available_bytes": 67108864,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "64.00 MiB",
+      "available": "64.00 MiB",
+      "used": "0 bytes"
+    },
+    "/proc/latency_stats": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "size=65536k",
+        "mode=755",
+        "inode64"
+      ],
+      "size_bytes": 67108864,
+      "available_bytes": 67108864,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "64.00 MiB",
+      "available": "64.00 MiB",
+      "used": "0 bytes"
+    },
+    "/proc/timer_list": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "size=65536k",
+        "mode=755",
+        "inode64"
+      ],
+      "size_bytes": 67108864,
+      "available_bytes": 67108864,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "64.00 MiB",
+      "available": "64.00 MiB",
+      "used": "0 bytes"
+    },
+    "/proc/sched_debug": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "size=65536k",
+        "mode=755",
+        "inode64"
+      ],
+      "size_bytes": 67108864,
+      "available_bytes": 67108864,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "64.00 MiB",
+      "available": "64.00 MiB",
+      "used": "0 bytes"
+    },
+    "/proc/scsi": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "ro",
+        "relatime",
+        "inode64"
+      ],
+      "size_bytes": 2067218432,
+      "available_bytes": 2067218432,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "1.93 GiB",
+      "available": "1.93 GiB",
+      "used": "0 bytes"
+    },
+    "/sys/firmware": {
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "ro",
+        "relatime",
+        "inode64"
+      ],
+      "size_bytes": 2067218432,
+      "available_bytes": 2067218432,
+      "used_bytes": 0,
+      "capacity": "0%",
+      "size": "1.93 GiB",
+      "available": "1.93 GiB",
+      "used": "0 bytes"
+    }
+  },
+  "timezone": "UTC",
+  "kernelmajversion": "5.10",
+  "memory": {
+    "system": {
+      "used_bytes": 1376153600,
+      "available_bytes": 2758283264,
+      "available": "2.57 GiB",
+      "capacity": "33.29%",
+      "total_bytes": 4134436864,
+      "used": "1.28 GiB",
+      "total": "3.85 GiB"
+    }
+  },
+  "ruby": {
+    "version": "2.7.6",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
+    "platform": "x86_64-linux"
+  },
+  "virtual": "docker",
+  "networking": {
+    "primary": "eth0",
+    "hostname": "foo",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "interfaces": {
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "network": "127.0.0.0"
+      },
+      "eth0": {
+        "mac": "02:42:ac:11:00:07",
+        "bindings": [
+          {
+            "address": "172.17.0.7",
+            "netmask": "255.255.0.0",
+            "network": "172.17.0.0"
+          }
+        ],
+        "ip": "172.17.0.7",
+        "netmask": "255.255.0.0",
+        "network": "172.17.0.0"
+      }
+    },
+    "netmask": "255.255.0.0",
+    "mac": "02:42:ac:11:00:07",
+    "ip": "172.17.0.7",
+    "network": "172.17.0.0"
+  },
+  "kernelrelease": "5.10.103-0-virt",
+  "facterversion": "4.2.10",
+  "processors": {
+    "threads": 1,
+    "speed": "2.59 GHz",
+    "isa": "x86_64",
+    "count": 2,
+    "cores": 2,
+    "models": [
+      "06/9e",
+      "06/9e"
+    ],
+    "physicalcount": 1
+  },
+  "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin",
+  "kernel": "Linux",
+  "kernelversion": "5.10.103",
+  "system_uptime": {
+    "hours": 0,
+    "uptime": "0:00 hours",
+    "seconds": 0,
+    "days": 0
+  },
+  "partitions": {
+    "/dev/loop0": {
+      "size_bytes": 13266944,
+      "size": "12.65 MiB",
+      "backing_file": "/media/cdrom/boot/modloop-virt"
+    },
+    "/dev/vda1": {
+      "size_bytes": 107373133824,
+      "size": "100.00 GiB",
+      "filesystem": "73.5G",
+      "uuid": "20%"
+    }
+  },
+  "filesystems": "ext3,ext4,iso9660,squashfs",
+  "is_virtual": true,
+  "puppetversion": "7.17.0"
+}
