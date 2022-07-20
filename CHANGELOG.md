@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.18.0](https://rubygems.org/gems/facterdb/versions/1.18.0) (2022-06-02)
+## [1.19.0](https://rubygems.org/gems/facterdb/versions/1.19.0) (2022-07-20)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.18.0...1.19.0)
+
+**Implemented enhancements:**
+
+- Add amazon 2022 factsets [\#254](https://github.com/voxpupuli/facterdb/pull/254) ([bastelfreak](https://github.com/bastelfreak))
+
+## [1.18.0](https://rubygems.org/gems/facterdb/versions/1.18.0) (2022-06-03)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.17.0...1.18.0)
 
