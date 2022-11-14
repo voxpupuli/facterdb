@@ -1,0 +1,301 @@
+{
+  "aio_agent_version": "7.18.0",
+  "architecture": "x64",
+  "az_metadata": {
+    "compute": {
+      "azEnvironment": "AzurePublicCloud",
+      "customData": "",
+      "isHostCompatibilityLayerVm": "false",
+      "licenseType": "",
+      "location": "uksouth",
+      "name": "pe-windows-node-0-2b152a",
+      "offer": "windows11preview",
+      "osProfile": {
+        "adminUsername": "windows",
+        "computerName": "pe-wn-0-2b152a"
+      },
+      "osType": "Windows",
+      "placementGroupId": "",
+      "plan": {
+        "name": "",
+        "product": "",
+        "publisher": ""
+      },
+      "platformFaultDomain": "0",
+      "platformUpdateDomain": "0",
+      "provider": "Microsoft.Compute",
+      "publicKeys": [
+      ],
+      "publisher": "MicrosoftWindowsDesktop",
+      "resourceGroupName": "davidsand",
+      "resourceId": "/subscriptions/de8aa4b1-87d7-41be-ada7-5e2e4b4768e5/resourceGroups/davidsand/providers/Microsoft.Compute/virtualMachines/pe-windows-node-0-2b152a",
+      "securityProfile": {
+        "secureBootEnabled": "false",
+        "virtualTpmEnabled": "false"
+      },
+      "sku": "win11-22h2-pro",
+      "storageProfile": {
+        "dataDisks": [
+        ],
+        "imageReference": {
+          "id": "",
+          "offer": "windows11preview",
+          "publisher": "MicrosoftWindowsDesktop",
+          "sku": "win11-22h2-pro",
+          "version": "latest"
+        },
+        "osDisk": {
+          "caching": "ReadWrite",
+          "createOption": "FromImage",
+          "diffDiskSettings": {
+            "option": ""
+          },
+          "diskSizeGB": "130",
+          "encryptionSettings": {
+            "enabled": "false"
+          },
+          "image": {
+            "uri": ""
+          },
+          "managedDisk": {
+            "id": "/subscriptions/de8aa4b1-87d7-41be-ada7-5e2e4b4768e5/resourceGroups/davidsand/providers/Microsoft.Compute/disks/pe-windows-node-0-2b152a_OsDisk_1_02bdfc4cde094f55aa18a63b283d2e7d",
+            "storageAccountType": "Standard_LRS"
+          },
+          "name": "pe-windows-node-0-2b152a_OsDisk_1_02bdfc4cde094f55aa18a63b283d2e7d",
+          "osType": "Windows",
+          "vhd": {
+            "uri": ""
+          },
+          "writeAcceleratorEnabled": "false"
+        }
+      },
+      "subscriptionId": "de8aa4b1-87d7-41be-ada7-5e2e4b4768e5",
+      "tags": "description:PEADM Deployed Puppet Enterprise;internalDNS:pe-windows-node-0-2b152a.gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net;project:davidsand",
+      "tagsList": [
+        {
+          "name": "description",
+          "value": "PEADM Deployed Puppet Enterprise"
+        },
+        {
+          "name": "internalDNS",
+          "value": "pe-windows-node-0-2b152a.gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net"
+        },
+        {
+          "name": "project",
+          "value": "davidsand"
+        }
+      ],
+      "version": "22621.521.220910",
+      "vmId": "60ea0624-6027-4b56-9183-e7e0c312e33c",
+      "vmScaleSetName": "",
+      "vmSize": "Standard_D4_v4",
+      "zone": ""
+    },
+    "network": {
+      "interface": [
+        {
+          "ipv4": {
+            "ipAddress": [
+              {
+                "privateIpAddress": "10.138.1.4",
+                "publicIpAddress": "20.254.125.203"
+              }
+            ],
+            "subnet": [
+              {
+                "address": "10.138.1.0",
+                "prefix": "24"
+              }
+            ]
+          },
+          "ipv6": {
+            "ipAddress": [
+            ]
+          },
+          "macAddress": "000D3A0BACE7"
+        }
+      ]
+    }
+  },
+  "cloud": {
+    "provider": "azure"
+  },
+  "dhcp_servers": {
+    "Ethernet": "168.63.129.16",
+    "system": "168.63.129.16"
+  },
+  "dmi": {
+    "manufacturer": "Microsoft Corporation",
+    "product": {
+      "name": "Virtual Machine",
+      "serial_number": "0000-0006-9834-0092-5493-1525-98",
+      "uuid": "60EA0624-6027-4B56-9183-E7E0C312E33C"
+    }
+  },
+  "domain": "gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
+  "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+  "facterversion": "4.2.11",
+  "fips_enabled": false,
+  "fqdn": "pe-wn-0-2b152a.gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
+  "hardwareisa": "x64",
+  "hardwaremodel": "x86_64",
+  "hostname": "pe-wn-0-2b152a",
+  "hypervisors": {
+    "hyperv": {
+    }
+  },
+  "id": "pe-wn-0-2b152a\\windows",
+  "identity": {
+    "privileged": true,
+    "user": "pe-wn-0-2b152a\\windows"
+  },
+  "interfaces": "Ethernet",
+  "ipaddress": "10.138.1.4",
+  "ipaddress6": "fe80::4815:15b:4120:3d16",
+  "ipaddress6_Ethernet": "fe80::4815:15b:4120:3d16",
+  "ipaddress_Ethernet": "10.138.1.4",
+  "is_virtual": true,
+  "kernel": "windows",
+  "kernelmajversion": "10.0",
+  "kernelrelease": "10.0.22621",
+  "kernelversion": "10.0.22621",
+  "macaddress": "00:0D:3A:0B:AC:E7",
+  "macaddress_Ethernet": "00:0D:3A:0B:AC:E7",
+  "manufacturer": "Microsoft Corporation",
+  "memory": {
+    "system": {
+      "available": "13.74 GiB",
+      "available_bytes": 14749409280,
+      "capacity": "14.14%",
+      "total": "16.00 GiB",
+      "total_bytes": 17178693632,
+      "used": "2.26 GiB",
+      "used_bytes": 2429284352
+    }
+  },
+  "memoryfree": "13.74 GiB",
+  "memoryfree_mb": 14066.1328125,
+  "memorysize": "16.00 GiB",
+  "memorysize_mb": 16382.87890625,
+  "mtu_Ethernet": 1500,
+  "netmask": "255.255.255.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
+  "netmask_Ethernet": "255.255.255.0",
+  "network": "10.138.1.0",
+  "network6": "fe80::",
+  "network6_Ethernet": "fe80::",
+  "network_Ethernet": "10.138.1.0",
+  "networking": {
+    "dhcp": "168.63.129.16",
+    "domain": "gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
+    "fqdn": "pe-wn-0-2b152a.gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
+    "hostname": "pe-wn-0-2b152a",
+    "interfaces": {
+      "Ethernet": {
+        "bindings": [
+          {
+            "address": "10.138.1.4",
+            "netmask": "255.255.255.0",
+            "network": "10.138.1.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::4815:15b:4120:3d16",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "dhcp": "168.63.129.16",
+        "ip": "10.138.1.4",
+        "ip6": "fe80::4815:15b:4120:3d16",
+        "mac": "00:0D:3A:0B:AC:E7",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.138.1.0",
+        "network6": "fe80::",
+        "scope6": "link"
+      }
+    },
+    "ip": "10.138.1.4",
+    "ip6": "fe80::4815:15b:4120:3d16",
+    "mac": "00:0D:3A:0B:AC:E7",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.138.1.0",
+    "network6": "fe80::",
+    "primary": "Ethernet",
+    "scope6": "link"
+  },
+  "operatingsystem": "windows",
+  "operatingsystemmajrelease": "11",
+  "operatingsystemrelease": "11",
+  "os": {
+    "architecture": "x64",
+    "family": "windows",
+    "hardware": "x86_64",
+    "name": "windows",
+    "release": {
+      "full": "11",
+      "major": "11"
+    },
+    "windows": {
+      "display_version": "22H2",
+      "edition_id": "Professional",
+      "installation_type": "Client",
+      "product_name": "Windows 10 Pro",
+      "release_id": "22H2",
+      "system32": "C:\\Windows\\system32"
+    }
+  },
+  "osfamily": "windows",
+  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Users\\windows\\AppData\\Local\\Microsoft\\WindowsApps",
+  "physicalprocessorcount": 1,
+  "processor0": "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz",
+  "processorcount": 4,
+  "processors": {
+    "cores": 2,
+    "count": 4,
+    "isa": "x64",
+    "models": [
+      "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz"
+    ],
+    "physicalcount": 1,
+    "threads": 2
+  },
+  "productname": "Virtual Machine",
+  "ruby": {
+    "platform": "x64-mingw32",
+    "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.7.0",
+    "version": "2.7.6"
+  },
+  "rubyplatform": "x64-mingw32",
+  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.7.0",
+  "rubyversion": "2.7.6",
+  "scope6": "link",
+  "scope6_Ethernet": "link",
+  "serialnumber": "0000-0006-9834-0092-5493-1525-98",
+  "system32": "C:\\Windows\\system32",
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 1832,
+    "uptime": "0:30 hours"
+  },
+  "timezone": "Coordinated Universal Time",
+  "uptime": "0:30 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 1832,
+  "uuid": "60EA0624-6027-4B56-9183-E7E0C312E33C",
+  "virtual": "hyperv",
+  "windows_display_version": "22H2",
+  "windows_edition_id": "Professional",
+  "windows_installation_type": "Client",
+  "windows_product_name": "Windows 10 Pro",
+  "windows_release_id": "22H2"
+}
