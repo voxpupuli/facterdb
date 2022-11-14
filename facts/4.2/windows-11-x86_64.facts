@@ -13,22 +13,22 @@
       "uuid": "60EA0624-6027-4B56-9183-E7E0C312E33C"
     }
   },
-  "domain": "gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
+  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "4.2.11",
   "fips_enabled": false,
-  "fqdn": "pe-wn-0-2b152a.gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
+  "fqdn": "foo.example.com",
   "hardwareisa": "x64",
   "hardwaremodel": "x86_64",
-  "hostname": "pe-wn-0-2b152a",
+  "hostname": "foo",
   "hypervisors": {
     "hyperv": {
     }
   },
-  "id": "pe-wn-0-2b152a\\windows",
+  "id": "foo\\windows",
   "identity": {
     "privileged": true,
-    "user": "pe-wn-0-2b152a\\windows"
+    "user": "foo\\windows"
   },
   "interfaces": "Ethernet",
   "ipaddress": "10.138.1.4",
@@ -69,9 +69,9 @@
   "network_Ethernet": "10.138.1.0",
   "networking": {
     "dhcp": "168.63.129.16",
-    "domain": "gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
-    "fqdn": "pe-wn-0-2b152a.gdoiuasqonge5cqg0rv5me5qtf.zx.internal.cloudapp.net",
-    "hostname": "pe-wn-0-2b152a",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
     "interfaces": {
       "Ethernet": {
         "bindings": [
