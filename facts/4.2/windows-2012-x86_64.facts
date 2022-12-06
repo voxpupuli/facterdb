@@ -136,7 +136,6 @@
     }
   },
   "osfamily": "windows",
-  "package_provider": "windows",
   "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin",
   "pe_patch": {
     "blackouts": {
@@ -184,7 +183,6 @@
     "threads": 2
   },
   "productname": "Virtual Machine",
-  "puppet_environmentpath": "C:/ProgramData/PuppetLabs/code/environments",
   "puppet_files_dir_present": false,
   "puppet_inventory_metadata": {
     "packages": {
@@ -192,8 +190,6 @@
       "last_collection_time": "0.0s"
     }
   },
-  "puppet_server": "pe-server-0-6a54bb.example.com",
-  "puppet_vardir": "C:/ProgramData/PuppetLabs/puppet/cache",
   "puppetversion": "7.18.0",
   "ruby": {
     "platform": "x64-mingw32",
