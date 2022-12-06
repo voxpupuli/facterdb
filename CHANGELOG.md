@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.20.0](https://rubygems.org/gems/facterdb/versions/1.20.0) (2022-12-06)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.19.0...1.20.0)
+
+**Implemented enhancements:**
+
+- Add windows 2012 and 2016 facts [\#259](https://github.com/voxpupuli/facterdb/pull/259) ([davidsandilands](https://github.com/davidsandilands))
+- Windows updates for facter 4.2 [\#258](https://github.com/voxpupuli/facterdb/pull/258) ([davidsandilands](https://github.com/davidsandilands))
+
+**Fixed bugs:**
+
+- Fix Red Hat facts on version 4.2 [\#257](https://github.com/voxpupuli/facterdb/pull/257) ([anders-larsson](https://github.com/anders-larsson))
+
 ## [1.19.0](https://rubygems.org/gems/facterdb/versions/1.19.0) (2022-07-20)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.18.0...1.19.0)
@@ -40,7 +53,7 @@
 **Implemented enhancements:**
 
 - Arch Linux: Add facter 4.2 factset [\#244](https://github.com/voxpupuli/facterdb/pull/244) ([bastelfreak](https://github.com/bastelfreak))
-- Add OL6 facts for Facter 4 [\#243](https://github.com/voxpupuli/facterdb/pull/243) ([as0bu](https://github.com/as0bu))
+- Add OL6 facts for Facter 4 [\#243](https://github.com/voxpupuli/facterdb/pull/243) ([serialh0bbyist](https://github.com/serialh0bbyist))
 
 ## [1.15.0](https://rubygems.org/gems/facterdb/versions/1.15.0) (2022-03-04)
 
@@ -171,7 +184,7 @@
 
 - Add Debian 11 facts [\#185](https://github.com/voxpupuli/facterdb/pull/185) ([smortex](https://github.com/smortex))
 - Add more FreeBSD facts [\#184](https://github.com/voxpupuli/facterdb/pull/184) ([smortex](https://github.com/smortex))
-- Add Oracle Linux 8 facts [\#183](https://github.com/voxpupuli/facterdb/pull/183) ([as0bu](https://github.com/as0bu))
+- Add Oracle Linux 8 facts [\#183](https://github.com/voxpupuli/facterdb/pull/183) ([serialh0bbyist](https://github.com/serialh0bbyist))
 - Adding puppet7 facter4.2 facts for centos7/8 and debian9/10 [\#181](https://github.com/voxpupuli/facterdb/pull/181) ([jacobmw](https://github.com/jacobmw))
 - Adds Rocky Linux vagrant image, facts and get\_facts.sh support [\#176](https://github.com/voxpupuli/facterdb/pull/176) ([fuero](https://github.com/fuero))
 
