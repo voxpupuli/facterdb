@@ -15,8 +15,9 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.0'
-        env:
-          BUNDLE_WITHOUT: release
+          bundler-cache: true
+      - name: Generate database
+        run: bundle exec rake database
       - name: Build gem
         run: gem build *.gemspec
       - name: Publish gem to rubygems.org
