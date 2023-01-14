@@ -17,6 +17,8 @@ jobs:
           ruby-version: '3.3'
         env:
           BUNDLE_WITHOUT: release
+      - name: Generate database
+        run: bundle exec rake database
       - name: Build gem
         run: gem build --strict --verbose *.gemspec
       - name: Publish gem to rubygems.org

@@ -5,6 +5,9 @@ coverage/
 .envrc
 vendor/
 .vendor/
+.yardoc
 packer_cache/
 *.box
+database.md
+doc/
 hugo/public

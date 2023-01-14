@@ -57,63 +57,6 @@ require 'facterdb'
 FacterDB::get_facts('osfamily=Debian')
 ```
 
-## Facter version and Operating System coverage
-
-|     operating system     | 4.0 | 4.1 | 4.2 | 4.3 | 4.4 | 4.5 | 4.6 | 4.7 |
-| ------------------------ | --- | --- | --- | --- | --- | --- | --- | --- |
-| AlmaLinux 8              |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| AlmaLinux 9              |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| Amazon 2                 |     |     |     |     |     |  1  |     |     |
-| Amazon 2022              |     |     |  1  |     |     |     |     |     |
-| Archlinux                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| CentOS 7                 |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| CentOS 8                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| CentOS 9                 |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Darwin 20                |     |     |  1  |     |     |     |     |     |
-| Debian 11                |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| Debian 12                |     |     |  2  |  2  |  2  |  1  |  1  |  1  |
-| Fedora 36                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Fedora 37                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Fedora 38                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Fedora 39                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| FreeBSD 11               |  1  |  1  |  1  |     |     |     |     |     |
-| FreeBSD 12               |  1  |  1  |  1  |     |     |  1  |     |     |
-| FreeBSD 13               |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| Gentoo                   |     |     |  1  |  1  |  2  |  1  |  1  |  1  |
-| OpenBSD 7.5              |     |     |     |     |     |     |     |  1  |
-| OracleLinux 7            |  1  |     |  1  |     |     |     |     |     |
-| OracleLinux 8            |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| OracleLinux 9            |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Pop!_OS 21.10            |     |     |  1  |     |     |     |     |     |
-| RedHat 7                 |  1  |     |  1  |     |     |     |     |     |
-| RedHat 8                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| RedHat 9                 |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Rocky 8                  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| Rocky 9                  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| SLES 12                  |     |     |  1  |  1  |  1  |     |     |     |
-| SLES 15                  |     |     |  1  |     |     |     |     |     |
-| Scientific 7             |  1  |     |  1  |     |     |     |     |     |
-| Solaris 11               |  1  |     |     |     |     |     |     |     |
-| Ubuntu 18.04             |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| Ubuntu 20.04             |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
-| Ubuntu 21.04             |  1  |  1  |  1  |     |     |     |     |     |
-| Ubuntu 21.10             |  1  |  1  |  1  |     |     |     |     |     |
-| Ubuntu 22.04             |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Ubuntu 22.10             |     |     |  1  |     |     |     |     |     |
-| Windows 10               |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Windows 11               |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Windows Server 2012      |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2012 R2   |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2016      |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2016 Core |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2019      |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Windows Server 2019 Core |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2022      |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Windows Server 2022 Core |     |     |  1  |  1  |  1  |     |     |     |
-| openSUSE 15              |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |
-
-Where the number (1, 2 etc.) are the number of factsets for that OS and facter combination (e.g., x86_64 and i386 architectures).
-
 ## Add new Operating System support
 
 There is `Vagrantfile` to automagically populate `facts` for all supported operating systems by spawning a new VM and launches a provisioning scripts.

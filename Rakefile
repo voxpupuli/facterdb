@@ -24,6 +24,15 @@ rescue LoadError
   end
 end
 
+begin
+  require 'yard'
+rescue LoadError
+  # No yard
+else
+  YARD::Rake::YardocTask.new
+  task :yard => :database
+end
+
 # Generate a human-friendly OS label based on a given factset
 def factset_to_os_label(fs)
   os_rel  = '???'
@@ -99,8 +108,8 @@ def factset_to_os_label(fs)
   label
 end
 
-desc 'generate a markdown table of Facter/OS coverage (for the README)'
-task :table do
+desc 'generate a markdown table of Facter/OS coverage'
+task :database do
   require_relative 'lib/facterdb'
   # Turn on the source injection
   old_env = ENV.fetch('FACTERDB_INJECT_SOURCE', nil)
@@ -130,24 +139,31 @@ task :table do
     string_pieces.zip(number_pieces).flatten.compact
   end
 
-  readme_path = File.expand_path(File.join(__dir__, 'README.md'))
-  readme = File.read(readme_path).split("\n")
-  new_readme = readme[0..readme.index { |r| r.start_with?('| ') } - 1]
 
   # Write out a nice table
-  os_version_width = (os_versions.map { |x| x.size } + [17]).max
-  new_readme << "| #{'operating system'.center(os_version_width)} |#{facter_versions.map { |x| " #{x} |" }.join}"
-  new_readme << "| #{'-' * os_version_width} |#{facter_versions.map { |_x| ' --- |' }.join}"
+  os_version_width = (os_versions.map{|x| x.size } + [17]).max
+  facter_width = 3
+
+  rows = [
+    ['operating system'.center(os_version_width)] + facter_versions,
+    ['-' * os_version_width] + ['-' * facter_width] * facter_versions.length,
+  ]
+
   os_versions.each do |label|
-    fvs = facter_versions.map { |facter_version| os_facter_matrix[label][facter_version] || 0 }
-    row = "| #{label.ljust(os_version_width)} |"
-    fvs.each { |fv| row += ((fv > 0) ? " #{fv.to_s.center(3)} |" : '     |') }
-    new_readme << row
+    fvs = facter_versions.map do |facter_version|
+      version = os_facter_matrix[label][facter_version] || 0
+      version > 0 ? version.to_s : ''
+    end
+    rows << [label.ljust(os_version_width)] + fvs.map { |fv| fv.center(facter_width) }
   end
 
-  File.open(readme_path, 'w') do |fd|
-    fd.puts (new_readme + readme[readme.rindex { |r| r.start_with?('| ') } + 1..-1]).join("\n")
+  content = "# Facter version and Operating System coverage\n\n"
+  rows.each do |row|
+    content += "| #{row.join(' | ')} |\n"
   end
+  content += "\n\nWhere the number (1, 2 etc.) are the number of factsets for that OS and facter combination (e.g., x86_64 and i386 architectures).\n"
+
+  File.write(File.join(__dir__, 'database.md'), content)
 end
 
 begin
