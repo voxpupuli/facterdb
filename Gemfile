@@ -10,4 +10,6 @@ end
 
 group :development do
   gem 'github_changelog_generator', '>= 1.16.4'
+  gem 'yard'
+  gem 'redcarpet'
 end
