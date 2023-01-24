@@ -57,7 +57,7 @@
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
-  "hostname": "linux",
+  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "154219",
