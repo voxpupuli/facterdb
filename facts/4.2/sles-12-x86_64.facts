@@ -284,7 +284,7 @@
   "network_lo": "127.0.0.0",
   "networking": {
     "domain": "example.com",
-    "fqdn": "foo.exmaple.com",
+    "fqdn": "foo.example.com",
     "hostname": "foo",
     "interfaces": {
       "eth0": {
