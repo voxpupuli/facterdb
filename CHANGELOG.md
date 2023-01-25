@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.21.0](https://rubygems.org/gems/facterdb/versions/1.21.0) (2023-01-25)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.20.0...1.21.0)
+
+**Implemented enhancements:**
+
+- Add Ruby 3.2 support [\#265](https://github.com/voxpupuli/facterdb/pull/265) ([bastelfreak](https://github.com/bastelfreak))
+- Add SLES 12 Facter 4.2 factset [\#263](https://github.com/voxpupuli/facterdb/pull/263) ([bastelfreak](https://github.com/bastelfreak))
+- new facts for ubuntu 22.10, Rocky 9, Fedora 37 [\#261](https://github.com/voxpupuli/facterdb/pull/261) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
 ## [1.20.0](https://rubygems.org/gems/facterdb/versions/1.20.0) (2022-12-06)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.19.0...1.20.0)
@@ -453,7 +463,7 @@
 **Implemented enhancements:**
 
 - Allow loading of external fact hashes [\#62](https://github.com/voxpupuli/facterdb/pull/62) ([logicminds](https://github.com/logicminds))
-- Improve FreeBSD Support [\#60](https://github.com/voxpupuli/facterdb/pull/60) ([xaque208](https://github.com/xaque208))
+- Improve FreeBSD Support [\#60](https://github.com/voxpupuli/facterdb/pull/60) ([zachfi](https://github.com/zachfi))
 - Add facts for Amazon Linux 2017.03 [\#56](https://github.com/voxpupuli/facterdb/pull/56) ([pillarsdotnet](https://github.com/pillarsdotnet))
 - Add missing facts for Fedora 20, 21, and 26 [\#50](https://github.com/voxpupuli/facterdb/pull/50) ([blackknight36](https://github.com/blackknight36))
 - Facter 3.8 fact sets [\#48](https://github.com/voxpupuli/facterdb/pull/48) ([rodjek](https://github.com/rodjek))
