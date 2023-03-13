@@ -1,8 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
-  "fqdn": "foo.example.com",
-  "domain": "example.com",
-  "hostname": "foo",
   "aio_agent_version": "1.10.1",
   "augeas": {
     "version": "1.4.0"
@@ -286,8 +282,6 @@
     "network6": "fec0::",
     "primary": "eth0"
   },
-  "operatingsystem": "RedHat",
-  "osfamily": "RedHat",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -336,37 +330,6 @@
     }
   },
   "path": "/root/facts/vendor/bundler/ruby/2.1.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/rvm/gems/ruby-1.9.3-p551/bin:/usr/local/rvm/gems/ruby-1.9.3-p551@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/rvm/bin:/root/bin",
-  "processors": {
-    "count": 24,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz",
-      "Intel(R) Xeon(R) CPU           X5650  @ 2.67GHz"
-    ],
-    "physicalcount": 2
-  },
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
@@ -401,7 +364,7 @@
       },
       "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC7uJ5NtUTMBXwND5ZzWnuT2fpkXPrtckEZq8nQT/ptZ0JU88J9FbAylRK/4xFyTQXQmtl0RGmoAB+zpiBpDw6rN8p2GUo2cfY2d/fGsHpwwPoQu3B9G30ihfdh4zzbYypatWktoybuN86CNY8QtiEgKNS0DerivMx4BjhnzaYw1ng/BsP3bQ75RMxfwaaSCLpAkkQIAuaIg2+lAVu7jVBqj7H+uib7C0A8uBdyexI2c31vs3cWJJWLtlhhPJaGCyfCVRZF43fZMCNnh/EbWhLEWlGcMb2zJ4G3UAnlBuiv+DfbjGMqT+Ksm1lk+QqkDMA7mNr+i18IJT7t9qnWjwnr"
     }
-	},
+  },
   "system_uptime": {
     "days": 4,
     "hours": 119,

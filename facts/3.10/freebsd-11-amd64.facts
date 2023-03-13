@@ -1,12 +1,7 @@
 {
-  "architecture": "amd64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
   "dhcp_servers": {
     "em0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -24,15 +19,8 @@
       "uuid": "3bf7e56f-596d-4c92-ba0e-c92ecffe42f1"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.10.0",
   "filesystems": "devfs,nfs,zfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -41,7 +29,6 @@
     "user": "root"
   },
   "interfaces": "em0,em1,lo0",
-  "ipaddress": "10.0.2.15",
   "ipaddress6_lo0": "::1",
   "ipaddress_em0": "10.0.2.15",
   "ipaddress_em1": "10.0.0.2",
@@ -56,10 +43,8 @@
     "1m": 1.49609375,
     "5m": 0.60888671875
   },
-  "macaddress": "08:00:27:82:16:e3",
   "macaddress_em0": "08:00:27:82:16:e3",
   "macaddress_em1": "08:00:27:39:5d:54",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -80,10 +65,6 @@
       "used_bytes": 195698688
     }
   },
-  "memoryfree": "798.91 MiB",
-  "memoryfree_mb": 798.91015625,
-  "memorysize": "985.54 MiB",
-  "memorysize_mb": 985.54296875,
   "mountpoints": {
     "/": {
       "available": "58.84 GiB",
@@ -288,12 +269,10 @@
   "mtu_em0": 1500,
   "mtu_em1": 1500,
   "mtu_lo0": 16384,
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
   "netmask_em1": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_em1": "10.0.0.0",
@@ -369,9 +348,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "FreeBSD",
-  "operatingsystemmajrelease": "11",
-  "operatingsystemrelease": "11.2-RELEASE-p10",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -383,29 +359,13 @@
       "minor": "2-RELEASE-p10"
     }
   },
-  "osfamily": "FreeBSD",
   "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "amd64",
-    "models": [
-      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz"
-    ],
-    "speed": "2.59 GHz"
-  },
-  "productname": "VirtualBox",
   "puppetversion": "5.5.14",
   "ruby": {
     "platform": "amd64-freebsd11",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.5",
     "version": "2.5.5"
   },
-  "rubyplatform": "amd64-freebsd11",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.5",
-  "rubyversion": "2.5.5",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -435,10 +395,6 @@
   "sshfp_ed25519": "SSHFP 4 1 234e9cfa589ec6635ec67c34e479e4b04fa6627e\nSSHFP 4 2 746446d5f78ed8f08aec7b033640d6978e316ceacb3fa1961b981f51e0502a6c",
   "sshfp_rsa": "SSHFP 1 1 4a3119474ac6e046fc972e33b288e6de0ec71dd2\nSSHFP 1 2 923a8d06cdb1840298180e5a386831c8385ceec88300d6dddc5804892146c8e6",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC2nXpbJa6iVtdYy5N7jkHpfSBXufOGdqeEMAOOehZERh9fZ7I49qWpw3zDTSZatf39xtYtg0L/avJWfpvg3g11OhZq+7svz3TZMD8wpWi51cGxyootGyjSZgmXUfprZP6AYiNoL4lWPnmZnG8GJ8rLZAS/xT4NEJLzylJ54dmIpZMedBHtRGX/eT4g3OtSaQdPrYftQ6EWStnh3I5EyPcED8mA3+hQB3NNfZQjPw837C78Qr2cwLRjeKG2A70/U0r6LvkmlJKt4+mYikQezVqB0HzpRmvZgi3Vxc92qA7Att+vO2i0bmmE4GEqFfRHSSi0deJcrxAAFBYYVaIAy+7T",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2048.0,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -446,11 +402,6 @@
     "uptime": "0:01 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:01 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 61,
-  "uuid": "3bf7e56f-596d-4c92-ba0e-c92ecffe42f1",
   "virtual": "virtualbox",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

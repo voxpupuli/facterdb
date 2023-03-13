@@ -1,7 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
-  "operatingsystem": "Debian",
-  "osfamily": "Debian",
   "os": {
     "architecture": "amd64",
     "release": {
@@ -378,18 +375,6 @@
   "timezone": "PST",
   "filesystems": "ext2,ext3,ext4",
   "is_virtual": true,
-  "processors": {
-    "isa": "unknown",
-    "physicalcount": 1,
-    "models": [
-      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
-      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
-      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
-      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz"
-    ],
-    "speed": "2.29 GHz",
-    "count": 4
-  },
   "dmi": {
     "board": {
       "serial_number": "None",
@@ -471,7 +456,9 @@
   "kernel": "Linux",
   "puppetversion": "7.5.0",
   "debian_kernel": "#1 SMP Debian 4.19.37-5 (2019-06-19)\n",
-  "who2bug": [],
+  "who2bug": [
+
+  ],
   "puppet_cert_paths": {
     "confdir": "/etc/puppetlabs/puppet",
     "ssldir": "/etc/puppetlabs/puppet/ssl",
@@ -1050,14 +1037,24 @@
   "function_number": "",
   "platform_symlink_writable": true,
   "pe_patch": {
-    "package_updates": [],
+    "package_updates": [
+
+    ],
     "package_update_count": 0,
-    "missing_update_kbs": [],
-    "security_package_updates": [],
+    "missing_update_kbs": [
+
+    ],
+    "security_package_updates": [
+
+    ],
     "security_package_update_count": 0,
-    "blackouts": {},
-    "pinned_packages": [],
-    "last_run": {},
+    "blackouts": {
+    },
+    "pinned_packages": [
+
+    ],
+    "last_run": {
+    },
     "patch_group": "",
     "reboot_override": "default",
     "reboots": {
@@ -1069,9 +1066,8 @@
       "security_update_file": "Security update file not found, update information invalid"
     },
     "blocked": false,
-    "blocked_reasons": []
-  },
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
-  "hostname": "foo"
+    "blocked_reasons": [
+
+    ]
+  }
 }

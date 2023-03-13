@@ -1,27 +1,16 @@
 {
   "aio_agent_version": "5.3.4",
-  "architecture": "PowerPC_POWER8",
   "augeas": {
     "version": "1.8.1"
   },
-  "augeasversion": "1.8.1",
-  "blockdevice_hdisk0_size": 64424509440,
-  "blockdevices": "hdisk0",
   "disks": {
     "hdisk0": {
       "size": "60.00 GiB",
       "size_bytes": 64424509440
     }
   },
-  "domain": "example.com",
   "facterversion": "3.9.4",
   "filesystems": "ahafs,autofs,cachefs,cdrfs,cifs,jfs,jfs2,namefs,nfs,nfs3,nfs4,pmemfs,procfs,sfs,stnfs,udfs",
-  "fqdn": "foo.example.com",
-  "gid": "system",
-  "hardwareisa": "powerpc",
-  "hardwaremodel": "IBM,8284-22A",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "system",
@@ -30,7 +19,6 @@
     "user": "root"
   },
   "interfaces": "lo0,en0,en1,sit0",
-  "ipaddress": "10.10.136.15",
   "ipaddress6_en0": "fd8c:215d:178e:12:fe1:6fff:fe0d:4302",
   "ipaddress6_lo0": "::1",
   "ipaddress_en1": "10.10.136.15",
@@ -39,7 +27,6 @@
   "kernelmajversion": "7100",
   "kernelrelease": "7100-04-04-1717",
   "kernelversion": "7100",
-  "macaddress": "fa:79:8c:90:11:21",
   "macaddress_en0": "fa:79:8c:90:11:20",
   "macaddress_en1": "fa:79:8c:90:11:21",
   "macaddress_sit0": "0a:0a:88:0f:00:00",
@@ -63,10 +50,6 @@
       "used_bytes": 4116504576
     }
   },
-  "memoryfree": "170.20 MiB",
-  "memoryfree_mb": 170.1953125,
-  "memorysize": "4.00 GiB",
-  "memorysize_mb": 4096.0,
   "mountpoints": {
     "/": {
       "available": "32.92 GiB",
@@ -177,12 +160,10 @@
   "mtu_en1": 1500,
   "mtu_lo0": 16896,
   "mtu_sit0": 1480,
-  "netmask": "255.255.255.0",
   "netmask6_en0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_en1": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.10.136.0",
   "network6_en0": "fd8c:215d:178e:12::",
   "network6_lo0": "::1",
   "network_en1": "10.10.136.0",
@@ -260,9 +241,6 @@
     "network": "10.10.136.0",
     "primary": "en1"
   },
-  "operatingsystem": "AIX",
-  "operatingsystemmajrelease": "7100",
-  "operatingsystemrelease": "7100-04-04-1717",
   "os": {
     "architecture": "PowerPC_POWER8",
     "family": "AIX",
@@ -273,7 +251,6 @@
       "major": "7100"
     }
   },
-  "osfamily": "AIX",
   "partitions": {
     "/dev/hd11admin": {
       "filesystem": "jfs2",
@@ -340,39 +317,11 @@
     }
   },
   "path": "/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/opt/IBM/ibm-java-ppc64-70/jre/bin:/opt/IBM/ibm-java-ppc64-70/bin:/usr/local/bin:/opt/puppetlabs/bin",
-  "processor0": "PowerPC_POWER8",
-  "processor1": "PowerPC_POWER8",
-  "processor2": "PowerPC_POWER8",
-  "processor3": "PowerPC_POWER8",
-  "processor4": "PowerPC_POWER8",
-  "processor5": "PowerPC_POWER8",
-  "processor6": "PowerPC_POWER8",
-  "processor7": "PowerPC_POWER8",
-  "processorcount": 8,
-  "processors": {
-    "count": 8,
-    "isa": "powerpc",
-    "models": [
-      "PowerPC_POWER8",
-      "PowerPC_POWER8",
-      "PowerPC_POWER8",
-      "PowerPC_POWER8",
-      "PowerPC_POWER8",
-      "PowerPC_POWER8",
-      "PowerPC_POWER8",
-      "PowerPC_POWER8"
-    ],
-    "speed": "3.43 GHz"
-  },
   "ruby": {
     "platform": "powerpc-aix7.1.0.0",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
     "version": "2.4.3"
   },
-  "rubyplatform": "powerpc-aix7.1.0.0",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-  "rubyversion": "2.4.3",
-  "serialnumber": "2114E8W",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -402,19 +351,11 @@
   "sshfp_ecdsa": "SSHFP 3 1 7620b25dda681059bcc53ffcf4fcc52a05d48d2f\nSSHFP 3 2 18131411ca4966e190c9ed78767abf0ab535ada8e584daabced337dd23963b96",
   "sshfp_rsa": "SSHFP 1 1 a258b0a48bdca66dd5a8e82db664035b949aeec4\nSSHFP 1 2 0912e0f2eb5d9cf3ca8f886a27a4f03dd8783af79fb6e31ce8d01552c77d1a28",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDzIG+OpW/3tONe3+qyxCz84Axzg+WEVJ8LZshWqEKv8Quyc+Qe7xexiik7TfLper61+S5dt3Ah8zUA7ztBt60F44bU9Ijl+qc9zhWgrkOFjbX6XbsIlKC57j30Oas0C5wE4p59rBKGNXm8DDQuwcLGdZrL8MRFPoLwr0jLNVU9dhWHP9+hTY90mKhZCBZFustMBt1AB+HzmzQnTViiqTghAZwe26xTPPsGNo5ukcvpW25hBctUl98snPtyv3r6WobV/DNfMCfQQ3y9dHuIAZV8UQ5AHHvbVwDnJ4iZv326U1qbuuthhdLywUGG2AOsH2TAXM+em3TcOjqn4MtbuB9x",
-  "swapfree": "1.99 GiB",
-  "swapfree_mb": 2033.375,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 19,
     "hours": 472,
     "seconds": 1701000,
     "uptime": "19 days"
   },
-  "timezone": "UTC",
-  "uptime": "19 days",
-  "uptime_days": 19,
-  "uptime_hours": 472,
-  "uptime_seconds": 1701000
+  "timezone": "UTC"
 }

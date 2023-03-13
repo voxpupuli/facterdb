@@ -1,25 +1,8 @@
 {
   "aio_agent_version": "5.0.1",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.8.0"
   },
-  "augeasversion": "1.8.0",
-  "bios_release_date": "07/30/2013",
-  "bios_vendor": "Phoenix Technologies LTD",
-  "bios_version": "6.00",
-  "blockdevice_sda_model": "Virtual disk",
-  "blockdevice_sda_size": 21474836480,
-  "blockdevice_sda_vendor": "VMware",
-  "blockdevice_sr0_model": "VMware IDE CDR10",
-  "blockdevice_sr0_size": 1073741312,
-  "blockdevice_sr0_vendor": "NECVMWar",
-  "blockdevices": "sr0,sda",
-  "boardmanufacturer": "Intel Corporation",
-  "boardproductname": "440BX Desktop Reference Platform",
-  "boardserialnumber": "None",
-  "chassisassettag": "No Asset Tag",
-  "chassistype": "Other",
   "dhcp_servers": {
     "ens160": "10.32.22.10",
     "system": "10.32.22.10"
@@ -60,15 +43,8 @@
       "uuid": "420F13F8-F59B-CF24-BBA5-4FD2E1B70BD2"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.7.1",
   "filesystems": "ext2,ext3,ext4,xfs",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -77,8 +53,6 @@
     "user": "root"
   },
   "interfaces": "ens160,lo",
-  "ipaddress": "10.32.119.92",
-  "ipaddress6": "fe80::d7e1:251e:3e1d:6634",
   "ipaddress6_ens160": "fe80::d7e1:251e:3e1d:6634",
   "ipaddress6_lo": "::1",
   "ipaddress_ens160": "10.32.119.92",
@@ -93,9 +67,7 @@
     "1m": 0.28,
     "5m": 0.06
   },
-  "macaddress": "00:50:56:8f:ed:61",
   "macaddress_ens160": "00:50:56:8f:ed:61",
-  "manufacturer": "VMware, Inc.",
   "memory": {
     "swap": {
       "available": "1.21 GiB",
@@ -116,10 +88,6 @@
       "used_bytes": 228446208
     }
   },
-  "memoryfree": "3.65 GiB",
-  "memoryfree_mb": 3734.2421875,
-  "memorysize": "3.86 GiB",
-  "memorysize_mb": 3952.10546875,
   "mountpoints": {
     "/": {
       "available": "13.40 GiB",
@@ -244,14 +212,10 @@
   },
   "mtu_ens160": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.240.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_ens160": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_ens160": "255.255.240.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.32.112.0",
-  "network6": "fe80::",
   "network6_ens160": "fe80::",
   "network6_lo": "::1",
   "network_ens160": "10.32.112.0",
@@ -321,9 +285,6 @@
     "network6": "fe80::",
     "primary": "ens160"
   },
-  "operatingsystem": "Fedora",
-  "operatingsystemmajrelease": "25",
-  "operatingsystemrelease": "25",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -337,7 +298,6 @@
       "enabled": false
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/mapper/fedora-root": {
       "filesystem": "xfs",
@@ -369,31 +329,12 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/sbin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
-  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
-      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz"
-    ],
-    "physicalcount": 2
-  },
-  "productname": "VMware Virtual Platform",
   "puppetversion": "5.0.1",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
     "version": "2.4.1"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-  "rubyversion": "2.4.1",
-  "selinux": false,
-  "serialnumber": "VMware-42 0f 13 f8 f5 9b cf 24-bb a5 4f d2 e1 b7 0b d2",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -423,10 +364,6 @@
   "sshfp_ed25519": "SSHFP 4 1 a83b268fcd99335598e197a04d87f080ea706b7a\nSSHFP 4 2 321218b8177b306398234ffc1e1c5b8a480301e8b36c8f18b72a617d052d9074",
   "sshfp_rsa": "SSHFP 1 1 26f82eab664678f77a73c988d7b5e2ef4d247873\nSSHFP 1 2 a7d57a52d41e6e5d945b8a6e876ee43b5cfa3ff76c3aa26e4aed2d57a9914fca",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCkiSHP0kI8BLvagtlr42/rexbHwBrG3dAv6TpJhVIjJFQJucNJzTGkMDuhg1MZNI2HaT1louvxHccnL/JAF6gXFn/PhfbbcDUZamtO8kAxus0v+SLErOTojRYHizC/rpdZ45ECX1a5X0U9MfjUEbR22j+RMAblUwFTpBMIWzXYinNYGuSGSyeFUbw5CX2paWI4hD69Wr/yoikhArB6xFauE0HlM9KqTS5UcUW+EJgfZYvCLruLzTYbz7ZZJt6AmqwJysIZFjPd9nWDAiKt20qq9Zaxtdf17dA8Vj8IAD8DSNRIBu8F0mi9oN5ScVZAUVYfjzX/5+R8eHnlNIA7MO1v",
-  "swapfree": "1.21 GiB",
-  "swapfree_mb": 1235.99609375,
-  "swapsize": "1.21 GiB",
-  "swapsize_mb": 1235.99609375,
   "system_uptime": {
     "days": 2,
     "hours": 60,
@@ -434,10 +371,5 @@
     "uptime": "2 days"
   },
   "timezone": "UTC",
-  "uptime": "2 days",
-  "uptime_days": 2,
-  "uptime_hours": 60,
-  "uptime_seconds": 219250,
-  "uuid": "420F13F8-F59B-CF24-BBA5-4FD2E1B70BD2",
   "virtual": "vmware"
 }

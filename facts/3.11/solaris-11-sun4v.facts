@@ -1,10 +1,8 @@
 {
   "aio_agent_version": "5.5.18",
-  "architecture": "sun4v",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
   "dhcp_servers": {
     "net0": "10.32.22.10",
     "system": "10.32.22.10"
@@ -15,14 +13,8 @@
       "name": "SPARC T7-1"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.11.11",
   "filesystems": "autofs,ctfs,dcfs,dev,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,smbfs,sockfs,specfs,tmpfs,udfs,ufs,zvsfs",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "sparc",
-  "hardwaremodel": "sun4v",
-  "hostname": "foo",
   "hypervisors": {
     "ldom": {
       "chassis_serial": "AK00358110",
@@ -42,7 +34,6 @@
       "uuid": ""
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -51,7 +42,6 @@
     "user": "root"
   },
   "interfaces": "lo0,net0",
-  "ipaddress": "10.32.119.30",
   "ipaddress_lo0": "127.0.0.1",
   "ipaddress_net0": "10.32.119.30",
   "is_virtual": true,
@@ -86,9 +76,7 @@
     "1m": 0.00390625,
     "5m": 0.046875
   },
-  "macaddress": "00:14:4f:f8:84:bf",
   "macaddress_net0": "00:14:4f:f8:84:bf",
-  "manufacturer": "Oracle Corporation",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -109,10 +97,6 @@
       "used_bytes": 2437521408
     }
   },
-  "memoryfree": "5.53 GiB",
-  "memoryfree_mb": 5666,
-  "memorysize": "7.80 GiB",
-  "memorysize_mb": 7990.6015625,
   "mountpoints": {
     "/": {
       "available": "9.80 GiB",
@@ -450,10 +434,8 @@
   },
   "mtu_lo0": 8232,
   "mtu_net0": 1500,
-  "netmask": "255.255.240.0",
   "netmask_lo0": "255.0.0.0",
   "netmask_net0": "255.255.240.0",
-  "network": "10.32.112.0",
   "network_lo0": "127.0.0.0",
   "network_net0": "10.32.112.0",
   "networking": {
@@ -498,9 +480,6 @@
     "network": "10.32.112.0",
     "primary": "net0"
   },
-  "operatingsystem": "Solaris",
-  "operatingsystemmajrelease": "11",
-  "operatingsystemrelease": "11.3",
   "os": {
     "architecture": "sun4v",
     "family": "Solaris",
@@ -512,44 +491,13 @@
       "minor": "3"
     }
   },
-  "osfamily": "Solaris",
   "path": "/usr/bin:/usr/sbin:/opt/puppetlabs/bin:/sbin",
-  "physicalprocessorcount": 1,
-  "processor0": "SPARC-M7",
-  "processor1": "SPARC-M7",
-  "processor2": "SPARC-M7",
-  "processor3": "SPARC-M7",
-  "processor4": "SPARC-M7",
-  "processor5": "SPARC-M7",
-  "processor6": "SPARC-M7",
-  "processor7": "SPARC-M7",
-  "processorcount": 8,
-  "processors": {
-    "count": 8,
-    "isa": "sparc",
-    "models": [
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7"
-    ],
-    "physicalcount": 1,
-    "speed": "4.13 GHz"
-  },
-  "productname": "SPARC T7-1",
   "puppetversion": "5.5.18",
   "ruby": {
     "platform": "sparc-solaris2.11",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
     "version": "2.4.9"
   },
-  "rubyplatform": "sparc-solaris2.11",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.4.0",
-  "rubyversion": "2.4.9",
   "solaris_zones": {
     "current": "global",
     "zones": {
@@ -584,10 +532,6 @@
   "sshfp_dsa": "SSHFP 2 1 bc9583c30ec0b35cfe22c39d70ab7c3fc0625129\nSSHFP 2 2 61d90c312bb07274040e74a2ffd0a66b7c4748d32c664d4d76f2b18d9dcfc694",
   "sshfp_rsa": "SSHFP 1 1 ab902b1f58e13b6ada31605a0299789bad0235bd\nSSHFP 1 2 6b75301a322ba7a5434c29c24f1fa75f22a0f813c3ce277f4af74c6cf6518108",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAABIwAAAQEA0LrzAzFcJ+yNhL3EWwKKe67e6tCX76UBBSOVkSgYBSiSWkUg/Im1U86wClmztcCxrICvVsH4s0niOKjYHzXVqTIiBn030vq+X906GUbaI3VXkv1yQLVqXyQFznx2yIvW4yYOtGWSob3bvdPMvS84+YRD48BMSHMyLfZ8aC+/fBEruYZP5haccp1XoehRY7QZS+O8WT/2nXUh6U0+YvAwkcZaHFbd+Dawtd9gt6+St8ypgXHI8lKB3fR3eo82Z38G40uTUP/T3/WtjKB851GpuqXLNYzt36f7JzzELikkFcIs3vaDpASUxnj5luiclXtrZ52xOwy7a0JhZC7oT0v3/w==",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2047.9921875,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2047.9921875,
   "system_uptime": {
     "days": 0,
     "hours": 3,
@@ -595,10 +539,6 @@
     "uptime": "3:55 hours"
   },
   "timezone": "PST",
-  "uptime": "3:55 hours",
-  "uptime_days": 0,
-  "uptime_hours": 3,
-  "uptime_seconds": 14116,
   "virtual": "LDoms",
   "zfs_featurenumbers": "1,2,3,4,5,6",
   "zfs_version": "6",
@@ -608,7 +548,6 @@
   "zone_global_name": "global",
   "zone_global_path": "/",
   "zone_global_status": "running",
-  "zonename": "global",
   "zones": 1,
   "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37",
   "zpool_version": "37"

@@ -1,10 +1,8 @@
 {
   "aio_agent_version": "6.4.2",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.11.0"
   },
-  "augeasversion": "1.11.0",
   "dhcp_servers": {
     "en0": "10.32.22.10",
     "system": "10.32.22.10"
@@ -14,20 +12,12 @@
       "name": "VMware7,1"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.13.2",
   "filesystems": "autofs,devfs,hfs,vmhgfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "i386",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "vmware": {
-
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -36,8 +26,6 @@
     "user": "root"
   },
   "interfaces": "EHC2,UHC0,en0,gif0,lo0,stf0,utun0",
-  "ipaddress": "10.32.118.83",
-  "ipaddress6": "fe80::ce3:4829:db5:3583",
   "ipaddress6_en0": "fe80::ce3:4829:db5:3583",
   "ipaddress6_lo0": "::1",
   "ipaddress6_utun0": "fe80::19cb:31a5:a6c2:a4fd",
@@ -53,13 +41,7 @@
     "1m": 3.2080078125,
     "5m": 1.931640625
   },
-  "macaddress": "00:50:56:9a:b3:a2",
   "macaddress_en0": "00:50:56:9a:b3:a2",
-  "macosx_buildversion": "17C205",
-  "macosx_productname": "Mac OS X",
-  "macosx_productversion": "10.13.2",
-  "macosx_productversion_major": "10.13",
-  "macosx_productversion_minor": "2",
   "memory": {
     "system": {
       "available": "66.61 MiB",
@@ -71,10 +53,6 @@
       "used_bytes": 4225122304
     }
   },
-  "memoryfree": "66.61 MiB",
-  "memoryfree_mb": 66.609375,
-  "memorysize": "4.00 GiB",
-  "memorysize_mb": 4096.0,
   "mountpoints": {
     "/": {
       "available": "27.42 GiB",
@@ -191,15 +169,11 @@
   "mtu_lo0": 16384,
   "mtu_stf0": 1280,
   "mtu_utun0": 2000,
-  "netmask": "255.255.240.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_en0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask6_utun0": "ffff:ffff:ffff:ffff::",
   "netmask_en0": "255.255.240.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.32.112.0",
-  "network6": "fe80::",
   "network6_en0": "fe80::",
   "network6_lo0": "::1",
   "network6_utun0": "fe80::",
@@ -300,9 +274,6 @@
     "network6": "fe80::",
     "primary": "en0"
   },
-  "operatingsystem": "Darwin",
-  "operatingsystemmajrelease": "17",
-  "operatingsystemrelease": "17.3.0",
   "os": {
     "architecture": "x86_64",
     "family": "Darwin",
@@ -323,50 +294,13 @@
       "minor": "3"
     }
   },
-  "osfamily": "Darwin",
   "path": "/usr/bin:/bin:/usr/sbin:/sbin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz",
-  "processor1": "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "i386",
-    "models": [
-      "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz",
-      "Intel(R) Core(TM) i7-3615QM CPU @ 2.30GHz"
-    ],
-    "physicalcount": 2,
-    "speed": "2.19 GHz"
-  },
-  "productname": "VMware7,1",
   "puppetversion": "6.4.2",
   "ruby": {
     "platform": "x86_64-darwin17",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.3"
   },
-  "rubyplatform": "x86_64-darwin17",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.3",
-  "sp_boot_mode": "Normal",
-  "sp_boot_rom_version": "VMW71.00V.0.B64.1704110547",
-  "sp_boot_volume": "Macintosh HD",
-  "sp_current_processor_speed": "2.19 GHz",
-  "sp_kernel_version": "Darwin 17.3.0",
-  "sp_local_host_name": "af5kwapptnnziz6",
-  "sp_machine_model": "VMware7,1",
-  "sp_machine_name": "Apple device",
-  "sp_number_processors": "2",
-  "sp_os_version": "macOS 10.13.2 (17C205)",
-  "sp_packages": "2",
-  "sp_physical_memory": "4 GB",
-  "sp_platform_uuid": "421A57ED-20C7-2626-E8B2-B96AE6383EAB",
-  "sp_secure_vm": "Enabled",
-  "sp_serial_number": "VMV+0gxyYm6L",
-  "sp_smc_version_system": "1.16f8",
-  "sp_uptime": "1:06",
-  "sp_user_name": "System Administrator (root)",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -436,9 +370,5 @@
     "uptime": "1:05 hours"
   },
   "timezone": "PDT",
-  "uptime": "1:05 hours",
-  "uptime_days": 0,
-  "uptime_hours": 1,
-  "uptime_seconds": 3959,
   "virtual": "vmware"
 }

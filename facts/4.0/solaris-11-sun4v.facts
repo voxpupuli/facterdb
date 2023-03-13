@@ -1,5 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
   "is_virtual": true,
   "solaris_zones": {
     "current": "global",
@@ -22,8 +21,6 @@
   },
   "facterversion": "4.0.52",
   "timezone": "PST",
-  "operatingsystem": "Solaris",
-  "osfamily": "Solaris",
   "os": {
     "name": "Solaris",
     "hardware": "sun4v",
@@ -189,22 +186,6 @@
     "version": "1.12.0"
   },
   "filesystems": "autofs,ctfs,dcfs,dev,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,smbfs,sockfs,specfs,tmpfs,udfs,ufs,zvsfs",
-  "processors": {
-    "models": [
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7",
-      "SPARC-M7"
-    ],
-    "physicalcount": 1,
-    "isa": "sparc",
-    "count": 8,
-    "speed": "4.13 GHz"
-  },
   "kernelversion": "11.3",
   "mountpoints": {
     "/": {
@@ -574,9 +555,6 @@
   "puppetserver_installed": false,
   "context": "",
   "pip_version": "6.0.8",
-  "domain": "example.com",
   "ldom_domainname": "foo",
-  "fqdn": "foo.example.com",
-  "hostname": "foo",
   "ldom_domain_name": "foo"
 }

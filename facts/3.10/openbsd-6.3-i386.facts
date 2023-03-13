@@ -1,11 +1,7 @@
 {
-  "architecture": "i386",
   "augeas": {
     "version": "1.10.1"
   },
-  "augeasversion": "1.10.1",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "1.2",
   "dmi": {
     "bios": {
       "vendor": "innotek GmbH",
@@ -17,15 +13,8 @@
       "uuid": "0cc26eff-e8cd-4a52-918e-5daa2dcf0c05"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.10.0",
   "filesystems": "ffs,nfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "i386",
-  "hardwaremodel": "i386",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -34,7 +23,6 @@
     "user": "root"
   },
   "interfaces": "em0,em1,enc0,lo0,pflog0",
-  "ipaddress": "10.0.2.15",
   "ipaddress6_lo0": "::1",
   "ipaddress_em0": "10.0.2.15",
   "ipaddress_em1": "10.0.0.2",
@@ -49,7 +37,6 @@
     "1m": 0.4306640625,
     "5m": 0.18798828125
   },
-  "macaddress": "08:00:27:85:38:cf",
   "macaddress_em0": "08:00:27:85:38:cf",
   "macaddress_em1": "08:00:27:e8:da:6e",
   "memory": {
@@ -73,10 +60,6 @@
       "used_bytes": 259764224
     }
   },
-  "memoryfree": "234.67 MiB",
-  "memoryfree_mb": 234.671875,
-  "memorysize": "482.40 MiB",
-  "memorysize_mb": 482.40234375,
   "mountpoints": {
     "/": {
       "available": "954.50 MiB",
@@ -236,10 +219,8 @@
   "mtu_enc0": 0,
   "mtu_lo0": 32768,
   "mtu_pflog0": 33136,
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_em1": "10.0.0.2",
@@ -315,9 +296,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "OpenBSD",
-  "operatingsystemmajrelease": "6",
-  "operatingsystemrelease": "6.3",
   "os": {
     "architecture": "i386",
     "family": "OpenBSD",
@@ -329,29 +307,13 @@
       "minor": "3"
     }
   },
-  "osfamily": "OpenBSD",
   "path": "/opt/puppetlabs/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin",
-  "processor0": "Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "i386",
-    "models": [
-      "Intel(R) Core(TM) i7-2677M CPU @ 1.80GHz"
-    ],
-    "speed": "1.79 GHz"
-  },
-  "productname": "VirtualBox",
   "puppetversion": "5.4.0",
   "ruby": {
     "platform": "i386-openbsd",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.4",
     "version": "2.4.3"
   },
-  "rubyplatform": "i386-openbsd",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.4",
-  "rubyversion": "2.4.3",
-  "serialnumber": "0",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -390,11 +352,6 @@
   "sshfp_ed25519": "SSHFP 4 1 fd46c8154716aa5b9282b924efbd34a787e7095f\nSSHFP 4 2 beabc75b472831807ac56e82898d95738fe06e344ddf44684edcf0804fafed41",
   "sshfp_rsa": "SSHFP 1 1 c01e0f8db3ef7bb4bc92666c32137b1816578255\nSSHFP 1 2 3f634cba31a7cedc27017281dce0a835e1f96c2399f6c4badbc2e0d5e2486707",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDGpJKJy71vPm4q8T+qlxcEwxQNQkuwnUlS4vebuebkulL3bt7VSw+Vf8mnwvw/tY2KwaU+2NlF64UoMJLklo3I33S939tmbku8JCGHu114NYx8vr4BeNKHmoUycTcGYtyMGRISXka7C1DPP9CJXbi/y7lhhF0kHArdygVl004shYpKkUlGC9wr1b/m+KUJ5GnLn5TnifZSOCHvH8+c9uPA5WdYpMVKrmyfKrNMEksfgZc/X5bx5aBb/H8u/s6/S6hXrrIDrRX22hXOyW1ToybPD6QswwbGt9Cg9eGoAAcV11KDAREIwvoEbIj1KR8i9HrdW74/mJycxIQPTyzkkfr7",
-  "swapencrypted": true,
-  "swapfree": "751.94 MiB",
-  "swapfree_mb": 751.9375,
-  "swapsize": "751.94 MiB",
-  "swapsize_mb": 751.9375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -402,10 +359,5 @@
     "uptime": "0:02 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:02 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 126,
-  "uuid": "0cc26eff-e8cd-4a52-918e-5daa2dcf0c05",
   "virtual": "virtualbox"
 }

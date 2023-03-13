@@ -1,8 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
-  "hostname": "foo",
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
   "augeas": {
     "version": "1.4.0"
   },
@@ -128,8 +124,6 @@
     "network": "10.0.2.0",
     "network6": "fe80::"
   },
-  "operatingsystem": "Ubuntu",
-  "osfamily": "Debian",
   "os": {
     "architecture": "amd64",
     "distro": {
@@ -164,14 +158,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-  "processors": {
-    "count": 1,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz"
-    ],
-    "physicalcount": 1
-  },
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",

@@ -1,12 +1,7 @@
 {
-  "architecture": "amd64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
   "dhcp_servers": {
     "em0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -24,15 +19,8 @@
       "uuid": "44d622e2-ee89-4cec-a496-5431a99b0bcb"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.10.0",
   "filesystems": "devfs,nfs,zfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -41,7 +29,6 @@
     "user": "root"
   },
   "interfaces": "em0,em1,lo0",
-  "ipaddress": "10.0.2.15",
   "ipaddress6_lo0": "::1",
   "ipaddress_em0": "10.0.2.15",
   "ipaddress_em1": "10.0.0.2",
@@ -56,10 +43,8 @@
     "1m": 0.80126953125,
     "5m": 0.63525390625
   },
-  "macaddress": "08:00:27:5b:52:9b",
   "macaddress_em0": "08:00:27:5b:52:9b",
   "macaddress_em1": "08:00:27:98:d5:2e",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -80,10 +65,6 @@
       "used_bytes": 197017600
     }
   },
-  "memoryfree": "793.65 MiB",
-  "memoryfree_mb": 793.65234375,
-  "memorysize": "981.54 MiB",
-  "memorysize_mb": 981.54296875,
   "mountpoints": {
     "/": {
       "available": "58.61 GiB",
@@ -288,12 +269,10 @@
   "mtu_em0": 1500,
   "mtu_em1": 1500,
   "mtu_lo0": 16384,
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
   "netmask_em1": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_em1": "10.0.0.0",
@@ -369,9 +348,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "FreeBSD",
-  "operatingsystemmajrelease": "12",
-  "operatingsystemrelease": "12.0-RELEASE-p6",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -383,29 +359,13 @@
       "minor": "0-RELEASE-p6"
     }
   },
-  "osfamily": "FreeBSD",
   "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "amd64",
-    "models": [
-      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz"
-    ],
-    "speed": "2.59 GHz"
-  },
-  "productname": "VirtualBox",
   "puppetversion": "5.5.14",
   "ruby": {
     "platform": "amd64-freebsd12",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.5",
     "version": "2.5.5"
   },
-  "rubyplatform": "amd64-freebsd12",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.5",
-  "rubyversion": "2.5.5",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -435,10 +395,6 @@
   "sshfp_ed25519": "SSHFP 4 1 9546e8988c36b368464ceabcb5408cab2efd854b\nSSHFP 4 2 32bb144e0467c618c6b2697d11730901c3dd6ef298eb1bc50a8bc102f1bd748b",
   "sshfp_rsa": "SSHFP 1 1 2c9b7b59408d439da9b4d880c95b84a2c191539b\nSSHFP 1 2 64aaf3b6abf77760ebcdf74937d4c2e6450d659aefbdfe20751e21b93e5fa1de",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCuW3pVy9+K4+IbTsnoh5xhgjRZBNKm2HjYDw5eS9j5MzB9J5xT6twUuN3yPvfSgSbhKfBVEPWuGh3CuJoMp3V8vKxd/LSfYZZBfWtjUbD/GCbq+7X8QWceYFFFmNNsGdbqYbrPa75ejz0FS8+FgFlaF19m1bMEMedmHcBHlia8ckLwoUlu4BLrIVVvOdCd2gr7Vodnc9FLkDoVR6FL180H0RnZbLVkiMWrATp7e/v0wkp+s2dxB26aq3usqsQjVd8UnegOS5GtY9P7mix8IKDC/jIly4Sq7t6rumd8iANQ58lOmlxgHZd56ELB+A03SKb/sIWihsK2HU9VBTtBhU4t",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2048.0,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -446,11 +402,6 @@
     "uptime": "0:09 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:09 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 568,
-  "uuid": "44d622e2-ee89-4cec-a496-5431a99b0bcb",
   "virtual": "virtualbox",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

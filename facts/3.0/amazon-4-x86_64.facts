@@ -1,20 +1,7 @@
 {
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.4.0"
   },
-  "augeasversion": "1.4.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 8589934592,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "eth0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -48,15 +35,8 @@
       "uuid": "170E71AA-95F8-4004-B5C2-79D0352D7D23"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.0.2",
   "filesystems": "ext3,ext4",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -64,8 +44,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:fe24:4686",
   "ipaddress6_eth0": "fe80::a00:27ff:fe24:4686",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
@@ -80,9 +58,7 @@
     "1m": 1.07,
     "5m": 0.34
   },
-  "macaddress": "08:00:27:24:46:86",
   "macaddress_eth0": "08:00:27:24:46:86",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "826.48 MiB",
@@ -94,10 +70,6 @@
       "used_bytes": 178737152
     }
   },
-  "memoryfree": "826.48 MiB",
-  "memoryfree_mb": 826.48,
-  "memorysize": "996.94 MiB",
-  "memorysize_mb": 996.938,
   "mountpoints": {
     "/": {
       "available": "6.17 GiB",
@@ -118,14 +90,10 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_lo": "::1",
   "network_eth0": "10.0.2.0",
@@ -166,9 +134,6 @@
     "network": "10.0.2.0",
     "network6": "fe80::"
   },
-  "operatingsystem": "Amazon",
-  "operatingsystemmajrelease": "4",
-  "operatingsystemrelease": "4.4.44-39.55.amzn1.x86_64",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -183,7 +148,6 @@
       "enabled": false
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "ext4",
@@ -203,28 +167,11 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/aws/bin:/root/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Core(TM) i9-8950HK CPU @ 2.90GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Core(TM) i9-8950HK CPU @ 2.90GHz"
-    ],
-    "physicalcount": 1
-  },
-  "productname": "VirtualBox",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
     "version": "2.1.6"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-  "rubyversion": "2.1.6",
-  "selinux": false,
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -261,10 +208,5 @@
     "uptime": "0:00 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 43,
-  "uuid": "170E71AA-95F8-4004-B5C2-79D0352D7D23",
   "virtual": "virtualbox"
 }

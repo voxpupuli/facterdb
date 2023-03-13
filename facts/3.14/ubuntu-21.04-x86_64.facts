@@ -1,14 +1,8 @@
 {
   "aio_agent_version": "6.25.0",
-  "architecture": "amd64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "blockdevice_xvda_size": 16106127360,
-  "blockdevice_xvdb_size": 2147483648,
-  "blockdevice_xvdc_size": 53687091200,
-  "blockdevices": "xvdc,xvda,xvdb",
   "dhcp_servers": {
     "internal": "10.128.1.1",
     "public": "8.8.8.8",
@@ -28,22 +22,15 @@
       "size_bytes": 53687091200
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.20",
   "filesystems": "ext2,ext3,ext4,squashfs,vfat",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "xen": {
       "context": "hvm",
       "privileged": false
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -52,8 +39,6 @@
     "user": "root"
   },
   "interfaces": "internal,lo,public",
-  "ipaddress": "8.8.8.8",
-  "ipaddress6": "fe80::216:3eff:feb2:45d3",
   "ipaddress6_internal": "fe80::216:3eff:feb3:1b93",
   "ipaddress6_lo": "::1",
   "ipaddress6_public": "fe80::216:3eff:feb2:45d3",
@@ -70,12 +55,6 @@
     "1m": 0.1,
     "5m": 0.12
   },
-  "lsbdistcodename": "hirsute",
-  "lsbdistdescription": "Ubuntu 21.04",
-  "lsbdistid": "Ubuntu",
-  "lsbdistrelease": "21.04",
-  "lsbmajdistrelease": "21.04",
-  "macaddress": "00:16:3e:b2:45:d3",
   "macaddress_internal": "00:16:3e:b3:1b:93",
   "macaddress_public": "00:16:3e:b2:45:d3",
   "memory": {
@@ -98,10 +77,6 @@
       "used_bytes": 877748224
     }
   },
-  "memoryfree": "1.12 GiB",
-  "memoryfree_mb": 1148.328125,
-  "memorysize": "1.94 GiB",
-  "memorysize_mb": 1985.4140625,
   "mountpoints": {
     "/": {
       "available": "7.10 GiB",
@@ -294,16 +269,12 @@
   "mtu_internal": 1400,
   "mtu_lo": 65536,
   "mtu_public": 1400,
-  "netmask": "255.255.255.255",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_internal": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask6_public": "ffff:ffff:ffff:ffff::",
   "netmask_internal": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
   "netmask_public": "255.255.255.255",
-  "network": "8.8.8.8",
-  "network6": "fe80::",
   "network6_internal": "fe80::",
   "network6_lo": "::1",
   "network6_public": "fe80::",
@@ -404,9 +375,6 @@
     "primary": "public",
     "scope6": "link"
   },
-  "operatingsystem": "Ubuntu",
-  "operatingsystemmajrelease": "21.04",
-  "operatingsystemrelease": "21.04",
   "os": {
     "architecture": "amd64",
     "distro": {
@@ -429,35 +397,16 @@
       "enabled": false
     }
   },
-  "osfamily": "Debian",
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Xeon(R) CPU E3-1275 v6 @ 3.80GHz",
-  "processor1": "Intel(R) Xeon(R) CPU E3-1275 v6 @ 3.80GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) CPU E3-1275 v6 @ 3.80GHz",
-      "Intel(R) Xeon(R) CPU E3-1275 v6 @ 3.80GHz"
-    ],
-    "physicalcount": 1
-  },
   "puppetversion": "6.25.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.9"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.9",
-  "scope6": "link",
   "scope6_internal": "link",
   "scope6_lo": "host",
   "scope6_public": "link",
-  "selinux": false,
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -490,10 +439,6 @@
   "sshfp_ed25519": "SSHFP 4 1 d7fc0b65c880a38be7065c91d46e0aefc1365816\nSSHFP 4 2 d75a1e12ada228576ae807543c77bc8af029ecd6e56715ed13254610f53216a2",
   "sshfp_rsa": "SSHFP 1 1 8adff2fadd86619d37bd966bd32417407609c62a\nSSHFP 1 2 89b46b27771ee0bd6e4e214a3a24250624196b8f9d3bbac4edd89794828c9304",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDVcODsDvLvQBoLRfJRleCjsUp7WGCTElvsr94Tk0mUxdEZLUus3C2HceUJvte46nrkx98EmzQGqt0E7YtqIiQXxiKNvq698GxhxuiHHOZOnKCAWI1Pn1evciyO7VFhv/xkE2C0ZAq9K7wBUkLduK1SQVcUpN3Uh1DYVNmkjbAhbOgPfbffzLW7wydfJ8Jjd4YgIX2I5WMDhC02bvA9pvtPx3efVijv0ZhK90nuDpzABi4uayPrzkdfmGj4r6qTDSEwBLLIv9olSMtnPoAR8kBv2HyQ4I9u3gKTOo4pvNlPHMoPP2lMPMygLfny7Ax5w+vC836K07A2skmB8ZHLWBBZjrGcPwXpujdyjsKNcxJCrn0OaihfMDEqyywJOpedq+ubU18oBkVwBCDfBjBzK0nZW+RiCQjJknqu2UsoMEM5KcpSetcvpQ2wThCp86mih5vUiP7j43EMJ8xdpUSX/Wa+xiwi4mNoQJ26ftevsFTkrUovHi8vejzdtfgRD0J+vBE=",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2046.24609375,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2047.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 9,
@@ -502,9 +447,5 @@
   },
   "timezone": "UTC",
   "type": "none",
-  "uptime": "9:48 hours",
-  "uptime_days": 0,
-  "uptime_hours": 9,
-  "uptime_seconds": 35293,
   "virtual": "xenhvm"
 }

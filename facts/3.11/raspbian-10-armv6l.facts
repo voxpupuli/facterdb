@@ -1,7 +1,4 @@
 {
-  "architecture": "armv6l",
-  "blockdevice_mmcblk0_size": 15931539456,
-  "blockdevices": "mmcblk0",
   "dhcp_servers": {
     "eth0": "'192.168.1.1'",
     "system": "'192.168.1.1'"
@@ -12,16 +9,9 @@
       "size_bytes": 15931539456
     }
   },
-  "domain": "example.com",
   "facterversion": "3.11.0",
   "filesystems": "ext2,ext3,ext4,f2fs,msdos,vfat",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "unknown",
-  "hardwaremodel": "armv6l",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -30,7 +20,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "192.168.1.10",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "192.168.1.10",
   "ipaddress_lo": "127.0.0.1",
@@ -44,12 +33,6 @@
     "1m": 0.17,
     "5m": 0.08
   },
-  "lsbdistcodename": "buster",
-  "lsbdistdescription": "Raspbian GNU/Linux 10 (buster)",
-  "lsbdistid": "Raspbian",
-  "lsbdistrelease": "10",
-  "lsbmajdistrelease": "10",
-  "macaddress": "b8:27:eb:de:24:2d",
   "macaddress_eth0": "b8:27:eb:de:24:2d",
   "memory": {
     "swap": {
@@ -71,10 +54,6 @@
       "used_bytes": 50536448
     }
   },
-  "memoryfree": "130.94 MiB",
-  "memoryfree_mb": 130.9375,
-  "memorysize": "179.13 MiB",
-  "memorysize_mb": 179.1328125,
   "mountpoints": {
     "/": {
       "available": "7.41 GiB",
@@ -204,11 +183,9 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "192.168.1.0",
   "network6_lo": "::1",
   "network_eth0": "192.168.1.0",
   "network_lo": "127.0.0.0",
@@ -264,9 +241,6 @@
     "network": "192.168.1.0",
     "primary": "eth0"
   },
-  "operatingsystem": "Debian",
-  "operatingsystemmajrelease": "10",
-  "operatingsystemrelease": "10.1",
   "os": {
     "architecture": "armv6l",
     "distro": {
@@ -290,7 +264,6 @@
       "enabled": false
     }
   },
-  "osfamily": "Debian",
   "partitions": {
     "/dev/mmcblk0p1": {
       "filesystem": "vfat",
@@ -310,27 +283,11 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "ARMv6-compatible processor rev 7 (v6l)",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "unknown",
-    "models": [
-      "ARMv6-compatible processor rev 7 (v6l)"
-    ],
-    "physicalcount": 1,
-    "speed": "700.00 MHz"
-  },
   "ruby": {
     "platform": "arm-linux-gnueabihf",
     "sitedir": "/usr/local/lib/site_ruby/2.5.0",
     "version": "2.5.5"
   },
-  "rubyplatform": "arm-linux-gnueabihf",
-  "rubysitedir": "/usr/local/lib/site_ruby/2.5.0",
-  "rubyversion": "2.5.5",
-  "selinux": false,
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -373,10 +330,6 @@
   "sshfp_ed25519": "SSHFP 4 1 02817ac453da3dec5bb49fa945b783942fc58ce0\nSSHFP 4 2 d3396913de6e0b56ab5712de00694217c374d8cc3c8a7d33c31e5e8764dad7ee",
   "sshfp_rsa": "SSHFP 1 1 683d5c0b1f1d82aeb8c1763b07a2609be30fe1e2\nSSHFP 1 2 14d4194b92fe001050a3d4ee08f4011163e16ab88d5b4cace31cb237d4590995",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCeoRElqx9LDZ+QABHrtsfpOtG1WEPuIEu2xS6QfEzYcqD4fCJHfV6pwl/UusTBhr+WND8xDLfaH1AH0oZz9SYfgoKDFVCiRB52S2QYEkuHtMc1Olxrao2nZ56mffMzmN3oE/rENBVIjV4plg1MNQk+T7Dgl75Por3HB4wGqLwlZO+tdLlZ12iZqbPibQ39PgkWaayBhi8KD5Wg24BHdrw9a/x0d41kOB/+TZcTLrsdstCmmVkAR6n+5OgEFGbFxRRV6WDknynqLsYUqr+rOn8lSUVqwRruZMu2507miHPFnVj2yxQsHZvXiz7AUZ8dT8kQW4XwQGiM+unrhvWadmyz",
-  "swapfree": "74.25 MiB",
-  "swapfree_mb": 74.24609375,
-  "swapsize": "100.00 MiB",
-  "swapsize_mb": 99.99609375,
   "system_uptime": {
     "days": 7,
     "hours": 186,
@@ -384,9 +337,5 @@
     "uptime": "7 days"
   },
   "timezone": "UTC",
-  "uptime": "7 days",
-  "uptime_days": 7,
-  "uptime_hours": 186,
-  "uptime_seconds": 671935,
   "virtual": "physical"
 }

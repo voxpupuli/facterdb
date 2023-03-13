@@ -1,16 +1,8 @@
 {
   "aio_agent_version": "1.10.4",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.4.0"
   },
-  "augeasversion": "1.4.0",
-  "bios_release_date": "02/16/2017",
-  "bios_vendor": "Xen",
-  "bios_version": "4.2.amazon",
-  "blockdevice_xvda_size": 8589934592,
-  "blockdevices": "xvda",
-  "chassistype": "Other",
   "dhcp_servers": {
     "eth0": "10.254.253.129",
     "system": "10.254.253.129"
@@ -37,7 +29,6 @@
       "uuid": "EC209762-DEF6-9B34-BB6F-EBA5E5EE4C56"
     }
   },
-  "domain": "example.com",
   "ec2_metadata": {
     "ami-id": "ami-b2d056d3",
     "ami-launch-index": "0",
@@ -99,12 +90,6 @@
   "ec2_userdata": "#!/bin/bash -ex\nyum -y update\nrpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-6.noarch.rpm\nyum -y install puppet-agent\nmkdir -p /etc/puppet/modules\n/opt/puppetlabs/bin/puppet module install saz-sudo\n/opt/puppetlabs/bin/puppet module install puppetlabs-accounts\naws --region us-gov-west-1 s3 cp s3://caf-ops-deployment/user_data/users_ops.pp /root/\n/opt/puppetlabs/bin/puppet apply /root/users_ops.pp",
   "facterversion": "3.6.5",
   "filesystems": "ext3,ext4",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -113,8 +98,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "10.254.253.132",
-  "ipaddress6": "fe80::85:e9ff:fe60:90d4",
   "ipaddress6_eth0": "fe80::85:e9ff:fe60:90d4",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.254.253.132",
@@ -129,9 +112,7 @@
     "1m": 0.9,
     "5m": 0.51
   },
-  "macaddress": "02:85:e9:60:90:d4",
   "macaddress_eth0": "02:85:e9:60:90:d4",
-  "manufacturer": "Xen",
   "memory": {
     "system": {
       "available": "1.08 GiB",
@@ -143,10 +124,6 @@
       "used_bytes": 935657472
     }
   },
-  "memoryfree": "1.08 GiB",
-  "memoryfree_mb": 1109.21875,
-  "memorysize": "1.95 GiB",
-  "memorysize_mb": 2001.53125,
   "mountpoints": {
     "/": {
       "available": "5.34 GiB",
@@ -182,14 +159,10 @@
   },
   "mtu_eth0": 9001,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.192",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.192",
   "netmask_lo": "255.0.0.0",
-  "network": "10.254.253.128",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_lo": "::1",
   "network_eth0": "10.254.253.128",
@@ -259,9 +232,6 @@
     "network6": "fe80::",
     "primary": "eth0"
   },
-  "operatingsystem": "Amazon",
-  "operatingsystemmajrelease": "2017",
-  "operatingsystemrelease": "2017.03",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -276,7 +246,6 @@
       "enabled": false
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/xvda1": {
       "filesystem": "ext4",
@@ -290,29 +259,12 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/aws/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz"
-    ],
-    "physicalcount": 1
-  },
-  "productname": "HVM domU",
   "puppetversion": "4.10.4",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
     "version": "2.1.9"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-  "rubyversion": "2.1.9",
-  "selinux": false,
-  "serialnumber": "ec209762-def6-9b34-bb6f-eba5e5ee4c56",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -358,10 +310,5 @@
     "uptime": "2:39 hours"
   },
   "timezone": "UTC",
-  "uptime": "2:39 hours",
-  "uptime_days": 0,
-  "uptime_hours": 2,
-  "uptime_seconds": 9544,
-  "uuid": "EC209762-DEF6-9B34-BB6F-EBA5E5EE4C56",
   "virtual": "xenhvm"
 }

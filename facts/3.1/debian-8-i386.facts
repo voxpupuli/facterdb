@@ -1,20 +1,7 @@
 {
-  "architecture": "i386",
   "augeas": {
     "version": "1.4.0"
   },
-  "augeasversion": "1.4.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 53687091200,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "eth0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -48,15 +35,8 @@
       "uuid": "44CCF456-FF08-48A2-848D-A5B5EB65445C"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.1.6",
   "filesystems": "ext2,ext3,ext4",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "unknown",
-  "hardwaremodel": "i386",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -64,8 +44,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:feac:cc97",
   "ipaddress6_eth0": "fe80::a00:27ff:feac:cc97",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
@@ -80,15 +58,7 @@
     "1m": 0.27,
     "5m": 0.21
   },
-  "lsbdistcodename": "jessie",
-  "lsbdistdescription": "Debian GNU/Linux 8.0 (jessie)",
-  "lsbdistid": "Debian",
-  "lsbdistrelease": "8.0",
-  "lsbmajdistrelease": "8",
-  "lsbminordistrelease": "0",
-  "macaddress": "08:00:27:ac:cc:97",
   "macaddress_eth0": "08:00:27:ac:cc:97",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "369.76 MiB",
@@ -100,10 +70,6 @@
       "used_bytes": 130748416
     }
   },
-  "memoryfree": "369.76 MiB",
-  "memoryfree_mb": 369.7578125,
-  "memorysize": "494.45 MiB",
-  "memorysize_mb": 494.44921875,
   "mountpoints": {
     "/": {
       "available": "47.61 GiB",
@@ -125,14 +91,10 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_lo": "::1",
   "network_eth0": "10.0.2.0",
@@ -202,9 +164,6 @@
     "network6": "fe80::",
     "primary": "eth0"
   },
-  "operatingsystem": "Debian",
-  "operatingsystemmajrelease": "8",
-  "operatingsystemrelease": "8.0",
   "os": {
     "architecture": "i386",
     "distro": {
@@ -229,7 +188,6 @@
       "enabled": false
     }
   },
-  "osfamily": "Debian",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "ext4",
@@ -241,29 +199,12 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/rvm/gems/ruby-1.9.3-p551/bin:/usr/local/rvm/gems/ruby-1.9.3-p551@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin:/usr/local/rvm/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Core(TM) i7-3687U CPU @ 2.10GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "unknown",
-    "models": [
-      "Intel(R) Core(TM) i7-3687U CPU @ 2.10GHz"
-    ],
-    "physicalcount": 1
-  },
-  "productname": "VirtualBox",
   "puppetversion": "4.4.2",
   "ruby": {
     "platform": "i386-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
     "version": "2.1.8"
   },
-  "rubyplatform": "i386-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-  "rubyversion": "2.1.8",
-  "selinux": false,
-  "serialnumber": "0",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -309,10 +250,5 @@
     "uptime": "0:09 hours"
   },
   "timezone": "CEST",
-  "uptime": "0:09 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 560,
-  "uuid": "44CCF456-FF08-48A2-848D-A5B5EB65445C",
   "virtual": "virtualbox"
 }

@@ -1,11 +1,4 @@
 {
-  "architecture": "amd64",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_ada0_model": "VBOX HARDDISK",
-  "blockdevice_ada0_size": 68719476736,
-  "blockdevices": "ada0",
   "dhcp_servers": {
     "em0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -31,15 +24,8 @@
       "uuid": "d46a39e9-2c1c-0549-89a5-391974f2e7e7"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.18",
   "filesystems": "devfs,vboxvfs,zfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -48,7 +34,6 @@
     "user": "root"
   },
   "interfaces": "em0,lo0",
-  "ipaddress": "10.0.2.15",
   "ipaddress6_lo0": "::1",
   "ipaddress_em0": "10.0.2.15",
   "ipaddress_lo0": "127.0.0.1",
@@ -62,9 +47,7 @@
     "1m": 0.65771484375,
     "5m": 0.27490234375
   },
-  "macaddress": "08:00:27:37:c2:4d",
   "macaddress_em0": "08:00:27:37:c2:4d",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -85,10 +68,6 @@
       "used_bytes": 268955648
     }
   },
-  "memoryfree": "727.99 MiB",
-  "memoryfree_mb": 727.98828125,
-  "memorysize": "984.48 MiB",
-  "memorysize_mb": 984.484375,
   "mountpoints": {
     "/": {
       "available": "58.83 GiB",
@@ -292,11 +271,9 @@
   },
   "mtu_em0": 1500,
   "mtu_lo0": 16384,
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_lo0": "127.0.0.0",
@@ -358,9 +335,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "FreeBSD",
-  "operatingsystemmajrelease": "13",
-  "operatingsystemrelease": "13.0-RELEASE",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -373,7 +347,6 @@
       "minor": "0"
     }
   },
-  "osfamily": "FreeBSD",
   "partitions": {
     "ada0p1": {
       "partlabel": "gptboot0",
@@ -395,29 +368,12 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-  "processor1": "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "amd64",
-    "models": [
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz",
-      "Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz"
-    ],
-    "speed": "1.99 GHz"
-  },
-  "productname": "VirtualBox",
   "ruby": {
     "platform": "amd64-freebsd13",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
     "version": "2.7.3"
   },
-  "rubyplatform": "amd64-freebsd13",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-  "rubyversion": "2.7.3",
   "scope6_lo0": "host",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -450,10 +406,6 @@
   "sshfp_ed25519": "SSHFP 4 1 882c76c1ba285d186b53bb6e2a6ead8e960cc951\nSSHFP 4 2 fd302981dcc80d537e25eca6399a36a9c7a39d2a0656555e15e5f35bad0d678e",
   "sshfp_rsa": "SSHFP 1 1 a95edf0f08db96e27bcb0fd27428304fb0883037\nSSHFP 1 2 5dc90d4febda1dd40bc062d360bf104d36e482ea81a2bb68f83e140f5d0ac484",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCvTUsmTLlYzmSFQBalEC6yoI2nHsROPn6sUXXOAClXC9jwA52cP/InDscEnK6ubdiY4bivlXfZNJJdjqVWiv3E8wG8M8i7S2g7JcfF7615/L9w5GA7qwneCNUtwhIdwiYptCzxctkftwLmGKfWOZw7alvt7ebzPJjuw7KBKGBxOhG8oDaMmnTWRO2JjuR1bpMxbCj2NCGAe+ZTcwJfqtrVKBGZM2A+/ZqVqMHR5lYCj6lRUyOFKxa0OmkFt9MXAkJra11lqd+LcyI9PdcMom9UicLhv91HXxwuET4IHoUxvusr8L1ZP7iBKjH68kBSdpOhdXoqokOXqzWc/kYAdbdd",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2048.0,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -461,11 +413,6 @@
     "uptime": "0:02 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:02 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 163,
-  "uuid": "d46a39e9-2c1c-0549-89a5-391974f2e7e7",
   "virtual": "virtualbox",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

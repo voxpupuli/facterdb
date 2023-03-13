@@ -1,8 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
-  "fqdn": "foo.example.com",
-  "domain": "example.com",
-  "hostname": "foo",
   "disks": {
     "mmcblk1": {
       "size": "29.81 GiB",
@@ -467,8 +463,6 @@
     "network6": "fe80::",
     "primary": "eth0"
   },
-  "operatingsystem": "Ubuntu",
-  "osfamily": "Debian",
   "os": {
     "architecture": "aarch64",
     "distro": {
@@ -499,12 +493,6 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games",
-  "processors": {
-    "count": 4,
-    "isa": "aarch64",
-    "physicalcount": 1,
-    "speed": "1.54 GHz"
-  },
   "ruby": {
     "platform": "aarch64-linux-gnu",
     "sitedir": "/usr/local/lib/site_ruby/2.5.0",

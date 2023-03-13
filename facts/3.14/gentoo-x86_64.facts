@@ -1,16 +1,4 @@
 {
-  "architecture": "amd64",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 34359738368,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "eth0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -45,16 +33,9 @@
       "uuid": "889262D8-B24A-4B7C-952F-1967EA464D57"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.5",
   "filesystems": "ext2,ext3,ext4,iso9660,msdos,vfat,vxfs,xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -63,7 +44,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo,sit0",
-  "ipaddress": "10.0.2.15",
   "ipaddress_eth0": "10.0.2.15",
   "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
@@ -76,9 +56,7 @@
     "1m": 0.06,
     "5m": 0.73
   },
-  "macaddress": "08:00:27:5a:63:33",
   "macaddress_eth0": "08:00:27:5a:63:33",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "3.80 GiB",
@@ -99,10 +77,6 @@
       "used_bytes": 94863360
     }
   },
-  "memoryfree": "1.86 GiB",
-  "memoryfree_mb": 1900.5703125,
-  "memorysize": "1.94 GiB",
-  "memorysize_mb": 1991.0390625,
   "mountpoints": {
     "/": {
       "available": "21.31 GiB",
@@ -272,10 +246,8 @@
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
   "mtu_sit0": 1480,
-  "netmask": "255.255.255.0",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
   "network_eth0": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "networking": {
@@ -323,9 +295,6 @@
     "network": "10.0.2.0",
     "primary": "eth0"
   },
-  "operatingsystem": "Gentoo",
-  "operatingsystemmajrelease": "2",
-  "operatingsystemrelease": "2.6",
   "os": {
     "architecture": "amd64",
     "family": "Gentoo",
@@ -340,7 +309,6 @@
       "enabled": false
     }
   },
-  "osfamily": "Gentoo",
   "partitions": {
     "/dev/sda1": {
       "partlabel": "BIOS",
@@ -376,31 +344,12 @@
     }
   },
   "path": "/usr/x86_64-pc-linux-gnu/gcc-bin/7.3.0:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
-  "processor1": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
-    "models": [
-      "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz",
-      "Intel(R) Core(TM) i5-7360U CPU @ 2.30GHz"
-    ],
-    "physicalcount": 1
-  },
-  "productname": "VirtualBox",
   "puppetversion": "6.10.1",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/usr/lib64/ruby/site_ruby/2.5.0",
     "version": "2.5.7"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/usr/lib64/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.7",
-  "selinux": false,
-  "serialnumber": "0",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -443,10 +392,6 @@
   "sshfp_ed25519": "SSHFP 4 1 2ea906ea503640343e6b3df572d022f8159ebb4f\nSSHFP 4 2 ecf95db668710290cd8859af944185b3f928dd29b44b7f482fbf10ee10bd6704",
   "sshfp_rsa": "SSHFP 1 1 181ad4f01cf6115d0f3096b7438c45d8d3c91089\nSSHFP 1 2 b74183abc02d1bbe78fcebf2cc6053d330e90f9a78a8833f55f349da4c331269",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDlCVJ2ZlBgbCSL+t6/h00T9YGZChwanGXW0vh6Gewi2xADmxk5G/iKfSLraHRhjUbA0x5dqSfBZM1AZgerA1HyhZomxwPOIs9PCgY+ZcHQBmWviDuAchOMAL0FGQl8w5u7W70k0UWSXrSuLcw4/fDKWjH5ZTCra93wg+nftqoZ3vfe7m4cyy23QgKJVEVsVbk13MDqE+bhrzyxWhwzB0vLdFXZSr4f4laPZmEWLrOKRxW4LZGsEXsdmXSlNcXbBZNbKYSJxKM0eWh/D/gTU7mfZv03VRWfbgKVCXrlIiw1j/5Lw/XnbW1Z4yp79HWz9zIlDbH8m4L4JHunzxBADPhB",
-  "swapfree": "3.80 GiB",
-  "swapfree_mb": 3894.9375,
-  "swapsize": "3.81 GiB",
-  "swapsize_mb": 3905.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 6,
@@ -454,10 +399,5 @@
     "uptime": "6:28 hours"
   },
   "timezone": "PST",
-  "uptime": "6:28 hours",
-  "uptime_days": 0,
-  "uptime_hours": 6,
-  "uptime_seconds": 23308,
-  "uuid": "889262D8-B24A-4B7C-952F-1967EA464D57",
   "virtual": "virtualbox"
 }
