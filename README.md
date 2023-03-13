@@ -206,9 +206,6 @@ $ bundle exec rake rhel_alts
 
 Then update the table in this README by running `bundle exec rake table`
 
-*NOTE*: When using Facter version 4, by default some "legacy facts" are hidden from the output.
-To generate a fact set with the legacy facts use the command `puppet facts show --show-legacy`
-
 ## Supplying custom external facts
 
 The default facts are great for many things but there will be times when you need to have facterdb search custom
