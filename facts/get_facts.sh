@@ -75,7 +75,7 @@ case "${osfamily}" in
       if yum install -y puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
         mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
+        facter --puppet --json | tee ${output_file}
       fi
     done
     yum remove -y puppet8-release
@@ -93,7 +93,7 @@ case "${osfamily}" in
       if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
         mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
+        facter --puppet --json | tee ${output_file}
       fi
     done
     apt-get -y remove --purge puppet8-release
@@ -107,7 +107,7 @@ case "${osfamily}" in
     apt_install ruby rubygems ruby-dev puppet facter
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
     mkdir -p $(dirname ${output_file})
-    facter --show-legacy -p -j | tee ${output_file}
+    facter --puppet --json | tee ${output_file}
   fi
   ;;
 'FreeBSD')
@@ -124,7 +124,7 @@ case "${osfamily}" in
     [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
     output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-${hardwaremodel}.facts"
     mkdir -p $(dirname ${output_file})
-    [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+    [ ! -f ${output_file} ] && facter --puppet --json | tee ${output_file}
   done
   ;;
 'OpenBSD')
@@ -133,7 +133,7 @@ case "${osfamily}" in
   # Vagrant box should already have puppet & facter installed
   output_file="/vagrant/$(facter --version | cut -d. -f1-2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemrelease)-${hardwaremodel}.facts"
   mkdir -p $(dirname ${output_file})
-  [ ! -f ${output_file} ] && facter --show-legacy -p -j | tee ${output_file}
+  [ ! -f ${output_file} ] && facter --puppet --json | tee ${output_file}
   ;;
 'Suse')
   # install deps that we need later for gem based setup
@@ -149,7 +149,7 @@ case "${osfamily}" in
       if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
+        facter --puppet --json | tee ${output_file}
       fi
     done
     zypper --non-interactive remove puppet8-release
@@ -159,13 +159,13 @@ case "${osfamily}" in
   pacman --sync --refresh --sysupgrade --noconfirm ruby ruby-bundler base-devel dnsutils facter augeas
   output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
-  facter --show-legacy -p -j | tee ${output_file}
+  facter --puppet --json | tee ${output_file}
   ;;
 'Gentoo')
   emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet dev-ruby/facter sys-apps/dmidecode app-admin/augeas
   output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
-  facter --show-legacy -p -j | tee ${output_file}
+  facter --puppet --json | tee ${output_file}
 esac
 
 # this lower section relies on the ruby version and facter version that came
@@ -214,6 +214,6 @@ for version in 4.2.14 4.3.0 4.4.3 4.5.2 4.6.0 4.7.0; do
   fi
   mkdir -p $(dirname $output_file)
   echo $version | grep -q -E '^1\.' &&
-    FACTER_GEM_VERSION="~> ${version}" bundle exec facter --show-legacy --json | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
-    FACTER_GEM_VERSION="~> ${version}" bundle exec facter --show-legacy --json | tee $output_file
+    FACTER_GEM_VERSION="~> ${version}" bundle exec facter --json | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
+    FACTER_GEM_VERSION="~> ${version}" bundle exec facter --json | tee $output_file
 done

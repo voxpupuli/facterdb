@@ -88,7 +88,7 @@ foreach ($pupAgentVer in $puppetAgentVersions) {
   # the domain name will fallback to the hypervisor's domain.
   $env:FACTER_fqdn = $fqdn
 
-  $facterArgs = @("-j", "-p", "--show-legacy")
+  $facterArgs = @("--json", "--puppet")
   $facterProcess = Start-Process -FilePath $facterBin -ArgumentList $facterArgs -Wait -PassThru -RedirectStandardOutput "X:\$facterVer\$Os-$Osmaj-$Hw.facts"
   if ($facterProcess.ExitCode -ne 0) {
     Write-Host "Facter failed."
