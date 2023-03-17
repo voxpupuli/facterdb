@@ -1,20 +1,8 @@
 {
   "aio_agent_version": "7.20.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.13.0"
   },
-  "augeasversion": "1.13.0",
-  "bios_release_date": "04/01/2014",
-  "bios_vendor": "SeaBIOS",
-  "bios_version": "1.14.0-1.el8s",
-  "blockdevice_sda_model": "QEMU HARDDISK",
-  "blockdevice_sda_size": 42949672960,
-  "blockdevice_sda_vendor": "QEMU",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Red Hat",
-  "boardproductname": "RHEL-AV",
-  "chassistype": "Other",
   "dhcp_servers": {
     "system": ""
   },
@@ -48,19 +36,13 @@
       "uuid": "0f61d142-c291-4770-a0c9-405520784d49"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.2.13",
   "filesystems": "xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
-    "kvm": {}
+    "kvm": {
+    }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -69,8 +51,6 @@
     "user": "root"
   },
   "interfaces": "enp1s0,lo",
-  "ipaddress": "10.109.1.2",
-  "ipaddress6": "fe80::546f:86ff:fe55:c7",
   "ipaddress6_enp1s0": "fe80::546f:86ff:fe55:c7",
   "ipaddress6_lo": "::1",
   "ipaddress_enp1s0": "10.109.1.2",
@@ -85,12 +65,7 @@
     "1m": 0.12,
     "5m": 0.16
   },
-  "lsbdistrelease": "8.6",
-  "lsbmajdistrelease": "8",
-  "lsbminordistrelease": "6",
-  "macaddress": "56:6f:86:55:00:c7",
   "macaddress_enp1s0": "56:6f:86:55:00:c7",
-  "manufacturer": "oVirt",
   "memory": {
     "swap": {
       "available": "4.00 GiB",
@@ -111,10 +86,6 @@
       "used_bytes": 1129574400
     }
   },
-  "memoryfree": "6.53 GiB",
-  "memoryfree_mb": 6683.4765625,
-  "memorysize": "7.58 GiB",
-  "memorysize_mb": 7760.72265625,
   "mountpoints": {
     "/": {
       "available": "29.81 GiB",
@@ -345,14 +316,10 @@
   },
   "mtu_enp1s0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_enp1s0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_enp1s0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.109.1.0",
-  "network6": "fe80::",
   "network6_enp1s0": "fe80::",
   "network6_lo": "::1",
   "network_enp1s0": "10.109.1.0",
@@ -431,9 +398,6 @@
     "primary": "enp1s0",
     "scope6": "link"
   },
-  "operatingsystem": "RedHat",
-  "operatingsystemmajrelease": "8",
-  "operatingsystemrelease": "8.6",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -463,7 +427,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/mapper/rhel_foo-root": {
       "filesystem": "xfs",
@@ -495,42 +458,14 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/opt/puppetlabs/bin:/sbin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel Xeon Processor (Cascadelake)",
-  "processor1": "Intel Xeon Processor (Cascadelake)",
-  "processorcount": 2,
-  "processors": {
-    "cores": 1,
-    "count": 2,
-    "isa": "x86_64",
-    "models": [
-      "Intel Xeon Processor (Cascadelake)",
-      "Intel Xeon Processor (Cascadelake)"
-    ],
-    "physicalcount": 2,
-    "speed": "2.19 GHz",
-    "threads": 1
-  },
-  "productname": "RHEL",
   "puppetversion": "7.20.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.6"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.6",
-  "scope6": "link",
   "scope6_enp1s0": "link",
   "scope6_lo": "host",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "33",
-  "serialnumber": "4c4c4544-005a-3910-804e-b7c04f463033",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -563,10 +498,6 @@
   "sshfp_ed25519": "SSHFP 4 1 0337a67ce814f68d3669ec0c418682f9440c243e\nSSHFP 4 2 7f4a1f0aad3a4a83fda20ee6664ba78d9e800fa4d214868db925c44adaa59048",
   "sshfp_rsa": "SSHFP 1 1 93ffda53fbfa08056e6492b2809d5fecb1bec3b7\nSSHFP 1 2 f23cabe93affd5689b03d587311c2633a33b24c35dc8f4fce61ce79af5463699",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDhQVi3SskjL4caHEUp2aeHlqJgntIKvaynwp7drqRUPZzscvggsSG4W3hTcnjkX6uvyHfPj8hQ/PKOI0NP1214ut33iz/fgo9upVmiom+OBjfqj6+2xTT1lPCh84FHB/cDwgcQe586d9O6BQYUBi4lIC+JdoE12J1zecZwWDGdVXd8TkVXRIs70JHRdWv+xGXCYPNQOgSZq6pk83FwZZ+Sy467hqUFNbvljriimx4zbacyPBNOOWBVTjmfCcfxTxqKBJMlylGYBolN6x4a8dT7hFSv8mJEvvlGcZiQy3LE6rbIH+n2i2euh2L/6m7XwLbm2ZdIKHCn04lfSwHVFCZKB0TG5sLASmweBNTI3XXtAc2Os7UzYnxClNDAGKNBRb/EM1GDi+9avkBWiZgoHS9Kls9LXmz0o4OOOnPZFiio/ud6ld01YGCcdo9GnThMDDfGLRCrdNhbHrpA0BGxpnAQ9OqpwPiSuWI79J0JRu8T7+Xh6oPa62rQOIFOGI7PBFE=",
-  "swapfree": "4.00 GiB",
-  "swapfree_mb": 4095.99609375,
-  "swapsize": "4.00 GiB",
-  "swapsize_mb": 4095.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -574,10 +505,5 @@
     "uptime": "0:03 hours"
   },
   "timezone": "EDT",
-  "uptime": "0:03 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 211,
-  "uuid": "0f61d142-c291-4770-a0c9-405520784d49",
   "virtual": "ovirt"
 }

@@ -1,17 +1,8 @@
 {
   "aio_agent_version": "7.14.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "03/14/2014",
-  "bios_vendor": "BHYVE",
-  "bios_version": "1.00",
-  "blockdevice_vda_size": 63999836160,
-  "blockdevice_vda_vendor": "0x1af4",
-  "blockdevices": "vda",
-  "chassisassettag": "None",
   "dhcp_servers": {
     "system": null
   },
@@ -38,21 +29,14 @@
       "uuid": "2d874099-0000-0000-8ec5-395db61b7fb0"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.2.7",
   "filesystems": "ext2,ext3,ext4,iso9660,msdos,squashfs,udf,vfat,xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "docker": {
       "id": "7a0d09c6bbd26261e5c9acee31c171d73c4889b04402150e84f074deeb1c83c8"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -61,7 +45,6 @@
     "user": "root"
   },
   "interfaces": "eth0,ip6tnl0,lo,tunl0",
-  "ipaddress": "172.17.0.3",
   "ipaddress_eth0": "172.17.0.3",
   "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
@@ -74,10 +57,6 @@
     "1m": 0.02,
     "5m": 0.07
   },
-  "lsbdistrelease": "6.10",
-  "lsbmajdistrelease": "6",
-  "lsbminordistrelease": "10",
-  "macaddress": "02:42:ac:11:00:03",
   "macaddress_eth0": "02:42:ac:11:00:03",
   "macaddress_ip6tnl0": "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00",
   "memory": {
@@ -100,10 +79,6 @@
       "used_bytes": 1506967552
     }
   },
-  "memoryfree": "14.24 GiB",
-  "memoryfree_mb": 14579.046875,
-  "memorysize": "15.64 GiB",
-  "memorysize_mb": 16016.203125,
   "mountpoints": {
     "/": {
       "available": "29.34 GiB",
@@ -405,10 +380,8 @@
   "mtu_ip6tnl0": 1452,
   "mtu_lo": 65536,
   "mtu_tunl0": 1480,
-  "netmask": "255.255.0.0",
   "netmask_eth0": "255.255.0.0",
   "netmask_lo": "255.0.0.0",
-  "network": "172.17.0.0",
   "network_eth0": "172.17.0.0",
   "network_lo": "127.0.0.0",
   "networking": {
@@ -458,9 +431,6 @@
     "network": "172.17.0.0",
     "primary": "eth0"
   },
-  "operatingsystem": "OracleLinux",
-  "operatingsystemmajrelease": "6",
-  "operatingsystemrelease": "6.10",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -485,7 +455,6 @@
       "enabled": false
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/vda1": {
       "mount": "/etc/resolv.conf",
@@ -494,50 +463,12 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin",
-  "physicalprocessorcount": 8,
-  "processor0": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor1": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor2": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor3": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor4": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor5": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor6": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor7": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processorcount": 8,
-  "processors": {
-    "cores": 1,
-    "count": 8,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz"
-    ],
-    "physicalcount": 8,
-    "speed": "2.60 GHz",
-    "threads": 1
-  },
-  "productname": "BHYVE",
   "puppetversion": "7.14.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.5"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.5",
-  "selinux": false,
-  "serialnumber": "None",
-  "swapfree": "1.00 GiB",
-  "swapfree_mb": 1023.99609375,
-  "swapsize": "1.00 GiB",
-  "swapsize_mb": 1023.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 1,
@@ -545,10 +476,5 @@
     "uptime": "1:43 hours"
   },
   "timezone": "UTC",
-  "uptime": "1:43 hours",
-  "uptime_days": 0,
-  "uptime_hours": 1,
-  "uptime_seconds": 6207,
-  "uuid": "2d874099-0000-0000-8ec5-395db61b7fb0",
   "virtual": "docker"
 }

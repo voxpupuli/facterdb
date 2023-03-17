@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "6.10.1",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "08/15/2019",
-  "bios_vendor": "Dell Inc.",
-  "bios_version": "2.3.10",
-  "blockdevice_sda_model": "PERC H730P Adp",
-  "blockdevice_sda_size": 14334319132672,
-  "blockdevice_sda_vendor": "DELL",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Dell Inc.",
-  "boardproductname": "EUHRV",
-  "boardserialnumber": "EHRJIOUE",
-  "chassistype": "Rack Mount Chassis",
   "dhcp_servers": {
     "eth0": "169.255.254.1",
     "system": "169.255.254.1"
@@ -49,15 +36,9 @@
       "uuid": "9ee62364-bcb9-48b8-b808-5f37c426a9d3"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.5",
   "filesystems": "btrfs,ext2,ext3,ext4,msdos,vfat,xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "openvz": {
       "cloudlinux": false,
@@ -65,7 +46,6 @@
       "id": 0
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -74,8 +54,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "192.168.178.2",
-  "ipaddress6": "fe80::4ed9:8fff:fe8e:3a5d",
   "ipaddress6_eth0": "fe80::4ed9:8fff:fe8e:3a5d",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "192.168.178.2",
@@ -90,9 +68,7 @@
     "1m": 0.01,
     "5m": 0.03
   },
-  "macaddress": "4c:d9:8f:8e:3a:5d",
   "macaddress_eth0": "4c:d9:8f:8e:3a:5d",
-  "manufacturer": "Dell Inc.",
   "memory": {
     "system": {
       "available": "372.29 GiB",
@@ -104,10 +80,6 @@
       "used_bytes": 4137377792
     }
   },
-  "memoryfree": "372.29 GiB",
-  "memoryfree_mb": 381226.703125,
-  "memorysize": "376.14 GiB",
-  "memorysize_mb": 385172.4140625,
   "mountpoints": {
     "/": {
       "available": "35.59 GiB",
@@ -331,14 +303,10 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask6_eth0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "192.168.178.0",
-  "network6": "fe80::4ed9:8fff:fe8e:3a5d",
   "network6_eth0": "fe80::4ed9:8fff:fe8e:3a5d",
   "network6_lo": "::1",
   "network_lo": "127.0.0.0",
@@ -389,9 +357,6 @@
     "network6": "fe80::4ed9:8fff:fe8e:3a5d",
     "primary": "eth0"
   },
-  "operatingsystem": "VirtuozzoLinux",
-  "operatingsystemmajrelease": "7",
-  "operatingsystemrelease": "7.6",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -406,7 +371,6 @@
       "enabled": false
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "ext4",
@@ -431,108 +395,13 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/root/bin",
-  "physicalprocessorcount": 2,
   "primary_ip": "192.168.178.2",
   "primary_mac": "4c:d9:8f:8e:3a:5d",
-  "processor0": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor1": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor10": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor11": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor12": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor13": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor14": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor15": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor16": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor17": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor18": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor19": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor2": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor20": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor21": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor22": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor23": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor24": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor25": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor26": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor27": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor28": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor29": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor3": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor30": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor31": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor32": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor33": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor34": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor35": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor36": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor37": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor38": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor39": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor4": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor5": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor6": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor7": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor8": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processor9": "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-  "processorcount": 40,
-  "processors": {
-    "count": 40,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz",
-      "Intel(R) Xeon(R) Gold 5115 CPU @ 2.40GHz"
-    ],
-    "physicalcount": 2
-  },
-  "productname": "PowerEdge R440",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.7"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.7",
-  "selinux": false,
-  "serialnumber": "EHRJIOUE",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -572,10 +441,5 @@
     "uptime": "1 day"
   },
   "timezone": "UTC",
-  "uptime": "1 day",
-  "uptime_days": 1,
-  "uptime_hours": 33,
-  "uptime_seconds": 118806,
-  "uuid": "4C4C4544-0058-4310-8038-B1C04F525A32",
   "virtual": "openvzhn"
 }

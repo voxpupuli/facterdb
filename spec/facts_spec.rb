@@ -88,8 +88,8 @@ describe 'Default Facts' do
           expect(content['networking']['fqdn']).to eq('foo.example.com')
         end
       end
-      it 'contains the legacy ipaddress fact' do
-        expect(content['ipaddress']).to not_be_nil.and not_be_empty
+      it 'does not contains the legacy ipaddress fact' do
+        expect(content['ipaddress']).to be_nil
       end
       it 'contains no facts from puppetlabs/stdlib' do
         expect(content['root_home']).to be_nil
@@ -105,16 +105,16 @@ describe 'Default Facts' do
         expect(content['systemd_version']).to be_nil
         expect(content['systemd_internal_services']).to be_nil
       end
-      it 'contains a legacy hostname, domain and fqdn fact' do
-        expect(content['hostname']).to eq('foo')
-        expect(content['fqdn']).to eq('foo.example.com')
-        expect(content['domain']).to eq('example.com')
+      it 'does not contain a legacy hostname, domain and fqdn fact' do
+        expect(content['hostname']).to be_nil
+        expect(content['fqdn']).to be_nil
+        expect(content['domain']).to be_nil
       end
-      it 'contains the legacy osfamily fact' do
-        expect(content['osfamily']).to_not be_nil
+      it 'does not contain the legacy osfamily fact' do
+        expect(content['osfamily']).to be_nil
       end
-      it 'contains the legacy operatingsystem fact' do
-        expect(content['operatingsystem']).to_not be_nil
+      it 'does not contain the legacy operatingsystem fact' do
+        expect(content['operatingsystem']).to be_nil
       end
     end
   end

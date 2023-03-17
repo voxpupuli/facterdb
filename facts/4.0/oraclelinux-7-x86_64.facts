@@ -1,7 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
-  "operatingsystem": "OracleLinux",
-  "osfamily": "RedHat",
   "os": {
     "family": "RedHat",
     "name": "OracleLinux",
@@ -41,16 +38,6 @@
       "vendor": "NECVMWar",
       "type": "hdd"
     }
-  },
-  "processors": {
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz",
-      "Intel(R) Xeon(R) CPU E5-2697 v4 @ 2.30GHz"
-    ],
-    "physicalcount": 2,
-    "speed": "2.29 GHz",
-    "count": 2
   },
   "dmi": {
     "manufacturer": "VMware, Inc.",
@@ -629,7 +616,9 @@
     "sshd": "/var/empty/sshd"
   },
   "prometheus_alert_manager_running": false,
-  "who2bug": [],
+  "who2bug": [
+
+  ],
   "classification": {
     "hostname": "live-pulp",
     "parts": [
@@ -666,14 +655,24 @@
   "selinux_python_command": "python",
   "is_pe": false,
   "pe_patch": {
-    "package_updates": [],
+    "package_updates": [
+
+    ],
     "package_update_count": 0,
-    "missing_update_kbs": [],
-    "security_package_updates": [],
+    "missing_update_kbs": [
+
+    ],
+    "security_package_updates": [
+
+    ],
     "security_package_update_count": 0,
-    "blackouts": {},
-    "pinned_packages": [],
-    "last_run": {},
+    "blackouts": {
+    },
+    "pinned_packages": [
+
+    ],
+    "last_run": {
+    },
     "patch_group": "",
     "reboot_override": "default",
     "reboots": {
@@ -685,9 +684,8 @@
       "security_update_file": "Security update file not found, update information invalid"
     },
     "blocked": false,
-    "blocked_reasons": []
-  },
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
-  "hostname": "foo"
+    "blocked_reasons": [
+
+    ]
+  }
 }

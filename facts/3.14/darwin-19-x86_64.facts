@@ -1,10 +1,8 @@
 {
   "aio_agent_version": "6.20.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
   "dhcp_servers": {
     "en0": "10.32.22.9",
     "system": "10.32.22.9"
@@ -14,20 +12,12 @@
       "name": "VMware7,1"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.15",
   "filesystems": "apfs,autofs,devfs,vmhgfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "i386",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "vmware": {
-
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -36,8 +26,6 @@
     "user": "root"
   },
   "interfaces": "en0,gif0,lo0,stf0",
-  "ipaddress": "10.16.116.252",
-  "ipaddress6": "fe80::1415:e29f:ee05:115",
   "ipaddress6_en0": "fe80::1415:e29f:ee05:115",
   "ipaddress6_lo0": "::1",
   "ipaddress_en0": "10.16.116.252",
@@ -52,13 +40,7 @@
     "1m": 2.123046875,
     "5m": 1.81103515625
   },
-  "macaddress": "00:50:56:9a:12:02",
   "macaddress_en0": "00:50:56:9a:12:02",
-  "macosx_buildversion": "19H512",
-  "macosx_productname": "Mac OS X",
-  "macosx_productversion": "10.15.7",
-  "macosx_productversion_major": "10.15",
-  "macosx_productversion_minor": "7",
   "memory": {
     "system": {
       "available": "342.61 MiB",
@@ -70,10 +52,6 @@
       "used_bytes": 3935719424
     }
   },
-  "memoryfree": "342.61 MiB",
-  "memoryfree_mb": 342.60546875,
-  "memorysize": "4.00 GiB",
-  "memorysize_mb": 4096.0,
   "mountpoints": {
     "/": {
       "available": "29.32 GiB",
@@ -170,14 +148,10 @@
   "mtu_gif0": 1280,
   "mtu_lo0": 16384,
   "mtu_stf0": 1280,
-  "netmask": "255.255.240.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_en0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_en0": "255.255.240.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.16.112.0",
-  "network6": "fe80::",
   "network6_en0": "fe80::",
   "network6_lo0": "::1",
   "network_en0": "10.16.112.0",
@@ -261,9 +235,6 @@
     "primary": "en0",
     "scope6": "link"
   },
-  "operatingsystem": "Darwin",
-  "operatingsystemmajrelease": "19",
-  "operatingsystemrelease": "19.6.0",
   "os": {
     "architecture": "x86_64",
     "family": "Darwin",
@@ -284,55 +255,15 @@
       "minor": "6"
     }
   },
-  "osfamily": "Darwin",
   "path": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/puppetlabs/bin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel(R) Xeon(R) CPU E5-1680 v2 @ 3.00GHz",
-  "processor1": "Intel(R) Xeon(R) CPU E5-1680 v2 @ 3.00GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "i386",
-    "models": [
-      "Intel(R) Xeon(R) CPU E5-1680 v2 @ 3.00GHz",
-      "Intel(R) Xeon(R) CPU E5-1680 v2 @ 3.00GHz"
-    ],
-    "physicalcount": 2,
-    "speed": "2.86 GHz"
-  },
-  "productname": "VMware7,1",
   "puppetversion": "6.20.0",
   "ruby": {
     "platform": "x86_64-darwin19",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.8"
   },
-  "rubyplatform": "x86_64-darwin19",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.8",
-  "scope6": "link",
   "scope6_en0": "link",
   "scope6_lo0": "host",
-  "sp_boot_mode": "Booted from installation CD/DVD",
-  "sp_boot_rom_version": "VMW71.00V.16707776.B64.2008070230",
-  "sp_boot_volume": "Macintosh HD",
-  "sp_current_processor_speed": "2.86 GHz",
-  "sp_kernel_version": "Darwin 19.6.0",
-  "sp_l2_cache_core": "256 KB",
-  "sp_l3_cache": "25 MB",
-  "sp_local_host_name": "foo",
-  "sp_machine_model": "VMware7,1",
-  "sp_machine_name": "Apple device",
-  "sp_number_processors": "2",
-  "sp_os_version": "macOS 10.15.7 (19H512)",
-  "sp_packages": "1",
-  "sp_physical_memory": "4 GB",
-  "sp_platform_uuid": "421A9393-CB1A-48CF-365F-517E5AC36444",
-  "sp_secure_vm": "Enabled",
-  "sp_serial_number": "VMWQ5QpXFYtA",
-  "sp_smc_version_system": "1.16f8",
-  "sp_uptime": "33 minutes",
-  "sp_user_name": "System Administrator (root)",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -404,9 +335,5 @@
     "uptime": "0:33 hours"
   },
   "timezone": "PST",
-  "uptime": "0:33 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 1993,
   "virtual": "vmware"
 }

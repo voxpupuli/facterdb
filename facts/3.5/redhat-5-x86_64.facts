@@ -1,28 +1,8 @@
 {
   "aio_agent_version": "1.8.3",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.4.0"
   },
-  "augeasversion": "1.4.0",
-  "bios_release_date": "07/30/2013",
-  "bios_vendor": "Phoenix Technologies LTD",
-  "bios_version": "6.00",
-  "blockdevice_fd0_size": 4096,
-  "blockdevice_hdc_size": 4294965248,
-  "blockdevice_sda_model": "Virtual disk",
-  "blockdevice_sda_size": 8589934592,
-  "blockdevice_sda_vendor": "VMware",
-  "blockdevice_sdb_model": "Virtual disk",
-  "blockdevice_sdb_size": 8589934592,
-  "blockdevice_sdb_vendor": "VMware",
-  "blockdevices": "fd0,hdc,sdb,sda",
-  "boardassettag": "Not Specified",
-  "boardmanufacturer": "Intel Corporation",
-  "boardproductname": "440BX Desktop Reference Platform",
-  "boardserialnumber": "None",
-  "chassisassettag": "No Asset Tag",
-  "chassistype": "Other",
   "dhcp_servers": {
     "eth0": "10.32.22.10",
     "system": "10.32.22.10"
@@ -72,15 +52,8 @@
       "uuid": "420F4DCD-4ED9-92B1-7B90-643E153EEB03"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.5.1",
   "filesystems": "ext2,ext3,iso9660",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -89,8 +62,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo,sit0",
-  "ipaddress": "10.32.124.129",
-  "ipaddress6": "fe80::250:56ff:fe8f:4bb4",
   "ipaddress6_eth0": "fe80::250:56ff:fe8f:4bb4",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.32.124.129",
@@ -105,16 +76,7 @@
     "1m": 0.31,
     "5m": 0.09
   },
-  "lsbdistcodename": "Final",
-  "lsbdistdescription": "RedHat release 5.10 (Final)",
-  "lsbdistid": "RedHat",
-  "lsbdistrelease": "5.10",
-  "lsbmajdistrelease": "5",
-  "lsbminordistrelease": "10",
-  "lsbrelease": ":core-4.0-amd64:core-4.0-noarch:graphics-4.0-amd64:graphics-4.0-noarch:printing-4.0-amd64:printing-4.0-noarch",
-  "macaddress": "00:50:56:8f:4b:b4",
   "macaddress_eth0": "00:50:56:8f:4b:b4",
-  "manufacturer": "VMware, Inc.",
   "memory": {
     "swap": {
       "available": "3.91 GiB",
@@ -135,10 +97,6 @@
       "used_bytes": 222748672
     }
   },
-  "memoryfree": "3.65 GiB",
-  "memoryfree_mb": 3736.515625,
-  "memorysize": "3.86 GiB",
-  "memorysize_mb": 3948.9453125,
   "mountpoints": {
     "/": {
       "available": "9.63 GiB",
@@ -186,14 +144,10 @@
   "mtu_eth0": 1500,
   "mtu_lo": 16436,
   "mtu_sit0": 1480,
-  "netmask": "255.255.240.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.240.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.32.112.0",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_lo": "::1",
   "network_eth0": "10.32.112.0",
@@ -266,9 +220,6 @@
     "network6": "fe80::",
     "primary": "eth0"
   },
-  "operatingsystem": "RedHat",
-  "operatingsystemmajrelease": "5",
-  "operatingsystemrelease": "5.10",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -299,7 +250,6 @@
       "policy_version": "21"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "ext3",
@@ -319,36 +269,12 @@
     }
   },
   "path": "/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
-  "processor1": "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "x86_64",
-    "models": [
-      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz",
-      "Intel(R) Xeon(R) CPU E5-2680 v2 @ 2.80GHz"
-    ],
-    "physicalcount": 2
-  },
-  "productname": "VMware Virtual Platform",
   "puppetversion": "4.8.2",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
     "version": "2.1.9"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",
-  "rubyversion": "2.1.9",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "21",
-  "serialnumber": "VMware-42 0f 4d cd 4e d9 92 b1-7b 90 64 3e 15 3e eb 03",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -369,10 +295,6 @@
   "sshfp_dsa": "SSHFP 2 1 3febfa91d117f149536fc4739ca84f60aeab7fe2\nSSHFP 2 2 051cbdcb69c3cdce1eeb996509a346efc420aa0928687d001f44e64fa8148473",
   "sshfp_rsa": "SSHFP 1 1 5f64e757ab9e88d23aca55d8b7e88ba813125fb1\nSSHFP 1 2 cb62ae7f4bc96128532ec55120dc651b8ce7180a7c342ab4f8b43e291e6769dc",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAABIwAAAQEAu3juUV4lxin9Z0zs82aJRE6yt/qIbl7LPofVG+bLG42RdLfyKL3HH2AcU5OO3mBBlmpKHgZcqas1tauOdcyZ+3EfiGB7OiAkoEb5Mo6jaYj5kQ6cdnx4XuzfQyA4u3acXKv+ONYgPYxAiZrXyzmetuhyhtY9mhk54s1FXmv3A+KCA/h3tKO1nIMapJ9HI0eK8otNrCL9Drwb25eSYPoGd3B7PvhV3fh67B2VUTukuRpAR3oQuvaBOijOuhFe45RMLIIzWkExzvvQrzNBkEaY5rnYU/GrKdu5u1O4T2E44/w2XetkMzVmVU8oqtH/xPWvAJtx7nCwTFaR5LBNNz5+jw==",
-  "swapfree": "3.91 GiB",
-  "swapfree_mb": 3999.9921875,
-  "swapsize": "3.91 GiB",
-  "swapsize_mb": 3999.9921875,
   "system_uptime": {
     "days": 10,
     "hours": 256,
@@ -380,10 +302,5 @@
     "uptime": "10 days"
   },
   "timezone": "PDT",
-  "uptime": "10 days",
-  "uptime_days": 10,
-  "uptime_hours": 256,
-  "uptime_seconds": 923674,
-  "uuid": "420F4DCD-4ED9-92B1-7B90-643E153EEB03",
   "virtual": "vmware"
 }

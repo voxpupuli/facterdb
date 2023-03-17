@@ -29,7 +29,7 @@ end
 def factset_to_os_label(fs)
   os_rel  = '???'
   os_name = '????'
-  if fs.key?(:os) && fs[:os].key?('release') && (fs[:os]['release']['major'] =~ /\d/)
+  if fs.key?(:os)
     os_name = fs[:os]['name']
     fail    = Hash.new
     os      = fs[:os]
@@ -41,13 +41,13 @@ def factset_to_os_label(fs)
     else
       os_id = '@@@@@@@@@@'
     end
-    os_rel  = fs[:os]['release']['major']
-    os__rel = fs[:os]['release']['full']
-  elsif fs.key? :operatingsystem
-    os_name  = fs[:operatingsystem]
-    os_id    = fs.fetch(:lsbdistid, '@@@@@@@@@@')
-    os_rel   = fs.fetch(:operatingsystemmajrelease, fs.fetch(:lsbmajdistrelease, nil))
-    os__rel  = fs.fetch(:lsbdistrelease, fs.fetch(:operatingsystemrelease, '@@@'))
+    if fs[:os].key?('release') && (fs[:os]['release']['major'] =~ /\d/)
+      os_rel  = fs[:os]['release']['major']
+      os__rel = fs[:os]['release']['full']
+    else
+      os_rel  = fs.dig(:os, 'distro', 'release', 'major')
+      os__rel = fs.dig(:os, 'distro', 'release', 'full') || '@@@'
+    end
   else
     require 'pp'
     pp fs

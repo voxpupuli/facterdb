@@ -1,29 +1,8 @@
 {
-  "hostname": "foo",
-  "operatingsystem": "Amazon",
-  "osfamily": "RedHat",
-  "fqdn": "foo.example.com",
-  "domain": "example.com",
-  "ipaddress": "172.17.0.7",
   "aio_agent_version": "6.27.1",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "04/01/2014",
-  "bios_vendor": "SeaBIOS",
-  "bios_version": "rel-1.15.0-0-g2dd4b9b3f840-prebuilt.qemu.org",
-  "blockdevice_sr0_model": "QEMU DVD-ROM",
-  "blockdevice_sr0_size": 214958080,
-  "blockdevice_sr0_vendor": "QEMU",
-  "blockdevice_sr1_model": "QEMU DVD-ROM",
-  "blockdevice_sr1_size": 7180288,
-  "blockdevice_sr1_vendor": "QEMU",
-  "blockdevice_vda_size": 107374182400,
-  "blockdevice_vda_vendor": "0x1af4",
-  "blockdevices": "sr0,vda,sr1",
-  "chassistype": "Other",
   "disks": {
     "sr0": {
       "model": "QEMU DVD-ROM",
@@ -60,17 +39,11 @@
   "facterversion": "3.14.14",
   "filesystems": "ext3,ext4,iso9660,squashfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "docker": {
       "id": "b5fc79e6ce78aa1759f9cf2a273d377267da920ef1548bff9e9116b573137744"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -79,7 +52,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "172.17.0.7",
   "ipaddress_eth0": "172.17.0.7",
   "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
@@ -92,9 +64,7 @@
     "1m": 0.45,
     "5m": 0.84
   },
-  "macaddress": "02:42:ac:11:00:07",
   "macaddress_eth0": "02:42:ac:11:00:07",
-  "manufacturer": "QEMU",
   "memory": {
     "system": {
       "available": "2.97 GiB",
@@ -106,10 +76,6 @@
       "used_bytes": 943222784
     }
   },
-  "memoryfree": "2.97 GiB",
-  "memoryfree_mb": 3043.37890625,
-  "memorysize": "3.85 GiB",
-  "memorysize_mb": 3942.90625,
   "mountpoints": {
     "/": {
       "available": "73.50 GiB",
@@ -413,10 +379,8 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.0.0",
   "netmask_eth0": "255.255.0.0",
   "netmask_lo": "255.0.0.0",
-  "network": "172.17.0.0",
   "network_eth0": "172.17.0.0",
   "network_lo": "127.0.0.0",
   "networking": {
@@ -459,9 +423,6 @@
     "network": "172.17.0.0",
     "primary": "eth0"
   },
-  "operatingsystem": "Amazon",
-  "operatingsystemmajrelease": "2022",
-  "operatingsystemrelease": "2022",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -475,7 +436,6 @@
       "enabled": false
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/loop0": {
       "backing_file": "/media/cdrom/boot/modloop-virt",
@@ -488,30 +448,12 @@
     }
   },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "06/9e",
-  "processor1": "06/9e",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "x86_64",
-    "models": [
-      "06/9e",
-      "06/9e"
-    ],
-    "physicalcount": 1
-  },
-  "productname": "Standard PC (Q35 + ICH9, 2009)",
   "puppetversion": "6.27.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.9"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.9",
-  "selinux": false,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -519,10 +461,6 @@
     "uptime": "0:17 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:17 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 1075,
   "virtual": "docker",
   "clientcert": "b5fc79e6ce78",
   "clientversion": "6.27.0",

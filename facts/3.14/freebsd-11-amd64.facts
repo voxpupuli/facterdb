@@ -1,15 +1,7 @@
 {
-  "architecture": "amd64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_ada0_model": "VBOX HARDDISK",
-  "blockdevice_ada0_size": 68719476736,
-  "blockdevices": "ada0",
   "dhcp_servers": {
     "em0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -35,15 +27,8 @@
       "uuid": "6dc7034d-bf26-4dea-842f-3d3832274b50"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.1",
   "filesystems": "devfs,nfs,zfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -52,7 +37,6 @@
     "user": "root"
   },
   "interfaces": "em0,em1,lo0",
-  "ipaddress": "10.0.2.15",
   "ipaddress6_lo0": "::1",
   "ipaddress_em0": "10.0.2.15",
   "ipaddress_em1": "10.0.0.2",
@@ -67,10 +51,8 @@
     "1m": 0.56298828125,
     "5m": 0.66650390625
   },
-  "macaddress": "08:00:27:81:55:6a",
   "macaddress_em0": "08:00:27:81:55:6a",
   "macaddress_em1": "08:00:27:10:1b:e1",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -91,10 +73,6 @@
       "used_bytes": 401268736
     }
   },
-  "memoryfree": "605.91 MiB",
-  "memoryfree_mb": 605.9140625,
-  "memorysize": "988.59 MiB",
-  "memorysize_mb": 988.59375,
   "mountpoints": {
     "/": {
       "available": "58.88 GiB",
@@ -299,12 +277,10 @@
   "mtu_em0": 1500,
   "mtu_em1": 1500,
   "mtu_lo0": 16384,
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
   "netmask_em1": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_em1": "10.0.0.0",
@@ -380,9 +356,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "FreeBSD",
-  "operatingsystemmajrelease": "11",
-  "operatingsystemrelease": "11.1-RELEASE-p8",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -394,7 +367,6 @@
       "minor": "1-RELEASE-p8"
     }
   },
-  "osfamily": "FreeBSD",
   "partitions": {
     "ada0p1": {
       "partlabel": "gptboot0",
@@ -416,18 +388,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz",
-  "processorcount": 1,
-  "processors": {
-    "count": 1,
-    "isa": "amd64",
-    "models": [
-      "Intel(R) Core(TM) i7-6500U CPU @ 2.50GHz"
-    ],
-    "speed": "2.59 GHz"
-  },
-  "productname": "VirtualBox",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -460,10 +420,6 @@
   "sshfp_ed25519": "SSHFP 4 1 6403427bf001fd8a494eae026be458429f5383a9\nSSHFP 4 2 5da11efaf8fda6c71ddb29a76d379d4618cf6a00498f85207fbbdd15c4af9835",
   "sshfp_rsa": "SSHFP 1 1 1eed2eb5a61fcd782931129d284331e71062c66f\nSSHFP 1 2 d561a5fb5ca40acd6c2d411b6bd41cc8b200a5504ecc5680f01cdc16568ef4f5",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCzlw8yMO0BOqfdT9TegQ/3zQAYdAJz8+mOFAzy4jCyaIh3ZdNUV7p+V2Ot0EijNrSSlI5wZ9zCVDWhomjB2wMOyxVb15mqRN5zQ8rBVbbHgkLCQ5C0JPJ3+TZltSftlJE2/+RY/yt8MjhhhXNBRmr4mMcmvOHyM1IdWxR11xS3CwBwAPQM6TYnWXeDOVV6ZTi7s2Oh8Fe0+1hnzW8AvDWo5QAZyZevBCoqx7pg7PiA5P04oXepsX7IburgyweHM2SH0rYuFoEGg1lIEBFrcbtU0wEe/Kfo9EEep5zv9wYqtnz2BhvcJor710GCYrK49Deh/kpqxAFdsEsNig3J3YCf",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2048.0,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -471,11 +427,6 @@
     "uptime": "0:08 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:08 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 493,
-  "uuid": "6dc7034d-bf26-4dea-842f-3d3832274b50",
   "virtual": "virtualbox",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

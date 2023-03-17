@@ -1,8 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
-  "hostname": "foo",
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
   "augeas": {
     "version": "1.4.0"
   },
@@ -87,8 +83,6 @@
     "network": "10.32.77.0",
     "primary": "en0"
   },
-  "operatingsystem": "AIX",
-  "osfamily": "AIX",
   "os": {
     "architecture": "PowerPC_POWER7",
     "family": "AIX",
@@ -100,21 +94,6 @@
     }
   },
   "path": "::/usr/bin:/etc:/usr/sbin",
-  "processors": {
-    "count": 8,
-    "isa": "powerpc",
-    "models": [
-      "PowerPC_POWER7",
-      "PowerPC_POWER7",
-      "PowerPC_POWER7",
-      "PowerPC_POWER7",
-      "PowerPC_POWER7",
-      "PowerPC_POWER7",
-      "PowerPC_POWER7",
-      "PowerPC_POWER7"
-    ],
-    "speed": "4.23 GHz"
-  },
   "ruby": {
     "platform": "powerpc-aix6.1.0.0",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.1.0",

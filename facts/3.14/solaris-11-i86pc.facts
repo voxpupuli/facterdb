@@ -1,20 +1,8 @@
 {
   "aio_agent_version": "6.12.0",
-  "architecture": "i86pc",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "07/03/2018",
-  "bios_vendor": "Phoenix Technologies LTD",
-  "bios_version": "6.00",
-  "blockdevice_sd0_size": 0,
-  "blockdevice_sd0_vendor": "NECVMWar",
-  "blockdevice_sd1_size": 21474836480,
-  "blockdevice_sd1_vendor": "VMware",
-  "blockdevices": "sd0,sd1",
-  "chassisassettag": "No Asset Tag",
-  "chassistype": "0x1 (other)",
   "dhcp_servers": {
     "net0": "10.32.22.9",
     "net0:1": "10.32.22.9",
@@ -51,16 +39,11 @@
       "uuid": "421a1218-5f5c-8df5-b71a-466db15d7cad"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.7",
   "filesystems": "autofs,ctfs,dcfs,dev,devfs,fdfs,fifofs,hsfs,lofs,mntfs,namefs,nfs,objfs,pcfs,procfs,sharefs,smbfs,sockfs,specfs,tmpfs,udfs,ufs,zvsfs",
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "i386",
-  "hardwaremodel": "i86pc",
-  "hostname": "foo",
   "hypervisors": {
-    "vmware": {},
+    "vmware": {
+    },
     "zone": {
       "brand": "solaris",
       "id": 0,
@@ -69,7 +52,6 @@
       "uuid": ""
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -78,7 +60,6 @@
     "user": "root"
   },
   "interfaces": "lo0,net0,net0:1",
-  "ipaddress": "10.32.114.185",
   "ipaddress_lo0": "127.0.0.1",
   "ipaddress_net0": "10.32.114.185",
   "ipaddress_net0:1": "10.32.120.39",
@@ -92,10 +73,8 @@
     "1m": 0.15625,
     "5m": 0.1015625
   },
-  "macaddress": "00:50:56:9a:73:7c",
   "macaddress_net0": "00:50:56:9a:73:7c",
   "macaddress_net0:1": "00:50:56:9a:73:7c",
-  "manufacturer": "VMware, Inc.",
   "memory": {
     "swap": {
       "available": "1.00 GiB",
@@ -116,10 +95,6 @@
       "used_bytes": 1832067072
     }
   },
-  "memoryfree": "4.28 GiB",
-  "memoryfree_mb": 4380.296875,
-  "memorysize": "5.98 GiB",
-  "memorysize_mb": 6127.4921875,
   "mountpoints": {
     "/": {
       "available": "11.05 GiB",
@@ -472,11 +447,9 @@
   "mtu_lo0": 8232,
   "mtu_net0": 1500,
   "mtu_net0:1": 1500,
-  "netmask": "255.255.240.0",
   "netmask_lo0": "255.0.0.0",
   "netmask_net0": "255.255.240.0",
   "netmask_net0:1": "255.255.240.0",
-  "network": "10.32.112.0",
   "network_lo0": "127.0.0.0",
   "network_net0": "10.32.112.0",
   "network_net0:1": "10.32.112.0",
@@ -537,9 +510,6 @@
     "network": "10.32.112.0",
     "primary": "net0"
   },
-  "operatingsystem": "Solaris",
-  "operatingsystemmajrelease": "11",
-  "operatingsystemrelease": "11.2",
   "os": {
     "architecture": "i86pc",
     "family": "Solaris",
@@ -551,33 +521,13 @@
       "minor": "2"
     }
   },
-  "osfamily": "Solaris",
   "path": "/usr/bin:/usr/sbin:/opt/puppetlabs/bin:/sbin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel(r) Xeon(r) CPU E5-2680 v3 @ 2.50GHz",
-  "processor1": "Intel(r) Xeon(r) CPU E5-2680 v3 @ 2.50GHz",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "i386",
-    "models": [
-      "Intel(r) Xeon(r) CPU E5-2680 v3 @ 2.50GHz",
-      "Intel(r) Xeon(r) CPU E5-2680 v3 @ 2.50GHz"
-    ],
-    "physicalcount": 2,
-    "speed": "2.49 GHz"
-  },
-  "productname": "VMware Virtual Platform",
   "puppetversion": "6.12.0",
   "ruby": {
     "platform": "i386-solaris2.11",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.7"
   },
-  "rubyplatform": "i386-solaris2.11",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.7",
-  "serialnumber": "VMware-42 1a 12 18 5f 5c 8d f5-b7 1a 46 6d b1 5d 7c ad",
   "solaris_zones": {
     "current": "global",
     "zones": {
@@ -612,10 +562,6 @@
   "sshfp_dsa": "SSHFP 2 1 0f160b66b604acb7edd3b5df582eabf4cba3058c\nSSHFP 2 2 ec2a75c5f2fa2aba6acb456a9f84751010b9280459cbe58c4b5028f4186a9e7b",
   "sshfp_rsa": "SSHFP 1 1 f504e0ea1b571bda1b42850df75b51a1b4851d01\nSSHFP 1 2 af56dbaad902a2ccb100e5ebcb7a995c7f458c968a2188a302e9a3859a63ab7c",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAABIwAAAQEAtzeHsc2Japoj3+PHM0B+1sopd5uteK/3TNiG4yooNzckgRRD3L3gYOGueh4cDDhtMGw8of7EuRdpsM0D0Jp9NNJp2Bvtc0S6PacE7BrU5u1RmIK/p/2wpvLB7umwd69tEMRfx8G0JRbrNsv3C6zzMes3hPzGFQiXPDIBl08aCiYjoqTnVaE7XmhtkkchV5uEj/HuZU0/5UOaH2So1lUliAMgMbOY+JS1aQTqbIYdcnfTha8hROiXwu34UwdO0zeI/uWe948deP+fppZwIcYFAPjFEr34n27mWgfdfZfibU3vuTuKSeO+0qXTfyxqCi/4O6oDG7Knzx66iKCSVdwVUw==",
-  "swapfree": "1.00 GiB",
-  "swapfree_mb": 1023.99609375,
-  "swapsize": "1.00 GiB",
-  "swapsize_mb": 1023.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 16,
@@ -623,11 +569,6 @@
     "uptime": "16:57 hours"
   },
   "timezone": "UTC",
-  "uptime": "16:57 hours",
-  "uptime_days": 0,
-  "uptime_hours": 16,
-  "uptime_seconds": 61020,
-  "uuid": "421a1218-5f5c-8df5-b71a-466db15d7cad",
   "virtual": "vmware",
   "zfs_featurenumbers": "1,2,3,4,5,6",
   "zfs_version": "6",
@@ -637,7 +578,6 @@
   "zone_global_name": "global",
   "zone_global_path": "/",
   "zone_global_status": "running",
-  "zonename": "global",
   "zones": 1,
   "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35",
   "zpool_version": "35"

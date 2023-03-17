@@ -1,10 +1,4 @@
 {
-  "hostname": "foo",
-  "operatingsystem": "Amazon",
-  "osfamily": "RedHat",
-  "fqdn": "foo.example.com",
-  "domain": "example.com",
-  "ipaddress": "172.17.0.7",
   "os": {
     "distro": {
       "description": "Amazon Linux release 2022 (Amazon Linux)",
@@ -444,18 +438,6 @@
   },
   "kernelrelease": "5.10.103-0-virt",
   "facterversion": "4.2.10",
-  "processors": {
-    "threads": 1,
-    "speed": "2.59 GHz",
-    "isa": "x86_64",
-    "count": 2,
-    "cores": 2,
-    "models": [
-      "06/9e",
-      "06/9e"
-    ],
-    "physicalcount": 1
-  },
   "path": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/puppetlabs/bin",
   "kernel": "Linux",
   "kernelversion": "5.10.103",

@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "7.9.0",
-  "architecture": "amd64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 21265121280,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "eth0": "10.0.2.2",
     "system": "10.0.2.2"
@@ -50,22 +37,15 @@
       "uuid": "A5EC47F5-6899-40BE-BAE2-0AAE40B78761"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.2.2",
   "filesystems": "ext2,ext3,ext4",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "unknown",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "145957",
       "version": "6.1.26"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -74,8 +54,6 @@
     "user": "root"
   },
   "interfaces": "eth0,eth1,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:fe8d:c04d",
   "ipaddress6_eth0": "fe80::a00:27ff:fe8d:c04d",
   "ipaddress6_eth1": "fe80::a00:27ff:fe2b:a7db",
   "ipaddress6_lo": "::1",
@@ -92,16 +70,8 @@
     "1m": 0.21,
     "5m": 0.05
   },
-  "lsbdistcodename": "stretch",
-  "lsbdistdescription": "Debian GNU/Linux 9.12 (stretch)",
-  "lsbdistid": "Debian",
-  "lsbdistrelease": "9.12",
-  "lsbmajdistrelease": "9",
-  "lsbminordistrelease": "12",
-  "macaddress": "08:00:27:8d:c0:4d",
   "macaddress_eth0": "08:00:27:8d:c0:4d",
   "macaddress_eth1": "08:00:27:2b:a7:db",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "1021.00 MiB",
@@ -122,10 +92,6 @@
       "used_bytes": 107487232
     }
   },
-  "memoryfree": "389.79 MiB",
-  "memoryfree_mb": 389.7890625,
-  "memorysize": "492.30 MiB",
-  "memorysize_mb": 492.296875,
   "mountpoints": {
     "/": {
       "available": "16.40 GiB",
@@ -340,16 +306,12 @@
   "mtu_eth0": 1500,
   "mtu_eth1": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_eth1": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_eth1": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_eth1": "fe80::",
   "network6_lo": "::1",
@@ -463,9 +425,6 @@
     "primary": "eth0",
     "scope6": "link"
   },
-  "operatingsystem": "Debian",
-  "operatingsystemmajrelease": "9",
-  "operatingsystemrelease": "9.12",
   "os": {
     "architecture": "amd64",
     "distro": {
@@ -490,7 +449,6 @@
       "enabled": false
     }
   },
-  "osfamily": "Debian",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "ext4",
@@ -513,38 +471,15 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processor1": "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-  "processorcount": 2,
-  "processors": {
-    "cores": 2,
-    "count": 2,
-    "isa": "unknown",
-    "models": [
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz",
-      "Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz"
-    ],
-    "physicalcount": 1,
-    "speed": "2.59 GHz",
-    "threads": 1
-  },
-  "productname": "VirtualBox",
   "puppetversion": "7.9.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.3"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.3",
-  "scope6": "link",
   "scope6_eth0": "link",
   "scope6_eth1": "link",
   "scope6_lo": "host",
-  "selinux": false,
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -577,10 +512,6 @@
   "sshfp_ed25519": "SSHFP 4 1 09c69d7f67640d0037f2de7ce967c9c42b14323a\nSSHFP 4 2 33b011ed95c2817daa93f14c91de643d153d88085f8b7837e7a63b82b2051521",
   "sshfp_rsa": "SSHFP 1 1 ead5b868970d354af0e570d20eea82fd40695f46\nSSHFP 1 2 7615d0fd9988e441635db87de381c0cde50836c954429311a1a1917e6e5c5067",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQC1CBFrxZZ6Qq66ApIZSaUgFsoFDXQK0KH647TdWXqt/fQccRiRotiJQ7vWLIrh0R6lgWTTG0nD3SS7Jfp8L5ZHEksEtWzXvkVpzpX9cMFncihXVbSyRTRJSPsN/UNHmWySjqpYLWglLZapPYbu+xknC2xxjPTaQcYUDr1ie48GWVMfzJqZXJSCTh0T1crHpm8oQ5aFaIaIh2PKz5/nAyl5UvGviT77iQlvSuHFzQCCs73fruVZBwgwN4oBhJe7hujXnSYFijtKuWiCwiB+xUPGB4KtUMG1CyiD1r/gpMVaAOVYEUNqRGahAN/c9DAvskOd16IvJQXCrSA/Rcyed8pN",
-  "swapfree": "1021.00 MiB",
-  "swapfree_mb": 1020.99609375,
-  "swapsize": "1021.00 MiB",
-  "swapsize_mb": 1020.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -588,10 +519,5 @@
     "uptime": "0:01 hours"
   },
   "timezone": "GMT",
-  "uptime": "0:01 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 69,
-  "uuid": "A5EC47F5-6899-40BE-BAE2-0AAE40B78761",
   "virtual": "virtualbox"
 }

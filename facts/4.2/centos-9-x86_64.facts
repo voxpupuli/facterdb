@@ -1,8 +1,4 @@
 {
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
-  "hostname": "foo",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
@@ -45,8 +41,6 @@
   "filesystems": "iso9660,xfs",
   "fips_enabled": false,
   "gem_version": "~> 4.2.0",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "identity": {
     "gid": 1000,
     "group": "stack",
@@ -54,7 +48,6 @@
     "uid": 1000,
     "user": "stack"
   },
-  "ipaddress": "10.109.1.2",
   "is_virtual": false,
   "kernel": "Linux",
   "kernelmajversion": "5.13",
@@ -188,9 +181,6 @@
     "primary": "ens3",
     "scope6": "link"
   },
-  "operatingsystem": "CentOS",
-  "operatingsystemmajrelease": "9",
-  "operatingsystemrelease": "9",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -217,7 +207,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/vda1": {
       "size": "1.00 MiB",
@@ -246,20 +235,6 @@
     }
   },
   "path": "/home/stack/facterdb/facts/vendor/bundler/ruby/3.0.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/home/stack/.local/bin:/home/stack/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin",
-  "processors": {
-    "cores": 1,
-    "count": 4,
-    "isa": "x86_64",
-    "models": [
-      "AMD Opteron(tm) Processor 6376",
-      "AMD Opteron(tm) Processor 6376",
-      "AMD Opteron(tm) Processor 6376",
-      "AMD Opteron(tm) Processor 6376"
-    ],
-    "physicalcount": 4,
-    "speed": "2.30 GHz",
-    "threads": 1
-  },
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/usr/local/share/ruby/site_ruby",

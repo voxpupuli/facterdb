@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "6.23.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "02/06/2015",
-  "bios_vendor": "EFI Development Kit II / OVMF",
-  "bios_version": "0.0.0",
-  "blockdevice_sda_model": "QEMU HARDDISK",
-  "blockdevice_sda_size": 1073741824,
-  "blockdevice_sda_vendor": "QEMU",
-  "blockdevice_sdb_model": "QEMU HARDDISK",
-  "blockdevice_sdb_size": 21474836480,
-  "blockdevice_sdb_vendor": "QEMU",
-  "blockdevices": "sdb,sda",
-  "chassistype": "Other",
   "disks": {
     "sda": {
       "model": "QEMU HARDDISK",
@@ -45,19 +32,13 @@
       "uuid": "11212105-1cf1-4a18-beb9-25d00961e8cd"
     }
   },
-  "domain": "example.com",
   "facterversion": "3.14.18",
   "filesystems": "ext2,ext3,ext4,vfat",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
-    "kvm": {}
+    "kvm": {
+    }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -66,8 +47,6 @@
     "user": "root"
   },
   "interfaces": "enp0s3,enp1s0,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fec0::5054:ff:fe12:3456",
   "ipaddress6_enp0s3": "fec0::5054:ff:fe12:3456",
   "ipaddress6_enp1s0": "fec0::5054:ff:fe53:c079",
   "ipaddress6_lo": "::1",
@@ -84,10 +63,8 @@
     "1m": 0.23,
     "5m": 0.15
   },
-  "macaddress": "52:54:00:12:34:56",
   "macaddress_enp0s3": "52:54:00:12:34:56",
   "macaddress_enp1s0": "52:54:00:53:c0:79",
-  "manufacturer": "QEMU",
   "memory": {
     "system": {
       "available": "3.34 GiB",
@@ -99,10 +76,6 @@
       "used_bytes": 325496832
     }
   },
-  "memoryfree": "3.34 GiB",
-  "memoryfree_mb": 3422.79296875,
-  "memorysize": "3.65 GiB",
-  "memorysize_mb": 3733.2109375,
   "mountpoints": {
     "/": {
       "available": "3.86 GiB",
@@ -356,16 +329,12 @@
   "mtu_enp0s3": 1500,
   "mtu_enp1s0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_enp0s3": "ffff:ffff:ffff:ffff::",
   "netmask6_enp1s0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_enp0s3": "255.255.255.0",
   "netmask_enp1s0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fec0::",
   "network6_enp0s3": "fec0::",
   "network6_enp1s0": "fec0::",
   "network6_lo": "::1",
@@ -473,9 +442,6 @@
     "primary": "enp0s3",
     "scope6": "site"
   },
-  "operatingsystem": "Rocky",
-  "operatingsystemmajrelease": "8",
-  "operatingsystemrelease": "8.4",
   "os": {
     "architecture": "x86_64",
     "family": "RedHat",
@@ -495,7 +461,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/mapper/centos-root": {
       "filesystem": "ext4",
@@ -544,39 +509,15 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/sbin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel Core Processor (Skylake, IBRS)",
-  "processor1": "Intel Core Processor (Skylake, IBRS)",
-  "processorcount": 2,
-  "processors": {
-    "count": 2,
-    "isa": "x86_64",
-    "models": [
-      "Intel Core Processor (Skylake, IBRS)",
-      "Intel Core Processor (Skylake, IBRS)"
-    ],
-    "physicalcount": 1
-  },
-  "productname": "Standard PC (Q35 + ICH9, 2009)",
   "puppetversion": "6.23.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
     "version": "2.5.9"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.9",
-  "scope6": "site",
   "scope6_enp0s3": "site",
   "scope6_enp1s0": "site",
   "scope6_lo": "host",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "33",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -616,10 +557,5 @@
     "uptime": "0:20 hours"
   },
   "timezone": "CEST",
-  "uptime": "0:20 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 1216,
-  "uuid": "11212105-1cf1-4a18-beb9-25d00961e8cd",
   "virtual": "kvm"
 }
