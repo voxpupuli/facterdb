@@ -2,11 +2,7 @@ source ENV['GEM_SOURCE'] || 'https://rubygems.org'
 
 gemspec
 
-if facterversion = ENV['FACTER_GEM_VERSION']
-  gem 'facter', facterversion, :require => false
-else
-  gem 'facter', :require => false
-end
+gem 'facter', ENV.fetch('FACTER_GEM_VERSION', nil), require: false
 
 group :development do
   gem 'github_changelog_generator', '>= 1.16.4'
