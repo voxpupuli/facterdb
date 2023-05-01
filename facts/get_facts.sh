@@ -65,7 +65,7 @@ case "${osfamily}" in
   wget "http://yum.puppetlabs.com/puppet7-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet7-release.rpm
   if test -f /tmp/puppet7-release.rpm; then
     rpm -ivh /tmp/puppet7-release.rpm
-    for puppet_agent_version in 7.5.0 7.6.1 7.17.0; do
+    for puppet_agent_version in 7.5.0 7.6.1 7.17.0 7.24.0; do
       if yum install -y puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
@@ -74,15 +74,29 @@ case "${osfamily}" in
     done
     yum remove -y puppet7-release
   fi
+  wget "http://yum.puppetlabs.com/puppet8-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet8-release.rpm
+  if test -f /tmp/puppet8-release.rpm; then
+    rpm -ivh /tmp/puppet8-release.rpm
+    for puppet_agent_version in 8.0.0; do
+      if yum install -y puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    yum remove -y puppet8-release
+  fi
   ;;
 'Debian')
-  apt_install curl
+  apt_install curl file
   curl "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -o /tmp/puppet6-release.deb
   # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
   if test "$?" -eq 0 -a -f /tmp/puppet6-release.deb && [[ "$(file -b /tmp/puppet6-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet6-release.deb
     apt-get update
-    for puppet_agent_version in 6.2 6.4 6.6; do
+    # as of 2023-04-27 older 6.x series aren't available (i.e. facter 3.12)
+    # the trailing dot is so that 6.4.* is the match so we get the last in the 6.4 series and not 6.40
+    for puppet_agent_version in 6.4. 6.28.; do
       if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
@@ -93,10 +107,10 @@ case "${osfamily}" in
   fi
   curl "https://apt.puppetlabs.com/puppet7-release-${lsbdistcodename}.deb" -o /tmp/puppet7-release.deb
   # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
-  if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb && [[ "$(file -b /tmp/puppet6-release.deb)" =~ "Debian binary package".* ]] ; then
+  if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb && [[ "$(file -b /tmp/puppet7-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet7-release.deb
     apt-get update
-    for puppet_agent_version in 7.5.0 7.6.1 7.12.0; do
+    for puppet_agent_version in 7.5.0 7.6.1 7.12.0 7.24.0; do
       if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
@@ -105,7 +119,22 @@ case "${osfamily}" in
     done
     apt-get -y remove --purge puppet7-release
   fi
-  apt_install make gcc libgmp-dev
+  curl "https://apt.puppetlabs.com/puppet8-release-${lsbdistcodename}.deb" -o /tmp/puppet8-release.deb
+  # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
+  if test "$?" -eq 0 -a -f /tmp/puppet8-release.deb && [[ "$(file -b /tmp/puppet8-release.deb)" =~ "Debian binary package".* ]] ; then
+    dpkg --install /tmp/puppet8-release.deb
+    apt-get update
+    for puppet_agent_version in 8.0.0; do
+      if apt_install puppet-agent=${puppet_agent_version}*; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    apt-get -y remove --purge puppet8-release
+  fi
+  # libc6-dev needed to build the ffi gem
+  apt_install make gcc libgmp-dev libc6-dev
 
   # There are no puppet-agent packages for $releasename yet, so generate a Facter 3.x
   # fact set from the official Debian package.
@@ -151,7 +180,7 @@ case "${osfamily}" in
     http_method='https'
   fi
   if rpm -Uvh ${http_method}://yum.puppet.com/puppet6-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
-    for puppet_agent_version in 6.2.0 6.4.2 6.6.0; do
+    for puppet_agent_version in 6.25.0 6.27.1; do
       if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
@@ -159,6 +188,26 @@ case "${osfamily}" in
       fi
     done
     zypper --non-interactive remove puppet6-release
+  fi
+  if rpm -Uvh ${http_method}://yum.puppet.com/puppet7-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
+    for puppet_agent_version in 7.5.0 7.6.1 7.12.0 7.24.0; do
+      if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    zypper --non-interactive remove puppet7-release
+  fi
+  if rpm -Uvh ${http_method}://yum.puppet.com/puppet8-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
+    for puppet_agent_version in 8.0.0; do
+      if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        mkdir -p $(dirname ${output_file})
+        facter --show-legacy -p -j | tee ${output_file}
+      fi
+    done
+    zypper --non-interactive remove puppet8-release
   fi
   ;;
 'Archlinux')
@@ -174,6 +223,9 @@ case "${osfamily}" in
   facter --show-legacy -p -j | tee ${output_file}
 esac
 
+# this lower section relies on the ruby version and facter version that came
+# with the last installed puppet_agent per above
+# puppet-agent 8.0.0 has ruby 3.2.2 and it cant install 4.0.0, 4.1.0 facter gem
 operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
 operatingsystemrelease=$(facter operatingsystemrelease)
 operatingsystemmajrelease=$(facter operatingsystemmajrelease)
@@ -190,7 +242,7 @@ else
 fi
 bundle install --path vendor/bundler
 
-for version in 4.0.0 4.1.0 4.2.0; do
+for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   # sometimes all versions of facter are not possible, if the bundle update fails, skip the rest of the loop
   if [ $? -ne 0 ]; then
