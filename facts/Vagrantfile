@@ -30,6 +30,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision "shell", path: "get_facts.sh"
     host.vm.provision "shell", inline: "/sbin/shutdown -h now"
   end
+  
+  config.vm.define "popos-21.10-x86_64" do |host|
+    host.vm.box = "ahplummer/PopOS_21.10"
+    host.vm.provision "shell", inline: "export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y ruby ruby-dev libc6-dev"
+    host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
+    host.vm.guest = "ubuntu"
+    host.vm.provision "shell", path: "get_facts.sh"
+    host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+  end
   config.vm.define "ubuntu-18.04-x86_64" do |host|
     host.vm.box = "ubuntu/bionic64"
     host.vm.provision "file", source: "Gemfile", destination: "Gemfile"
