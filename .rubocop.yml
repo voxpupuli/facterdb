@@ -1,0 +1,12 @@
+---
+inherit_gem:
+  voxpupuli-test: rubocop.yml
+
+Naming/MethodParameterName:
+  Enabled: true
+  MinNameLength: 1
+RSpec/MultipleMemoizedHelpers:
+  Enabled: true
+  Max: 6
+Style/OptionalBooleanParameter:
+  Enabled: false

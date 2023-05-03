@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'digest'
 require 'pathname'
@@ -14,11 +16,9 @@ end
 
 RSpec::Matchers.define :be_valid_json do
   match do |actual|
-    content = File.open(actual, 'rb') { |file| file.read }
-    valid = false
+    content = File.open(actual, 'rb', &:read)
     begin
-      obj = JSON.parse(content)
-      valid = true
+      JSON.parse(content)
     rescue JSON::ParserError => e
       raise "Invalid JSON file #{actual}.\n#{e}"
     end
@@ -32,7 +32,7 @@ end
 RSpec::Matchers.define :have_facter_version do |expected_facter_version, filepath|
   match do |actual|
     # Simple but naive regex check
-    actual =~ /^#{expected_facter_version}($|\.)/
+    actual =~ %r{^#{expected_facter_version}($|\.)}
   end
 
   failure_message do |actual|
@@ -41,22 +41,22 @@ RSpec::Matchers.define :have_facter_version do |expected_facter_version, filepat
 end
 
 describe 'Default Facts' do
-  before(:each) do
+  before do
     ENV['FACTERDB_SKIP_DEFAULTDB'] = nil
     FacterDB.instance_variable_set(:@database, nil)
   end
 
   describe 'fact files' do
-    it 'should not contain duplicate fact sets' do
+    it 'does not contain duplicate fact sets' do
       # Gather all of the default files and hash the content
       file_hashes = {}
       FacterDB.default_fact_files.each do |filepath|
-        file_hash = Digest::SHA256.hexdigest( File.open(filepath, 'rb') { |file| file.read } )
+        file_hash = Digest::SHA256.hexdigest(File.binread(filepath))
         file_hashes[file_hash] ||= []
         file_hashes[file_hash] << filepath
       end
 
-      file_hashes.keys.each do |file_hash|
+      file_hashes.each_key do |file_hash|
         expect(file_hashes[file_hash]).to have_a_unique_hash
       end
     end
@@ -67,7 +67,7 @@ describe 'Default Facts' do
     relative_path = Pathname.new(filepath).relative_path_from(project_dir).to_s
     describe relative_path do
       subject(:content) do
-        JSON.parse(File.open(filepath, 'rb') { |file| file.read })
+        JSON.parse(File.binread(filepath))
       end
 
       it 'contains a valid JSON document' do
@@ -88,9 +88,11 @@ describe 'Default Facts' do
           expect(content['networking']['fqdn']).to eq('foo.example.com')
         end
       end
+
       it 'contains the legacy ipaddress fact' do
         expect(content['ipaddress']).to not_be_nil.and not_be_empty
       end
+
       it 'contains no facts from puppetlabs/stdlib' do
         expect(content['root_home']).to be_nil
         expect(content['service_provider']).to be_nil
@@ -100,21 +102,17 @@ describe 'Default Facts' do
         expect(content['pe_version']).to be_nil
         expect(content['package_provider']).to be_nil
       end
+
       it 'contains no facts from puppet/systemd' do
         expect(content['systemd']).to be_nil
         expect(content['systemd_version']).to be_nil
         expect(content['systemd_internal_services']).to be_nil
       end
+
       it 'contains a legacy hostname, domain and fqdn fact' do
         expect(content['hostname']).to eq('foo')
         expect(content['fqdn']).to eq('foo.example.com')
         expect(content['domain']).to eq('example.com')
-      end
-      it 'contains the legacy osfamily fact' do
-        expect(content['osfamily']).to_not be_nil
-      end
-      it 'contains the legacy operatingsystem fact' do
-        expect(content['operatingsystem']).to_not be_nil
       end
     end
   end

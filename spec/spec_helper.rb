@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 if ENV['COVERAGE'] == 'yes'
   require 'coveralls'
   require 'simplecov'
@@ -10,11 +12,14 @@ end
 
 require 'rspec'
 require 'facterdb'
-include FacterDB
+
+RSpec.configure do |config|
+  config.include FacterDB
+end
 
 RSpec::Matchers.define_negated_matcher :not_be_nil, :be_nil
 RSpec::Matchers.define_negated_matcher :not_be_empty, :be_empty
 
 def project_dir
-  File.dirname File.dirname(File.expand_path(__FILE__))
+  File.dirname(__dir__)
 end
