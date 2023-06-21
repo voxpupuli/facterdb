@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
   # we have that configured in our CI file
-  s.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
+  s.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
   s.add_development_dependency 'coveralls'
   s.add_development_dependency 'rake'
