@@ -16,14 +16,14 @@ describe FacterDB do
   end
 
   let(:facts_24_path)  { File.join(project_dir, 'facts', '2.4') }
-  let(:facts_24_count) { Dir.glob(File.join(facts_24_path,'*.facts')).count }
+  let(:facts_24_count) { Dir.glob(File.join(facts_24_path, '*.facts')).count }
   let(:facts_23_path)  { File.join(project_dir, 'facts', '2.3') }
-  let(:facts_23_count) { Dir.glob(File.join(facts_23_path,'*.facts')).count }
+  let(:facts_23_count) { Dir.glob(File.join(facts_23_path, '*.facts')).count }
 
   describe '.use_defaultdb?' do
     subject { described_class.use_defaultdb? }
 
-    before(:each) do
+    before do
       ENV.delete('FACTERDB_SKIP_DEFAULTDB')
     end
 
@@ -32,7 +32,7 @@ describe FacterDB do
     end
 
     context 'when FACTERDB_SKIP_DEFAULTDB environment variable is set' do
-      before(:each) do
+      before do
         ENV['FACTERDB_SKIP_DEFAULTDB'] = '1'
       end
 
@@ -45,7 +45,7 @@ describe FacterDB do
 
     let(:non_directory_path) { File.join('this', 'is', 'not', 'a', 'directory') }
 
-    before(:each) do
+    before do
       ENV.delete('FACTERDB_SEARCH_PATHS')
       allow(File).to receive(:directory?).and_call_original
       allow(File).to receive(:directory?).with(non_directory_path).and_return(false)
@@ -73,7 +73,7 @@ describe FacterDB do
 
         object = defined?(Warning) ? Warning : Kernel
         allow(object).to receive(:warn).and_call_original
-        allow(object).to receive(:warn).with(a_string_matching(%r{is not a directory}))
+        allow(object).to receive(:warn).with(a_string_matching(/is not a directory/))
 
         expect(file_count).to eq(facts_24_count)
       end
@@ -105,7 +105,7 @@ describe FacterDB do
         it 'ignores the path that is not a directory' do
           object = defined?(Warning) ? Warning : Kernel
           allow(object).to receive(:warn).and_call_original
-          allow(object).to receive(:warn).with(a_string_matching(%r{is not a directory}))
+          allow(object).to receive(:warn).with(a_string_matching(/is not a directory/))
 
           expect(file_count).to eq(facts_24_count)
         end
@@ -116,7 +116,7 @@ describe FacterDB do
   describe '.default_fact_files' do
     subject(:default_fact_files) { described_class.default_fact_files }
 
-    before(:each) do
+    before do
       ENV.delete('FACTERDB_SKIP_DEFAULTDB')
     end
 
@@ -128,7 +128,7 @@ describe FacterDB do
     end
 
     context 'when FACTERDB_SKIP_DEFAULTDB environment variable is set' do
-      before(:each) do
+      before do
         ENV['FACTERDB_SKIP_DEFAULTDB'] = '1'
       end
 
@@ -139,11 +139,11 @@ describe FacterDB do
   describe '.facterdb_fact_files' do
     subject(:facterdb_fact_files) { described_class.facterdb_fact_files }
 
-    before(:each) do
+    before do
       ENV.delete('FACTERDB_SKIP_DEFAULTDB')
     end
 
-    after(:each) do
+    after do
       ENV.delete('FACTERDB_SEARCH_PATHS')
     end
 
@@ -154,7 +154,7 @@ describe FacterDB do
     end
 
     context 'with no loaded fact sets' do
-      before(:each) do
+      before do
         ENV['FACTERDB_SKIP_DEFAULTDB'] = '1'
         ENV.delete('FACTERDB_SEARCH_PATHS')
       end
@@ -166,7 +166,7 @@ describe FacterDB do
   describe '.database' do
     subject(:database) { described_class.database }
 
-    before(:each) do
+    before do
       ENV.delete('FACTERDB_SKIP_DEFAULTDB')
       ENV.delete('FACTERDB_SEARCH_PATHS')
       FacterDB.instance_variable_set(:@database, nil)
@@ -183,7 +183,7 @@ describe FacterDB do
     context 'when FACTERDB_INJECT_SOURCE environment variable is set' do
       subject(:json_database) { JSON.parse(database) }
 
-      before(:each) do
+      before do
         ENV['FACTERDB_INJECT_SOURCE'] = '1'
       end
 
@@ -200,14 +200,14 @@ describe FacterDB do
   describe '.get_os_facts' do
     subject(:result) { FacterDB.get_os_facts(facter_version, filter) }
 
-    before(:each) do
+    before do
       object = defined?(Warning) ? Warning : Kernel
       allow(object).to receive(:warn).and_call_original
-      allow(object).to receive(:warn).with(a_string_matching(%r{`get_os_facts` is deprecated}))
+      allow(object).to receive(:warn).with(a_string_matching(/`get_os_facts` is deprecated/))
     end
 
     context 'without parameters' do
-      subject(:result) { FacterDB.get_os_facts() }
+      subject(:result) { FacterDB.get_os_facts }
 
       include_examples 'returns a result'
     end
@@ -216,13 +216,13 @@ describe FacterDB do
       let(:facter_version) { '*' }
 
       context 'with an Array filter' do
-        let(:filter) { [{ :osfamily => 'Debian' }] }
+        let(:filter) { [{ osfamily: 'Debian' }] }
 
         include_examples 'returns a result'
       end
 
       context 'with a Hash filter' do
-        let(:filter) { { :osfamily => 'Debian' } }
+        let(:filter) { { osfamily: 'Debian' } }
 
         include_examples 'returns a result'
       end
@@ -237,7 +237,7 @@ describe FacterDB do
         let(:filter) { true }
 
         it 'raises an error' do
-          expect { result }.to raise_error(%r{filter must be either})
+          expect { result }.to raise_error(/filter must be either/)
         end
       end
     end
@@ -247,19 +247,19 @@ describe FacterDB do
 
       shared_examples 'returns only the specified version' do
         it 'only includes fact sets for the specified version' do
-          expect(result).to all(include(:facterversion => match(%r{\A2\.4})))
+          expect(result).to all(include(facterversion: match(/\A2\.4/)))
         end
       end
 
       context 'with an Array filter' do
-        let(:filter) { [{ :osfamily => 'Debian' }] }
+        let(:filter) { [{ osfamily: 'Debian' }] }
 
         include_examples 'returns a result'
         include_examples 'returns only the specified version'
       end
 
       context 'with a Hash filter' do
-        let(:filter) { { :osfamily => 'Debian' } }
+        let(:filter) { { osfamily: 'Debian' } }
 
         include_examples 'returns a result'
         include_examples 'returns only the specified version'
@@ -276,7 +276,7 @@ describe FacterDB do
         let(:filter) { true }
 
         it 'raises an error' do
-          expect { result }.to raise_error(%r{filter must be either})
+          expect { result }.to raise_error(/filter must be either/)
         end
       end
     end
@@ -284,29 +284,29 @@ describe FacterDB do
 
   describe '.valid_filters?' do
     it 'invalid and false' do
-      expect( FacterDB.valid_filters?('and')).to be_falsey
+      expect(FacterDB.valid_filters?('and')).to be_falsey
     end
 
     it 'valid and true' do
-      expect( FacterDB.valid_filters?('foo')).to be_truthy
+      expect(FacterDB.valid_filters?('foo')).to be_truthy
     end
   end
 
   describe '.generate_filter_str' do
     it 'invalid type' do
-      expect{FacterDB.generate_filter_str(3)}.to raise_error(FacterDB::Errors::InvalidFilter)
+      expect { FacterDB.generate_filter_str(3) }.to raise_error(FacterDB::Errors::InvalidFilter)
     end
 
     it 'with string' do
-      expect(FacterDB.generate_filter_str('foo')).to eq("foo")
+      expect(FacterDB.generate_filter_str('foo')).to eq('foo')
     end
 
     it 'with hash' do
-        expect(FacterDB.generate_filter_str({:osfamily => 'Debian'})).to eq("osfamily=Debian")
+      expect(FacterDB.generate_filter_str({ osfamily: 'Debian' })).to eq('osfamily=Debian')
     end
 
     it 'with Array' do
-      expect(FacterDB.generate_filter_str([:osfamily => 'Debian'])).to eq("(osfamily=Debian)")
+      expect(FacterDB.generate_filter_str([osfamily: 'Debian'])).to eq('(osfamily=Debian)')
     end
 
     it 'empty' do
@@ -324,32 +324,32 @@ describe FacterDB do
     let(:filter) { nil }
 
     context 'without parameters' do
-      include_examples "returns a result"
+      include_examples 'returns a result'
     end
 
     context 'with an Array filter' do
-      let(:filter) { [:osfamily => 'Debian'] }
+      let(:filter) { [osfamily: 'Debian'] }
 
-      include_examples "returns a result"
+      include_examples 'returns a result'
     end
 
     context 'with a Hash filter' do
-      let(:filter) { { :osfamily => 'Debian' } }
+      let(:filter) { { osfamily: 'Debian' } }
 
-      include_examples "returns a result"
+      include_examples 'returns a result'
     end
 
     context 'with a String filter' do
       let(:filter) { 'osfamily=Debian' }
 
-      include_examples "returns a result"
+      include_examples 'returns a result'
     end
 
     context 'with a filter of an unsupported type' do
       let(:filter) { true }
 
       it 'raises an error' do
-        expect { result }.to raise_error(%r{filter must be either})
+        expect { result }.to raise_error(/filter must be either/)
       end
     end
   end

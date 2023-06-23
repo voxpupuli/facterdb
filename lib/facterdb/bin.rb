@@ -8,7 +8,7 @@ module FacterDB
     end
 
     def run
-      puts JSON.pretty_generate(FacterDB::get_os_facts('*', @args[0]))
+      puts JSON.pretty_generate(FacterDB.get_os_facts('*', @args[0]))
     end
   end
 end
