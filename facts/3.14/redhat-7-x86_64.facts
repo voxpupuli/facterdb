@@ -46,7 +46,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "5A5162F1-5E21-9D4C-AB35-C3B76400B758"
+      "uuid": "FCC30B6B-56F1-854D-8A4E-CCFD30E78D6A"
     }
   },
   "domain": "example.com",
@@ -85,8 +85,8 @@
   "kernelversion": "3.10.0",
   "load_averages": {
     "15m": 0.1,
-    "1m": 0.79,
-    "5m": 0.28
+    "1m": 0.76,
+    "5m": 0.29
   },
   "macaddress": "08:00:27:22:7d:1d",
   "macaddress_eth0": "08:00:27:22:7d:1d",
@@ -103,22 +103,22 @@
     },
     "system": {
       "available": "1.47 GiB",
-      "available_bytes": 1577275392,
-      "capacity": "18.15%",
+      "available_bytes": 1573314560,
+      "capacity": "18.36%",
       "total": "1.79 GiB",
       "total_bytes": 1927094272,
-      "used": "333.61 MiB",
-      "used_bytes": 349818880
+      "used": "337.39 MiB",
+      "used_bytes": 353779712
     }
   },
   "memoryfree": "1.47 GiB",
-  "memoryfree_mb": 1504.20703125,
+  "memoryfree_mb": 1500.4296875,
   "memorysize": "1.79 GiB",
   "memorysize_mb": 1837.8203125,
   "mountpoints": {
     "/": {
       "available": "123.31 GiB",
-      "available_bytes": 132407955456,
+      "available_bytes": 132407971840,
       "capacity": "1.33%",
       "device": "/dev/mapper/rhel_rhel7-root",
       "filesystem": "xfs",
@@ -133,7 +133,7 @@
       "size": "124.97 GiB",
       "size_bytes": 134187319296,
       "used": "1.66 GiB",
-      "used_bytes": 1779363840
+      "used_bytes": 1779347456
     },
     "/boot": {
       "available": "871.82 MiB",
@@ -303,9 +303,9 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "48.28 GiB",
-      "available_bytes": 51843301376,
-      "capacity": "30.99%",
+      "available": "46.92 GiB",
+      "available_bytes": 50375159808,
+      "capacity": "32.95%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -315,8 +315,8 @@
       ],
       "size": "69.97 GiB",
       "size_bytes": 75125227520,
-      "used": "21.68 GiB",
-      "used_bytes": 23281926144
+      "used": "23.05 GiB",
+      "used_bytes": 24750067712
     }
   },
   "mtu_eth0": 1500,
@@ -382,7 +382,6 @@
     "mac": "08:00:27:22:7d:1d",
     "mtu": 1500,
     "netmask": "255.255.255.0",
-    "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.2.0",
     "network6": "fe80::",
     "primary": "eth0",
@@ -475,15 +474,15 @@
   "ssh": {
     "rsa": {
       "fingerprints": {
-        "sha1": "SSHFP 1 1 558395ed23d7cff3b4c88c902793f7c9b259bef9",
-        "sha256": "SSHFP 1 2 2da48fdf40a53d996bd866ac283c5c747cf7a8159ce7cdcdf7aed0a2d38d2cdc"
+        "sha1": "SSHFP 1 1 14ccda16b149482dfe594f70513bfe408efb68f8",
+        "sha256": "SSHFP 1 2 bf0f69de9f83fd1bb55ca23928025402be6b127e0721852ee40abef6653f0049"
       },
-      "key": "AAAAB3NzaC1yc2EAAAADAQABAAACAQCmLD0ovAJ3yL7J6xqSned367m+H1OzZXKJLXsMZikN4AMll23J2QsL1Aqwb4GZFj/ZZigMGv6qLB13fEOwqXYtfpXO7ZgS7ggpmgpdFJjjlQlFhHy1cJk2uZQh1gb0liUVa4y6praHggfX7EE+MIynXKjdYOAcz55Wou0wN6D6ZaZTnCC/nkdnb8f2HiQo0rhcX74GiKAARoWQoF2Ny4Sn896C0ouD/Zv5TkU7pNo5GaMxg75e1DReg+AQoMhG4OtMKvsLoGkBqSdsmHfbw+uwRuCCEVJ702Ln4nRh9qEmTm/TWW1I+5xTVOAoCMc0CMIRjfA4AKb9AS4XBtA1f3GamOPgvjFZ9ki+zekbx+rMcy6qn8gz/cGY9mV/hSRE8zVSzHdGgI6xQA10yAnwnNfU5d2yjtMx5Y9Zs0K8yCryme2x1CyyRT0eW52XFSOMQkHq9k+4yWTBJaJIO/qfGLMPhL0LwsF9pqjD+RrflfjoRVjtmZCiIcKs/19Ygfw8wV8gQwyo8loZR2lWEP/OONZHCFHnKA/NISUvCFlyb4gvOfpYJLIg0ETh41GBrn06hChRlHzfhwHe5BB6qi4f5Hd9LOfmfzDxi3ASc9LrC+i8K72Qj4FcMOk76uTxpxqX7l6SrDNPtbgw9Yn/mpASYXZuLncYjtuBzHa51Bm+RwSSGw==",
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAACAQCdfYpWI0hVLOTZGFzbsxeq3h28pMkhzpxUIX4tiHe8wEHjCWy/f6112RiParpNMUrhVEoti326WZvO6f8dCHUn2GAp0BAbaTBdBolbAvvFzqqiF2+f2nNjYN8KnHM/p+d5i1rCQaPoMRhb2kId6hswXFacxjKDRwNnk6IDbGCWKi2Brsa6o6zMGjw/Rpg4THXnugvO7gu3qQwNzfxIMtTHXOTH3vUrTt1iSjeFpngUKPhJstPZ2Rrr4UgfPuGhCQoSfZHqHIxQk40RLqWxbq7RB4C0GTHTLecwlHp0XEXSEw3AUh3LHyYSZPnn/g0GdyiSzFiIu+c69gtOLhdfH9RusR+//6GMr/eNbEyM1ycZGVkhNJZIgxBj5ieJPBGarhYlb4S4vbZXknrPk2Cr306W5KdKHD/MxZLrtmKy7euUfaqyVNYZFMox3qq1Pcv1XDbYvAO4O0LTs0U4tN3w3CU/GiiKQnBq7xvOSQwgT6hDJkyt1QYfwCj67xWc/+WP4SfRQTgFUAvpjSonAfQk5DmTQK6oJ3vSmBcXqChN77KfQu6O/GgZcjQ9WJUKCaIZUw5OOxWpc/rxm1EGwMFC0l2da1DA7JUJF/afZALL2iaVS2HIL1RA5sAa2bjGXE195z0ZqUdpdmKQDpab/olRbz1sdvAslEiLIx12ZAebMPKxxw==",
       "type": "ssh-rsa"
     }
   },
-  "sshfp_rsa": "SSHFP 1 1 558395ed23d7cff3b4c88c902793f7c9b259bef9\nSSHFP 1 2 2da48fdf40a53d996bd866ac283c5c747cf7a8159ce7cdcdf7aed0a2d38d2cdc",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAACAQCmLD0ovAJ3yL7J6xqSned367m+H1OzZXKJLXsMZikN4AMll23J2QsL1Aqwb4GZFj/ZZigMGv6qLB13fEOwqXYtfpXO7ZgS7ggpmgpdFJjjlQlFhHy1cJk2uZQh1gb0liUVa4y6praHggfX7EE+MIynXKjdYOAcz55Wou0wN6D6ZaZTnCC/nkdnb8f2HiQo0rhcX74GiKAARoWQoF2Ny4Sn896C0ouD/Zv5TkU7pNo5GaMxg75e1DReg+AQoMhG4OtMKvsLoGkBqSdsmHfbw+uwRuCCEVJ702Ln4nRh9qEmTm/TWW1I+5xTVOAoCMc0CMIRjfA4AKb9AS4XBtA1f3GamOPgvjFZ9ki+zekbx+rMcy6qn8gz/cGY9mV/hSRE8zVSzHdGgI6xQA10yAnwnNfU5d2yjtMx5Y9Zs0K8yCryme2x1CyyRT0eW52XFSOMQkHq9k+4yWTBJaJIO/qfGLMPhL0LwsF9pqjD+RrflfjoRVjtmZCiIcKs/19Ygfw8wV8gQwyo8loZR2lWEP/OONZHCFHnKA/NISUvCFlyb4gvOfpYJLIg0ETh41GBrn06hChRlHzfhwHe5BB6qi4f5Hd9LOfmfzDxi3ASc9LrC+i8K72Qj4FcMOk76uTxpxqX7l6SrDNPtbgw9Yn/mpASYXZuLncYjtuBzHa51Bm+RwSSGw==",
+  "sshfp_rsa": "SSHFP 1 1 14ccda16b149482dfe594f70513bfe408efb68f8\nSSHFP 1 2 bf0f69de9f83fd1bb55ca23928025402be6b127e0721852ee40abef6653f0049",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAACAQCdfYpWI0hVLOTZGFzbsxeq3h28pMkhzpxUIX4tiHe8wEHjCWy/f6112RiParpNMUrhVEoti326WZvO6f8dCHUn2GAp0BAbaTBdBolbAvvFzqqiF2+f2nNjYN8KnHM/p+d5i1rCQaPoMRhb2kId6hswXFacxjKDRwNnk6IDbGCWKi2Brsa6o6zMGjw/Rpg4THXnugvO7gu3qQwNzfxIMtTHXOTH3vUrTt1iSjeFpngUKPhJstPZ2Rrr4UgfPuGhCQoSfZHqHIxQk40RLqWxbq7RB4C0GTHTLecwlHp0XEXSEw3AUh3LHyYSZPnn/g0GdyiSzFiIu+c69gtOLhdfH9RusR+//6GMr/eNbEyM1ycZGVkhNJZIgxBj5ieJPBGarhYlb4S4vbZXknrPk2Cr306W5KdKHD/MxZLrtmKy7euUfaqyVNYZFMox3qq1Pcv1XDbYvAO4O0LTs0U4tN3w3CU/GiiKQnBq7xvOSQwgT6hDJkyt1QYfwCj67xWc/+WP4SfRQTgFUAvpjSonAfQk5DmTQK6oJ3vSmBcXqChN77KfQu6O/GgZcjQ9WJUKCaIZUw5OOxWpc/rxm1EGwMFC0l2da1DA7JUJF/afZALL2iaVS2HIL1RA5sAa2bjGXE195z0ZqUdpdmKQDpab/olRbz1sdvAslEiLIx12ZAebMPKxxw==",
   "swapfree": "2.00 GiB",
   "swapfree_mb": 2047.99609375,
   "swapsize": "2.00 GiB",
@@ -491,14 +490,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 112,
+    "seconds": 111,
     "uptime": "0:01 hours"
   },
   "timezone": "UTC",
   "uptime": "0:01 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 112,
-  "uuid": "5A5162F1-5E21-9D4C-AB35-C3B76400B758",
+  "uptime_seconds": 111,
+  "uuid": "FCC30B6B-56F1-854D-8A4E-CCFD30E78D6A",
   "virtual": "virtualbox"
 }
