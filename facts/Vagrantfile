@@ -139,8 +139,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
+  config.vm.define 'redhat-7-x86_64' do |host|
+    host.vm.box = 'generic/rhel7'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
   config.vm.define 'redhat-8-x86_64' do |host|
     host.vm.box = 'generic/rhel8'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'redhat-9-x86_64' do |host|
+    host.vm.box = 'generic/rhel9'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
