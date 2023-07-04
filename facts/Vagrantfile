@@ -142,6 +142,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'redhat-7-x86_64' do |host|
     host.vm.box = 'generic/rhel7'
     host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: '/usr/bin/nmcli connection modify path 1 ipv6.method "auto"'
+    host.vm.provision 'shell', inline: '/usr/bin/nmcli device reapply eth0'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
@@ -149,6 +151,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'redhat-8-x86_64' do |host|
     host.vm.box = 'generic/rhel8'
     host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: '/usr/bin/nmcli connection modify path 1 ipv6.method "auto"'
+    host.vm.provision 'shell', inline: '/usr/bin/nmcli device reapply eth0'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
@@ -156,6 +160,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'redhat-9-x86_64' do |host|
     host.vm.box = 'generic/rhel9'
     host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: '/usr/bin/nmcli connection modify path 1 ipv6.method "auto"'
+    host.vm.provision 'shell', inline: '/usr/bin/nmcli device reapply eth0'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
