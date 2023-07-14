@@ -139,7 +139,7 @@ task :table do
   os_versions.each do |label|
     fvs = facter_versions.map { |facter_version| os_facter_matrix[label][facter_version] || 0 }
     row = "| #{label.ljust(os_version_width)} |"
-    fvs.each { |fv| row += (fv > 0 ? " #{fv.to_s.center(3)} |" : '     |') }
+    fvs.each { |fv| row += ((fv > 0) ? " #{fv.to_s.center(3)} |" : '     |') }
     new_readme << row
   end
 
