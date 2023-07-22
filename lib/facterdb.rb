@@ -6,7 +6,7 @@ module FacterDB
     class InvalidFilter < RuntimeError; end
   end
 
-  # @return [String] -  returns a giant incomprehensible string of concatenated json data
+  # @return [String] returns a giant incomprehensible string of concatenated json data
   def self.database
     @database ||= "[#{facterdb_fact_files.map { |f| read_json_file(f) }.join(',')}]\n"
   end
@@ -18,14 +18,14 @@ module FacterDB
     Thread.current[:facterdb_last_facts_seen] = nil
   end
 
-  # @return [Boolean] - returns true if we should use the default facterdb database, false otherwise
+  # @return [Boolean] returns true if we should use the default facterdb database, false otherwise
   # @note If the user passes anything to the FACTERDB_SKIP_DEFAULTDB environment variable we assume
   # they want to skip the default db
   def self.use_defaultdb?
     ENV['FACTERDB_SKIP_DEFAULTDB'].nil?
   end
 
-  # @return [Boolean] - returns true if we should inject the source file name and file path into the json factsets.
+  # @return [Boolean] returns true if we should inject the source file name and file path into the json factsets.
   # The default is false.
   def self.inject_source?
     !ENV['FACTERDB_INJECT_SOURCE'].nil?
@@ -46,7 +46,7 @@ module FacterDB
   end
   private_class_method :read_json_file
 
-  # @return [Array[String]] -  list of all files found in the default facterdb facts path
+  # @return [Array[String]] list of all files found in the default facterdb facts path
   def self.default_fact_files
     return [] unless use_defaultdb?
 
@@ -55,8 +55,8 @@ module FacterDB
     Dir.glob(File.join(facts_dir, '**', '*.facts'))
   end
 
-  # @return [Array[String]] -  list of all files found in the user supplied facterdb facts path
-  # @param fact_paths [String] - a comma separated list of paths to search for fact files
+  # @return [Array[String]] list of all files found in the user supplied facterdb facts path
+  # @param fact_paths [String] a comma separated list of paths to search for fact files
   def self.external_fact_files(fact_paths = ENV.fetch('FACTERDB_SEARCH_PATHS', nil))
     fact_paths ||= ''
     return [] if fact_paths.empty?
@@ -72,12 +72,13 @@ module FacterDB
     Dir.glob(paths)
   end
 
-  # @return [Array[String]] -  list of all files found in the default facterdb facts path and user supplied path
+  # @return [Array[String]] list of all files found in the default facterdb facts path and user supplied path
   # @note external fact files supplied by the user will take precedence over default fact files found in this gem
   def self.facterdb_fact_files
     (external_fact_files + default_fact_files).uniq
   end
 
+  # @deprecated Use {.get_facts} instead.
   def self.get_os_facts(facter_version = '*', filter = [])
     if facter_version == '*'
       if filter.is_a?(Array)
@@ -108,8 +109,8 @@ module FacterDB
     get_facts(filter_str)
   end
 
-  # @return [String] - the string filter
-  # @param filter [Object] - The filter to convert to jgrep string
+  # @return [String] the string filter
+  # @param filter [Object] The filter to convert to jgrep string
   def self.generate_filter_str(filter = nil)
     case filter
     when ::Array
@@ -125,8 +126,8 @@ module FacterDB
     end
   end
 
-  # @return [Boolean] - true if the filter is valid against the jgrep filter validator
-  # @param filter [Object] - The filter to convert to jgrep string
+  # @return [Boolean] true if the filter is valid against the jgrep filter validator
+  # @param filters [Object] The filter to convert to jgrep string
   def self.valid_filters?(filters)
     filter_str = generate_filter_str(filters)
     JGrep.validate_filters(filter_str).nil?
@@ -134,8 +135,8 @@ module FacterDB
     false
   end
 
-  # @return [Array] - array of hashes of facts
-  # @param filter [Object] - The filter to convert to jgrep string
+  # @return [Array[Hash[Symbol, Any]]] array of hashes of facts
+  # @param filter [Object] The filter to convert to jgrep string
   def self.get_facts(filter = nil, cache = true)
     if cache && filter && filter == Thread.current[:facterdb_last_filter_seen]
       return Thread.current[:facterdb_last_facts_seen]
