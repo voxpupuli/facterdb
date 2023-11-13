@@ -11,7 +11,7 @@ begin
   GitHubChangelogGenerator::RakeTask.new :changelog do |config|
     config.future_release = FacterDB::Version::STRING
     config.include_labels = %w[enhancement bug]
-    config.exclude_labels = %w[duplicate question invalid wontfix maintenance]
+    config.exclude_labels = %w[duplicate question invalid wontfix maintenance github_actions]
     config.user = 'voxpupuli'
     config.project = 'facterdb'
     config.release_url = 'https://rubygems.org/gems/facterdb/versions/%s'
