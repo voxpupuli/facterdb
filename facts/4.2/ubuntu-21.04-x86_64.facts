@@ -1,4 +1,5 @@
 {
+  "aio_agent_version": "7.20.0",
   "architecture": "amd64",
   "augeas": {
     "version": "1.12.0"
