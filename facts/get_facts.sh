@@ -249,7 +249,7 @@ else
 fi
 bundle install --path vendor/bundler
 
-for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0; do
+for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0 4.5.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   # sometimes all versions of facter are not possible, if the bundle update fails, skip the rest of the loop
   if [ $? -ne 0 ]; then
