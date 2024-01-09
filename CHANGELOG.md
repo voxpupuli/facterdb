@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.23.0](https://rubygems.org/gems/facterdb/versions/1.23.0) (2024-01-09)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.22.0...1.23.0)
+
+**Implemented enhancements:**
+
+- adding missing fact sets [\#293](https://github.com/voxpupuli/facterdb/pull/293) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add Fedora 39 for 4.2-4.4 [\#292](https://github.com/voxpupuli/facterdb/pull/292) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add facts for Facter 4.5 [\#290](https://github.com/voxpupuli/facterdb/pull/290) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
+**Fixed bugs:**
+
+- Ensure the selinux topscope fact is present [\#296](https://github.com/voxpupuli/facterdb/pull/296) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.22.0](https://rubygems.org/gems/facterdb/versions/1.22.0) (2023-11-13)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.21.0...1.22.0)
