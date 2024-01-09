@@ -5,5 +5,6 @@ gemspec
 gem 'facter', ENV.fetch('FACTER_GEM_VERSION', nil), require: false
 
 group :development do
-  gem 'github_changelog_generator', '>= 1.16.4'
+  gem 'faraday-retry', require: false
+  gem 'github_changelog_generator', '>= 1.16.4', require: false
 end
