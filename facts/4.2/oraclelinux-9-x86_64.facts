@@ -1,4 +1,5 @@
 {
+  "selinux": false,
   "domain": "example.com",
   "fqdn": "foo.example.com",
   "hostname": "foo",

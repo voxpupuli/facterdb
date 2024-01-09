@@ -1,4 +1,5 @@
 {
+  "selinux": false,
   "hostname": "foo",
   "operatingsystem": "Amazon",
   "osfamily": "RedHat",

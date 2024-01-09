@@ -122,6 +122,13 @@ describe 'Default Facts' do
       it 'contains the legacy operatingsystem fact' do
         expect(content['operatingsystem']).not_to be_nil
       end
+
+      # the fact got introduced in 1.5.5 and is confined to kernel=linux
+      # https://github.com/puppetlabs/facter/blob/1.6.0/lib/facter/selinux.rb
+      # f94abfccfd6687a88f62703e4005c28ec04467a1 from facter
+      it 'contains the legacy selinux fact' do
+        expect(content['selinux']).not_to be_nil if content['kernel'] == 'Linux'
+      end
     end
   end
 end
