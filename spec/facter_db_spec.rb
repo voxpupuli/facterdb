@@ -15,10 +15,10 @@ describe FacterDB do
     end
   end
 
-  let(:facts_24_path)  { File.join(project_dir, 'facts', '2.4') }
-  let(:facts_24_count) { Dir.glob(File.join(facts_24_path, '*.facts')).count }
-  let(:facts_23_path)  { File.join(project_dir, 'facts', '2.3') }
-  let(:facts_23_count) { Dir.glob(File.join(facts_23_path, '*.facts')).count }
+  let(:facts_42_path)  { File.join(project_dir, 'facts', '4.2') }
+  let(:facts_42_count) { Dir.glob(File.join(facts_42_path, '*.facts')).count }
+  let(:facts_40_path)  { File.join(project_dir, 'facts', '4.0') }
+  let(:facts_40_count) { Dir.glob(File.join(facts_40_path, '*.facts')).count }
 
   describe '.use_defaultdb?' do
     subject { described_class.use_defaultdb? }
@@ -57,25 +57,25 @@ describe FacterDB do
 
     context 'when the FACTERDB_SEARCH_PATHS environment variable is set' do
       it 'supports a single path' do
-        ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
+        ENV['FACTERDB_SEARCH_PATHS'] = facts_42_path
 
-        expect(file_count).to eq(facts_24_count)
+        expect(file_count).to eq(facts_42_count)
       end
 
       it 'supports multiple paths delimited by the OS path separator' do
-        ENV['FACTERDB_SEARCH_PATHS'] = [facts_24_path, facts_23_path].join(File::PATH_SEPARATOR)
+        ENV['FACTERDB_SEARCH_PATHS'] = [facts_42_path, facts_40_path].join(File::PATH_SEPARATOR)
 
-        expect(file_count).to eq(facts_24_count + facts_23_count)
+        expect(file_count).to eq(facts_42_count + facts_40_count)
       end
 
       it 'ignores paths that are not a directory' do
-        ENV['FACTERDB_SEARCH_PATHS'] = [facts_24_path, non_directory_path].join(File::PATH_SEPARATOR)
+        ENV['FACTERDB_SEARCH_PATHS'] = [facts_42_path, non_directory_path].join(File::PATH_SEPARATOR)
 
         object = defined?(Warning) ? Warning : Kernel
         allow(object).to receive(:warn).and_call_original
         allow(object).to receive(:warn).with(a_string_matching(/is not a directory/))
 
-        expect(file_count).to eq(facts_24_count)
+        expect(file_count).to eq(facts_42_count)
       end
     end
 
@@ -84,30 +84,30 @@ describe FacterDB do
       subject(:file_count) { described_class.external_fact_files(fact_paths).count }
 
       context 'that is a single path' do
-        let(:fact_paths) { facts_24_path }
+        let(:fact_paths) { facts_42_path }
 
         it 'returns the paths to the fact sets in the specified path' do
-          expect(file_count).to eq(facts_24_count)
+          expect(file_count).to eq(facts_42_count)
         end
       end
 
       context 'that is multiple paths delimited by the OS path separator' do
-        let(:fact_paths) { [facts_24_path, facts_23_path].join(File::PATH_SEPARATOR) }
+        let(:fact_paths) { [facts_42_path, facts_40_path].join(File::PATH_SEPARATOR) }
 
         it 'returns the paths to the fact sets in all the specified paths' do
-          expect(file_count).to eq(facts_24_count + facts_23_count)
+          expect(file_count).to eq(facts_42_count + facts_40_count)
         end
       end
 
       context 'that contains a path that is not a directory' do
-        let(:fact_paths) { [facts_24_path, non_directory_path].join(File::PATH_SEPARATOR) }
+        let(:fact_paths) { [facts_42_path, non_directory_path].join(File::PATH_SEPARATOR) }
 
         it 'ignores the path that is not a directory' do
           object = defined?(Warning) ? Warning : Kernel
           allow(object).to receive(:warn).and_call_original
           allow(object).to receive(:warn).with(a_string_matching(/is not a directory/))
 
-          expect(file_count).to eq(facts_24_count)
+          expect(file_count).to eq(facts_42_count)
         end
       end
     end
@@ -123,7 +123,7 @@ describe FacterDB do
     context 'when FACTERDB_SKIP_DEFAULTDB environment variable is not set' do
       it 'returns the list of fact sets included in FacterDB' do
         # This test is a little naive but works
-        expect(default_fact_files.count).to be >= 1000
+        expect(default_fact_files.count).to be >= 192
       end
     end
 
@@ -148,7 +148,7 @@ describe FacterDB do
     end
 
     it 'returns the deduplicated combination of .default_fact_files and .external_fact_files' do
-      ENV['FACTERDB_SEARCH_PATHS'] = facts_24_path
+      ENV['FACTERDB_SEARCH_PATHS'] = facts_42_path
 
       expect(facterdb_fact_files.count).to eq(described_class.default_fact_files.count)
     end
@@ -243,11 +243,11 @@ describe FacterDB do
     end
 
     context 'when matching a specific facter version' do
-      let(:facter_version) { '2.4.0' }
+      let(:facter_version) { '4.0.52' }
 
       shared_examples 'returns only the specified version' do
         it 'only includes fact sets for the specified version' do
-          expect(result).to all(include(facterversion: match(/\A2\.4/)))
+          expect(result).to all(include(facterversion: match(/^4\.0/)))
         end
       end
 
