@@ -77,6 +77,7 @@
   "ipaddress": "10.0.2.15",
   "ipaddress6": "fe80::a00:27ff:fe11:d4ff",
   "ipaddress6_eth0": "fe80::a00:27ff:fe11:d4ff",
+  "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
   "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
@@ -358,11 +359,13 @@
   "netmask": "255.255.255.0",
   "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
+  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
   "network": "10.0.2.0",
   "network6": "fe80::",
   "network6_eth0": "fe80::",
+  "network6_lo": "::1",
   "network_eth0": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "networking": {
@@ -407,10 +410,25 @@
             "network": "127.0.0.0"
           }
         ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "flags": [
+              "permanent"
+            ],
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host"
+          }
+        ],
         "ip": "127.0.0.1",
+        "ip6": "::1",
         "mtu": 65536,
         "netmask": "255.0.0.0",
-        "network": "127.0.0.0"
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
       }
     },
     "ip": "10.0.2.15",
@@ -516,6 +534,7 @@
   "rubyversion": "2.7.6",
   "scope6": "link",
   "scope6_eth0": "link",
+  "scope6_lo": "host",
   "selinux": true,
   "selinux_config_mode": "enforcing",
   "selinux_config_policy": "targeted",
