@@ -11,7 +11,7 @@ begin
   GitHubChangelogGenerator::RakeTask.new :changelog do |config|
     config.future_release = FacterDB::Version::STRING
     config.include_labels = %w[enhancement bug]
-    config.exclude_labels = %w[duplicate question invalid wontfix maintenance]
+    config.exclude_labels = %w[duplicate question invalid wontfix maintenance github_actions]
     config.user = 'voxpupuli'
     config.project = 'facterdb'
     config.release_url = 'https://rubygems.org/gems/facterdb/versions/%s'
@@ -139,7 +139,7 @@ task :table do
   os_versions.each do |label|
     fvs = facter_versions.map { |facter_version| os_facter_matrix[label][facter_version] || 0 }
     row = "| #{label.ljust(os_version_width)} |"
-    fvs.each { |fv| row += (fv > 0 ? " #{fv.to_s.center(3)} |" : '     |') }
+    fvs.each { |fv| row += ((fv > 0) ? " #{fv.to_s.center(3)} |" : '     |') }
     new_readme << row
   end
 

@@ -1,0 +1,656 @@
+{
+  "architecture": "x86_64",
+  "bios_release_date": "12/01/2006",
+  "bios_vendor": "innotek GmbH",
+  "bios_version": "VirtualBox",
+  "blockdevice_sda_model": "VBOX HARDDISK",
+  "blockdevice_sda_size": 137438953472,
+  "blockdevice_sda_vendor": "ATA",
+  "blockdevices": "sda",
+  "boardmanufacturer": "Oracle Corporation",
+  "boardproductname": "VirtualBox",
+  "boardserialnumber": "0",
+  "chassistype": "Other",
+  "dhcp_servers": {
+    "system": null
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "serial": "VB0376f406-6c62b0a0",
+      "size": "128.00 GiB",
+      "size_bytes": 137438953472,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "592a5d51-955e-c546-9429-146246d5e6eb"
+    }
+  },
+  "domain": "example.com",
+  "facterversion": "4.3.1",
+  "filesystems": "btrfs,ext2,ext3,ext4,xfs",
+  "fips_enabled": false,
+  "fqdn": "foo.example.com",
+  "gem_version": "~> 4.3.0",
+  "gid": "root",
+  "hardwareisa": "unknown",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "hypervisors": {
+    "virtualbox": {
+    }
+  },
+  "id": "root",
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "interfaces": "eth0,lo",
+  "ipaddress": "10.0.2.15",
+  "ipaddress6": "fe80::a00:27ff:fe01:51aa",
+  "ipaddress6_eth0": "fe80::a00:27ff:fe01:51aa",
+  "ipaddress6_lo": "::1",
+  "ipaddress_eth0": "10.0.2.15",
+  "ipaddress_lo": "127.0.0.1",
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "6.2",
+  "kernelrelease": "6.2.9-300.fc38.x86_64",
+  "kernelversion": "6.2.9",
+  "load_averages": {
+    "15m": 0.01,
+    "1m": 0.18,
+    "5m": 0.04
+  },
+  "lsbdistrelease": "38",
+  "lsbmajdistrelease": "38",
+  "macaddress": "08:00:27:01:51:aa",
+  "macaddress_eth0": "08:00:27:01:51:aa",
+  "manufacturer": "innotek GmbH",
+  "memory": {
+    "swap": {
+      "available": "3.91 GiB",
+      "available_bytes": 4195344384,
+      "capacity": "0.00%",
+      "total": "3.91 GiB",
+      "total_bytes": 4195344384,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "1.56 GiB",
+      "available_bytes": 1675812864,
+      "capacity": "18.20%",
+      "total": "1.91 GiB",
+      "total_bytes": 2048643072,
+      "used": "355.56 MiB",
+      "used_bytes": 372830208
+    }
+  },
+  "memoryfree": "1.56 GiB",
+  "memoryfree_mb": 1598.1796875,
+  "memorysize": "1.91 GiB",
+  "memorysize_mb": 1953.73828125,
+  "mountpoints": {
+    "/": {
+      "available": "122.45 GiB",
+      "available_bytes": 131477950464,
+      "capacity": "1.99%",
+      "device": "/dev/mapper/fedora-root",
+      "filesystem": "xfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "relatime",
+        "attr2",
+        "inode64",
+        "logbufs=8",
+        "logbsize=32k",
+        "noquota"
+      ],
+      "size": "124.93 GiB",
+      "size_bytes": 134146424832,
+      "used": "2.49 GiB",
+      "used_bytes": 2668474368
+    },
+    "/boot": {
+      "available": "813.30 MiB",
+      "available_bytes": 852811776,
+      "capacity": "15.28%",
+      "device": "/dev/sda2",
+      "filesystem": "xfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "relatime",
+        "attr2",
+        "inode64",
+        "logbufs=8",
+        "logbsize=32k",
+        "noquota"
+      ],
+      "size": "960.00 MiB",
+      "size_bytes": 1006632960,
+      "used": "146.70 MiB",
+      "used_bytes": 153821184
+    },
+    "/dev": {
+      "available": "4.00 MiB",
+      "available_bytes": 4194304,
+      "capacity": "0%",
+      "device": "devtmpfs",
+      "filesystem": "devtmpfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "size=4096k",
+        "nr_inodes=246652",
+        "mode=755",
+        "inode64"
+      ],
+      "size": "4.00 MiB",
+      "size_bytes": 4194304,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/hugepages": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "hugetlbfs",
+      "filesystem": "hugetlbfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "relatime",
+        "pagesize=2M"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/mqueue": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "mqueue",
+      "filesystem": "mqueue",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/pts": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=000"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/shm": {
+      "available": "976.87 MiB",
+      "available_bytes": 1024319488,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "inode64"
+      ],
+      "size": "976.87 MiB",
+      "size_bytes": 1024319488,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run": {
+      "available": "385.32 MiB",
+      "available_bytes": 404041728,
+      "capacity": "1.39%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "size=400128k",
+        "nr_inodes=819200",
+        "mode=755",
+        "inode64"
+      ],
+      "size": "390.75 MiB",
+      "size_bytes": 409731072,
+      "used": "5.43 MiB",
+      "used_bytes": 5689344
+    },
+    "/run/credentials/systemd-resolved.service": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "ramfs",
+      "filesystem": "ramfs",
+      "options": [
+        "ro",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "mode=700"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/credentials/systemd-sysctl.service": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "ramfs",
+      "filesystem": "ramfs",
+      "options": [
+        "ro",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "mode=700"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/credentials/systemd-tmpfiles-setup-dev.service": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "ramfs",
+      "filesystem": "ramfs",
+      "options": [
+        "ro",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "mode=700"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/credentials/systemd-tmpfiles-setup.service": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "ramfs",
+      "filesystem": "ramfs",
+      "options": [
+        "ro",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "mode=700"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/user/1000": {
+      "available": "195.37 MiB",
+      "available_bytes": 204861440,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=200060k",
+        "nr_inodes=50015",
+        "mode=700",
+        "uid=1000",
+        "gid=1000",
+        "inode64"
+      ],
+      "size": "195.37 MiB",
+      "size_bytes": 204861440,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/tmp": {
+      "available": "976.87 MiB",
+      "available_bytes": 1024323584,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "seclabel",
+        "nosuid",
+        "nodev",
+        "size=1000316k",
+        "nr_inodes=1048576",
+        "inode64"
+      ],
+      "size": "976.87 MiB",
+      "size_bytes": 1024323584,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/vagrant": {
+      "available": "713.55 GiB",
+      "available_bytes": 766167306240,
+      "capacity": "22.09%",
+      "device": "vagrant",
+      "filesystem": "vboxsf",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "915.81 GiB",
+      "size_bytes": 983345152000,
+      "used": "202.26 GiB",
+      "used_bytes": 217177845760
+    }
+  },
+  "mtu_eth0": 1500,
+  "mtu_lo": 65536,
+  "netmask": "255.255.255.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_eth0": "ffff:ffff:ffff:ffff::",
+  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+  "netmask_eth0": "255.255.255.0",
+  "netmask_lo": "255.0.0.0",
+  "network": "10.0.2.0",
+  "network6": "fe80::",
+  "network6_eth0": "fe80::",
+  "network6_lo": "::1",
+  "network_eth0": "10.0.2.0",
+  "network_lo": "127.0.0.0",
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:fe01:51aa",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "10.0.2.15",
+        "ip6": "fe80::a00:27ff:fe01:51aa",
+        "mac": "08:00:27:01:51:aa",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fe80::a00:27ff:fe01:51aa",
+    "mac": "08:00:27:01:51:aa",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fe80::",
+    "primary": "eth0",
+    "scope6": "link"
+  },
+  "operatingsystem": "Fedora",
+  "operatingsystemmajrelease": "38",
+  "operatingsystemrelease": "38",
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "Thirty Eight",
+      "description": "Fedora release 38 (Thirty Eight)",
+      "id": "Fedora",
+      "release": {
+        "full": "38",
+        "major": "38"
+      }
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "Fedora",
+    "release": {
+      "full": "38",
+      "major": "38"
+    },
+    "selinux": {
+      "config_mode": "enforcing",
+      "config_policy": "targeted",
+      "current_mode": "enforcing",
+      "enabled": true,
+      "enforced": true,
+      "policy_version": "33"
+    }
+  },
+  "osfamily": "RedHat",
+  "partitions": {
+    "/dev/mapper/fedora-root": {
+      "filesystem": "xfs",
+      "label": "root",
+      "mount": "/",
+      "size": "125.00 GiB",
+      "size_bytes": 134213533696,
+      "uuid": "c24c6da0-e6d2-4176-8581-cccfe53918b7"
+    },
+    "/dev/mapper/fedora-swap": {
+      "filesystem": "swap",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648,
+      "uuid": "83ca3e26-ea06-4f1c-9b30-84886d860515"
+    },
+    "/dev/sda1": {
+      "partuuid": "8705c40a-2e78-4768-a8a1-2a6299092f34",
+      "size": "1.00 MiB",
+      "size_bytes": 1048576
+    },
+    "/dev/sda2": {
+      "filesystem": "xfs",
+      "label": "boot",
+      "mount": "/boot",
+      "partuuid": "44316c3a-fc65-458a-90b3-9253f5c24971",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824,
+      "uuid": "fc52b7df-6d51-402f-8c8b-05399f80811b"
+    },
+    "/dev/sda3": {
+      "filesystem": "LVM2_member",
+      "partuuid": "c9e11f71-394f-4ad6-8a27-c4e6c20067ee",
+      "size": "127.00 GiB",
+      "size_bytes": 136362065920,
+      "uuid": "eJetuf-vIJ4-9FOf-FObG-VL8t-hSY1-O2i6uC"
+    }
+  },
+  "path": "/home/vagrant/vendor/bundler/ruby/3.2.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/lib/snapd/snap/bin",
+  "physicalprocessorcount": 1,
+  "processor0": "12th Gen Intel(R) Core(TM) i9-12900K",
+  "processor1": "12th Gen Intel(R) Core(TM) i9-12900K",
+  "processorcount": 2,
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "unknown",
+    "models": [
+      "12th Gen Intel(R) Core(TM) i9-12900K",
+      "12th Gen Intel(R) Core(TM) i9-12900K"
+    ],
+    "physicalcount": 1,
+    "speed": "3.19 GHz",
+    "threads": 1
+  },
+  "productname": "VirtualBox",
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/usr/local/share/ruby/site_ruby",
+    "version": "3.2.2"
+  },
+  "rubyplatform": "x86_64-linux",
+  "rubysitedir": "/usr/local/share/ruby/site_ruby",
+  "rubyversion": "3.2.2",
+  "scope6": "link",
+  "scope6_eth0": "link",
+  "scope6_lo": "host",
+  "selinux": true,
+  "selinux_config_mode": "enforcing",
+  "selinux_config_policy": "targeted",
+  "selinux_current_mode": "enforcing",
+  "selinux_enforced": true,
+  "selinux_policyversion": "33",
+  "serialnumber": "0",
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 b9fcb7bf2ad7c70159b490238b15ab8dddf0bf68",
+        "sha256": "SSHFP 3 2 703e86133fd5d20c608b7cad0941f974590557a0bc2a15afa2f491d7c594f43b"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPmnvicWpurMKbzPNB529b7+3vKS3SXll6euYXd4flyJwG1xektbszWKXOKu9XL4T2HZRRJ31B8MdoZFEmjYntk=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 c996481e21d7783a53295317bc03f3c2b22d631d",
+        "sha256": "SSHFP 4 2 2dbbad350cde52da915083a8323622849f476624f6ca16fdc245188dcfb76524"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAICgW/kKOzqXWolGAsS65N90AkvyCA9i4luilnI4qiS41",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 c7cdadc5f7ba44de19c4ccefc154f3d2c4131193",
+        "sha256": "SSHFP 1 2 09cd764637ae63d6b155f56ac850933d70edd20cbb1b98cbdab0aff68fc8e6f5"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCuRol3Ya18wGXmVGfEHydIFdbN+B4/Q9FKkn+hG0cVdcKKw6FuHAUGLKIIFeDQmnxKTzxC1ZpI3LA3YwinJDAqL0XmkNkNLw5XDw+c8WqkVl72y6YADlBaUqiT1BA3gAf6mhfdKFvVnDuGhTkSy2JiX+7VeDEONj/6J7Z9Jr0a+He7Js0gupMJwC5jVAm20z+M+IS3JDzF5UbcYwFnU9ktafdjPKc9jjMeA7DuXwPKiOp3l2FntV74y51jP64nAUrYfR7KuB6E80X2mm9+L+vxOXQweumNx9Yf7zrfSLj4hKYas+dyobjWeGAhSMR3k3wZ20oz34vMwXU9YXRROo4zm3Fx7xJFUVcmnljhQNrlbBOKl+DQSbaoQtJAkaA1jOAAJkjMM2feZxalL39xifqvTwcG+KdCRA16D9tHRhQieS+7G+8bcEyLp93J2Yhu//0PQ7XqXuIPXTj8eHh729e59vTbdVP2AXDuJJc+Snce1L5Ru7KkS/eNJ38jVP/Pj6k=",
+      "type": "ssh-rsa"
+    }
+  },
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPmnvicWpurMKbzPNB529b7+3vKS3SXll6euYXd4flyJwG1xektbszWKXOKu9XL4T2HZRRJ31B8MdoZFEmjYntk=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAICgW/kKOzqXWolGAsS65N90AkvyCA9i4luilnI4qiS41",
+  "sshfp_ecdsa": "SSHFP 3 1 b9fcb7bf2ad7c70159b490238b15ab8dddf0bf68\nSSHFP 3 2 703e86133fd5d20c608b7cad0941f974590557a0bc2a15afa2f491d7c594f43b",
+  "sshfp_ed25519": "SSHFP 4 1 c996481e21d7783a53295317bc03f3c2b22d631d\nSSHFP 4 2 2dbbad350cde52da915083a8323622849f476624f6ca16fdc245188dcfb76524",
+  "sshfp_rsa": "SSHFP 1 1 c7cdadc5f7ba44de19c4ccefc154f3d2c4131193\nSSHFP 1 2 09cd764637ae63d6b155f56ac850933d70edd20cbb1b98cbdab0aff68fc8e6f5",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCuRol3Ya18wGXmVGfEHydIFdbN+B4/Q9FKkn+hG0cVdcKKw6FuHAUGLKIIFeDQmnxKTzxC1ZpI3LA3YwinJDAqL0XmkNkNLw5XDw+c8WqkVl72y6YADlBaUqiT1BA3gAf6mhfdKFvVnDuGhTkSy2JiX+7VeDEONj/6J7Z9Jr0a+He7Js0gupMJwC5jVAm20z+M+IS3JDzF5UbcYwFnU9ktafdjPKc9jjMeA7DuXwPKiOp3l2FntV74y51jP64nAUrYfR7KuB6E80X2mm9+L+vxOXQweumNx9Yf7zrfSLj4hKYas+dyobjWeGAhSMR3k3wZ20oz34vMwXU9YXRROo4zm3Fx7xJFUVcmnljhQNrlbBOKl+DQSbaoQtJAkaA1jOAAJkjMM2feZxalL39xifqvTwcG+KdCRA16D9tHRhQieS+7G+8bcEyLp93J2Yhu//0PQ7XqXuIPXTj8eHh729e59vTbdVP2AXDuJJc+Snce1L5Ru7KkS/eNJ38jVP/Pj6k=",
+  "swapfree": "3.91 GiB",
+  "swapfree_mb": 4000.9921875,
+  "swapsize": "3.91 GiB",
+  "swapsize_mb": 4000.9921875,
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 83,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "uptime": "0:01 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 83,
+  "uuid": "592a5d51-955e-c546-9429-146246d5e6eb",
+  "virtual": "virtualbox"
+}

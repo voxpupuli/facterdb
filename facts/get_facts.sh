@@ -136,6 +136,13 @@ case "${osfamily}" in
   # libc6-dev needed to build the ffi gem
   apt_install make gcc libgmp-dev libc6-dev
 
+  # puppetlabs repos/packages not yet available on bookworm https://puppet.atlassian.net/browse/PA-4995
+  # simply install puppet-agent that comes with the distro
+  if [[ "bookworm" =~ ${lsbdistcodename} ]]; then
+    apt_install ruby rubygems ruby-dev
+    facter --show-legacy -p -j | tee ${output_file}
+  fi
+
   # There are no puppet-agent packages for $releasename yet, so generate a Facter 3.x
   # fact set from the official Debian package.
   if [[ "hirsute" =~ ${lsbdistcodename} || "impish" =~ ${lsbdistcodename} || "jammy" =~ ${lsbdistcodename} || "kinetic" =~ ${lsbdistcodename} ]]; then
@@ -242,7 +249,7 @@ else
 fi
 bundle install --path vendor/bundler
 
-for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0; do
+for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0 4.5.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   # sometimes all versions of facter are not possible, if the bundle update fails, skip the rest of the loop
   if [ $? -ne 0 ]; then
@@ -275,4 +282,3 @@ for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0; do
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter --show-legacy --json | bundle exec ruby -e 'require "json"; jj JSON.parse gets' | tee $output_file ||
     FACTER_GEM_VERSION="~> ${version}" bundle exec facter --show-legacy --json | tee $output_file
 done
-

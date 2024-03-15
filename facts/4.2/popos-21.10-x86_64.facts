@@ -1,4 +1,5 @@
 {
+  "selinux": false,
   "aio_agent_version": "7.12.1",
   "augeas": {
     "version": "1.12.0"

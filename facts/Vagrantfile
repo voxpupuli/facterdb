@@ -22,6 +22,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
+  config.vm.define 'debian-12-x86_64' do |host|
+    host.vm.box = 'boxomatic/debian-12'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
   config.vm.define 'linuxmint-19-x86_64' do |host|
     host.vm.box = 'ltsp/linuxmint-19.1-cinnamon-64bit'
     host.vm.provision 'shell',
@@ -86,25 +92,43 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
     host.vbguest.auto_update = true
   end
+  # images are at https://cloud.centos.org/centos/8-stream/x86_64/images/
+  # (check for version updates periodically)
+  # facts land as centos-8-x86_64.facts
   config.vm.define 'centos-stream8-x86_64' do |host|
     host.vm.box = 'centos/stream8'
+    host.vm.box_url = 'https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-20231127.0.x86_64.vagrant-virtualbox.box'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+    # commented to allow manual retrieval of facts
+    # host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
     host.vbguest.auto_update = true
   end
-  # will work after https://www.centos.org/centos-stream/#tab-3 got updated
-  # in the meantime images are at https://cloud.centos.org/centos/9-stream/x86_64/images/
-  # can be imported with vagrant box add --name centos/stream9 $url
+  # images are at https://cloud.centos.org/centos/9-stream/x86_64/images/
+  # can be imported with `vagrant box add --name centos/stream9 $url` you can also
+  # use the host.vm.box_url below
+  # facts land as centos-9-x86_64.facts
+  #
   config.vm.define 'centos-stream9-x86_64' do |host|
     host.vm.box = 'centos/stream9'
+    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20231204.0.x86_64.vagrant-virtualbox.box'
+    # centos packages their box with synced folders set to rsync (presumably
+    # since vboxsf is not built in their kernel)
+    # If the version of the kernel-headers/kernel-devel that are available
+    # for download are newer than what is on the box then guest additions will
+    # not build. If the stars align, then you can set `type: 'virtualbox'`
+    # for synced_folder and maybe it will work, otherwise, it is a manual
+    # effort to rsync the fact files back
+    # host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+    # commented to allow manual retrieval of the facts
+    # host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+    # this will install the guest additions which requires `vagrant plugin install vagrant-vbguest`
     host.vbguest.auto_update = true
   end
   config.vm.define 'almalinux-8-x86_64' do |host|
@@ -178,8 +202,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'archlinux-x86_64' do |host|
     host.vm.box = 'archlinux/archlinux'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    # host.vm.provision "shell", path: "get_facts.sh"
-    # host.vm.provision "shell", inline: "/sbin/shutdown -h now"
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
   config.vm.define 'sles-11sp1-x86_64' do |host|
     host.vm.box = 'suse/sles11sp3'
@@ -240,6 +264,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define 'freebsd-13-x86_64' do |host|
     host.vm.box = 'bento/freebsd-13'
     host.vm.synced_folder '.', '/vagrant'
+    # this was needed for the 202309.08.0 release of this box
+    host.ssh.shell = '/bin/sh'
     host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
@@ -365,6 +391,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = 'generic/fedora37'
     host.vm.synced_folder '.', '/vagrant'
     # there's no official support for fedora 37, so we need facter from Fedora
+    host.vm.provision 'shell', inline: 'dnf -y install facter ruby ruby-devel wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'fedora-38-x86_64' do |host|
+    host.vm.box = 'generic/fedora38'
+    host.vm.synced_folder '.', '/vagrant'
+    # there's no official support for fedora 38, so we need facter from Fedora
+    host.vm.provision 'shell', inline: 'dnf -y install facter ruby ruby-devel wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'fedora-39-x86_64' do |host|
+    host.vm.box = 'generic/fedora39'
+    host.vm.synced_folder '.', '/vagrant'
+    # there's no official support for fedora 39, so we need facter from Fedora
     host.vm.provision 'shell', inline: 'dnf -y install facter ruby ruby-devel wget make gcc net-tools'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'

@@ -1,5 +1,35 @@
 # Changelog
 
+## [1.23.0](https://rubygems.org/gems/facterdb/versions/1.23.0) (2024-01-09)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.22.0...1.23.0)
+
+**Implemented enhancements:**
+
+- adding missing fact sets [\#293](https://github.com/voxpupuli/facterdb/pull/293) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add Fedora 39 for 4.2-4.4 [\#292](https://github.com/voxpupuli/facterdb/pull/292) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add facts for Facter 4.5 [\#290](https://github.com/voxpupuli/facterdb/pull/290) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+
+**Fixed bugs:**
+
+- Ensure the selinux topscope fact is present [\#296](https://github.com/voxpupuli/facterdb/pull/296) ([bastelfreak](https://github.com/bastelfreak))
+
+## [1.22.0](https://rubygems.org/gems/facterdb/versions/1.22.0) (2023-11-13)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.21.0...1.22.0)
+
+**Implemented enhancements:**
+
+- fedora38 facts [\#287](https://github.com/voxpupuli/facterdb/pull/287) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add facts for Debian 12 [\#283](https://github.com/voxpupuli/facterdb/pull/283) ([TheMeier](https://github.com/TheMeier))
+- Adding windows servers for Facter 4.3 and 4.4 [\#273](https://github.com/voxpupuli/facterdb/pull/273) ([davidsandilands](https://github.com/davidsandilands))
+- new facts for 4.3 and 4.4 and a few stragglers for 4.1 [\#272](https://github.com/voxpupuli/facterdb/pull/272) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Introduce RuboCop [\#267](https://github.com/voxpupuli/facterdb/pull/267) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Correct class documentation [\#281](https://github.com/voxpupuli/facterdb/pull/281) ([ekohl](https://github.com/ekohl))
+
 ## [1.21.0](https://rubygems.org/gems/facterdb/versions/1.21.0) (2023-01-25)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.20.0...1.21.0)
