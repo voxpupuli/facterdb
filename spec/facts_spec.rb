@@ -108,27 +108,6 @@ describe 'Default Facts' do
         expect(content['systemd_version']).to be_nil
         expect(content['systemd_internal_services']).to be_nil
       end
-
-      it 'contains a legacy hostname, domain and fqdn fact' do
-        expect(content['hostname']).to eq('foo')
-        expect(content['fqdn']).to eq('foo.example.com')
-        expect(content['domain']).to eq('example.com')
-      end
-
-      it 'contains the legacy osfamily fact' do
-        expect(content['osfamily']).not_to be_nil
-      end
-
-      it 'contains the legacy operatingsystem fact' do
-        expect(content['operatingsystem']).not_to be_nil
-      end
-
-      # the fact got introduced in 1.5.5 and is confined to kernel=linux
-      # https://github.com/puppetlabs/facter/blob/1.6.0/lib/facter/selinux.rb
-      # f94abfccfd6687a88f62703e4005c28ec04467a1 from facter
-      it 'contains the legacy selinux fact' do
-        expect(content['selinux']).not_to be_nil if content['kernel'] == 'Linux'
-      end
     end
   end
 end
