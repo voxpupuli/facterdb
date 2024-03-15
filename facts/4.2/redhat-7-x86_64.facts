@@ -278,7 +278,7 @@
         "nosuid",
         "nodev",
         "relatime",
-        "size=size=800684k",
+        "size=800684k",
         "mode=700",
         "uid=1000",
         "gid=1000"

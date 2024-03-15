@@ -84,7 +84,7 @@
   "kernelrelease": "4.18.0-305.el8.x86_64",
   "kernelversion": "4.18.0",
   "load_averages": {
-    "15m": 0.35,
+    "15m": 0.34,
     "1m": 1.58,
     "5m": 0.85
   },
