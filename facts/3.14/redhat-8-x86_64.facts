@@ -42,7 +42,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "d7ef9489-fb48-9f4c-8b0d-a784866e930f"
+      "uuid": "433790d2-0265-444c-b167-401a249305db"
     }
   },
   "domain": "example.com",
@@ -77,7 +77,7 @@
   "is_virtual": true,
   "kernel": "Linux",
   "kernelmajversion": "4.18",
-  "kernelrelease": "4.18.0-305.3.1.el8.x86_64",
+  "kernelrelease": "4.18.0-305.el8.x86_64",
   "kernelversion": "4.18.0",
   "load_averages": {
     "15m": 0.07,
@@ -135,7 +135,7 @@
     },
     "/boot": {
       "available": "823.80 MiB",
-      "available_bytes": 0863817728,
+      "available_bytes": 863817728,
       "capacity": "18.76%",
       "device": "/dev/sda1",
       "filesystem": "xfs",
@@ -466,7 +466,7 @@
   },
   "rubyplatform": "x86_64-linux",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.9",
+  "rubyversion": "2.5.3",
   "scope6": "link",
   "scope6_eth0": "link",
   "selinux": true,
