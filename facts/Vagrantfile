@@ -8,9 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'foo.example.com'
 
   # This plugin is useful to make sure facts don't change for no reason
-  if Vagrant.has_plugin?("vagrant-timezone")
-    config.timezone.value = "UTC"
-  end
+  config.timezone.value = 'UTC' if Vagrant.has_plugin?('vagrant-timezone')
+
   config.vm.provider 'virtualbox' do |v|
     v.gui = false
   end
