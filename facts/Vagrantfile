@@ -6,6 +6,11 @@ VAGRANTFILE_API_VERSION = '2'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.hostname = 'foo.example.com'
+
+  # This plugin is useful to make sure facts don't change for no reason
+  if Vagrant.has_plugin?("vagrant-timezone")
+    config.timezone.value = "UTC"
+  end
   config.vm.provider 'virtualbox' do |v|
     v.gui = false
   end
@@ -167,6 +172,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = 'generic/rhel8'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', inline: 'sysctl -w net.ipv6.conf.all.disable_ipv6=0'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'redhat-9-x86_64' do |host|
+    host.vm.box = 'generic/rhel9'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', inline: 'sysctl -w net.ipv6.conf.all.disable_ipv6=0'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
