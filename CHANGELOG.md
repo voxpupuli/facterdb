@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.24.0](https://rubygems.org/gems/facterdb/versions/1.24.0) (2024-03-19)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.23.0...1.24.0)
+
+**Implemented enhancements:**
+
+- Rebuild RHEL facts on Vagrant [\#304](https://github.com/voxpupuli/facterdb/pull/304) ([yakatz](https://github.com/yakatz))
+
 ## [1.23.0](https://rubygems.org/gems/facterdb/versions/1.23.0) (2024-01-09)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.22.0...1.23.0)
