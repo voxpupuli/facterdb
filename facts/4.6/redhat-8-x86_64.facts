@@ -1,10 +1,10 @@
 {
-  "aio_agent_version": "7.6.1",
+  "aio_agent_version": "8.5.1",
   "architecture": "x86_64",
   "augeas": {
-    "version": "1.12.0"
+    "version": "1.14.1"
   },
-  "augeasversion": "1.12.0",
+  "augeasversion": "1.14.1",
   "bios_release_date": "12/01/2006",
   "bios_vendor": "innotek GmbH",
   "bios_version": "VirtualBox",
@@ -22,6 +22,7 @@
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
+      "serial": "VBf993e578-73e4f5ab",
       "size": "128.00 GiB",
       "size_bytes": 137438953472,
       "type": "hdd",
@@ -46,11 +47,12 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "2f00a6bd-43f5-8448-a9c9-c32a4c2d8545"
+      "uuid": "2f00a6bd-43f5-8448-a9c9-c32a4c2d8545",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.1.1",
+  "facterversion": "4.6.1",
   "filesystems": "xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
@@ -85,9 +87,9 @@
   "kernelrelease": "4.18.0-513.5.1.el8_9.x86_64",
   "kernelversion": "4.18.0",
   "load_averages": {
-    "15m": 0.06,
-    "1m": 0.63,
-    "5m": 0.18
+    "15m": 0.12,
+    "1m": 0.83,
+    "5m": 0.33
   },
   "lsbdistrelease": "8.9",
   "lsbmajdistrelease": "8",
@@ -106,24 +108,24 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.28 GiB",
-      "available_bytes": 1376075776,
-      "capacity": "25.70%",
+      "available": "1.29 GiB",
+      "available_bytes": 1385746432,
+      "capacity": "25.18%",
       "total": "1.72 GiB",
       "total_bytes": 1852166144,
-      "used": "454.04 MiB",
-      "used_bytes": 476090368
+      "used": "444.81 MiB",
+      "used_bytes": 466419712
     }
   },
-  "memoryfree": "1.28 GiB",
-  "memoryfree_mb": 1312.328125,
+  "memoryfree": "1.29 GiB",
+  "memoryfree_mb": 1321.55078125,
   "memorysize": "1.72 GiB",
   "memorysize_mb": 1766.36328125,
   "mountpoints": {
     "/": {
-      "available": "67.06 GiB",
-      "available_bytes": 72005353472,
-      "capacity": "4.15%",
+      "available": "67.05 GiB",
+      "available_bytes": 71992963072,
+      "capacity": "4.17%",
       "device": "/dev/mapper/rhel_rhel8-root",
       "filesystem": "xfs",
       "options": [
@@ -138,8 +140,8 @@
       ],
       "size": "69.97 GiB",
       "size_bytes": 75125227520,
-      "used": "2.91 GiB",
-      "used_bytes": 3119874048
+      "used": "2.92 GiB",
+      "used_bytes": 3132264448
     },
     "/boot": {
       "available": "801.67 MiB",
@@ -254,7 +256,7 @@
     },
     "/run": {
       "available": "866.78 MiB",
-      "available_bytes": 908886016,
+      "available_bytes": 908881920,
       "capacity": "1.86%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
@@ -268,7 +270,7 @@
       "size": "883.18 MiB",
       "size_bytes": 926081024,
       "used": "16.40 MiB",
-      "used_bytes": 17195008
+      "used_bytes": 17199104
     },
     "/run/user/1000": {
       "available": "176.63 MiB",
@@ -312,9 +314,9 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "50.97 GiB",
-      "available_bytes": 54727684096,
-      "capacity": "27.12%",
+      "available": "50.84 GiB",
+      "available_bytes": 54584934400,
+      "capacity": "27.31%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -327,8 +329,8 @@
       ],
       "size": "69.94 GiB",
       "size_bytes": 75094818816,
-      "used": "18.97 GiB",
-      "used_bytes": 20367134720
+      "used": "19.10 GiB",
+      "used_bytes": 20509884416
     }
   },
   "mtu_eth0": 1500,
@@ -363,9 +365,13 @@
             "address": "fe80::a00:27ff:fe06:c1d2",
             "netmask": "ffff:ffff:ffff:ffff::",
             "network": "fe80::",
-            "scope6": "link"
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
           }
         ],
+        "duplex": "full",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:fe06:c1d2",
         "mac": "08:00:27:06:c1:d2",
@@ -374,7 +380,10 @@
         "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.0.2.0",
         "network6": "fe80::",
-        "scope6": "link"
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "link",
+        "speed": 1000
       },
       "lo": {
         "bindings": [
@@ -389,7 +398,10 @@
             "address": "::1",
             "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
             "network": "::1",
-            "scope6": "host"
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
           }
         ],
         "ip": "127.0.0.1",
@@ -399,6 +411,8 @@
         "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "127.0.0.0",
         "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
         "scope6": "host"
       }
     },
@@ -494,15 +508,16 @@
     "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "7.6.1",
+  "productversion": "1.2",
+  "puppetversion": "8.5.1",
   "ruby": {
     "platform": "x86_64-linux",
-    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-    "version": "2.7.3"
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.3"
   },
   "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.3",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+  "rubyversion": "3.2.3",
   "scope6": "link",
   "scope6_eth0": "link",
   "scope6_lo": "host",
@@ -552,14 +567,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 68,
-    "uptime": "0:01 hours"
+    "seconds": 132,
+    "uptime": "0:02 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:01 hours",
+  "uptime": "0:02 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 68,
+  "uptime_seconds": 132,
   "uuid": "2f00a6bd-43f5-8448-a9c9-c32a4c2d8545",
   "virtual": "virtualbox"
 }
