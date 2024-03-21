@@ -1,5 +1,5 @@
 {
-  "aio_agent_version": "8.0.0",
+  "aio_agent_version": "8.5.1",
   "architecture": "x64",
   "dhcp_servers": {
     "Ethernet": "10.0.2.2",
@@ -15,7 +15,7 @@
   },
   "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
-  "facterversion": "4.4.0",
+  "facterversion": "4.6.1",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
   "hardwareisa": "x64",
@@ -47,17 +47,17 @@
   "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
-      "available": "2.49 GiB",
-      "available_bytes": 2676072448,
-      "capacity": "37.44%",
+      "available": "2.53 GiB",
+      "available_bytes": 2720854016,
+      "capacity": "36.40%",
       "total": "3.98 GiB",
       "total_bytes": 4277866496,
-      "used": "1.49 GiB",
-      "used_bytes": 1601794048
+      "used": "1.45 GiB",
+      "used_bytes": 1557012480
     }
   },
-  "memoryfree": "2.49 GiB",
-  "memoryfree_mb": 2552.1015625,
+  "memoryfree": "2.53 GiB",
+  "memoryfree_mb": 2594.80859375,
   "memorysize": "3.98 GiB",
   "memorysize_mb": 4079.69140625,
   "mtu_Ethernet": 1500,
@@ -151,15 +151,15 @@
     "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "8.0.0",
+  "puppetversion": "8.5.1",
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
-    "version": "3.2.2"
+    "version": "3.2.3"
   },
   "rubyplatform": "x64-mingw32",
   "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.2",
+  "rubyversion": "3.2.3",
   "scope6": "link",
   "scope6_Ethernet": "link",
   "serialnumber": "0",
@@ -209,14 +209,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 230,
-    "uptime": "0:03 hours"
+    "seconds": 338,
+    "uptime": "0:05 hours"
   },
   "timezone": "Coordinated Universal Time",
-  "uptime": "0:03 hours",
+  "uptime": "0:05 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 230,
+  "uptime_seconds": 338,
   "uuid": "128B9558-F609-41F5-A88F-5F84C5DC854E",
   "virtual": "virtualbox",
   "windows_display_version": "23H2",
