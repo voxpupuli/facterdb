@@ -1,5 +1,5 @@
 {
-  "aio_agent_version": "8.0.0",
+  "aio_agent_version": "8.6.0",
   "architecture": "x64",
   "dhcp_servers": {
     "Ethernet": "10.0.2.2",
@@ -15,7 +15,7 @@
   },
   "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
-  "facterversion": "4.4.0",
+  "facterversion": "4.7.0",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
   "hardwareisa": "x64",
@@ -47,17 +47,17 @@
   "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
-      "available": "988.43 MiB",
-      "available_bytes": 1036439552,
-      "capacity": "51.35%",
+      "available": "1018.89 MiB",
+      "available_bytes": 1068388352,
+      "capacity": "49.85%",
       "total": "1.98 GiB",
       "total_bytes": 2130382848,
-      "used": "1.02 GiB",
-      "used_bytes": 1093943296
+      "used": "1012.80 MiB",
+      "used_bytes": 1061994496
     }
   },
-  "memoryfree": "988.43 MiB",
-  "memoryfree_mb": 988.42578125,
+  "memoryfree": "1018.89 MiB",
+  "memoryfree_mb": 1018.89453125,
   "memorysize": "1.98 GiB",
   "memorysize_mb": 2031.69140625,
   "mtu_Ethernet": 1500,
@@ -150,15 +150,15 @@
     "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "8.0.0",
+  "puppetversion": "8.6.0",
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
-    "version": "3.2.2"
+    "version": "3.2.3"
   },
   "rubyplatform": "x64-mingw32",
   "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.2",
+  "rubyversion": "3.2.3",
   "scope6": "link",
   "scope6_Ethernet": "link",
   "serialnumber": "0",
@@ -208,14 +208,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 186,
-    "uptime": "0:03 hours"
+    "seconds": 377,
+    "uptime": "0:06 hours"
   },
   "timezone": "Coordinated Universal Time",
-  "uptime": "0:03 hours",
+  "uptime": "0:06 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 186,
+  "uptime_seconds": 377,
   "uuid": "D30E43A8-C27A-4EA3-8C40-808DDE5CE052",
   "virtual": "virtualbox",
   "windows_edition_id": "ServerStandardEval",

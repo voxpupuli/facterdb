@@ -1,5 +1,5 @@
 param(
-  [array]$puppetAgentVersions = ('7.24.0','8.0.0','8.5.1'),
+  [array]$puppetAgentVersions = ('7.24.0','8.0.0','8.5.1','8.6.0'),
   [string]$baseUrl = 'https://downloads.puppetlabs.com/windows/puppet{0}/puppet-agent-{1}-{2}.msi',
   [string]$fqdn = 'foo.example.com'
 )
