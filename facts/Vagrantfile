@@ -296,26 +296,43 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'windows-7-x86_64' do |host|
+  # Windows boxes can sometimes be picky, so don't include them automatically (autostart: false)
+  config.vm.define 'windows-server-2019-x86_64', autostart: false do |host|
     host.vm.hostname = 'foo'
-    host.vm.box = 'ferventcoder/win7pro-x64-nocm-lite'
+    host.vm.box = 'gusztavvargadr/windows-server-2019-standard-core'
+    host.vm.synced_folder '.', '/vagrant'
     host.vm.communicator = 'winrm'
     host.vm.guest = :windows
-    host.vm.network :private_network, auto_network: true
-    host.vm.network 'forwarded_port', guest: 22, host: 2200, id: 'ssh', auto_correct: true
     host.windows.set_work_network = true
     host.vm.provision 'shell', path: 'windows_get_facts.ps1'
-    # host.vm.provision 'shell', inline: "Stop-Computer -AsJob"
     host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
-    # host.vm.post_up_message = 'Note that windows machines do not automatically shutdown.  You must run a \'vagrant destroy\' or \'vagrant halt\' to terminate/stop the build vm.'
   end
-  config.vm.define 'windows-2012r2-core-x86_64' do |host|
+  config.vm.define 'windows-server-2022-x86_64', autostart: false do |host|
     host.vm.hostname = 'foo'
-    host.vm.box = 'windows-2012r2-core-x86_64'
+    host.vm.box = 'gusztavvargadr/windows-server-2022-standard-core'
+    host.vm.synced_folder '.', '/vagrant'
     host.vm.communicator = 'winrm'
     host.vm.guest = :windows
-    host.vm.network :private_network, auto_network: true
-    host.vm.network 'forwarded_port', guest: 22, host: 2200, id: 'ssh', auto_correct: true
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
+  end
+  config.vm.define 'windows-10-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-10'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
+  end
+  config.vm.define 'windows-11-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-11'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
     host.windows.set_work_network = true
     host.vm.provision 'shell', path: 'windows_get_facts.ps1'
     host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
