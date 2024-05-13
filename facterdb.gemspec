@@ -17,12 +17,11 @@ Gem::Specification.new do |s|
   # we have that configured in our CI file
   s.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
-  s.add_development_dependency 'coveralls'
-  s.add_development_dependency 'pry'
-  s.add_development_dependency 'rake'
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'coveralls', '~> 0.8.23'
+  s.add_development_dependency 'rake', '~> 13.2', '>= 13.2.1'
+  s.add_development_dependency 'rspec', '~> 3.13'
 
   s.add_development_dependency 'voxpupuli-rubocop', '~> 2.7.0'
   s.add_runtime_dependency 'facter', '< 5.0.0'
-  s.add_runtime_dependency 'jgrep'
+  s.add_runtime_dependency 'jgrep', '~> 1.5', '>= 1.5.4'
 end
