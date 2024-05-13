@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
   s.add_development_dependency 'coveralls', '~> 0.8.23'
-  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rake', '~> 13.2', '>= 13.2.1'
   s.add_development_dependency 'rspec'
 
   s.add_development_dependency 'voxpupuli-rubocop', '~> 2.7.0'
