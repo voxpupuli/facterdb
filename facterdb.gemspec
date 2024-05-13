@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
   s.add_development_dependency 'coveralls', '~> 0.8.23'
-  s.add_development_dependency 'pry'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
 
