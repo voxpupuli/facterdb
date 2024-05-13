@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'coveralls', '~> 0.8.23'
   s.add_development_dependency 'rake', '~> 13.2', '>= 13.2.1'
-  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'rspec', '~> 3.13'
 
   s.add_development_dependency 'voxpupuli-rubocop', '~> 2.7.0'
   s.add_runtime_dependency 'facter', '< 5.0.0'
