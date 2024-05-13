@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
 
-  s.add_development_dependency 'voxpupuli-rubocop', '~> 2.4.0'
+  s.add_development_dependency 'voxpupuli-rubocop', '~> 2.7.0'
   s.add_runtime_dependency 'facter', '< 5.0.0'
   s.add_runtime_dependency 'jgrep'
 end
