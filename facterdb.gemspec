@@ -23,5 +23,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'voxpupuli-rubocop', '~> 2.7.0'
   s.add_runtime_dependency 'facter', '< 5.0.0'
-  s.add_runtime_dependency 'jgrep'
+  s.add_runtime_dependency 'jgrep', '~> 1.5', '>= 1.5.4'
 end
