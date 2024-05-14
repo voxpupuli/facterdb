@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
   config.vm.define 'debian-12-x86_64' do |host|
-    host.vm.box = 'boxomatic/debian-12'
+    host.vm.box = 'debian/bookworm64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
