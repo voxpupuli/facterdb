@@ -171,7 +171,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = 'generic/rhel8'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', inline: 'sysctl -w net.ipv6.conf.all.disable_ipv6=0'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
@@ -179,7 +178,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = 'generic/rhel9'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', inline: 'sysctl -w net.ipv6.conf.all.disable_ipv6=0'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end

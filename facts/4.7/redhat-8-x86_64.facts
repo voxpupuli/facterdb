@@ -1,10 +1,10 @@
 {
-  "aio_agent_version": "7.21.0",
+  "aio_agent_version": "8.6.0",
   "architecture": "x86_64",
   "augeas": {
-    "version": "1.13.0"
+    "version": "1.14.1"
   },
-  "augeasversion": "1.13.0",
+  "augeasversion": "1.14.1",
   "bios_release_date": "12/01/2006",
   "bios_vendor": "innotek GmbH",
   "bios_version": "VirtualBox",
@@ -47,11 +47,12 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "654ad5b2-9b81-104f-aca2-171bf2e200cd"
+      "uuid": "654ad5b2-9b81-104f-aca2-171bf2e200cd",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.2.14",
+  "facterversion": "4.7.0",
   "filesystems": "xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
@@ -83,9 +84,9 @@
   "kernelrelease": "4.18.0-513.5.1.el8_9.x86_64",
   "kernelversion": "4.18.0",
   "load_averages": {
-    "15m": 0.38,
-    "1m": 1.19,
-    "5m": 0.84
+    "15m": 0.58,
+    "1m": 1.22,
+    "5m": 1.04
   },
   "lsbdistrelease": "8.9",
   "lsbmajdistrelease": "8",
@@ -104,24 +105,24 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.27 GiB",
-      "available_bytes": 1363841024,
-      "capacity": "26.37%",
+      "available": "1.28 GiB",
+      "available_bytes": 1377456128,
+      "capacity": "25.63%",
       "total": "1.72 GiB",
       "total_bytes": 1852166144,
-      "used": "465.70 MiB",
-      "used_bytes": 488325120
+      "used": "452.72 MiB",
+      "used_bytes": 474710016
     }
   },
-  "memoryfree": "1.27 GiB",
-  "memoryfree_mb": 1300.66015625,
+  "memoryfree": "1.28 GiB",
+  "memoryfree_mb": 1313.64453125,
   "memorysize": "1.72 GiB",
   "memorysize_mb": 1766.36328125,
   "mountpoints": {
     "/": {
-      "available": "66.98 GiB",
-      "available_bytes": 71915515904,
-      "capacity": "4.27%",
+      "available": "67.00 GiB",
+      "available_bytes": 71937523712,
+      "capacity": "4.24%",
       "device": "/dev/mapper/rhel_rhel8-root",
       "filesystem": "xfs",
       "options": [
@@ -136,8 +137,8 @@
       ],
       "size": "69.97 GiB",
       "size_bytes": 75125227520,
-      "used": "2.99 GiB",
-      "used_bytes": 3209711616
+      "used": "2.97 GiB",
+      "used_bytes": 3187703808
     },
     "/boot": {
       "available": "801.67 MiB",
@@ -310,9 +311,9 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "636.10 GiB",
-      "available_bytes": 683004956672,
-      "capacity": "30.05%",
+      "available": "636.01 GiB",
+      "available_bytes": 682912727040,
+      "capacity": "30.06%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -325,8 +326,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "273.32 GiB",
-      "used_bytes": 293471227904
+      "used": "273.40 GiB",
+      "used_bytes": 293563457536
     }
   },
   "mtu_eth0": 1500,
@@ -350,11 +351,15 @@
             "network": "10.0.2.0"
           }
         ],
+        "duplex": "full",
         "ip": "10.0.2.15",
         "mac": "08:00:27:06:c1:d2",
         "mtu": 1500,
         "netmask": "255.255.255.0",
-        "network": "10.0.2.0"
+        "network": "10.0.2.0",
+        "operational_state": "up",
+        "physical": true,
+        "speed": 1000
       },
       "lo": {
         "bindings": [
@@ -367,7 +372,9 @@
         "ip": "127.0.0.1",
         "mtu": 65536,
         "netmask": "255.0.0.0",
-        "network": "127.0.0.0"
+        "network": "127.0.0.0",
+        "operational_state": "unknown",
+        "physical": false
       }
     },
     "ip": "10.0.2.15",
@@ -458,15 +465,16 @@
     "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "7.21.0",
+  "productversion": "1.2",
+  "puppetversion": "8.6.0",
   "ruby": {
     "platform": "x86_64-linux",
-    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-    "version": "2.7.7"
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.3"
   },
   "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.7",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+  "rubyversion": "3.2.3",
   "selinux": true,
   "selinux_config_mode": "enforcing",
   "selinux_config_policy": "targeted",
@@ -513,14 +521,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 296,
-    "uptime": "0:04 hours"
+    "seconds": 551,
+    "uptime": "0:09 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:04 hours",
+  "uptime": "0:09 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 296,
+  "uptime_seconds": 551,
   "uuid": "654ad5b2-9b81-104f-aca2-171bf2e200cd",
   "virtual": "virtualbox"
 }
