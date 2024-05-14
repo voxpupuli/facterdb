@@ -1,2 +1,2 @@
---list-undoc
---files CHANGELOG.md,database.md
+--title 'FacterDB Documentation'
+--files CHANGELOG.md,database/*

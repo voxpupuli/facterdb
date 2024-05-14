@@ -8,6 +8,6 @@ vendor/
 .yardoc
 packer_cache/
 *.box
-database.md
 doc/
+database/
 hugo/public
