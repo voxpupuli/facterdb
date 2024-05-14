@@ -238,12 +238,9 @@ hardwaremodel=$(facter hardwaremodel)
 
 PATH=/opt/puppetlabs/puppet/bin:$PATH
 
-if [ "$(ruby -e 'puts Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.3")')" = "true" ]; then
-    gem install bundler --no-document --no-format-executable
-else
-    gem install bundler --version '~> 1.0' --no-ri --no-rdoc --no-format-executable
-fi
-bundle install --path vendor/bundler
+gem install bundler --no-document --no-format-executable
+bundle config set path 'vendor/bundler'
+bundle install
 
 for version in 4.0.0 4.1.0 4.2.0 4.3.0 4.4.0 4.5.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
