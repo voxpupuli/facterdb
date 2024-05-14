@@ -101,7 +101,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # facts land as centos-8-x86_64.facts
   config.vm.define 'centos-stream8-x86_64' do |host|
     host.vm.box = 'centos/stream8'
-    host.vm.box_url = 'https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-20231127.0.x86_64.vagrant-virtualbox.box'
+    host.vm.box_url = 'https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-20240513.0.x86_64.vagrant-virtualbox.box'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
@@ -117,7 +117,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   config.vm.define 'centos-stream9-x86_64' do |host|
     host.vm.box = 'centos/stream9'
-    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20231204.0.x86_64.vagrant-virtualbox.box'
+    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20240513.0.x86_64.vagrant-virtualbox.box'
     # centos packages their box with synced folders set to rsync (presumably
     # since vboxsf is not built in their kernel)
     # If the version of the kernel-headers/kernel-devel that are available
