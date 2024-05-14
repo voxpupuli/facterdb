@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.26.0](https://rubygems.org/gems/facterdb/versions/1.26.0) (2024-05-14)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.25.0...1.26.0)
+
+**Implemented enhancements:**
+
+- Debian 11: Use upstream vagrant image & Regenerate facts & Add Facter 4.6/4.7 factsets [\#315](https://github.com/voxpupuli/facterdb/pull/315) ([bastelfreak](https://github.com/bastelfreak))
+- Debian 12: Add facter 4.6/4.7 factset & regenerate facter 4.5 factset [\#314](https://github.com/voxpupuli/facterdb/pull/314) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Debian 12: regenerate facter 4.5 factset [\#313](https://github.com/voxpupuli/facterdb/pull/313) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- get\_facts.sh: Drop support for systems with Ruby 2.2 [\#318](https://github.com/voxpupuli/facterdb/pull/318) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.25.0](https://rubygems.org/gems/facterdb/versions/1.25.0) (2024-05-14)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.24.0...1.25.0)
