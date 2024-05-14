@@ -171,7 +171,7 @@ FacterDB::get_facts('osfamily=Debian')
 | VirtuozzoLinux 7            |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |     |     |     |     |     |     |     |     |
 | Windows 7                   |     |     |     |  1  |  1  |  1  |  2  |  1  |  2  |  2  |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | Windows 8.1                 |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-| Windows 10                  |     |     |     |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |  1  |  1  |  1  |     |     |     |
+| Windows 10                  |     |     |     |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |  2  |     |     |  1  |  1  |  1  |     |  1  |  1  |
 | Windows Server 2008         |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | Windows Server 2008 R2      |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
 | Windows Server 2012         |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |  1  |  1  |  1  |     |     |     |
@@ -179,39 +179,19 @@ FacterDB::get_facts('osfamily=Debian')
 | Windows Server 2012 R2 Core |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |     |     |     |     |     |     |
 | Windows Server 2016         |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |  1  |  1  |  1  |     |     |     |
 | Windows Server 2016 Core    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2019         |     |     |     |     |     |     |     |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |  1  |  1  |  1  |     |     |     |
+| Windows Server 2019         |     |     |     |     |     |     |     |  1  |  1  |  1  |     |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |     |     |  1  |  1  |  1  |     |  1  |  1  |
 | Windows Server 2019 Core    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |     |     |
+| Windows Server 2022         |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |  1  |  1  |
 | Windows Server 2022 Core    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |     |     |
 | openSUSE 15                 |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| windows 11                  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |     |     |
-| windows 2022                |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |     |     |
+| windows 11                  |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |  1  |  1  |  1  |     |  1  |  1  |
 
 Where the number (1, 2 etc.) are the number of factsets for that OS and facter combination (e.g., x86_64 and i386 architectures).
 
 ## Add new Operating System support
 
-There is `Vagrantfile` to automagically populate `facts` directory by spawning a new VM and launches a provisioning scripts.
-
-```
-$ cd facts
-$ vagrant up --provision
-```
-
-Create i386 facts from x86_64's ones
-
-```
-for file in facts/*/*-x86_64.facts; do cat $file | sed -e 's/x86_64/i386/' -e 's/amd64/i386/' > $(echo $file | sed 's/x86_64/i386/'); done
-```
-Create RedHat, Scientific, OracleLinux facts from CentOS's ones
-
-```
-$ bundle exec rake rhel_alts
-```
-
-Then update the table in this README by running `bundle exec rake table`
-
-*NOTE*: When using Facter version 4, by default some "legacy facts" are hidden from the output.
-To generate a fact set with the legacy facts use the command `puppet facts show --show-legacy`
+There is `Vagrantfile` to automagically populate `facts` for all supported operating systems by spawning a new VM and launches a provisioning scripts.
+Details of how to generate facts for each operating system are [here](facts/README.md).
 
 ## Supplying custom external facts
 
@@ -306,7 +286,7 @@ powershell> $ENV:FACTERDB_INJECT_SOURCE = 'true'
 
 # Contributing
 
-Please submit issues at https://github.com/camptocamp/facterdb/issues or PRs in the same repository.
+Please submit issues at https://github.com/voxpupuli/facterdb/issues or PRs in the same repository.
 
 ## Release process
 

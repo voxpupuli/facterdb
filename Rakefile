@@ -89,6 +89,8 @@ def factset_to_os_label(fs)
                                                                                                   '2016')}"
             elsif /windows-2019/.match?(db_filename)
               'Windows Server 2019'
+            elsif /windows-2022/.match?(db_filename)
+              'Windows Server 2022'
             else
               "#{os_name} #{os__rel}"
             end
