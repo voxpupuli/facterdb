@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.25.0](https://rubygems.org/gems/facterdb/versions/1.25.0) (2024-05-14)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.24.0...1.25.0)
+
+**Implemented enhancements:**
+
+- Add facts for OpenBSD 7.X for facter 4.7 [\#309](https://github.com/voxpupuli/facterdb/pull/309) ([buzzdeee](https://github.com/buzzdeee))
+
+**Merged pull requests:**
+
+- CI: Build gem with --strict --verbose & add version contraints to dependencies [\#311](https://github.com/voxpupuli/facterdb/pull/311) ([bastelfreak](https://github.com/bastelfreak))
+- Add Ruby 3.3 to CI matrix [\#310](https://github.com/voxpupuli/facterdb/pull/310) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.24.0](https://rubygems.org/gems/facterdb/versions/1.24.0) (2024-03-19)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.23.0...1.24.0)
