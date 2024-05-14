@@ -138,12 +138,6 @@ case "${osfamily}" in
   # libc6-dev needed to build the ffi gem
   apt_install make gcc libgmp-dev libc6-dev
 
-  # puppetlabs repos/packages not yet available on bookworm https://puppet.atlassian.net/browse/PA-4995
-  # simply install puppet-agent that comes with the distro
-  if [[ "bookworm" =~ ${lsbdistcodename} ]]; then
-    apt_install ruby rubygems ruby-dev
-    facter --show-legacy -p -j | tee ${output_file}
-  fi
 
   # There are no puppet-agent packages for $releasename yet, so generate a Facter 3.x
   # fact set from the official Debian package.
