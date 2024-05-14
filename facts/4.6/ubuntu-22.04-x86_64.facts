@@ -1,5 +1,5 @@
 {
-  "aio_agent_version": "8.4.0",
+  "aio_agent_version": "8.5.1",
   "architecture": "amd64",
   "augeas": {
     "version": "1.14.1"
@@ -57,11 +57,12 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "f2d81de8-f145-df41-ab40-15d35ed37d42"
+      "uuid": "f2d81de8-f145-df41-ab40-15d35ed37d42",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.5.2",
+  "facterversion": "4.6.1",
   "filesystems": "btrfs,ext2,ext3,ext4,iso9660,squashfs,vfat",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
@@ -96,9 +97,9 @@
   "kernelrelease": "5.15.0-107-generic",
   "kernelversion": "5.15.0",
   "load_averages": {
-    "15m": 0.39,
-    "1m": 1.26,
-    "5m": 0.86
+    "15m": 0.4,
+    "1m": 1.18,
+    "5m": 0.87
   },
   "lsbdistcodename": "jammy",
   "lsbdistdescription": "Ubuntu 22.04.4 LTS",
@@ -110,24 +111,24 @@
   "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
-      "available": "558.72 MiB",
-      "available_bytes": 585863168,
-      "capacity": "41.63%",
+      "available": "552.12 MiB",
+      "available_bytes": 578936832,
+      "capacity": "42.32%",
       "total": "957.28 MiB",
       "total_bytes": 1003778048,
-      "used": "398.55 MiB",
-      "used_bytes": 417914880
+      "used": "405.16 MiB",
+      "used_bytes": 424841216
     }
   },
-  "memoryfree": "558.72 MiB",
-  "memoryfree_mb": 558.72265625,
+  "memoryfree": "552.12 MiB",
+  "memoryfree_mb": 552.1171875,
   "memorysize": "957.28 MiB",
   "memorysize_mb": 957.27734375,
   "mountpoints": {
     "/": {
-      "available": "36.25 GiB",
-      "available_bytes": 38918832128,
-      "capacity": "6.31%",
+      "available": "36.18 GiB",
+      "available_bytes": 38847434752,
+      "capacity": "6.48%",
       "device": "/dev/sda1",
       "filesystem": "ext4",
       "options": [
@@ -138,8 +139,8 @@
       ],
       "size": "38.70 GiB",
       "size_bytes": 41555521536,
-      "used": "2.44 GiB",
-      "used_bytes": 2619912192
+      "used": "2.51 GiB",
+      "used_bytes": 2691309568
     },
     "/dev": {
       "available": "459.22 MiB",
@@ -402,9 +403,9 @@
       "used_bytes": 40632320
     },
     "/vagrant": {
-      "available": "634.95 GiB",
-      "available_bytes": 681769771008,
-      "capacity": "30.18%",
+      "available": "634.61 GiB",
+      "available_bytes": 681410506752,
+      "capacity": "30.22%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -413,8 +414,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "274.47 GiB",
-      "used_bytes": 294706413568
+      "used": "274.80 GiB",
+      "used_bytes": 295065677824
     }
   },
   "mtu_enp0s3": 1500,
@@ -589,15 +590,16 @@
     "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "8.4.0",
+  "productversion": "1.2",
+  "puppetversion": "8.5.1",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-    "version": "3.2.2"
+    "version": "3.2.3"
   },
   "rubyplatform": "x86_64-linux",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.2",
+  "rubyversion": "3.2.3",
   "scope6": "link",
   "scope6_enp0s3": "link",
   "scope6_lo": "host",
@@ -638,14 +640,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 322,
+    "seconds": 343,
     "uptime": "0:05 hours"
   },
   "timezone": "UTC",
   "uptime": "0:05 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 322,
+  "uptime_seconds": 343,
   "uuid": "f2d81de8-f145-df41-ab40-15d35ed37d42",
   "virtual": "virtualbox"
 }
