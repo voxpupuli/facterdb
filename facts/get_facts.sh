@@ -112,7 +112,7 @@ case "${osfamily}" in
   if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb && [[ "$(file -b /tmp/puppet7-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet7-release.deb
     apt-get update
-    for puppet_agent_version in 7.5.0 7.6.1 7.12.0 7.24.0; do
+    for puppet_agent_version in 7.9.0 7.10.0 7.11.0 7.12.0 7.12.1. 7.13.1 7.14.0 7.15.0 7.16.0 7.17.0 7.18.0 7.19.0 7.20.0 7.21.0 7.23.0 7.24.0 7.25.0 7.26.0 7.27.0 7.28.0 7.29.0 7.29.1 7.30.0; do
       if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
@@ -126,7 +126,7 @@ case "${osfamily}" in
   if test "$?" -eq 0 -a -f /tmp/puppet8-release.deb && [[ "$(file -b /tmp/puppet8-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet8-release.deb
     apt-get update
-    for puppet_agent_version in 8.0.0; do
+    for puppet_agent_version in 8.0.0 8.1.0 8.2.0 8.3.1 8.4.0 8.5.0 8.5.1 8.6.0; do
       if apt_install puppet-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
         mkdir -p $(dirname ${output_file})
