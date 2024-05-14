@@ -105,6 +105,8 @@ case "${osfamily}" in
     done
     apt-get -y remove --purge puppet6-release
   fi
+  # libaugeas-dev is needed when we generate facts via the facter gem. Otherwise augeas.version fact is missing
+  apt_install curl file libaugeas-dev
   curl "https://apt.puppetlabs.com/puppet7-release-${lsbdistcodename}.deb" -o /tmp/puppet7-release.deb
   # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
   if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb && [[ "$(file -b /tmp/puppet7-release.deb)" =~ "Debian binary package".* ]] ; then
