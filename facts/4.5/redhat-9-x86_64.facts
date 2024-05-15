@@ -22,7 +22,7 @@
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
-      "serial": "VBb3968428-44e3f5f3",
+      "serial": "VB1a550eeb-79b691f4",
       "size": "128.00 GiB",
       "size_bytes": 137438953472,
       "type": "hdd",
@@ -47,7 +47,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "d9d3e64d-829a-4640-b272-0886cabefa5a"
+      "uuid": "9ddeb5b2-50ae-8c40-98d3-4c61dbbcff2f"
     }
   },
   "domain": "example.com",
@@ -75,6 +75,9 @@
   },
   "interfaces": "eth0,lo",
   "ipaddress": "10.0.2.15",
+  "ipaddress6": "fe80::a00:27ff:fe5f:a709",
+  "ipaddress6_eth0": "fe80::a00:27ff:fe5f:a709",
+  "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
   "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
@@ -83,9 +86,9 @@
   "kernelrelease": "5.14.0-362.8.1.el9_3.x86_64",
   "kernelversion": "5.14.0",
   "load_averages": {
-    "15m": 0.49,
-    "1m": 1.92,
-    "5m": 1.05
+    "15m": 0.43,
+    "1m": 1.03,
+    "5m": 0.79
   },
   "lsbdistrelease": "9.3",
   "lsbmajdistrelease": "9",
@@ -104,23 +107,23 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.47 GiB",
-      "available_bytes": 1581166592,
-      "capacity": "22.90%",
+      "available": "1.46 GiB",
+      "available_bytes": 1567416320,
+      "capacity": "23.57%",
       "total": "1.91 GiB",
       "total_bytes": 2050727936,
-      "used": "447.81 MiB",
-      "used_bytes": 469561344
+      "used": "460.92 MiB",
+      "used_bytes": 483311616
     }
   },
-  "memoryfree": "1.47 GiB",
-  "memoryfree_mb": 1507.91796875,
+  "memoryfree": "1.46 GiB",
+  "memoryfree_mb": 1494.8046875,
   "memorysize": "1.91 GiB",
   "memorysize_mb": 1955.7265625,
   "mountpoints": {
     "/": {
       "available": "67.44 GiB",
-      "available_bytes": 72412651520,
+      "available_bytes": 72412471296,
       "capacity": "3.57%",
       "device": "/dev/mapper/rhel_rhel9-root",
       "filesystem": "xfs",
@@ -137,7 +140,7 @@
       "size": "69.94 GiB",
       "size_bytes": 75094818816,
       "used": "2.50 GiB",
-      "used_bytes": 2682167296
+      "used_bytes": 2682347520
     },
     "/boot": {
       "available": "783.96 MiB",
@@ -361,9 +364,9 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "632.27 GiB",
-      "available_bytes": 678895587328,
-      "capacity": "30.47%",
+      "available": "631.89 GiB",
+      "available_bytes": 678483722240,
+      "capacity": "30.52%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -376,16 +379,22 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "277.14 GiB",
-      "used_bytes": 297580597248
+      "used": "277.53 GiB",
+      "used_bytes": 297992462336
     }
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
   "netmask": "255.255.255.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_eth0": "ffff:ffff:ffff:ffff::",
+  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
   "network": "10.0.2.0",
+  "network6": "fe80::",
+  "network6_eth0": "fe80::",
+  "network6_lo": "::1",
   "network_eth0": "10.0.2.0",
   "network_lo": "127.0.0.0",
   "networking": {
@@ -401,14 +410,29 @@
             "network": "10.0.2.0"
           }
         ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:fe5f:a709",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
         "duplex": "full",
         "ip": "10.0.2.15",
+        "ip6": "fe80::a00:27ff:fe5f:a709",
         "mac": "08:00:27:5f:a7:09",
         "mtu": 1500,
         "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.0.2.0",
+        "network6": "fe80::",
         "operational_state": "up",
         "physical": true,
+        "scope6": "link",
         "speed": 1000
       },
       "lo": {
@@ -419,20 +443,39 @@
             "network": "127.0.0.0"
           }
         ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
         "ip": "127.0.0.1",
+        "ip6": "::1",
         "mtu": 65536,
         "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "127.0.0.0",
+        "network6": "::1",
         "operational_state": "unknown",
-        "physical": false
+        "physical": false,
+        "scope6": "host"
       }
     },
     "ip": "10.0.2.15",
+    "ip6": "fe80::a00:27ff:fe5f:a709",
     "mac": "08:00:27:5f:a7:09",
     "mtu": 1500,
     "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
     "network": "10.0.2.0",
-    "primary": "eth0"
+    "network6": "fe80::",
+    "primary": "eth0",
+    "scope6": "link"
   },
   "operatingsystem": "RedHat",
   "operatingsystemmajrelease": "9",
@@ -497,7 +540,7 @@
       "uuid": "yl4Rcl-uJqf-1iQC-oMYW-o3aY-3ICO-8oc8xC"
     }
   },
-  "path": "/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin",
+  "path": "/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin",
   "physicalprocessorcount": 1,
   "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
   "processor1": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
@@ -524,6 +567,9 @@
   "rubyplatform": "x86_64-linux",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
   "rubyversion": "3.2.2",
+  "scope6": "link",
+  "scope6_eth0": "link",
+  "scope6_lo": "host",
   "selinux": true,
   "selinux_config_mode": "enforcing",
   "selinux_config_policy": "targeted",
@@ -534,35 +580,35 @@
   "ssh": {
     "ecdsa": {
       "fingerprints": {
-        "sha1": "SSHFP 3 1 9816c624df3ab22e9c6f700946fe8ad44f90938b",
-        "sha256": "SSHFP 3 2 b7c870350d929d8ed71a3491a6f55bf9f93d5b88dcb4eea07456e5727c3b52a9"
+        "sha1": "SSHFP 3 1 6e32526ca88a1d5f75c783a5ed174c68eb201a0d",
+        "sha256": "SSHFP 3 2 d2925ecb5fa6f71b70e06cf095bf80cf901d8669212cdfe3c504e108c04787bd"
       },
-      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD4EerNebNNLG+G5mzv4PeE/enLD/F6XB+VB7uZbsGinZU/2U3Sm+hfE49cHYgmGICul0sNGekiyibonCMdlvPo=",
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAV6XDBRq1ZfFKZeOmKfHNiE/W1X9ZoudOFSwiAsWMAdIwUl74gQ8o2i8qtpZBo5PjNYz95Hd87Hv3cU/uBccjM=",
       "type": "ecdsa-sha2-nistp256"
     },
     "ed25519": {
       "fingerprints": {
-        "sha1": "SSHFP 4 1 6c8499b14d1bd53bfe51d58f1a7f09cc4289195f",
-        "sha256": "SSHFP 4 2 8f915b2a844402f5cbb23ffbcd70162791e0a8b5bc569b3465c9aa44d733cfcb"
+        "sha1": "SSHFP 4 1 1e747319ecad455a6d8a0231468f8431665c87e5",
+        "sha256": "SSHFP 4 2 e576a8dac880d5fa6a6c697704c52e02ce7ae29eb0562ee2872f5eabf860b62d"
       },
-      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIIy6/r1cL2G12nKUWZQ+VWSfdAEjXnUxrIqhQdIy2Ijq",
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIJYwTTn+EA9HYi9tmihAPK5u9sR/WyDzIT5Sqbn8Nxmh",
       "type": "ssh-ed25519"
     },
     "rsa": {
       "fingerprints": {
-        "sha1": "SSHFP 1 1 7ca5a8761e766e0754b9a96ed68d914f96096959",
-        "sha256": "SSHFP 1 2 8fe9c65ff829dbd77ff1dd9c05075a4db03467d973ae93d781ccae94a7315fa0"
+        "sha1": "SSHFP 1 1 7ca7e5cfac08a4542cfc1464ce8f9b4eda2468ab",
+        "sha256": "SSHFP 1 2 abfdfc0835474bdab9fd754ebee9abfb3dfb6000246e070caa905d3d8a3298fb"
       },
-      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCjJACl4+wp99bONnA1r10RKO4MvCSzqN8TcTrhzYUPTSL3jQ3+eqdt2RNSRwgXPPPMuE0MXvFWhB9KN8YirC8+vtOeI5AleQloYhLSdKeTSuS5M6RcxX1aUJM5ab0YfHDxtz/pfmeZ0snlddqL2sU8G5xkUfE8cnIDCxfaasbHh9Eu74GQ8OwLuycKvMn6uwvTsyhNdy4D9cGTIBXmRKnf1osH4dcx/bW8j9HmlpEgkPLEywA0TFZd0vWxFFNgF5a3RRlo0PRCjROX9mIsBQqclA2oS6pkpSfV5CRCT1i5ebjT8pZ9qXE2VYdkUMNeHKowm/Ijccax2OTDoqt57glSSIfrBrWucXBT2Qm9gOw2PuK4c7KumvkljkcU7NZAGZz2CFhAFjMxIvMI1FUBgAeejv0ZWlqVuuBXTPx8gTV2gPidEfoP0C4KDBWaPZYFMEwF04K2OtD4cOSGUEazHAA3+OFVrA0Tj/ZhUQYTTdv7zRT7lUkcV0TSgvMqipQ36+M=",
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDW31ZI9SW8GxpQyIH3hNx523EBUWyS9Ecaas76XIMN9Yk0k+5ft/i/Zn3YPaF0Die2imFMXlKvSvaqNWMfffWjDDP8Ms4BVQhG86Aea9rfFLZNT1XNxivFr9JHU7z5k66oKuoAedA0XqmsUdQVneCCSNjxKPPRHzn+yOEA2sg7MpMnDW/MMuFWp0CcC8R7tu4f2x/FG/mxX5uooeLsPvxyqnYAaz8KHR2svRFExz2C7HesA4/dQrJB/gGbBUWVacIHzuD3SJ3Ueth/V/FEkCTTzKoV9fhWkNcwt8X8//uDaaLtvh5ibJj5uHfLQu6mThgYWJyGwJNQ1N9SzZTc2wJQj/OsEaqJLNRPOUZ/1ESTB+Q2vBEDXcIzA6fTY8u+HbyVAOXNGaZb8E7V57JRZKkI5sbdBp2c0FS3x3TSUBctxdCpffvMdJC+YSrhw8xuv5q1B7iXPFJ1aug79Wz8COa9RoRtjVgPBU7zOHSPHn0eWEoTi1JAu0VtxPmBUoZU3NU=",
       "type": "ssh-rsa"
     }
   },
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBD4EerNebNNLG+G5mzv4PeE/enLD/F6XB+VB7uZbsGinZU/2U3Sm+hfE49cHYgmGICul0sNGekiyibonCMdlvPo=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIIy6/r1cL2G12nKUWZQ+VWSfdAEjXnUxrIqhQdIy2Ijq",
-  "sshfp_ecdsa": "SSHFP 3 1 9816c624df3ab22e9c6f700946fe8ad44f90938b\nSSHFP 3 2 b7c870350d929d8ed71a3491a6f55bf9f93d5b88dcb4eea07456e5727c3b52a9",
-  "sshfp_ed25519": "SSHFP 4 1 6c8499b14d1bd53bfe51d58f1a7f09cc4289195f\nSSHFP 4 2 8f915b2a844402f5cbb23ffbcd70162791e0a8b5bc569b3465c9aa44d733cfcb",
-  "sshfp_rsa": "SSHFP 1 1 7ca5a8761e766e0754b9a96ed68d914f96096959\nSSHFP 1 2 8fe9c65ff829dbd77ff1dd9c05075a4db03467d973ae93d781ccae94a7315fa0",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCjJACl4+wp99bONnA1r10RKO4MvCSzqN8TcTrhzYUPTSL3jQ3+eqdt2RNSRwgXPPPMuE0MXvFWhB9KN8YirC8+vtOeI5AleQloYhLSdKeTSuS5M6RcxX1aUJM5ab0YfHDxtz/pfmeZ0snlddqL2sU8G5xkUfE8cnIDCxfaasbHh9Eu74GQ8OwLuycKvMn6uwvTsyhNdy4D9cGTIBXmRKnf1osH4dcx/bW8j9HmlpEgkPLEywA0TFZd0vWxFFNgF5a3RRlo0PRCjROX9mIsBQqclA2oS6pkpSfV5CRCT1i5ebjT8pZ9qXE2VYdkUMNeHKowm/Ijccax2OTDoqt57glSSIfrBrWucXBT2Qm9gOw2PuK4c7KumvkljkcU7NZAGZz2CFhAFjMxIvMI1FUBgAeejv0ZWlqVuuBXTPx8gTV2gPidEfoP0C4KDBWaPZYFMEwF04K2OtD4cOSGUEazHAA3+OFVrA0Tj/ZhUQYTTdv7zRT7lUkcV0TSgvMqipQ36+M=",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAV6XDBRq1ZfFKZeOmKfHNiE/W1X9ZoudOFSwiAsWMAdIwUl74gQ8o2i8qtpZBo5PjNYz95Hd87Hv3cU/uBccjM=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIJYwTTn+EA9HYi9tmihAPK5u9sR/WyDzIT5Sqbn8Nxmh",
+  "sshfp_ecdsa": "SSHFP 3 1 6e32526ca88a1d5f75c783a5ed174c68eb201a0d\nSSHFP 3 2 d2925ecb5fa6f71b70e06cf095bf80cf901d8669212cdfe3c504e108c04787bd",
+  "sshfp_ed25519": "SSHFP 4 1 1e747319ecad455a6d8a0231468f8431665c87e5\nSSHFP 4 2 e576a8dac880d5fa6a6c697704c52e02ce7ae29eb0562ee2872f5eabf860b62d",
+  "sshfp_rsa": "SSHFP 1 1 7ca7e5cfac08a4542cfc1464ce8f9b4eda2468ab\nSSHFP 1 2 abfdfc0835474bdab9fd754ebee9abfb3dfb6000246e070caa905d3d8a3298fb",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDW31ZI9SW8GxpQyIH3hNx523EBUWyS9Ecaas76XIMN9Yk0k+5ft/i/Zn3YPaF0Die2imFMXlKvSvaqNWMfffWjDDP8Ms4BVQhG86Aea9rfFLZNT1XNxivFr9JHU7z5k66oKuoAedA0XqmsUdQVneCCSNjxKPPRHzn+yOEA2sg7MpMnDW/MMuFWp0CcC8R7tu4f2x/FG/mxX5uooeLsPvxyqnYAaz8KHR2svRFExz2C7HesA4/dQrJB/gGbBUWVacIHzuD3SJ3Ueth/V/FEkCTTzKoV9fhWkNcwt8X8//uDaaLtvh5ibJj5uHfLQu6mThgYWJyGwJNQ1N9SzZTc2wJQj/OsEaqJLNRPOUZ/1ESTB+Q2vBEDXcIzA6fTY8u+HbyVAOXNGaZb8E7V57JRZKkI5sbdBp2c0FS3x3TSUBctxdCpffvMdJC+YSrhw8xuv5q1B7iXPFJ1aug79Wz8COa9RoRtjVgPBU7zOHSPHn0eWEoTi1JAu0VtxPmBUoZU3NU=",
   "swapfree": "2.04 GiB",
   "swapfree_mb": 2083.99609375,
   "swapsize": "2.04 GiB",
@@ -570,14 +616,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 405,
-    "uptime": "0:06 hours"
+    "seconds": 652,
+    "uptime": "0:10 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:06 hours",
+  "uptime": "0:10 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 405,
-  "uuid": "d9d3e64d-829a-4640-b272-0886cabefa5a",
+  "uptime_seconds": 652,
+  "uuid": "9ddeb5b2-50ae-8c40-98d3-4c61dbbcff2f",
   "virtual": "virtualbox"
 }
