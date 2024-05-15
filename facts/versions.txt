@@ -1,0 +1,16 @@
+# This is a list of all Puppet Agent versions to use to collect facts
+# Each line can have a single string which is a version number or can be a comment
+# Version information from Facter release notes: https://www.puppet.com/docs/puppet/8/release_notes_facter.htm
+# FacterDB only cares about the x.y, and drops .z - Please keep versions in order by Facter version
+
+# Facter 4.7.0 - Released April 2024 and shipped with Puppet 8.6.0.
+8.6.0
+
+# Facter 4.6.1 - Released March 2024 and shipped with Puppet 8.5.1.
+8.5.1
+
+# Facter 4.5.2 - Released January 2023 and shipped with Puppet 8.4.0.
+8.4.0
+
+# Facter 4.4.2 - Released August 2023 and shipped with Puppet 8.2.0.
+8.2.0
