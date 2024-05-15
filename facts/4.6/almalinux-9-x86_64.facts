@@ -1,10 +1,10 @@
 {
-  "aio_agent_version": "6.27.1",
+  "aio_agent_version": "8.5.1",
   "architecture": "x86_64",
   "augeas": {
-    "version": "1.12.0"
+    "version": "1.14.1"
   },
-  "augeasversion": "1.12.0",
+  "augeasversion": "1.14.1",
   "bios_release_date": "12/01/2006",
   "bios_vendor": "innotek GmbH",
   "bios_version": "VirtualBox",
@@ -16,11 +16,16 @@
   "boardproductname": "VirtualBox",
   "boardserialnumber": "0",
   "chassistype": "Other",
+  "dhcp_servers": {
+    "system": null
+  },
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
+      "serial": "VB89c7cad5-1fdb2536",
       "size": "19.53 GiB",
       "size_bytes": 20971520000,
+      "type": "hdd",
       "vendor": "ATA"
     }
   },
@@ -42,11 +47,12 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "16a6c05e-0363-0349-b676-e1cf7b1d48c8"
+      "uuid": "16a6c05e-0363-0349-b676-e1cf7b1d48c8",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "3.14.23",
+  "facterversion": "4.6.1",
   "filesystems": "vfat,xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
@@ -81,33 +87,36 @@
   "kernelrelease": "5.14.0-427.13.1.el9_4.x86_64",
   "kernelversion": "5.14.0",
   "load_averages": {
-    "15m": 0.12,
-    "1m": 1.09,
-    "5m": 0.36
+    "15m": 0.39,
+    "1m": 1.29,
+    "5m": 0.86
   },
+  "lsbdistrelease": "9.4",
+  "lsbmajdistrelease": "9",
+  "lsbminordistrelease": "4",
   "macaddress": "08:00:27:ae:15:f5",
   "macaddress_eth0": "08:00:27:ae:15:f5",
   "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
-      "available": "662.77 MiB",
-      "available_bytes": 694960128,
-      "capacity": "29.88%",
+      "available": "560.58 MiB",
+      "available_bytes": 587812864,
+      "capacity": "40.70%",
       "total": "945.25 MiB",
       "total_bytes": 991170560,
-      "used": "282.49 MiB",
-      "used_bytes": 296210432
+      "used": "384.67 MiB",
+      "used_bytes": 403357696
     }
   },
-  "memoryfree": "662.77 MiB",
-  "memoryfree_mb": 662.765625,
+  "memoryfree": "560.58 MiB",
+  "memoryfree_mb": 560.58203125,
   "memorysize": "945.25 MiB",
   "memorysize_mb": 945.25390625,
   "mountpoints": {
     "/": {
-      "available": "16.58 GiB",
-      "available_bytes": 17805455360,
-      "capacity": "9.24%",
+      "available": "16.57 GiB",
+      "available_bytes": 17793785856,
+      "capacity": "9.30%",
       "device": "/dev/sda4",
       "filesystem": "xfs",
       "options": [
@@ -122,8 +131,8 @@
       ],
       "size": "18.27 GiB",
       "size_bytes": 19617808384,
-      "used": "1.69 GiB",
-      "used_bytes": 1812353024
+      "used": "1.70 GiB",
+      "used_bytes": 1824022528
     },
     "/boot": {
       "available": "823.32 MiB",
@@ -264,7 +273,7 @@
     },
     "/run": {
       "available": "183.88 MiB",
-      "available_bytes": 192811008,
+      "available_bytes": 192806912,
       "capacity": "2.74%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
@@ -280,8 +289,8 @@
       ],
       "size": "189.05 MiB",
       "size_bytes": 198234112,
-      "used": "5.17 MiB",
-      "used_bytes": 5423104
+      "used": "5.18 MiB",
+      "used_bytes": 5427200
     },
     "/run/credentials/systemd-sysctl.service": {
       "available": "0 bytes",
@@ -368,9 +377,9 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "644.73 GiB",
-      "available_bytes": 692274548736,
-      "capacity": "29.10%",
+      "available": "644.54 GiB",
+      "available_bytes": 692072882176,
+      "capacity": "29.13%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -383,8 +392,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "264.68 GiB",
-      "used_bytes": 284201635840
+      "used": "264.87 GiB",
+      "used_bytes": 284403302400
     },
     "/var/lib/nfs/rpc_pipefs": {
       "available": "0 bytes",
@@ -433,9 +442,14 @@
           {
             "address": "fe80::a00:27ff:feae:15f5",
             "netmask": "ffff:ffff:ffff:ffff::",
-            "network": "fe80::"
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
           }
         ],
+        "duplex": "full",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:feae:15f5",
         "mac": "08:00:27:ae:15:f5",
@@ -444,7 +458,10 @@
         "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.0.2.0",
         "network6": "fe80::",
-        "scope6": "link"
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "link",
+        "speed": 1000
       },
       "lo": {
         "bindings": [
@@ -458,7 +475,11 @@
           {
             "address": "::1",
             "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-            "network": "::1"
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
           }
         ],
         "ip": "127.0.0.1",
@@ -468,6 +489,8 @@
         "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "127.0.0.0",
         "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
         "scope6": "host"
       }
     },
@@ -487,6 +510,16 @@
   "operatingsystemrelease": "9.4",
   "os": {
     "architecture": "x86_64",
+    "distro": {
+      "codename": "Seafoam Ocelot",
+      "description": "AlmaLinux release 9.4 (Seafoam Ocelot)",
+      "id": "AlmaLinux",
+      "release": {
+        "full": "9.4",
+        "major": "9",
+        "minor": "4"
+      }
+    },
     "family": "RedHat",
     "hardware": "x86_64",
     "name": "AlmaLinux",
@@ -545,23 +578,27 @@
   "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
   "processorcount": 1,
   "processors": {
+    "cores": 1,
     "count": 1,
     "isa": "x86_64",
     "models": [
       "AMD Ryzen 7 PRO 4750U with Radeon Graphics"
     ],
-    "physicalcount": 1
+    "physicalcount": 1,
+    "speed": "1.70 GHz",
+    "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "6.27.0",
+  "productversion": "1.2",
+  "puppetversion": "8.5.1",
   "ruby": {
     "platform": "x86_64-linux",
-    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-    "version": "2.5.9"
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.3"
   },
   "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.5.0",
-  "rubyversion": "2.5.9",
+  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+  "rubyversion": "3.2.3",
   "scope6": "link",
   "scope6_eth0": "link",
   "scope6_lo": "host",
@@ -607,14 +644,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 55,
-    "uptime": "0:00 hours"
+    "seconds": 300,
+    "uptime": "0:05 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
+  "uptime": "0:05 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 55,
+  "uptime_seconds": 300,
   "uuid": "16a6c05e-0363-0349-b676-e1cf7b1d48c8",
   "virtual": "virtualbox"
 }
