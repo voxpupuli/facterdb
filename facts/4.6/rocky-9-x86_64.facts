@@ -1,5 +1,5 @@
 {
-  "aio_agent_version": "8.4.0",
+  "aio_agent_version": "8.5.1",
   "architecture": "x86_64",
   "augeas": {
     "version": "1.14.1"
@@ -47,11 +47,12 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "eb6255a4-2ead-254e-801f-695cdbf50b33"
+      "uuid": "eb6255a4-2ead-254e-801f-695cdbf50b33",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.5.2",
+  "facterversion": "4.6.1",
   "filesystems": "vfat,xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
@@ -86,9 +87,9 @@
   "kernelrelease": "5.14.0-427.13.1.el9_4.x86_64",
   "kernelversion": "5.14.0",
   "load_averages": {
-    "15m": 0.48,
-    "1m": 1.22,
-    "5m": 0.93
+    "15m": 0.5,
+    "1m": 1.12,
+    "5m": 0.94
   },
   "lsbdistrelease": "9.4",
   "lsbmajdistrelease": "9",
@@ -108,22 +109,22 @@
     },
     "system": {
       "available": "7.27 GiB",
-      "available_bytes": 7801901056,
-      "capacity": "6.31%",
+      "available_bytes": 7807741952,
+      "capacity": "6.24%",
       "total": "7.76 GiB",
       "total_bytes": 8327483392,
-      "used": "501.23 MiB",
-      "used_bytes": 525582336
+      "used": "495.66 MiB",
+      "used_bytes": 519741440
     }
   },
   "memoryfree": "7.27 GiB",
-  "memoryfree_mb": 7440.47265625,
+  "memoryfree_mb": 7446.04296875,
   "memorysize": "7.76 GiB",
   "memorysize_mb": 7941.70703125,
   "mountpoints": {
     "/": {
       "available": "4.22 GiB",
-      "available_bytes": 4530290688,
+      "available_bytes": 4530094080,
       "capacity": "45.56%",
       "device": "/dev/sda5",
       "filesystem": "xfs",
@@ -140,7 +141,7 @@
       "size": "7.75 GiB",
       "size_bytes": 8321499136,
       "used": "3.53 GiB",
-      "used_bytes": 3791208448
+      "used_bytes": 3791405056
     },
     "/boot": {
       "available": "832.41 MiB",
@@ -406,7 +407,7 @@
     },
     "/vagrant": {
       "available": "639.73 GiB",
-      "available_bytes": 686901800960,
+      "available_bytes": 686901747712,
       "capacity": "29.66%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -421,7 +422,7 @@
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
       "used": "269.69 GiB",
-      "used_bytes": 289574383616
+      "used_bytes": 289574436864
     },
     "/var/lib/nfs/rpc_pipefs": {
       "available": "0 bytes",
@@ -622,15 +623,16 @@
     "threads": 1
   },
   "productname": "VirtualBox",
-  "puppetversion": "8.4.0",
+  "productversion": "1.2",
+  "puppetversion": "8.5.1",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-    "version": "3.2.2"
+    "version": "3.2.3"
   },
   "rubyplatform": "x86_64-linux",
   "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.2",
+  "rubyversion": "3.2.3",
   "scope6": "link",
   "scope6_eth0": "link",
   "scope6_lo": "host",
@@ -680,14 +682,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 508,
-    "uptime": "0:08 hours"
+    "seconds": 544,
+    "uptime": "0:09 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:08 hours",
+  "uptime": "0:09 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 508,
+  "uptime_seconds": 544,
   "uuid": "eb6255a4-2ead-254e-801f-695cdbf50b33",
   "virtual": "virtualbox"
 }
