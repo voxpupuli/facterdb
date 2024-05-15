@@ -101,7 +101,6 @@ FacterDB::get_facts('osfamily=Debian')
 | SLES 15                  |     |     |  1  |     |     |     |     |     |
 | Scientific 7             |  1  |     |  1  |     |     |     |     |     |
 | Solaris 11               |  1  |     |     |     |     |     |     |     |
-| Ubuntu 16.04             |  1  |  1  |  1  |     |     |     |     |     |
 | Ubuntu 18.04             |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
 | Ubuntu 20.04             |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
 | Ubuntu 21.04             |  1  |  1  |  1  |     |     |     |     |     |
