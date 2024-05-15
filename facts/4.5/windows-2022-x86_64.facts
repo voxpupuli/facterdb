@@ -1,0 +1,227 @@
+{
+  "aio_agent_version": "8.4.0",
+  "architecture": "x64",
+  "dhcp_servers": {
+    "Ethernet": "10.0.2.2",
+    "system": "10.0.2.2"
+  },
+  "dmi": {
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "F2FE13B6-2E77-4300-B709-3654FF7B6063"
+    }
+  },
+  "domain": "example.com",
+  "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+  "facterversion": "4.5.2",
+  "fips_enabled": false,
+  "fqdn": "foo.example.com",
+  "hardwareisa": "x64",
+  "hardwaremodel": "x86_64",
+  "hostname": "foo",
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "161095",
+      "version": "7.0.14"
+    }
+  },
+  "id": "FOO\\vagrant",
+  "identity": {
+    "privileged": true,
+    "user": "FOO\\vagrant"
+  },
+  "interfaces": "Ethernet",
+  "ipaddress": "10.0.2.15",
+  "ipaddress6": "fe80::8d97:e947:bec7:8686",
+  "ipaddress6_Ethernet": "fe80::8d97:e947:bec7:8686",
+  "ipaddress_Ethernet": "10.0.2.15",
+  "is_virtual": true,
+  "kernel": "windows",
+  "kernelmajversion": "10.0",
+  "kernelrelease": "10.0.20348",
+  "kernelversion": "10.0.20348",
+  "macaddress": "08:00:27:E7:59:F0",
+  "macaddress_Ethernet": "08:00:27:E7:59:F0",
+  "manufacturer": "innotek GmbH",
+  "memory": {
+    "system": {
+      "available": "899.27 MiB",
+      "available_bytes": 942952448,
+      "capacity": "55.74%",
+      "total": "1.98 GiB",
+      "total_bytes": 2130382848,
+      "used": "1.11 GiB",
+      "used_bytes": 1187430400
+    }
+  },
+  "memoryfree": "899.27 MiB",
+  "memoryfree_mb": 899.26953125,
+  "memorysize": "1.98 GiB",
+  "memorysize_mb": 2031.69140625,
+  "mtu_Ethernet": 1500,
+  "netmask": "255.255.255.0",
+  "netmask6": "ffff:ffff:ffff:ffff::",
+  "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
+  "netmask_Ethernet": "255.255.255.0",
+  "network": "10.0.2.0",
+  "network6": "fe80::",
+  "network6_Ethernet": "fe80::",
+  "network_Ethernet": "10.0.2.0",
+  "networking": {
+    "dhcp": "10.0.2.2",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "Ethernet": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::8d97:e947:bec7:8686",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "dhcp": "10.0.2.2",
+        "ip": "10.0.2.15",
+        "ip6": "fe80::8d97:e947:bec7:8686",
+        "mac": "08:00:27:E7:59:F0",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fe80::",
+        "scope6": "link"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fe80::8d97:e947:bec7:8686",
+    "mac": "08:00:27:E7:59:F0",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fe80::",
+    "primary": "Ethernet",
+    "scope6": "link"
+  },
+  "operatingsystem": "windows",
+  "operatingsystemmajrelease": "2022",
+  "operatingsystemrelease": "2022",
+  "os": {
+    "architecture": "x64",
+    "family": "windows",
+    "hardware": "x86_64",
+    "name": "windows",
+    "release": {
+      "full": "2022",
+      "major": "2022"
+    },
+    "windows": {
+      "display_version": "21H2",
+      "edition_id": "ServerStandardEval",
+      "installation_type": "Server Core",
+      "product_name": "Windows Server 2022 Standard Evaluation",
+      "release_id": "21H2",
+      "system32": "C:\\Windows\\system32"
+    }
+  },
+  "osfamily": "windows",
+  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\OpenSSH-Win64;C:\\Users\\vagrant\\AppData\\Local\\Microsoft\\WindowsApps",
+  "physicalprocessorcount": 1,
+  "processor0": "Intel(R) Xeon(R) CPU E5-2667 v3 @ 3.20GHz",
+  "processorcount": 2,
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "x64",
+    "models": [
+      "Intel(R) Xeon(R) CPU E5-2667 v3 @ 3.20GHz"
+    ],
+    "physicalcount": 1,
+    "threads": 1
+  },
+  "productname": "VirtualBox",
+  "puppetversion": "8.4.0",
+  "ruby": {
+    "platform": "x64-mingw32",
+    "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.2"
+  },
+  "rubyplatform": "x64-mingw32",
+  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
+  "rubyversion": "3.2.2",
+  "scope6": "link",
+  "scope6_Ethernet": "link",
+  "serialnumber": "0",
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 2cbf142ec3e5298f32eb0fcccf139ce09d42e534",
+        "sha256": "SSHFP 2 2 7c39b6025bf87f7828dac9370dc4374061fa9b643e1fdcaf86ba55cea66b831a"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAOmczeAhgWVjwzCJYyJ38DOE98Xiaw45rmEULqbq6c2iy9YgTEp2DRl/AmOQNosKg1+e/DtrHgqWdIHQplipyOCd6wbJ131Z3PgmMcJqy4XAyhZcaa2wkHdUic0P+7qD1HengkIgquuizJzPKnX1klM2e1QgUeuXZT/ULRW9vI8NAAAAFQD/jjjBCL+7QwI+8iQYAKtp5rW/dwAAAIEAsVXIkqYxA9PgeklIXuchjvTsIAnzFeixSa5p51xCTDBll91QEFX3OtzK3Vp2puJDXBvwymuPnBCaW31AepDnWv4m3YmFWd3s6ZIp8qPbi1UfhkoIH11gwcz4kQT5h6gBbA717d+1DAAw9W6174Ju1dKdoqg86ZNtA5QfgBZ06xwAAACBANZ1rECCGE2HVWbxDBHf6mAv5yoBRNUbPWQ3DYM5qLdYhqPCFmcRdaxIjOtCuqutviphOYEdEWY//jR86GkPGJZeK5Sg6+ol0eZTDNox933GeNuuLTg57F77ODTfeEpYgPNTlklG+MI/V0xjpgiaN+aqfyCmPUh6X0m+epYNXLIJ",
+      "type": "ssh-dss"
+    },
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 3bd1e5d4b841b0150d1d9d1ae1e926c0f8c01baf",
+        "sha256": "SSHFP 3 2 f49774b85c325c1b3a03ca07d43b59bc0483c1bed307e1e0eda8146a7f8a32d3"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKdzf7SfxY+LVZayjebjV98AK/c7sFT6rOvVu1pKJyaAGKJvERyVlay9aUOo5EZbGqud61jYpLXrAlGuOQZyWeg=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 d90c588d7e89b743439d6bbde8cbf68de80f554c",
+        "sha256": "SSHFP 4 2 4a3633cdbef6f2e3d7aebacb4cd127890cdb0d05a8fffa36047a2da574008117"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIPOwOYrxf49nywRDLItAiMup1peRQkpfykjDknfisRzq",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 c9f7a8861f449e575242f99981ed7580d609f86c",
+        "sha256": "SSHFP 1 2 5f9ff10646bb92e2f762c650f1f4486331b2848960ab8519031f1fdf1bd92d19"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDQfE6HJW1DZInpdu3xQG1ok0bY+IK2Jhfk3kGd087eE8nuzm1O0JLe5A9elSLCe1I63MTxadw/ZI48DiAnd4q8MckaqU2bE7ycfO1N6KLvBIZ6bmlWR+XpW/0rxLD3aP/lvuu7R731PdgfH5APDyyqYLVdPI1JdvfopJf/55gJqjdZkNE4S5OGUqXEuiwPYL56OgNntwqvoRDvOLQ8DDPNlcz/PGR0tIxhakUM7cPhkBYSZWvTnoJQCJcyx9OE7li9dH0ZnfQ2wezm0cro2Nh3enRN0yeHZ69CvWMoMbotxlKDdM0Gyn7rEvP/9JVr9Mll9UjqO8qbFJYc4E0QjmMQNrEjH9d+F8JsavMh9azZ9f4X2vY83A658RnbweJIscITmIeqPiyyoWLDDJ5XniatYTfpMXKk5SpkvRf7l/LzywK0NsCRioOppOw+mxHcsuDgPYiCmkLq7LYbC6FMZc/PtqpA+UNnxxTsnOfTtIfSyrkIo+LdBPcpxtkiBCZ5AFU=",
+      "type": "ssh-rsa"
+    }
+  },
+  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAOmczeAhgWVjwzCJYyJ38DOE98Xiaw45rmEULqbq6c2iy9YgTEp2DRl/AmOQNosKg1+e/DtrHgqWdIHQplipyOCd6wbJ131Z3PgmMcJqy4XAyhZcaa2wkHdUic0P+7qD1HengkIgquuizJzPKnX1klM2e1QgUeuXZT/ULRW9vI8NAAAAFQD/jjjBCL+7QwI+8iQYAKtp5rW/dwAAAIEAsVXIkqYxA9PgeklIXuchjvTsIAnzFeixSa5p51xCTDBll91QEFX3OtzK3Vp2puJDXBvwymuPnBCaW31AepDnWv4m3YmFWd3s6ZIp8qPbi1UfhkoIH11gwcz4kQT5h6gBbA717d+1DAAw9W6174Ju1dKdoqg86ZNtA5QfgBZ06xwAAACBANZ1rECCGE2HVWbxDBHf6mAv5yoBRNUbPWQ3DYM5qLdYhqPCFmcRdaxIjOtCuqutviphOYEdEWY//jR86GkPGJZeK5Sg6+ol0eZTDNox933GeNuuLTg57F77ODTfeEpYgPNTlklG+MI/V0xjpgiaN+aqfyCmPUh6X0m+epYNXLIJ",
+  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKdzf7SfxY+LVZayjebjV98AK/c7sFT6rOvVu1pKJyaAGKJvERyVlay9aUOo5EZbGqud61jYpLXrAlGuOQZyWeg=",
+  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIPOwOYrxf49nywRDLItAiMup1peRQkpfykjDknfisRzq",
+  "sshfp_dsa": "SSHFP 2 1 2cbf142ec3e5298f32eb0fcccf139ce09d42e534\nSSHFP 2 2 7c39b6025bf87f7828dac9370dc4374061fa9b643e1fdcaf86ba55cea66b831a",
+  "sshfp_ecdsa": "SSHFP 3 1 3bd1e5d4b841b0150d1d9d1ae1e926c0f8c01baf\nSSHFP 3 2 f49774b85c325c1b3a03ca07d43b59bc0483c1bed307e1e0eda8146a7f8a32d3",
+  "sshfp_ed25519": "SSHFP 4 1 d90c588d7e89b743439d6bbde8cbf68de80f554c\nSSHFP 4 2 4a3633cdbef6f2e3d7aebacb4cd127890cdb0d05a8fffa36047a2da574008117",
+  "sshfp_rsa": "SSHFP 1 1 c9f7a8861f449e575242f99981ed7580d609f86c\nSSHFP 1 2 5f9ff10646bb92e2f762c650f1f4486331b2848960ab8519031f1fdf1bd92d19",
+  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDQfE6HJW1DZInpdu3xQG1ok0bY+IK2Jhfk3kGd087eE8nuzm1O0JLe5A9elSLCe1I63MTxadw/ZI48DiAnd4q8MckaqU2bE7ycfO1N6KLvBIZ6bmlWR+XpW/0rxLD3aP/lvuu7R731PdgfH5APDyyqYLVdPI1JdvfopJf/55gJqjdZkNE4S5OGUqXEuiwPYL56OgNntwqvoRDvOLQ8DDPNlcz/PGR0tIxhakUM7cPhkBYSZWvTnoJQCJcyx9OE7li9dH0ZnfQ2wezm0cro2Nh3enRN0yeHZ69CvWMoMbotxlKDdM0Gyn7rEvP/9JVr9Mll9UjqO8qbFJYc4E0QjmMQNrEjH9d+F8JsavMh9azZ9f4X2vY83A658RnbweJIscITmIeqPiyyoWLDDJ5XniatYTfpMXKk5SpkvRf7l/LzywK0NsCRioOppOw+mxHcsuDgPYiCmkLq7LYbC6FMZc/PtqpA+UNnxxTsnOfTtIfSyrkIo+LdBPcpxtkiBCZ5AFU=",
+  "system32": "C:\\Windows\\system32",
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 300,
+    "uptime": "0:05 hours"
+  },
+  "timezone": "Coordinated Universal Time",
+  "uptime": "0:05 hours",
+  "uptime_days": 0,
+  "uptime_hours": 0,
+  "uptime_seconds": 300,
+  "uuid": "F2FE13B6-2E77-4300-B709-3654FF7B6063",
+  "virtual": "virtualbox",
+  "windows_display_version": "21H2",
+  "windows_edition_id": "ServerStandardEval",
+  "windows_installation_type": "Server Core",
+  "windows_product_name": "Windows Server 2022 Standard Evaluation",
+  "windows_release_id": "21H2"
+}
