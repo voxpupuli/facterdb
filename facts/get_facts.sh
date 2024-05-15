@@ -52,17 +52,6 @@ case "${osfamily}" in
   else
     distcode=el
   fi
-  yum -y install "https://yum.puppetlabs.com/puppet6-release-${distcode}-${operatingsystemmajrelease}.noarch.rpm"
-  if [[ "${?}" == 0 ]]; then
-    for puppet_agent_version in 6.25.0 6.27.1; do
-      if yum install -y puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    yum remove -y puppet6-release
-  fi
   wget "http://yum.puppetlabs.com/puppet7-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet7-release.rpm
   if test -f /tmp/puppet7-release.rpm; then
     rpm -ivh /tmp/puppet7-release.rpm
@@ -89,23 +78,6 @@ case "${osfamily}" in
   fi
   ;;
 'Debian')
-  apt_install curl file
-  curl "https://apt.puppetlabs.com/puppet6-release-${lsbdistcodename}.deb" -o /tmp/puppet6-release.deb
-  # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
-  if test "$?" -eq 0 -a -f /tmp/puppet6-release.deb && [[ "$(file -b /tmp/puppet6-release.deb)" =~ "Debian binary package".* ]] ; then
-    dpkg --install /tmp/puppet6-release.deb
-    apt-get update
-    # as of 2023-04-27 older 6.x series aren't available (i.e. facter 3.12)
-    # the trailing dot is so that 6.4.* is the match so we get the last in the 6.4 series and not 6.40
-    for puppet_agent_version in 6.4. 6.28.; do
-      if apt_install puppet-agent=${puppet_agent_version}*; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    apt-get -y remove --purge puppet6-release
-  fi
   # libaugeas-dev is needed when we generate facts via the facter gem. Otherwise augeas.version fact is missing
   apt_install curl file libaugeas-dev
   curl "https://apt.puppetlabs.com/puppet7-release-${lsbdistcodename}.deb" -o /tmp/puppet7-release.deb
@@ -182,16 +154,6 @@ case "${osfamily}" in
     http_method='http'
   else
     http_method='https'
-  fi
-  if rpm -Uvh ${http_method}://yum.puppet.com/puppet6-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
-    for puppet_agent_version in 6.25.0 6.27.1; do
-      if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    zypper --non-interactive remove puppet6-release
   fi
   if rpm -Uvh ${http_method}://yum.puppet.com/puppet7-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
     for puppet_agent_version in 7.5.0 7.6.1 7.12.0 7.24.0; do
