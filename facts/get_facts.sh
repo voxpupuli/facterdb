@@ -42,7 +42,6 @@ elif test -f '/etc/os-release' && grep -q 'Amazon' '/etc/os-release'; then
 else
   osfamily=$(uname)
 fi
-puppet7_agent_versions='7.9.0 7.10.0 7.11.0 7.12.0 7.12.1. 7.13.1 7.14.0 7.15.0 7.16.0 7.17.0 7.18.0 7.19.0 7.20.0 7.21.0 7.23.0 7.24.0 7.25.0 7.26.0 7.27.0 7.28.0 7.29.0 7.29.1 7.30.0'
 puppet8_agent_versions='8.0.0 8.1.0 8.2.0 8.3.1 8.4.0 8.5.0 8.5.1 8.6.0'
 case "${osfamily}" in
 'RedHat')
@@ -51,18 +50,6 @@ case "${osfamily}" in
     distcode=fedora
   else
     distcode=el
-  fi
-  wget "http://yum.puppetlabs.com/puppet7-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet7-release.rpm
-  if test -f /tmp/puppet7-release.rpm; then
-    rpm -ivh /tmp/puppet7-release.rpm
-    for puppet_agent_version in $puppet7_agent_versions; do
-      if yum install -y puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    yum remove -y puppet7-release
   fi
   wget "http://yum.puppetlabs.com/puppet8-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet8-release.rpm
   if test -f /tmp/puppet8-release.rpm; then
@@ -80,20 +67,6 @@ case "${osfamily}" in
 'Debian')
   # libaugeas-dev is needed when we generate facts via the facter gem. Otherwise augeas.version fact is missing
   apt_install curl file libaugeas-dev
-  curl "https://apt.puppetlabs.com/puppet7-release-${lsbdistcodename}.deb" -o /tmp/puppet7-release.deb
-  # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
-  if test "$?" -eq 0 -a -f /tmp/puppet7-release.deb && [[ "$(file -b /tmp/puppet7-release.deb)" =~ "Debian binary package".* ]] ; then
-    dpkg --install /tmp/puppet7-release.deb
-    apt-get update
-    for puppet_agent_version in $puppet7_agent_versions; do
-      if apt_install puppet-agent=${puppet_agent_version}*; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    apt-get -y remove --purge puppet7-release
-  fi
   curl "https://apt.puppetlabs.com/puppet8-release-${lsbdistcodename}.deb" -o /tmp/puppet8-release.deb
   # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
   if test "$?" -eq 0 -a -f /tmp/puppet8-release.deb && [[ "$(file -b /tmp/puppet8-release.deb)" =~ "Debian binary package".* ]] ; then
@@ -110,7 +83,6 @@ case "${osfamily}" in
   fi
   # libc6-dev needed to build the ffi gem
   apt_install make gcc libgmp-dev libc6-dev
-
 
   # There are no puppet-agent packages for $releasename yet, so generate a Facter 3.x
   # fact set from the official Debian package.
