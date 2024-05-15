@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.27.0](https://rubygems.org/gems/facterdb/versions/1.27.0) (2024-05-15)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.26.0...1.27.0)
+
+**Implemented enhancements:**
+
+- RedHat 8/9: Regenerate facts & add missing factsets [\#326](https://github.com/voxpupuli/facterdb/pull/326) ([bastelfreak](https://github.com/bastelfreak))
+- Rocky: Regenerate factsets & Add Facter 4.6/4.7 factsets [\#325](https://github.com/voxpupuli/facterdb/pull/325) ([bastelfreak](https://github.com/bastelfreak))
+- AlmaLinux 9: Regenerate facts & Add Facter 4.6/4.7 factsets [\#324](https://github.com/voxpupuli/facterdb/pull/324) ([bastelfreak](https://github.com/bastelfreak))
+- CentOS 8/9: Regenerate factsets & Add Facter 4.6/4.7 factsets [\#323](https://github.com/voxpupuli/facterdb/pull/323) ([bastelfreak](https://github.com/bastelfreak))
+- Ubuntu 22.04: Regenerate facts & Add Facter 4.6/4.7 factsets [\#322](https://github.com/voxpupuli/facterdb/pull/322) ([bastelfreak](https://github.com/bastelfreak))
+- Modernized Windows Support and documentation update [\#306](https://github.com/voxpupuli/facterdb/pull/306) ([yakatz](https://github.com/yakatz))
+
 ## [1.26.0](https://rubygems.org/gems/facterdb/versions/1.26.0) (2024-05-14)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.25.0...1.26.0)
@@ -11,6 +24,7 @@
 
 **Fixed bugs:**
 
+- Remove +x flag from factsets [\#320](https://github.com/voxpupuli/facterdb/pull/320) ([bastelfreak](https://github.com/bastelfreak))
 - Debian 12: regenerate facter 4.5 factset [\#313](https://github.com/voxpupuli/facterdb/pull/313) ([bastelfreak](https://github.com/bastelfreak))
 
 **Merged pull requests:**
