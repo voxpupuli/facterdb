@@ -338,41 +338,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'fedora-32-x86_64' do |host|
-    host.vm.box = 'generic/fedora32'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'fedora-33-x86_64' do |host|
-    host.vm.box = 'generic/fedora33'
-    host.vm.synced_folder '.', '/vagrant'
-    # there's no official support for fedora 33, so we need ruby and facter from Fedora
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools ruby ruby-devel facter'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'fedora-34-x86_64' do |host|
-    host.vm.box = 'generic/fedora34'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'fedora-35-x86_64' do |host|
-    host.vm.box = 'generic/fedora35'
-    host.vm.synced_folder '.', '/vagrant'
-    # there's no official support for fedora 35, so we need ruby 2.7 and facter from Fedora
-    host.vm.provision 'shell', inline: 'dnf -y module install ruby:2.7/default'
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools facter ruby-devel'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
   config.vm.define 'fedora-36-x86_64' do |host|
     host.vm.box = 'generic/fedora36'
     host.vm.synced_folder '.', '/vagrant'
