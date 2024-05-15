@@ -70,8 +70,6 @@ FacterDB::get_facts('osfamily=Debian')
 | CentOS 8                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
 | CentOS 9                 |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Darwin 20                |     |     |  1  |     |     |     |     |     |
-| Debian 9                 |     |     |  1  |     |     |     |     |     |
-| Debian 10                |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
 | Debian 11                |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
 | Debian 12                |     |     |  2  |  2  |  2  |  1  |  1  |  1  |
 | Fedora 32                |  1  |  1  |  1  |     |     |     |     |     |
