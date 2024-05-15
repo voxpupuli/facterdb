@@ -14,12 +14,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.gui = false
   end
 
-  config.vm.define 'debian-10-x86_64' do |host|
-    host.vm.box = 'debian/contrib-buster64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
   config.vm.define 'debian-11-x86_64' do |host|
     host.vm.box = 'debian/bullseye64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
