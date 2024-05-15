@@ -100,22 +100,22 @@ FacterDB::get_facts('osfamily=Debian')
 | Scientific 7             |  1  |     |  1  |     |     |     |     |     |
 | Solaris 11               |  1  |     |     |     |     |     |     |     |
 | Ubuntu 18.04             |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| Ubuntu 20.04             |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
+| Ubuntu 20.04             |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
 | Ubuntu 21.04             |  1  |  1  |  1  |     |     |     |     |     |
 | Ubuntu 21.10             |  1  |  1  |  1  |     |     |     |     |     |
 | Ubuntu 22.04             |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Ubuntu 22.10             |     |     |  1  |     |     |     |     |     |
-| Windows 10               |     |     |  1  |  1  |  1  |     |  1  |  1  |
+| Windows 10               |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
+| Windows 11               |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Windows Server 2012      |     |     |  1  |  1  |  1  |     |     |     |
 | Windows Server 2012 R2   |     |     |  1  |  1  |  1  |     |     |     |
 | Windows Server 2016      |     |     |  1  |  1  |  1  |     |     |     |
 | Windows Server 2016 Core |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2019      |     |     |  1  |  1  |  1  |     |  1  |  1  |
+| Windows Server 2019      |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Windows Server 2019 Core |     |     |  1  |  1  |  1  |     |     |     |
-| Windows Server 2022      |     |     |  1  |  1  |  1  |     |  1  |  1  |
+| Windows Server 2022      |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Windows Server 2022 Core |     |     |  1  |  1  |  1  |     |     |     |
-| openSUSE 15              |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
-| windows 11               |     |     |  1  |  1  |  1  |     |  1  |  1  |
+| openSUSE 15              |  1  |  1  |  1  |  1  |  1  |  1  |     |  1  |
 
 Where the number (1, 2 etc.) are the number of factsets for that OS and facter combination (e.g., x86_64 and i386 architectures).
 
