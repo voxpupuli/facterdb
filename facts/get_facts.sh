@@ -2,6 +2,9 @@
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
+# ensure IPv6 is always enabled, some boxes disable it by default, e.g. Fedora and RedHat
+sysctl -w net.ipv6.conf.all.disable_ipv6=0
+
 puppetAgentVersionList='/vagrant/versions.txt'
 if test ! -f $puppetAgentVersionList; then
   echo 'Missing version list' >&2
