@@ -1,5 +1,5 @@
 param(
-  [array]$puppetAgentVersions = ('7.24.0','8.0.0','8.5.1','8.6.0'),
+  [string]$puppetAgentVersionList = 'X:\versions.txt',
   [string]$baseUrl = 'https://downloads.puppetlabs.com/windows/puppet{0}/puppet-agent-{1}-{2}.msi',
   [string]$fqdn = 'foo.example.com'
 )
@@ -25,6 +25,18 @@ net use X: \\VBOXSVR\vagrant
 $VagrantDataPath = 'X:\'
 $WorkingDirectory = 'C:\vagrant_working_directory\'
 
+# Check if version list is available and load it
+if (!(Test-Path $puppetAgentVersionList)) {
+  Write-Host -ForegroundColor Red "Can't find Puppet Agent Version list."
+  Exit 1
+}
+
+$puppetAgentVersions = Select-String -Path $puppetAgentVersionList '^\d+\.\d+\.\d+' -AllMatches |  Foreach-Object {$_.Line}
+if ($puppetAgentVersions.Count -eq 0) {
+  Write-Host -ForegroundColor Red "Puppet Agent version list seems to be empty."
+  Exit 1
+}
+
 # Make sure we have enough privs to install the things.
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if (! ($currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))) {
@@ -40,6 +52,7 @@ if (!(Test-Path $WorkingDirectory)) {
 
 # Install each puppet version & collect facts.
 foreach ($pupAgentVer in $puppetAgentVersions) {
+  write-Host "Generating facts with `'$pupAgentVer`'"
 
   $agentUrl = $baseUrl -f $pupAgentVer[0], $pupAgentVer, "x64"
   $agentName = "puppet-agent-{1}-{2}.msi" -f $pupAgentVer[0], $pupAgentVer, "x64"

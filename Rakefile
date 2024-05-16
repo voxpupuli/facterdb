@@ -78,8 +78,8 @@ def factset_to_os_label(fs)
     db_filename = fs[:_facterdb_filename] || 'there_is_no_filename'
     label = if /windows-10-/.match?(db_filename)
               'Windows 10'
-            elsif /windows-7-/.match?(db_filename)
-              'Windows 7'
+            elsif /windows-11-/.match?(db_filename)
+              'Windows 11'
             elsif /windows-8[\d.]*-/.match?(db_filename)
               "Windows #{os__rel.sub('6.2.9200', '8').sub('6.3.9600', '8.1')}"
             elsif /windows-.+-core-/.match?(db_filename)

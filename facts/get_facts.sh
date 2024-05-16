@@ -2,6 +2,17 @@
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
+puppetAgentVersionList='/vagrant/versions.txt'
+if test ! -f $puppetAgentVersionList; then
+  echo 'Missing version list' >&2
+  exit 1
+fi
+puppet8_agent_versions=$(grep --only-matching --perl-regexp '^\d+\.\d+\.\d+' $puppetAgentVersionList)
+if test -z "$puppet8_agent_versions"; then
+  echo 'Version list is empty' >&2
+  exit 1
+fi
+
 apt_install() {
     DEBIAN_FRONTEND=noninteractive \
         apt-get --option Dpkg::Options::="--force-confdef" \
@@ -42,7 +53,6 @@ elif test -f '/etc/os-release' && grep -q 'Amazon' '/etc/os-release'; then
 else
   osfamily=$(uname)
 fi
-puppet8_agent_versions='8.0.0 8.1.0 8.2.0 8.3.1 8.4.0 8.5.0 8.5.1 8.6.0'
 case "${osfamily}" in
 'RedHat')
   . /etc/os-release
@@ -127,18 +137,8 @@ case "${osfamily}" in
   else
     http_method='https'
   fi
-  if rpm -Uvh ${http_method}://yum.puppet.com/puppet7-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
-    for puppet_agent_version in 7.5.0 7.6.1 7.12.0 7.24.0; do
-      if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
-        mkdir -p $(dirname ${output_file})
-        facter --show-legacy -p -j | tee ${output_file}
-      fi
-    done
-    zypper --non-interactive remove puppet7-release
-  fi
   if rpm -Uvh ${http_method}://yum.puppet.com/puppet8-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
-    for puppet_agent_version in 8.0.0; do
+    for puppet_agent_version in $puppet8_agent_versions; do
       if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
         mkdir -p $(dirname ${output_file})
