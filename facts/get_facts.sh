@@ -58,6 +58,7 @@ case "${osfamily}" in
   . /etc/os-release
   if [[ $ID == fedora ]]; then
     distcode=fedora
+    dnf -y install facter ruby ruby-devel wget make gcc net-tools augeas
   else
     distcode=el
   fi
