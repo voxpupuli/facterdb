@@ -46,15 +46,16 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "df9a11cc-3feb-7446-a5c8-c45904481f4d"
+      "uuid": "df9a11cc-3feb-7446-a5c8-c45904481f4d",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.4.3",
+  "facterversion": "4.6.1",
   "filesystems": "btrfs,ext2,ext3,ext4,xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
-  "gem_version": "~> 4.4.3",
+  "gem_version": "~> 4.6.0",
   "gid": "root",
   "hardwareisa": "x86_64",
   "hardwaremodel": "x86_64",
@@ -84,8 +85,8 @@
   "kernelversion": "6.2.15",
   "load_averages": {
     "15m": 0.15,
-    "1m": 0.89,
-    "5m": 0.38
+    "1m": 0.9,
+    "5m": 0.39
   },
   "lsbdistrelease": "36",
   "lsbmajdistrelease": "36",
@@ -103,24 +104,24 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.49 GiB",
-      "available_bytes": 1596350464,
-      "capacity": "22.08%",
+      "available": "1.48 GiB",
+      "available_bytes": 1593843712,
+      "capacity": "22.20%",
       "total": "1.91 GiB",
       "total_bytes": 2048643072,
-      "used": "431.34 MiB",
-      "used_bytes": 452292608
+      "used": "433.73 MiB",
+      "used_bytes": 454799360
     }
   },
-  "memoryfree": "1.49 GiB",
-  "memoryfree_mb": 1522.3984375,
+  "memoryfree": "1.48 GiB",
+  "memoryfree_mb": 1520.0078125,
   "memorysize": "1.91 GiB",
   "memorysize_mb": 1953.73828125,
   "mountpoints": {
     "/": {
-      "available": "121.95 GiB",
-      "available_bytes": 130938527744,
-      "capacity": "2.39%",
+      "available": "121.90 GiB",
+      "available_bytes": 130893131776,
+      "capacity": "2.43%",
       "device": "/dev/mapper/fedora-root",
       "filesystem": "xfs",
       "options": [
@@ -135,8 +136,8 @@
       ],
       "size": "124.94 GiB",
       "size_bytes": 134148001792,
-      "used": "2.99 GiB",
-      "used_bytes": 3209474048
+      "used": "3.03 GiB",
+      "used_bytes": 3254870016
     },
     "/boot": {
       "available": "869.93 MiB",
@@ -301,7 +302,7 @@
     },
     "/vagrant": {
       "available": "637.90 GiB",
-      "available_bytes": 684938838016,
+      "available_bytes": 684939161600,
       "capacity": "29.86%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -312,7 +313,7 @@
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
       "used": "271.52 GiB",
-      "used_bytes": 291537346560
+      "used_bytes": 291537022976
     }
   },
   "mtu_eth0": 1500,
@@ -336,11 +337,15 @@
             "network": "10.0.2.0"
           }
         ],
+        "duplex": "full",
         "ip": "10.0.2.15",
         "mac": "08:00:27:e4:4c:af",
         "mtu": 1500,
         "netmask": "255.255.255.0",
-        "network": "10.0.2.0"
+        "network": "10.0.2.0",
+        "operational_state": "up",
+        "physical": true,
+        "speed": 1000
       },
       "lo": {
         "bindings": [
@@ -353,7 +358,9 @@
         "ip": "127.0.0.1",
         "mtu": 65536,
         "netmask": "255.0.0.0",
-        "network": "127.0.0.0"
+        "network": "127.0.0.0",
+        "operational_state": "unknown",
+        "physical": false
       }
     },
     "ip": "10.0.2.15",
@@ -444,6 +451,7 @@
     "threads": 1
   },
   "productname": "VirtualBox",
+  "productversion": "1.2",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/usr/local/share/ruby/site_ruby",
@@ -498,14 +506,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 146,
+    "seconds": 154,
     "uptime": "0:02 hours"
   },
   "timezone": "UTC",
   "uptime": "0:02 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 146,
+  "uptime_seconds": 154,
   "uuid": "df9a11cc-3feb-7446-a5c8-c45904481f4d",
   "virtual": "virtualbox"
 }

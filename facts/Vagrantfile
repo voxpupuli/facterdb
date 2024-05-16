@@ -342,7 +342,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.box = 'generic/fedora36'
     host.vm.synced_folder '.', '/vagrant'
     # there's no official support for fedora 36, so we need facter from Fedora
-    host.vm.provision 'shell', inline: 'dnf -y install facter ruby ruby-devel wget make gcc net-tools'
+    host.vm.provision 'shell', inline: 'dnf -y install facter ruby ruby-devel wget make gcc net-tools augeas'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
