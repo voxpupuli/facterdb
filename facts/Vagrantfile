@@ -14,19 +14,19 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.gui = false
   end
 
-  config.vm.define 'debian-11-x86_64' do |host|
+  config.vm.define 'debian-11-x86_64', autostart: false do |host|
     host.vm.box = 'debian/bullseye64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'debian-12-x86_64' do |host|
+  config.vm.define 'debian-12-x86_64', autostart: false do |host|
     host.vm.box = 'debian/bookworm64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'linuxmint-19-x86_64' do |host|
+  config.vm.define 'linuxmint-19-x86_64', autostart: false do |host|
     host.vm.box = 'ltsp/linuxmint-19.1-cinnamon-64bit'
     host.vm.provision 'shell',
                       inline: 'export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y ruby ruby-dev libc6-dev'
@@ -34,31 +34,31 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'ubuntu-18.04-x86_64' do |host|
+  config.vm.define 'ubuntu-18.04-x86_64', autostart: false do |host|
     host.vm.box = 'ubuntu/bionic64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'ubuntu-20.04-x86_64' do |host|
+  config.vm.define 'ubuntu-20.04-x86_64', autostart: false do |host|
     host.vm.box = 'ubuntu/focal64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'ubuntu-21.04-x86_64' do |host|
+  config.vm.define 'ubuntu-21.04-x86_64', autostart: false do |host|
     host.vm.box = 'ubuntu/hirsute64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'ubuntu-21.10-x86_64' do |host|
+  config.vm.define 'ubuntu-21.10-x86_64', autostart: false do |host|
     host.vm.box = 'ubuntu/impish64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'ubuntu-22.04-x86_64' do |host|
+  config.vm.define 'ubuntu-22.04-x86_64', autostart: false do |host|
     host.vm.box = 'ubuntu/jammy64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
@@ -66,13 +66,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   # the ssh bits on this did not work right, most of the steps for
   # generating things were done manually
-  config.vm.define 'ubuntu-22.10-x86_64' do |host|
+  config.vm.define 'ubuntu-22.10-x86_64', autostart: false do |host|
     host.vm.box = 'ubuntu/kinetic64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'centos-7-x86_64' do |host|
+  config.vm.define 'centos-7-x86_64', autostart: false do |host|
     host.vm.box = 'centos/7'
     host.vm.network :private_network, ip: '10.0.0.2'
     host.vm.synced_folder '.', '/vagrant', nfs: true, nfs_udp: false
@@ -81,7 +81,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'centos-8-x86_64' do |host|
+  config.vm.define 'centos-8-x86_64', autostart: false do |host|
     host.vm.box = 'centos/8'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
@@ -93,7 +93,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # images are at https://cloud.centos.org/centos/8-stream/x86_64/images/
   # (check for version updates periodically)
   # facts land as centos-8-x86_64.facts
-  config.vm.define 'centos-stream8-x86_64' do |host|
+  config.vm.define 'centos-stream8-x86_64', autostart: false do |host|
     host.vm.box = 'centos/stream8'
     host.vm.box_url = 'https://cloud.centos.org/centos/8-stream/x86_64/images/CentOS-Stream-Vagrant-8-20240513.0.x86_64.vagrant-virtualbox.box'
     host.vm.synced_folder '.', '/vagrant'
@@ -109,7 +109,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # use the host.vm.box_url below
   # facts land as centos-9-x86_64.facts
   #
-  config.vm.define 'centos-stream9-x86_64' do |host|
+  config.vm.define 'centos-stream9-x86_64', autostart: false do |host|
     host.vm.box = 'centos/stream9'
     host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20240513.0.x86_64.vagrant-virtualbox.box'
     # centos packages their box with synced folders set to rsync (presumably
@@ -129,7 +129,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # this will install the guest additions which requires `vagrant plugin install vagrant-vbguest`
     host.vbguest.auto_update = true
   end
-  config.vm.define 'almalinux-8-x86_64' do |host|
+  config.vm.define 'almalinux-8-x86_64', autostart: false do |host|
     host.vm.box = 'almalinux/8'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
@@ -137,7 +137,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'almalinux-9-x86_64' do |host|
+  config.vm.define 'almalinux-9-x86_64', autostart: false do |host|
     host.vm.box = 'almalinux/9'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
@@ -145,7 +145,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'rockylinux-8-x86_64' do |host|
+  config.vm.define 'rockylinux-8-x86_64', autostart: false do |host|
     host.vm.box = 'rockylinux/8'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
@@ -153,7 +153,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'rockylinux-9-x86_64' do |host|
+  config.vm.define 'rockylinux-9-x86_64', autostart: false do |host|
     host.vm.box = 'rockylinux/9'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
@@ -161,7 +161,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'redhat-8-x86_64' do |host|
+  config.vm.define 'redhat-8-x86_64', autostart: false do |host|
     host.vm.box = 'generic/rhel8'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
@@ -169,7 +169,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'redhat-9-x86_64' do |host|
+  config.vm.define 'redhat-9-x86_64', autostart: false do |host|
     host.vm.box = 'generic/rhel9'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
@@ -177,13 +177,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'archlinux-x86_64' do |host|
+  config.vm.define 'archlinux-x86_64', autostart: false do |host|
     host.vm.box = 'archlinux/archlinux'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'sles-11sp1-x86_64' do |host|
+  config.vm.define 'sles-11sp1-x86_64', autostart: false do |host|
     host.vm.box = 'suse/sles11sp3'
     host.vm.network 'private_network', ip: '192.168.123.2'
     host.vm.synced_folder '.', '/vagrant', type: 'nfs'
@@ -191,13 +191,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'sles-12sp1-x86_64' do |host|
+  config.vm.define 'sles-12sp1-x86_64', autostart: false do |host|
     host.vm.box = 'idar/sles12sp3'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'sles-15-x86_64' do |host|
+  config.vm.define 'sles-15-x86_64', autostart: false do |host|
     host.vm.box = 'trueability/sles-15-sp1'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', inline: [
@@ -208,22 +208,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'opensuse-42.3-x86_64' do |host|
+  config.vm.define 'opensuse-42.3-x86_64', autostart: false do |host|
     host.vm.box = 'opensuse/openSUSE-42.3-x86_64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
   end
-  config.vm.define 'opensuse-Tumbleweed-x86_64' do |host|
+  config.vm.define 'opensuse-Tumbleweed-x86_64', autostart: false do |host|
     host.vm.box = 'opensuse/openSUSE-Tumbleweed-x86_64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
   end
-  config.vm.define 'opensuse-15.4-x86_64' do |host|
+  config.vm.define 'opensuse-15.4-x86_64', autostart: false do |host|
     host.vm.box = 'opensuse/Leap-15.4.x86_64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
   end
-  config.vm.define 'freebsd-11-x86_64' do |host|
+  config.vm.define 'freebsd-11-x86_64', autostart: false do |host|
     host.vm.box = 'bento/freebsd-11'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
@@ -231,7 +231,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
   end
-  config.vm.define 'freebsd-12-x86_64' do |host|
+  config.vm.define 'freebsd-12-x86_64', autostart: false do |host|
     host.vm.box = 'bento/freebsd-12'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
@@ -239,7 +239,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
   end
-  config.vm.define 'freebsd-13-x86_64' do |host|
+  config.vm.define 'freebsd-13-x86_64', autostart: false do |host|
     host.vm.box = 'bento/freebsd-13'
     host.vm.synced_folder '.', '/vagrant'
     # this was needed for the 202309.08.0 release of this box
@@ -249,7 +249,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
   end
-  config.vm.define 'gentoo-x86_64' do |host|
+  config.vm.define 'gentoo-x86_64', autostart: false do |host|
     host.vm.box = 'generic/gentoo'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'emerge-webrsync && emerge app-crypt/gnupg net-misc/curl'
@@ -257,7 +257,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'solaris-11-x86_64' do |host|
+  config.vm.define 'solaris-11-x86_64', autostart: false do |host|
     host.vm.box = 'http://benden.us/vagrant/solaris-11.2.box'
     host.ssh.insert_key = false
     host.vm.provision 'shell', inline: 'pkg info gcc || pkg install gcc'
@@ -265,7 +265,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: "/sbin/shutdown -i S -g0 -y 'Bye' &"
   end
-  config.vm.define 'openbsd-6.4-x86_64' do |host|
+  config.vm.define 'openbsd-6.4-x86_64', autostart: false do |host|
     host.vm.box = 'generic/openbsd6'
     host.vm.box_version = '~> 1.9.18'
     host.vm.network :private_network, ip: '10.0.0.2'
@@ -282,7 +282,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'osx-10.10-x86_64' do |host|
+  config.vm.define 'osx-10.10-x86_64', autostart: false do |host|
     host.vm.box = 'AndrewDryga/vagrant-box-osx'
     host.vm.network :private_network, ip: '10.0.0.2'
     host.vm.synced_folder '.', '/vagrant', nfs: true
@@ -331,14 +331,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'windows_get_facts.ps1'
     host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
   end
-  config.vm.define 'amazonlinux-2-x86_64' do |host|
+  config.vm.define 'amazonlinux-2-x86_64', autostart: false do |host|
     host.vm.box = 'bento/amazonlinux-2'
     host.vm.provision 'shell', inline: 'yum -y install gcc glibc-devel'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'fedora-36-x86_64' do |host|
+  config.vm.define 'fedora-36-x86_64', autostart: false do |host|
     host.vm.box = 'generic/fedora36'
     host.vm.synced_folder '.', '/vagrant'
     # there's no official support for fedora 36, so we need facter from Fedora
@@ -347,7 +347,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'fedora-37-x86_64' do |host|
+  config.vm.define 'fedora-37-x86_64', autostart: false do |host|
     host.vm.box = 'generic/fedora37'
     host.vm.synced_folder '.', '/vagrant'
     # there's no official support for fedora 37, so we need facter from Fedora
@@ -356,7 +356,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'fedora-38-x86_64' do |host|
+  config.vm.define 'fedora-38-x86_64', autostart: false do |host|
     host.vm.box = 'generic/fedora38'
     host.vm.synced_folder '.', '/vagrant'
     # there's no official support for fedora 38, so we need facter from Fedora
@@ -365,7 +365,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'fedora-39-x86_64' do |host|
+  config.vm.define 'fedora-39-x86_64', autostart: false do |host|
     host.vm.box = 'generic/fedora39'
     host.vm.synced_folder '.', '/vagrant'
     # there's no official support for fedora 39, so we need facter from Fedora
