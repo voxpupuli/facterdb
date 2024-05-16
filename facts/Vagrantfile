@@ -175,6 +175,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
+  config.vm.define 'oraclelinux-8-x86_64', autostart: false do |host|
+    host.vm.box = 'oraclelinux/8'
+    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/8.json'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'oraclelinux-9-x86_64', autostart: false do |host|
+    host.vm.box = 'oraclelinux/9'
+    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/9.json'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
   config.vm.define 'archlinux-x86_64', autostart: false do |host|
     host.vm.box = 'archlinux/archlinux'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'

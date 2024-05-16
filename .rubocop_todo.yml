@@ -129,7 +129,6 @@ Style/FrozenStringLiteralComment:
     - 'lib/facterdb.rb'
     - 'lib/facterdb/bin.rb'
     - 'lib/facterdb/version.rb'
-    - 'rakelib/rhel_alts.rake'
     - 'spec/facter_db_spec.rb'
     - 'spec/facts_spec.rb'
     - 'spec/spec_helper.rb'
