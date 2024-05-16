@@ -108,6 +108,17 @@ def factset_to_os_label(fs)
   label
 end
 
+def normalize_arch(arch_str)
+  case arch_str
+  when 'x86_64', 'amd64'
+    'x86_64'
+  when 'i386'
+    'i386'
+  else
+    arch_str
+  end
+end
+
 def factset_hash_to_markdown(h, caption1: nil, caption2: nil, caption3: nil)
   content = ''
 
@@ -163,7 +174,7 @@ task :database do
   # Process the facts and create a hash of all the OS and facter combinations
   factsets.each do |facts|
     fv = facts[:facterversion].split('.')[0..1].join('.')
-    arch = facts[:hardwaremodel] || 'Missing'
+    arch = normalize_arch(facts[:hardwaremodel]) || 'Missing Value'
     label = factset_to_os_label(facts)
     os_facter_matrix[label] ||= {}
     os_facter_matrix[label][fv] ||= 0
