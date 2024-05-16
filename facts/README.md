@@ -32,20 +32,14 @@ The GPLv3 version of VirtualBox is sufficient - the proprietary `Oracle VM Virtu
 
 ## Building Facts
 
-To build new facts for all supported operating systems (except Windows)
-
-```
-$ cd facts
-$ vagrant up --provision
-```
-
-You can build facts for only a single system or list of specific systems.
+To build facts, specify an operating system or list of systems.
 
 ```
 $ vagrant up --provision debian-11-x86_64
+$ vagrant up --provision debian-11-x86_64 debian-12-x86_64 redhat-8-x86_64 redhat-9-x86_64
 ```
 
-Windows facts are not built by default, but can be run manually.
+Windows systems are also available.
 
 ```
 $ vagrant up --provision windows-server-2019-x86_64 windows-server-2022-x86_64 windows-10-x86_64 windows-11-x86_64
