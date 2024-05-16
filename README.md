@@ -72,10 +72,6 @@ FacterDB::get_facts('osfamily=Debian')
 | Darwin 20                |     |     |  1  |     |     |     |     |     |
 | Debian 11                |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
 | Debian 12                |     |     |  2  |  2  |  2  |  1  |  1  |  1  |
-| Fedora 32                |  1  |  1  |  1  |     |     |     |     |     |
-| Fedora 33                |  1  |  1  |  1  |     |     |     |     |     |
-| Fedora 34                |  1  |  1  |  1  |     |     |     |     |     |
-| Fedora 35                |  1  |  1  |  1  |     |     |     |     |     |
 | Fedora 36                |     |     |  1  |  1  |  1  |     |     |     |
 | Fedora 37                |     |     |  1  |  1  |  1  |  1  |     |     |
 | Fedora 38                |     |     |  1  |  1  |  1  |  1  |     |     |
