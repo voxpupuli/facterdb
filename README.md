@@ -81,7 +81,6 @@ FacterDB::get_facts('osfamily=Debian')
 | FreeBSD 13               |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
 | Gentoo                   |     |     |     |     |     |  1  |     |     |
 | OpenBSD 7.5              |     |     |     |     |     |     |     |  1  |
-| OracleLinux 6            |     |     |  1  |     |     |     |     |     |
 | OracleLinux 7            |  1  |     |  1  |     |     |     |     |     |
 | OracleLinux 8            |     |     |  1  |     |     |     |     |     |
 | OracleLinux 9            |     |     |  1  |     |     |     |     |     |
