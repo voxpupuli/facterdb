@@ -62,6 +62,9 @@ case "${osfamily}" in
   if [[ $ID == fedora ]]; then
     distcode=fedora
     dnf -y install facter ruby ruby-devel wget make gcc net-tools augeas
+  elif [[ $ID == ol ]]; then
+    distcode=el
+    dnf -y groupinstall 'Development Tools'
   else
     distcode=el
   fi

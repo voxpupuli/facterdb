@@ -63,12 +63,6 @@ Some operating systems are harder to run in VMs.
 for file in facts/*/*-x86_64.facts; do cat $file | sed -e 's/x86_64/i386/' -e 's/amd64/i386/' > $(echo $file | sed 's/x86_64/i386/'); done
 ```
 
-#### Create OracleLinux facts from RedHat's ones
-
-```
-$ bundle exec rake rhel_alts
-```
-
 ## Legacy Facts
 
 *NOTE*: When using Facter version 4, by default some "legacy facts" are hidden from the output.

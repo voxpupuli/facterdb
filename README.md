@@ -82,8 +82,8 @@ FacterDB::get_facts('osfamily=Debian')
 | Gentoo                   |     |     |     |     |     |  1  |     |     |
 | OpenBSD 7.5              |     |     |     |     |     |     |     |  1  |
 | OracleLinux 7            |  1  |     |  1  |     |     |     |     |     |
-| OracleLinux 8            |     |     |  1  |     |     |     |     |     |
-| OracleLinux 9            |     |     |  1  |     |     |     |     |     |
+| OracleLinux 8            |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
+| OracleLinux 9            |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Pop!_OS 21.10            |     |     |  1  |     |     |     |     |     |
 | RedHat 7                 |  1  |     |  1  |     |     |     |     |     |
 | RedHat 8                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
