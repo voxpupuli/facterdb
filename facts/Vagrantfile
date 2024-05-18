@@ -264,9 +264,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
   end
   config.vm.define 'gentoo-x86_64', autostart: false do |host|
+    # gentoo needs some resources, otherwise the installation takes ages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 4096
+      v.cpus = 4
+    end
     host.vm.box = 'generic/gentoo'
     host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'emerge-webrsync && emerge app-crypt/gnupg net-misc/curl'
+    host.vm.provision 'shell', inline: 'emerge-webrsync --quiet && emerge app-crypt/gnupg net-misc/curl'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'

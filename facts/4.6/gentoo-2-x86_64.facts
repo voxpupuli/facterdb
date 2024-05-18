@@ -45,15 +45,16 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "ff6e1f78-e753-b843-9f40-5e4f6d4ff510"
+      "uuid": "ff6e1f78-e753-b843-9f40-5e4f6d4ff510",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.5.2",
+  "facterversion": "4.6.1",
   "filesystems": "btrfs,ext2,ext3,ext4,xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
-  "gem_version": "~> 4.5.2",
+  "gem_version": "~> 4.6.0",
   "gid": "root",
   "hardwareisa": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
   "hardwaremodel": "x86_64",
@@ -86,8 +87,8 @@
   "kernelversion": "6.1.69",
   "load_averages": {
     "15m": 0.19,
-    "1m": 0.8,
-    "5m": 0.39
+    "1m": 0.82,
+    "5m": 0.4
   },
   "lsbdistcodename": "n/a",
   "lsbdistdescription": "Gentoo Linux",
@@ -111,16 +112,16 @@
     },
     "system": {
       "available": "3.50 GiB",
-      "available_bytes": 3761098752,
-      "capacity": "8.26%",
+      "available_bytes": 3762765824,
+      "capacity": "8.22%",
       "total": "3.82 GiB",
       "total_bytes": 4099858432,
-      "used": "323.07 MiB",
-      "used_bytes": 338759680
+      "used": "321.48 MiB",
+      "used_bytes": 337092608
     }
   },
   "memoryfree": "3.50 GiB",
-  "memoryfree_mb": 3586.86328125,
+  "memoryfree_mb": 3588.453125,
   "memorysize": "3.82 GiB",
   "memorysize_mb": 3909.9296875,
   "mountpoints": {
@@ -272,7 +273,7 @@
     },
     "/vagrant": {
       "available": "646.95 GiB",
-      "available_bytes": 694659190784,
+      "available_bytes": 694657306624,
       "capacity": "28.86%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -287,7 +288,7 @@
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
       "used": "262.46 GiB",
-      "used_bytes": 281816993792
+      "used_bytes": 281818877952
     }
   },
   "mtu_eth0": 1500,
@@ -469,6 +470,7 @@
     "threads": 1
   },
   "productname": "VirtualBox",
+  "productversion": "1.2",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/usr/lib64/ruby/site_ruby/3.1.0",
@@ -521,14 +523,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 1,
-    "seconds": 4385,
+    "seconds": 4392,
     "uptime": "1:13 hours"
   },
   "timezone": "UTC",
   "uptime": "1:13 hours",
   "uptime_days": 0,
   "uptime_hours": 1,
-  "uptime_seconds": 4385,
+  "uptime_seconds": 4392,
   "uuid": "ff6e1f78-e753-b843-9f40-5e4f6d4ff510",
   "virtual": "virtualbox"
 }

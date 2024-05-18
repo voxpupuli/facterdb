@@ -80,6 +80,14 @@ describe 'Default Facts' do
         expect(content['facterversion']).to have_facter_version(facter_dir_path, filepath)
       end
 
+      # when facts are generated with distro facter or rubygems facter the augeas bindings might be missing
+      # we need to ensure they exist
+      it 'contains the augeas.version fact' do
+        if content['kernel'] == 'Linux'
+          expect(content['augeas']['version']).to not_be_nil.and not_be_empty
+        end
+      end
+
       it 'contains newer networking facts hash' do
         if Gem::Version.new(content['facterversion']) >= Gem::Version.new('3.0.0')
           expect(content['networking']['ip']).to not_be_nil.and not_be_empty

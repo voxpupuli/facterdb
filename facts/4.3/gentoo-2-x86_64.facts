@@ -49,11 +49,11 @@
     }
   },
   "domain": "example.com",
-  "facterversion": "4.5.2",
+  "facterversion": "4.3.1",
   "filesystems": "btrfs,ext2,ext3,ext4,xfs",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
-  "gem_version": "~> 4.5.2",
+  "gem_version": "~> 4.3.0",
   "gid": "root",
   "hardwareisa": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
   "hardwaremodel": "x86_64",
@@ -85,9 +85,9 @@
   "kernelrelease": "6.1.69-gentoo-dist",
   "kernelversion": "6.1.69",
   "load_averages": {
-    "15m": 0.19,
-    "1m": 0.8,
-    "5m": 0.39
+    "15m": 0.17,
+    "1m": 0.75,
+    "5m": 0.36
   },
   "lsbdistcodename": "n/a",
   "lsbdistdescription": "Gentoo Linux",
@@ -111,16 +111,16 @@
     },
     "system": {
       "available": "3.50 GiB",
-      "available_bytes": 3761098752,
-      "capacity": "8.26%",
+      "available_bytes": 3760140288,
+      "capacity": "8.29%",
       "total": "3.82 GiB",
       "total_bytes": 4099858432,
-      "used": "323.07 MiB",
-      "used_bytes": 338759680
+      "used": "323.98 MiB",
+      "used_bytes": 339718144
     }
   },
   "memoryfree": "3.50 GiB",
-  "memoryfree_mb": 3586.86328125,
+  "memoryfree_mb": 3585.94921875,
   "memorysize": "3.82 GiB",
   "memorysize_mb": 3909.9296875,
   "mountpoints": {
@@ -271,8 +271,8 @@
       "used_bytes": 0
     },
     "/vagrant": {
-      "available": "646.95 GiB",
-      "available_bytes": 694659190784,
+      "available": "646.96 GiB",
+      "available_bytes": 694663294976,
       "capacity": "28.86%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -287,7 +287,7 @@
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
       "used": "262.46 GiB",
-      "used_bytes": 281816993792
+      "used_bytes": 281812889600
     }
   },
   "mtu_eth0": 1500,
@@ -328,7 +328,6 @@
             ]
           }
         ],
-        "duplex": "full",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:fe3c:62a0",
         "mac": "08:00:27:3c:62:a0",
@@ -337,10 +336,7 @@
         "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.0.2.0",
         "network6": "fe80::",
-        "operational_state": "up",
-        "physical": true,
-        "scope6": "link",
-        "speed": 1000
+        "scope6": "link"
       },
       "lo": {
         "bindings": [
@@ -368,8 +364,6 @@
         "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "127.0.0.0",
         "network6": "::1",
-        "operational_state": "unknown",
-        "physical": false,
         "scope6": "host"
       }
     },
@@ -521,14 +515,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 1,
-    "seconds": 4385,
-    "uptime": "1:13 hours"
+    "seconds": 4371,
+    "uptime": "1:12 hours"
   },
   "timezone": "UTC",
-  "uptime": "1:13 hours",
+  "uptime": "1:12 hours",
   "uptime_days": 0,
   "uptime_hours": 1,
-  "uptime_seconds": 4385,
+  "uptime_seconds": 4371,
   "uuid": "ff6e1f78-e753-b843-9f40-5e4f6d4ff510",
   "virtual": "virtualbox"
 }
