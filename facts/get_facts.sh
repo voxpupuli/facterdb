@@ -162,7 +162,7 @@ case "${osfamily}" in
   facter --show-legacy -p -j | tee ${output_file}
   ;;
 'Gentoo')
-  emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet
+  emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet dev-ruby/facter sys-apps/dmidecode app-admin/augeas
   output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
   facter --show-legacy -p -j | tee ${output_file}
