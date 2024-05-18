@@ -74,8 +74,8 @@ FacterDB::get_facts('osfamily=Debian')
 | Debian 12                |     |     |  2  |  2  |  2  |  1  |  1  |  1  |
 | Fedora 36                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | Fedora 37                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
-| Fedora 38                |     |     |  1  |  1  |  1  |  1  |     |     |
-| Fedora 39                |     |     |  1  |  1  |  1  |  1  |     |     |
+| Fedora 38                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
+| Fedora 39                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | FreeBSD 11               |  1  |  1  |  1  |     |     |     |     |     |
 | FreeBSD 12               |  1  |  1  |  1  |     |     |  1  |     |     |
 | FreeBSD 13               |  1  |  1  |  1  |  1  |  1  |  1  |     |     |

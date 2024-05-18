@@ -46,15 +46,16 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "7aa40baa-bcb3-7b42-86c5-f98e39bf11c9"
+      "uuid": "7aa40baa-bcb3-7b42-86c5-f98e39bf11c9",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.4.3",
+  "facterversion": "4.7.0",
   "filesystems": "btrfs,ext2,ext3,ext4,vfat",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
-  "gem_version": "~> 4.4.3",
+  "gem_version": "~> 4.7.0",
   "gid": "root",
   "hardwareisa": "unknown",
   "hardwaremodel": "x86_64",
@@ -86,9 +87,9 @@
   "kernelrelease": "6.2.9-300.fc38.x86_64",
   "kernelversion": "6.2.9",
   "load_averages": {
-    "15m": 0.17,
-    "1m": 1.13,
-    "5m": 0.46
+    "15m": 0.18,
+    "1m": 0.37,
+    "5m": 0.28
   },
   "lsbdistrelease": "38",
   "lsbmajdistrelease": "38",
@@ -106,24 +107,24 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.61 GiB",
-      "available_bytes": 1726730240,
-      "capacity": "15.72%",
+      "available": "1.60 GiB",
+      "available_bytes": 1715728384,
+      "capacity": "16.26%",
       "total": "1.91 GiB",
       "total_bytes": 2048909312,
-      "used": "307.25 MiB",
-      "used_bytes": 322179072
+      "used": "317.75 MiB",
+      "used_bytes": 333180928
     }
   },
-  "memoryfree": "1.61 GiB",
-  "memoryfree_mb": 1646.73828125,
+  "memoryfree": "1.60 GiB",
+  "memoryfree_mb": 1636.24609375,
   "memorysize": "1.91 GiB",
   "memorysize_mb": 1953.9921875,
   "mountpoints": {
     "/": {
-      "available": "37.66 GiB",
-      "available_bytes": 40438108160,
-      "capacity": "2.18%",
+      "available": "37.64 GiB",
+      "available_bytes": 40418242560,
+      "capacity": "2.24%",
       "device": "/dev/sda5",
       "filesystem": "btrfs",
       "options": [
@@ -137,8 +138,8 @@
       ],
       "size": "38.92 GiB",
       "size_bytes": 41788899328,
-      "used": "859.21 MiB",
-      "used_bytes": 900952064
+      "used": "883.35 MiB",
+      "used_bytes": 926257152
     },
     "/boot": {
       "available": "843.72 MiB",
@@ -273,9 +274,9 @@
       "used_bytes": 0
     },
     "/home": {
-      "available": "37.66 GiB",
-      "available_bytes": 40438108160,
-      "capacity": "2.18%",
+      "available": "37.64 GiB",
+      "available_bytes": 40418242560,
+      "capacity": "2.24%",
       "device": "/dev/sda5",
       "filesystem": "btrfs",
       "options": [
@@ -289,8 +290,8 @@
       ],
       "size": "38.92 GiB",
       "size_bytes": 41788899328,
-      "used": "859.21 MiB",
-      "used_bytes": 900952064
+      "used": "883.35 MiB",
+      "used_bytes": 926257152
     },
     "/run": {
       "available": "385.41 MiB",
@@ -475,6 +476,7 @@
             ]
           }
         ],
+        "duplex": "full",
         "ip": "10.0.2.15",
         "ip6": "fe80::2d54:1b3c:73e3:6f0",
         "mac": "52:54:00:d6:6b:09",
@@ -483,7 +485,10 @@
         "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.0.2.0",
         "network6": "fe80::",
-        "scope6": "link"
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "link",
+        "speed": 1000
       },
       "lo": {
         "bindings": [
@@ -511,6 +516,8 @@
         "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "127.0.0.0",
         "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
         "scope6": "host"
       }
     },
@@ -610,6 +617,7 @@
     "threads": 1
   },
   "productname": "VirtualBox",
+  "productversion": "1.2",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/usr/local/share/ruby/site_ruby",
@@ -667,14 +675,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 228,
-    "uptime": "0:03 hours"
+    "seconds": 583,
+    "uptime": "0:09 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:03 hours",
+  "uptime": "0:09 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 228,
+  "uptime_seconds": 583,
   "uuid": "7aa40baa-bcb3-7b42-86c5-f98e39bf11c9",
   "virtual": "virtualbox"
 }
