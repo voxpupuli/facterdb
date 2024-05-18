@@ -156,7 +156,7 @@ case "${osfamily}" in
   fi
   ;;
 'Archlinux')
-  pacman -Syu --noconfirm ruby puppet ruby-bundler base-devel dnsutils facter
+  pacman --sync --refresh --sysupgrade --noconfirm ruby ruby-bundler base-devel dnsutils facter augeas
   output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
   mkdir -p $(dirname ${output_file})
   facter --show-legacy -p -j | tee ${output_file}

@@ -47,15 +47,16 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "33998003-ad73-e945-93b6-703ac3c9b74c"
+      "uuid": "33998003-ad73-e945-93b6-703ac3c9b74c",
+      "version": "1.2"
     }
   },
   "domain": "example.com",
-  "facterversion": "4.2.14",
+  "facterversion": "4.7.0",
   "filesystems": "btrfs,vfat",
   "fips_enabled": false,
   "fqdn": "foo.example.com",
-  "gem_version": "~> 4.2.14",
+  "gem_version": "~> 4.7.0",
   "gid": "root",
   "hardwareisa": "unknown",
   "hardwaremodel": "x86_64",
@@ -87,9 +88,9 @@
   "kernelrelease": "6.8.9-arch1-2",
   "kernelversion": "6.8.9",
   "load_averages": {
-    "15m": 0.13,
+    "15m": 0.15,
     "1m": 1.01,
-    "5m": 0.37
+    "5m": 0.4
   },
   "macaddress": "08:00:27:a2:03:d7",
   "macaddress_eth0": "08:00:27:a2:03:d7",
@@ -105,24 +106,24 @@
       "used_bytes": 274432
     },
     "system": {
-      "available": "656.21 MiB",
-      "available_bytes": 688082944,
-      "capacity": "32.02%",
+      "available": "622.04 MiB",
+      "available_bytes": 652255232,
+      "capacity": "35.56%",
       "total": "965.23 MiB",
       "total_bytes": 1012117504,
-      "used": "309.02 MiB",
-      "used_bytes": 324034560
+      "used": "343.19 MiB",
+      "used_bytes": 359862272
     }
   },
-  "memoryfree": "656.21 MiB",
-  "memoryfree_mb": 656.20703125,
+  "memoryfree": "622.04 MiB",
+  "memoryfree_mb": 622.0390625,
   "memorysize": "965.23 MiB",
   "memorysize_mb": 965.23046875,
   "mountpoints": {
     "/": {
-      "available": "17.85 GiB",
-      "available_bytes": 19170914304,
-      "capacity": "7.67%",
+      "available": "17.84 GiB",
+      "available_bytes": 19158241280,
+      "capacity": "7.78%",
       "device": "/dev/sda3",
       "filesystem": "btrfs",
       "options": [
@@ -135,8 +136,8 @@
       ],
       "size": "19.70 GiB",
       "size_bytes": 21157117952,
-      "used": "1.48 GiB",
-      "used_bytes": 1593053184
+      "used": "1.51 GiB",
+      "used_bytes": 1616015360
     },
     "/dev": {
       "available": "457.77 MiB",
@@ -258,8 +259,8 @@
       "used_bytes": 303104
     },
     "/run": {
-      "available": "482.08 MiB",
-      "available_bytes": 505495552,
+      "available": "482.07 MiB",
+      "available_bytes": 505487360,
       "capacity": "0.11%",
       "device": "run",
       "filesystem": "tmpfs",
@@ -273,8 +274,8 @@
       ],
       "size": "482.61 MiB",
       "size_bytes": 506056704,
-      "used": "548.00 KiB",
-      "used_bytes": 561152
+      "used": "556.00 KiB",
+      "used_bytes": 569344
     },
     "/run/user/1000": {
       "available": "96.52 MiB",
@@ -320,7 +321,7 @@
     },
     "/vagrant": {
       "available": "633.98 GiB",
-      "available_bytes": 680731344896,
+      "available_bytes": 680728854528,
       "capacity": "30.29%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -330,8 +331,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "275.43 GiB",
-      "used_bytes": 295744839680
+      "used": "275.44 GiB",
+      "used_bytes": 295747330048
     }
   },
   "mtu_eth0": 1500,
@@ -374,6 +375,7 @@
           }
         ],
         "dhcp": "10.0.2.2",
+        "duplex": "full",
         "ip": "10.0.2.15",
         "ip6": "fe80::a00:27ff:fea2:3d7",
         "mac": "08:00:27:a2:03:d7",
@@ -382,7 +384,10 @@
         "netmask6": "ffff:ffff:ffff:ffff::",
         "network": "10.0.2.0",
         "network6": "fe80::",
-        "scope6": "link"
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "link",
+        "speed": 1000
       },
       "lo": {
         "bindings": [
@@ -410,6 +415,8 @@
         "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
         "network": "127.0.0.0",
         "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
         "scope6": "host"
       }
     },
@@ -483,6 +490,7 @@
     "threads": 1
   },
   "productname": "VirtualBox",
+  "productversion": "1.2",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/usr/lib/ruby/site_ruby/3.0.0",
@@ -535,14 +543,14 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 103,
+    "seconds": 119,
     "uptime": "0:01 hours"
   },
   "timezone": "UTC",
   "uptime": "0:01 hours",
   "uptime_days": 0,
   "uptime_hours": 0,
-  "uptime_seconds": 103,
+  "uptime_seconds": 119,
   "uuid": "33998003-ad73-e945-93b6-703ac3c9b74c",
   "virtual": "virtualbox"
 }

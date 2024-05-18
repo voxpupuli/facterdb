@@ -65,7 +65,7 @@ FacterDB::get_facts('osfamily=Debian')
 | AlmaLinux 9              |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
 | Amazon 2                 |     |     |     |     |     |  1  |     |     |
 | Amazon 2022              |     |     |  1  |     |     |     |     |     |
-| Archlinux                |     |     |  1  |  1  |  1  |  1  |     |     |
+| Archlinux                |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
 | CentOS 7                 |  1  |  1  |  1  |  1  |  1  |  1  |     |     |
 | CentOS 8                 |  1  |  1  |  1  |  1  |  1  |  1  |  1  |  1  |
 | CentOS 9                 |     |     |  1  |  1  |  1  |  1  |  1  |  1  |
