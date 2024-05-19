@@ -24,6 +24,15 @@ rescue LoadError
   end
 end
 
+begin
+  require 'yard'
+rescue LoadError
+  # No yard
+else
+  YARD::Rake::YardocTask.new
+  task yard: :database # rubocop:disable Rake/Desc
+end
+
 # Generate a human-friendly OS label based on a given factset
 def factset_to_os_label(fs)
   os_rel  = '???'
@@ -99,9 +108,47 @@ def factset_to_os_label(fs)
   label
 end
 
-desc 'generate a markdown table of Facter/OS coverage (for the README)'
-task :table do
+def normalize_arch(arch_str)
+  case arch_str
+  when 'x86_64', 'amd64'
+    'x86_64'
+  when 'i386'
+    'i386'
+  else
+    arch_str
+  end
+end
+
+def factset_hash_to_markdown(h, caption1: nil, caption2: nil, caption3: nil)
+  content = ''
+
+  h.each do |label1, data1|
+    indent = ''
+    content += "#{indent} - "
+    content += "#{caption1} " if caption1
+    content += "#{label1}\n"
+    indent += '  '
+    data1.each do |label2, data2|
+      content += "#{indent}- "
+      content += "#{caption2} " if caption2
+      content += "#{label2}:"
+
+      data2.each do |label3|
+        content += " #{caption3}" if caption3
+        content += " #{label3}"
+      end
+      content += "\n"
+    end
+  end
+
+  content
+end
+
+desc 'generate a markdown table of Facter/OS coverage'
+task :database do
   require_relative 'lib/facterdb'
+  FileUtils.mkdir_p 'database'
+
   # Turn on the source injection
   old_env = ENV.fetch('FACTERDB_INJECT_SOURCE', nil)
   ENV['FACTERDB_INJECT_SOURCE'] = 'true'
@@ -112,15 +159,42 @@ task :table do
   facter_versions = factsets.map do |x|
     Gem::Version.new(x[:facterversion].split('.')[0..1].join('.'))
   end.uniq.sort.map(&:to_s)
+
+  # Old table
   os_facter_matrix = {}
+
+  # New lists
+  os_facter_arch_list = {}
+  os_arch_facter_list = {}
+  facter_os_arch_list = {}
+  # Can't think of any reason facter_arch_os_list would be useful
+  arch_os_facter_list = {}
+  # Can't think of any reason arch_facter_os_list would be useful
 
   # Process the facts and create a hash of all the OS and facter combinations
   factsets.each do |facts|
     fv = facts[:facterversion].split('.')[0..1].join('.')
+    arch = normalize_arch(facts[:hardwaremodel]) || 'Missing Value'
     label = factset_to_os_label(facts)
     os_facter_matrix[label] ||= {}
     os_facter_matrix[label][fv] ||= 0
     os_facter_matrix[label][fv] += 1
+
+    os_facter_arch_list[label] ||= {}
+    os_facter_arch_list[label][fv] ||= []
+    os_facter_arch_list[label][fv] << arch
+
+    os_arch_facter_list[label] ||= {}
+    os_arch_facter_list[label][arch] ||= []
+    os_arch_facter_list[label][arch] << fv
+
+    facter_os_arch_list[fv] ||= {}
+    facter_os_arch_list[fv][label] ||= []
+    facter_os_arch_list[fv][label] << arch
+
+    arch_os_facter_list[arch] ||= {}
+    arch_os_facter_list[arch][label] ||= []
+    arch_os_facter_list[arch][label] << fv
   end
   # Extract the OS list
   os_versions = os_facter_matrix.keys.uniq.sort_by do |label|
@@ -130,24 +204,51 @@ task :table do
     string_pieces.zip(number_pieces).flatten.compact
   end
 
-  readme_path = File.expand_path(File.join(__dir__, 'README.md'))
-  readme = File.read(readme_path).split("\n")
-  new_readme = readme[0..readme.index { |r| r.start_with?('| ') } - 1]
-
   # Write out a nice table
   os_version_width = (os_versions.map { |x| x.size } + [17]).max
-  new_readme << "| #{'operating system'.center(os_version_width)} |#{facter_versions.map { |x| " #{x} |" }.join}"
-  new_readme << "| #{'-' * os_version_width} |#{facter_versions.map { |_x| ' --- |' }.join}"
+  facter_width = 3
+
+  rows = [
+    ['operating system'.center(os_version_width)] + facter_versions,
+    ['-' * os_version_width] + (['-' * facter_width] * facter_versions.length),
+  ]
+
   os_versions.each do |label|
-    fvs = facter_versions.map { |facter_version| os_facter_matrix[label][facter_version] || 0 }
-    row = "| #{label.ljust(os_version_width)} |"
-    fvs.each { |fv| row += ((fv > 0) ? " #{fv.to_s.center(3)} |" : '     |') }
-    new_readme << row
+    fvs = facter_versions.map do |facter_version|
+      version = os_facter_matrix[label][facter_version] || 0
+      (version > 0) ? version.to_s : ''
+    end
+    rows << ([label.ljust(os_version_width)] + fvs.map { |fv| fv.center(facter_width) })
   end
 
-  File.open(readme_path, 'w') do |fd|
-    fd.puts (new_readme + readme[readme.rindex { |r| r.start_with?('| ') } + 1..-1]).join("\n")
+  content = "# @title Table of Available Factsets\n\n"
+  content += "# Facter version and Operating System coverage\n\n"
+  rows.each do |row|
+    content += "| #{row.join(' | ')} |\n"
   end
+  content += "\n\nWhere the number (1, 2 etc.) are the number of factsets for that OS and facter combination (e.g., x86_64 and i386 architectures).\n"
+
+  File.write(File.join(__dir__, 'database', 'table.md'), content)
+
+  content = "# @title Available Factsets Grouped By OS -> Facter -> Architecture\n\n"
+  content += "# Available Facts Grouped By OS -> Facter\n\n"
+  content += factset_hash_to_markdown(os_facter_arch_list, caption2: 'Facter')
+  File.write(File.join(__dir__, 'database', 'list_os_facter_arch.md'), content)
+
+  content = "# @title Available Factsets Grouped By OS -> Architecture -> Facter Version\n\n"
+  content += "# Available Facts Grouped By OS -> Arch\n\n"
+  content += factset_hash_to_markdown(os_arch_facter_list)
+  File.write(File.join(__dir__, 'database', 'list_os_arch_facter.md'), content)
+
+  content = "# @title Available Factsets Grouped By Facter Version -> OS -> Architecture\n\n"
+  content += "# Available Facts Grouped By Facter -> OS\n\n"
+  content += factset_hash_to_markdown(facter_os_arch_list, caption1: 'Facter')
+  File.write(File.join(__dir__, 'database', 'list_facter_os_arch.md'), content)
+
+  content = "# @title Available Factsets Grouped By Architecture -> OS -> Facter Version\n\n"
+  content += "# Available Facts Grouped By Arch -> OS\n\n"
+  content += factset_hash_to_markdown(arch_os_facter_list)
+  File.write(File.join(__dir__, 'database', 'list_arch_os_facter.md'), content)
 end
 
 begin

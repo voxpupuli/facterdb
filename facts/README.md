@@ -45,11 +45,13 @@ Windows systems are also available.
 $ vagrant up --provision windows-server-2019-x86_64 windows-server-2022-x86_64 windows-10-x86_64 windows-11-x86_64
 ```
 
-Once new facts are built, the table listing supported facter versions and operating systems needs to be updated.
+You can build a list of supported facter versions and operating systems:
 
 ```
-$ bundle exec rake table
+$ bundle exec rake database
 ```
+
+These are also included in our YARD documentation build.
 
 ### Converted Facts
 

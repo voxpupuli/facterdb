@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.description = 'Contains facts from many Facter version on many Operating Systems'
   s.licenses    = 'Apache-2.0'
 
-  s.files       = `git ls-files`.split("\n")
+  s.files       = `git ls-files`.split("\n") + Dir['database/*']
   s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
 
   # we have that configured in our CI file
