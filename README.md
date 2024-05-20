@@ -57,6 +57,11 @@ require 'facterdb'
 FacterDB::get_facts('osfamily=Debian')
 ```
 
+## Included Factsets
+
+Starting with version 1.28.0 (May 2024), check [RubyDoc](https://www.rubydoc.info/gems/facterdb/) for Factsets included in each released gem.
+Check the [Voxpupuli website](https://voxpupuli.org/facterdb/) for Factsets included in the `master` branch.
+
 ## Add new Operating System support
 
 There is `Vagrantfile` to automagically populate `facts` for all supported operating systems by spawning a new VM and launches a provisioning scripts.

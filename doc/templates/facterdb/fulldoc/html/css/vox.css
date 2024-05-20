@@ -1,0 +1,39 @@
+.fixed_header .logo {
+  background-color: #0d6efd;
+  color: #fff;
+  padding: .75em;
+}
+
+.fixed_header .logo a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixed_header .logo a:link,
+.fixed_header .logo a:visited
+{
+  font-size: 1.4em;
+  color: #fff;
+}
+
+.fixed_header .logo img {
+  max-width: 32px;
+  display: inline-block;
+  vertical-align:middle;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+#full_list {
+  margin-top: 0;
+}
+
+.fixed_header {
+  height: auto;
+  position: static;
+}

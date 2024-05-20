@@ -1,2 +1,7 @@
+--output-dir ./build_docs
+--template-path doc/templates/
+--template facterdb
 --title 'FacterDB Documentation'
---files CHANGELOG.md,database/*
+--files README.md,CHANGELOG.md,database/*
+--asset images/
+--main doc/main.md
