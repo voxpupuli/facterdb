@@ -1,5 +1,43 @@
 # Changelog
 
+## [2.0.0](https://rubygems.org/gems/facterdb/versions/2.0.0) (2024-05-26)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.27.0...2.0.0)
+
+**Breaking changes:**
+
+- deprecate legacy facts [\#350](https://github.com/voxpupuli/facterdb/pull/350) ([bastelfreak](https://github.com/bastelfreak))
+- Drop EoL OracleLinux 6 factset [\#345](https://github.com/voxpupuli/facterdb/pull/345) ([bastelfreak](https://github.com/bastelfreak))
+- Drop EoL Fedora 32-35 facts [\#333](https://github.com/voxpupuli/facterdb/pull/333) ([bastelfreak](https://github.com/bastelfreak))
+- Drop EoL Ubuntu 16.04 facts [\#332](https://github.com/voxpupuli/facterdb/pull/332) ([bastelfreak](https://github.com/bastelfreak))
+- Drop EoL Debian 9/10 factsets [\#331](https://github.com/voxpupuli/facterdb/pull/331) ([bastelfreak](https://github.com/bastelfreak))
+- get\_facts.sh: Drop support for Puppet 7 [\#330](https://github.com/voxpupuli/facterdb/pull/330) ([bastelfreak](https://github.com/bastelfreak))
+- Drop Facter 3 and older factsets [\#298](https://github.com/voxpupuli/facterdb/pull/298) ([bastelfreak](https://github.com/bastelfreak))
+
+**Implemented enhancements:**
+
+- Gentoo: Regenerate factsets & Add missing factsets [\#349](https://github.com/voxpupuli/facterdb/pull/349) ([bastelfreak](https://github.com/bastelfreak))
+- Arch Linux: Regenerate factsets & Add missing Facter 4.6/4.7 factsets [\#348](https://github.com/voxpupuli/facterdb/pull/348) ([bastelfreak](https://github.com/bastelfreak))
+- Fedora 38/39: regenerate facts & Add Missing Facter 4.6/4.7 factsets & Switch to upstream images [\#346](https://github.com/voxpupuli/facterdb/pull/346) ([bastelfreak](https://github.com/bastelfreak))
+- Ensure we use the latest facter versions for each minor release [\#341](https://github.com/voxpupuli/facterdb/pull/341) ([bastelfreak](https://github.com/bastelfreak))
+- Fedora 37: Regenerate factsets & Add Facter 4.6/4.7 factsets [\#338](https://github.com/voxpupuli/facterdb/pull/338) ([bastelfreak](https://github.com/bastelfreak))
+- Fedora 36: Regenerate factsets & Add missing factsets for Facter 4.5/4.6/4.7 [\#336](https://github.com/voxpupuli/facterdb/pull/336) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- rubygems facter: Drop facter 4.0.52 & 4.1.1 [\#347](https://github.com/voxpupuli/facterdb/pull/347) ([bastelfreak](https://github.com/bastelfreak))
+- Fedora 36: Add IPv6 facts [\#343](https://github.com/voxpupuli/facterdb/pull/343) ([bastelfreak](https://github.com/bastelfreak))
+- Ensure every instance is started with IPv6 enabled [\#340](https://github.com/voxpupuli/facterdb/pull/340) ([bastelfreak](https://github.com/bastelfreak))
+- Ensure all facts have networking.ip6 fact [\#255](https://github.com/voxpupuli/facterdb/pull/255) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Customize YARD generation [\#352](https://github.com/voxpupuli/facterdb/pull/352) ([yakatz](https://github.com/yakatz))
+- Remove rhel\_alts script and update facts for OracleLinux 8 and 9 [\#344](https://github.com/voxpupuli/facterdb/pull/344) ([yakatz](https://github.com/yakatz))
+- Load puppet versions from shared file & Add missing factsets [\#334](https://github.com/voxpupuli/facterdb/pull/334) ([yakatz](https://github.com/yakatz))
+- List instead of table [\#327](https://github.com/voxpupuli/facterdb/pull/327) ([yakatz](https://github.com/yakatz))
+- Add test for augeas.version fact [\#319](https://github.com/voxpupuli/facterdb/pull/319) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [1.27.0](https://rubygems.org/gems/facterdb/versions/1.27.0) (2024-05-15)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.26.0...1.27.0)
@@ -43,6 +81,7 @@
 
 - CI: Build gem with --strict --verbose & add version contraints to dependencies [\#311](https://github.com/voxpupuli/facterdb/pull/311) ([bastelfreak](https://github.com/bastelfreak))
 - Add Ruby 3.3 to CI matrix [\#310](https://github.com/voxpupuli/facterdb/pull/310) ([bastelfreak](https://github.com/bastelfreak))
+- Update voxpupuli-rubocop requirement from ~\> 2.4.0 to ~\> 2.7.0 [\#308](https://github.com/voxpupuli/facterdb/pull/308) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.24.0](https://rubygems.org/gems/facterdb/versions/1.24.0) (2024-03-19)
 
@@ -51,6 +90,10 @@
 **Implemented enhancements:**
 
 - Rebuild RHEL facts on Vagrant [\#304](https://github.com/voxpupuli/facterdb/pull/304) ([yakatz](https://github.com/yakatz))
+
+**Merged pull requests:**
+
+- Update voxpupuli-rubocop requirement from ~\> 2.3.0 to ~\> 2.4.0 [\#299](https://github.com/voxpupuli/facterdb/pull/299) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.23.0](https://rubygems.org/gems/facterdb/versions/1.23.0) (2024-01-09)
 
@@ -66,9 +109,18 @@
 
 - Ensure the selinux topscope fact is present [\#296](https://github.com/voxpupuli/facterdb/pull/296) ([bastelfreak](https://github.com/bastelfreak))
 
+**Merged pull requests:**
+
+- Update voxpupuli-rubocop requirement from ~\> 2.1.0 to ~\> 2.3.0 [\#295](https://github.com/voxpupuli/facterdb/pull/295) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update voxpupuli-rubocop requirement from ~\> 2.0.0 to ~\> 2.1.0 [\#291](https://github.com/voxpupuli/facterdb/pull/291) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.22.0](https://rubygems.org/gems/facterdb/versions/1.22.0) (2023-11-13)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.21.0...1.22.0)
+
+**Breaking changes:**
+
+- Drop Ruby 2.5/2.6 [\#274](https://github.com/voxpupuli/facterdb/pull/274) ([bastelfreak](https://github.com/bastelfreak))
 
 **Implemented enhancements:**
 
@@ -81,6 +133,10 @@
 **Fixed bugs:**
 
 - Correct class documentation [\#281](https://github.com/voxpupuli/facterdb/pull/281) ([ekohl](https://github.com/ekohl))
+
+**Merged pull requests:**
+
+- Update voxpupuli-rubocop requirement from ~\> 1.3.0 to ~\> 2.0.0 [\#280](https://github.com/voxpupuli/facterdb/pull/280) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [1.21.0](https://rubygems.org/gems/facterdb/versions/1.21.0) (2023-01-25)
 
@@ -324,7 +380,6 @@
 
 **Merged pull requests:**
 
-- release 1.6.0 [\#163](https://github.com/voxpupuli/facterdb/pull/163) ([bastelfreak](https://github.com/bastelfreak))
 - Archlinux: Update fact sets [\#162](https://github.com/voxpupuli/facterdb/pull/162) ([bastelfreak](https://github.com/bastelfreak))
 
 ## [1.5.0](https://rubygems.org/gems/facterdb/versions/1.5.0) (2020-11-19)
