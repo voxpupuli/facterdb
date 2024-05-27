@@ -12,6 +12,13 @@ A Gem that contains a lot of facts for a lot of Operating Systems.
 
 ![FacterDB](images/facterdb.png)
 
+## Legacy Fact Deprecation
+
+With facterdb 2, Puppet legacy facts are deprecated and will be removed in facterdb 3.
+
+Some facts were declared legacy a long time ago: [Core facts documentation](https://www.puppet.com/docs/puppet/latest/core_facts.html)  
+With Puppet 8 they are disabled by default. With the release of facterdb 3 we will also remove the legacy facts from our factsets.
+
 ## GEM Documentation
 
 Start with the {file:README.md}.
