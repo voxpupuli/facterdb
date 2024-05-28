@@ -1,6 +1,16 @@
 # Changelog
 
-## [2.0.0](https://rubygems.org/gems/facterdb/versions/2.0.0) (2024-05-26)
+## [2.0.1](https://rubygems.org/gems/facterdb/versions/2.0.1) (2024-05-28)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/2.0.0...2.0.1)
+
+The 2.0.0 wasn't released to rubygems due to a CI failure. 2.0.1 fixed the CI configuration and doesn't contain any other changes.
+
+**Fixed bugs:**
+
+- CI: Install gems in release workflow [\#356](https://github.com/voxpupuli/facterdb/pull/356) ([bastelfreak](https://github.com/bastelfreak))
+
+## [2.0.0](https://rubygems.org/gems/facterdb/versions/2.0.0) (2024-05-28)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/1.27.0...2.0.0)
 
