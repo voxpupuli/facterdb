@@ -72,15 +72,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'centos-7-x86_64', autostart: false do |host|
-    host.vm.box = 'centos/7'
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder '.', '/vagrant', nfs: true, nfs_udp: false
-    host.vm.provision 'shell', inline: 'yum -y install ruby-devel gcc wget net-tools'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
   # images are at https://cloud.centos.org/centos/9-stream/x86_64/images/
   # can be imported with `vagrant box add --name centos/stream9 $url` you can also
   # use the host.vm.box_url below
