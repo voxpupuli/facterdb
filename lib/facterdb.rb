@@ -137,13 +137,17 @@ module FacterDB
 
   # @return [Array[Hash[Symbol, Any]]] array of hashes of facts
   # @param filter [Object] The filter to convert to jgrep string
-  def self.get_facts(filter = nil, cache = true)
+  # @param symbolize_keys [Boolean]
+  #   Whether to symbolize the keys. Note this is only on the top level and not
+  #   on nested values.
+  def self.get_facts(filter = nil, cache = true, symbolize_keys: true)
     if cache && filter && filter == Thread.current[:facterdb_last_filter_seen]
       return Thread.current[:facterdb_last_facts_seen]
     end
 
     filter_str = generate_filter_str(filter)
-    result = JGrep.jgrep(database, filter_str).map { |hash| hash.map { |k, v| [k.to_sym, v] }.to_h }
+    result = JGrep.jgrep(database, filter_str)
+    result = result.map { |hash| hash.transform_keys(&:to_sym) } if symbolize_keys
     if cache
       Thread.current[:facterdb_last_filter_seen] = filter
       Thread.current[:facterdb_last_facts_seen] = result
