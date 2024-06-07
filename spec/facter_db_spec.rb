@@ -319,12 +319,33 @@ describe FacterDB do
   end
 
   describe '.get_facts' do
-    subject(:result) { FacterDB.get_facts(filter) }
+    subject(:result) { FacterDB.get_facts(filter, symbolize_keys: symbolize_keys) }
 
     let(:filter) { nil }
+    let(:symbolize_keys) { nil }
 
     context 'without parameters' do
       include_examples 'returns a result'
+    end
+
+    context 'with stringified output' do
+      let(:symbolize_keys) { false }
+
+      it 'returns strings as keys in factsets' do
+        result.each do |factset|
+          expect(factset.keys).to all(be_an_instance_of(String))
+        end
+      end
+    end
+
+    context 'with symbolized output' do
+      let(:symbolize_keys) { true }
+
+      it 'returns strings as keys in factsets' do
+        result.each do |factset|
+          expect(factset.keys).to all(be_an_instance_of(Symbol))
+        end
+      end
     end
 
     context 'with an Array filter' do
