@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.1.0](https://rubygems.org/gems/facterdb/versions/2.1.0) (2024-06-08)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/2.0.1...2.1.0)
+
+**Implemented enhancements:**
+
+- Make symbolize keys optional  [\#364](https://github.com/voxpupuli/facterdb/pull/364) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Fix Arch Linux factsets [\#366](https://github.com/voxpupuli/facterdb/pull/366) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Add tests for OS core facts [\#367](https://github.com/voxpupuli/facterdb/pull/367) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [2.0.1](https://rubygems.org/gems/facterdb/versions/2.0.1) (2024-05-28)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/2.0.0...2.0.1)
