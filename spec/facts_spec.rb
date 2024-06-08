@@ -117,6 +117,14 @@ describe 'Default Facts' do
         expect(content['systemd_version']).to be_nil
         expect(content['systemd_internal_services']).to be_nil
       end
+
+      # those are used in newer rspec-puppet-facts versions
+      # by ensuring those facts exists, we can drop a huge amount of logic in rspec-puppet-facts
+      it 'contains the mandatory OS facts' do
+        expect(content['os']['release']['major']).to not_be_nil.and not_be_empty
+        expect(content['os']['name']).to not_be_nil.and not_be_empty
+        expect(content['os']['hardware']).to not_be_nil.and not_be_empty
+      end
     end
   end
 end
