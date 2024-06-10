@@ -78,37 +78,6 @@ module FacterDB
     (external_fact_files + default_fact_files).uniq
   end
 
-  # @deprecated Use {.get_facts} instead.
-  def self.get_os_facts(facter_version = '*', filter = [])
-    if facter_version == '*'
-      if filter.is_a?(Array)
-        filter_str = filter.map { |f| f.map { |k, v| "#{k}=#{v}" }.join(' and ') }.join(' or ')
-      elsif filter.is_a?(Hash)
-        filter_str = filter.map { |k, v| "#{k}=#{v}" }.join(' and ')
-      elsif filter.is_a?(String)
-        filter_str = filter
-      else
-        raise 'filter must be either an Array a Hash or a String'
-      end
-    elsif filter.is_a?(Array)
-      filter_str = "facterversion=/^#{facter_version}/ and (#{filter.map do |f|
-                                                                f.map do |k, v|
-                                                                  "#{k}=#{v}"
-                                                                end.join(' and ')
-                                                              end.join(' or ')})"
-    elsif filter.is_a?(Hash)
-      filter_str = "facterversion=/^#{facter_version}/ and (#{filter.map { |k, v| "#{k}=#{v}" }.join(' and ')})"
-    elsif filter.is_a?(String)
-      filter_str = "facterversion=/^#{facter_version}/ and (#{filter})"
-    else
-      raise 'filter must be either an Array a Hash or a String'
-    end
-
-    warn "[DEPRECATION] `get_os_facts` is deprecated. Please use `get_facts(#{filter_str})` instead."
-
-    get_facts(filter_str)
-  end
-
   # @return [String] the string filter
   # @param filter [Object] The filter to convert to jgrep string
   def self.generate_filter_str(filter = nil)
