@@ -1,9 +1,4 @@
 {
-  "selinux": false,
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
-  "hostname": "foo",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
@@ -46,8 +41,6 @@
   "filesystems": "iso9660,xfs",
   "fips_enabled": false,
   "gem_version": "~> 4.2.0",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "identity": {
     "gid": 1000,
     "group": "stack",
@@ -55,7 +48,6 @@
     "uid": 1000,
     "user": "stack"
   },
-  "ipaddress": "10.109.1.2",
   "is_virtual": false,
   "kernel": "Linux",
   "kernelmajversion": "5.13",
@@ -189,9 +181,6 @@
     "primary": "ens3",
     "scope6": "link"
   },
-  "operatingsystem": "OracleLinux",
-  "operatingsystemmajrelease": "9",
-  "operatingsystemrelease": "9",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -218,7 +207,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/vda1": {
       "size": "1.00 MiB",

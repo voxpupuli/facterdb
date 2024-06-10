@@ -1,5 +1,4 @@
 {
-  "ipaddress": "192.168.0.1",
   "is_virtual": true,
   "solaris_zones": {
     "current": "global",
@@ -22,8 +21,6 @@
   },
   "facterversion": "4.0.52",
   "timezone": "PST",
-  "operatingsystem": "Solaris",
-  "osfamily": "Solaris",
   "os": {
     "name": "Solaris",
     "hardware": "sun4v",
@@ -574,9 +571,6 @@
   "puppetserver_installed": false,
   "context": "",
   "pip_version": "6.0.8",
-  "domain": "example.com",
   "ldom_domainname": "foo",
-  "fqdn": "foo.example.com",
-  "hostname": "foo",
   "ldom_domain_name": "foo"
 }

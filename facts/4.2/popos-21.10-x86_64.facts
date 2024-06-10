@@ -1,23 +1,8 @@
 {
-  "selinux": false,
   "aio_agent_version": "7.12.1",
   "augeas": {
     "version": "1.12.0"
   },
-  "architecture": "amd64",
-  "augeasversion": "1.12.0",
-  "bios_release_date": "01/25/2021",
-  "bios_vendor": "American Megatrends International, LLC.",
-  "bios_version": "A.C0",
-  "blockdevice_nvme0n1_model": "Samsung SSD 980 PRO 2TB",
-  "blockdevice_nvme0n1_size": 2000398934016,
-  "blockdevices": "nvme0n1",
-  "boardassettag": "To be filled by O.E.M.",
-  "boardmanufacturer": "Micro-Star International Co., Ltd.",
-  "boardproductname": "MPG X570 GAMING PLUS (MS-7C37)",
-  "boardserialnumber": "01234567",
-  "chassisassettag": "To be filled by O.E.M.",
-  "chassistype": "Desktop",
   "disks": {
     "nvme0n1": {
       "model": "Samsung SSD 980 PRO 2TB",
@@ -49,15 +34,9 @@
       "uuid": "70587895-2a8a-7d1a-a956-d8bbc13e1281"
     }
   },
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
   "facterversion": "4.2.5",
   "filesystems": "ext2,ext3,ext4,squashfs,vfat",
   "fips_enabled": false,
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -65,21 +44,11 @@
     "uid": 0,
     "user": "root"
   },
-  "id": "root",
-  "ipaddress": "192.168.0.52",
   "is_virtual": false,
   "kernel": "Linux",
   "kernelmajversion": "5.15",
   "kernelrelease": "5.15.5-76051505-generic",
   "kernelversion": "5.15.5",
-  "lsbdistcodename": "impish",
-  "lsbdistdescription": "Pop!_OS 21.10",
-  "lsbdistid": "Pop",
-  "lsbdistrelease": "21.10",
-  "lsbmajdistrelease": "21.10",
-  "macaddress": "52:54:00:0a:d2:26",
-  "netmask": "255.255.255.0",
-
   "load_averages": {
     "15m": 0.72,
     "1m": 0.51,
@@ -421,11 +390,6 @@
       "enabled": false
     }
   },
-  "operatingsystem": "Pop!_OS",
-  "operatingsystemmajrelease": "21.10",
-  "operatingsystemrelease": "21.10",
-  "osfamily": "Debian",
-
   "partitions": {
     "/dev/mapper/cryptswap": {
       "filesystem": "swap",

@@ -1,8 +1,4 @@
 {
-  "architecture": "amd64",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
   "disks": {
     "ada0": {
       "model": "VBOX HARDDISK",
@@ -24,14 +20,7 @@
       "uuid": "86720522-a1c2-9241-8bf9-db6de84a9d1a"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.2.1",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -39,7 +28,6 @@
     "uid": 0,
     "user": "root"
   },
-  "ipaddress": "10.0.2.15",
   "is_virtual": true,
   "kernel": "FreeBSD",
   "kernelmajversion": "11",
@@ -50,8 +38,6 @@
     "1m": 0.39208984375,
     "5m": 0.10595703125
   },
-  "macaddress": "08:00:27:a3:ff:85",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -73,15 +59,9 @@
       "used_bytes": 478531584
     }
   },
-  "memoryfree": "529.18 MiB",
-  "memoryfree_mb": 529.1796875,
-  "memorysize": "985.54 MiB",
-  "memorysize_mb": 985.54296875,
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_lo0": "127.0.0.0",
@@ -144,9 +124,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "FreeBSD",
-  "operatingsystemmajrelease": "11",
-  "operatingsystemrelease": "11.4-RELEASE-p9",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -160,7 +137,6 @@
       "patchlevel": "9"
     }
   },
-  "osfamily": "FreeBSD",
   "partitions": {
     "ada0p1": {
       "partlabel": "gptboot0",
@@ -182,9 +158,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/home/vagrant/bin",
-  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
-  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
-  "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "amd64",
@@ -194,16 +167,11 @@
     ],
     "speed": "3.79 GHz"
   },
-  "productname": "VirtualBox",
   "ruby": {
     "platform": "amd64-freebsd11",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
     "version": "2.7.3"
   },
-  "rubyplatform": "amd64-freebsd11",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-  "rubyversion": "2.7.3",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -236,11 +204,6 @@
   "sshfp_ed25519": "SSHFP 4 1 ab7c9e209f87f4e8321b13c6481482dda6fa34d9\nSSHFP 4 2 d934ba8e9c55d0794218dc3c8728f1c09bdd407eac8e8df3990e086678f0d131",
   "sshfp_rsa": "SSHFP 1 1 90f05081e454c2f9bc5b81a46c2c1214605481b4\nSSHFP 1 2 6ebeb0740f993885cbf7bb1d0beefde048614ae657f10a60aa8abbb4e11b5a70",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCsFz4abAckdE8cmgMTW7/yptOhJaIi7D/LqAZOhUdbv+xS4ZDICwyhG3z68SPDjEZqqWjj2Vbqujhzas/Ld/MlvMhlbiM8yonPDJ/on+tKHzjLQEb4SM52skdiFiCnDzQhKCgtTVgOZFtGZz7tM6PCvPAmJsedEVP14ueXam/G7m33hyGd8L3eZirGJTnVZDWItKvokqHmSRmC0qAJqd3llqdCPHqsWMrmwJAPgrC3gRXMAhkbM6XshayHa4pZC24PP/lfb4kqBDfLyUzl5hoWXGPpFUXZXZevZNgp7Jk99NqgTAixUpmYrNgo4Fw1Nuy8FdD4UoY7PWgTHTZVetTp",
-  "swapencrypted": false,
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2048.0,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -248,11 +211,6 @@
     "uptime": "0:00 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 35,
-  "uuid": "86720522-a1c2-9241-8bf9-db6de84a9d1a",
   "virtual": "generic",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

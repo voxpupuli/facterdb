@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "8.6.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.14.1"
   },
-  "augeasversion": "1.14.1",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 20971520000,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "system": null
   },
@@ -51,22 +38,15 @@
       "version": "1.2"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.7.0",
   "filesystems": "vfat,xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "162988",
       "version": "7.0.18"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -75,8 +55,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:feae:15f5",
   "ipaddress6_eth0": "fe80::a00:27ff:feae:15f5",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
@@ -91,12 +69,7 @@
     "1m": 1.24,
     "5m": 0.86
   },
-  "lsbdistrelease": "9.4",
-  "lsbmajdistrelease": "9",
-  "lsbminordistrelease": "4",
-  "macaddress": "08:00:27:ae:15:f5",
   "macaddress_eth0": "08:00:27:ae:15:f5",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "561.33 MiB",
@@ -108,10 +81,6 @@
       "used_bytes": 402571264
     }
   },
-  "memoryfree": "561.33 MiB",
-  "memoryfree_mb": 561.33203125,
-  "memorysize": "945.25 MiB",
-  "memorysize_mb": 945.25390625,
   "mountpoints": {
     "/": {
       "available": "16.57 GiB",
@@ -413,14 +382,10 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_lo": "::1",
   "network_eth0": "10.0.2.0",
@@ -505,9 +470,6 @@
     "primary": "eth0",
     "scope6": "link"
   },
-  "operatingsystem": "AlmaLinux",
-  "operatingsystemmajrelease": "9",
-  "operatingsystemrelease": "9.4",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -537,7 +499,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "partlabel": "biosboot",
@@ -574,9 +535,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-  "processorcount": 1,
   "processors": {
     "cores": 1,
     "count": 1,
@@ -588,7 +546,6 @@
     "speed": "1.70 GHz",
     "threads": 1
   },
-  "productname": "VirtualBox",
   "productversion": "1.2",
   "puppetversion": "8.6.0",
   "ruby": {
@@ -596,19 +553,8 @@
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
     "version": "3.2.3"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.3",
-  "scope6": "link",
   "scope6_eth0": "link",
   "scope6_lo": "host",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "33",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -648,10 +594,5 @@
     "uptime": "0:05 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:05 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 310,
-  "uuid": "16a6c05e-0363-0349-b676-e1cf7b1d48c8",
   "virtual": "virtualbox"
 }

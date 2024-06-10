@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "7.17.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 20971520000,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "system": null
   },
@@ -49,23 +36,16 @@
       "uuid": "590c38ef-f707-8c42-9289-5d5f2c1402af"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.0.52",
   "filesystems": "xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
   "gem_version": "~> 4.0.0",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "150636",
       "version": "6.1.34"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -74,8 +54,6 @@
     "user": "root"
   },
   "interfaces": "enp0s3,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:fe00:788a",
   "ipaddress6_enp0s3": "fe80::a00:27ff:fe00:788a",
   "ipaddress6_lo": "::1",
   "ipaddress_enp0s3": "10.0.2.15",
@@ -90,12 +68,7 @@
     "1m": 0.43,
     "5m": 0.11
   },
-  "lsbdistrelease": "9.0",
-  "lsbmajdistrelease": "9",
-  "lsbminordistrelease": "0",
-  "macaddress": "08:00:27:00:78:8a",
   "macaddress_enp0s3": "08:00:27:00:78:8a",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "645.66 MiB",
@@ -107,10 +80,6 @@
       "used_bytes": 330227712
     }
   },
-  "memoryfree": "645.66 MiB",
-  "memoryfree_mb": 645.66,
-  "memorysize": "960.59 MiB",
-  "memorysize_mb": 960.59,
   "mountpoints": {
     "/": {
       "available": "17.97 GiB",
@@ -310,14 +279,10 @@
   },
   "mtu_enp0s3": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_enp0s3": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_enp0s3": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_enp0s3": "fe80::",
   "network6_lo": "::1",
   "network_enp0s3": "10.0.2.0",
@@ -390,9 +355,6 @@
     "primary": "enp0s3",
     "scope6": "link"
   },
-  "operatingsystem": "AlmaLinux",
-  "operatingsystemmajrelease": "9",
-  "operatingsystemrelease": "9.0",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -422,7 +384,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "partuuid": "368a572a-a18a-429d-9c34-bf804a222ac5",
@@ -439,9 +400,6 @@
     }
   },
   "path": "/home/vagrant/vendor/bundler/ruby/2.7.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/root/.local/bin:/root/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
-  "processorcount": 1,
   "processors": {
     "count": 1,
     "isa": "x86_64",
@@ -451,25 +409,13 @@
     "physicalcount": 1,
     "speed": "3.79 GHz"
   },
-  "productname": "VirtualBox",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.6"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.6",
-  "scope6": "link",
   "scope6_enp0s3": "link",
   "scope6_lo": "host",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "33",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -509,10 +455,5 @@
     "uptime": "0:00 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:00 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 47,
-  "uuid": "590c38ef-f707-8c42-9289-5d5f2c1402af",
   "virtual": "virtualbox"
 }

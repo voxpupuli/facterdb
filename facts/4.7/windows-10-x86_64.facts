@@ -1,6 +1,5 @@
 {
   "aio_agent_version": "8.6.0",
-  "architecture": "x64",
   "dhcp_servers": {
     "Ethernet": "10.0.2.2",
     "system": "10.0.2.2"
@@ -13,28 +12,20 @@
       "uuid": "6B456DEB-9630-430D-9F85-AEBD695A160B"
     }
   },
-  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "4.7.0",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "hardwareisa": "x64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "161095",
       "version": "7.0.14"
     }
   },
-  "id": "FOO\\vagrant",
   "identity": {
     "privileged": true,
     "user": "FOO\\vagrant"
   },
   "interfaces": "Ethernet",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::4c6a:201b:6dd8:dfcc",
   "ipaddress6_Ethernet": "fe80::4c6a:201b:6dd8:dfcc",
   "ipaddress_Ethernet": "10.0.2.15",
   "is_virtual": true,
@@ -42,9 +33,7 @@
   "kernelmajversion": "10.0",
   "kernelrelease": "10.0.19045",
   "kernelversion": "10.0.19045",
-  "macaddress": "08:00:27:85:56:BC",
   "macaddress_Ethernet": "08:00:27:85:56:BC",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "2.53 GiB",
@@ -56,17 +45,9 @@
       "used_bytes": 1557131264
     }
   },
-  "memoryfree": "2.53 GiB",
-  "memoryfree_mb": 2594.6953125,
-  "memorysize": "3.98 GiB",
-  "memorysize_mb": 4079.69140625,
   "mtu_Ethernet": 1500,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
   "netmask_Ethernet": "255.255.255.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_Ethernet": "fe80::",
   "network_Ethernet": "10.0.2.0",
   "networking": {
@@ -114,9 +95,6 @@
     "primary": "Ethernet",
     "scope6": "link"
   },
-  "operatingsystem": "windows",
-  "operatingsystemmajrelease": "10",
-  "operatingsystemrelease": "10",
   "os": {
     "architecture": "x64",
     "family": "windows",
@@ -135,11 +113,7 @@
       "system32": "C:\\Windows\\system32"
     }
   },
-  "osfamily": "windows",
   "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\OpenSSH-Win64;C:\\Users\\vagrant\\AppData\\Local\\Microsoft\\WindowsApps",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Xeon(R) CPU E5-2667 v3 @ 3.20GHz",
-  "processorcount": 2,
   "processors": {
     "cores": 2,
     "count": 2,
@@ -150,19 +124,13 @@
     "physicalcount": 1,
     "threads": 1
   },
-  "productname": "VirtualBox",
   "puppetversion": "8.6.0",
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
     "version": "3.2.3"
   },
-  "rubyplatform": "x64-mingw32",
-  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.3",
-  "scope6": "link",
   "scope6_Ethernet": "link",
-  "serialnumber": "0",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -205,7 +173,6 @@
   "sshfp_ed25519": "SSHFP 4 1 5b2b28c04b8a81b54399e20e2d36946298ed0984\nSSHFP 4 2 ee29a9053223bb924a4da7a89d16be7f041d9dd422428a31d1c3694b57d7a05e",
   "sshfp_rsa": "SSHFP 1 1 31acd9fc22a72d0cad2f671cb8fb61e60a40172b\nSSHFP 1 2 35c2e8c6c2416d20539b2c42afff5b21c9b4f6795dbab497038d1d369d76771b",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDBaNeXcnDCdoHwqqk6NjPsbHQ25/btQOzW9UzeV7AIF5lFqeshEIvyJXnSnQbgO770dNMcsTi4/lXbTs/0GsrLFQwZL/h0a+hDO0Nb8ZecNsev82Jnhmxw0ikMLfRysdPePhQxKeHD8T8Q/X20TWvpHQ8eJ47P2jHEB6muSP/9eCTSQzlvZ90a4CnyiJa0ambx8qw9nrLnA8pXH3xiHvhDi9FwFbUlkqt49EzayglsumIhC2VZPvJpylT4dIcMPAkpPHfjCKtjfKTU32EGygDuFtCw9KreUw7eOAPqoRBYSH8TEl/pxBEY32Wo3l5GImVMx7JRKdv89nzB2wB6v8630F9/07WczAkeeCoJ9vW+JRPvNngSeRKvR2E5QEAkHu6d7zT0BFXVocDI5P+NFlmgj87vliBuX6O8fVWLWOGgsQLaMbDuUI5VXI475llGU/hrEFwsQjpsHEu+A1UYJgvhge3TRzVYwB/7A4m9+MPwTyKD45WhEp3vMoV3dTKzleU=",
-  "system32": "C:\\Windows\\system32",
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -213,15 +180,5 @@
     "uptime": "0:07 hours"
   },
   "timezone": "Coordinated Universal Time",
-  "uptime": "0:07 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 427,
-  "uuid": "6B456DEB-9630-430D-9F85-AEBD695A160B",
-  "virtual": "virtualbox",
-  "windows_display_version": "22H2",
-  "windows_edition_id": "EnterpriseEval",
-  "windows_installation_type": "Client",
-  "windows_product_name": "Windows 10 Enterprise Evaluation",
-  "windows_release_id": "22H2"
+  "virtual": "virtualbox"
 }
