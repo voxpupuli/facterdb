@@ -1,8 +1,4 @@
 {
-  "architecture": "amd64",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
   "disks": {
     "ada0": {
       "model": "VBOX HARDDISK",
@@ -24,15 +20,8 @@
       "uuid": "dc77188a-5cf2-e84a-9c9b-0cb604ae8808"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.1.1",
-  "fqdn": "foo.example.com",
   "gem_version": "~> 4.1.0",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -40,7 +29,6 @@
     "uid": 0,
     "user": "root"
   },
-  "ipaddress": "10.0.2.15",
   "is_virtual": true,
   "kernel": "FreeBSD",
   "kernelmajversion": "13",
@@ -51,8 +39,6 @@
     "1m": 0.39501953125,
     "5m": 0.3662109375
   },
-  "macaddress": "08:00:27:37:c2:4d",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -74,10 +60,6 @@
       "used_bytes": 339726336
     }
   },
-  "memoryfree": "660.50 MiB",
-  "memoryfree_mb": 660.49609375,
-  "memorysize": "984.48 MiB",
-  "memorysize_mb": 984.484375,
   "mountpoints": {
     "/": {
       "available": "58.48 GiB",
@@ -293,11 +275,9 @@
       "used_bytes": 98304
     }
   },
-  "netmask": "255.255.255.0",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_em0": "255.255.255.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.0.2.0",
   "network6_lo0": "::1",
   "network_em0": "10.0.2.0",
   "network_lo0": "127.0.0.0",
@@ -360,9 +340,6 @@
     "network": "10.0.2.0",
     "primary": "em0"
   },
-  "operatingsystem": "FreeBSD",
-  "operatingsystemmajrelease": "13",
-  "operatingsystemrelease": "13.0-RELEASE",
   "os": {
     "architecture": "amd64",
     "family": "FreeBSD",
@@ -375,7 +352,6 @@
       "minor": "0"
     }
   },
-  "osfamily": "FreeBSD",
   "partitions": {
     "ada0p1": {
       "partlabel": "gptboot0",
@@ -397,9 +373,6 @@
     }
   },
   "path": "/usr/home/vagrant/vendor/bundler/ruby/2.7/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/root/bin",
-  "processor0": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
-  "processor1": "Intel(R) Core(TM) i7-9800X CPU @ 3.80GHz",
-  "processorcount": 2,
   "processors": {
     "count": 2,
     "isa": "amd64",
@@ -409,16 +382,11 @@
     ],
     "speed": "3.79 GHz"
   },
-  "productname": "VirtualBox",
   "ruby": {
     "platform": "amd64-freebsd13",
     "sitedir": "/usr/local/lib/ruby/site_ruby/2.7",
     "version": "2.7.4"
   },
-  "rubyplatform": "amd64-freebsd13",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/2.7",
-  "rubyversion": "2.7.4",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -451,11 +419,6 @@
   "sshfp_ed25519": "SSHFP 4 1 882c76c1ba285d186b53bb6e2a6ead8e960cc951\nSSHFP 4 2 fd302981dcc80d537e25eca6399a36a9c7a39d2a0656555e15e5f35bad0d678e",
   "sshfp_rsa": "SSHFP 1 1 a95edf0f08db96e27bcb0fd27428304fb0883037\nSSHFP 1 2 5dc90d4febda1dd40bc062d360bf104d36e482ea81a2bb68f83e140f5d0ac484",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCvTUsmTLlYzmSFQBalEC6yoI2nHsROPn6sUXXOAClXC9jwA52cP/InDscEnK6ubdiY4bivlXfZNJJdjqVWiv3E8wG8M8i7S2g7JcfF7615/L9w5GA7qwneCNUtwhIdwiYptCzxctkftwLmGKfWOZw7alvt7ebzPJjuw7KBKGBxOhG8oDaMmnTWRO2JjuR1bpMxbCj2NCGAe+ZTcwJfqtrVKBGZM2A+/ZqVqMHR5lYCj6lRUyOFKxa0OmkFt9MXAkJra11lqd+LcyI9PdcMom9UicLhv91HXxwuET4IHoUxvusr8L1ZP7iBKjH68kBSdpOhdXoqokOXqzWc/kYAdbdd",
-  "swapencrypted": false,
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2048.0,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2048.0,
   "system_uptime": {
     "days": 0,
     "hours": 21,
@@ -463,11 +426,6 @@
     "uptime": "21:18 hours"
   },
   "timezone": "UTC",
-  "uptime": "21:18 hours",
-  "uptime_days": 0,
-  "uptime_hours": 21,
-  "uptime_seconds": 76705,
-  "uuid": "dc77188a-5cf2-e84a-9c9b-0cb604ae8808",
   "virtual": "vbox",
   "zfs_featurenumbers": "1,2,3,4,5",
   "zfs_version": "5",

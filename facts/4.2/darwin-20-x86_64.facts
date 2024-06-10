@@ -1,10 +1,8 @@
 {
   "aio_agent_version": "7.9.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.12.0"
   },
-  "augeasversion": "1.12.0",
   "dhcp_servers": {
     "en0": "10.32.22.9",
     "system": "10.32.22.9"
@@ -14,15 +12,8 @@
       "name": "VMware7,1"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.2.2",
   "filesystems": "apfs,autofs,devfs,hfs,vmhgfs",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "i386",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -31,8 +22,6 @@
     "user": "root"
   },
   "interfaces": "en0,gif0,lo0,stf0,utun0,utun1",
-  "ipaddress": "10.16.126.40",
-  "ipaddress6": "fe80::c7a:6793:cf7b:e887",
   "ipaddress6_en0": "fe80::c7a:6793:cf7b:e887",
   "ipaddress6_lo0": "::1",
   "ipaddress6_utun0": "fe80::5442:4f69:c81c:c1b5",
@@ -49,13 +38,7 @@
     "1m": 1.59,
     "5m": 1.65
   },
-  "macaddress": "00:50:56:9a:04:1d",
   "macaddress_en0": "00:50:56:9a:04:1d",
-  "macosx_buildversion": "20G80",
-  "macosx_productname": "macOS",
-  "macosx_productversion": "11.5.1",
-  "macosx_productversion_major": "11",
-  "macosx_productversion_minor": "5",
   "macosx_productversion_patch": "1",
   "memory": {
     "system": {
@@ -68,10 +51,6 @@
       "used_bytes": 4043390976
     }
   },
-  "memoryfree": "239.92 MiB",
-  "memoryfree_mb": 239.921875,
-  "memorysize": "4.00 GiB",
-  "memorysize_mb": 4096.0,
   "mountpoints": {
     "/": {
       "available": "62.12 GiB",
@@ -240,16 +219,12 @@
   "mtu_stf0": 1280,
   "mtu_utun0": 1380,
   "mtu_utun1": 2000,
-  "netmask": "255.255.240.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_en0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask6_utun0": "ffff:ffff:ffff:ffff::",
   "netmask6_utun1": "ffff:ffff:ffff:ffff::",
   "netmask_en0": "255.255.240.0",
   "netmask_lo0": "255.0.0.0",
-  "network": "10.16.112.0",
-  "network6": "fe80::",
   "network6_en0": "fe80::",
   "network6_lo0": "::1",
   "network6_utun0": "fe80::",
@@ -368,9 +343,6 @@
     "primary": "en0",
     "scope6": "link"
   },
-  "operatingsystem": "Darwin",
-  "operatingsystemmajrelease": "20",
-  "operatingsystemrelease": "20.6.0",
   "os": {
     "architecture": "x86_64",
     "family": "Darwin",
@@ -392,12 +364,7 @@
       "minor": "6"
     }
   },
-  "osfamily": "Darwin",
   "path": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/puppetlabs/bin",
-  "physicalprocessorcount": 2,
-  "processor0": "Intel(R) Xeon(R) CPU E5-1680 v2 @ 3.00GHz",
-  "processor1": "Intel(R) Xeon(R) CPU E5-1680 v2 @ 3.00GHz",
-  "processorcount": 2,
   "processors": {
     "cores": 2,
     "count": 2,
@@ -410,41 +377,16 @@
     "speed": "2.86 GHz",
     "threads": 1
   },
-  "productname": "VMware7,1",
   "puppetversion": "7.9.0",
   "ruby": {
     "platform": "x86_64-darwin20",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.3"
   },
-  "rubyplatform": "x86_64-darwin20",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.3",
-  "scope6": "link",
   "scope6_en0": "link",
   "scope6_lo0": "host",
   "scope6_utun0": "link",
   "scope6_utun1": "link",
-  "sp_boot_mode": "Normal",
-  "sp_boot_volume": "Macintosh HD",
-  "sp_cpu_type": "Unknown",
-  "sp_current_processor_speed": "2.86 GHz",
-  "sp_kernel_version": "Darwin 20.6.0",
-  "sp_l2_cache_core": "256 KB",
-  "sp_l3_cache": "25 MB",
-  "sp_local_host_name": "foo",
-  "sp_machine_model": "VMware7,1",
-  "sp_machine_name": "Mac",
-  "sp_number_processors": "2",
-  "sp_os_version": "macOS 11.5.1 (20G80)",
-  "sp_packages": "1",
-  "sp_physical_memory": "4 GB",
-  "sp_platform_uuid": "421ADE05-1F2A-498A-DDE2-831055094890",
-  "sp_secure_vm": "Enabled",
-  "sp_serial_number": "VM6bYVNeAVLZ",
-  "sp_smc_version_system": "1.16f8",
-  "sp_uptime": "33 minutes",
-  "sp_user_name": "System Administrator (root)",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -516,9 +458,5 @@
     "uptime": "0:33 hours"
   },
   "timezone": "PDT",
-  "uptime": "0:33 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 2002,
   "virtual": "vmware"
 }

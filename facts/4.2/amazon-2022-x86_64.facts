@@ -1,11 +1,4 @@
 {
-  "selinux": false,
-  "hostname": "foo",
-  "operatingsystem": "Amazon",
-  "osfamily": "RedHat",
-  "fqdn": "foo.example.com",
-  "domain": "example.com",
-  "ipaddress": "172.17.0.7",
   "os": {
     "distro": {
       "description": "Amazon Linux release 2022 (Amazon Linux)",

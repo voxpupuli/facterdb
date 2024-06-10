@@ -1,8 +1,4 @@
 {
-  "selinux": false,
-  "ipaddress": "192.168.0.1",
-  "operatingsystem": "RedHat",
-  "osfamily": "RedHat",
   "os": {
     "family": "RedHat",
     "name": "RedHat",
@@ -630,7 +626,9 @@
     "sshd": "/var/empty/sshd"
   },
   "prometheus_alert_manager_running": false,
-  "who2bug": [],
+  "who2bug": [
+
+  ],
   "classification": {
     "hostname": "live-pulp",
     "parts": [
@@ -667,14 +665,24 @@
   "selinux_python_command": "python",
   "is_pe": false,
   "pe_patch": {
-    "package_updates": [],
+    "package_updates": [
+
+    ],
     "package_update_count": 0,
-    "missing_update_kbs": [],
-    "security_package_updates": [],
+    "missing_update_kbs": [
+
+    ],
+    "security_package_updates": [
+
+    ],
     "security_package_update_count": 0,
-    "blackouts": {},
-    "pinned_packages": [],
-    "last_run": {},
+    "blackouts": {
+    },
+    "pinned_packages": [
+
+    ],
+    "last_run": {
+    },
     "patch_group": "",
     "reboot_override": "default",
     "reboots": {
@@ -686,9 +694,8 @@
       "security_update_file": "Security update file not found, update information invalid"
     },
     "blocked": false,
-    "blocked_reasons": []
-  },
-  "domain": "example.com",
-  "fqdn": "foo.example.com",
-  "hostname": "foo"
+    "blocked_reasons": [
+
+    ]
+  }
 }

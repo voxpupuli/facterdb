@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "8.6.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.14.1"
   },
-  "augeasversion": "1.14.1",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 20971520000,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "system": null
   },
@@ -51,22 +38,15 @@
       "version": "1.2"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.7.0",
   "filesystems": "xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "162988",
       "version": "7.0.18"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -75,8 +55,6 @@
     "user": "root"
   },
   "interfaces": "enp0s3,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:feca:eec9",
   "ipaddress6_enp0s3": "fe80::a00:27ff:feca:eec9",
   "ipaddress6_lo": "::1",
   "ipaddress_enp0s3": "10.0.2.15",
@@ -91,12 +69,7 @@
     "1m": 2.26,
     "5m": 2.25
   },
-  "lsbdistrelease": "8.9",
-  "lsbmajdistrelease": "8",
-  "lsbminordistrelease": "9",
-  "macaddress": "08:00:27:ca:ee:c9",
   "macaddress_enp0s3": "08:00:27:ca:ee:c9",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "595.42 MiB",
@@ -108,10 +81,6 @@
       "used_bytes": 372453376
     }
   },
-  "memoryfree": "595.42 MiB",
-  "memoryfree_mb": 595.421875,
-  "memorysize": "950.62 MiB",
-  "memorysize_mb": 950.62109375,
   "mountpoints": {
     "/": {
       "available": "17.12 GiB",
@@ -320,14 +289,10 @@
   },
   "mtu_enp0s3": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_enp0s3": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_enp0s3": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_enp0s3": "fe80::",
   "network6_lo": "::1",
   "network_enp0s3": "10.0.2.0",
@@ -412,9 +377,6 @@
     "primary": "enp0s3",
     "scope6": "link"
   },
-  "operatingsystem": "AlmaLinux",
-  "operatingsystemmajrelease": "8",
-  "operatingsystemrelease": "8.9",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -444,7 +406,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "xfs",
@@ -456,9 +417,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-  "processorcount": 1,
   "processors": {
     "cores": 1,
     "count": 1,
@@ -470,7 +428,6 @@
     "speed": "1.70 GHz",
     "threads": 1
   },
-  "productname": "VirtualBox",
   "productversion": "1.2",
   "puppetversion": "8.6.0",
   "ruby": {
@@ -478,19 +435,8 @@
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
     "version": "3.2.3"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.3",
-  "scope6": "link",
   "scope6_enp0s3": "link",
   "scope6_lo": "host",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "33",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -530,10 +476,5 @@
     "uptime": "0:11 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:11 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 693,
-  "uuid": "7a8edf87-7159-524f-9738-7688aea7d22f",
   "virtual": "virtualbox"
 }

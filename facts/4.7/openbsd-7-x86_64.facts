@@ -1,6 +1,4 @@
 {
-  "architecture": "amd64",
-  "bios_vendor": "OpenBSD",
   "dmi": {
     "bios": {
       "vendor": "OpenBSD"
@@ -10,14 +8,7 @@
       "name": "VMM"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.7.0",
-  "fqdn": "foo.example.com",
-  "gid": "wheel",
-  "hardwareisa": "amd64",
-  "hardwaremodel": "amd64",
-  "hostname": "foo",
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "wheel",
@@ -25,8 +16,6 @@
     "uid": 0,
     "user": "root"
   },
-  "ipaddress": "10.0.0.1",
-  "ipaddress6": "2aa1:1470:5ab6::a00:1",
   "is_virtual": true,
   "kernel": "OpenBSD",
   "kernelmajversion": "7",
@@ -37,8 +26,6 @@
     "1m": 0.138671875,
     "5m": 0.10546875
   },
-  "macaddress": "08:00:66:66:16:a1",
-  "manufacturer": "OpenBSD",
   "mountpoints": {
     "/": {
       "available": "842.44 MiB",
@@ -182,10 +169,6 @@
       "used_bytes": 9838592
     }
   },
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
-  "network": "10.0.0.0",
-  "network6": "2aa1:1470:5ab6::",
   "networking": {
     "dhcp": "10.0.0.59",
     "domain": "example.com",
@@ -272,9 +255,6 @@
     "primary": "vio0",
     "scope6": "global"
   },
-  "operatingsystem": "OpenBSD",
-  "operatingsystemmajrelease": "7",
-  "operatingsystemrelease": "7.5",
   "os": {
     "architecture": "amd64",
     "family": "OpenBSD",
@@ -286,10 +266,7 @@
       "minor": "5"
     }
   },
-  "osfamily": "OpenBSD",
   "path": "/sbin:/usr/sbin:/bin:/usr/bin:/usr/X11R6/bin:/usr/local/sbin:/usr/local/bin",
-  "processor0": "Intel(R) Atom(TM) CPU C2750 @ 2.40GHz",
-  "processorcount": 1,
   "processors": {
     "count": 1,
     "isa": "amd64",
@@ -298,15 +275,11 @@
     ],
     "speed": "2.40 GHz"
   },
-  "productname": "VMM",
   "ruby": {
     "platform": "x86_64-openbsd",
     "sitedir": "/usr/local/lib/ruby/site_ruby/3.2",
     "version": "3.2.4"
   },
-  "rubyplatform": "x86_64-openbsd",
-  "rubysitedir": "/usr/local/lib/ruby/site_ruby/3.2",
-  "rubyversion": "3.2.4",
   "ssh": {
     "dsa": {
       "fingerprints": {
@@ -356,9 +329,5 @@
     "uptime": "0:16 hours"
   },
   "timezone": "CEST",
-  "uptime": "0:16 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 964,
   "virtual": "vmm"
 }

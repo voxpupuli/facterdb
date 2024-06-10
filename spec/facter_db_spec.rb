@@ -216,19 +216,19 @@ describe FacterDB do
       let(:facter_version) { '*' }
 
       context 'with an Array filter' do
-        let(:filter) { [{ osfamily: 'Debian' }] }
+        let(:filter) { [{ kernel: 'Linux' }] }
 
         include_examples 'returns a result'
       end
 
       context 'with a Hash filter' do
-        let(:filter) { { osfamily: 'Debian' } }
+        let(:filter) { { kernel: 'Linux' } }
 
         include_examples 'returns a result'
       end
 
       context 'with a String filter' do
-        let(:filter) { 'osfamily=Debian' }
+        let(:filter) { 'kernel=Linux' }
 
         include_examples 'returns a result'
       end
@@ -252,21 +252,21 @@ describe FacterDB do
       end
 
       context 'with an Array filter' do
-        let(:filter) { [{ osfamily: 'Debian' }] }
+        let(:filter) { [{ kernel: 'Linux' }] }
 
         include_examples 'returns a result'
         include_examples 'returns only the specified version'
       end
 
       context 'with a Hash filter' do
-        let(:filter) { { osfamily: 'Debian' } }
+        let(:filter) { { kernel: 'Linux' } }
 
         include_examples 'returns a result'
         include_examples 'returns only the specified version'
       end
 
       context 'with a String filter' do
-        let(:filter) { 'osfamily=Debian' }
+        let(:filter) { 'kernel=Linux' }
 
         include_examples 'returns a result'
         include_examples 'returns only the specified version'
@@ -302,11 +302,11 @@ describe FacterDB do
     end
 
     it 'with hash' do
-      expect(FacterDB.generate_filter_str({ osfamily: 'Debian' })).to eq('osfamily=Debian')
+      expect(FacterDB.generate_filter_str({ kernel: 'Linux' })).to eq('kernel=Linux')
     end
 
     it 'with Array' do
-      expect(FacterDB.generate_filter_str([osfamily: 'Debian'])).to eq('(osfamily=Debian)')
+      expect(FacterDB.generate_filter_str([kernel: 'Linux'])).to eq('(kernel=Linux)')
     end
 
     it 'empty' do
@@ -349,19 +349,19 @@ describe FacterDB do
     end
 
     context 'with an Array filter' do
-      let(:filter) { [osfamily: 'Debian'] }
+      let(:filter) { [kernel: 'Linux'] }
 
       include_examples 'returns a result'
     end
 
     context 'with a Hash filter' do
-      let(:filter) { { osfamily: 'Debian' } }
+      let(:filter) { { kernel: 'Linux' } }
 
       include_examples 'returns a result'
     end
 
     context 'with a String filter' do
-      let(:filter) { 'osfamily=Debian' }
+      let(:filter) { 'kernel=Linux' }
 
       include_examples 'returns a result'
     end

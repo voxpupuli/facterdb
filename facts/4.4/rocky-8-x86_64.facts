@@ -1,21 +1,8 @@
 {
   "aio_agent_version": "8.0.0",
-  "architecture": "x86_64",
   "augeas": {
     "version": "1.13.0"
   },
-  "augeasversion": "1.13.0",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "VBOX HARDDISK",
-  "blockdevice_sda_size": 41943040000,
-  "blockdevice_sda_vendor": "ATA",
-  "blockdevices": "sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "system": null
   },
@@ -50,22 +37,15 @@
       "uuid": "e12c307e-fd53-d14b-ab4d-c5c560650695"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.4.0",
   "filesystems": "xfs",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "156814",
       "version": "6.1.44"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -74,8 +54,6 @@
     "user": "root"
   },
   "interfaces": "eth0,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::a00:27ff:fefc:e996",
   "ipaddress6_eth0": "fe80::a00:27ff:fefc:e996",
   "ipaddress6_lo": "::1",
   "ipaddress_eth0": "10.0.2.15",
@@ -90,12 +68,7 @@
     "1m": 0.76,
     "5m": 0.2
   },
-  "lsbdistrelease": "8.4",
-  "lsbmajdistrelease": "8",
-  "lsbminordistrelease": "4",
-  "macaddress": "08:00:27:fc:e9:96",
   "macaddress_eth0": "08:00:27:fc:e9:96",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "swap": {
       "available": "2.00 GiB",
@@ -116,10 +89,6 @@
       "used_bytes": 496730112
     }
   },
-  "memoryfree": "7.31 GiB",
-  "memoryfree_mb": 7487.54296875,
-  "memorysize": "7.77 GiB",
-  "memorysize_mb": 7961.26171875,
   "mountpoints": {
     "/": {
       "available": "34.88 GiB",
@@ -327,14 +296,10 @@
   },
   "mtu_eth0": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_eth0": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_eth0": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_eth0": "fe80::",
   "network6_lo": "::1",
   "network_eth0": "10.0.2.0",
@@ -413,9 +378,6 @@
     "primary": "eth0",
     "scope6": "link"
   },
-  "operatingsystem": "Rocky",
-  "operatingsystemmajrelease": "8",
-  "operatingsystemrelease": "8.4",
   "os": {
     "architecture": "x86_64",
     "distro": {
@@ -445,7 +407,6 @@
       "policy_version": "33"
     }
   },
-  "osfamily": "RedHat",
   "partitions": {
     "/dev/sda1": {
       "filesystem": "xfs",
@@ -457,10 +418,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "12th Gen Intel(R) Core(TM) i9-12900K",
-  "processor1": "12th Gen Intel(R) Core(TM) i9-12900K",
-  "processorcount": 2,
   "processors": {
     "cores": 2,
     "count": 2,
@@ -473,26 +430,14 @@
     "speed": "3.19 GHz",
     "threads": 1
   },
-  "productname": "VirtualBox",
   "puppetversion": "8.0.0",
   "ruby": {
     "platform": "x86_64-linux",
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
     "version": "3.2.2"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.2",
-  "scope6": "link",
   "scope6_eth0": "link",
   "scope6_lo": "host",
-  "selinux": true,
-  "selinux_config_mode": "enforcing",
-  "selinux_config_policy": "targeted",
-  "selinux_current_mode": "enforcing",
-  "selinux_enforced": true,
-  "selinux_policyversion": "33",
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -525,10 +470,6 @@
   "sshfp_ed25519": "SSHFP 4 1 1c579819a7fac24f450aa11e50530be7ec7bca19\nSSHFP 4 2 ff53f053c3e6c42788b0d6946a1201e63763a54a0176d31db25923b52661edb2",
   "sshfp_rsa": "SSHFP 1 1 dcfebf14980d034cf2e4c18f811c7ba2daa403f3\nSSHFP 1 2 ad0008faafe3c8ab16c714a9cdd8dd195ab82994479f279b4c4acb631a6fb66f",
   "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDoz4tiN2ezhz14zMw3rRyE0iqlB2k59F2W4IKUBkXfR6JFRknmE3z03noUnoC/TxroeFWoPAizYwaPtOmVSIruKV94tQqg+UnAt42ycYwCg8Yvt38b8l2yAbzIbbS/mFNf+QKOESl5ggjyy4x+sR4ZnDJk+h3y7vrxfv2n448I2h7axFIUaxJpkTVtZ5/p6Dp4dV6M9jULI3RittyqoU5UoGxG1A+JUIbDMPDZU48SppMo3XQL56Wj80ClTnoZxbdRVDS0H6O0iRBRCHwCPqhlLDNwN/yurzs7MTVsIlnqZSI4/doumfmn21tLcX5J5YnGS0DtOnGuf7reiwRxY9iIv3vi4wt/05b5DbYLtUve+409hT2RTp8qRD4FOX0mm297JgUJVAcwSVkFJPdxckDWzBy498Ely1cCyfjHXNBrzNhD9u02m0yXOzyaG8MwQGQy8G8n5FdEA9DO2Ihl9J6Yj/3qEmGD8Yj3hhspiR8o55dOxmOlYpwVClZWGTi9qIM=",
-  "swapfree": "2.00 GiB",
-  "swapfree_mb": 2047.99609375,
-  "swapsize": "2.00 GiB",
-  "swapsize_mb": 2047.99609375,
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -536,10 +477,5 @@
     "uptime": "0:01 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:01 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 78,
-  "uuid": "e12c307e-fd53-d14b-ab4d-c5c560650695",
   "virtual": "virtualbox"
 }

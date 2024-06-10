@@ -1,7 +1,6 @@
 {
   "aio_agent_build": "7.18.0",
   "aio_agent_version": "7.18.0",
-  "architecture": "x64",
   "archive_windir": "C:\\ProgramData\\staging",
   "common_appdata": "C:\\ProgramData",
   "dhcp_servers": {
@@ -16,26 +15,18 @@
       "uuid": "AFF8C8FC-AB7F-40C9-A4C8-D4099CE94831"
     }
   },
-  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "4.2.11",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "hardwareisa": "x64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "hyperv": {
     }
   },
-  "id": "foo\\windows",
   "identity": {
     "privileged": true,
     "user": "foo\\windows"
   },
   "interfaces": "Ethernet",
-  "ipaddress": "10.138.1.5",
-  "ipaddress6": "fe80::1192:25ce:6192:3d25",
   "ipaddress6_Ethernet": "fe80::1192:25ce:6192:3d25",
   "ipaddress_Ethernet": "10.138.1.5",
   "is_pe": false,
@@ -44,9 +35,7 @@
   "kernelmajversion": "10.0",
   "kernelrelease": "10.0.14393",
   "kernelversion": "10.0.14393",
-  "macaddress": "00:22:48:43:1F:54",
   "macaddress_Ethernet": "00:22:48:43:1F:54",
-  "manufacturer": "American Megatrends Inc.",
   "memory": {
     "system": {
       "available": "13.93 GiB",
@@ -58,17 +47,9 @@
       "used_bytes": 2224209920
     }
   },
-  "memoryfree": "13.93 GiB",
-  "memoryfree_mb": 14262.37890625,
-  "memorysize": "16.00 GiB",
-  "memorysize_mb": 16383.55078125,
   "mtu_Ethernet": 1500,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
   "netmask_Ethernet": "255.255.255.0",
-  "network": "10.138.1.0",
-  "network6": "fe80::",
   "network6_Ethernet": "fe80::",
   "network_Ethernet": "10.138.1.0",
   "networking": {
@@ -116,9 +97,6 @@
     "primary": "Ethernet",
     "scope6": "link"
   },
-  "operatingsystem": "windows",
-  "operatingsystemmajrelease": "2016",
-  "operatingsystemrelease": "2016",
   "os": {
     "architecture": "x64",
     "family": "windows",
@@ -136,7 +114,6 @@
       "system32": "C:\\Windows\\system32"
     }
   },
-  "osfamily": "windows",
   "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Users\\windows\\AppData\\Local\\Microsoft\\WindowsApps",
   "pe_patch": {
     "blackouts": {
@@ -144,18 +121,23 @@
     "block_patching_on_warnings": "false",
     "blocked": false,
     "blocked_reasons": [
+
     ],
     "last_run": {
     },
     "missing_security_kbs": [
+
     ],
     "missing_update_kbs": [
+
     ],
     "package_update_count": 0,
     "package_updates": [
+
     ],
     "patch_group": "",
     "pinned_packages": [
+
     ],
     "reboot_override": "default",
     "reboots": {
@@ -163,16 +145,14 @@
     },
     "security_package_update_count": 0,
     "security_package_updates": [
+
     ],
     "warnings": {
       "security_update_file": "Security update file not found, update information invalid",
       "update_file": "Update file not found, update information invalid"
     }
   },
-  "physicalprocessorcount": 1,
   "platform_symlink_writable": false,
-  "processor0": "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz",
-  "processorcount": 4,
   "processors": {
     "cores": 2,
     "count": 4,
@@ -183,7 +163,6 @@
     "physicalcount": 1,
     "threads": 2
   },
-  "productname": "Virtual Machine",
   "puppet_files_dir_present": false,
   "puppet_inventory_metadata": {
     "packages": {
@@ -197,13 +176,7 @@
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.6"
   },
-  "rubyplatform": "x64-mingw32",
-  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.6",
-  "scope6": "link",
   "scope6_Ethernet": "link",
-  "serialnumber": "0000-0012-6801-0573-8396-1888-73",
-  "system32": "C:\\Windows\\system32",
   "system_uptime": {
     "days": 0,
     "hours": 2,
@@ -211,14 +184,5 @@
     "uptime": "2:31 hours"
   },
   "timezone": "Coordinated Universal Time",
-  "uptime": "2:31 hours",
-  "uptime_days": 0,
-  "uptime_hours": 2,
-  "uptime_seconds": 9105,
-  "uuid": "AFF8C8FC-AB7F-40C9-A4C8-D4099CE94831",
-  "virtual": "hyperv",
-  "windows_edition_id": "ServerDatacenter",
-  "windows_installation_type": "Server",
-  "windows_product_name": "Windows Server 2016 Datacenter",
-  "windows_release_id": "1607"
+  "virtual": "hyperv"
 }

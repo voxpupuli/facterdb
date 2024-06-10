@@ -1,24 +1,8 @@
 {
   "aio_agent_version": "8.6.0",
-  "architecture": "amd64",
   "augeas": {
     "version": "1.14.1"
   },
-  "augeasversion": "1.14.1",
-  "bios_release_date": "12/01/2006",
-  "bios_vendor": "innotek GmbH",
-  "bios_version": "VirtualBox",
-  "blockdevice_sda_model": "HARDDISK",
-  "blockdevice_sda_size": 42949672960,
-  "blockdevice_sda_vendor": "VBOX",
-  "blockdevice_sdb_model": "HARDDISK",
-  "blockdevice_sdb_size": 10485760,
-  "blockdevice_sdb_vendor": "VBOX",
-  "blockdevices": "sdb,sda",
-  "boardmanufacturer": "Oracle Corporation",
-  "boardproductname": "VirtualBox",
-  "boardserialnumber": "0",
-  "chassistype": "Other",
   "dhcp_servers": {
     "enp0s3": "10.0.2.2",
     "system": "10.0.2.2"
@@ -61,22 +45,15 @@
       "version": "1.2"
     }
   },
-  "domain": "example.com",
   "facterversion": "4.7.0",
   "filesystems": "btrfs,ext2,ext3,ext4,iso9660,squashfs,vfat",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "gid": "root",
-  "hardwareisa": "x86_64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "virtualbox": {
       "revision": "162988",
       "version": "7.0.18"
     }
   },
-  "id": "root",
   "identity": {
     "gid": 0,
     "group": "root",
@@ -85,8 +62,6 @@
     "user": "root"
   },
   "interfaces": "enp0s3,lo",
-  "ipaddress": "10.0.2.15",
-  "ipaddress6": "fe80::92:d8ff:fe07:a3a8",
   "ipaddress6_enp0s3": "fe80::92:d8ff:fe07:a3a8",
   "ipaddress6_lo": "::1",
   "ipaddress_enp0s3": "10.0.2.15",
@@ -101,14 +76,7 @@
     "1m": 0.99,
     "5m": 0.85
   },
-  "lsbdistcodename": "jammy",
-  "lsbdistdescription": "Ubuntu 22.04.4 LTS",
-  "lsbdistid": "Ubuntu",
-  "lsbdistrelease": "22.04",
-  "lsbmajdistrelease": "22.04",
-  "macaddress": "02:92:d8:07:a3:a8",
   "macaddress_enp0s3": "02:92:d8:07:a3:a8",
-  "manufacturer": "innotek GmbH",
   "memory": {
     "system": {
       "available": "549.80 MiB",
@@ -120,10 +88,6 @@
       "used_bytes": 427270144
     }
   },
-  "memoryfree": "549.80 MiB",
-  "memoryfree_mb": 549.80078125,
-  "memorysize": "957.28 MiB",
-  "memorysize_mb": 957.27734375,
   "mountpoints": {
     "/": {
       "available": "35.86 GiB",
@@ -420,14 +384,10 @@
   },
   "mtu_enp0s3": 1500,
   "mtu_lo": 65536,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_enp0s3": "ffff:ffff:ffff:ffff::",
   "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
   "netmask_enp0s3": "255.255.255.0",
   "netmask_lo": "255.0.0.0",
-  "network": "10.0.2.0",
-  "network6": "fe80::",
   "network6_enp0s3": "fe80::",
   "network6_lo": "::1",
   "network_enp0s3": "10.0.2.0",
@@ -514,9 +474,6 @@
     "primary": "enp0s3",
     "scope6": "link"
   },
-  "operatingsystem": "Ubuntu",
-  "operatingsystemmajrelease": "22.04",
-  "operatingsystemrelease": "22.04",
   "os": {
     "architecture": "amd64",
     "distro": {
@@ -539,7 +496,6 @@
       "enabled": false
     }
   },
-  "osfamily": "Debian",
   "partitions": {
     "/dev/loop0": {
       "backing_file": "/var/lib/snapd/snaps/core20_2264.snap",
@@ -573,10 +529,6 @@
     }
   },
   "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin",
-  "physicalprocessorcount": 1,
-  "processor0": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-  "processor1": "AMD Ryzen 7 PRO 4750U with Radeon Graphics",
-  "processorcount": 2,
   "processors": {
     "cores": 2,
     "count": 2,
@@ -589,7 +541,6 @@
     "speed": "1.70 GHz",
     "threads": 1
   },
-  "productname": "VirtualBox",
   "productversion": "1.2",
   "puppetversion": "8.6.0",
   "ruby": {
@@ -597,14 +548,8 @@
     "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
     "version": "3.2.3"
   },
-  "rubyplatform": "x86_64-linux",
-  "rubysitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
-  "rubyversion": "3.2.3",
-  "scope6": "link",
   "scope6_enp0s3": "link",
   "scope6_lo": "host",
-  "selinux": false,
-  "serialnumber": "0",
   "ssh": {
     "ecdsa": {
       "fingerprints": {
@@ -644,10 +589,5 @@
     "uptime": "0:06 hours"
   },
   "timezone": "UTC",
-  "uptime": "0:06 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 379,
-  "uuid": "f2d81de8-f145-df41-ab40-15d35ed37d42",
   "virtual": "virtualbox"
 }

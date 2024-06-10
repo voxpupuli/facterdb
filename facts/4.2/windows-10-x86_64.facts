@@ -1,6 +1,5 @@
 {
   "aio_agent_version": "7.18.0",
-  "architecture": "x64",
   "dhcp_servers": {
     "Ethernet": "168.63.129.16",
     "system": "168.63.129.16"
@@ -13,26 +12,18 @@
       "uuid": "234E5189-959F-43F3-BE51-A818A18354F7"
     }
   },
-  "domain": "example.com",
   "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
   "facterversion": "4.2.11",
   "fips_enabled": false,
-  "fqdn": "foo.example.com",
-  "hardwareisa": "x64",
-  "hardwaremodel": "x86_64",
-  "hostname": "foo",
   "hypervisors": {
     "hyperv": {
     }
   },
-  "id": "foo\\windows",
   "identity": {
     "privileged": true,
     "user": "foo\\windows"
   },
   "interfaces": "Ethernet",
-  "ipaddress": "10.138.1.5",
-  "ipaddress6": "fe80::e187:193f:cccc:ea5a",
   "ipaddress6_Ethernet": "fe80::e187:193f:cccc:ea5a",
   "ipaddress_Ethernet": "10.138.1.5",
   "is_virtual": true,
@@ -40,9 +31,7 @@
   "kernelmajversion": "10.0",
   "kernelrelease": "10.0.19045",
   "kernelversion": "10.0.19045",
-  "macaddress": "00:22:48:01:76:B8",
   "macaddress_Ethernet": "00:22:48:01:76:B8",
-  "manufacturer": "American Megatrends Inc.",
   "memory": {
     "system": {
       "available": "14.34 GiB",
@@ -54,17 +43,9 @@
       "used_bytes": 1779286016
     }
   },
-  "memoryfree": "14.34 GiB",
-  "memoryfree_mb": 14686.69140625,
-  "memorysize": "16.00 GiB",
-  "memorysize_mb": 16383.55078125,
   "mtu_Ethernet": 1500,
-  "netmask": "255.255.255.0",
-  "netmask6": "ffff:ffff:ffff:ffff::",
   "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
   "netmask_Ethernet": "255.255.255.0",
-  "network": "10.138.1.0",
-  "network6": "fe80::",
   "network6_Ethernet": "fe80::",
   "network_Ethernet": "10.138.1.0",
   "networking": {
@@ -112,9 +93,6 @@
     "primary": "Ethernet",
     "scope6": "link"
   },
-  "operatingsystem": "windows",
-  "operatingsystemmajrelease": "10",
-  "operatingsystemrelease": "10",
   "os": {
     "architecture": "x64",
     "family": "windows",
@@ -133,11 +111,7 @@
       "system32": "C:\\Windows\\system32"
     }
   },
-  "osfamily": "windows",
   "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Users\\windows\\AppData\\Local\\Microsoft\\WindowsApps",
-  "physicalprocessorcount": 1,
-  "processor0": "Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz",
-  "processorcount": 4,
   "processors": {
     "cores": 2,
     "count": 4,
@@ -148,19 +122,12 @@
     "physicalcount": 1,
     "threads": 2
   },
-  "productname": "Virtual Machine",
   "ruby": {
     "platform": "x64-mingw32",
     "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.7.0",
     "version": "2.7.6"
   },
-  "rubyplatform": "x64-mingw32",
-  "rubysitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/2.7.0",
-  "rubyversion": "2.7.6",
-  "scope6": "link",
   "scope6_Ethernet": "link",
-  "serialnumber": "0000-0002-5440-6049-0873-5211-39",
-  "system32": "C:\\Windows\\system32",
   "system_uptime": {
     "days": 0,
     "hours": 0,
@@ -168,15 +135,5 @@
     "uptime": "0:23 hours"
   },
   "timezone": "Coordinated Universal Time",
-  "uptime": "0:23 hours",
-  "uptime_days": 0,
-  "uptime_hours": 0,
-  "uptime_seconds": 1412,
-  "uuid": "234E5189-959F-43F3-BE51-A818A18354F7",
-  "virtual": "hyperv",
-  "windows_display_version": "22H2",
-  "windows_edition_id": "Professional",
-  "windows_installation_type": "Client",
-  "windows_product_name": "Windows 10 Pro",
-  "windows_release_id": "22H2"
+  "virtual": "hyperv"
 }

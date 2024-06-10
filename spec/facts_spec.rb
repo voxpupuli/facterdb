@@ -98,8 +98,8 @@ describe 'Default Facts' do
         end
       end
 
-      it 'contains the legacy ipaddress fact' do
-        expect(content['ipaddress']).to not_be_nil.and not_be_empty
+      it 'does not contains the legacy ipaddress fact' do
+        expect(content['ipaddress']).to be_nil
       end
 
       it 'contains no facts from puppetlabs/stdlib' do
@@ -124,6 +124,20 @@ describe 'Default Facts' do
         expect(content['os']['release']['major']).to not_be_nil.and not_be_empty
         expect(content['os']['name']).to not_be_nil.and not_be_empty
         expect(content['os']['hardware']).to not_be_nil.and not_be_empty
+      end
+
+      it 'does not contain a legacy hostname, domain and fqdn fact' do
+        expect(content['hostname']).to be_nil
+        expect(content['fqdn']).to be_nil
+        expect(content['domain']).to be_nil
+      end
+
+      it 'does not contain the legacy osfamily fact' do
+        expect(content['osfamily']).to be_nil
+      end
+
+      it 'does not contain the legacy operatingsystem fact' do
+        expect(content['operatingsystem']).to be_nil
       end
     end
   end

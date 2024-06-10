@@ -1,0 +1,127 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'json'
+
+# This list of legacy fact was obtained from the facter source code:
+# grep --no-filename -r ALIASES' =' lib | sed -Ee "s/^ *ALIASES = ('|%w\\[)//" -e "s/('|].freeze)\$//" | tr ' ' '\n' | sort | uniq
+LEGACY_FACTS = %w[
+  architecture
+  augeasversion
+  bios_release_date
+  bios_vendor
+  bios_version
+  blockdevice_.*_model
+  blockdevice_.*_size
+  blockdevice_.*_vendor
+  blockdevices
+  boardassettag
+  boardmanufacturer
+  boardproductname
+  boardserialnumber
+  chassisassettag
+  chassistype
+  domain
+  fqdn
+  gid
+  hardwareisa
+  hardwaremodel
+  hostname
+  id
+  ipaddress
+  ipaddress6
+  lsbdistcodename
+  lsbdistdescription
+  lsbdistid
+  lsbdistrelease
+  lsbmajdistrelease
+  lsbminordistrelease
+  lsbrelease
+  macaddress
+  macosx_buildversion
+  macosx_productname
+  macosx_productversion
+  macosx_productversion_major
+  macosx_productversion_minor
+  manufacturer
+  memoryfree
+  memoryfree_mb
+  memorysize
+  memorysize_mb
+  netmask
+  netmask6
+  network
+  network6
+  operatingsystem
+  operatingsystemmajrelease
+  operatingsystemrelease
+  osfamily
+  physicalprocessorcount
+  processor\d+
+  processorcount
+  productname
+  rubyplatform
+  rubysitedir
+  rubyversion
+  scope6
+  selinux
+  selinux_config_mode
+  selinux_config_policy
+  selinux_current_mode
+  selinux_enforced
+  selinux_policyversion
+  serialnumber
+  sp_boot_mode
+  sp_boot_rom_version
+  sp_boot_volume
+  sp_cpu_type
+  sp_current_processor_speed
+  sp_kernel_version
+  sp_l2_cache_core
+  sp_l3_cache
+  sp_local_host_name
+  sp_machine_model
+  sp_machine_name
+  sp_number_processors
+  sp_os_version
+  sp_packages
+  sp_physical_memory
+  sp_platform_uuid
+  sp_secure_vm
+  sp_serial_number
+  sp_smc_version_system
+  sp_uptime
+  sp_user_name
+  swapencrypted
+  swapfree
+  swapfree_mb
+  swapsize
+  swapsize_mb
+  system32
+  uptime
+  uptime_days
+  uptime_hours
+  uptime_seconds
+  uuid
+  windows_display_version
+  windows_edition_id
+  windows_installation_type
+  windows_product_name
+  windows_release_id
+  xendomains
+  zonename
+].map { |re| Regexp.new("\\A#{re}\\z") }
+
+if ARGV.empty?
+  warn "usage: #{$PROGRAM_NAME} facts..."
+  exit(1)
+end
+
+ARGV.each do |filename|
+  puts filename
+  facts = JSON.parse(File.read(filename))
+  facts.delete_if do |key|
+    LEGACY_FACTS.any? { |legacy_fact| key.match(legacy_fact) }
+  end
+  File.write(filename, "#{JSON.pretty_generate(facts)}\n")
+end
