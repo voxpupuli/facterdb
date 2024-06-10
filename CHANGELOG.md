@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.0.0](https://rubygems.org/gems/facterdb/versions/3.0.0) (2024-06-10)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/2.1.0...3.0.0)
+
+**Breaking changes:**
+
+- Drop deprecated self.get\_os\_facts\(\) [\#365](https://github.com/voxpupuli/facterdb/pull/365) ([bastelfreak](https://github.com/bastelfreak))
+- Remove EoL CentOS 8 factsets [\#361](https://github.com/voxpupuli/facterdb/pull/361) ([bastelfreak](https://github.com/bastelfreak))
+- Remove EoL CentOS 7 factsets [\#360](https://github.com/voxpupuli/facterdb/pull/360) ([bastelfreak](https://github.com/bastelfreak))
+- Remove deprecated RedHat 7 facts [\#359](https://github.com/voxpupuli/facterdb/pull/359) ([bastelfreak](https://github.com/bastelfreak))
+- Remove Legacy Facts [\#266](https://github.com/voxpupuli/facterdb/pull/266) ([smortex](https://github.com/smortex))
+
 ## [2.1.0](https://rubygems.org/gems/facterdb/versions/2.1.0) (2024-06-08)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/2.0.1...2.1.0)
