@@ -24,9 +24,6 @@
     "uid": 0,
     "user": "root"
   },
-  "ipaddress6_lo0": "::1",
-  "ipaddress_em0": "10.0.2.15",
-  "ipaddress_lo0": "127.0.0.1",
   "is_virtual": true,
   "kernel": "FreeBSD",
   "kernelmajversion": "13",
@@ -273,12 +270,6 @@
       "used_bytes": 98304
     }
   },
-  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-  "netmask_em0": "255.255.255.0",
-  "netmask_lo0": "255.0.0.0",
-  "network6_lo0": "::1",
-  "network_em0": "10.0.2.0",
-  "network_lo0": "127.0.0.0",
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
@@ -392,12 +383,6 @@
       "type": "ssh-rsa"
     }
   },
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHw62e+PriDAYkv+gdHWodJjKU4UhxD5P3zjEbNyAFHk6kRGTbEVjpkczhb+zFWIKguz/yp0Qinj9hA6em3aAEM=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIL0k8/qcvme/T0ghg2O5xxHhn3tB7WpGoaxRt5jSXM5X",
-  "sshfp_ecdsa": "SSHFP 3 1 29871b94a899228c3ed64039ed6a542d81fd9a5c\nSSHFP 3 2 86900c24724966f4eb83b9de22a06fb1b8fdf81cacaf48d9fd4f23af7f216bda",
-  "sshfp_ed25519": "SSHFP 4 1 6e7a963faae3ab450b8b26b3cc16e8e9e8698c0d\nSSHFP 4 2 a3edc3fa54b8a129abbb03b9c45346f973b259294eab644b7ae7696a84a7feab",
-  "sshfp_rsa": "SSHFP 1 1 a515c1bc994712f2510d5e1e6f367690dd28daab\nSSHFP 1 2 52e894012cee246ff054ebda61f8f0aa49543e964c62c37440ce3979a135a209",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDWWcTfOdwXStChm2iWg4/Ul2asGkmD78IKEClglrxOsOJq9hcMJiTtVNxGWht1bR1+4zoDO+fZfAHdbxvxNTV1wTda85yquMNUxJThiuF4kVlJJrPlxuBtTvGNL3bpQfgWi1fWk7cKLdj8It5BNV4KSWcK3DuG14jhGFx3zesv8fDa1sZRnJZHiNPQoPJ5UWFj36N8urub096lWCHssYQ2vmgGrs4aqnWgh6a0E243VoOhGDKTRgYGzGRI3s+UHUoxcQeqvpQnPLOeT/YU6AZTbbJV6xcTbuWOK9YN1NdAXsp/+kLpDOPwNZdofexB2Hz/yYA4Z8gp8pZaP+4gtjnaNdLBN1g2CljGr6Wv/D/7xgyCAEvkqlWLbvTpcDB5NECAOm7tN0+H/EDC8rmjIjPIatPy/e956wxSXdkbfknOWCUQ9DnMFDbyw91Euof9VCHb/rXiLW04EMceiLdjAaLWsGWCS3rwLLXBHRASWLYPrSD9I3iiKcTa7Bfqhlxa0Bs=",
   "system_uptime": {
     "days": 0,
     "hours": 0,

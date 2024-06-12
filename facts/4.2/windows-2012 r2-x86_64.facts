@@ -1,9 +1,5 @@
 {
   "aio_agent_version": "7.18.0",
-  "dhcp_servers": {
-    "Ethernet": "168.63.129.16",
-    "system": "168.63.129.16"
-  },
   "dmi": {
     "manufacturer": "American Megatrends Inc.",
     "product": {
@@ -23,15 +19,11 @@
     "privileged": true,
     "user": "foo\\windows"
   },
-  "interfaces": "Ethernet",
-  "ipaddress6_Ethernet": "fe80::380c:6a87:de6f:d6e4",
-  "ipaddress_Ethernet": "10.138.1.6",
   "is_virtual": true,
   "kernel": "windows",
   "kernelmajversion": "6.3",
   "kernelrelease": "6.3.9600",
   "kernelversion": "6.3.9600",
-  "macaddress_Ethernet": "60:45:BD:D2:B8:1A",
   "memory": {
     "system": {
       "available": "14.95 GiB",
@@ -43,11 +35,6 @@
       "used_bytes": 1126129664
     }
   },
-  "mtu_Ethernet": 1500,
-  "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
-  "netmask_Ethernet": "255.255.255.0",
-  "network6_Ethernet": "fe80::",
-  "network_Ethernet": "10.138.1.0",
   "networking": {
     "dhcp": "168.63.129.16",
     "domain": "example.com",

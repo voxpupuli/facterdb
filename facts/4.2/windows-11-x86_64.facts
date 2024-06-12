@@ -1,9 +1,5 @@
 {
   "aio_agent_version": "7.18.0",
-  "dhcp_servers": {
-    "Ethernet": "168.63.129.16",
-    "system": "168.63.129.16"
-  },
   "dmi": {
     "manufacturer": "Microsoft Corporation",
     "product": {
@@ -23,15 +19,11 @@
     "privileged": true,
     "user": "foo\\windows"
   },
-  "interfaces": "Ethernet",
-  "ipaddress6_Ethernet": "fe80::4815:15b:4120:3d16",
-  "ipaddress_Ethernet": "10.138.1.4",
   "is_virtual": true,
   "kernel": "windows",
   "kernelmajversion": "10.0",
   "kernelrelease": "10.0.22621",
   "kernelversion": "10.0.22621",
-  "macaddress_Ethernet": "00:0D:3A:0B:AC:E7",
   "memory": {
     "system": {
       "available": "13.74 GiB",
@@ -43,11 +35,6 @@
       "used_bytes": 2429284352
     }
   },
-  "mtu_Ethernet": 1500,
-  "netmask6_Ethernet": "ffff:ffff:ffff:ffff::",
-  "netmask_Ethernet": "255.255.255.0",
-  "network6_Ethernet": "fe80::",
-  "network_Ethernet": "10.138.1.0",
   "networking": {
     "dhcp": "168.63.129.16",
     "domain": "example.com",

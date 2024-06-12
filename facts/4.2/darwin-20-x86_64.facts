@@ -3,10 +3,6 @@
   "augeas": {
     "version": "1.12.0"
   },
-  "dhcp_servers": {
-    "en0": "10.32.22.9",
-    "system": "10.32.22.9"
-  },
   "dmi": {
     "product": {
       "name": "VMware7,1"
@@ -21,13 +17,6 @@
     "uid": 0,
     "user": "root"
   },
-  "interfaces": "en0,gif0,lo0,stf0,utun0,utun1",
-  "ipaddress6_en0": "fe80::c7a:6793:cf7b:e887",
-  "ipaddress6_lo0": "::1",
-  "ipaddress6_utun0": "fe80::5442:4f69:c81c:c1b5",
-  "ipaddress6_utun1": "fe80::60f0:da82:6824:6790",
-  "ipaddress_en0": "10.16.126.40",
-  "ipaddress_lo0": "127.0.0.1",
   "is_virtual": true,
   "kernel": "Darwin",
   "kernelmajversion": "20.6",
@@ -38,7 +27,6 @@
     "1m": 1.59,
     "5m": 1.65
   },
-  "macaddress_en0": "00:50:56:9a:04:1d",
   "macosx_productversion_patch": "1",
   "memory": {
     "system": {
@@ -213,24 +201,6 @@
       "used_bytes": 197632
     }
   },
-  "mtu_en0": 1500,
-  "mtu_gif0": 1280,
-  "mtu_lo0": 16384,
-  "mtu_stf0": 1280,
-  "mtu_utun0": 1380,
-  "mtu_utun1": 2000,
-  "netmask6_en0": "ffff:ffff:ffff:ffff::",
-  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-  "netmask6_utun0": "ffff:ffff:ffff:ffff::",
-  "netmask6_utun1": "ffff:ffff:ffff:ffff::",
-  "netmask_en0": "255.255.240.0",
-  "netmask_lo0": "255.0.0.0",
-  "network6_en0": "fe80::",
-  "network6_lo0": "::1",
-  "network6_utun0": "fe80::",
-  "network6_utun1": "fe80::",
-  "network_en0": "10.16.112.0",
-  "network_lo0": "127.0.0.0",
   "networking": {
     "dhcp": "10.32.22.9",
     "domain": "example.com",
@@ -421,14 +391,6 @@
       "type": "ssh-rsa"
     }
   },
-  "sshdsakey": "AAAAB3NzaC1kc3MAAACBAMHseUoQdVlQa/5V3WJq5QFOtdb5sMnqke5opYz4kSTjEYuXJfY3W6APQif0lUVq2+gQSe6gPOA3YpKOuP77AVsoE+96GwTLviWr7D3wOfaQae7KdEwu0Lyu8dH56rIUC8GL395QHa0P+HpEj1Uto9QsM4+xFxmdEcmbPThc6aLvAAAAFQChmBUElJ7bbarHaJSDrfI64/GTdQAAAIEAk0XE9bb10JFA633mo86KUsHddP1/ViiTrUfFgKnDEcJ/eqd0AD1AYla/uMNIL+no1wvl+TdN4OjlBxjTyISnRN2gtTndh1NzwAXrkznRJbqjwjwhQfFeKjHVsOahqaChVmon47yb1uFfNoiVRkC0RPVgEbAo4DgWTfeMGrwqdUIAAACBAJe8ku9B6kdBfixenN4IN4OsoCQI3l6PLbV15TlBpA6egnhmK+/gzusfmdk/WXb374YPHGrsViFeZvI5DzUUDHDiyL9TM5A3mocDu8f7tjUvHsQBh029QA78XSlGph5R0sLKF5rGYiGieY+zbjhUHqCVH0zd8+cu75PYvLvpSsZt",
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEdCyzgAtCprTngqwMMOjejxaKs/1/dKdVOBI68muA1SMCnTtD37zzGt35u+4KaKfKekECUgAK3Dv6AsBi2Ot1s=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIHI9eI7hoVcbjP9YQawEQBzjurTrYel9gGdVwXJ1J5zE",
-  "sshfp_dsa": "SSHFP 2 1 3ae8506eee2df5f3b2df1b03124adb727a370e47\nSSHFP 2 2 383e1ced19ba12080235d7fa5915a4e148abbd8abd69cb075eb54ab8253b46d5",
-  "sshfp_ecdsa": "SSHFP 3 1 0d31d11150f6f2142a6421ce192d1105a024c22b\nSSHFP 3 2 6c010b1329cdf17e3afedbc1e8fc4d8c38c2831409130e6a1ee2e4f6065419ce",
-  "sshfp_ed25519": "SSHFP 4 1 d5cb7c16df0e341d3799d01ee8e148d2b24fdc80\nSSHFP 4 2 ab6a48e6c8871f96efd63625b4dc08a61b4f4708ed5dd252104688691cf07049",
-  "sshfp_rsa": "SSHFP 1 1 da04ad15479274cef4ec521dce1820c3e5a0bc9b\nSSHFP 1 2 150441353f84a15bf4962d49b740eff3461b164657e5070911032cb55503115f",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDK9H5dOJmCrjk8FWt6M/rt7SG5KMDaBvjm0GirGY+VC1Qp28I8m1VEs6MnXIhNtwo2YE3saxGEruJCE5aB6rqcMgXj7SLamgaX0SgoPyNLoMyI345YlI88nPqiWDmrO8eRwJNcTbCTq2mrW0hPuMXmqYJ1afL/U23S+wijWIddRJngU9Hm3ckDMuP6ucIBBEk5vxtQU6B4STNga7TxqnMKlT9kE01R7nGA+zQS1l19iog7t1kk+FQ4D0gnIVf/IRL3/TdaAqT2AwuXYyiKre4wcZPWfEwXn79T/61rHNz/79xfCW79g4nhWPlbIBeM5CT4zaz7iAf9/Z5Z09OdgnBAxDcM0cuKuWLPlX6s2b/TwhfiFXL2B/czGMC7bOOw0xw7T5NYDUqHWw6HZRyd4/8rZNgUVavcQrUBF8SSAiWIlv9cEuxe/JD4qV94CmW6Kr+C4Id9o7Gn3qV8LLWtnE8xpVKkrxeajQD8PRgau6DRns+LnSAZIMgWV2Z6nOOdSz8=",
   "system_profiler": {
     "boot_mode": "Normal",
     "boot_volume": "Macintosh HD",

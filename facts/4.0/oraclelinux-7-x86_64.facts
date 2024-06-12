@@ -648,9 +648,6 @@
     "stage": "pulp",
     "id": ""
   },
-  "network_nexthop_ip": "10.16.112.1",
-  "network_primary_interface": "ens160",
-  "network_primary_ip": "10.16.115.28",
   "group": "live",
   "puppet_inventory_metadata": {
     "packages": {

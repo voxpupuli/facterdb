@@ -21,6 +21,7 @@ LEGACY_FACTS = %w[
   boardserialnumber
   chassisassettag
   chassistype
+  dhcp_servers
   domain
   fqdn
   gid
@@ -28,8 +29,9 @@ LEGACY_FACTS = %w[
   hardwaremodel
   hostname
   id
-  ipaddress
-  ipaddress6
+  interfaces
+  ipaddress_.*
+  ipaddress6_.*
   lsbdistcodename
   lsbdistdescription
   lsbdistid
@@ -37,7 +39,7 @@ LEGACY_FACTS = %w[
   lsbmajdistrelease
   lsbminordistrelease
   lsbrelease
-  macaddress
+  macaddress_.*
   macosx_buildversion
   macosx_productname
   macosx_productversion
@@ -48,10 +50,11 @@ LEGACY_FACTS = %w[
   memoryfree_mb
   memorysize
   memorysize_mb
-  netmask
-  netmask6
-  network
-  network6
+  mtu_.*
+  netmask6_.*
+  netmask_.*
+  network6_.*
+  network_.*
   operatingsystem
   operatingsystemmajrelease
   operatingsystemrelease
@@ -63,6 +66,14 @@ LEGACY_FACTS = %w[
   rubyplatform
   rubysitedir
   rubyversion
+  sshdsakey
+  sshecdsakey
+  sshed25519key
+  sshfp_dsa
+  sshfp_ecdsa
+  sshfp_ed25519
+  sshfp_rsa
+  sshrsakey
   scope6
   selinux
   selinux_config_mode

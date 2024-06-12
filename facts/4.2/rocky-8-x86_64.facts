@@ -3,9 +3,6 @@
   "augeas": {
     "version": "1.12.0"
   },
-  "dhcp_servers": {
-    "system": null
-  },
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
@@ -53,9 +50,6 @@
     "uid": 0,
     "user": "root"
   },
-  "interfaces": "eth0,lo",
-  "ipaddress_eth0": "10.0.2.15",
-  "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
   "kernel": "Linux",
   "kernelmajversion": "4.18",
@@ -66,7 +60,6 @@
     "1m": 0.53,
     "5m": 0.14
   },
-  "macaddress_eth0": "08:00:27:0e:f4:43",
   "memory": {
     "swap": {
       "available": "2.06 GiB",
@@ -299,12 +292,6 @@
       "used_bytes": 70630359040
     }
   },
-  "mtu_eth0": 1500,
-  "mtu_lo": 65536,
-  "netmask_eth0": "255.255.255.0",
-  "netmask_lo": "255.0.0.0",
-  "network_eth0": "10.0.2.0",
-  "network_lo": "127.0.0.0",
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
@@ -449,12 +436,6 @@
       "type": "ssh-rsa"
     }
   },
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGxhXTfpbV3vJgFflqsrAQXT8VaY91PnVkOMmUEMP72Aj2mbjd+kbu8u4mJP8UybVpYd18QcwhUJYtdTMms+lQA=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIA+sA3lDMi7Sac3BCkyNFF4WSeRW5sv9EsW+ayhpnvQi",
-  "sshfp_ecdsa": "SSHFP 3 1 daa9cfa0f92ddc7461e7dda7eac1f6469d68f112\nSSHFP 3 2 1734d9d719c0d7f0381fd19a6cf2f37078d366022837dde03b1510b0d0f3dce1",
-  "sshfp_ed25519": "SSHFP 4 1 b8839b8751bfb04ec06ea3e98fd999c8763d2a33\nSSHFP 4 2 b512c5ce3e72c8b3020c33e81cd615a9439f354a89e6defc58d5b10e7cbcfeca",
-  "sshfp_rsa": "SSHFP 1 1 cd8d4912f84ec6bd32608ea58d2ca0768673cdbe\nSSHFP 1 2 5be1f47956e15951b50119fd92fdf14877ebd20fff1b61982198bc08b59ca4ac",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDKUNpj8dEfGscp8DOcU8562dhk0oojQyLJqS9+oj/zezjKbarVtnNYeviVa+2OgNUl1HGxPhLL9hVvptN+bJI9mqsVadGDuuQQ3eZc0cTylkI5zshmi2oj42Vi/HI8b1Df8WhLLoLNmiyPF89k2KCuLgaO1NTdEG5jd9gA6+60JkdF0vy+DbKhAaDzQ8WcsllGv8kB9UHtPZq3zlojVC0DNoO8uQWftRs/GzTk31O88F4jB6hdoBVWLEfOMfO6IhMwFQ68w9cYD+jbDwf8FfsRQJoRjlw8wgUIaZRWPg9Tsd9QzmUrMocj+p+TruHutYcoxczsvOWbcli73sxsuugMEx6zA+nIkggY4tTyFlYj7fohvbUflxz/9NOaFo9pRm+jbkwYwYlnD8VWRYAMTA36DhIZpuO49RyatGiMRyQ1alWZxDAP7FadF84fJLagLC2SxLwXLGNyohAs9bqgV7m/G21HJmP7UuN8RtwDW5S/9ToL8d8m50Ezm581vv3Rit0=",
   "system_uptime": {
     "days": 0,
     "hours": 0,
