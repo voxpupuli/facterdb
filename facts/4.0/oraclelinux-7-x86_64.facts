@@ -454,7 +454,6 @@
   "puppetversion": "7.5.0",
   "whereami": "pdx",
   "function": "",
-  "env_temp_variable": "/tmp",
   "haszfs": false,
   "ip6tables_version": "1.4.21",
   "mongodb_is_master": "not_installed",
@@ -570,12 +569,6 @@
   "platform_symlink_writable": true,
   "platform_tag": "el-7-x86_64",
   "jenkins_plugins": "",
-  "python_release": "2.7",
-  "python2_release": "2.7",
-  "puppet_ssldir": "/etc/puppetlabs/puppet/ssl",
-  "puppet_digest_algorithm": "sha256",
-  "puppet_config": "/etc/puppetlabs/puppet/puppet.conf",
-  "puppet_stringify_facts": false,
   "mco_confdir": "/etc/mcollective/etc",
   "os_maj_version": "7",
   "pper_installed": false,
@@ -594,108 +587,5 @@
   "lvm_vg_centos_pvs": "/dev/sda2",
   "lvm_pvs": 1,
   "lvm_pv_0": "/dev/sda2",
-  "puppet_agent_pid": 2569,
-  "python_version": "2.7.5",
-  "python2_version": "2.7.5",
-  "aio_agent_build": "7.4.1.59.g5d5199a8a",
-  "aio_agent_version": "7.4.1.59",
-  "docker_home_dirs": {
-    "root": "/root",
-    "bin": "/bin",
-    "daemon": "/sbin",
-    "adm": "/var/adm",
-    "lp": "/var/spool/lpd",
-    "sync": "/sbin",
-    "shutdown": "/sbin",
-    "halt": "/sbin",
-    "mail": "/var/spool/mail",
-    "operator": "/root",
-    "games": "/usr/games",
-    "ftp": "/var/ftp",
-    "nobody": "/",
-    "avahi-autoipd": "/var/lib/avahi-autoipd",
-    "systemd-bus-proxy": "/",
-    "systemd-network": "/",
-    "dbus": "/",
-    "polkitd": "/",
-    "rpc": "/var/lib/rpcbind",
-    "tss": "/dev/null",
-    "rpcuser": "/var/lib/nfs",
-    "nfsnobody": "/var/lib/nfs",
-    "postfix": "/var/spool/postfix",
-    "sshd": "/var/empty/sshd"
-  },
-  "prometheus_alert_manager_running": false,
-  "who2bug": [
-
-  ],
-  "classification": {
-    "hostname": "live-pulp",
-    "parts": [
-      "live",
-      "",
-      "",
-      "",
-      "pulp",
-      ""
-    ],
-    "version": 0,
-    "group": "live",
-    "function": "",
-    "number": "",
-    "number_string": "",
-    "context": "",
-    "stage": "pulp",
-    "id": ""
-  },
-  "network_nexthop_ip": "10.16.112.1",
-  "network_primary_interface": "ens160",
-  "network_primary_ip": "10.16.115.28",
-  "group": "live",
-  "puppet_inventory_metadata": {
-    "packages": {
-      "collection_enabled": false,
-      "last_collection_time": "0.0s"
-    }
-  },
-  "function_number": "",
-  "virt_libvirt": false,
-  "stage": "pulp",
-  "mysql_server_id": 23179131,
-  "selinux_python_command": "python",
-  "is_pe": false,
-  "pe_patch": {
-    "package_updates": [
-
-    ],
-    "package_update_count": 0,
-    "missing_update_kbs": [
-
-    ],
-    "security_package_updates": [
-
-    ],
-    "security_package_update_count": 0,
-    "blackouts": {
-    },
-    "pinned_packages": [
-
-    ],
-    "last_run": {
-    },
-    "patch_group": "",
-    "reboot_override": "default",
-    "reboots": {
-      "reboot_required": "unknown"
-    },
-    "block_patching_on_warnings": "false",
-    "warnings": {
-      "update_file": "Update file not found, update information invalid",
-      "security_update_file": "Security update file not found, update information invalid"
-    },
-    "blocked": false,
-    "blocked_reasons": [
-
-    ]
-  }
+  "aio_agent_version": "7.4.1.59"
 }

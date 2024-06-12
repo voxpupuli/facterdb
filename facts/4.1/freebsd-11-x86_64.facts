@@ -275,12 +275,6 @@
       "used_bytes": 90112
     }
   },
-  "netmask6_lo0": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-  "netmask_em0": "255.255.255.0",
-  "netmask_lo0": "255.0.0.0",
-  "network6_lo0": "::1",
-  "network_em0": "10.0.2.0",
-  "network_lo0": "127.0.0.0",
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
@@ -414,12 +408,6 @@
       "type": "ssh-rsa"
     }
   },
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIDQjzwdLIoGT2ilZYfDbtpjPeGEUNOHYaWX6WxF2JlgCRxvUx0J6Sqz571NyBtKu7gVS2qh5bJyuJjU6rxBVdM=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIPP8c28h3N4AQV7rgdz2250kyt7irxDG9MpKFBaQak18",
-  "sshfp_ecdsa": "SSHFP 3 1 c44552551f9fbb81f4d7e38d406589d4fae7c246\nSSHFP 3 2 c415405515d326e31d1d5928a669490a8b817ebc79f213ef5cf035b5b26b22ef",
-  "sshfp_ed25519": "SSHFP 4 1 ab7c9e209f87f4e8321b13c6481482dda6fa34d9\nSSHFP 4 2 d934ba8e9c55d0794218dc3c8728f1c09bdd407eac8e8df3990e086678f0d131",
-  "sshfp_rsa": "SSHFP 1 1 90f05081e454c2f9bc5b81a46c2c1214605481b4\nSSHFP 1 2 6ebeb0740f993885cbf7bb1d0beefde048614ae657f10a60aa8abbb4e11b5a70",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCsFz4abAckdE8cmgMTW7/yptOhJaIi7D/LqAZOhUdbv+xS4ZDICwyhG3z68SPDjEZqqWjj2Vbqujhzas/Ld/MlvMhlbiM8yonPDJ/on+tKHzjLQEb4SM52skdiFiCnDzQhKCgtTVgOZFtGZz7tM6PCvPAmJsedEVP14ueXam/G7m33hyGd8L3eZirGJTnVZDWItKvokqHmSRmC0qAJqd3llqdCPHqsWMrmwJAPgrC3gRXMAhkbM6XshayHa4pZC24PP/lfb4kqBDfLyUzl5hoWXGPpFUXZXZevZNgp7Jk99NqgTAixUpmYrNgo4Fw1Nuy8FdD4UoY7PWgTHTZVetTp",
   "system_uptime": {
     "days": 0,
     "hours": 0,

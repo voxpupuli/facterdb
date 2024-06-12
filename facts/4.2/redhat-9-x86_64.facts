@@ -3,9 +3,6 @@
   "augeas": {
     "version": "1.13.0"
   },
-  "dhcp_servers": {
-    "system": null
-  },
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
@@ -53,11 +50,6 @@
     "uid": 0,
     "user": "root"
   },
-  "interfaces": "eth0,lo",
-  "ipaddress6_eth0": "fe80::a00:27ff:fe5f:a709",
-  "ipaddress6_lo": "::1",
-  "ipaddress_eth0": "10.0.2.15",
-  "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
   "kernel": "Linux",
   "kernelmajversion": "5.14",
@@ -68,7 +60,6 @@
     "1m": 0.95,
     "5m": 0.6
   },
-  "macaddress_eth0": "08:00:27:5f:a7:09",
   "memory": {
     "swap": {
       "available": "2.04 GiB",
@@ -352,16 +343,6 @@
       "used_bytes": 297943646208
     }
   },
-  "mtu_eth0": 1500,
-  "mtu_lo": 65536,
-  "netmask6_eth0": "ffff:ffff:ffff:ffff::",
-  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-  "netmask_eth0": "255.255.255.0",
-  "netmask_lo": "255.0.0.0",
-  "network6_eth0": "fe80::",
-  "network6_lo": "::1",
-  "network_eth0": "10.0.2.0",
-  "network_lo": "127.0.0.0",
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
@@ -542,12 +523,6 @@
       "type": "ssh-rsa"
     }
   },
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAV6XDBRq1ZfFKZeOmKfHNiE/W1X9ZoudOFSwiAsWMAdIwUl74gQ8o2i8qtpZBo5PjNYz95Hd87Hv3cU/uBccjM=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIJYwTTn+EA9HYi9tmihAPK5u9sR/WyDzIT5Sqbn8Nxmh",
-  "sshfp_ecdsa": "SSHFP 3 1 6e32526ca88a1d5f75c783a5ed174c68eb201a0d\nSSHFP 3 2 d2925ecb5fa6f71b70e06cf095bf80cf901d8669212cdfe3c504e108c04787bd",
-  "sshfp_ed25519": "SSHFP 4 1 1e747319ecad455a6d8a0231468f8431665c87e5\nSSHFP 4 2 e576a8dac880d5fa6a6c697704c52e02ce7ae29eb0562ee2872f5eabf860b62d",
-  "sshfp_rsa": "SSHFP 1 1 7ca7e5cfac08a4542cfc1464ce8f9b4eda2468ab\nSSHFP 1 2 abfdfc0835474bdab9fd754ebee9abfb3dfb6000246e070caa905d3d8a3298fb",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDW31ZI9SW8GxpQyIH3hNx523EBUWyS9Ecaas76XIMN9Yk0k+5ft/i/Zn3YPaF0Die2imFMXlKvSvaqNWMfffWjDDP8Ms4BVQhG86Aea9rfFLZNT1XNxivFr9JHU7z5k66oKuoAedA0XqmsUdQVneCCSNjxKPPRHzn+yOEA2sg7MpMnDW/MMuFWp0CcC8R7tu4f2x/FG/mxX5uooeLsPvxyqnYAaz8KHR2svRFExz2C7HesA4/dQrJB/gGbBUWVacIHzuD3SJ3Ueth/V/FEkCTTzKoV9fhWkNcwt8X8//uDaaLtvh5ibJj5uHfLQu6mThgYWJyGwJNQ1N9SzZTc2wJQj/OsEaqJLNRPOUZ/1ESTB+Q2vBEDXcIzA6fTY8u+HbyVAOXNGaZb8E7V57JRZKkI5sbdBp2c0FS3x3TSUBctxdCpffvMdJC+YSrhw8xuv5q1B7iXPFJ1aug79Wz8COa9RoRtjVgPBU7zOHSPHn0eWEoTi1JAu0VtxPmBUoZU3NU=",
   "system_uptime": {
     "days": 0,
     "hours": 0,

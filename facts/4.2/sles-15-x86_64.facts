@@ -3,9 +3,6 @@
   "augeas": {
     "version": "1.12.0"
   },
-  "dhcp_servers": {
-    "system": null
-  },
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
@@ -55,11 +52,6 @@
     "uid": 0,
     "user": "root"
   },
-  "interfaces": "eth0,lo",
-  "ipaddress6_eth0": "fe80::a00:27ff:feff:ca7e",
-  "ipaddress6_lo": "::1",
-  "ipaddress_eth0": "10.0.2.15",
-  "ipaddress_lo": "127.0.0.1",
   "is_virtual": true,
   "kernel": "Linux",
   "kernelmajversion": "5.3",
@@ -70,7 +62,6 @@
     "1m": 0.09,
     "5m": 0.04
   },
-  "macaddress_eth0": "08:00:27:ff:ca:7e",
   "memory": {
     "swap": {
       "available": "3.84 GiB",
@@ -252,16 +243,6 @@
       "used_bytes": 0
     }
   },
-  "mtu_eth0": 1500,
-  "mtu_lo": 65536,
-  "netmask6_eth0": "ffff:ffff:ffff:ffff::",
-  "netmask6_lo": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
-  "netmask_eth0": "255.255.255.0",
-  "netmask_lo": "255.0.0.0",
-  "network6_eth0": "fe80::",
-  "network6_lo": "::1",
-  "network_eth0": "10.0.2.0",
-  "network_lo": "127.0.0.0",
   "networking": {
     "domain": "example.com",
     "fqdn": "foo.example.com",
@@ -441,14 +422,6 @@
       "type": "ssh-rsa"
     }
   },
-  "sshdsakey": "AAAAB3NzaC1kc3MAAACBANvIYfBXmb5FTKVPjZ5vJ4gc5i+vUpaRN399kDWJFWOpyZ8Kg9vKauIl/fjtb2cjKTYVoYH7JmdbqSSOaHAyGzM3vB6WZK0OoPoCdzx3ERy5EOXGEownxDXdPcC+6tTtPxCXHaGo8nmBil9QZ+7d/X0AL9pTdZo+t/2Cj8KNF9ovAAAAFQCBs00mmDKl8SGJNH0myFmRnwlUMwAAAIBnAKJ1OOQYLvOMRevi8rQpepIxUSZ9SWvf4wa2eLh0rY63HcvIT0O/JJmPrLDg4xvYW4SQ3GSj4/KndOX+03wUmWgBO3CHjGYFxZQeCn/yBJDTFsUJHUP2a/amymcvigQVTLxjQ1zbJ7B8GV46rFyTZsbC/lQEysJC/wj0lGbyLwAAAIEAjAfcz7nxMv84RBYmwqxoX54zTFnI0mssXkEFAjyal7CPcipFRqtWqeTJcnGYrjEbQ+sSQSImyMgw3Qd18vCGzXgX96Giptd+jk3ptA9LOMNnvCk7cGglSz1xPGANKFjH07FUjsOAMi3imU2cXR5qsluxyNLHwvhm+rI15Z0K7gQ=",
-  "sshecdsakey": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCHAiu2eKcLaJnS9u3r9lY3vhHBzw5kiFe+QdqXG/eWRAl9Ky0KAqMVv508vL60OGsPPFWSAFFGk7qiDNogNUCQ=",
-  "sshed25519key": "AAAAC3NzaC1lZDI1NTE5AAAAIAHSXwB/Gip3QXS9cqy3gYZnzhGN7WLmY3AOVO+hknBQ",
-  "sshfp_dsa": "SSHFP 2 1 f20a43c65a9c93cb8f6285b089c61694f291ddd2\nSSHFP 2 2 9863476f745925ee14fdef428830cccdddf1990dbb83356cf4cb15683aa75958",
-  "sshfp_ecdsa": "SSHFP 3 1 251493b65f159e8005b817931f71cef2a7613ecc\nSSHFP 3 2 f845c7759b46fd3f104bcb192edd963c3205b46349c2e3da9764c6d66f92c3c4",
-  "sshfp_ed25519": "SSHFP 4 1 32d84298ffdf09b21b1d8ac2806696a7f5e497bb\nSSHFP 4 2 6dfda2ad46e1832f22602882b489fbf7b41199caa2db4029527dbd644457f270",
-  "sshfp_rsa": "SSHFP 1 1 63a6a7e024f8666d678fcb26e22c2419542382b3\nSSHFP 1 2 ee6489cd46228e580f98c05f3d4ac265812d349390db9c0bcf1a478d86266ccf",
-  "sshrsakey": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDsoGI0wWG4hafPkrv49+cfBhSh4e661pGnQA7XJHas2zmQeAjgh6XbR4WUwhmAtnPlwTgUpFBrdS80Nu1uQCpRb+8ZWaIILlIePTY8xoLaRBhaQBUxKwfmOCUzq+Cn7OEYjf8bXo3sAs+PqjsZd1v7t87EjZiiYYv3mJNaa4CX/YqE0dEgTS2oUYsd2VBNKpCoG2Mul6CdRWTP9Kq7dwzn2edRRqswrXcofzVfgXAzE3dGEjdRX++QXEuBBnSlhvEnlODH2UbeHtMSdZidYkdhOmxSY2JRPzlfWu93dOs8C8TBj0YM5V0hjxXx3sdsU7F+HM93YHkGPQsvldIBbc2pqdoaoYP75rHN9WXYxqXESvnpHiloaxSkyiXdWC9w73NOMboBKgf8Zuwn+HdYfkXOyRTJ0x4R59p87hTGZo7lZ0AgB3nZGHe6belIFPUcbJ//KsZk16GUaeePyNn/AS0CoXYR8+uSLdz40x5Fs+fxJcgtj5DFkt4d73Gt5jrCjyU=",
   "system_uptime": {
     "days": 0,
     "hours": 4,
