@@ -110,6 +110,25 @@ describe 'Default Facts' do
         expect(content['puppet_server']).to be_nil
         expect(content['pe_version']).to be_nil
         expect(content['package_provider']).to be_nil
+        expect(content['is_pe']).to be_nil
+        expect(content['pe_major_version']).to be_nil
+        expect(content['pe_minor_version']).to be_nil
+        expect(content['pe_patch_version']).to be_nil
+      end
+
+      it 'contains no facts from puppetlabs/puppet_agent' do
+        expect(content['env_temp_variable']).to be_nil
+        expect(content['puppet_agent_appdata']).to be_nil
+        expect(content['puppet_agent_pid']).to be_nil
+        expect(content['puppet_runmode']).to be_nil
+        expect(content['puppet_ssldir']).to be_nil
+        expect(content['puppet_digest_algorithm']).to be_nil
+        expect(content['puppet_config']).to be_nil
+        expect(content['puppet_stringify_facts']).to be_nil
+        expect(content['puppet_sslpaths']).to be_nil
+        expect(content['puppet_master_server']).to be_nil
+        expect(content['puppet_confdir']).to be_nil
+        expect(content['puppet_client_datadir']).to be_nil
       end
 
       it 'contains no facts from puppet/systemd' do
@@ -138,6 +157,28 @@ describe 'Default Facts' do
 
       it 'does not contain the legacy operatingsystem fact' do
         expect(content['operatingsystem']).to be_nil
+      end
+
+      # those facts aren't default in Open Source Puppet/Facter core
+      it 'does not contain the PE facts' do
+        expect(content['pe_patch']).to be_nil
+        expect(content['puppet_inventory_metadata']).to be_nil
+      end
+
+      it 'does not contain random facts from known modules' do
+        expect(content['selinux_python_command']).to be_nil
+        expect(content['mysql_server_id']).to be_nil
+        expect(content['stage']).to be_nil
+        expect(content['virt_libvirt']).to be_nil
+        expect(content['function_number']).to be_nil
+        expect(content['classification']).to be_nil
+        expect(content['who2bug']).to be_nil
+        expect(content['prometheus_alert_manager_running']).to be_nil
+        expect(content['docker_home_dirs']).to be_nil
+        expect(content['aio_agent_build']).to be_nil
+        expect(content['python2_version']).to be_nil
+        expect(content['python_version']).to be_nil
+        expect(content['puppet_agent_pid']).to be_nil
       end
     end
   end

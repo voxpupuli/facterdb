@@ -1,5 +1,4 @@
 {
-  "aio_agent_build": "7.18.0",
   "aio_agent_version": "7.18.0",
   "archive_windir": "C:\\ProgramData\\staging",
   "common_appdata": "C:\\ProgramData",
@@ -22,7 +21,6 @@
     "privileged": true,
     "user": "foo\\windows"
   },
-  "is_pe": false,
   "is_virtual": true,
   "kernel": "windows",
   "kernelmajversion": "6.2",
@@ -101,43 +99,6 @@
     }
   },
   "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Puppet Labs\\Puppet\\bin",
-  "pe_patch": {
-    "blackouts": {
-    },
-    "block_patching_on_warnings": "false",
-    "blocked": false,
-    "blocked_reasons": [
-
-    ],
-    "last_run": {
-    },
-    "missing_security_kbs": [
-
-    ],
-    "missing_update_kbs": [
-
-    ],
-    "package_update_count": 0,
-    "package_updates": [
-
-    ],
-    "patch_group": "",
-    "pinned_packages": [
-
-    ],
-    "reboot_override": "default",
-    "reboots": {
-      "reboot_required": "unknown"
-    },
-    "security_package_update_count": 0,
-    "security_package_updates": [
-
-    ],
-    "warnings": {
-      "security_update_file": "Security update file not found, update information invalid",
-      "update_file": "Update file not found, update information invalid"
-    }
-  },
   "platform_symlink_writable": false,
   "processors": {
     "cores": 2,
@@ -150,12 +111,6 @@
     "threads": 2
   },
   "puppet_files_dir_present": false,
-  "puppet_inventory_metadata": {
-    "packages": {
-      "collection_enabled": false,
-      "last_collection_time": "0.0s"
-    }
-  },
   "puppetversion": "7.18.0",
   "ruby": {
     "platform": "x64-mingw32",
