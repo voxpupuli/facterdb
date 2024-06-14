@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.1.0](https://rubygems.org/gems/facterdb/versions/3.1.0) (2024-06-14)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.0.0...3.1.0)
+
+**Implemented enhancements:**
+
+- Cleanup legacy facts leftovers [\#370](https://github.com/voxpupuli/facterdb/pull/370) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Purge custom facts [\#371](https://github.com/voxpupuli/facterdb/pull/371) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.0.0](https://rubygems.org/gems/facterdb/versions/3.0.0) (2024-06-10)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/2.1.0...3.0.0)
