@@ -90,7 +90,7 @@ describe 'Default Facts' do
 
       it 'contains newer networking facts hash' do
         if Gem::Version.new(content['facterversion']) >= Gem::Version.new('3.0.0')
-          expect(content['networking']['ip']).to not_be_nil.and not_be_empty
+          expect(content['networking']['ip']).to eq('10.0.2.15')
           expect(content['networking']['ip6']).to not_be_nil.and not_be_empty
           expect(content['networking']['hostname']).to eq('foo')
           expect(content['networking']['domain']).to eq('example.com')
