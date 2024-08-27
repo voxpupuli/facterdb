@@ -99,7 +99,7 @@ case "${osfamily}" in
     apt-get -y remove --purge puppet8-release
   fi
   # libc6-dev needed to build the ffi gem
-  apt_install make gcc libgmp-dev libc6-dev
+  apt_install make gcc libgmp-dev libc6-dev ruby ruby-dev
 
   # There are no puppet-agent packages for $releasename yet, so generate a Facter 3.x
   # fact set from the official Debian package.
