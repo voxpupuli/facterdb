@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.2.0](https://rubygems.org/gems/facterdb/versions/3.2.0) (2024-08-27)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.1.0...3.2.0)
+
+**Implemented enhancements:**
+
+- ubuntu-24.04-x86\_64: Add factsets [\#375](https://github.com/voxpupuli/facterdb/pull/375) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.1.0](https://rubygems.org/gems/facterdb/versions/3.1.0) (2024-06-14)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.0.0...3.1.0)
