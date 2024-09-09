@@ -89,13 +89,11 @@ describe 'Default Facts' do
       end
 
       it 'contains newer networking facts hash' do
-        if Gem::Version.new(content['facterversion']) >= Gem::Version.new('3.0.0')
-          expect(content['networking']['ip']).to not_be_nil.and not_be_empty
-          expect(content['networking']['ip6']).to not_be_nil.and not_be_empty
-          expect(content['networking']['hostname']).to eq('foo')
-          expect(content['networking']['domain']).to eq('example.com')
-          expect(content['networking']['fqdn']).to eq('foo.example.com')
-        end
+        expect(content['networking']['ip']).to not_be_nil.and not_be_empty
+        expect(content['networking']['ip6']).to not_be_nil.and not_be_empty
+        expect(content['networking']['hostname']).to eq('foo')
+        expect(content['networking']['domain']).to eq('example.com')
+        expect(content['networking']['fqdn']).to eq('foo.example.com')
       end
 
       it 'does not contains the legacy ipaddress fact' do
