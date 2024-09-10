@@ -184,7 +184,7 @@ gem install bundler --no-document --no-format-executable
 bundle config set path 'vendor/bundler'
 bundle install
 
-for version in 4.2.14 4.3.0 4.4.3 4.5.2 4.6.0 4.7.0; do
+for version in 4.2.14 4.3.0 4.4.3 4.5.2 4.6.0 4.7.0 4.8.0; do
   FACTER_GEM_VERSION="~> ${version}" bundle update
   # sometimes all versions of facter are not possible, if the bundle update fails, skip the rest of the loop
   if [ $? -ne 0 ]; then

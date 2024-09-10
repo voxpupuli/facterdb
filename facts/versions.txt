@@ -3,6 +3,9 @@
 # Version information from Facter release notes: https://www.puppet.com/docs/puppet/8/release_notes_facter.htm
 # FacterDB only cares about the x.y, and drops .z - Please keep versions in order by Facter version
 
+# Facter 4.8.0 - Released July 2024 and shipped with Puppet 8.8.1
+8.8.1
+
 # Facter 4.7.0 - Released April 2024 and shipped with Puppet 8.6.0.
 8.6.0
 
