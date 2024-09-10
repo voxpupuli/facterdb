@@ -6,7 +6,7 @@
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
-      "serial": "VBbc9ebddb-5f5cf18c",
+      "serial": "VB4ea5bdba-d81876ba",
       "size": "64.00 GiB",
       "size_bytes": 68719476736,
       "type": "hdd",
@@ -31,7 +31,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "c4a69568-a39c-8b43-8ae9-b982bdd83df3",
+      "uuid": "27a80972-e75e-2c47-8229-f5aad70afb8f",
       "version": "1.2"
     }
   },
@@ -59,9 +59,9 @@
   "kernelrelease": "6.8.0-31-generic",
   "kernelversion": "6.8.0",
   "load_averages": {
-    "15m": 0.07,
-    "1m": 0.75,
-    "5m": 0.21
+    "15m": 0.08,
+    "1m": 0.68,
+    "5m": 0.22
   },
   "memory": {
     "swap": {
@@ -74,20 +74,20 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.37 GiB",
-      "available_bytes": 1471012864,
-      "capacity": "28.71%",
+      "available": "1.53 GiB",
+      "available_bytes": 1646288896,
+      "capacity": "20.22%",
       "total": "1.92 GiB",
-      "total_bytes": 2063482880,
-      "used": "565.02 MiB",
-      "used_bytes": 592470016
+      "total_bytes": 2063486976,
+      "used": "397.87 MiB",
+      "used_bytes": 417198080
     }
   },
   "mountpoints": {
     "/": {
-      "available": "25.11 GiB",
-      "available_bytes": 26962100224,
-      "capacity": "12.73%",
+      "available": "25.12 GiB",
+      "available_bytes": 26970910720,
+      "capacity": "12.70%",
       "device": "/dev/mapper/ubuntu--vg-ubuntu--lv",
       "filesystem": "ext4",
       "options": [
@@ -96,8 +96,8 @@
       ],
       "size": "30.34 GiB",
       "size_bytes": 32574881792,
-      "used": "3.66 GiB",
-      "used_bytes": 3931914240
+      "used": "3.65 GiB",
+      "used_bytes": 3923103744
     },
     "/boot": {
       "available": "1.69 GiB",
@@ -116,7 +116,7 @@
     },
     "/dev": {
       "available": "948.11 MiB",
-      "available_bytes": 994164736,
+      "available_bytes": 994168832,
       "capacity": "0%",
       "device": "udev",
       "filesystem": "devtmpfs",
@@ -124,13 +124,13 @@
         "rw",
         "nosuid",
         "relatime",
-        "size=970864k",
-        "nr_inodes=242716",
+        "size=970868k",
+        "nr_inodes=242717",
         "mode=755",
         "inode64"
       ],
       "size": "948.11 MiB",
-      "size_bytes": 994164736,
+      "size_bytes": 994168832,
       "used": "0 bytes",
       "used_bytes": 0
     },
@@ -208,9 +208,9 @@
       "used_bytes": 0
     },
     "/run": {
-      "available": "195.79 MiB",
-      "available_bytes": 205299712,
-      "capacity": "0.51%",
+      "available": "195.81 MiB",
+      "available_bytes": 205320192,
+      "capacity": "0.50%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
       "options": [
@@ -219,14 +219,14 @@
         "nodev",
         "noexec",
         "relatime",
-        "size=201512k",
+        "size=201516k",
         "mode=755",
         "inode64"
       ],
       "size": "196.79 MiB",
-      "size_bytes": 206348288,
-      "used": "1.00 MiB",
-      "used_bytes": 1048576
+      "size_bytes": 206352384,
+      "used": "1008.00 KiB",
+      "used_bytes": 1032192
     },
     "/run/lock": {
       "available": "5.00 MiB",
@@ -272,8 +272,8 @@
       "used_bytes": 12288
     },
     "/vagrant": {
-      "available": "512.80 GiB",
-      "available_bytes": 550615171072,
+      "available": "512.81 GiB",
+      "available_bytes": 550628442112,
       "capacity": "43.61%",
       "device": "vagrant",
       "filesystem": "vboxsf",
@@ -287,8 +287,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "396.61 GiB",
-      "used_bytes": 425861013504
+      "used": "396.60 GiB",
+      "used_bytes": 425847742464
     }
   },
   "networking": {
@@ -477,7 +477,7 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 46,
+    "seconds": 52,
     "uptime": "0:00 hours"
   },
   "timezone": "UTC",

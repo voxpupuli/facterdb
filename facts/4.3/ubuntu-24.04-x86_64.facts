@@ -1,11 +1,12 @@
 {
+  "aio_agent_version": "8.8.1",
   "augeas": {
     "version": "1.14.1"
   },
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
-      "serial": "VB829f107b-45df96c7",
+      "serial": "VB4ea5bdba-d81876ba",
       "size": "64.00 GiB",
       "size_bytes": 68719476736,
       "type": "hdd",
@@ -30,12 +31,13 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "b429a705-ac90-6a4e-885d-ee50eeef6604"
+      "uuid": "27a80972-e75e-2c47-8229-f5aad70afb8f"
     }
   },
-  "facterversion": "4.3.0",
+  "facterversion": "4.3.1",
   "filesystems": "btrfs,ext2,ext3,ext4,squashfs,vfat",
   "fips_enabled": false,
+  "gem_version": "~> 4.3.0",
   "hypervisors": {
     "virtualbox": {
       "revision": "163906",
@@ -57,9 +59,9 @@
   "kernelrelease": "6.8.0-31-generic",
   "kernelversion": "6.8.0",
   "load_averages": {
-    "15m": 0.17,
-    "1m": 0.27,
-    "5m": 0.32
+    "15m": 0.1,
+    "1m": 0.79,
+    "5m": 0.28
   },
   "memory": {
     "swap": {
@@ -72,20 +74,20 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.52 GiB",
-      "available_bytes": 1627054080,
-      "capacity": "21.15%",
+      "available": "1.49 GiB",
+      "available_bytes": 1597456384,
+      "capacity": "22.58%",
       "total": "1.92 GiB",
       "total_bytes": 2063486976,
-      "used": "416.21 MiB",
-      "used_bytes": 436432896
+      "used": "444.44 MiB",
+      "used_bytes": 466030592
     }
   },
   "mountpoints": {
     "/": {
-      "available": "24.90 GiB",
-      "available_bytes": 26738315264,
-      "capacity": "13.45%",
+      "available": "24.76 GiB",
+      "available_bytes": 26588368896,
+      "capacity": "13.94%",
       "device": "/dev/mapper/ubuntu--vg-ubuntu--lv",
       "filesystem": "ext4",
       "options": [
@@ -94,8 +96,8 @@
       ],
       "size": "30.34 GiB",
       "size_bytes": 32574881792,
-      "used": "3.87 GiB",
-      "used_bytes": 4155699200
+      "used": "4.01 GiB",
+      "used_bytes": 4305645568
     },
     "/boot": {
       "available": "1.69 GiB",
@@ -207,7 +209,7 @@
     },
     "/run": {
       "available": "195.82 MiB",
-      "available_bytes": 205336576,
+      "available_bytes": 205332480,
       "capacity": "0.49%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
@@ -223,8 +225,8 @@
       ],
       "size": "196.79 MiB",
       "size_bytes": 206352384,
-      "used": "992.00 KiB",
-      "used_bytes": 1015808
+      "used": "996.00 KiB",
+      "used_bytes": 1019904
     },
     "/run/lock": {
       "available": "5.00 MiB",
@@ -270,9 +272,9 @@
       "used_bytes": 12288
     },
     "/vagrant": {
-      "available": "518.75 GiB",
-      "available_bytes": 557000220672,
-      "capacity": "42.96%",
+      "available": "512.43 GiB",
+      "available_bytes": 550215663616,
+      "capacity": "43.65%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -285,8 +287,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "390.67 GiB",
-      "used_bytes": 419475963904
+      "used": "396.99 GiB",
+      "used_bytes": 426260520960
     }
   },
   "networking": {
@@ -416,7 +418,7 @@
       "uuid": "d2OsZK-N5Ih-NCA3-TOIv-h9Ul-wXzA-UoQKtz"
     }
   },
-  "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+  "path": "/home/vagrant/vendor/bundler/ruby/3.2.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
   "processors": {
     "cores": 2,
     "count": 2,
@@ -429,11 +431,10 @@
     "speed": "3.99 GHz",
     "threads": 1
   },
-  "puppetversion": "8.4.0",
   "ruby": {
-    "platform": "x86_64-linux-gnu",
-    "sitedir": "/usr/local/lib/site_ruby/3.2.0",
-    "version": "3.2.3"
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.4"
   },
   "ssh": {
     "ecdsa": {
@@ -464,8 +465,8 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 301,
-    "uptime": "0:05 hours"
+    "seconds": 75,
+    "uptime": "0:01 hours"
   },
   "timezone": "UTC",
   "virtual": "virtualbox"
