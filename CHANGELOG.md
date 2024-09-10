@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.3.0](https://rubygems.org/gems/facterdb/versions/3.3.0) (2024-09-11)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.2.0...3.3.0)
+
+**Implemented enhancements:**
+
+- Add Facter 4.9.0 / Puppet 8.9.0 support + factsets [\#381](https://github.com/voxpupuli/facterdb/pull/381) ([bastelfreak](https://github.com/bastelfreak))
+- Facter 4.8: Add Ubuntu 24.04 factset [\#378](https://github.com/voxpupuli/facterdb/pull/378) ([bastelfreak](https://github.com/bastelfreak))
+
+**Fixed bugs:**
+
+- Ubuntu 24.04: Regenerate all factsets with AIO facts [\#380](https://github.com/voxpupuli/facterdb/pull/380) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Ensure all Factsets have modern facts [\#377](https://github.com/voxpupuli/facterdb/pull/377) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.2.0](https://rubygems.org/gems/facterdb/versions/3.2.0) (2024-08-27)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.1.0...3.2.0)
