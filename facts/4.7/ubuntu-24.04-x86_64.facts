@@ -1,11 +1,12 @@
 {
+  "aio_agent_version": "8.8.1",
   "augeas": {
     "version": "1.14.1"
   },
   "disks": {
     "sda": {
       "model": "VBOX HARDDISK",
-      "serial": "VB829f107b-45df96c7",
+      "serial": "VB4ea5bdba-d81876ba",
       "size": "64.00 GiB",
       "size_bytes": 68719476736,
       "type": "hdd",
@@ -30,7 +31,7 @@
     "product": {
       "name": "VirtualBox",
       "serial_number": "0",
-      "uuid": "b429a705-ac90-6a4e-885d-ee50eeef6604",
+      "uuid": "27a80972-e75e-2c47-8229-f5aad70afb8f",
       "version": "1.2"
     }
   },
@@ -59,9 +60,9 @@
   "kernelrelease": "6.8.0-31-generic",
   "kernelversion": "6.8.0",
   "load_averages": {
-    "15m": 0.19,
-    "1m": 0.48,
-    "5m": 0.36
+    "15m": 0.1,
+    "1m": 0.73,
+    "5m": 0.28
   },
   "memory": {
     "swap": {
@@ -74,20 +75,20 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "1.46 GiB",
-      "available_bytes": 1563598848,
-      "capacity": "24.23%",
+      "available": "1.45 GiB",
+      "available_bytes": 1560621056,
+      "capacity": "24.37%",
       "total": "1.92 GiB",
       "total_bytes": 2063486976,
-      "used": "476.73 MiB",
-      "used_bytes": 499888128
+      "used": "479.57 MiB",
+      "used_bytes": 502865920
     }
   },
   "mountpoints": {
     "/": {
-      "available": "24.90 GiB",
-      "available_bytes": 26737627136,
-      "capacity": "13.45%",
+      "available": "24.74 GiB",
+      "available_bytes": 26569138176,
+      "capacity": "14.00%",
       "device": "/dev/mapper/ubuntu--vg-ubuntu--lv",
       "filesystem": "ext4",
       "options": [
@@ -96,8 +97,8 @@
       ],
       "size": "30.34 GiB",
       "size_bytes": 32574881792,
-      "used": "3.87 GiB",
-      "used_bytes": 4156387328
+      "used": "4.03 GiB",
+      "used_bytes": 4324876288
     },
     "/boot": {
       "available": "1.69 GiB",
@@ -209,7 +210,7 @@
     },
     "/run": {
       "available": "195.82 MiB",
-      "available_bytes": 205336576,
+      "available_bytes": 205332480,
       "capacity": "0.49%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
@@ -225,8 +226,8 @@
       ],
       "size": "196.79 MiB",
       "size_bytes": 206352384,
-      "used": "992.00 KiB",
-      "used_bytes": 1015808
+      "used": "996.00 KiB",
+      "used_bytes": 1019904
     },
     "/run/lock": {
       "available": "5.00 MiB",
@@ -272,9 +273,9 @@
       "used_bytes": 12288
     },
     "/vagrant": {
-      "available": "518.74 GiB",
-      "available_bytes": 556989091840,
-      "capacity": "42.96%",
+      "available": "512.40 GiB",
+      "available_bytes": 550187982848,
+      "capacity": "43.66%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -287,8 +288,8 @@
       ],
       "size": "909.41 GiB",
       "size_bytes": 976476184576,
-      "used": "390.68 GiB",
-      "used_bytes": 419487092736
+      "used": "397.01 GiB",
+      "used_bytes": 426288201728
     }
   },
   "networking": {
@@ -438,9 +439,9 @@
     "threads": 1
   },
   "ruby": {
-    "platform": "x86_64-linux-gnu",
-    "sitedir": "/usr/local/lib/site_ruby/3.2.0",
-    "version": "3.2.3"
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.4"
   },
   "ssh": {
     "ecdsa": {
@@ -471,8 +472,8 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 320,
-    "uptime": "0:05 hours"
+    "seconds": 83,
+    "uptime": "0:01 hours"
   },
   "timezone": "UTC",
   "virtual": "virtualbox"
