@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.4.0](https://rubygems.org/gems/facterdb/versions/3.4.0) (2024-09-16)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.3.0...3.4.0)
+
+**Implemented enhancements:**
+
+- Add Rocky 8 factsets, switch to bento box [\#382](https://github.com/voxpupuli/facterdb/pull/382) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.3.0](https://rubygems.org/gems/facterdb/versions/3.3.0) (2024-09-11)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.2.0...3.3.0)
