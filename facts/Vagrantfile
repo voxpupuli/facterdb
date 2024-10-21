@@ -360,6 +360,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
+  config.vm.define 'amazonlinux-2023-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/amazonlinux-2023'
+    host.vm.provision 'shell', inline: 'yum -y install gcc glibc-devel'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
   config.vm.define 'fedora-36-x86_64', autostart: false do |host|
     host.vm.box = 'generic/fedora36'
     host.vm.synced_folder '.', '/vagrant'
