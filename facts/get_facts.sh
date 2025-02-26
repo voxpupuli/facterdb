@@ -40,6 +40,7 @@ elif test -f /usr/bin/apt-get; then
   apt_install lsb-release
   lsbdistcodename=$(lsb_release -sc)
   operatingsystem=$(lsb_release -si)
+  operatingsystem_lowercase=$(echo $operatingsystem | tr '[:upper:]' '[:lower:]')
   operatingsystemmajrelease=$(lsb_release -sr)
   osfamily='Debian'
 elif test -f /etc/redhat-release ; then
@@ -56,9 +57,9 @@ elif test -f '/etc/os-release' && grep -q 'Amazon' '/etc/os-release'; then
 else
   osfamily=$(uname)
 fi
+. /etc/os-release
 case "${osfamily}" in
 'RedHat')
-  . /etc/os-release
   if [[ $ID == fedora ]]; then
     distcode=fedora
     dnf -y install facter ruby ruby-devel wget make gcc net-tools augeas
@@ -68,23 +69,24 @@ case "${osfamily}" in
   else
     distcode=el
   fi
-  wget "http://yum.puppetlabs.com/puppet8-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/puppet8-release.rpm
-  if test -f /tmp/puppet8-release.rpm; then
-    rpm -ivh /tmp/puppet8-release.rpm
+  wget "https://yum.overlookinfratech.com/openvox8-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/openvox8-release.rpm
+  if test -f /tmp/openvox8-release.rpm; then
+    rpm -ivh /tmp/openvox8-release.rpm
     for puppet_agent_version in $puppet8_agent_versions; do
-      if yum install -y puppet-agent-${puppet_agent_version}; then
+      if yum install -y openvox-agent-${puppet_agent_version}; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
         mkdir -p $(dirname ${output_file})
         facter --puppet --json | tee ${output_file}
       fi
     done
-    yum remove -y puppet8-release
+    yum remove -y openvox8-release
   fi
   ;;
 'Debian')
   # libaugeas-dev is needed when we generate facts via the facter gem. Otherwise augeas.version fact is missing
   apt_install curl file libaugeas-dev
-  curl "https://apt.puppetlabs.com/puppet8-release-${lsbdistcodename}.deb" -o /tmp/puppet8-release.deb
+  # VERSION_ID comes from /etc/os-release
+  curl "https://apt.overlookinfratech.com/openvox8-release-${operatingsystem}${VERSION_ID}.deb" -o /tmp/openvox8-release.deb
   # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
   if test "$?" -eq 0 -a -f /tmp/puppet8-release.deb && [[ "$(file -b /tmp/puppet8-release.deb)" =~ "Debian binary package".* ]] ; then
     dpkg --install /tmp/puppet8-release.deb
@@ -179,7 +181,6 @@ hardwaremodel=$(facter hardwaremodel)
 [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
 
 PATH=/opt/puppetlabs/puppet/bin:$PATH
-
 gem install bundler --no-document --no-format-executable
 bundle config set path 'vendor/bundler'
 bundle install
