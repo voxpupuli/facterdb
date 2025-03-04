@@ -86,19 +86,19 @@ case "${osfamily}" in
   # libaugeas-dev is needed when we generate facts via the facter gem. Otherwise augeas.version fact is missing
   apt_install curl file libaugeas-dev
   # VERSION_ID comes from /etc/os-release
-  curl "https://apt.overlookinfratech.com/openvox8-release-${operatingsystem}${VERSION_ID}.deb" -o /tmp/openvox8-release.deb
-  # apt.puppetlabs.com returns an html document if the requested deb doesn't exist and /tmp/puppet6-release.deb will be an html doc
-  if test "$?" -eq 0 -a -f /tmp/puppet8-release.deb && [[ "$(file -b /tmp/puppet8-release.deb)" =~ "Debian binary package".* ]] ; then
-    dpkg --install /tmp/puppet8-release.deb
+  curl "https://apt.overlookinfratech.com/openvox8-release-${operatingsystem_lowercase}${VERSION_ID}.deb" -o /tmp/openvox8-release.deb
+  # apt.overlookinfratech.com returns an html document if the requested deb doesn't exist and /tmp/openvox8-release.deb will be an ASCII file
+  if test "$?" -eq 0 -a -f /tmp/openvox8-release.deb && [[ "$(file -b /tmp/openvox8-release.deb)" =~ "Debian binary package".* ]] ; then
+    dpkg --install /tmp/openvox8-release.deb
     apt-get update
     for puppet_agent_version in $puppet8_agent_versions; do
-      if apt_install puppet-agent=${puppet_agent_version}*; then
+      if apt_install openvox-agent=${puppet_agent_version}*; then
         output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
         mkdir -p $(dirname ${output_file})
         facter --puppet --json | tee ${output_file}
       fi
     done
-    apt-get -y remove --purge puppet8-release
+    apt-get -y remove --purge openvox8-release
   fi
   # libc6-dev needed to build the ffi gem
   apt_install make gcc libgmp-dev libc6-dev ruby ruby-dev
@@ -107,7 +107,7 @@ case "${osfamily}" in
   # fact set from the official Debian package.
   if [[ "hirsute" =~ ${lsbdistcodename} || "impish" =~ ${lsbdistcodename} || "jammy" =~ ${lsbdistcodename} || "kinetic" =~ ${lsbdistcodename} ]]; then
     apt_install ruby rubygems ruby-dev puppet facter
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
     mkdir -p $(dirname ${output_file})
     facter --puppet --json | tee ${output_file}
   fi
@@ -122,18 +122,18 @@ case "${osfamily}" in
     # fact sets.
     umount /vagrant
     mount -t vboxvfs Vagrant /vagrant
-    hardwaremodel=$(facter hardwaremodel)
+    hardwaremodel=$(facter os.hardware)
     [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
-    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-${hardwaremodel}.facts"
+    output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-${hardwaremodel}.facts"
     mkdir -p $(dirname ${output_file})
     [ ! -f ${output_file} ] && facter --puppet --json | tee ${output_file}
   done
   ;;
 'OpenBSD')
-  hardwaremodel=$(facter hardwaremodel)
+  hardwaremodel=$(facter os.hardware)
   [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
   # Vagrant box should already have puppet & facter installed
-  output_file="/vagrant/$(facter --version | cut -d. -f1-2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemrelease)-${hardwaremodel}.facts"
+  output_file="/vagrant/$(facter --version | cut -d. -f1-2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemrelease)-${hardwaremodel}.facts"
   mkdir -p $(dirname ${output_file})
   [ ! -f ${output_file} ] && facter --puppet --json | tee ${output_file}
   ;;
@@ -149,7 +149,7 @@ case "${osfamily}" in
   if rpm -Uvh ${http_method}://yum.puppet.com/puppet8-release-sles-${operatingsystemmajrelease}.noarch.rpm; then
     for puppet_agent_version in $puppet8_agent_versions; do
       if zypper --gpg-auto-import-keys --non-interactive install puppet-agent-${puppet_agent_version}; then
-        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter operatingsystemmajrelease)-$(facter hardwaremodel).facts"
+        output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.release.major)-$(facter os.hardware).facts"
         mkdir -p $(dirname ${output_file})
         facter --puppet --json | tee ${output_file}
       fi
@@ -159,13 +159,13 @@ case "${osfamily}" in
   ;;
 'Archlinux')
   pacman --sync --refresh --sysupgrade --noconfirm ruby ruby-bundler base-devel dnsutils facter augeas
-  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.hardware).facts"
   mkdir -p $(dirname ${output_file})
   facter --puppet --json | tee ${output_file}
   ;;
 'Gentoo')
   emerge -vq1 dev-lang/ruby dev-ruby/bundler app-admin/puppet dev-ruby/facter sys-apps/dmidecode app-admin/augeas
-  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter operatingsystem | tr '[:upper:]' '[:lower:]')-$(facter hardwaremodel).facts"
+  output_file="/vagrant/$(facter --version | cut -d. -f1,2)/$(facter os.name | tr '[:upper:]' '[:lower:]')-$(facter os.hardware).facts"
   mkdir -p $(dirname ${output_file})
   facter --puppet --json | tee ${output_file}
 esac
@@ -173,10 +173,10 @@ esac
 # this lower section relies on the ruby version and facter version that came
 # with the last installed puppet_agent per above
 # puppet-agent 8.0.0 has ruby 3.2.2 and it cant install 4.0.0, 4.1.0 facter gem
-operatingsystem=$(facter operatingsystem | tr '[:upper:]' '[:lower:]')
-operatingsystemrelease=$(facter operatingsystemrelease)
-operatingsystemmajrelease=$(facter operatingsystemmajrelease)
-hardwaremodel=$(facter hardwaremodel)
+operatingsystem=$(facter os.name | tr '[:upper:]' '[:lower:]')
+operatingsystemrelease=$(facter os.release.full)
+operatingsystemmajrelease=$(facter os.release.major)
+hardwaremodel=$(facter os.hardware)
 
 [ "${hardwaremodel}" = 'amd64' ] && hardwaremodel=x86_64
 
