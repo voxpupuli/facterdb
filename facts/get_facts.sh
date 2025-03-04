@@ -64,7 +64,9 @@ elif test -f '/etc/os-release' && grep -q 'Amazon' '/etc/os-release'; then
 else
   osfamily=$(uname)
 fi
+
 . /etc/os-release
+
 case "${osfamily}" in
 'RedHat')
   if [[ $ID == fedora ]]; then
@@ -73,6 +75,9 @@ case "${osfamily}" in
   elif [[ $ID == ol ]]; then
     distcode=el
     dnf -y groupinstall 'Development Tools'
+  elif [[ $ID == amzn ]]; then
+    distcode=el
+    dnf -y install ruby ruby-devel wget make gcc net-tools augeas
   else
     distcode=el
   fi
