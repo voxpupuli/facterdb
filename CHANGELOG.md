@@ -1,5 +1,20 @@
 # Changelog
 
+## [3.5.0](https://rubygems.org/gems/facterdb/versions/3.5.0) (2025-03-04)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.4.0...3.5.0)
+
+**Implemented enhancements:**
+
+- Add Ubuntu 24.04 factsets and fix fact generation on Debian OS family [\#391](https://github.com/voxpupuli/facterdb/pull/391) ([rwaffen](https://github.com/rwaffen))
+- feat: add redhat-8/9 facts for 4.10 and 4.11 [\#390](https://github.com/voxpupuli/facterdb/pull/390) ([rwaffen](https://github.com/rwaffen))
+- Add Ruby 3.4 support [\#389](https://github.com/voxpupuli/facterdb/pull/389) ([bastelfreak](https://github.com/bastelfreak))
+- Add CentOS 10 factsets & Switch to openvox packages [\#388](https://github.com/voxpupuli/facterdb/pull/388) ([bastelfreak](https://github.com/bastelfreak))
+
+**Merged pull requests:**
+
+- Update voxpupuli-rubocop requirement from ~\> 2.8.0 to ~\> 3.0.0 [\#386](https://github.com/voxpupuli/facterdb/pull/386) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [3.4.0](https://rubygems.org/gems/facterdb/versions/3.4.0) (2024-09-16)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.3.0...3.4.0)
