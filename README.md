@@ -171,7 +171,9 @@ Please submit issues at https://github.com/voxpupuli/facterdb/issues or PRs in t
 ## Release process
 
 * Update the version in `lib/facterdb/version.rb`
-* Run `rake changelog`
+* `bundle config set --local path .vendor`
+* `bundle config set --local with 'development'`
+* `CHANGELOG_GITHUB_TOKEN="github_PAT" bundle exec rake changelog`
 * Commit and PR the results.
 
 
