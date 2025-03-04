@@ -1,0 +1,443 @@
+{
+  "aio_agent_version": "8.12.0",
+  "augeas": {
+    "version": "1.14.1"
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "serial": "VBd9a78689-60ffb594",
+      "size": "100.00 GiB",
+      "size_bytes": 107374182400,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "db25596b-7eb9-42a6-98f1-5e53daf1c34c",
+      "version": "1.2"
+    }
+  },
+  "facterversion": "4.11.0",
+  "filesystems": "ext2,ext3,ext4",
+  "fips_enabled": false,
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "167084",
+      "version": "7.1.6"
+    },
+    "vmware": {
+    }
+  },
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "5.10",
+  "kernelrelease": "5.10.0-32-amd64",
+  "kernelversion": "5.10.0",
+  "load_averages": {
+    "15m": 0.03,
+    "1m": 0.35,
+    "5m": 0.08
+  },
+  "memory": {
+    "system": {
+      "available": "331.98 MiB",
+      "available_bytes": 348106752,
+      "capacity": "28.01%",
+      "total": "461.12 MiB",
+      "total_bytes": 483516416,
+      "used": "129.14 MiB",
+      "used_bytes": 135409664
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "91.56 GiB",
+      "available_bytes": 98309443584,
+      "capacity": "1.40%",
+      "device": "/dev/sda1",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime",
+        "discard",
+        "errors=remount-ro"
+      ],
+      "size": "97.87 GiB",
+      "size_bytes": 105088212992,
+      "used": "1.30 GiB",
+      "used_bytes": 1393336320
+    },
+    "/dev": {
+      "available": "212.83 MiB",
+      "available_bytes": 223166464,
+      "capacity": "0%",
+      "device": "udev",
+      "filesystem": "devtmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "relatime",
+        "size=217936k",
+        "nr_inodes=54484",
+        "mode=755"
+      ],
+      "size": "212.83 MiB",
+      "size_bytes": 223166464,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/hugepages": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "hugetlbfs",
+      "filesystem": "hugetlbfs",
+      "options": [
+        "rw",
+        "relatime",
+        "pagesize=2M"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/mqueue": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "mqueue",
+      "filesystem": "mqueue",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/pts": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=000"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/shm": {
+      "available": "230.56 MiB",
+      "available_bytes": 241758208,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev"
+      ],
+      "size": "230.56 MiB",
+      "size_bytes": 241758208,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run": {
+      "available": "45.71 MiB",
+      "available_bytes": 47931392,
+      "capacity": "0.87%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=47220k",
+        "mode=755"
+      ],
+      "size": "46.11 MiB",
+      "size_bytes": 48353280,
+      "used": "412.00 KiB",
+      "used_bytes": 421888
+    },
+    "/run/lock": {
+      "available": "5.00 MiB",
+      "available_bytes": 5242880,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=5120k"
+      ],
+      "size": "5.00 MiB",
+      "size_bytes": 5242880,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/user/1000": {
+      "available": "46.11 MiB",
+      "available_bytes": 48349184,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=47216k",
+        "nr_inodes=11804",
+        "mode=700",
+        "uid=1000",
+        "gid=1000"
+      ],
+      "size": "46.11 MiB",
+      "size_bytes": 48349184,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/vagrant": {
+      "available": "141.02 GiB",
+      "available_bytes": 151416844288,
+      "capacity": "39.29%",
+      "device": "vagrant",
+      "filesystem": "vboxsf",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "232.27 GiB",
+      "size_bytes": 249398358016,
+      "used": "91.25 GiB",
+      "used_bytes": 97981513728
+    }
+  },
+  "networking": {
+    "dhcp": "10.0.2.2",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fd00::a00:27ff:fe8d:c04d",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd00::",
+            "scope6": "global",
+            "flags": [
+
+            ]
+          },
+          {
+            "address": "fe80::a00:27ff:fe8d:c04d",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "dhcp": "10.0.2.2",
+        "duplex": "full",
+        "ip": "10.0.2.15",
+        "ip6": "fd00::a00:27ff:fe8d:c04d",
+        "mac": "08:00:27:8d:c0:4d",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fd00::",
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "global",
+        "speed": 1000
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fd00::a00:27ff:fe8d:c04d",
+    "mac": "08:00:27:8d:c0:4d",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fd00::",
+    "primary": "eth0",
+    "scope6": "global"
+  },
+  "os": {
+    "architecture": "amd64",
+    "distro": {
+      "codename": "bullseye",
+      "description": "Debian GNU/Linux 11 (bullseye)",
+      "id": "Debian",
+      "release": {
+        "full": "11.11",
+        "major": "11",
+        "minor": "11"
+      }
+    },
+    "family": "Debian",
+    "hardware": "x86_64",
+    "name": "Debian",
+    "release": {
+      "full": "11.11",
+      "major": "11",
+      "minor": "11"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/sda1": {
+      "filesystem": "ext4",
+      "mount": "/",
+      "parttype": "0x83",
+      "partuuid": "ecf0c144-01",
+      "size": "100.00 GiB",
+      "size_bytes": 107373133824,
+      "uuid": "416fcdc7-9d11-4c33-b899-6a501df5ed2a"
+    }
+  },
+  "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "extensions": [
+      "unknown"
+    ],
+    "isa": "unknown",
+    "models": [
+      "AMD Ryzen 5 7600 6-Core Processor",
+      "AMD Ryzen 5 7600 6-Core Processor"
+    ],
+    "physicalcount": 1,
+    "speed": "3.80 GHz",
+    "threads": 1
+  },
+  "puppetversion": "8.11.0",
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.7"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 7448e48cc778087da39dfbdd3ef90e9a16f51766",
+        "sha256": "SSHFP 3 2 9fb0784d2860339cabb62d3301898aaf36781663bcc1d1dc1544c87280235693"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE7Hido+EbE90raGgewFm1nO0iPUWT+D1+xTJlOltPQq/ZTm7MSM1huUlJiw7Zewn6+tPga5O8cfWEgXsWmI/jw=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 030c2e1cd27cf143ef26bc18eb4eb80b7306e42d",
+        "sha256": "SSHFP 4 2 3e0d683fc55dd96b59b9d3826b5eafc32add018d2dab8c0233cb8735c7dcde4c"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIOtsc8cQzh4mlrOtXjn3Igj1MWXAiG4B1nZi0tcKeeFu",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 de2df2f767fde006d4f1cb577568d73bfddfb19a",
+        "sha256": "SSHFP 1 2 6e726793ea4b8d8bf2c3760c52cafc412822a28d38fdf851431a9e2718cf8a62"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCncC7qA2CyXfm1tr9k+zRt7x5FXLDN/qGK5F6X6qiL+WCI107Mwz28rDin4VAF/2xsBQBCBCOo9Xink0+3KHUmqrzK6vJNOtWLB37/2K8sQlbjHsPd8f5T2swYS79M1+AsvvIHx5hdaV6r973SBXl+z68lHCJE5i8IR991h93Ridc4iZdM/gBeHeL84ikIILsUREnYy3O/K1QQQIFlFvHHbvlOWRnqaohcXHyHGyOjg2rPLr6O0j6PrVc6paNe/7rynMuQD5R/oTHoJALSjyWOwlbA+deDpcbR1PIP0DfAK4ja96qu4g/FM/cbZCePUFL8RvrCz1SNRRCOZ8iTcEGshOAts0DD1RA6yt82NU1MXB55vQvy9QCBAztNp/D1SGd/L/YttYsCtqb5CAPDBzwKNXSU/ibqzE5FznpwP92WItfwSs/ZE+jJIQ56821H6P4f2rcOfAAG5C1hOFOHuSJKcLNqxTsWHaMBfgBqp8pJB7umm96JQalM77TgESbiViE=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 47,
+    "uptime": "0:00 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "virtualbox"
+}
