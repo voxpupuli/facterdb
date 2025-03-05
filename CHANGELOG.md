@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.6.0](https://rubygems.org/gems/facterdb/versions/3.6.0) (2025-03-05)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.5.0...3.6.0)
+
+**Implemented enhancements:**
+
+- Add Ubuntu 20.04/22.04 and Debian 11/12 factsets for Facter 4.8 - 4.11 [\#393](https://github.com/voxpupuli/facterdb/pull/393) ([rwaffen](https://github.com/rwaffen))
+
 ## [3.5.0](https://rubygems.org/gems/facterdb/versions/3.5.0) (2025-03-04)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.4.0...3.5.0)
