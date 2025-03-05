@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.7.0](https://rubygems.org/gems/facterdb/versions/3.7.0) (2025-03-05)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.6.0...3.7.0)
+
+**Implemented enhancements:**
+
+- Add FreeBSD 13/14 factsets [\#395](https://github.com/voxpupuli/facterdb/pull/395) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.6.0](https://rubygems.org/gems/facterdb/versions/3.6.0) (2025-03-05)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.5.0...3.6.0)
