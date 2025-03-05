@@ -2,18 +2,25 @@
 
 export PATH=/opt/puppetlabs/bin:$PATH
 
-# ensure IPv6 is always enabled, some boxes disable it by default, e.g. Fedora and RedHat
-sysctl -w net.ipv6.conf.all.disable_ipv6=0
-
-puppetAgentVersionList='/vagrant/versions.txt'
-if test ! -f $puppetAgentVersionList; then
-  echo 'Missing version list' >&2
-  exit 1
-fi
-puppet8_agent_versions=$(grep --only-matching --perl-regexp '^\d+\.\d+\.\d+' $puppetAgentVersionList)
-if test -z "$puppet8_agent_versions"; then
-  echo 'Version list is empty' >&2
-  exit 1
+# does not exist on BSD
+if [ -d "/proc/sys" ]; then
+  # ensure IPv6 is always enabled, some boxes disable it by default, e.g. Fedora and RedHat
+  sysctl -w net.ipv6.conf.all.disable_ipv6=0
+  puppetAgentVersionList='versions.txt'
+  if test ! -f $puppetAgentVersionList; then
+    echo 'Missing version list'
+    exit 1
+  fi
+  puppet8_agent_versions=$(grep --only-matching --perl-regexp '^\d+\.\d+\.\d+' $puppetAgentVersionList)
+  if test -z "$puppet8_agent_versions"; then
+    echo 'Version list is empty'
+    exit 1
+  fi
+else
+  echo 'ipv6_activate_all_interfaces="YES"' >> /etc/rc.conf
+  /etc/rc.d/netif restart
+  sleep 15 # sleep a bit until dhcp got a new ip
+  ifconfig
 fi
 
 apt_install() {
