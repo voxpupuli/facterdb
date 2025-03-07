@@ -89,3 +89,11 @@ followed by `vagrant add <boxname> <boxfile>`
 
 Once the box is added, change the `Vagrantfile` to use your new `box` and run `vagrant up <windows_os_name>`
 
+## CentOS
+
+To ensure proper shared folder functionality on CentOS Vagrant boxes, VirtualBox Guest Additions must be installed. The `vagrant-vbguest` plugin, previously used for this purpose, is now archived and suffers from dependency conflicts. Therefore, we've implemented a custom `vbguest_install.sh` script to manage the installation process. This script performs a check for the vboxsf kernel module, which is a key component of the Guest Additions. If the module is not found, the script installs the necessary Guest Additions. Due to this installation step, the first provisioning run will primarily focus on installing the Guest Additions, followed by other provisioning tasks and a VM shutdown. A second run, with the mount_synced_folder parameter, will then successfully mount the /vagrant shared folder, as the Guest Additions will now be present.
+
+```shell
+vagrant up --provision centos-stream9-x86_64
+mount_synced_folder=true vagrant up --provision centos-stream9-x86_64
+```
