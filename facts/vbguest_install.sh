@@ -8,5 +8,9 @@ if [[ $vbox -eq 0 ]]; then
     dnf install -y epel-release
     dnf install -y dkms gcc make kernel-devel bzip2 binutils patch libgomp glibc-headers glibc-devel kernel-headers elfutils-libelf-devel
     mount VBoxGuestAdditions_${version}.iso /mnt
-    /mnt/VBoxLinuxAdditions.run --accept
+    if [[ $(uname -m) == "aarch64" ]]; then
+        /mnt/VBoxLinuxAdditions-arm64.run --accept
+    else
+        /mnt/VBoxLinuxAdditions.run --accept
+    fi
 fi
