@@ -66,6 +66,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define 'ubuntu-22.04-arm64', autostart: false do |host|
     host.vm.box = 'bento/ubuntu-22.04'
+    host.vm.box_architecture = 'arm64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
@@ -86,6 +87,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   config.vm.define 'ubuntu-24.04-arm64', autostart: false do |host|
     host.vm.box = 'bento/ubuntu-24.04'
+    host.vm.box_architecture = 'arm64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'

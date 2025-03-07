@@ -32,9 +32,9 @@
   "kernelrelease": "6.8.0-53-generic",
   "kernelversion": "6.8.0",
   "load_averages": {
-    "15m": 0.0,
-    "1m": 0.0,
-    "5m": 0.0
+    "15m": 0.04,
+    "1m": 0.45,
+    "5m": 0.11
   },
   "memory": {
     "swap": {
@@ -47,20 +47,20 @@
       "used_bytes": 0
     },
     "system": {
-      "available": "3.23 GiB",
-      "available_bytes": 3473068032,
-      "capacity": "12.25%",
+      "available": "3.26 GiB",
+      "available_bytes": 3497566208,
+      "capacity": "11.63%",
       "total": "3.69 GiB",
       "total_bytes": 3957727232,
-      "used": "462.21 MiB",
-      "used_bytes": 484659200
+      "used": "438.84 MiB",
+      "used_bytes": 460161024
     }
   },
   "mountpoints": {
     "/": {
-      "available": "22.44 GiB",
-      "available_bytes": 24093802496,
-      "capacity": "20.66%",
+      "available": "22.81 GiB",
+      "available_bytes": 24490643456,
+      "capacity": "19.36%",
       "device": "/dev/mapper/ubuntu--vg-ubuntu--lv",
       "filesystem": "ext4",
       "options": [
@@ -69,8 +69,8 @@
       ],
       "size": "29.82 GiB",
       "size_bytes": 32021266432,
-      "used": "5.84 GiB",
-      "used_bytes": 6274699264
+      "used": "5.47 GiB",
+      "used_bytes": 5877858304
     },
     "/boot": {
       "available": "1.69 GiB",
@@ -202,9 +202,9 @@
       "used_bytes": 0
     },
     "/run": {
-      "available": "376.55 MiB",
-      "available_bytes": 394838016,
-      "capacity": "0.24%",
+      "available": "376.56 MiB",
+      "available_bytes": 394854400,
+      "capacity": "0.23%",
       "device": "tmpfs",
       "filesystem": "tmpfs",
       "options": [
@@ -219,8 +219,8 @@
       ],
       "size": "377.44 MiB",
       "size_bytes": 395776000,
-      "used": "916.00 KiB",
-      "used_bytes": 937984
+      "used": "900.00 KiB",
+      "used_bytes": 921600
     },
     "/run/lock": {
       "available": "5.00 MiB",
@@ -266,9 +266,9 @@
       "used_bytes": 12288
     },
     "/vagrant": {
-      "available": "1.52 TiB",
-      "available_bytes": 1667666853888,
-      "capacity": "16.42%",
+      "available": "1.50 TiB",
+      "available_bytes": 1651032457216,
+      "capacity": "17.25%",
       "device": "vagrant",
       "filesystem": "vboxsf",
       "options": [
@@ -281,8 +281,8 @@
       ],
       "size": "1.81 TiB",
       "size_bytes": 1995218165760,
-      "used": "305.06 GiB",
-      "used_bytes": 327551311872
+      "used": "320.55 GiB",
+      "used_bytes": 344185708544
     }
   },
   "networking": {
@@ -433,7 +433,7 @@
       "uuid": "Uq1I00-eRBO-IKsk-3z0H-gdwD-Bcgm-WizaE1"
     }
   },
-  "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin",
+  "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
   "processors": {
     "cores": 2,
     "count": 2,
@@ -482,7 +482,7 @@
   "system_uptime": {
     "days": 0,
     "hours": 0,
-    "seconds": 18,
+    "seconds": 39,
     "uptime": "0:00 hours"
   },
   "timezone": "UTC",
