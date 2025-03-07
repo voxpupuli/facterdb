@@ -78,30 +78,30 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  # images are at https://cloud.centos.org/centos/9-stream/x86_64/images/
-  # can be imported with `vagrant box add --name centos/stream9 $url` you can also
-  # use the host.vm.box_url below
-  # facts land as centos-9-x86_64.facts
-  #
   config.vm.define 'centos-stream9-x86_64', autostart: false do |host|
     host.vm.box = 'centos/stream9'
-    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-20240513.0.x86_64.vagrant-virtualbox.box'
-    # centos packages their box with synced folders set to rsync (presumably
-    # since vboxsf is not built in their kernel)
-    # If the version of the kernel-headers/kernel-devel that are available
-    # for download are newer than what is on the box then guest additions will
-    # not build. If the stars align, then you can set `type: 'virtualbox'`
-    # for synced_folder and maybe it will work, otherwise, it is a manual
-    # effort to rsync the fact files back
-    # host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
+    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-latest.x86_64.vagrant-virtualbox.box'
+    if ENV['mount_synced_folder']
+      host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
+    end
+    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'vbguest_install.sh'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'centos-stream10-x86_64', autostart: false do |host|
+    host.vm.box = 'centos/stream10'
+    host.vm.box_url = 'https://cloud.centos.org/centos/10-stream/x86_64/images/CentOS-Stream-Vagrant-10-latest.x86_64.vagrant-virtualbox.box'
+    if ENV['mount_synced_folder']
+      host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
+    end
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'vbguest_install.sh'
     host.vm.provision 'shell', path: 'get_facts.sh'
-    # commented to allow manual retrieval of the facts
-    # host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-    # this will install the guest additions which requires `vagrant plugin install vagrant-vbguest`
-    host.vbguest.auto_update = true
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
   config.vm.define 'almalinux-8-x86_64', autostart: false do |host|
     host.vm.box = 'almalinux/8'
