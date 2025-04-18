@@ -76,7 +76,7 @@ case "${osfamily}" in
   else
     distcode=el
   fi
-  wget "https://yum.overlookinfratech.com/openvox8-release-el-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/openvox8-release.rpm
+  wget "https://yum.overlookinfratech.com/openvox8-release-${distcode}-${operatingsystemmajrelease}.noarch.rpm" -O /tmp/openvox8-release.rpm
   if test -f /tmp/openvox8-release.rpm; then
     rpm -ivh /tmp/openvox8-release.rpm
     for puppet_agent_version in $puppet8_agent_versions; do
