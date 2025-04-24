@@ -397,4 +397,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # We need to copy the factsets out of the VM by hand
     # host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
+  config.vm.define 'fedora-40-x86_64', autostart: false do |host|
+    # default memory limit kills dnf as soon as we install packages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 2048
+    end
+    host.vm.box = 'bento/fedora-40'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'fedora-41-x86_64', autostart: false do |host|
+    # default memory limit kills dnf as soon as we install packages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 2048
+    end
+    host.vm.box = 'fedora/41-cloud-base'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
 end
