@@ -141,7 +141,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
   config.vm.define 'rockylinux-9-x86_64', autostart: false do |host|
-    host.vm.box = 'rockylinux/9'
+    # this box has no vboxguestadditions as of 2025-04-25
+    # so the synced_folder doesnt mount
+    #host.vm.box = 'rockylinux/9'
+    host.vm.box = 'bento/rockylinux-9'
     host.vm.synced_folder '.', '/vagrant'
     host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'

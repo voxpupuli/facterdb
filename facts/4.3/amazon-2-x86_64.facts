@@ -1,0 +1,249 @@
+{
+  "aio_agent_version": "8.12.1",
+  "augeas": {
+    "version": "1.14.1"
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "serial": "VBb9e5a750-6988346e",
+      "size": "25.00 GiB",
+      "size_bytes": 26843545600,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "0",
+      "uuid": "AE0C2099-5AB6-F946-9339-3F778AA14C51"
+    }
+  },
+  "facterversion": "4.3.1",
+  "filesystems": "xfs",
+  "fips_enabled": false,
+  "gem_version": "~> 4.3.0",
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "167084",
+      "version": "7.1.6"
+    }
+  },
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "4.14",
+  "kernelrelease": "4.14.314-237.533.amzn2.x86_64",
+  "kernelversion": "4.14.314",
+  "load_averages": {
+    "15m": 0.24,
+    "1m": 1.37,
+    "5m": 0.63
+  },
+  "memory": {
+    "system": {
+      "available": "1.65 GiB",
+      "available_bytes": 1769259008,
+      "capacity": "14.79%",
+      "total": "1.93 GiB",
+      "total_bytes": 2076364800,
+      "used": "292.88 MiB",
+      "used_bytes": 307105792
+    }
+  },
+  "networking": {
+    "dhcp": "10.0.2.2",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fd00::a00:27ff:fea6:b56c",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd00::",
+            "scope6": "global",
+            "flags": []
+          },
+          {
+            "address": "fe80::a00:27ff:fea6:b56c",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "dhcp": "10.0.2.2",
+        "ip": "10.0.2.15",
+        "ip6": "fd00::a00:27ff:fea6:b56c",
+        "mac": "08:00:27:a6:b5:6c",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fd00::",
+        "scope6": "global"
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fd00::a00:27ff:fea6:b56c",
+    "mac": "08:00:27:a6:b5:6c",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fd00::",
+    "primary": "eth0",
+    "scope6": "global"
+  },
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "Karoo",
+      "description": "Amazon Linux release 2 (Karoo)",
+      "id": "Amazon",
+      "release": {
+        "full": "2",
+        "major": "2"
+      }
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "Amazon",
+    "release": {
+      "full": "2",
+      "major": "2"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/sda1": {
+      "filesystem": "xfs",
+      "label": "/",
+      "partlabel": "Linux",
+      "partuuid": "75b4352e-e52a-45b8-8f48-41b67d22c88a",
+      "size": "25.00 GiB",
+      "size_bytes": 26841431552,
+      "uuid": "4760f23c-fe8b-4a31-a741-8867c2600105"
+    },
+    "/dev/sda128": {
+      "partlabel": "BIOS Boot Partition",
+      "partuuid": "6f098d92-678b-4e34-8361-daa42f96fbea",
+      "size": "1.00 MiB",
+      "size_bytes": 1048576
+    }
+  },
+  "path": "/home/vagrant/vendor/bundler/ruby/3.2.0/bin:/opt/puppetlabs/puppet/bin:/opt/puppetlabs/bin:/usr/local/sbin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin",
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "x86_64",
+    "models": [
+      "12th Gen Intel(R) Core(TM) i9-12900K",
+      "12th Gen Intel(R) Core(TM) i9-12900K"
+    ],
+    "physicalcount": 1,
+    "speed": "3.19 GHz",
+    "threads": 1
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.7"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 03ad6a8c0b981b4f59de3fb89d1b497480d966d0",
+        "sha256": "SSHFP 3 2 54f274ff5a2eb0a8e513cae59e9bc4f99ebfc8d2a37bba380510cc2753e19ed5"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDQF03MxXCxVhMvHtFahoGc+axzZuv4oBVH6oqBMN9KfFGnba3W/VO3hRXrcaGO57SRBCS3yPk0g9nTPEVAeWAY=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 e4eea94029d3ad5298b473976ae27da3f423b5bb",
+        "sha256": "SSHFP 4 2 366e6e86cfd04d0286af7c563aecb7d2b3717f22127a92cbfc86726168ca90bd"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIKx4qPydq2r2jT7EZEAJAGdk8t8Uqwt27WMLyccKvGRD",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 b6f1bf491e53a718ce84545b4f30388820a4aa81",
+        "sha256": "SSHFP 1 2 a7f1152651242ce53ce8ba0c9958a010da8e96d98efb06faf03d95dfc94390ea"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABAQCkzZvIwVlc2g5luIq8yobqEU9dRNVLdxK0h3gLMUcmtIjxkr6bEdszb+39NbAQTcdVuaWGGa6vm12GgIKJhlDJZedLC7a0hPRs7/nzAd7YYpmiletvifx1MQPI1VYVWfUVAZLD4V93Rhk5jQOEgfcZk1k3WTSz3Ngemjgf2faQ6OZheMzKgudmscJQPA9STcDHqMnEtG21iMaDhNYXOC8ggo2jADeQ539jq76agwLoug2nx8G2I+oT1+us6hCN20neTlLhqHH2PDgvXeFRYzgp1go8cZeQ+B/bWxKIF+fz00z1FhvgegaMcnvuTEmmBUmFhUq8tiqDytb/W04W/aQ5",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 85,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "virtualbox"
+}
