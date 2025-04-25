@@ -1,0 +1,174 @@
+{
+  "aio_agent_version": "8.9.0",
+  "dmi": {
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "VirtualBox-02f503cd-4af5-4d3e-9f62-ed36f67b4e7c",
+      "uuid": "02F503CD-4AF5-4D3E-9F62-ED36F67B4E7C"
+    }
+  },
+  "env_windows_installdir": "C:\\Program Files\\Puppet Labs\\Puppet",
+  "facterversion": "4.9.0",
+  "fips_enabled": false,
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "167084",
+      "version": "7.1.6"
+    }
+  },
+  "identity": {
+    "privileged": true,
+    "user": "FOO\\vagrant"
+  },
+  "is_virtual": true,
+  "kernel": "windows",
+  "kernelmajversion": "10.0",
+  "kernelrelease": "10.0.26100",
+  "kernelversion": "10.0.26100",
+  "memory": {
+    "system": {
+      "available": "2.04 GiB",
+      "available_bytes": 2194128896,
+      "capacity": "48.68%",
+      "total": "3.98 GiB",
+      "total_bytes": 4275773440,
+      "used": "1.94 GiB",
+      "used_bytes": 2081644544
+    }
+  },
+  "networking": {
+    "dhcp": "10.0.2.2",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "Ethernet": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fd00::b0fc:25f4:9c4:2410",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd00::",
+            "scope6": "global"
+          },
+          {
+            "address": "fd00::7c4c:7ba5:25b4:fa86",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "fd00::7c4c:7ba5:25b4:fa86",
+            "scope6": "global"
+          },
+          {
+            "address": "fe80::8721:b67c:9c3d:b2ad",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "dhcp": "10.0.2.2",
+        "ip": "10.0.2.15",
+        "ip6": "fd00::b0fc:25f4:9c4:2410",
+        "mac": "08:00:27:CA:30:DB",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fd00::",
+        "scope6": "global"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fd00::b0fc:25f4:9c4:2410",
+    "mac": "08:00:27:CA:30:DB",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fd00::",
+    "primary": "Ethernet",
+    "scope6": "global"
+  },
+  "os": {
+    "architecture": "x64",
+    "family": "windows",
+    "hardware": "x86_64",
+    "name": "windows",
+    "release": {
+      "full": "11",
+      "major": "11"
+    },
+    "windows": {
+      "display_version": "24H2",
+      "edition_id": "EnterpriseEval",
+      "installation_type": "Client",
+      "product_name": "Windows 10 Enterprise Evaluation",
+      "release_id": "24H2",
+      "system32": "C:\\WINDOWS\\system32"
+    }
+  },
+  "path": "C:\\Program Files\\Puppet Labs\\Puppet\\puppet\\bin;C:\\Program Files\\Puppet Labs\\Puppet\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\OpenSSH-Win64;C:\\Users\\vagrant\\AppData\\Local\\Microsoft\\WindowsApps",
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "isa": "x64",
+    "models": [
+      "12th Gen Intel(R) Core(TM) i9-12900K"
+    ],
+    "physicalcount": 1,
+    "threads": 1
+  },
+  "puppetversion": "8.9.0",
+  "ruby": {
+    "platform": "x64-mingw32",
+    "sitedir": "C:/Program Files/Puppet Labs/Puppet/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.5"
+  },
+  "ssh": {
+    "dsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 2 1 a267414bf6e283e1889f38fdd77561f36f914d39",
+        "sha256": "SSHFP 2 2 ada979fc12f1ecc17477b90cbd8c18e4b8efdff22bf9b2d1cab55f9ca98614c2"
+      },
+      "key": "AAAAB3NzaC1kc3MAAACBAPPqAjpZAWwdE5mu8clESdJ0hj+ryOMR8Qrp+hr+r4iNi96wWD9zQSwfQEuBtXC5XcHIUwTQkkOot7AYRUOjb+PQUL1qd2WH0lVSDbW1KzsBoEYRSLNCpZ4xHWk1s7kXq1q7/7DH3D+scUfyUL1GEbViWhbvRdMbepI5rKZsXddvAAAAFQDeThx3/D95fBnr/t7OaUd+yrDofQAAAIArIYUbKbe+iMS2PxSZsyTMUu3GgBKPKRVQXbXkrDHcnXd6h+omLi28oKG2ZsGqsTeEQZAiBSTXegPux4/TUijqrFj0pt+1mVi3yt4Na12MO6o6Ih7C6eWyEMIhJxVUggo+wHUao5T9gBZI9Ctb2BbxUEF93bwPezE/0SqLvDE7fgAAAIBNUb5Yn7AqSWpDQIe4DY9MhwX4o/yJKDih/hYzwf6A8IxMLAE6Bpooj5lJaeGZpp58YRc4peKZbMpI+13EHQFZ9g+2XPGTuHErm84kWUWZcTMUnKoguHevpd6QDRYOLfmconAnPqj2pgqPDEIIcn4yg2e169N8p25F+e291EMuMQ==",
+      "type": "ssh-dss"
+    },
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 89e1df9d9f782bbe165493fda627a8e20249c0c5",
+        "sha256": "SSHFP 3 2 d62c0863c095aef1fbcb3a5d8003ded2b913f6b553fe40600697226d9dd3c18a"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBEBFXijienEhKxpYzOl1gy8RKSNwgoXlvYhaKRdjO6XZTkJB/xrR/VbF5c67Ip5uvL4oBlM9B6Tay5rmRsFTDk=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 bac125c932a8bb9599740b06648ac4dfd4324399",
+        "sha256": "SSHFP 4 2 6c8a4ed535c1441501516c138b7bb06993fce4efed44046694aa21ff31ae401a"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIHiGHFfFuX3y+Be8CKlgAV6SkaHTfcNg5V/UtjDBkHsh",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 af2300ce3b8646c9b3a499e76b5d47342fc85129",
+        "sha256": "SSHFP 1 2 d818a35474be56648bb48ae362a63fdbef244f24ce468d4b216bf001e06bea5d"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDHIijLrDgiEzrAakvAcOUS8ZWb4KOmOJGcSaUPTAAwpYQAmqh1Et1mO0Yr1sXNnPGnI38QFLHeDKNmdvQu7zxhQV3zD7ehJEgRAbetMim/2S8JVUmVpxCiHDD60Vcw5ip/NUTWddTeLrwhAK8z0RKOPi/HZmtNsKHxvmWBM8kIUz5DRnFPWkUWFbmB5tDqIIiGUx4khe1tJKGElZQuuTFGZZGDpX593uNQN9u8TBqf3TJCaSs+LNjQd0A8Z+LgSKerGlMF/UlQccreHkFgN8RRTOp161jLpjdTBqUVWXlF2ih57lQyRCi/iU/JfE33yh68wTlhCww7PR1XLmMRHr1cxoqpSY8a+undPnBCiXgzfw2QrHG0Yq+qyKvjGdSL7rN/3M3Jz4B6SDnAVbJSj6Z4mncMlt9/VIC+jPliV7JLZixGIxKf73SSkihIifHxjYHySK/g6ZFlpbK2EdmX0tRaYjYolvopVmHaKooZrkC/UwUv2h4LLxDrCfyvTZdDo1s=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 221,
+    "uptime": "0:03 hours"
+  },
+  "timezone": "Coordinated Universal Time",
+  "virtual": "virtualbox"
+}
