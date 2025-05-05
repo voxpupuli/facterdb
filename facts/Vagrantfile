@@ -422,4 +422,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
+  config.vm.define 'fedora-42-x86_64', autostart: false do |host|
+    # default memory limit kills dnf as soon as we install packages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 2048
+    end
+    # as of 2025-05-05 hashicorps registry didnt have this yet, add it manually via
+    # vagrant box add  --name 'fedora/42-cloud-base' 'https://dl.fedoraproject.org/pub/fedora/linux/releases/42/Cloud/x86_64/images/Fedora-Cloud-Base-Vagrant-VirtualBox-42-1.1.x86_64.vagrant.virtualbox.box'
+    host.vm.box = 'fedora/42-cloud-base'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
 end
