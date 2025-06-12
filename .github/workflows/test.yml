@@ -6,6 +6,9 @@ on:
     branches:
       - master
 
+permissions:
+  contents: read # minimal required permissions to clone repo
+
 jobs:
   rubocop_and_matrix:
     runs-on: ubuntu-latest
