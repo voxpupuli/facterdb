@@ -8,8 +8,6 @@ on:
 
 jobs:
   rubocop_and_matrix:
-    env:
-      BUNDLE_WITHOUT: release
     runs-on: ubuntu-latest
     outputs:
       ruby: ${{ steps.ruby.outputs.versions }}
@@ -39,8 +37,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
-        env:
-          BUNDLE_WITHOUT: release
       - name: Run tests
         run: bundle exec rake spec
       - name: Build gem
