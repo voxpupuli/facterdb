@@ -16,8 +16,6 @@ jobs:
         with:
           ruby-version: '3.4'
           bundler-cache: true
-        env:
-          BUNDLE_WITHOUT: release
       - name: Generate database
         run: bundle exec rake database
       - name: Build gem
