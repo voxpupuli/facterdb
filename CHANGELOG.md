@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.8.0](https://rubygems.org/gems/facterdb/versions/3.8.0) (2025-06-12)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.7.0...3.8.0)
+
+**Implemented enhancements:**
+
+- Drop Facter dependency [\#405](https://github.com/voxpupuli/facterdb/pull/405) ([bastelfreak](https://github.com/bastelfreak))
+- add in more facts for various OS releases [\#403](https://github.com/voxpupuli/facterdb/pull/403) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- Add Fedora 40 & 41 factsets [\#400](https://github.com/voxpupuli/facterdb/pull/400) ([hbrown-uiowa](https://github.com/hbrown-uiowa))
+- feat: add ubuntu 22.04 & 24.04 arm64 factsets [\#398](https://github.com/voxpupuli/facterdb/pull/398) ([rwaffen](https://github.com/rwaffen))
+- feat: update centos installation and factsets [\#397](https://github.com/voxpupuli/facterdb/pull/397) ([rwaffen](https://github.com/rwaffen))
+
 ## [3.7.0](https://rubygems.org/gems/facterdb/versions/3.7.0) (2025-03-05)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.6.0...3.7.0)
