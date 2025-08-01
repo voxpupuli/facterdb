@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.9.0](https://rubygems.org/gems/facterdb/versions/3.9.0) (2025-08-01)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.8.0...3.9.0)
+
+**Implemented enhancements:**
+
+- chore: add Debian 13 facts [\#408](https://github.com/voxpupuli/facterdb/pull/408) ([TheMeier](https://github.com/TheMeier))
+
 ## [3.8.0](https://rubygems.org/gems/facterdb/versions/3.8.0) (2025-06-12)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.7.0...3.8.0)
