@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.10.0](https://rubygems.org/gems/facterdb/versions/3.10.0) (2025-08-11)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.9.0...3.10.0)
+
+**Implemented enhancements:**
+
+- Add Debian 13 Facter 4.11 & OpenFact 5.1 factsets [\#411](https://github.com/voxpupuli/facterdb/pull/411) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.9.0](https://rubygems.org/gems/facterdb/versions/3.9.0) (2025-08-01)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.8.0...3.9.0)
