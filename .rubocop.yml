@@ -6,3 +6,6 @@ inherit_gem:
 
 Style/IfUnlessModifier:
   Enabled: false
+
+AllCops:
+  TargetRubyVersion: 3.2
