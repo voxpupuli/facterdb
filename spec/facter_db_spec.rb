@@ -240,7 +240,7 @@ describe FacterDB do
     let(:symbolize_keys) { nil }
 
     context 'without parameters' do
-      include_examples 'returns a result'
+      it_behaves_like 'returns a result'
     end
 
     context 'with stringified output' do
@@ -266,19 +266,19 @@ describe FacterDB do
     context 'with an Array filter' do
       let(:filter) { [kernel: 'Linux'] }
 
-      include_examples 'returns a result'
+      it_behaves_like 'returns a result'
     end
 
     context 'with a Hash filter' do
       let(:filter) { { kernel: 'Linux' } }
 
-      include_examples 'returns a result'
+      it_behaves_like 'returns a result'
     end
 
     context 'with a String filter' do
       let(:filter) { 'kernel=Linux' }
 
-      include_examples 'returns a result'
+      it_behaves_like 'returns a result'
     end
 
     context 'with a filter of an unsupported type' do
