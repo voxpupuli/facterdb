@@ -49,7 +49,7 @@ module FacterDB
   def self.default_fact_files
     return [] unless use_defaultdb?
 
-    proj_root = File.join(File.dirname(File.dirname(__FILE__)))
+    proj_root = File.join(File.dirname(__FILE__, 2))
     facts_dir = File.expand_path(File.join(proj_root, 'facts'))
     Dir.glob(File.join(facts_dir, '**', '*.facts'))
   end

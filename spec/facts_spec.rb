@@ -15,10 +15,9 @@ end
 RSpec::Matchers.define :be_valid_json do
   match do |actual|
     content = File.binread(actual)
-    valid = false
     begin
-      obj = JSON.parse(content)
-      valid = true
+      JSON.parse(content)
+      true
     rescue JSON::ParserError => e
       raise "Invalid JSON file #{actual}.\n#{e}"
     end
