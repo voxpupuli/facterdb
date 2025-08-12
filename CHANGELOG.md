@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.0](https://rubygems.org/gems/facterdb/versions/4.0.0) (2025-08-12)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.10.0...4.0.0)
+
+**Breaking changes:**
+
+- Require Ruby 3.2 or newer [\#415](https://github.com/voxpupuli/facterdb/pull/415) ([bastelfreak](https://github.com/bastelfreak))
+
 ## [3.10.0](https://rubygems.org/gems/facterdb/versions/3.10.0) (2025-08-11)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.9.0...3.10.0)
