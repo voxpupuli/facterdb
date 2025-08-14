@@ -122,4 +122,22 @@ module FacterDB
     end
     result
   end
+
+  # @param results [Array[Hash]] The results from a get_facts call
+  # @param filter [Object] The filter to convert to jgrep string
+  # @return [Array[Hash[Symbol, Any]]]
+  #   Array of hashes of facts when symbolize_keys is true
+  # @return [Array[Hash[String, Any]]]
+  #   Array of hashes of facts when symbolize_keys is false
+  def self.filter_results(results, filter, symbolize_keys: true)
+    database = symbolize_keys ? results.map { |hash| hash.transform_keys(&:to_s) } : results
+
+    # TODO: This duplicates JGrep.jgrep to avoid JSON.parse(database.to_json)
+    # JGrep should provide an API for that
+    expression = generate_filter_str(filter)
+    call_stack = JGrep::Parser.new(expression).execution_stack
+    filtered = database.filter { |document| JGrep.eval_statement(document, call_stack) }
+
+    symbolize_keys ? filtered.map { |hash| hash.transform_keys(&:to_sym) } : filtered
+  end
 end

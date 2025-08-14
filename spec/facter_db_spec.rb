@@ -289,4 +289,22 @@ describe FacterDB do
       end
     end
   end
+
+  describe '.filter_results' do
+    subject(:filtered) { FacterDB.filter_results(results, filter) }
+
+    let(:filters) { 'osfamily=Debian or osfamily=RedHat' }
+    let(:results) { FacterDB.get_facts(filters) }
+
+    # Just to make sure our results set contains what we want
+    it 'has both Debian and Red Hat in the unfiltered result' do
+      expect(results).to include(hash_including(osfamily: 'Debian')).and include(hash_including(osfamily: 'RedHat'))
+    end
+
+    context 'with filter for Debian' do
+      let(:filter) { 'osfamily=Debian' }
+
+      it { is_expected.to include(hash_including(osfamily: 'Debian')).and not_include(hash_including(osfamily: 'RedHat')) }
+    end
+  end
 end

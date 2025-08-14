@@ -14,6 +14,7 @@ include FacterDB
 
 RSpec::Matchers.define_negated_matcher :not_be_nil, :be_nil
 RSpec::Matchers.define_negated_matcher :not_be_empty, :be_empty
+RSpec::Matchers.define_negated_matcher :not_include, :include
 
 def project_dir
   File.dirname(File.expand_path(__FILE__), 2)
