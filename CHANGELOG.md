@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.1.0](https://rubygems.org/gems/facterdb/versions/4.1.0) (2025-09-09)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/4.0.0...4.1.0)
+
+**Implemented enhancements:**
+
+- Add EL/Debian/Ubuntu OpenFact 5.1 factsets [\#420](https://github.com/voxpupuli/facterdb/pull/420) ([bastelfreak](https://github.com/bastelfreak))
+- Debian 13: Add OpenFact 5.1 factset [\#419](https://github.com/voxpupuli/facterdb/pull/419) ([bastelfreak](https://github.com/bastelfreak))
+- Add AlmaLinux 10 facts [\#418](https://github.com/voxpupuli/facterdb/pull/418) ([matejzero](https://github.com/matejzero))
+
 ## [4.0.0](https://rubygems.org/gems/facterdb/versions/4.0.0) (2025-08-12)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/3.10.0...4.0.0)
