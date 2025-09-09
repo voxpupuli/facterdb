@@ -1,0 +1,498 @@
+{
+  "aio_agent_version": "8.23.1",
+  "augeas": {
+    "version": "1.14.1"
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "serial": "VB814c8896-b7d1c2e5",
+      "size": "64.00 GiB",
+      "size_bytes": 68719476736,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "VirtualBox-e197fda3-c606-431c-b310-8b43f5769395",
+      "uuid": "a3fd97e1-06c6-1c43-b310-8b43f5769395",
+      "version": "1.2"
+    }
+  },
+  "facterversion": "5.1.0",
+  "filesystems": "btrfs,ext2,ext3,ext4,squashfs,vfat",
+  "fips_enabled": false,
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "169651",
+      "version": "7.1.12"
+    },
+    "vmware": {
+    }
+  },
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "6.8",
+  "kernelrelease": "6.8.0-64-generic",
+  "kernelversion": "6.8.0",
+  "load_averages": {
+    "15m": 0.07,
+    "1m": 0.79,
+    "5m": 0.22
+  },
+  "memory": {
+    "swap": {
+      "available": "2.90 GiB",
+      "available_bytes": 3116363776,
+      "capacity": "0.00%",
+      "total": "2.90 GiB",
+      "total_bytes": 3116363776,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "2.48 GiB",
+      "available_bytes": 2660175872,
+      "capacity": "14.66%",
+      "total": "2.90 GiB",
+      "total_bytes": 3117236224,
+      "used": "435.89 MiB",
+      "used_bytes": 457060352
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "24.10 GiB",
+      "available_bytes": 25876365312,
+      "capacity": "16.24%",
+      "device": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "30.34 GiB",
+      "size_bytes": 32574881792,
+      "used": "4.67 GiB",
+      "used_bytes": 5017649152
+    },
+    "/boot": {
+      "available": "1.69 GiB",
+      "available_bytes": 1811083264,
+      "capacity": "5.49%",
+      "device": "/dev/sda2",
+      "filesystem": "ext4",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "1.90 GiB",
+      "size_bytes": 2040373248,
+      "used": "100.27 MiB",
+      "used_bytes": 105140224
+    },
+    "/dev": {
+      "available": "1.41 GiB",
+      "available_bytes": 1517363200,
+      "capacity": "0%",
+      "device": "udev",
+      "filesystem": "devtmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "relatime",
+        "size=1481800k",
+        "nr_inodes=370450",
+        "mode=755",
+        "inode64"
+      ],
+      "size": "1.41 GiB",
+      "size_bytes": 1517363200,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/hugepages": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "hugetlbfs",
+      "filesystem": "hugetlbfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "pagesize=2M"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/mqueue": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "mqueue",
+      "filesystem": "mqueue",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/pts": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=000"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/shm": {
+      "available": "1.45 GiB",
+      "available_bytes": 1558618112,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "inode64"
+      ],
+      "size": "1.45 GiB",
+      "size_bytes": 1558618112,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run": {
+      "available": "296.31 MiB",
+      "available_bytes": 310702080,
+      "capacity": "0.33%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=304420k",
+        "mode=755",
+        "inode64"
+      ],
+      "size": "297.29 MiB",
+      "size_bytes": 311726080,
+      "used": "1000.00 KiB",
+      "used_bytes": 1024000
+    },
+    "/run/lock": {
+      "available": "5.00 MiB",
+      "available_bytes": 5242880,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "relatime",
+        "size=5120k",
+        "inode64"
+      ],
+      "size": "5.00 MiB",
+      "size_bytes": 5242880,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/run/user/1000": {
+      "available": "297.27 MiB",
+      "available_bytes": 311705600,
+      "capacity": "0.01%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=304416k",
+        "nr_inodes=76104",
+        "mode=700",
+        "uid=1000",
+        "gid=1000",
+        "inode64"
+      ],
+      "size": "297.28 MiB",
+      "size_bytes": 311721984,
+      "used": "16.00 KiB",
+      "used_bytes": 16384
+    },
+    "/vagrant": {
+      "available": "327.02 GiB",
+      "available_bytes": 351131107328,
+      "capacity": "64.04%",
+      "device": "vagrant",
+      "filesystem": "vboxsf",
+      "options": [
+        "rw",
+        "nodev",
+        "relatime",
+        "iocharset=utf8",
+        "uid=1000",
+        "gid=1000"
+      ],
+      "size": "909.41 GiB",
+      "size_bytes": 976476184576,
+      "used": "582.40 GiB",
+      "used_bytes": 625345077248
+    }
+  },
+  "networking": {
+    "dhcp": "10.0.2.2",
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fd17:625c:f037:2:a00:27ff:fe6d:e2c4",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd17:625c:f037:2::",
+            "scope6": "global",
+            "flags": [
+
+            ]
+          },
+          {
+            "address": "fe80::a00:27ff:fe6d:e2c4",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "dhcp": "10.0.2.2",
+        "duplex": "full",
+        "ip": "10.0.2.15",
+        "ip6": "fd17:625c:f037:2:a00:27ff:fe6d:e2c4",
+        "mac": "08:00:27:6d:e2:c4",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fd17:625c:f037:2::",
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "global",
+        "speed": 1000
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fd17:625c:f037:2:a00:27ff:fe6d:e2c4",
+    "mac": "08:00:27:6d:e2:c4",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fd17:625c:f037:2::",
+    "primary": "eth0",
+    "scope6": "global"
+  },
+  "os": {
+    "architecture": "amd64",
+    "distro": {
+      "codename": "noble",
+      "description": "Ubuntu 24.04.2 LTS",
+      "id": "Ubuntu",
+      "release": {
+        "full": "24.04",
+        "major": "24.04"
+      }
+    },
+    "family": "Debian",
+    "hardware": "x86_64",
+    "name": "Ubuntu",
+    "release": {
+      "full": "24.04",
+      "major": "24.04"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/mapper/ubuntu--vg-ubuntu--lv": {
+      "filesystem": "ext4",
+      "mount": "/",
+      "size": "31.00 GiB",
+      "size_bytes": 33281802240,
+      "uuid": "dc3f5b54-f516-44b5-bd79-10d6447b3e15"
+    },
+    "/dev/sda1": {
+      "parttype": "21686148-6449-6e6f-744e-656564454649",
+      "partuuid": "a6568078-5165-457e-b875-3804220dcac0",
+      "size": "1.00 MiB",
+      "size_bytes": 1048576
+    },
+    "/dev/sda2": {
+      "filesystem": "ext4",
+      "mount": "/boot",
+      "parttype": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+      "partuuid": "af6820c9-f746-4fd7-8b48-85368169e77b",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648,
+      "uuid": "8ff6d4c3-1bc9-45a7-bfd3-6ecb5c41ac7f"
+    },
+    "/dev/sda3": {
+      "filesystem": "LVM2_member",
+      "parttype": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+      "partuuid": "117cc985-e25e-46a4-b529-e699069d0f90",
+      "size": "62.00 GiB",
+      "size_bytes": 66568847360,
+      "uuid": "rCgLP6-4bS5-n12M-YQYr-0znT-PvTd-sUkmtH"
+    }
+  },
+  "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+  "processors": {
+    "cores": 2,
+    "count": 2,
+    "extensions": [
+      "x86_64",
+      "x86_64-v1",
+      "x86_64-v2",
+      "x86_64-v3"
+    ],
+    "isa": "x86_64",
+    "models": [
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics",
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics"
+    ],
+    "physicalcount": 1,
+    "speed": "3.99 GHz",
+    "threads": 1
+  },
+  "puppetversion": "8.23.1",
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.9"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 fc3df876bd2a64b26192566f0e7be850affca732",
+        "sha256": "SSHFP 3 2 69eeb28c5f4634931d3ca437cd9bd4086727943869e78a8f1f51341b95a9abe2"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM9tAnLIOl2r8l0gEIuNv3Fe8QGDJJGFaTnJGpgT3rpUx2KpGdV9YD0PHrpDs7HQ4APLPY6je2T/O3B1XhFAcAk=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 8b7fcce12022d57a23b89bf005c896ace57661b1",
+        "sha256": "SSHFP 4 2 773f9c549fc233ceeeaccc7117ff9a89643fd6225172e0fda477c1deb1f0f2ce"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIEczsXjI7MDzt27iVmZiabhEu0USugDZn/gtZpwMvz/p",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 9275927df23d3493d75efb0918581044367c4e5c",
+        "sha256": "SSHFP 1 2 02aafbf13d671eaa0e8f248b52b874c99c3b1e0ccdfd0f176189c5aff1cdb557"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDcV3puGrlH7egUQZofU8IRUygGylSvisu0qBU2RhHDIP4PhH61xnew3wqjeNl/nw5/0fYQthdVn8Ft5XE+vThYG51JW2UjXbiiPTrYB8ciyrErhVHdoU8NAF7Ra5efnNjHbDEABXX8PcdFWCcJMqGYNy+7x9IomP44vUUPuZ3Uy74R+VVej9Ps4zF5Bwd6cTtJxuBq17RGiQKiVbjNf/GIlVgjNdh26FMgo4dxJLLd+K+JIrxZ/nINSmQ3KgLBxJQNgbzPmJBjna7dxVOlnJ7L5N/sVJIhyJLAY1TQ4jM9EHpszMQQbneNMlfq2vcaaO/sq57Zmry+TjCXNLsgq46Ort5ooBegr+N63cO2E2lR+AcE0KeLpRqmbe0PX0Q4zMWyemRlROA/5T3xFI1YU+Lg44nrFg154mYrBv/cICx3+OZmIn8zFRBjBWpzMiH3qK9QwCBzm3cg9X6jjH+8S768DcE6SwQuCAXksI+dbd1UtuQ7xg+8JT8sa5MoQBuJGgM=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 41,
+    "uptime": "0:00 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "virtualbox"
+}
