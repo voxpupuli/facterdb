@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 13.2', '>= 13.2.1'
   s.add_development_dependency 'rspec', '~> 3.13'
 
-  s.add_development_dependency 'voxpupuli-rubocop', '~> 4.2.0'
+  s.add_development_dependency 'voxpupuli-rubocop', '~> 5.0.0'
   s.add_dependency 'jgrep', '~> 1.5', '>= 1.5.4'
 end
