@@ -39,28 +39,10 @@ Returns an Array of Hash containing the whole facts database.
 
 ## Filtering by Facter version and fact values
 
-### With an Array filter
-
 ```ruby
 require 'facterdb'
 
-FacterDB.get_facts([{:osfamily => 'Debian'}])
-```
-
-### With an Hash filter
-
-```ruby
-require 'facterdb'
-
-FacterDB.get_facts({:osfamily => 'Debian'})
-```
-
-### With a String filter
-
-```ruby
-require 'facterdb'
-
-FacterDB::get_facts('osfamily=Debian')
+FacterDB::get_facts('os.family=Debian')
 ```
 
 ## Included Factsets
