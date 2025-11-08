@@ -10,7 +10,7 @@
       "size": "893.25 GiB",
       "size_bytes": 959119884288,
       "type": "ssd",
-      "vendor": "BLANK",
+      "vendor": "BLANK"
     }
   },
   "dmi": {
@@ -20,7 +20,7 @@
       "version": "1.1.1"
     },
     "board": {
-      "manufacturer": "Some Company",
+      "manufacturer": "Some Company"
     },
     "chassis": {
       "type": "Rack Mount Chassis"
