@@ -1,0 +1,473 @@
+{
+  "aio_agent_version": "7.37.2",
+  "augeas": {
+    "version": "1.14.1"
+  },
+  "auto_poweron": "false",
+  "disks": {
+    "sda": {
+      "model": "HARDWARE RAID",
+      "size": "893.25 GiB",
+      "size_bytes": 959119884288,
+      "type": "ssd",
+      "vendor": "BLANK"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "05/05/2025",
+      "vendor": "Some Company",
+      "version": "1.1.1"
+    },
+    "board": {
+      "manufacturer": "Some Company"
+    },
+    "chassis": {
+      "type": "Rack Mount Chassis"
+    },
+    "manufacturer": "Some Company",
+    "product": {
+      "name": "Some Server",
+      "serial_number": "0",
+      "uuid": "c516bc4f-051c-405f-8b90-2a54e35ef6c4"
+    }
+  },
+  "facterversion": "4.11.0",
+  "filesystems": "ext3,ext4,vfat",
+  "fips_enabled": false,
+  "hypervisors": {
+    "xen": {
+      "context": "pv",
+      "privileged": true
+    }
+  },
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": false,
+  "kernel": "Linux",
+  "kernelmajversion": "4.19",
+  "kernelrelease": "4.19.0+1",
+  "kernelversion": "4.19.0",
+  "load_averages": {
+    "15m": 0.0,
+    "1m": 0.05,
+    "5m": 0.03
+  },
+  "memory": {
+    "swap": {
+      "available": "1011.00 MiB",
+      "available_bytes": 1060106240,
+      "capacity": "1.27%",
+      "total": "1.00 GiB",
+      "total_bytes": 1073737728,
+      "used": "13.00 MiB",
+      "used_bytes": 13631488
+    },
+    "system": {
+      "available": "2.53 GiB",
+      "available_bytes": 2721157120,
+      "capacity": "36.25%",
+      "total": "3.98 GiB",
+      "total_bytes": 4268486656,
+      "used": "1.44 GiB",
+      "used_bytes": 1547329536
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "12.58 GiB",
+      "available_bytes": 13506478080,
+      "capacity": "24.45%",
+      "device": "/dev/sda1",
+      "filesystem": "ext3",
+      "options": [
+        "rw",
+        "relatime",
+        "stripe=128"
+      ],
+      "size": "17.55 GiB",
+      "size_bytes": 18843783168,
+      "used": "4.07 GiB",
+      "used_bytes": 4370939904
+    },
+    "/boot/efi": {
+      "available": "508.44 MiB",
+      "available_bytes": 533135360,
+      "capacity": "0.64%",
+      "device": "/dev/sda4",
+      "filesystem": "vfat",
+      "options": [
+        "rw",
+        "relatime",
+        "fmask=0022",
+        "dmask=0022",
+        "codepage=437",
+        "iocharset=iso8859-1",
+        "shortname=mixed",
+        "errors=remount-ro"
+      ],
+      "size": "511.73 MiB",
+      "size_bytes": 536584192,
+      "used": "3.29 MiB",
+      "used_bytes": 3448832
+    },
+    "/dev": {
+      "available": "1.98 GiB",
+      "available_bytes": 2122088448,
+      "capacity": "0.00%",
+      "device": "devtmpfs",
+      "filesystem": "devtmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "size=2072360k",
+        "nr_inodes=518090",
+        "mode=755"
+      ],
+      "size": "1.98 GiB",
+      "size_bytes": 2122096640,
+      "used": "8.00 KiB",
+      "used_bytes": 8192
+    },
+    "/dev/mqueue": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "mqueue",
+      "filesystem": "mqueue",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/pts": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devpts",
+      "filesystem": "devpts",
+      "options": [
+        "rw",
+        "nosuid",
+        "noexec",
+        "relatime",
+        "gid=5",
+        "mode=620",
+        "ptmxmode=000"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/dev/shm": {
+      "available": "1.99 GiB",
+      "available_bytes": 2133823488,
+      "capacity": "0.02%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev"
+      ],
+      "size": "1.99 GiB",
+      "size_bytes": 2134241280,
+      "used": "408.00 KiB",
+      "used_bytes": 417792
+    },
+    "/run": {
+      "available": "1.98 GiB",
+      "available_bytes": 2123722752,
+      "capacity": "0.49%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "mode=755"
+      ],
+      "size": "1.99 GiB",
+      "size_bytes": 2134241280,
+      "used": "10.03 MiB",
+      "used_bytes": 10518528
+    },
+    "/run/user/0": {
+      "available": "407.08 MiB",
+      "available_bytes": 426852352,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "rw",
+        "nosuid",
+        "nodev",
+        "relatime",
+        "size=416848k",
+        "mode=700"
+      ],
+      "size": "407.08 MiB",
+      "size_bytes": 426852352,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/sys/fs/cgroup": {
+      "available": "1.99 GiB",
+      "available_bytes": 2134241280,
+      "capacity": "0%",
+      "device": "tmpfs",
+      "filesystem": "tmpfs",
+      "options": [
+        "ro",
+        "nosuid",
+        "nodev",
+        "noexec",
+        "mode=755"
+      ],
+      "size": "1.99 GiB",
+      "size_bytes": 2134241280,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/lib/nfs/rpc_pipefs": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "sunrpc",
+      "filesystem": "rpc_pipefs",
+      "options": [
+        "rw",
+        "relatime"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/var/log": {
+      "available": "3.24 GiB",
+      "available_bytes": 3482648576,
+      "capacity": "11.55%",
+      "device": "/dev/sda5",
+      "filesystem": "ext3",
+      "options": [
+        "rw",
+        "relatime",
+        "stripe=128"
+      ],
+      "size": "3.87 GiB",
+      "size_bytes": 4152066048,
+      "used": "433.61 MiB",
+      "used_bytes": 454672384
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "eth0": {
+        "duplex": "full",
+        "mac": "08:00:27:0e:f4:44",
+        "mtu": 1500,
+        "operational_state": "up",
+        "physical": true,
+        "speed": 10000
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "network": "127.0.0.0",
+        "operational_state": "unknown",
+        "physical": false
+      },
+      "xapi1": {
+        "bindings": [
+          {
+            "address": "192.168.1.11",
+            "netmask": "255.255.255.0",
+            "network": "192.168.1.0"
+          }
+        ],
+        "ip": "192.168.1.11",
+        "mac": "08:00:27:0e:f4:44",
+        "mtu": 1500,
+        "netmask": "255.255.252.0",
+        "network": "192.168.1.0",
+        "operational_state": "unknown",
+        "physical": false
+      }
+    },
+    "ip": "192.168.1.11",
+    "mac": "08:00:27:0e:f4:44",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "network": "192.168.1.0",
+    "primary": "xapi1"
+  },
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "xenenterprise",
+      "description": "XCP-ng release 8.3.0 (xenenterprise)",
+      "id": "XCP-ng",
+      "release": {
+        "full": "8.3.0",
+        "major": "8",
+        "minor": "3"
+      },
+      "specification": ":core-4.1-amd64:core-4.1-noarch"
+    },
+    "family": "RedHat",
+    "hardware": "x86_64",
+    "name": "XCP-ng",
+    "release": {
+      "full": "8.3.0",
+      "major": "8",
+      "minor": "3"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "osfamily": "RedHat",
+  "package_provider": "yum",
+  "partitions": {
+    "/dev/mapper/VG_XenStorage-1": {
+      "size": "4.00 MiB",
+      "size_bytes": 4194304
+    },
+    "/dev/mapper/VG_XenStorage-2": {
+      "size": "50.11 GiB",
+      "size_bytes": 53800337408
+    },
+    "/dev/mapper/VG_XenStorage-3": {
+      "size": "50.11 GiB",
+      "size_bytes": 53800337408
+    },
+    "/dev/sda1": {
+      "filesystem": "ext3",
+      "label": "root-rooty",
+      "mount": "/",
+      "partuuid": "2ee5ac73-01",
+      "size": "18.00 GiB",
+      "size_bytes": 19327352832,
+      "uuid": "d181650c-df63-4a28-8026-fe7e3a68a7d4"
+    },
+    "/dev/sda2": {
+      "partuuid": "2ee5ac73-02",
+      "size": "18.00 GiB",
+      "size_bytes": 19327352832
+    },
+    "/dev/sda3": {
+      "filesystem": "LVM2_member",
+      "partuuid": "2ee5ac73-03",
+      "size": "851.75 GiB",
+      "size_bytes": 914558533120,
+      "uuid": "d181650c-df63-4a28-8026-fe7e3a68a7d5"
+    },
+    "/dev/sda4": {
+      "filesystem": "vfat",
+      "label": "BOOT-XVHEKY",
+      "mount": "/boot/efi",
+      "partuuid": "2ee5ac73-04",
+      "size": "512.00 MiB",
+      "size_bytes": 536870912,
+      "uuid": "66E1-EA22"
+    },
+    "/dev/sda5": {
+      "filesystem": "ext3",
+      "label": "logs-xvheky",
+      "mount": "/var/log",
+      "partuuid": "2ee5ac73-05",
+      "size": "4.00 GiB",
+      "size_bytes": 4294967296,
+      "uuid": "d181650c-df63-4a28-8026-fe7e3a68a7d6"
+    },
+    "/dev/sda6": {
+      "filesystem": "swap",
+      "label": "swap-xvheky",
+      "partuuid": "2ee5ac73-06",
+      "size": "1.00 GiB",
+      "size_bytes": 1073741824,
+      "uuid": "d181650c-df63-4a28-8026-fe7e3a68a7d7"
+    }
+  },
+  "path": "/opt/xensource/bin:/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/puppetlabs/bin:/opt/dell/srvadmin/bin:/opt/dell/srvadmin/sbin:/root/bin",
+  "pip3_version": "9.0.3",
+  "pool_auto_poweron": "false",
+  "pool_memory-ratio-hvm": "0.25",
+  "pool_memory-ratio-pv": "0.25",
+  "processors": {
+    "cores": 1,
+    "count": 16,
+    "extensions": [
+      "x86_64",
+      "x86_64-v1",
+      "x86_64-v2",
+      "x86_64-v3",
+      "x86_64-v4"
+    ],
+    "isa": "x86_64",
+    "models": [
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz",
+      "Intel(R) Xeon(R) Silver 4310 CPU @ 2.10GHz"
+    ],
+    "physicalcount": 1,
+    "speed": "2.10 GHz",
+    "threads": 16
+  },
+  "ruby": {
+    "platform": "x86_64-linux",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/2.7.0",
+    "version": "2.7.8"
+  },
+  "service_name": "xcpng",
+  "service_provider": "systemd",
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 67,
+    "uptime": "0:01 hours"
+  },
+  "systemd": true,
+  "virtual": "xen0",
+  "vms_without_auto_poweron": "0",
+  "xen": {
+    "domains": [
+      "dom0-example"
+    ]
+  }
+}
