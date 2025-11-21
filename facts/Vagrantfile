@@ -505,6 +505,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #                                  WINDOWS 10                                  #
   # ---------------------------------------------------------------------------- #
   config.vm.define 'windows-10-x86_64', autostart: false do |host|
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 8192
+      v.cpus = 4
+    end
     host.vm.hostname = 'foo'
     host.vm.box = 'gusztavvargadr/windows-10'
     host.vm.synced_folder '.', '/vagrant'
@@ -518,6 +522,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #                                  WINDOWS 11                                  #
   # ---------------------------------------------------------------------------- #
   config.vm.define 'windows-11-x86_64', autostart: false do |host|
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 8192
+      v.cpus = 4
+    end
     host.vm.hostname = 'foo'
     host.vm.box = 'gusztavvargadr/windows-11'
     host.vm.synced_folder '.', '/vagrant'
@@ -532,6 +540,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # ---------------------------------------------------------------------------- #
   # Windows boxes can sometimes be picky, so don't include them automatically (autostart: false)
   config.vm.define 'windows-server-2019-x86_64', autostart: false do |host|
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 8192
+      v.cpus = 4
+    end
     host.vm.hostname = 'foo'
     host.vm.box = 'gusztavvargadr/windows-server-2019-standard-core'
     host.vm.synced_folder '.', '/vagrant'
@@ -542,6 +554,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
   end
   config.vm.define 'windows-server-2022-x86_64', autostart: false do |host|
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 8192
+      v.cpus = 4
+    end
     host.vm.hostname = 'foo'
     host.vm.box = 'gusztavvargadr/windows-server-2022-standard-core'
     host.vm.synced_folder '.', '/vagrant'
@@ -552,6 +568,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
   end
   config.vm.define 'windows-server-2025-x86_64', autostart: false do |host|
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 8192
+      v.cpus = 4
+    end
     host.vm.hostname = 'foo'
     host.vm.box = 'gusztavvargadr/windows-server-2025-standard-core'
     host.vm.synced_folder '.', '/vagrant'
