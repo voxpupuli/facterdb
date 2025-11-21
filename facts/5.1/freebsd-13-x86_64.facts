@@ -1,0 +1,440 @@
+{
+  "augeas": {
+    "version": "1.14.0"
+  },
+  "disks": {
+    "ada0": {
+      "model": "VBOX HARDDISK",
+      "serial_number": "VBc59ae054-3628e47e",
+      "size": "64.00 GiB",
+      "size_bytes": 68719476736
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "VirtualBox-ace2b0ab-6e6d-4f52-9118-5de419337a0d",
+      "uuid": "abb0e2ac-6d6e-524f-9118-5de419337a0d"
+    }
+  },
+  "facterversion": "5.1.0",
+  "identity": {
+    "gid": 0,
+    "group": "wheel",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "FreeBSD",
+  "kernelmajversion": "13",
+  "kernelrelease": "13.5-RELEASE",
+  "kernelversion": "13.5",
+  "load_averages": {
+    "15m": 0.04638671875,
+    "1m": 0.466796875,
+    "5m": 0.13232421875
+  },
+  "memory": {
+    "swap": {
+      "available": "2.00 GiB",
+      "available_bytes": 2147483648,
+      "capacity": "0%",
+      "encrypted": false,
+      "total": "2.00 GiB",
+      "total_bytes": 2147483648,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "system": {
+      "available": "2.58 GiB",
+      "available_bytes": 2766471168,
+      "capacity": "10.51%",
+      "total": "2.88 GiB",
+      "total_bytes": 3091415040,
+      "used": "309.89 MiB",
+      "used_bytes": 324943872
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "1.73%",
+      "device": "zroot/ROOT/default",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "rootfs",
+        "noatime"
+      ],
+      "size": "59.59 GiB",
+      "size_bytes": 63983267840,
+      "used": "1.03 GiB",
+      "used_bytes": 1107484672
+    },
+    "/dev": {
+      "available": "1.00 KiB",
+      "available_bytes": 1024,
+      "capacity": "0%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+
+      ],
+      "size": "1.00 KiB",
+      "size_bytes": 1024,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/tmp": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875897856,
+      "used": "112.00 KiB",
+      "used_bytes": 114688
+    },
+    "/usr/home": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/usr/home",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875897856,
+      "used": "112.00 KiB",
+      "used_bytes": 114688
+    },
+    "/usr/ports": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/usr/ports",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/usr/src": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/usr/src",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/vagrant": {
+      "available": "169.35 GiB",
+      "available_bytes": 181840912384,
+      "capacity": "81.38%",
+      "device": "Vagrant",
+      "filesystem": "vboxvfs",
+      "options": [
+        "local"
+      ],
+      "size": "909.41 GiB",
+      "size_bytes": 976476184576,
+      "used": "740.06 GiB",
+      "used_bytes": 794635272192
+    },
+    "/var/audit": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/var/audit",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/var/crash": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/var/crash",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/var/log": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/var/log",
+      "filesystem": "zfs",
+      "options": [
+        "noexec",
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875918336,
+      "used": "132.00 KiB",
+      "used_bytes": 135168
+    },
+    "/var/mail": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/var/mail",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/var/tmp": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot/var/tmp",
+      "filesystem": "zfs",
+      "options": [
+        "nosuid",
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    },
+    "/zroot": {
+      "available": "58.56 GiB",
+      "available_bytes": 62875783168,
+      "capacity": "0.00%",
+      "device": "zroot",
+      "filesystem": "zfs",
+      "options": [
+        "nodev",
+        "local",
+        "noatime"
+      ],
+      "size": "58.56 GiB",
+      "size_bytes": 62875881472,
+      "used": "96.00 KiB",
+      "used_bytes": 98304
+    }
+  },
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "em0": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fe80::a00:27ff:fe17:a73f",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "ip": "10.0.2.15",
+        "ip6": "fe80::a00:27ff:fe17:a73f",
+        "mac": "08:00:27:17:a7:3f",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "lo0": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host"
+          },
+          {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16384,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fe80::a00:27ff:fe17:a73f",
+    "mac": "08:00:27:17:a7:3f",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fe80::",
+    "primary": "em0",
+    "scope6": "link"
+  },
+  "os": {
+    "architecture": "amd64",
+    "family": "FreeBSD",
+    "hardware": "amd64",
+    "name": "FreeBSD",
+    "release": {
+      "branch": "RELEASE",
+      "full": "13.5-RELEASE",
+      "major": "13",
+      "minor": "5"
+    }
+  },
+  "partitions": {
+    "ada0p1": {
+      "partlabel": "gptboot0",
+      "partuuid": "311abd6c-b049-11f0-99bd-08002717a73f",
+      "size": "512.00 KiB",
+      "size_bytes": 524288
+    },
+    "ada0p2": {
+      "partlabel": "swap0",
+      "partuuid": "31334f74-b049-11f0-99bd-08002717a73f",
+      "size": "2.00 GiB",
+      "size_bytes": 2147483648
+    },
+    "ada0p3": {
+      "partlabel": "zfs0",
+      "partuuid": "31468585-b049-11f0-99bd-08002717a73f",
+      "size": "62.00 GiB",
+      "size_bytes": 66569895936
+    }
+  },
+  "path": "/opt/puppetlabs/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+  "processors": {
+    "count": 2,
+    "isa": "amd64",
+    "models": [
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     ",
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics     "
+    ],
+    "speed": "3.99 GHz"
+  },
+  "ruby": {
+    "platform": "amd64-freebsd13",
+    "sitedir": "/usr/local/lib/ruby/site_ruby/3.3",
+    "version": "3.3.9"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 a193368ddabe0488f088c931d83060e67851db8b",
+        "sha256": "SSHFP 3 2 4e641a85c052d317a226b239ab322a00c64e0daabed4ce174d66610833152ff1"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBPJv5slUWXTSbdzzIYz8cgQMeQlHGoi34/jN5l/kYFZdhcml0F3JRB8wF3vUdH8p2kf0fxVF/6y8TD1UiDt5DFc=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 a1097006ef3239a68b8d6c81d8b212dbe7649ad7",
+        "sha256": "SSHFP 4 2 e464ffb3d050a2cb73cc359d34b45fd4e6775858819ee2bb1f470051f497542c"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIIBE7hhjvKaI4Xm9LOVSuW0FQHs1UBShzNoU+FwdsX1Z",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 4b447aa873819b00c107f8bee18e938f4604013e",
+        "sha256": "SSHFP 1 2 413e915223b8ac160f27552a6409ebda4fa4f0e11f7548521208110f97732d62"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDH67XI2J/ufuBcyOMMrWrrDd2l/0AG5X+c0gLd3R1q2tenhpWNM5rKMRzdA21Xb69f8vYaJVyVGvgthnrqPvJ3pRVnhJxQOvxmjKvCrKIUukC9Tp7DxgOYA9U5bsDoDqiNAms43JP4KQHaE5M3EFSbN+dIfIk0XoWntzBlLo2L39ON5mIZIIUxYjoVvyapMC98shp9e0KTT7bsNikCubgwiuKamM+BCvvuNInVTGj+G4JVK3dU9AzPX/Bbtavnfv1BOpHn/bjwlLnHt5YHQwI+qqGDvcdwzWgr8SHgeaAn0AIpdeQK8g0znymQLXxadDOQW/oRF80is5hrB8urG2E/DdlISro6O+fLiEv+08DIJDY/mkeORq48Y/Ez6xidZ+FnyoOvgha+sO1Hb1aHVexg7lwqnnDh3gPjqsqTnmq3AjPJJSqkoi0sAEZ0zlIpZ9GQcOi5PfrIfhLWRQc2p61KJiPW90Noc/HaOzmkOSlmd0zLVR95TFlTT29S1MN+r+8=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 68,
+    "uptime": "0:01 hours"
+  },
+  "timezone": "UTC",
+  "virtual": "vbox",
+  "zfs_featurenumbers": "1,2,3,4,5",
+  "zfs_version": "5",
+  "zpool_featureflags": "async_destroy,empty_bpobj,lz4_compress,multi_vdev_crash_dump,spacemap_histogram,enabled_txg,hole_birth,extensible_dataset,embedded_data,bookmarks,filesystem_limits,large_blocks,large_dnode,sha512,skein,userobj_accounting,encryption,project_quota,device_removal,obsolete_counts,zpool_checkpoint,spacemap_v2,allocation_classes,resilver_defer,bookmark_v2,redaction_bookmarks,redacted_datasets,bookmark_written,log_spacemap,livelist,device_rebuild,zstd_compress,draid",
+  "zpool_featurenumbers": "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
+  "zpool_version": "5000"
+}
