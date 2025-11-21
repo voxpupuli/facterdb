@@ -1,6 +1,6 @@
 param(
   [string]$puppetAgentVersionList = 'X:\versions.txt',
-  [string]$baseUrl = 'https://downloads.puppetlabs.com/windows/puppet{0}/puppet-agent-{1}-{2}.msi',
+  [string]$baseUrl = 'https://downloads.voxpupuli.org/windows/openvox{0}/openvox-agent-{1}-{2}.msi',
   [string]$fqdn = 'foo.example.com'
 )
 
@@ -88,7 +88,7 @@ foreach ($pupAgentVer in $puppetAgentVersions) {
   # the domain name will fallback to the hypervisor's domain.
   $env:FACTER_fqdn = $fqdn
 
-  $facterArgs = @("--json", "--puppet")
+  $facterArgs = @("--json")
   $facterProcess = Start-Process -FilePath $facterBin -ArgumentList $facterArgs -Wait -PassThru -RedirectStandardOutput "X:\$facterVer\$Os-$Osmaj-$Hw.facts"
   if ($facterProcess.ExitCode -ne 0) {
     Write-Host "Facter failed."
