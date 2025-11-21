@@ -32,7 +32,7 @@ apt_install() {
 
 if test -f /usr/bin/zypper; then
   zypper --non-interactive --gpg-auto-import-keys refresh
-  zypper --non-interactive install ruby-devel
+  zypper --non-interactive install ruby-devel augeas
   osfamily='Suse'
   # This is Leap which is based on SLES 12
   if [[ `cat /etc/os-release |grep -e '^VERSION="42' -c` == 1  ]]; then
