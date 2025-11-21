@@ -551,4 +551,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'windows_get_facts.ps1'
     host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
   end
+  config.vm.define 'windows-server-2025-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-server-2025-standard-core'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
+  end
 end
