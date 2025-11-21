@@ -1,0 +1,290 @@
+{
+  "augeas": {
+    "version": "1.14.1"
+  },
+  "disks": {
+    "sda": {
+      "model": "VBOX HARDDISK",
+      "serial": "VB03becdbc-d9669b35",
+      "size": "19.53 GiB",
+      "size_bytes": 20971520000,
+      "type": "hdd",
+      "vendor": "ATA"
+    }
+  },
+  "dmi": {
+    "bios": {
+      "release_date": "12/01/2006",
+      "vendor": "innotek GmbH",
+      "version": "VirtualBox"
+    },
+    "board": {
+      "manufacturer": "Oracle Corporation",
+      "product": "VirtualBox",
+      "serial_number": "0"
+    },
+    "chassis": {
+      "type": "Other"
+    },
+    "manufacturer": "innotek GmbH",
+    "product": {
+      "name": "VirtualBox",
+      "serial_number": "VirtualBox-d988b01e-666a-43aa-9ed4-433b36104ae3",
+      "uuid": "1eb088d9-6a66-aa43-9ed4-433b36104ae3",
+      "version": "1.2"
+    }
+  },
+  "facterversion": "5.1.0",
+  "filesystems": "btrfs,vfat",
+  "fips_enabled": false,
+  "hypervisors": {
+    "virtualbox": {
+      "revision": "170995",
+      "version": "7.2.4"
+    }
+  },
+  "identity": {
+    "gid": 0,
+    "group": "root",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": true,
+  "kernel": "Linux",
+  "kernelmajversion": "6.12",
+  "kernelrelease": "6.12.0-160000.20-default",
+  "kernelversion": "6.12.0",
+  "load_averages": {
+    "15m": 0.38,
+    "1m": 0.49,
+    "5m": 0.72
+  },
+  "memory": {
+    "swap": {
+      "available": "2.00 GiB",
+      "available_bytes": 2146447360,
+      "capacity": "0.10%",
+      "total": "2.00 GiB",
+      "total_bytes": 2148507648,
+      "used": "1.96 MiB",
+      "used_bytes": 2060288
+    },
+    "system": {
+      "available": "1.51 GiB",
+      "available_bytes": 1616867328,
+      "capacity": "20.93%",
+      "total": "1.90 GiB",
+      "total_bytes": 2044760064,
+      "used": "408.07 MiB",
+      "used_bytes": 427892736
+    }
+  },
+  "mountpoints": {},
+  "networking": {
+    "domain": "example.com",
+    "fqdn": "foo.example.com",
+    "hostname": "foo",
+    "interfaces": {
+      "enp0s3": {
+        "bindings": [
+          {
+            "address": "10.0.2.15",
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "fd17:625c:f037:2:f559:eb04:1620:75cc",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd17:625c:f037:2::",
+            "scope6": "global",
+            "flags": [
+              "temporary"
+            ]
+          },
+          {
+            "address": "fd17:625c:f037:2:4d1e:a68:45bf:1a3c",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fd17:625c:f037:2::",
+            "scope6": "global",
+            "flags": []
+          },
+          {
+            "address": "fe80::7811:f61d:2f8e:e9db",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "duplex": "unknown",
+        "ip": "10.0.2.15",
+        "ip6": "fd17:625c:f037:2:f559:eb04:1620:75cc",
+        "mac": "08:00:27:78:28:23",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.2.0",
+        "network6": "fd17:625c:f037:2::",
+        "operational_state": "up",
+        "physical": true,
+        "scope6": "global",
+        "speed": -1
+      },
+      "lo": {
+        "bindings": [
+          {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+          }
+        ],
+        "bindings6": [
+          {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host",
+            "flags": [
+              "permanent"
+            ]
+          }
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 65536,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "operational_state": "unknown",
+        "physical": false,
+        "scope6": "host"
+      }
+    },
+    "ip": "10.0.2.15",
+    "ip6": "fd17:625c:f037:2:f559:eb04:1620:75cc",
+    "mac": "08:00:27:78:28:23",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.2.0",
+    "network6": "fd17:625c:f037:2::",
+    "primary": "enp0s3",
+    "scope6": "global"
+  },
+  "os": {
+    "architecture": "x86_64",
+    "distro": {
+      "codename": "n/a",
+      "description": "openSUSE Leap 16.0",
+      "id": "SUSE",
+      "release": {
+        "full": "16.0",
+        "major": "16",
+        "minor": "0"
+      }
+    },
+    "family": "Suse",
+    "hardware": "x86_64",
+    "name": "openSUSE",
+    "release": {
+      "full": "16.0",
+      "major": "16",
+      "minor": "0"
+    },
+    "selinux": {
+      "enabled": false
+    }
+  },
+  "partitions": {
+    "/dev/sda1": {
+      "filesystem": "vfat",
+      "parttype": "c12a7328-f81f-11d2-ba4b-00a0c93ec93b",
+      "partuuid": "5eb7fbb0-1e3d-41e7-a076-e60b4b660c47",
+      "size": "512.00 MiB",
+      "size_bytes": 536870912,
+      "uuid": "8649-6CF0"
+    },
+    "/dev/sda2": {
+      "filesystem": "btrfs",
+      "parttype": "0fc63daf-8483-4772-8e79-3d69d8477de4",
+      "partuuid": "889e790e-a0d3-44f8-aa0e-49e680f4432d",
+      "size": "17.03 GiB",
+      "size_bytes": 18285068288,
+      "uuid": "030451f3-fdd5-428d-9968-aaf282322c23"
+    },
+    "/dev/sda3": {
+      "filesystem": "swap",
+      "parttype": "0657fd6d-a4ab-43c4-84e5-0933c84b4f4f",
+      "partuuid": "550e4c71-0b80-42d2-bb38-ab707369d325",
+      "size": "2.00 GiB",
+      "size_bytes": 2148515328,
+      "uuid": "a7fdc4ca-290f-4aca-9d3f-3327fe92b85f"
+    }
+  },
+  "path": "/sbin:/usr/sbin:/usr/local/sbin:/root/bin:/usr/local/bin:/usr/bin:/bin",
+  "processors": {
+    "cores": 4,
+    "count": 4,
+    "extensions": [
+      "x86_64",
+      "x86_64-v1",
+      "x86_64-v2",
+      "x86_64-v3"
+    ],
+    "isa": "x86_64",
+    "models": [
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics",
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics",
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics",
+      "AMD Ryzen 9 7940HS w/ Radeon 780M Graphics"
+    ],
+    "physicalcount": 1,
+    "speed": "3.99 GHz",
+    "threads": 1
+  },
+  "ruby": {
+    "platform": "x86_64-linux-gnu",
+    "sitedir": "/usr/lib64/ruby/site_ruby/3.4.0",
+    "version": "3.4.3"
+  },
+  "ssh": {
+    "ecdsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 3 1 d3d7adf5a8cd72febf47f3010ba4397374d76beb",
+        "sha256": "SSHFP 3 2 05783e255582c501efa24ca7f4c7cbab32e2aa0f43cf69312641a7e749d3e87d"
+      },
+      "key": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBNh46bSDd7h5flfDhlrRD3Otr2uGy+kKchaJLrBJusDE2+f9dJBa0zhFHgzWZKYpoijN3rdWzCpvcDD9nZ5Yauo=",
+      "type": "ecdsa-sha2-nistp256"
+    },
+    "ed25519": {
+      "fingerprints": {
+        "sha1": "SSHFP 4 1 5c67273aa2b50c42fde3a4d28b407627f8a2d087",
+        "sha256": "SSHFP 4 2 570df607fe1b663fcacc5f155cb9e65efcd56673af84f0f01ea8475b096dcbd8"
+      },
+      "key": "AAAAC3NzaC1lZDI1NTE5AAAAIA6KhgaLlETO+PjI3/0QU1L1YmvH8/df0P/vR11+KOhE",
+      "type": "ssh-ed25519"
+    },
+    "rsa": {
+      "fingerprints": {
+        "sha1": "SSHFP 1 1 7fdfb023f37289e3c79934df9d8a7fad50362cd2",
+        "sha256": "SSHFP 1 2 1712582009778ca399b040997a1a2d843ddb77ffc60bc7e6c2364a7c8e8b59c5"
+      },
+      "key": "AAAAB3NzaC1yc2EAAAADAQABAAABgQCohHluzCJKTqojHeo2SITSH2GH2pmpI3qHcvyrW1OoPCowJhnKxSywXkcP+kwXHk4wP9NkSQZwRj7oDtSGLliEi6be4CW/UZHpBJNFV5tzkGMgdicKqWoiy8uzSTja/vGnQFbKJabop1FTDl8khKtEI6+3RCL1DyryqJyaM30IblQNxRrGgABWPCK8u7kBm19cxevAF09fKAnlI9+n72T1qmVhpVHX7feYE+it9GHSLuJDTh76wU+gou7zGuigv5FFVuPL1qqxJpH8OI/zYamNxenSK+FTagAbL7l4zn96fCgkB5/5bDbzESRPPCEnXdOlOV/Iewj8WWThKKGCv9SlwuGml1BNHFXRWljG9cHcgbFRY4coBEocCbv5ySgBOCQhYajenBs4pQ8LEBIrOTyyMkHmuA4WyGvUIGTdlWxRWhmykfPj1bbUtib2mMHARA8k0Kv2eC56fkdvnZ85flGGviVLyVm6paSi5WH9mEgxNs7yz9p4x1VF2sAZepX2tps=",
+      "type": "ssh-rsa"
+    }
+  },
+  "system_uptime": {
+    "days": 0,
+    "hours": 0,
+    "seconds": 506,
+    "uptime": "0:08 hours"
+  },
+  "timezone": "CET",
+  "virtual": "virtualbox"
+}
