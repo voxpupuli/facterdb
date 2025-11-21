@@ -13,115 +13,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider 'virtualbox' do |v|
     v.gui = false
   end
-
-  config.vm.define 'debian-11-x86_64', autostart: false do |host|
-    host.vm.box = 'debian/bullseye64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'debian-12-x86_64', autostart: false do |host|
-    host.vm.box = 'debian/bookworm64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'debian-13-x86_64', autostart: false do |host|
-    host.vm.box = 'boxen/debian-13' # debian.org doesn't publish vagrant images anymore
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'linuxmint-19-x86_64', autostart: false do |host|
-    host.vm.box = 'ltsp/linuxmint-19.1-cinnamon-64bit'
-    host.vm.provision 'shell',
-                      inline: 'export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y ruby ruby-dev libc6-dev'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-18.04-x86_64', autostart: false do |host|
-    host.vm.box = 'ubuntu/bionic64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-20.04-x86_64', autostart: false do |host|
-    host.vm.box = 'ubuntu/focal64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-21.04-x86_64', autostart: false do |host|
-    host.vm.box = 'ubuntu/hirsute64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-21.10-x86_64', autostart: false do |host|
-    host.vm.box = 'ubuntu/impish64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-22.04-x86_64', autostart: false do |host|
-    host.vm.box = 'ubuntu/jammy64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-22.04-arm64', autostart: false do |host|
-    host.vm.box = 'bento/ubuntu-22.04'
-    host.vm.box_architecture = 'arm64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  # the ssh bits on this did not work right, most of the steps for
-  # generating things were done manually
-  config.vm.define 'ubuntu-22.10-x86_64', autostart: false do |host|
-    host.vm.box = 'ubuntu/kinetic64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-24.04-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/ubuntu-24.04'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'ubuntu-24.04-arm64', autostart: false do |host|
-    host.vm.box = 'bento/ubuntu-24.04'
-    host.vm.box_architecture = 'arm64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'centos-stream9-x86_64', autostart: false do |host|
-    host.vm.box = 'centos/stream9'
-    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-latest.x86_64.vagrant-virtualbox.box'
-    if ENV['mount_synced_folder']
-      host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
-    end
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'vbguest_install.sh'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'centos-stream10-x86_64', autostart: false do |host|
-    host.vm.box = 'centos/stream10'
-    host.vm.box_url = 'https://cloud.centos.org/centos/10-stream/x86_64/images/CentOS-Stream-Vagrant-10-latest.x86_64.vagrant-virtualbox.box'
-    if ENV['mount_synced_folder']
-      host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
-    end
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'vbguest_install.sh'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
+  # ---------------------------------------------------------------------------- #
+  #                                   ALMALINUX                                  #
+  # ---------------------------------------------------------------------------- #
   config.vm.define 'almalinux-8-x86_64', autostart: false do |host|
     host.vm.box = 'almalinux/8'
     host.vm.synced_folder '.', '/vagrant'
@@ -146,27 +40,31 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'rockylinux-8-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/rockylinux-8'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+  # ---------------------------------------------------------------------------- #
+  #                                 AMAZON LINUX                                 #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'amazonlinux-2-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/amazonlinux-2'
+    host.vm.provision 'shell', inline: 'yum -y install gcc glibc-devel'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'rockylinux-9-x86_64', autostart: false do |host|
-    # this box has no vboxguestadditions as of 2025-04-25
-    # so the synced_folder doesnt mount
-    # host.vm.box = 'rockylinux/9'
-    host.vm.box = 'bento/rockylinux-9'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+  # ---------------------------------------------------------------------------- #
+  #                                  ARCH LINUX                                  #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'archlinux-x86_64', autostart: false do |host|
+    host.vm.box = 'archlinux/archlinux'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'rockylinux-10-x86_64', autostart: false do |host|
-    host.vm.box = 'rockylinux/10'
+  # ---------------------------------------------------------------------------- #
+  #                                 CENTOS STREAM                                #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'centos-stream9-x86_64', autostart: false do |host|
+    host.vm.box = 'centos/stream9'
+    host.vm.box_url = 'https://cloud.centos.org/centos/9-stream/x86_64/images/CentOS-Stream-Vagrant-9-latest.x86_64.vagrant-virtualbox.box'
     if ENV['mount_synced_folder']
       host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
     end
@@ -176,215 +74,42 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'redhat-8-x86_64', autostart: false do |host|
-    host.vm.box = 'generic/rhel8'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'redhat-9-x86_64', autostart: false do |host|
-    host.vm.box = 'generic/rhel9'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'oraclelinux-8-x86_64', autostart: false do |host|
-    host.vm.box = 'oraclelinux/8'
-    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/8.json'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'oraclelinux-9-x86_64', autostart: false do |host|
-    host.vm.box = 'oraclelinux/9'
-    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/9.json'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'archlinux-x86_64', autostart: false do |host|
-    host.vm.box = 'archlinux/archlinux'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'sles-11sp1-x86_64', autostart: false do |host|
-    host.vm.box = 'suse/sles11sp3'
-    host.vm.network 'private_network', ip: '192.168.123.2'
-    host.vm.synced_folder '.', '/vagrant', type: 'nfs'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'sles-12sp1-x86_64', autostart: false do |host|
-    host.vm.box = 'idar/sles12sp3'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'sles-15-x86_64', autostart: false do |host|
-    host.vm.box = 'trueability/sles-15-sp1'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', inline: [
-      'SUSEConnect -p sle-module-desktop-applications/15.1/x86_64',
-      'SUSEConnect -p sle-module-legacy/15.1/x86_64',
-      'zypper install --no-confirm net-tools-deprecated',
-    ].join(' && ')
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
-  config.vm.define 'opensuse-42.3-x86_64', autostart: false do |host|
-    host.vm.box = 'opensuse/openSUSE-42.3-x86_64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-  end
-  config.vm.define 'opensuse-Tumbleweed-x86_64', autostart: false do |host|
-    host.vm.box = 'opensuse/openSUSE-Tumbleweed-x86_64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-  end
-  config.vm.define 'opensuse-15.4-x86_64', autostart: false do |host|
-    host.vm.box = 'opensuse/Leap-15.4.x86_64'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-  end
-  config.vm.define 'freebsd-11-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/freebsd-11'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
-  end
-  config.vm.define 'freebsd-12-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/freebsd-12'
-    host.vm.synced_folder '.', '/vagrant'
-    host.ssh.shell = '/bin/sh'
-    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'file', source: 'versions.txt', destination: 'versions.txt'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
-  end
-  config.vm.define 'freebsd-13-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/freebsd-13'
-    host.vm.synced_folder '.', '/vagrant'
-    # this was needed for the 202309.08.0 release of this box
-    host.ssh.shell = '/bin/sh'
-    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'file', source: 'versions.txt', destination: 'versions.txt'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
-  end
-  config.vm.define 'freebsd-14-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/freebsd-14'
-    host.vm.synced_folder '.', '/vagrant'
-    host.ssh.shell = '/bin/sh'
-    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'file', source: 'versions.txt', destination: 'versions.txt'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
-  end
-  config.vm.define 'gentoo-x86_64', autostart: false do |host|
-    # gentoo needs some resources, otherwise the installation takes ages
-    host.vm.provider 'virtualbox' do |v|
-      v.memory = 4096
-      v.cpus = 4
+  config.vm.define 'centos-stream10-x86_64', autostart: false do |host|
+    host.vm.box = 'centos/stream10'
+    host.vm.box_url = 'https://cloud.centos.org/centos/10-stream/x86_64/images/CentOS-Stream-Vagrant-10-latest.x86_64.vagrant-virtualbox.box'
+    if ENV['mount_synced_folder']
+      host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
     end
-    host.vm.box = 'generic/gentoo'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.provision 'shell', inline: 'emerge-webrsync --quiet && emerge app-crypt/gnupg net-misc/curl'
+    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'vbguest_install.sh'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                    DEBIAN                                    #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'debian-11-x86_64', autostart: false do |host|
+    host.vm.box = 'debian/bullseye64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'solaris-11-x86_64', autostart: false do |host|
-    host.vm.box = 'http://benden.us/vagrant/solaris-11.2.box'
-    host.ssh.insert_key = false
-    host.vm.provision 'shell', inline: 'pkg info gcc || pkg install gcc'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: "/sbin/shutdown -i S -g0 -y 'Bye' &"
-  end
-  config.vm.define 'openbsd-6.4-x86_64', autostart: false do |host|
-    host.vm.box = 'generic/openbsd6'
-    host.vm.box_version = '~> 1.9.18'
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder '.', '/vagrant', nfs: true
-    host.vm.provision 'shell', inline: <<-SCRIPT.gsub(/^ +/, '')
-      . ~/.profile
-
-      pkg_info -qe 'bash->=0' || pkg_add bash
-      pkg_add facter puppet-5.5.6
-      ln -sf /usr/local/bin/gem24 /usr/bin/gem
-      ln -sf /usr/local/bin/ruby24 /usr/bin/ruby
-    SCRIPT
+  config.vm.define 'debian-12-x86_64', autostart: false do |host|
+    host.vm.box = 'debian/bookworm64'
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  config.vm.define 'osx-10.10-x86_64', autostart: false do |host|
-    host.vm.box = 'AndrewDryga/vagrant-box-osx'
-    host.vm.network :private_network, ip: '10.0.0.2'
-    host.vm.synced_folder '.', '/vagrant', nfs: true
+  config.vm.define 'debian-13-x86_64', autostart: false do |host|
+    host.vm.box = 'boxen/debian-13' # debian.org doesn't publish vagrant images anymore
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
   end
-  # Windows boxes can sometimes be picky, so don't include them automatically (autostart: false)
-  config.vm.define 'windows-server-2019-x86_64', autostart: false do |host|
-    host.vm.hostname = 'foo'
-    host.vm.box = 'gusztavvargadr/windows-server-2019-standard-core'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.communicator = 'winrm'
-    host.vm.guest = :windows
-    host.windows.set_work_network = true
-    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
-    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
-  end
-  config.vm.define 'windows-server-2022-x86_64', autostart: false do |host|
-    host.vm.hostname = 'foo'
-    host.vm.box = 'gusztavvargadr/windows-server-2022-standard-core'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.communicator = 'winrm'
-    host.vm.guest = :windows
-    host.windows.set_work_network = true
-    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
-    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
-  end
-  config.vm.define 'windows-10-x86_64', autostart: false do |host|
-    host.vm.hostname = 'foo'
-    host.vm.box = 'gusztavvargadr/windows-10'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.communicator = 'winrm'
-    host.vm.guest = :windows
-    host.windows.set_work_network = true
-    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
-    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
-  end
-  config.vm.define 'windows-11-x86_64', autostart: false do |host|
-    host.vm.hostname = 'foo'
-    host.vm.box = 'gusztavvargadr/windows-11'
-    host.vm.synced_folder '.', '/vagrant'
-    host.vm.communicator = 'winrm'
-    host.vm.guest = :windows
-    host.windows.set_work_network = true
-    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
-    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
-  end
-  config.vm.define 'amazonlinux-2-x86_64', autostart: false do |host|
-    host.vm.box = 'bento/amazonlinux-2'
-    host.vm.provision 'shell', inline: 'yum -y install gcc glibc-devel'
-    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
-    host.vm.provision 'shell', path: 'get_facts.sh'
-    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
-  end
+  # ---------------------------------------------------------------------------- #
+  #                                    FEDORA                                    #
+  # ---------------------------------------------------------------------------- #
   config.vm.define 'fedora-36-x86_64', autostart: false do |host|
     host.vm.box = 'generic/fedora36'
     host.vm.synced_folder '.', '/vagrant'
@@ -446,5 +171,377 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
     host.vm.provision 'shell', path: 'get_facts.sh'
     host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'fedora-42-x86_64', autostart: false do |host|
+    # default memory limit kills dnf as soon as we install packages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 2048
+    end
+    host.vm.box = 'bento/fedora-42'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'fedora-43-x86_64', autostart: false do |host|
+    # default memory limit kills dnf as soon as we install packages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 2048
+    end
+    host.vm.box = 'bento/fedora-43'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                    FREEBSD                                   #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'freebsd-11-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/freebsd-11'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
+  end
+  config.vm.define 'freebsd-12-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/freebsd-12'
+    host.vm.synced_folder '.', '/vagrant'
+    host.ssh.shell = '/bin/sh'
+    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'file', source: 'versions.txt', destination: 'versions.txt'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
+  end
+  config.vm.define 'freebsd-13-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/freebsd-13'
+    host.vm.synced_folder '.', '/vagrant'
+    # this was needed for the 202309.08.0 release of this box
+    host.ssh.shell = '/bin/sh'
+    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'file', source: 'versions.txt', destination: 'versions.txt'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
+  end
+  config.vm.define 'freebsd-14-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/freebsd-14'
+    host.vm.synced_folder '.', '/vagrant'
+    host.ssh.shell = '/bin/sh'
+    host.vm.provision 'shell', inline: 'pkg install -y bash devel/ruby-gems'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'file', source: 'versions.txt', destination: 'versions.txt'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -p now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                    GENTOO                                    #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'gentoo-x86_64', autostart: false do |host|
+    # gentoo needs some resources, otherwise the installation takes ages
+    host.vm.provider 'virtualbox' do |v|
+      v.memory = 4096
+      v.cpus = 4
+    end
+    host.vm.box = 'generic/gentoo'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: 'emerge-webrsync --quiet && emerge app-crypt/gnupg net-misc/curl'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                  LINUX MINT                                  #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'linuxmint-19-x86_64', autostart: false do |host|
+    host.vm.box = 'ltsp/linuxmint-19.1-cinnamon-64bit'
+    host.vm.provision 'shell',
+                      inline: 'export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y ruby ruby-dev libc6-dev'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                   OPENSUSE                                   #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'opensuse-42.3-x86_64', autostart: false do |host|
+    host.vm.box = 'opensuse/openSUSE-42.3-x86_64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+  end
+  config.vm.define 'opensuse-Tumbleweed-x86_64', autostart: false do |host|
+    host.vm.box = 'opensuse/openSUSE-Tumbleweed-x86_64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+  end
+  config.vm.define 'opensuse-15.4-x86_64', autostart: false do |host|
+    host.vm.box = 'opensuse/Leap-15.4.x86_64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+  end
+  config.vm.define 'opensuse-16.0-x86_64', autostart: false do |host|
+    host.vm.box = 'boxen/opensuse-16.0'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                    OPENBSD                                   #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'openbsd-6.4-x86_64', autostart: false do |host|
+    host.vm.box = 'generic/openbsd6'
+    host.vm.box_version = '~> 1.9.18'
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder '.', '/vagrant', nfs: true
+    host.vm.provision 'shell', inline: <<-SCRIPT.gsub(/^ +/, '')
+      . ~/.profile
+
+      pkg_info -qe 'bash->=0' || pkg_add bash
+      pkg_add facter puppet-5.5.6
+      ln -sf /usr/local/bin/gem24 /usr/bin/gem
+      ln -sf /usr/local/bin/ruby24 /usr/bin/ruby
+    SCRIPT
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                 ORACLE LINUX                                 #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'oraclelinux-8-x86_64', autostart: false do |host|
+    host.vm.box = 'oraclelinux/8'
+    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/8.json'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'oraclelinux-9-x86_64', autostart: false do |host|
+    host.vm.box = 'oraclelinux/9'
+    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/9.json'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'oraclelinux-10-x86_64', autostart: false do |host|
+    host.vm.box = 'oraclelinux/10'
+    host.vm.box_url = 'https://oracle.github.io/vagrant-projects/boxes/oraclelinux/10 .json'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                     OS X                                     #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'osx-10.10-x86_64', autostart: false do |host|
+    host.vm.box = 'AndrewDryga/vagrant-box-osx'
+    host.vm.network :private_network, ip: '10.0.0.2'
+    host.vm.synced_folder '.', '/vagrant', nfs: true
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                     RHEL                                     #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'redhat-8-x86_64', autostart: false do |host|
+    host.vm.box = 'generic/rhel8'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'redhat-9-x86_64', autostart: false do |host|
+    host.vm.box = 'generic/rhel9'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                  ROCKY LINUX                                 #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'rockylinux-8-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/rockylinux-8'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'rockylinux-9-x86_64', autostart: false do |host|
+    # this box has no vboxguestadditions as of 2025-04-25
+    # so the synced_folder doesnt mount
+    # host.vm.box = 'rockylinux/9'
+    host.vm.box = 'bento/rockylinux-9'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'rockylinux-10-x86_64', autostart: false do |host|
+    host.vm.box = 'rockylinux/10'
+    if ENV['mount_synced_folder']
+      host.vm.synced_folder '.', '/vagrant', type: 'virtualbox'
+    end
+    host.vm.provision 'shell', inline: 'dnf -y install wget make gcc net-tools'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'vbguest_install.sh'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                     SLES                                     #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'sles-11sp1-x86_64', autostart: false do |host|
+    host.vm.box = 'suse/sles11sp3'
+    host.vm.network 'private_network', ip: '192.168.123.2'
+    host.vm.synced_folder '.', '/vagrant', type: 'nfs'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'sles-12sp1-x86_64', autostart: false do |host|
+    host.vm.box = 'idar/sles12sp3'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'sles-15-x86_64', autostart: false do |host|
+    host.vm.box = 'trueability/sles-15-sp1'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', inline: [
+      'SUSEConnect -p sle-module-desktop-applications/15.1/x86_64',
+      'SUSEConnect -p sle-module-legacy/15.1/x86_64',
+      'zypper install --no-confirm net-tools-deprecated',
+    ].join(' && ')
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                    SOLARIS                                   #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'solaris-11-x86_64', autostart: false do |host|
+    host.vm.box = 'http://benden.us/vagrant/solaris-11.2.box'
+    host.ssh.insert_key = false
+    host.vm.provision 'shell', inline: 'pkg info gcc || pkg install gcc'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: "/sbin/shutdown -i S -g0 -y 'Bye' &"
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                    UBUNTU                                    #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'ubuntu-18.04-x86_64', autostart: false do |host|
+    host.vm.box = 'ubuntu/bionic64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-20.04-x86_64', autostart: false do |host|
+    host.vm.box = 'ubuntu/focal64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-21.04-x86_64', autostart: false do |host|
+    host.vm.box = 'ubuntu/hirsute64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-21.10-x86_64', autostart: false do |host|
+    host.vm.box = 'ubuntu/impish64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-22.04-x86_64', autostart: false do |host|
+    host.vm.box = 'ubuntu/jammy64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-22.04-arm64', autostart: false do |host|
+    host.vm.box = 'bento/ubuntu-22.04'
+    host.vm.box_architecture = 'arm64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # the ssh bits on this did not work right, most of the steps for
+  # generating things were done manually
+  config.vm.define 'ubuntu-22.10-x86_64', autostart: false do |host|
+    host.vm.box = 'ubuntu/kinetic64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-24.04-x86_64', autostart: false do |host|
+    host.vm.box = 'bento/ubuntu-24.04'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  config.vm.define 'ubuntu-24.04-arm64', autostart: false do |host|
+    host.vm.box = 'bento/ubuntu-24.04'
+    host.vm.box_architecture = 'arm64'
+    host.vm.provision 'file', source: 'Gemfile', destination: 'Gemfile'
+    host.vm.provision 'shell', path: 'get_facts.sh'
+    host.vm.provision 'shell', inline: '/sbin/shutdown -h now'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                  WINDOWS 10                                  #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'windows-10-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-10'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                  WINDOWS 11                                  #
+  # ---------------------------------------------------------------------------- #
+  config.vm.define 'windows-11-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-11'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
+  end
+  # ---------------------------------------------------------------------------- #
+  #                                WINDOWS SERVER                                #
+  # ---------------------------------------------------------------------------- #
+  # Windows boxes can sometimes be picky, so don't include them automatically (autostart: false)
+  config.vm.define 'windows-server-2019-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-server-2019-standard-core'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
+  end
+  config.vm.define 'windows-server-2022-x86_64', autostart: false do |host|
+    host.vm.hostname = 'foo'
+    host.vm.box = 'gusztavvargadr/windows-server-2022-standard-core'
+    host.vm.synced_folder '.', '/vagrant'
+    host.vm.communicator = 'winrm'
+    host.vm.guest = :windows
+    host.windows.set_work_network = true
+    host.vm.provision 'shell', path: 'windows_get_facts.ps1'
+    host.vm.provision 'shell', inline: 'shutdown -s -f -c "Fact Collection Complete"'
   end
 end
