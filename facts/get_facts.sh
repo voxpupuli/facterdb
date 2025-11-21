@@ -60,11 +60,17 @@ elif test -f '/etc/gentoo-release'; then
   osfamily='Gentoo'
 elif test -f '/etc/os-release' && grep -q 'Amazon' '/etc/os-release'; then
   osfamily='RedHat'
-  operatingsystemmajrelease='7'
+  if grep -q 'VERSION="2023"' '/etc/os-release'; then
+    operatingsystemmajrelease='9'
+  else
+    operatingsystemmajrelease='7'
+  fi
 else
   osfamily=$(uname)
 fi
+
 . /etc/os-release
+
 case "${osfamily}" in
 'RedHat')
   if [[ $ID == fedora ]]; then
@@ -73,6 +79,9 @@ case "${osfamily}" in
   elif [[ $ID == ol ]]; then
     distcode=el
     dnf -y groupinstall 'Development Tools'
+  elif [[ $ID == amzn ]]; then
+    distcode=el
+    dnf -y install ruby ruby-devel wget make gcc net-tools augeas
   else
     distcode=el
   fi
