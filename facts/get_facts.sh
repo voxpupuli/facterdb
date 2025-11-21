@@ -130,7 +130,7 @@ case "${osfamily}" in
   ;;
 'FreeBSD')
   pkg update
-  for facter_package in facter rubygem-facter ; do
+  for facter_package in rubygem-openfact ; do
     pkg install -fy ${facter_package}
 
     # something about the pkg update process causes the shared folder mount to
