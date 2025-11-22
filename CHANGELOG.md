@@ -1,5 +1,27 @@
 # Changelog
 
+## [4.2.0](https://rubygems.org/gems/facterdb/versions/4.2.0) (2025-11-22)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/4.1.0...4.2.0)
+
+**Implemented enhancements:**
+
+- Add FreeBSD 13/14 Openfact 5.1 factsets [\#438](https://github.com/voxpupuli/facterdb/pull/438) ([bastelfreak](https://github.com/bastelfreak))
+- Add Windows 10/11 openfact 5.1 factsets [\#437](https://github.com/voxpupuli/facterdb/pull/437) ([bastelfreak](https://github.com/bastelfreak))
+- Add Windows 2025 openfact 5.1 factset [\#435](https://github.com/voxpupuli/facterdb/pull/435) ([bastelfreak](https://github.com/bastelfreak))
+- Add opensuse 16 Openfact 5.1 factset [\#434](https://github.com/voxpupuli/facterdb/pull/434) ([bastelfreak](https://github.com/bastelfreak))
+- Add AmazonLinux 2023 [\#433](https://github.com/voxpupuli/facterdb/pull/433) ([bastelfreak](https://github.com/bastelfreak))
+- Add Windows Server 2019/2022 openfact 5.1 factsets [\#432](https://github.com/voxpupuli/facterdb/pull/432) ([bastelfreak](https://github.com/bastelfreak))
+- Add Fedora 42 factset [\#430](https://github.com/voxpupuli/facterdb/pull/430) ([bastelfreak](https://github.com/bastelfreak))
+- Add Fedora 43 factsets [\#429](https://github.com/voxpupuli/facterdb/pull/429) ([bastelfreak](https://github.com/bastelfreak))
+- Add oraclelinux-10 factsets [\#428](https://github.com/voxpupuli/facterdb/pull/428) ([bastelfreak](https://github.com/bastelfreak))
+- Refactor Vagrantfile & feat: add new OS versions [\#427](https://github.com/voxpupuli/facterdb/pull/427) ([d1nuc0m](https://github.com/d1nuc0m))
+
+**Merged pull requests:**
+
+- deprecation: Legacy facts are deprecated [\#425](https://github.com/voxpupuli/facterdb/pull/425) ([marcusdots](https://github.com/marcusdots))
+- Update voxpupuli-rubocop requirement from ~\> 4.2.0 to ~\> 5.0.0 [\#422](https://github.com/voxpupuli/facterdb/pull/422) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [4.1.0](https://rubygems.org/gems/facterdb/versions/4.1.0) (2025-09-09)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/4.0.0...4.1.0)
