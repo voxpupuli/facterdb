@@ -221,7 +221,7 @@ describe FacterDB do
     end
 
     it 'with Array' do
-      expect(FacterDB.generate_filter_str([kernel: 'Linux'])).to eq('(kernel=Linux)')
+      expect(FacterDB.generate_filter_str([{ kernel: 'Linux' }])).to eq('(kernel=Linux)')
     end
 
     it 'empty' do
@@ -264,7 +264,7 @@ describe FacterDB do
     end
 
     context 'with an Array filter' do
-      let(:filter) { [kernel: 'Linux'] }
+      let(:filter) { [{ kernel: 'Linux' }] }
 
       it_behaves_like 'returns a result'
     end

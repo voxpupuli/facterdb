@@ -1,7 +1,7 @@
 #!/bin/bash
 
 vbox=$(lsmod | grep -c vboxsf)
-version=${1:-7.1.6}
+version=${1:-7.2.8}
 
 if [[ $vbox -eq 0 ]]; then
     wget https://download.virtualbox.org/virtualbox/${version}/VBoxGuestAdditions_${version}.iso

@@ -8,3 +8,12 @@
 
 # OpenFact 5.1.0 - Released July 2025 and shipped in OpenVox 8.23/8.22/8.21.1. OpenFact 5.0.0 isn't in any packages
 8.23.1
+
+# OpenFact 5.2.1 - Released December 2025 and sipped in OpenVox 8.24.2
+8.24.2
+
+# OpenFact 5.4.0 - Released February 2026 and shipped in OpenVox 8.25.0
+8.25.0
+
+# OpenFact 5.6.0 - Released April 2026 and shipped in OpenVox 8.26+
+8.26.2

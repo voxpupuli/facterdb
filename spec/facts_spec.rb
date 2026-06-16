@@ -177,6 +177,12 @@ describe 'Default Facts' do
         expect(content['python_version']).to be_nil
         expect(content['puppet_agent_pid']).to be_nil
       end
+
+      it 'has no Debian unstable factsets' do
+        if content['os']['name'] == 'Debian'
+          expect(content['os']['release']['major']).not_to include('sid')
+        end
+      end
     end
   end
 end
