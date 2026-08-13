@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.5.0](https://rubygems.org/gems/facterdb/versions/4.5.0) (2026-08-13)
+
+[Full Changelog](https://github.com/voxpupuli/facterdb/compare/4.4.0...4.5.0)
+
+**Implemented enhancements:**
+
+- feat: add OpenFact 5.6 facts for RedHat 10 x86\_64 [\#462](https://github.com/voxpupuli/facterdb/pull/462) ([cyberkov](https://github.com/cyberkov))
+
+**Closed issues:**
+
+- Please add support for RHEL10 [\#461](https://github.com/voxpupuli/facterdb/issues/461)
+
 ## [4.4.0](https://rubygems.org/gems/facterdb/versions/4.4.0) (2026-05-01)
 
 [Full Changelog](https://github.com/voxpupuli/facterdb/compare/4.3.0...4.4.0)
