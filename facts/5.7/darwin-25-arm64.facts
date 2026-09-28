@@ -206,9 +206,9 @@
   },
   "networking": {
     "dhcp": "10.0.100.1",
-    "domain": "tail61f96b.ts.net",
-    "fqdn": "lus-jdqd6jv2j3.tail61f96b.ts.net",
-    "hostname": "LUS-JDQD6JV2J3",
+    "domain": "ts.net",
+    "fqdn": "lus.ts.net",
+    "hostname": "LUS",
     "interfaces": {
       "XHC0": {
         "mtu": 0
@@ -240,7 +240,7 @@
           "SIMPLEX",
           "MULTICAST"
         ],
-        "mac": "aa:58:6e:be:b4:e5",
+        "mac": "aa:bb:cc:be:b4:e5",
         "mtu": 1500
       },
       "anpi2": {
@@ -252,7 +252,7 @@
           "SIMPLEX",
           "MULTICAST"
         ],
-        "mac": "aa:58:6e:be:b4:e6",
+        "mac": "aa:bb:cc:be:b4:e6",
         "mtu": 1500
       },
       "ap1": {
@@ -264,7 +264,7 @@
           "SIMPLEX",
           "MULTICAST"
         ],
-        "mac": "3e:db:06:3d:80:82",
+        "mac": "3e:3f:3a:3d:80:82",
         "mtu": 1500
       },
       "awdl0": {
@@ -660,7 +660,6 @@
       "Apple M4 Max",
       "Apple M4 Max",
       "Apple M4 Max"
-    
     ],
     "physicalcount": 16,
     "threads": 1
@@ -674,7 +673,7 @@
   "system_profiler": {
     "boot_mode": "Normal",
     "boot_volume": "Macintosh HD",
-    "computer_name": "LUS-JDQD6JV2J3",
+    "computer_name": "LUS",
     "cores": "16 (12 Performance and 4 Efficiency)",
     "hardware_uuid": "8E291A88-6B44-5563-9045-35DF6FC22003",
     "kernel_version": "Darwin 25.6.0",
@@ -696,8 +695,7 @@
   "timezone": "EDT",
   "virtual": "physical",
   "implementation": "openvox",
-  "clientcert": "lus-jdqd6jv2j3.tail61f96b.ts.net",
+  "clientcert": "lus.ts.net",
   "clientversion": "8.23.1",
   "clientnoop": false
-
 }
