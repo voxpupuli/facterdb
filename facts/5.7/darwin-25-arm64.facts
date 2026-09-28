@@ -1,0 +1,703 @@
+{
+  "aio_agent_version": "8.23.1",
+    "augeas": {
+    "version": "1.14.1"
+    },
+    "dmi": {
+      "product": {
+      "name": "Mac16,5"
+      }
+    },
+  "facterversion": "5.6.0",
+  "filesystems": "apfs,autofs,devfs",
+  "identity": {
+    "gid": 0,
+    "group": "wheel",
+    "privileged": true,
+    "uid": 0,
+    "user": "root"
+  },
+  "is_virtual": false,
+  "kernel": "Darwin",
+  "kernelmajversion": "25.6",
+  "kernelrelease": "25.6.0",
+  "kernelversion": "25.6.0",
+  "load_averages": {
+    "15m": 2.2,
+    "1m": 1.7,
+    "5m": 2.06
+  },
+  "memory": {
+    "system": {
+      "available": "1.17 GiB",
+      "available_bytes": 1255571456,
+      "capacity": "98.17%",
+      "total": "64.00 GiB",
+      "total_bytes": 68719476736,
+      "used": "62.83 GiB",
+      "used_bytes": 67463905280
+    }
+  },
+  "mountpoints": {
+    "/": {
+      "available": "625.29 GiB",
+      "available_bytes": 671395274752,
+      "capacity": "32.50%",
+      "device": "/dev/disk3s1s1",
+      "filesystem": "apfs",
+      "options": [
+        "readonly",
+        "local",
+        "root",
+        "journaled"
+      ],
+      "size": "926.35 GiB",
+      "size_bytes": 994662584320,
+      "used": "301.07 GiB",
+      "used_bytes": 323267309568
+    },
+    "/System/Volumes/Data": {
+      "available": "625.29 GiB",
+      "available_bytes": 671395274752,
+      "capacity": "32.50%",
+      "device": "/dev/disk3s5",
+      "filesystem": "apfs",
+      "options": [
+        "content-protection",
+        "local",
+        "nobrowse",
+        "journaled"
+      ],
+      "size": "926.35 GiB",
+      "size_bytes": 994662584320,
+      "used": "301.07 GiB",
+      "used_bytes": 323267309568
+    },
+    "/System/Volumes/Data/home": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "map auto_home",
+      "filesystem": "autofs",
+      "options": [
+        "nobrowse",
+        "automounted"
+      ],
+      "size": "0 bytes",
+      "size_bytes": 0,
+      "used": "0 bytes",
+      "used_bytes": 0
+    },
+    "/System/Volumes/Hardware": {
+      "available": "479.83 MiB",
+      "available_bytes": 503136256,
+      "capacity": "4.03%",
+      "device": "/dev/disk1s3",
+      "filesystem": "apfs",
+      "options": [
+        "local",
+        "nobrowse",
+        "journaled"
+      ],
+      "size": "500.00 MiB",
+      "size_bytes": 524288000,
+      "used": "20.17 MiB",
+      "used_bytes": 21151744
+    },
+    "/System/Volumes/Preboot": {
+      "available": "625.29 GiB",
+      "available_bytes": 671395274752,
+      "capacity": "32.50%",
+      "device": "/dev/disk3s2",
+      "filesystem": "apfs",
+      "options": [
+        "local",
+        "nobrowse",
+        "journaled"
+      ],
+      "size": "926.35 GiB",
+      "size_bytes": 994662584320,
+      "used": "301.07 GiB",
+      "used_bytes": 323267309568
+    },
+    "/System/Volumes/Update": {
+      "available": "625.29 GiB",
+      "available_bytes": 671395274752,
+      "capacity": "32.50%",
+      "device": "/dev/disk3s4",
+      "filesystem": "apfs",
+      "options": [
+        "local",
+        "nobrowse",
+        "journaled"
+      ],
+      "size": "926.35 GiB",
+      "size_bytes": 994662584320,
+      "used": "301.07 GiB",
+      "used_bytes": 323267309568
+    },
+    "/System/Volumes/VM": {
+      "available": "625.29 GiB",
+      "available_bytes": 671395274752,
+      "capacity": "32.50%",
+      "device": "/dev/disk3s6",
+      "filesystem": "apfs",
+      "options": [
+        "noexec",
+        "local",
+        "nobrowse",
+        "journaled",
+        "noatime"
+      ],
+      "size": "926.35 GiB",
+      "size_bytes": 994662584320,
+      "used": "301.07 GiB",
+      "used_bytes": 323267309568
+    },
+    "/System/Volumes/iSCPreboot": {
+      "available": "479.83 MiB",
+      "available_bytes": 503136256,
+      "capacity": "4.03%",
+      "device": "/dev/disk1s1",
+      "filesystem": "apfs",
+      "options": [
+        "local",
+        "nobrowse",
+        "journaled"
+      ],
+      "size": "500.00 MiB",
+      "size_bytes": 524288000,
+      "used": "20.17 MiB",
+      "used_bytes": 21151744
+    },
+    "/System/Volumes/xarts": {
+      "available": "479.83 MiB",
+      "available_bytes": 503136256,
+      "capacity": "4.03%",
+      "device": "/dev/disk1s2",
+      "filesystem": "apfs",
+      "options": [
+        "noexec",
+        "local",
+        "nobrowse",
+        "journaled",
+        "noatime"
+      ],
+      "size": "500.00 MiB",
+      "size_bytes": 524288000,
+      "used": "20.17 MiB",
+      "used_bytes": 21151744
+    },
+    "/dev": {
+      "available": "0 bytes",
+      "available_bytes": 0,
+      "capacity": "100%",
+      "device": "devfs",
+      "filesystem": "devfs",
+      "options": [
+        "local",
+        "nobrowse"
+      ],
+      "size": "347.00 KiB",
+      "size_bytes": 355328,
+      "used": "347.00 KiB",
+      "used_bytes": 355328
+    }
+  },
+  "networking": {
+    "dhcp": "10.0.100.1",
+    "domain": "tail61f96b.ts.net",
+    "fqdn": "lus-jdqd6jv2j3.tail61f96b.ts.net",
+    "hostname": "LUS-JDQD6JV2J3",
+    "interfaces": {
+      "XHC0": {
+        "mtu": 0
+      },
+      "XHC1": {
+        "mtu": 0
+      },
+      "XHC2": {
+        "mtu": 0
+      },
+      "anpi0": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "aa:58:6e:be:b4:e4",
+        "mtu": 1500
+      },
+      "anpi1": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "aa:58:6e:be:b4:e5",
+        "mtu": 1500
+      },
+      "anpi2": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "aa:58:6e:be:b4:e6",
+        "mtu": 1500
+      },
+      "ap1": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "3e:db:06:3d:80:82",
+        "mtu": 1500
+      },
+      "awdl0": {
+        "bindings6": [
+        {
+            "address": "fe80::9862:4fff:fedb:1a82",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "ip6": "fe80::9862:4fff:fedb:1a82",
+        "mac": "9a:62:4f:db:1a:82",
+        "mtu": 1500,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "bridge0": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "36:df:7a:57:55:00",
+        "mtu": 1500
+      },
+      "en0": {
+        "bindings": [
+        {
+            "address": "10.0.100.88",
+            "netmask": "255.255.255.0",
+            "network": "10.0.100.0"
+        }
+        ],
+        "bindings6": [
+        {
+            "address": "fe80::8e1:71ee:7a2e:27d1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "dhcp": "10.0.100.1",
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "ip": "10.0.100.88",
+        "ip6": "fe80::8e1:71ee:7a2e:27d1",
+        "mac": "92:1e:4f:b5:e0:66",
+        "mtu": 1500,
+        "netmask": "255.255.255.0",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "10.0.100.0",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "en1": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "PROMISC",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "36:df:7a:57:55:00",
+        "mtu": 1500
+      },
+      "en2": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "PROMISC",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "36:df:7a:57:55:04",
+        "mtu": 1500
+      },
+      "en3": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "PROMISC",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "36:df:7a:57:55:08",
+        "mtu": 1500
+      },
+      "en4": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "aa:58:6e:be:b4:c4",
+        "mtu": 1500
+      },
+      "en5": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "aa:58:6e:be:b4:c5",
+        "mtu": 1500
+      },
+      "en6": {
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "mac": "aa:58:6e:be:b4:c6",
+        "mtu": 1500
+      },
+      "gif0": {
+        "flags": [
+          "POINTOPOINT",
+          "MULTICAST"
+        ],
+        "mtu": 1280
+      },
+      "llw0": {
+        "bindings6": [
+        {
+            "address": "fe80::9862:4fff:fedb:1a82",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "BROADCAST",
+          "SMART",
+          "RUNNING",
+          "SIMPLEX",
+          "MULTICAST"
+        ],
+        "ip6": "fe80::9862:4fff:fedb:1a82",
+        "mac": "9a:62:4f:db:1a:82",
+        "mtu": 1500,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "lo0": {
+        "bindings": [
+        {
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0",
+            "network": "127.0.0.0"
+        }
+        ],
+        "bindings6": [
+        {
+            "address": "::1",
+            "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+            "network": "::1",
+            "scope6": "host"
+        },
+        {
+            "address": "fe80::1",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "LOOPBACK",
+          "RUNNING",
+          "MULTICAST"
+        ],
+        "ip": "127.0.0.1",
+        "ip6": "::1",
+        "mtu": 16384,
+        "netmask": "255.0.0.0",
+        "netmask6": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "network": "127.0.0.0",
+        "network6": "::1",
+        "scope6": "host"
+      },
+      "stf0": {
+        "mtu": 1280
+      },
+      "utun0": {
+        "bindings6": [
+        {
+            "address": "fe80::1685:7b15:d776:b078",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "POINTOPOINT",
+          "RUNNING",
+          "MULTICAST"
+        ],
+        "ip6": "fe80::1685:7b15:d776:b078",
+        "mtu": 1500,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "utun1": {
+        "bindings6": [
+        {
+            "address": "fe80::cdbc:3600:4194:fd6f",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "POINTOPOINT",
+          "RUNNING",
+          "MULTICAST"
+        ],
+        "ip6": "fe80::cdbc:3600:4194:fd6f",
+        "mtu": 1380,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "utun2": {
+        "bindings6": [
+        {
+            "address": "fe80::d130:98c4:6046:b2d9",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "POINTOPOINT",
+          "RUNNING",
+          "MULTICAST"
+        ],
+        "ip6": "fe80::d130:98c4:6046:b2d9",
+        "mtu": 2000,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "utun3": {
+        "bindings6": [
+        {
+            "address": "fe80::ce81:b1c:bd2c:69e",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        }
+        ],
+        "flags": [
+          "UP",
+          "POINTOPOINT",
+          "RUNNING",
+          "MULTICAST"
+        ],
+        "ip6": "fe80::ce81:b1c:bd2c:69e",
+        "mtu": 1000,
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network6": "fe80::",
+        "scope6": "link"
+      },
+      "utun4": {
+        "bindings": [
+        {
+            "address": "100.104.109.34",
+            "netmask": "255.255.255.255",
+            "network": "100.104.109.34"
+        }
+        ],
+        "bindings6": [
+        {
+            "address": "fe80::fc9b:1c95:c63b:76f6",
+            "netmask": "ffff:ffff:ffff:ffff::",
+            "network": "fe80::",
+            "scope6": "link"
+        },
+        {
+            "address": "fd7a:115c:a1e0::9401:6d8e",
+            "netmask": "ffff:ffff:ffff::",
+            "network": "fd7a:115c:a1e0::",
+            "scope6": "global"
+        }
+        ],
+        "flags": [
+          "UP",
+          "POINTOPOINT",
+          "RUNNING",
+          "MULTICAST"
+        ],
+        "ip": "100.104.109.34",
+        "ip6": "fe80::fc9b:1c95:c63b:76f6",
+        "mtu": 1280,
+        "netmask": "255.255.255.255",
+        "netmask6": "ffff:ffff:ffff:ffff::",
+        "network": "100.104.109.34",
+        "network6": "fe80::",
+        "scope6": "link"
+      }
+    },
+    "ip": "10.0.100.88",
+    "ip6": "fe80::8e1:71ee:7a2e:27d1",
+    "mac": "92:1e:4f:b5:e0:66",
+    "mtu": 1500,
+    "netmask": "255.255.255.0",
+    "netmask6": "ffff:ffff:ffff:ffff::",
+    "network": "10.0.100.0",
+    "network6": "fe80::",
+    "primary": "en0",
+    "scope6": "link"
+  },
+  "os": {
+    "architecture": "arm64",
+    "family": "Darwin",
+    "hardware": "arm64",
+    "macosx": {
+      "build": "25G229",
+      "product": "macOS",
+      "version": {
+        "full": "26.7",
+        "major": "26",
+        "minor": "7",
+        "patch": "0"
+      }
+    },
+    "name": "Darwin",
+    "release": {
+      "full": "25.6.0",
+      "major": "25",
+      "minor": "6"
+    }
+  },
+  "path": "/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/pkg/env/global/bin:/opt/puppetlabs/pdk/bin:/Library/Apple/usr/bin:/Applications/Wireshark.app/Contents/MacOS:/opt/homebrew/bin:/opt/puppetlabs/bin:/opt/puppetlabs/puppet/bin",
+  "processors": {
+    "cores": 16,
+    "count": 16,
+    "isa": "arm",
+    "models": [
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max",
+      "Apple M4 Max"
+    
+    ],
+    "physicalcount": 16,
+    "threads": 1
+  },
+  "puppetversion": "8.23.1",
+  "ruby": {
+    "platform": "arm64-darwin24",
+    "sitedir": "/opt/puppetlabs/puppet/lib/ruby/site_ruby/3.2.0",
+    "version": "3.2.9"
+  },
+  "system_profiler": {
+    "boot_mode": "Normal",
+    "boot_volume": "Macintosh HD",
+    "computer_name": "LUS-JDQD6JV2J3",
+    "cores": "16 (12 Performance and 4 Efficiency)",
+    "hardware_uuid": "8E291A88-6B44-5563-9045-35DF6FC22003",
+    "kernel_version": "Darwin 25.6.0",
+    "memory": "64 GB",
+    "model_identifier": "Mac16,5",
+    "model_name": "MacBook Pro",
+    "secure_virtual_memory": "Enabled",
+    "serial_number": "JDQD6JV2J3",
+    "system_version": "macOS 26.7 (25G229)",
+    "uptime": "9 days, 14 hours, 39 minutes",
+    "username": "System Administrator (root)"
+  },
+  "system_uptime": {
+    "days": 9,
+    "hours": 230,
+    "seconds": 830315,
+    "uptime": "9 days"
+  },
+  "timezone": "EDT",
+  "virtual": "physical",
+  "implementation": "openvox",
+  "clientcert": "lus-jdqd6jv2j3.tail61f96b.ts.net",
+  "clientversion": "8.23.1",
+  "clientnoop": false
+
+}
